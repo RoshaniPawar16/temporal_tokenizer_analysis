@@ -1,0 +1,362 @@
+[
+  {
+    "record_id": "001850001",
+    "title": "Victorian Essays on Society",
+    "date": "1855",
+    "text": "The industrial revolution has brought forth remarkable changes to our society. Steam engines and railways have transformed transportation beyond recognition...",
+    "language_1": "English",
+    "mean_wc_ocr": 0.92,
+    "place": "London"
+  },
+  {
+    "record_id": "001880001",
+    "title": "Scientific Progress and Society",
+    "date": "1882",
+    "text": "The telegraph has immeasurably altered our understanding of distance. Messages that once took weeks to deliver now arrive instantaneously across continents...",
+    "language_1": "English",
+    "mean_wc_ocr": 0.89,
+    "place": "Edinburgh"
+  },
+  {
+    "record_id": "001900001",
+    "title": "The Dawn of a New Century",
+    "date": "1901-1910",
+    "text": "The new century dawns with remarkable progress in science and industry. The motorcar is no longer a curiosity but begins to find practical application in daily life...",
+    "language_1": "English",
+    "mean_wc_ocr": 0.87,
+    "place": "Manchester"
+  },
+  {
+    "record_id": "001950001",
+    "title": "The Atomic Age",
+    "date": "1952",
+    "text": "Nuclear power promises to revolutionize energy production. The recent developments at Calder Hall demonstrate Britain's leading role in this peaceful application of atomic energy...",
+    "language_1": "English",
+    "mean_wc_ocr": 0.95,
+    "place": "London"
+  },
+  {
+    "record_id": "001970001",
+    "title": "Computing and Modern Society",
+    "date": "1975",
+    "text": "The microprocessor represents a quantum leap in computing capability. These silicon chips, despite their minute size, contain thousands of transistors and promise to transform both industry and eventually the home...",
+    "language_1": "English",
+    "mean_wc_ocr": 0.96,
+    "place": "Cambridge"
+  },
+  {
+    "record_id": "001990001",
+    "title": "The Information Superhighway",
+    "date": "1994",
+    "text": "The Internet, once a tool for academics and military researchers, is rapidly expanding into businesses and homes. Electronic mail and the World Wide Web represent new frontiers in communication technology...",
+    "language_1": "English",
+    "mean_wc_ocr": 0.98,
+    "place": "London"
+  },
+  {
+    "record_id": "002010001",
+    "title": "Social Media and Society",
+    "date": "2012",
+    "text": "Facebook and Twitter have fundamentally altered human interaction. These platforms enable unprecedented connectivity while simultaneously raising questions about privacy, attention spans, and the nature of friendship...",
+    "language_1": "English",
+    "mean_wc_ocr": 0.99,
+    "place": "London"
+  },
+  {
+    "record_id": "002020001",
+    "title": "Artificial Intelligence in the Third Decade",
+    "date": "2022",
+    "text": "Large language models demonstrate capabilities that were science fiction just a decade ago. These systems can generate human-like text, translate between languages, and engage in coherent dialogue across countless domains...",
+    "language_1": "English",
+    "mean_wc_ocr": 0.99,
+    "place": "London"
+  },
+  {
+    "record_id": "0018501002",
+    "title": "Victorian Society in 1856",
+    "date": "1856",
+    "text": "This sample text explores Victorian society in 1856. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1850s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.925399980891896,
+    "place": "Oxford"
+  },
+  {
+    "record_id": "0018501003",
+    "title": "Industrialization in 1853",
+    "date": "1853",
+    "text": "This sample text explores industrialization in 1853. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1850s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.9042236903868776,
+    "place": "Birmingham"
+  },
+  {
+    "record_id": "0018501004",
+    "title": "Railway Expansion in 1857",
+    "date": "1857",
+    "text": "This sample text explores railway expansion in 1857. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1850s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.9048142370795098,
+    "place": "Oxford"
+  },
+  {
+    "record_id": "0018501005",
+    "title": "Colonial Perspectives in 1850",
+    "date": "1850",
+    "text": "This sample text explores colonial perspectives in 1850. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1850s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.886201055809095,
+    "place": "Manchester"
+  },
+  {
+    "record_id": "0018801002",
+    "title": "Scientific Advances in 1883",
+    "date": "1883",
+    "text": "This sample text explores scientific advances in 1883. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1880s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.9183785695929065,
+    "place": "Birmingham"
+  },
+  {
+    "record_id": "0018801003",
+    "title": "Imperial Expansion in 1885",
+    "date": "1885",
+    "text": "This sample text explores imperial expansion in 1885. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1880s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.981392027656226,
+    "place": "Birmingham"
+  },
+  {
+    "record_id": "0018801004",
+    "title": "Literary Societies in 1880",
+    "date": "1880",
+    "text": "This sample text explores literary societies in 1880. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1880s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8886655506276356,
+    "place": "Oxford"
+  },
+  {
+    "record_id": "0018801005",
+    "title": "Economic Theory in 1887",
+    "date": "1887",
+    "text": "This sample text explores economic theory in 1887. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1880s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.9811223561777157,
+    "place": "Cambridge"
+  },
+  {
+    "record_id": "0019001002",
+    "title": "Edwardian Society in 1906",
+    "date": "1906",
+    "text": "This sample text explores Edwardian society in 1906. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1900s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.976207897027659,
+    "place": "Edinburgh"
+  },
+  {
+    "record_id": "0019001003",
+    "title": "Early Automobiles in 1907",
+    "date": "1907",
+    "text": "This sample text explores early automobiles in 1907. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1900s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8572178702976496,
+    "place": "Manchester"
+  },
+  {
+    "record_id": "0019001004",
+    "title": "Wireless Telegraphy in 1900",
+    "date": "1900",
+    "text": "This sample text explores wireless telegraphy in 1900. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1900s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8819721480847827,
+    "place": "Manchester"
+  },
+  {
+    "record_id": "0019001005",
+    "title": "Imperial Politics in 1909",
+    "date": "1909",
+    "text": "This sample text explores imperial politics in 1909. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1900s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8874257141621399,
+    "place": "Cambridge"
+  },
+  {
+    "record_id": "0019501002",
+    "title": "Post-War Reconstruction in 1956",
+    "date": "1956",
+    "text": "This sample text explores post-war reconstruction in 1956. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1950s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.9816581284565464,
+    "place": "Manchester"
+  },
+  {
+    "record_id": "0019501003",
+    "title": "Television Culture in 1958",
+    "date": "1958",
+    "text": "This sample text explores television culture in 1958. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1950s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8560730649281846,
+    "place": "Oxford"
+  },
+  {
+    "record_id": "0019501004",
+    "title": "Cold War Perspectives in 1957",
+    "date": "1957",
+    "text": "This sample text explores cold war perspectives in 1957. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1950s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8658206101836067,
+    "place": "London"
+  },
+  {
+    "record_id": "0019501005",
+    "title": "Suburban Life in 1952",
+    "date": "1952",
+    "text": "This sample text explores suburban life in 1952. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1950s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.9590705217887765,
+    "place": "Oxford"
+  },
+  {
+    "record_id": "0019701002",
+    "title": "Economic Uncertainty in 1970",
+    "date": "1970",
+    "text": "This sample text explores economic uncertainty in 1970. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1970s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8937673340212546,
+    "place": "Cambridge"
+  },
+  {
+    "record_id": "0019701003",
+    "title": "Changing Social Values in 1975",
+    "date": "1975",
+    "text": "This sample text explores changing social values in 1975. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1970s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8908106550798709,
+    "place": "Manchester"
+  },
+  {
+    "record_id": "0019701004",
+    "title": "Technological Advances in 1976",
+    "date": "1976",
+    "text": "This sample text explores technological advances in 1976. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1970s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.9525858805925665,
+    "place": "London"
+  },
+  {
+    "record_id": "0019701005",
+    "title": "Political Upheaval in 1976",
+    "date": "1976",
+    "text": "This sample text explores political upheaval in 1976. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1970s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.9096008727166606,
+    "place": "Manchester"
+  },
+  {
+    "record_id": "0019901002",
+    "title": "Digital Revolution in 1993",
+    "date": "1993",
+    "text": "This sample text explores digital revolution in 1993. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1990s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8871457360544531,
+    "place": "Birmingham"
+  },
+  {
+    "record_id": "0019901003",
+    "title": "Post-Cold War Politics in 1992",
+    "date": "1992",
+    "text": "This sample text explores post-cold war politics in 1992. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1990s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8780023283213538,
+    "place": "Birmingham"
+  },
+  {
+    "record_id": "0019901004",
+    "title": "Globalization in 1993",
+    "date": "1993",
+    "text": "This sample text explores globalization in 1993. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1990s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.9637640699357028,
+    "place": "Oxford"
+  },
+  {
+    "record_id": "0019901005",
+    "title": "Modern Arts in 1998",
+    "date": "1998",
+    "text": "This sample text explores modern arts in 1998. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 1990s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8546277362586013,
+    "place": "London"
+  },
+  {
+    "record_id": "0020101002",
+    "title": "Smartphone Society in 2012",
+    "date": "2012",
+    "text": "This sample text explores smartphone society in 2012. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 2010s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.9002235244764472,
+    "place": "Birmingham"
+  },
+  {
+    "record_id": "0020101003",
+    "title": "Financial Crisis Aftermath in 2017",
+    "date": "2017",
+    "text": "This sample text explores financial crisis aftermath in 2017. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 2010s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.930623761200208,
+    "place": "Edinburgh"
+  },
+  {
+    "record_id": "0020101004",
+    "title": "Climate Awareness in 2015",
+    "date": "2015",
+    "text": "This sample text explores climate awareness in 2015. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 2010s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.9568367539155622,
+    "place": "Edinburgh"
+  },
+  {
+    "record_id": "0020101005",
+    "title": "Digital Privacy in 2018",
+    "date": "2018",
+    "text": "This sample text explores digital privacy in 2018. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 2010s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.9898401748330532,
+    "place": "Edinburgh"
+  },
+  {
+    "record_id": "0020201002",
+    "title": "Pandemic Reflections in 2029",
+    "date": "2029",
+    "text": "This sample text explores pandemic reflections in 2029. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 2020s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8822292683941844,
+    "place": "Birmingham"
+  },
+  {
+    "record_id": "0020201003",
+    "title": "Remote Work in 2025",
+    "date": "2025",
+    "text": "This sample text explores remote work in 2025. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 2020s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8726606986947164,
+    "place": "Manchester"
+  },
+  {
+    "record_id": "0020201004",
+    "title": "Algorithm Ethics in 2027",
+    "date": "2027",
+    "text": "This sample text explores algorithm ethics in 2027. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 2020s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.9360304480207831,
+    "place": "Edinburgh"
+  },
+  {
+    "record_id": "0020201005",
+    "title": "Sustainability Challenges in 2023",
+    "date": "2023",
+    "text": "This sample text explores sustainability challenges in 2023. The document contains sufficient length to be useful for tokenization analysis and temporal language pattern studies. The vocabulary and phrasing are representative of writing from the 2020s decade. Additional sentences ensure adequate length for meaningful analysis.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8543387596348782,
+    "place": "London"
+  }
+]

@@ -1,0 +1,1391 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 68272 ***
+
+                                Trouble
+
+                          By GEORGE O. SMITH
+
+           [Transcriber's Note: This etext was produced from
+                Astounding Science-Fiction, July 1946.
+         Extensive research did not uncover any evidence that
+         the U.S. copyright on this publication was renewed.]
+
+
+Tom Lionel, Consulting Engineer, awoke with a shake of his head. At
+once, he was out of bed. He consulted first the calendar and then the
+clock. The thought struck him funny. He hadn't been drinking, but the
+idea of looking at a calendar upon awakening might be construed as an
+admission that he didn't know what time of what day it was.
+
+_Or mayhap what month._
+
+"Ding it," he grunted. "I've been away again."
+
+He dressed by stages. At the trousers department, Tom wandered out into
+the living room and stood over a chessboard, studying the set-up. The
+opponent had moved the queen to the rook's fourth, menacing his bishop.
+Tom smiled and moved his knight to his knight's sixth and checked the
+opponent's king on the rook's first, and the queen simultaneously. He
+slid the drawer below the table open and removed a little standing
+sign that said, in red, block letters:
+
+                                CHECK!
+
+"Let him try that one, will he?" laughed Tom. The move was basic; in
+checking the king and menacing the queen simultaneously, Tom had--or
+would upon the next move--collect himself his opponent's queen with no
+great loss.
+
+At the shirt and necktie stage, Tom Lionel stood teetering on his heels
+before the bookcase on the right of the fireplace. He took from the
+case a slim volume and read the title with considerable distaste:
+
+                    "Theory of Monomolecular Films
+                         in Fission-Reaction"
+
+                  By A. G. Rodan, Ph.D., M.M., LL.D.
+
+"Yipe!" exploded Tom as he opened the book and glanced at the price:
+$9.50. With ease he prorated the price against the thickness of the
+volume and came to the estimate that the book had cost approximately
+nineteen dollars per inch excluding covers. He riffled through the
+pages and paused here and there to read, but the pages themselves were
+a good average of four lines of text to the rest of the page full of
+nuclear equations.
+
+Tom Lionel snorted. He ran down through one of the arguments and
+followed it to conclusion.
+
+"Why can't he get something worth reading?" he yawned, putting the book
+back in its place. "Darned impractical stuff." As usual with a man
+who spends much time in his own company, Tom Lionel talked aloud to
+himself--and occasionally was known to answer himself back. "The whole
+trouble with the entire tribe of physicists per se is the fact that
+once, someone told one of them that he was a theorist, an idealist,
+and a dealer in the abstract. Now the bunch of them are afraid to do
+anything practical because they're afraid if they do, people won't know
+they're physicists. Physicists are a sort of necessary, end-product
+evil."
+
+       *       *       *       *       *
+
+During the breakfast section of Tom's morning duties, Tom read the
+latest copy of the "Proceedings of the I.R.E." with some relish. A
+paper on the "Crystallographic Generation of Microwaves" complete with
+plainly manipulated differential calculus and engineering data occupied
+most of his time. The rest of the time through coffee he was making
+marks on the tablecloth with the egg-laden end of his fork and trying
+to fit the crystallographic generation of microwaves into a problem
+that made the article most timely; the solution for which he had been
+seeking for a week.
+
+The mail arrived. Three household bills were filed in the desk to
+await the first of the month. Two advertisements were filed into the
+wastebasket. One thick letter addressed to Thomas Lionel, Ph.D., M.M.,
+was taken carefully between thumb and forefinger and deposited in a
+letter file.
+
+Tom then inspected the other letter file and found two letters
+addressed to Tom Lionel, Consulting Engineer, which he opened and read.
+One was from a concern in Cedar Rapids that wanted some information on
+a method of induction heating glued joints selectively without waiting
+for the normal drying time. The other was a letter from a medium-sized
+town in Illinois pertaining to some difficulty they were having with
+police-radio coverage of that area.
+
+Both letters meant money, and Tom Lionel set the first aside while he
+started to work on the second. From the engineering data supplied by
+the local engineer, Tom decided that a change in antenna height and a
+conversion from quarter-wave current fed to a one and one quarter-wave
+current fed antenna would give the desired coverage. He concluded his
+letter with four pages of calc, seven diagrams, and as a last measure
+dropped a photograph of a similar installation in the envelope.
+
+He gloated. That would net him a pretty penny. The guy who hung that
+antenna on top of the water tank thought he was smart, getting all that
+height. But the roof was metal, and therefore the radiation angle took
+off from the rooftop as a basis rather than the true ground a hundred
+feet below.
+
+The tank top was greater than three wave lengths in diameter, and
+conical to boot. Tom grinned at the maze of mathematics that solved
+it--and as far as he was concerned it was solved, for Tom Lionel was a
+top-flight engineer.
+
+He checked on his calendar. Metal for the sonic job was not due for a
+week yet; a minute casting was still being held up for the foundry's
+pleasure; and the life-test of the bearing-jewel for the Watson
+Instrument Corporation was still on. Good jewel that. No sign of
+freeze-up or wear-out after twenty-seven million cycles.
+
+"Theory of Monomolecular Films be hanged," he snorted. "He's the kind
+of a guy that would try to analyze the brew that MacBeth's three
+witches were cooking up. And don't ask why!"
+
+What he objected to most was the other's unconcern at spending money.
+Nine bucks and fifty cents for a book of the most questionable
+theory--and nine fifty that the other didn't really earn. It was
+getting worse. The other was really beginning to obtrude. He hadn't
+minded, particularly, except for the mental anguish. He'd become
+reconciled to it by sheer rationalization. Way, way down deep in his
+heart he knew that he'd have enjoyed being a physicist himself. But
+physicists were not particularly practical, and money was made with
+practical things. He knew, and recognized, that his retreat from being
+a physicist himself had given him a dislike for the breed, especially
+when he knew that solution of a problem was theirs, but reduction
+to practice was his. He was continuously being forced to take some
+physicist's wild-haired scheme and making it cook meat, open cans,
+or dig post holes. The physicist had all the fun of standing on the
+threshold and delving into phenomena that abounded just over the line.
+And then instead of working on the suggestion that the physicist had
+located in the wilderness, the physicist just tossed it over his
+shoulder into Lionel's lap and went on digging.
+
+Obviously it must be fun to dig in the unknown, but why in the name of
+sense--
+
+"Theory of Monomolecular Films in Fission-Reaction," scowled Tom
+Lionel. "A hypothesis on a theory for an idea, based upon a practical
+impossibility, and directed at a problem solvable only by concentrated
+masses. He should be working in a negative universe where nonmatter
+repels nonmatter disproportionately to the nonmass and inversely
+disproportional to the not-square of the not-distance between. Holy
+Entropy."
+
+       *       *       *       *       *
+
+Tom Lionel went out of the house, mentally tinkering with the
+glue-joint heating problem. That shouldn't be hard, he thought,
+high-frequency heating was no trick, though the furniture company
+probably had no one in the place that knew what high frequency really
+meant.
+
+He'd take a chair, rip it apart at the joints, and start tinkering
+with the big radio-frequency heater in the lab. Another fat consulting
+fee--eminently practical and satisfying--from the simple engineering of
+a means to accelerate the drying of glue by electronics.
+
+Eminently practi--_hell_!
+
+Lionel stared. The door closed slowly behind him as he walked ever
+so slowly across the floor of the lab. There was his radio-frequency
+heater, all right. But it was not in its usual place. It was across the
+room nuzzling up against another piece of equipment--the latter new,
+shining, and absolutely alien to the lab.
+
+Tom went over to the set-up and inspected it with critical derision.
+
+The alien piece of equipment had been a standard model of mass
+spectrograph. Its sleek sides were gaping open, and the high-frequency
+heater was permanently wired--piped--into the very heart of the
+spectrograph. Peering into the maze of one-inch copper tubing that led
+from the output of the high-frequency heater to the insides of the
+spectrograph, Lionel saw at once what the reason was.
+
+The spectrograph had been overhauled by the physicist. It now contained
+a pair of "D" chambers.
+
+Operating on the cyclotron principle, the spectrograph was using the
+output of the high-frequency heater to energize the D chambers. Lionel
+nodded. The frequency was about right; could be adjusted to the proper
+value without any trouble at all. He felt an infinitesimally short
+twitch of admiration for the idea before he started to roar in anguish.
+
+His first impulse was to rip the gadget apart so that he could go to
+work on something practical. But the engineer's admiration for the idea
+stopped him.
+
+But this was getting thick.
+
+It had been getting thicker for a long time. It was getting
+intolerable. He didn't mind too much having volumes of utterly
+cock-eyed theory about the place, but when the physicist starts to
+appropriate equipment for his screwball ideas, it was time to call a
+halt.
+
+Lionel left the laboratory, returned to his house, and called a
+psychiatrist.
+
+An hour later he was in Dr. Hamilton's office.
+
+"Why are you here?" asked Hamilton pleasantly.
+
+"I want to get rid of a physicist."
+
+"Tell him to go away."
+
+"Can't. Impossible."
+
+"Nothing is impossible."
+
+"Look, doctor, have you ever tried to light a safety match on a wet bar
+of soap?"
+
+"Suppose you tell me about it, then."
+
+       *       *       *       *       *
+
+Tom Lionel was more than talkative for a half hour.
+
+"A clear-cut case of split-personality. A most remarkable cleavage."
+
+Lionel muttered something.
+
+"What did you say?"
+
+"I'd rather not repeat it," said Tom.
+
+"Please--it may have a bearing on your case."
+
+"I was merely thinking of an hypothetical case. Says the doctor to his
+associate: 'Doctor, look at this magnificent tumor,' and his buddy
+answers: 'Lovely, but you should see my case of angina; it's positively
+beautiful.'"
+
+"Oh?"
+
+"So I'm a most remarkable case, huh?"
+
+"You are. There seems to be a deep-seated liking for one another that
+has been barred psychologically by certain factors in your youth. You
+play chess. You respect one another's property--"
+
+"That's what you say. The other bird just screwed up my dielectric
+heater to fiddle up a cyclotronic spectrograph."
+
+"Might try putting it to work," observed Hamilton.
+
+"Oh, I will. After all, he can't get ahead of _me_."
+
+"Then why the outcry?"
+
+"Because who knows what he'll do next."
+
+"He's appropriated things before?"
+
+"Only to the extent of buying books."
+
+"What manner of books?"
+
+"The last one he purchased was entitled 'The Theory of Monomolecular
+Films in Fission-Reaction.'"
+
+"Mind explaining that? It sounds like Greek to me."
+
+Lionel smiled tolerantly. "If you have a flat table and a pile of kid's
+toy blocks, you can either build a structure or lay 'em on the table in
+a single layer. Since molecules are often called the building-blocks
+of the universe, the analogy is quite clear. The blocks in a single
+layer form a monomolecular layer. Fission reaction is a self-sustaining
+nuclear reaction."
+
+"Sounds quite erudite."
+
+"In the first place, no one with any sense would try to make use of it.
+It is the type of volume that a physicist would write in the hope that
+he will get letters pro and con on the subject which will be useful in
+forming a later theory."
+
+"Then it is not a complete waste of time."
+
+"Any time I lay out nine bucks for a half-inch of paper--"
+
+"Expensive, isn't it?" asked the doctor.
+
+"Sure. Those things are not best sellers, usually. The publisher puts
+it out in the name of science and must at least get his printing cost
+out of the very limited edition."
+
+"I see. And you want to get rid of this physicist?"
+
+"Who wouldn't? After all, I had this body first. He's an interloper."
+
+"Seems that way."
+
+"It is--and it's annoying."
+
+"We may be able to do something about it," said the psychiatrist.
+"Permit me to think about this for a few days. We'll have another
+consultation in a week. We may require another one before I make a
+decision. But it seems to me that you are both intelligent, useful
+citizens. Neither of you is irresponsible or dangerous. You have
+enough money to afford schizophrenia for a while. Especially if the
+personality B dreams up things that personality A makes practical,
+financially advantageous use of. Ergo you need fear nothing for a few
+weeks."
+
+"Ugh. Means I'll have to go out and buy another high-frequency heater.
+O.K., doctor. I'll lay low."
+
+       *       *       *       *       *
+
+Thomas Lionel, Ph.D., M.M., awoke with a shake of his head. At once, he
+was out of bed. He consulted first the calendar and then the clock.
+The thought struck him funny. He hadn't been drinking, but the idea of
+looking at a calendar upon awakening might be construed as an admission
+that he didn't know what time of what day it was.
+
+Or mayhap what month.
+
+"I've been away again," he grunted.
+
+He dressed by stages. At the trousers department, Thomas wandered out
+into the living room and stood over the chessboard, studying the set-up.
+
+He removed the little sign that said:
+
+                                CHECK!
+
+and dropped it into the drawer again. He moved his king aside with a
+contemplative smile. His queen was gone on the next move, he knew. So
+he had lost a major piece. So that other bird thought that losing a
+major piece was bad, huh? Well, winning battles does not count--it is a
+matter of who wins the last one.
+
+He found the volume on the theory of monomolecular films and started
+to read with relish. Over coffee, at breakfast, Thomas made notations
+on the margin of the book with a pencil; checked some of the equations
+and though he found them balanced properly, the author was amiss in not
+considering the lattice-effect in his presumptions. No monomolecular
+film could follow that type of reaction simply because--well, it could
+follow it, but since the thing was to take place in a monomolecular
+film, the fission-reaction and the radiation byproducts that cause the
+self-sustaining nature could only be effective in a plane of molecular
+thickness. That meant a .999999% loss, since the radiation went off
+spherically. Fission-reaction might take place, but it would be most
+ineffective. Besides, the equations should have taken that into account.
+
+He stopped by the desk and wrote for a half hour, filling seventeen
+pages full of text and mathematics, explaining the error in the
+author's presumption.
+
+He sealed it up and mailed it with some relish. No doubt that letter
+would start a fight.
+
+He found his letter in the letter file and read it. It was a request to
+indulge in some basic research at a fancy figure, but Thomas was not
+particularly interested. He was thinking of another particular line of
+endeavor. He dropped the letter into the wastebasket.
+
+He went into the lab and took a look at his cyclotronic spectrograph.
+There was a letter hung on the front. Thomas opened it and read:
+
+    Dear Isaac Newton:
+
+    I don't particularly mind your laying out thirty-five hundred bucks
+    for a mass spectrograph.
+
+    Appropriating my high-frequency generator didn't bother me too much.
+
+    Nor did your unsymmetrical wiring and haywire peregrinations in and
+    about the two of them annoy (too acutely) my sense of mechanical
+    and electrical precision.
+
+    But the idea of your using the ##&&%!! spectrograph only once--just
+    for pre-change calibration--makes me madder than mad!
+
+                                                             Sincerely,
+                                                            Tom Lionel,
+                                                    Consulting Engineer
+
+Thomas grinned boyishly and picked up the notebook on top of the
+high-frequency heater. It was Tom's, and the physicist riffled through
+it to the last-used pages. He found considerable in the way of notes
+and sketches on the cyclotronic spectrograph. Cut in size by about one
+quarter, the thing would be not only a research instrument of value,
+but would be of a price low enough to make it available to schools,
+small laboratories, and perhaps production-lines--if Tom Lionel could
+find a use for a mass spectrograph on a production line.
+
+Thomas grinned again. If it were possible, Tom would certainly have it
+included on _some_ production line, somewhere.
+
+He looked the spectrograph over and decided that it was a fine piece
+of apparatus. So it wasn't the shining piece of commercial panel and
+gleaming meters. The high-frequency plumbing in it had the touch of a
+one-thumbed plumber's apprentice after ten days' drinking and the D
+plates were soldered together with a heavy hand. But it did work--and
+that's all he cared. The knobs and dials he had added were sticking
+out at all angles, but they functioned.
+
+And the line-voltage ripple present in the high-frequency generator
+made a particular mess out of the spectrograph separation. But
+electronic heaters do not normally come luxuriously equipped with
+rectifiers and filters so that the generator tubes were served with
+pure direct current--the circuit was self-rectified which would give
+a raucous signal if used as a radio transmitter. That generated
+a ripple-varied signal for the D plates and it screwed up the
+dispersion. The omission of refinement satisfied Thomas. So it wasn't
+perfect. It would be by the time Tom Lionel got through with it.
+
+And for the time being, Thomas would leave it alone. No use trying
+to make it work until Tom made an engineering model out of the
+physicist's experiment.
+
+Smiling to himself, Thomas went to work in the laboratory. He ignored
+Tom's experiments and started a few of his own accord.
+
+       *       *       *       *       *
+
+Some hours later, the doorbell rang and Thomas went to the door to
+find a letter, addressed to Thomas Lionel, Ph.D. It was from an Arthur
+Hamilton, M.D.
+
+"Hm-m-m," said Thomas. "Is there something the matter with me?" He
+slit the envelope and removed a bill for consultation.
+
+"Consultation? Consultation? What in the name of all that's unholy
+is he consulting a doctor about? Or is the doctor consulting--no,
+the bill is rendered in the wrong direction. I know my consulting
+engineer."
+
+The physicist put on his hat and headed forth. It was not much later
+that he was sitting again in the same chair, facing Hamilton.
+
+"You're back."
+
+"Nope," smiled Thomas. "I'm here, not back."
+
+"But you were here last week."
+
+"That was another fellow. Look, Hamilton, I think I require your
+assistance. I have an engineer that is no end of bother."
+
+"Want to get rid of him, huh?" answered Hamilton. The suppressed smile
+fought valiantly and won, and the doctor's face beamed and then he
+broke into laughter. "What am I, anyway? Man, I can't take money from
+both sides. That's ... that's ... barratry, or something."
+
+"I'm the same man."
+
+"Nope. You are not."
+
+"Well, by and large, I thought it might be of interest to you to hear
+both sides. It might be that I am a useful citizen in spite of what
+the engineer says."
+
+"The engineer's opinion is that no physicist is worth an unprintable."
+
+"The physicist's opinion is that all engineers are frustrated
+physicists."
+
+"Might challenge him to a fight."
+
+"Have. But chess isn't too satisfying. I want blood."
+
+"It's your blood."
+
+"That's the annoying part of it all. He seems entirely a different
+fellow."
+
+"The cleavage is perfect. You would think him a separate entity."
+Hamilton paused, "But neither of you refer to the other by name. That
+indicates a psychological block that may be important evidence."
+
+"O.K., what do we do?"
+
+"I must discover the reason for the split personality."
+
+"I can give you that reason. The engineer was forced into being a
+practical man because money lies in that direction. Upon getting out
+of college, there was a heavy debt. It was paid off by hard work--a
+habit formed and never broken. Bad habits, you know, are hard to
+break."
+
+"Interesting."
+
+"Well, the desire to delve into the physicist's realm stayed with the
+engineer, but people who had heavy purses were not interested in new
+ways to measure the ether-drift or the effect of cosmic radiation on
+the physical properties of carbon. Money wants more perfect pencil
+sharpeners, ways of automatically shelling peas, and efficient methods
+of de-gassing oil. All these things are merely applications in
+practice of phenomena that some physicist has uncovered and revealed
+and put on record so that some engineer can use the effect to serve
+his ends.
+
+"At any rate, the desire to be a physicist is strong, strong enough to
+cause schizophrenia. I, Dr. Hamilton, am a living, breathing, talking
+example that an engineer is but a frustrated physicist. He is the
+troubled one--I am the stable personality. I am happy, well-adjusted,
+and healthy."
+
+"I see. Yet he has his point. You, like other physicists, are not
+interested in making money. How, then, do you propose to live?"
+
+"A physicist--or an engineer--can always make out well. The bank
+account at the last sitting was something like ninety-four thousand,
+six hundred seventeen dollars and thirty-four cents."
+
+"That's quite a lot of money."
+
+"The engineer considers it a business backlog," said Thomas.
+"Equipment is costly. Ergo--see?"
+
+"I see. Seems you laid out a large sum of money for a mass
+spectrograph."
+
+"I did."
+
+"And what did he do?"
+
+"He made notes on it and is going to peddle it as a commercial
+product. He'll probably make fifty thousand dollars out of it."
+
+"I suggested that," admitted the psychiatrist.
+
+"That's all right. I don't mind. It sort of tickles me, basically. I
+do things constantly that make him roar with anguish. And then his
+only rebuttal is to take it and make something practical out of it."
+
+"I see."
+
+"That, you understand, is the game that has been going on for some
+time between all physicists and engineers."
+
+"If you'd leave one another alone, you'd all be better off," said
+Hamilton. "From what I've heard, the trouble lies in the fact that
+physicists are not too interested in the practical details, whilst the
+engineer resents the physicist's insistance upon getting that last
+point zero two percent of performance."
+
+"Are you willing to give me my answer?"
+
+"What answer?"
+
+"How do I get rid of the engineer? One of us has got to go, and being
+the stable, happy one, I feel that all in all I am the best adjusted
+and therefore the most likely to succeed. After all, I am the ideal
+personality according to the other one. He'd like to be me. That's why
+he is, from time to time."
+
+"Sort of a figment of your own imagination."
+
+"That's me."
+
+"Then I wonder--Yet, I did accept his case, not yours."
+
+"Whose case?"
+
+"Um ... ah ... I--Look, if you frustrate him to the extreme, he'll
+retreat into you more and more until he does not appear. Follow?"
+
+"I get it. O.K., doctor. He'll be the most frustrated engineer in the
+world. And I am just the guy to do it."
+
+       *       *       *       *       *
+
+Tom Lionel, Consulting Engineer, looked foolishly at the claw hammer
+in one hand and wondered about it. About him in the laboratory were
+stacks of huge packing cases.
+
+Unpacked already were several monstrous bits of equipment. Lionel
+shook his head. Where had this mess come from? He hadn't ordered it--
+
+Or,
+
+Had he?
+
+Lionel left the laboratory on the dead run. He tripped once and fell
+flat on his face and as he started up again, the top of his head came
+with a sharp bang against the unyielding bottom of a ruling engine.
+
+"A grating engine," yelled Tom.
+
+On the desk, in plain sight, was a pile of bills-of-lading. Tom
+riffled through them, consulted packing lists, and a catalog of
+ordered equipment. In his own handwriting, too.
+
+Grand total outlay $94,617.34; balance to be paid within thirty days:
+$16,750.00.
+
+"Not only broke," grunted Tom, "but bleeding too."
+
+His handwriting was his handwriting. Not a chance in the world of
+refuting the order, or packing the stuff up and sending it back. He
+was stuck with it.
+
+But the conglomeration that Thomas had picked out. A sort of
+aggregation of large and small parts that would have made a small
+college laboratory figuratively drool at the thought; but which would
+only grow dust, rust, and corrosion in any manufacturing plant.
+
+With the possible exception, of course, of a manufacturer of
+scientific equipment for colleges and laboratories.
+
+What production line could make use of a ruling engine?
+
+And if one could, could it use a micro-densitometer in the same
+process?
+
+Of course, the micro-vacuum pump could be used in vacuum tube
+manufacture, in a pinch. Vacuum tube companies normally used
+large-volume pumps instead of the little super-efficient exhaustion
+pump that could take a few cubic centimeters down to a few
+millimicrons of mercury.
+
+The electron microscope was a nice hunk of stuff, but the thing was
+not applicable to anything except research.
+
+And the instantaneous X-ray gadget was tricky as the devil--and
+adapted mostly to the job of taking pictures of bullets under fire as
+they passed up through the rifling of a gun.
+
+One pile of stuff was directed--according to Tom's designation--only
+at the problem of investigating the Earth's gravitational field as for
+strength, direction, and conflicting urges.
+
+A transit. Now what in the name of sin would a radio engineer want
+with a transit? Nice piece of stuff, and far superior to the little
+dumpy-level that Tom used to lay out antenna arrays and directive
+antennas of one sort or another. But, a transit!
+
+And so the list went. $111,367.34 worth of the most interesting,
+best made, neatly assembled hunks of utterly impractical scientific
+machinery ever collected under one roof.
+
+A solid vista of impracticality as far as the eye could reach.
+
+The ton of bricks that broke the camel's back.
+
+Tom roared through the house, took a look at the chessboard and with a
+savage movement, took the physicist's queen with his knight. He'd get
+even with that physicist if it took--
+
+Well, almost anything.
+
+       *       *       *       *       *
+
+Fifteen minutes later he was in Dr. Hamilton's office, pounding on the
+desk.
+
+"Look," he roared, "that physicist just clipped me for my entire
+bankroll and then dropped me into debt by sixteen grand. I want him
+clipped!"
+
+"Now take it easy," said the doctor. "Remember you are talking about
+yourself."
+
+"Doc, if I commit suicide am I liable for murder?"
+
+"Yup. Going to try?"
+
+"Nope. Life is too interesting. My main regret with life is that I was
+born a hundred years too soon. My only compensation is that I may live
+to be a hundred, so that I can see what I've missed by being born too
+soon. Follow?"
+
+"You sound mentally healthy enough."
+
+"Thanks. But what about him? You've seen him."
+
+"I have. He came to me about you."
+
+"And what are you doing about it ... us?"
+
+Dr. Hamilton laughed. "Mind if I speak bluntly?"
+
+"Not at all. I can take it."
+
+"Then consider. Both you and your ... physicist ... are sensible,
+useful citizens. Both of you can contribute much to civilization. Both
+of you can and will be respectable people, for which other people will
+have admiration.
+
+"I am in the middle," said the doctor, "I can be no more than a
+referee. I see both sides. I believe the cleavage came as a result
+of frustration on your part--you know the details--and as such, you
+become him when you are frustrated. The reason why he becomes you is
+also clear. Whenever he finds himself in straits due to the necessity
+of practical thought, the slip-over occurs. You awoke with a stripping
+hammer in your hand, unpacking scientific equipment that the physicist
+bought. He, obviously, became quite worried about the financial
+situation upon viewing the stuff he bought and could face it no more."
+
+"Sounds reasonable."
+
+"Now consider again. Neither of you is dangerous. You are both
+interesting and valuable to society. The only thing that is at all
+bothersome is the fact that you, per se, are not happy. You need
+an integration of personality. He needs the same. I might hope for
+a coalescing of you two, but at the moment--and possibly for all
+time--it is impossible. All I can tell you is the same thing that
+I told him. Frustration to the extreme will exorcise the other
+personality. He tried it by running you into debt; by purchasing
+a laboratory full of things that you, as an engineer, can see no
+practical use for. You frustrated him--or tried to--by making
+something commercial out of his last experiment. That, unfortunately,
+was not frustration for him.
+
+"You must--if you wish to freeze him out--develop something that will
+frustrate the physicist and still be possible to rationalize in your
+own personality."
+
+"Um."
+
+"An insolvable problem would do it--if you can shun the problem
+yourself."
+
+"That might be difficult."
+
+"Especially when the two of you are inclined to become the other when
+faced with a problem that does not fit in your psyche."
+
+"The problem--I wonder."
+
+"What do you do when you are faced with a tough or impossible problem
+in physics?"
+
+"I don't get 'em, usually."
+
+"Well, supposing some company required a casting of tungsten metal,
+for instance."
+
+"I'd ask that they show me exactly why the tungsten couldn't be formed
+in another manner."
+
+"Supposing they demanded that it be cast?"
+
+"There isn't anything on God's green earth that could be used to
+handle molten tungsten. Tungsten metal can be shaped, forged,
+machined, or cold-rolled. But you can't cast it. Ergo, if I were
+offered that problem I'd merely ask why they needed it. If they
+require a tungsten shape, I'd recommend shaping or machining, for
+instance, depending upon how the shape is. If they merely want a
+tungsten casting for the sake of wanting a tungsten casting, I'd laugh
+at them and tell 'em it was impossible as I close the door behind
+them."
+
+"And your physicist?"
+
+"He wouldn't even consider it. To him, no real problem exists. He'd
+have no truck with a production department in the first place, and
+in the second, shaping metals isn't particularly of interest to a
+physicist, excepting when the shape itself is important. And then he
+doesn't give a howling hoot how it gets in that shape as long as it is
+shaped properly."
+
+"Well, as I see it, you must evolve something that will frustrate the
+physicist while holding his interest. He must be compelled to consider
+this insolvable problem by sheer interest alone. It also must be
+something that you can see no interest in save as a problem for him,
+otherwise you may find yourself biting your mutual fingernails over
+your own devilish plan."
+
+"Um--that's a large order."
+
+"That's it," said Hamilton. "And in the meantime, I'd suggest that you
+tinker around with some of the stuff you bought. It will lessen the
+shock of your problem of the bankroll."
+
+"That bank of junk might be the means to his own frustration," grinned
+Tom. "Every time I look at it, I get a feeling of what can be done
+about it that is practical, and that may force him into existence and
+keep him there."
+
+"Well, good luck. And remember, I am just a sort of referee. One
+of you will become the stronger. One will succeed. I can hope for
+coalescence, but I doubt that it will take place. Lacking that, all I
+can hope for is that eventually you will become reintegrated and that
+the lesser personality will be frozen out."
+
+Tom Lionel returned home, thinking furiously.
+
+"May the best man win, huh?"
+
+       *       *       *       *       *
+
+It was seven solid weeks by the calendar. Seven solid weeks of hard,
+backbreaking work during which everything went fine and dandy for Tom
+Lionel, Consulting Engineer.
+
+The balance of his debt was paid off when Americal Electric purchased
+the rights and royalties of the cyclotronic spectrograph. The
+equipment in Tom's laboratory had been kept in good shape, polished
+and even used occasionally. It was all connected for operation, and
+though the laboratory had changed from a spacious building into a
+place where aisles and areas abounded between banks of equipment, it
+did make an impressive sight.
+
+Even the transit came into use.
+
+And then at the end of the seventh week, Tom Lionel looked at his
+notebook and started to consider in all of its aspects the rather
+improbable phenomenon recorded there. He not only let it prey on his
+mind; he stopped hourly and invited his mind to consider the evidence.
+At first his mind rejected it on the basis that science was not
+equipped to consider it, and then as the evidence seemed definite and
+leading, his mind accepted the fact that this problem did exist and
+that it was a real and utterly baffling problem.
+
+Then his mind rejected it on the basis of impracticality. It would be
+nice--but.
+
+No known physical effect could possibly explain it in a satisfactory
+manner.
+
+Tom went to sleep.
+
+       *       *       *       *       *
+
+And Thomas Lionel, Ph.D. M.M., awoke. His first consideration was the
+chessboard. It baffled him. He didn't really think that the engineer
+would capture his queen. It was too easy. Obviously, there was more to
+the set-up than appeared. For offering the trap of the double-check
+and subsequent loss of his queen, Thomas had opened the row blocked by
+the knight. That left him in the desirable position of capturing the
+engineer's rook, after which if the engineer was not more than careful
+in his counterattack, he would find himself staring a checkmate in
+the face. Either the engineer was blind to the trap, or he had a more
+complicated trap to spring once the physicist started to move in.
+
+He had time. He wanted to consider the whole thing. He was going to
+be darned sure that he was right before he moved.
+
+He dressed slowly, and as he entered his kitchenette to prepare
+breakfast, he saw a new notebook on the table. He picked it up,
+riffled the pages first, and then read the lettering on the front page.
+
+    PHYSICAL DATA AND OBSERVATIONS MADE ON THE OCCURRENCE OF THE
+    MANIPULATION OF NATURAL FORCES WHICH HAVE NO EXPLANATION IN THE
+    KNOWN REALM OF PHYSICS.
+
+    Contents:
+
+    173 pages of text.
+     77 pages of calculations.
+     48 tables of figures.
+     67 photographs.
+     13 statements made by unbiased--but not trained--observers.
+      7 similar incidents not given scientific attention.
+     29 graphs and curves.
+     25 pages of description and data pertaining to:
+          meteorological conditions.
+          terran constants--gravity and magnetism.
+          sunspot activity.
+          chemical analyses of earth at discrete intervals near the
+            occurrence.
+          analysis of atmosphere during phenomena.
+
+    Accompanying information and data are samples of earth mentioned
+    above. Atmospheric samples were contaminated during analysis and
+    have therefore been destroyed.
+
+"Little Tommy has been a busy lad," mused the physicist. "'No
+explanation' huh? That's a laugh. _Anything_ can be explained. Well,
+my engineering friend, let's see what you have cooked up for me."
+
+Thomas Lionel started to read the "173 pages of text" and got down as
+far as the bottom of the first page. He blinked, did a double take,
+and reread it.
+
+"Great howling entropy," he grunted. "The unmitigated screwball
+has spent weeks in the compilation of data on his own, personal
+observations of a _poltergeist_ in action!"
+
+Thomas took the cigarette case from his pocket and extracted a
+cigarette. He snapped the lighter and was amazed to see the colors on
+the case. They were scintillating, iridescent, and beautiful. They
+danced and changed as he moved the lighter, and the swift play of
+color across the surface of the case caught his fancy.
+
+It also caught his scientific sense. He looked at the case carefully
+and swore. Tom had been using the ruling engine. The surface of the
+cigarette case was a mirror-grating and it was as good a job as the
+ruling engine could produce.
+
+Thomas fumed. The idea! And then he smiled a bit. For the engineer's
+use of the ruling engine to decorate a cigarette case was a sort of
+prostitution of the machine, but it had not harmed the engine in
+any way. And it was certainly no worse on the physicist's nerves
+than the irrelevant mixture of precision and utter sloppiness that
+characterized the physicist's work.
+
+It was, the physicist admitted, beautiful.
+
+He returned to the engineering data.
+
+       *       *       *       *       *
+
+A poltergeist!
+
+The "throwing-ghost" of the ancient lore and myth. The fearsome
+manifestation of unrealism. Superstition!
+
+Sheer superstition!
+
+The physicist's mind rejected it, at first. But that which made
+him the physicist prodded neatly and patiently and quietly. "Where
+there's smoke, there's fire," it said. And it mentioned situations
+where, though exact engineering data had not been taken, certainly the
+observers were not incompetent. They were not trained, but they did
+attempt to give a valid picture.
+
+Well, so there might be something to it. So the poltergeist might be
+something.
+
+This case was no flash in the pan. It was real and valid. For nine
+full days it had persisted. For nine full days, stones passed through
+the air at the direction of--the poltergeist. Pictures of the stones
+in full flight. A step-by-step, frame-by-frame sequence picture of
+a stone leaving the ground and speeding away gave Thomas a wriggly
+feeling up and down his spine.
+
+Barometric pressure 29.77 inches, temperature 84.66 degrees, both
+rising slightly. A graph gave the pressure and temperature throughout
+the nine days. The total number of stones and the masses, individual
+and aggregate. The district, with a map of both the entire township
+and a close-up map-diagram of the area, with motion-traces across it,
+each labeled, notated, numbered, and keyed to the text.
+
+Physical data on the gravitational field. Maps of the magnetic field,
+both transverse and vertical. Wind direction during each passage of
+the stones.
+
+A faked report.
+
+Couldn't be real. Absolutely impossible. Ridiculous, and the work of a
+frantic mind, working avidly to create a situation.
+
+And yet the engineer was a good engineer. He couldn't--it was
+psychologically impossible for him--to present fake data.
+
+Ergo this report must be real.
+
+Thomas considered the reports of peculiar activity. Mostly the
+newspapers reported them as small boys throwing stones as a method
+of exerting their ability to be annoying to the police and duly
+constituted authority.
+
+There were reports, he knew. About twelve authentic reports per year,
+which considering the possibility of having the poltergeist phenomena
+present when no observer was there--how many times had he heard small
+stones rattling from the roof or rattling noises of one sort or
+another--meant that the poltergeist was a rather common phenomenon.
+There were cases he recalled wherein earthquake temblor had been
+blamed for the upsetting of a grand piano. He'd wondered about that
+one--a grand piano is stable, positionwise--and how it could have been
+rolled across the room and dumped upside down.
+
+Poltergeist phenomena.
+
+Ah yes. It might be advisable to get slightly soused tonight. But
+Thomas was a physicist. He did not quail or get slightly panicky at
+the idea of the unknown, even though the unknown was known to have
+tossed a slab of marble--appropriately, a tombstone--several hundred
+feet through a caretaker's shed.
+
+To be sure, it was slightly running against the grain to sit there in
+the broad daylight and read about things that according to all physics
+from Archimedes to Einstein claimed impossible, racial superstition,
+and old wives' tales. It was very disquieting to read of stones--dead,
+inert, lifeless, immobile bits of granite--that took off from Mother
+Earth with no visible means of support, to go whizzing through the
+thin daylight air at speeds that raised bruises, cut nicks in trees,
+and shattered windows. It bothered the sense of propriety. It was not
+right. It was like seeing Lake Louise in violent flame, or watching
+Niagara go tumbling up from the whirling pools to the ledge that
+flanked Goat Island. It was crushing chrome-vanadium test-bars between
+your fingers just after removal from a tensile strength machine that
+failed to fracture them at fifteen thousand pounds per square inch. It
+was watching phosphorus lying inert in an atmosphere of pure oxygen.
+
+It was all wrong.
+
+And yet, thought the physicist, what must the Ancient One have
+thought when he considered the act of fire melting hard metal? They
+did strange things, in those days. They invented phlogiston, and spent
+centuries trying to isolate it. Galileo and his telescope, looking
+through it to Jupiter, must have been startled at the concept as well
+as the sight of a planetary system in operation.
+
+Science knew that the poltergeist was a problem--but like the man
+who does not care to go crazy because of the insoluble problem,
+science shrugged, admitted that it was stumped--intelligently enough,
+under the circumstances--and then remarked that after finding the
+next decimal place, it would, perhaps, take a look into the natural
+phenomena of things that were thrown by nothing.
+
+Until that date, it could look the other way and claim that small boys
+were throwing stones.
+
+Little boys that they could not see.
+
+Little green men--
+
+       *       *       *       *       *
+
+Uh-huh, well, here before Thomas Lionel was a veritable wealth of
+intelligent observations and data on the complete operation, including
+evidence to substantiate the fact that neither small boys or little
+green men were involved.
+
+The evidence and engineering measurements were made with impersonal
+directness. The engineer, recognizing that he knew nothing of the
+cause, recorded the effect with court-stenographic impartiality.
+A stone of so many grams left point A in a rising parabola and
+proceeded to point B where it landed and rolled to point C. It took
+X seconds, attained Y velocity at peak, and covered Z feet. Graph 1
+represents acceleration and deceleration, and equation XXVII is the
+mathematical representation of the space-curve described by this stone
+of so many grams.
+
+And bottle VQ contained the stone.
+
+It was all wrong, but it was interesting. It pointed the way to
+madness--and unless it could be rationalized, the pathway to madness
+would be a one-way street. Thomas knew at that point that his feet
+were on that path. He could never retreat until he carried back with
+him an answer--and from the data presented, his answer must be right.
+
+The engineer, he knew, had done it deliberately. As a means of
+frustration it was more than air-tight. It was perfect. Show a
+physicist something that floats between two plates, and he'll go crazy
+until he knows why. And the engineer had shown the physicist any
+number of things that floated--sped, indeed--through the air between
+heaven and earth, like Mohammed's coffin.
+
+Without the benefit of mirrors.
+
+Well, Thomas Lionel, are you licked?
+
+He found a letter that removed all doubt as to the reason. He opened
+it and read:
+
+    Dear Archimedes:
+
+    Since you so gallantly presented me with this aggregation of things
+    to measure the last three decimal places of everything, I have
+    decided to put it to work. I have had some fun, thanks to you, in
+    measuring things that I believe have never been set to music before.
+    I have spent some time collecting and presenting data.
+
+    This data I do not pretend to understand. I don't intend to try. I
+    am merely an impartial observer. To harness this power would be a
+    boon to civilization. I can see a small truck full of equipment
+    bearing the sign:
+
+                      POLTERGEIST MOVING COMPANY
+
+    if you can only unravel the information contained in my data. You,
+    as a physicist, surely must be able to explain the manifestation in
+    terms that satisfy all and sundry. Once you decide what makes, I'll
+    be interested. Until that date I am stumped, admit it, and happy
+    that I am able to hand the problem to one who by all the evidence,
+    has the personality and character that will not permit these pages
+    of painstaking data to molder in the dust.
+
+    Please--old fellow, tell me what's with a poltergeist.
+
+    And don't refer vaguely to space warps or fourth dimensional animals.
+    That's strictly for _Corny Stories or Vulturesome Tales_.
+
+                                                          Interestedly,
+                                                            Tom Lionel,
+                                                   Consulting Engineer.
+
+    P.S. That junk you bought made it possible to make these
+    measurements. Surely the same stuff should enable you to figure out
+    the answer. You and your monomolecular films.
+
+You and your monomolecular films, Thomas snorted.
+
+       *       *       *       *       *
+
+That was the start. Then, for eight solid weeks, the laboratory lights
+burned by night, and the machinery turned at all and odd hours of the
+clock. Measurements were conducted on all sorts of things; including at
+one instance, the astronomical data pertaining to planetary line-up of
+the solar system. That one was stamped with a large reject sign; not
+only it didn't apply, but it didn't make sense either. Trips to the
+library were frequent, and many's the ancient tome that Thomas read
+until his eyes burned.
+
+The equations, graphs, and tabulations came in for their study and he
+located a percentage of dispersion in them. It was either experimental
+error or true dispersion of effect.
+
+The engineer had done his work well. He had compiled his information,
+and then had presented it in such a manner that left no doubt. And
+it proved conclusively that something was there and at the same time
+pointed out that if there was something there, it could be analyzed,
+and possibly reproduced.
+
+The physicist knew that no answer would be satisfactory until the
+phenomenon could be reproduced.
+
+And both he and the engineer knew that the chances were more than
+possible that a high-order physical effect might be the basic cause.
+An effect for which mankind had no instruments; radio as a natural
+phenomenon would be inexplicable to a race that had never discovered a
+means of detection; the mathematical prediction of radio occurred years
+before the original experiments.
+
+So--
+
+The physicist set his mind against frustration. To change over to the
+engineer without an answer would be an admission of defeat. At least
+without _some_ satisfactory answer.
+
+He mulled his problem by the hour, by the day, and by the week. He did
+take enough time out to consider the chess problem daily. He figured
+all the possible moves and finally, one night, he smiled, shrugged his
+shoulders and decided to plunge ahead.
+
+He slid his rook down from one king row to the other through the
+square formerly covered by the knight which had been protected by a
+bishop. All the way across the board he went, and as he arrived at his
+opponent's king row, he took out the little sign and stood it on the
+center of the board.
+
+       *       *       *       *       *
+
+Tom Lionel blinked and removed his finger from the pushbutton. He
+shook his head. This was all wrong. And, besides, what in the name of
+entropy was this little box? He didn't recall putting a finger on that
+button--but here he was, removing his hand after holding the button
+down.
+
+It was a small metal box about eight by seven by four inches. The edges
+were all die-straight and the surfaces were as optically flat as Tom
+could determine without testing. The pushbutton was set flush with the
+surface, and made of the same metal as the box.
+
+No other projection was evident.
+
+But the button was accompanied with engraving cut in the metal of the
+front surface. It said:
+
+                            BE AN ENGINEER!
+
+                       Away with imagination! Be
+                       practical! Dispense with
+                        theory! Do nothing that
+                        cannot be justified and
+                       explained to perfection.
+
+                       To succeed; to enjoy the
+                        wonderful practicality
+                           of the engineer--
+
+                              PRESS HERE!
+                   Poltergeist Conversion Co., Ltd.
+
+Tom blinked and got the idea at once. The engineer knew. The physicist
+had dreamed up this thing; it must contain some sort of thing that
+caused the shift in personality at the physicist's will.
+
+He took hold of it and lifted.
+
+It slipped out of his fingers.
+
+He set both hands on it and lifted. It stayed on the table. He grunted
+and strained, and succeeded in getting it off the table by several
+inches. Then he gave up and returned it slowly to the top again,
+fearing to drop it lest it damage the desk top.
+
+Metal, huh?
+
+Must be practically solid, then.
+
+What metal?
+
+Tom thought. Must be tougher than a battleship's nose, for if entry
+were easy, the physicist knew he'd be rebuilding the thing every time
+he wanted to use it.
+
+He took a cold chisel, set the edge against one corner and walloped it
+with a hammer. The edge of the cold chisel turned back in a neat Vee.
+Tom took a file, set the cutting edge against one corner and filed.
+The file slipped across the corner of the box with all the bite of a
+solid, slick bar of smooth steel.
+
+An atomic hydrogen cutting torch stood nearby. Tom fired up and set the
+ultra-hot flame against the same corner that had defied his previous
+efforts. Nothing much happened excepting that the box got hotter.
+
+That spoiled Tom's fun for the moment. The desk below the box started
+to smoke and then burst into flame. Tom grabbed a carbon tetrachloride
+extinguisher but stopped before he played the stream on the hot metal.
+It was charring the desk through.
+
+The desk was ruined anyway, so Tom ignored it for the moment. He ran a
+bucket of water and slid it underneath the desk just in time to catch
+the ultra-hot box just as it passed through the table.
+
+While it was sizzling in the bucket of water and sending forth great
+clouds of vapor, Tom busied himself with the extinguisher, putting out
+the fire on the desk.
+
+Tungsten!
+
+Well, tungsten or not, it must be ruined after immersion in water after
+being red-hot all over. Nothing on God's green earth--
+
+Holy entropy! He'd said that before. It presented a couple of large,
+bright red question marks.
+
+One. That thing was apparently tungsten clear through. Therefore, how
+had the physicist cast it?
+
+Two. Granted that thing had been cast--what in the name of howling
+rockets had the physicist used for the inside circuits?
+
+And three. If running molten tungsten into the mold hadn't ruined the
+guts of the box, how could heat and water do anything at all?
+
+And, disquieting thought, was the pushbutton waterproof?
+
+With much difficulty, Tom moved the box out from its watery bath below
+the bench and hauled it over to the high-power X-ray machine. He looked
+at the fluoroscope and grunted in disgust.
+
+Naturally, tungsten would be completely and utterly blank-faced to any
+X-ray manipulation. He wanted to kick it, but he knew that kicking a
+sold slab of tungsten would be damaging only to the kickee.
+
+A means of casting tungsten--something that they'd been seeking ever
+since the stuff was isolated. He had it--or at least, the physicist had
+it.
+
+Utter frustration.
+
+       *       *       *       *       *
+
+Thomas Lionel looked at the box and grinned. He knew what had happened.
+The engineer hadn't been able to guess--
+
+He pressed the button again--
+
+       *       *       *       *       *
+
+Tom Lionel removed his finger from the button and swore. He used an
+engineer's ability to remember and then to improvise and from there
+he took up the job of invention. His swearing did him good. At least
+he forgot to worry about the tungsten box. He'd find that one out
+eventually, anyway.
+
+And, furthermore, its trial by fire and water had damaged it in
+absolutely no way.
+
+Q.E.D., here he was again!
+
+He looked further. It was not like the physicist to just do this. There
+must be other information pertaining to the problem that the engineer
+had left. He went into the living room of his house and sought the
+desk. There was more of it, anyway.
+
+The title page of the manuscript read:
+
+                       MATHEMATICAL ANALYSIS OF
+                        OBSERVATIONAL DATA MADE
+                       DURING THE MANIFESTATION
+                       OF FORCES OPERATING IN A
+                    NEW FIELD OF PHYSICAL SCIENCE.
+
+                     By Thomas Lionel, Ph.D., M.M.
+                         Consulting Engineer.
+
+Tom lifted the manuscript from the desk--
+
+And he got the squeamish feeling of being dropped in an ultra-high
+speed elevator that was accelerating at a terrific rate. He
+instinctively dropped the manuscript and clutched the edge of the desk.
+When the manuscript hit the desk, it caused the phenomenon to stop.
+
+Tom felt the top page, ran around it with his fingers, and then
+carefully slid his hand beneath the last page, found the button on the
+desk top, and held it down while he removed the manuscript.
+
+He lifted. It gave him the screaming willies, and instinctively, Tom
+pressed hard on the button.
+
+His elevator changed direction. It gave him the effect of being hit on
+the head with a sand bag. It was now accelerating upward at a violent
+rate.
+
+He let the button up slowly. The feeling ceased as he reached a
+pressure about even to the weight of the manuscript; stopping all at
+once. He compensated by dropping an equal number of blank pages from
+the desk on the button and took the manuscript to his easy chair to
+read.
+
+It was one of those things. It couldn't be denied. He was going to
+be _forced_ into presenting this paper before the American Physical
+Society, using his full name and all of his degrees and the works. The
+physicist and his little tungsten box would see to it that he remained
+an engineer until the paper was presented, fully and completely. The
+physicist didn't have all the answers, of course, but he had solved
+some of the basic problems.
+
+He finished the manuscript, and then found a letter. It said:
+
+    Dear Galileo:
+
+    The phenomenon of losing fifty pounds is the result of an
+    antigravity field which I discovered from your data on the good
+    old poltergeist. The trouble with the thing is simply this:
+
+    In order to make the thing function, it takes something like three
+    tons of equipment to make the object within the field lose its
+    fifty pounds.
+
+    I, as a physicist, do not care about the practicality of the device.
+    I have made it work. You, as an engineer, will appreciate the
+    possibilities behind the perfection of this device. I offer you the
+    chance to start your Poltergeist Moving Company, providing, of
+    course, that you can make something of this effect.
+
+    Incidentally, I have been unable to get or to predict
+    antigravitational forces of less than fifty pounds regardless of
+    how the equipment is set up.
+
+    I don't care, I will leave the rest to you.
+
+                                                             Sincerely,
+                                             Thomas Lionel, Ph.D., M.M.
+
+Tungsten casting, antigravity, inefficiency and poltergeists! Tom's
+head whirled. With a last-hope gesture, he stalked over to the
+chessboard and studied the men.
+
+It bothered him, he was completely frustrated. The room whirled a bit,
+despite Tom's fight against it. This was the last straw, this chess
+game.
+
+Not that he himself was the absolute loser in this game of living
+chess. It was just that he had started something that threatened to
+boil over at the edges.
+
+Fundamentally, he'd tried to exorcise the physicist. He'd gone to much
+trouble and effort to remove the low-down effect of physicist-thinking
+patterns from his immediate locale. Instead--by his supreme efforts to
+get rid of the theorist, aforementioned theorist had come up with a
+few problems of his own that tickled the imagination, offered all sorts
+of interesting problems, and--
+
+Had basically shown how utterly impossibly foolish it would be to try
+and get rid of the physicist.
+
+Thomas Lionel, Ph.D., M.M., knew too much to be immediately removed,
+obliterated, canceled, or even ignored.
+
+How do you cast tungsten? How do you make antigravity--even on an
+inefficient scale? And if a poltergeist is--and you know his address,
+as the physicist seemed to, can you hire the throwing-ghost? Brother,
+did he have a lot of problems to reduce to practice! He'd have little
+time for getting rid of his pal.
+
+Tom Lionel snarled at the chessboard. He'd made his gambit, and instead
+of ridding himself of a rather powerful threat to his own security,
+he'd--well, he reread the significant sign that presided over the
+chessboard and began to growl like an insulted cocker spaniel.
+
+The sign said:
+
+                              CHECKMATE!
+
+                               THE END.
+
+THE END.
+
+*** END OF THE PROJECT GUTENBERG EBOOK 68272 ***

@@ -1,0 +1,1302 @@
+﻿The Project Gutenberg EBook of My Rubaiyat, by Sadakichi Hartmann
+
+This eBook is for the use of anyone anywhere in the United States and most
+other parts of the world at no cost and with almost no restrictions
+whatsoever.  You may copy it, give it away or re-use it under the terms of
+the Project Gutenberg License included with this eBook or online at
+www.gutenberg.org.  If you are not located in the United States, you'll have
+to check the laws of the country where you are located before using this ebook.
+
+Title: My Rubaiyat
+
+Author: Sadakichi Hartmann
+
+Release Date: January 9, 2019 [EBook #58664]
+
+Language: English
+
+Character set encoding: UTF-8
+
+*** START OF THIS PROJECT GUTENBERG EBOOK MY RUBAIYAT ***
+
+
+
+
+Produced by hekula03, Barry Abrahamsen, and the Online
+Distributed Proofreading Team at http://www.pgdp.net (This
+file was produced from images generously made available
+by The Internet Archive)
+
+
+
+
+
+
+
+[Illustration: Frontispiece]
+
+
+------------------------------------------------------------------------
+
+
+SADAKICHI HARTMANN
+
+                              MY RUBAIYAT
+
+
+
+
+                                                   THIRD REVISED EDITION
+                                                           SAN FRANCISCO
+                                                                    1916
+
+
+------------------------------------------------------------------------
+
+
+
+
+              To Dunbar Wright, a traveler among Men, who
+          “in his own way courts the sun and fashions Arcadia
+                  of passing winds and flying clouds.”
+
+
+
+
+Copyright, 1916, by Sadakichi Hartmann
+
+
+------------------------------------------------------------------------
+
+                         INSTEAD OF A PREFACE:
+
+
+    William Marion Reedy,
+        St. Louis Mirror:
+
+I will drop the mask and tell you the secret of my verses. You say they
+impress you as being uneven and unfinished. I heartily agree with you.
+As I have stated in my announcement to the public, a poem of the scope
+and range of “My Rubaiyat” is never complete. No doubt, it will undergo
+many changes within the next ten years. I say ten years deliberately.
+You see, I possess the arrogance of conviction. I believe it will
+survive, simply because it strikes a popular chord, and attempts, no
+matter how vaguely, to reproduce a broken melody that hums in every
+mind. Somebody else may venture forth on similar paths and succeed to
+please even the fastidious in rhyme. “My Rubaiyat” may be put on the
+back shelves. Well, we will see. I look at my work with objective eyes.
+It is a mere youngster now. It will grow and nobody will watch its
+growth with keener appreciation than I myself. The number of verses will
+not increase, but I sincerely hope that they will gain in clarity and
+strength as well as in musical and pictorial wealth of expression.
+
+As for versification, let me make this explanation. I chose the eight
+syllable stanza on account of its terseness of expression. It is least
+pliable to any rush and swing of rhythm, but most conducive to the
+conveyance of fragmentary moods and thoughts. The omission of rhyme I
+essayed for no other reason than its technical difficulty. To make
+rhymeless lines read like a poem is the most laborious task a songsmith
+can set himself. It is the vanity of the alien to show his mastery over
+a language that was neither his father’s nor his mother’s tongue. But I
+object to your statement that I disdain rhythm. I have a vague suspicion
+that you really mean meter. My meter is rough and wilful and subject to
+impurities, as for instance counting the last two syllables in words
+like “happier” and “sunnier” either as one or two, just as my fancy, or
+rather my appreciation of rhythm, dictates. My rhythm changes constantly
+but it is palpable, underneath as it were, at all times. I have some
+experience as a reader (though elocutionists may shrug their shoulders
+at my style of interpretation—let them shrug) and I have, whenever I
+write, the habit of reading aloud the words as I put them down. Reading
+means to get a certain sense and swing, color and sound in the words as
+one utters them. If my verses contain this possibility of aural
+gratification they cannot be utterly devoid of rhythm. No doubt my sense
+of sound alliteration is foreign, unconsciously Oriental. I feel a sound
+relation, no, even a rhyme suggestion in words like “chance” and
+“spring,” “herd” and “feet” at the end of succeeding stanzas. The
+alliteration of Japanese poets is much subtler (due to the peculiarities
+of the language) than the word music of our Laniers and Whitmans,
+although it is never conducted with the elaborate precision of a Poe or
+Swinburne. It always remains fragmentary, it rarely resembles full
+orchestration. Also my lines lack the merit of contrapuntal structure.
+Yet they have one quality which is generally overlooked. They possess
+pictorial harmony. My long and persistent association with art makes me
+not only see but think things in pictures. Pictures abound throughout
+“My Rubaiyat” for all who have the mental pictorial vision to see them.
+Lines like “turn phantoms with the colder morn” and “in a hilltown among
+roses” are as concentrated as any image that can be found in a _tanka_
+(i.e. Japanese short poem).
+
+Critics may contend that pictorial suggestion _per se_, as the main
+characteristic of a poem, does not conform to the accepted forms of
+poetry. This objection is meaningless to me. Without the spirit of
+innovation there would have been no incentive to write the poem. Like
+the composers of the day I believe in the old ideals but in new methods
+of expression.
+
+My ambition was to write a simple poem which would appeal to all; to
+chambermaids as well as cognoscenti, ordinary business men as well as
+solitary artistic souls. Who will decide whether I have succeeded or
+failed? Only the public at large. The poem, no doubt, is too didactic
+for fragile aesthetics who glorify naught but evanescent words, but it
+is surely no shortcoming to try to express thought. Even exponents of
+the modern schools attempt this—occasionally. The way of expression is a
+different matter. It is open to criticism. But excuses that a critic
+knows nothing about a certain subject, and yet at the same time
+deliberate pricks at this very thorn in the flesh of his ignorance are
+sad to contemplate. Rhyme is surely out of date. And the supposed lack
+of rhythm is merely imaginary. Would you enjoy Japanese or Chinese
+music? Very likely not and yet they contain as fine a rhythm and as
+musical a quality as any modern composition. Only they are vaguer,
+subtle, different.
+
+And on this difference hinges all logical and evasive argument. The
+practical philosophy contained in “My Rubaiyat,” of course, can be
+attacked for being non-moral or non-religious, but the technique of the
+poem can be discussed only from one viewpoint.
+
+          Sincerely yours,
+
+                    SADAKICHI HARTMANN.
+
+
+------------------------------------------------------------------------
+
+
+
+
+                              MY RUBAIYAT
+
+                                   I.
+
+    What should we dream, what should we say,
+    On this drear day, in this sad clime!
+    In the garden the asters fade,
+    Smoke of weed-fires blurs the plain,
+    The hours pass with a sullen grace—
+    Can we be gay when skies are grey!
+
+
+                                  II.
+
+    Would joy prove a more steady guest,
+    In palm-girt, sunnier Southern lands,
+    Some lambient world of green and gold
+    Fanned by the charm of Orient lay!
+    ’Tis vain delusion thus to think
+    That life will change with change of scene.
+
+
+                                  III.
+
+    Man cannot get away from facts—
+    Alas, stern duty looms supreme,
+    For certain things we must perform,
+    Obey the inward voices’ call.
+    Calm joyous days cannot be wooed
+    Unless our conscience is at peace.
+
+
+                                  IV.
+
+    Life is to most a weary task,
+    A ceaseless strife for daily bread,
+    We cannot act as we would like,
+    We cannot gain for what we strive.
+    To bear the burden cheerfully
+    Is all this earth allows to us.
+
+
+                                   V.
+
+    Our tired soul with faint forced smile
+    But rarely scales the loftier themes,
+    Fair Hafiz and Anacreon
+    Have they drunk, laughed and sung in vain!
+    Do grove and grange no longer yield
+    The idyls of Theocritus!
+
+
+                                  VI.
+
+    Was man once happier than now?
+    Who is there to tell the story
+    Of slaves or Cesars of the past?
+    Still our blood is stirred each spring,
+    Still books and music make us dream,
+    Why mourn the “snows of yesteryear?”
+
+
+                                  VII.
+
+    There were ever some more favored
+    Who care-free basked in fortune’s sun.
+    The rest did toil. And you and I?
+    We hear the same recurrent rhymes,
+    Like changing seasons, night and day,
+    We simply come, sojourn, and go.
+
+
+                                 VIII.
+
+    We enter the world unbidden,
+    Plod along roads as we know best.
+    One is born rich, the other poor,
+    Who knows what helps a mortal most.
+    Ere sleep we rub from our eyes
+    We are forever what we are.
+
+
+                                  IX.
+
+    The laughter of childhood is gone,
+    The toy castles we built are lost—
+    Can we redeem in future days
+    The disappointments of the past!
+    Our nursery songs will they change
+    Into jubilant songs of love!
+
+
+                                   X.
+
+    Light-headed youth, all smiles around
+    In dew-drenched gardens of spring morns
+    No heed takes of the dial’s stealth.
+    Youth wants to conquer—rule the spheres,
+    While the sun runs his ruthless course
+    And shadows begin to lengthen.
+
+
+                                  XI.
+
+    In open woods some summer night,
+    The sound of the wind in the leaves—
+    Two vagrant lovers hand in hand—
+    O’er treetops the errant moon.
+    Oh, this mad desire to possess!
+    To waste the soul on blood-red lips.
+
+
+                                  XII.
+
+    Sex is a power all cherish,
+    We worship it on bended knees,
+    Like old wine it yields the magic
+    Of oblivion and ecstasies,
+    The moments drift on golden clouds
+    To regions of the white beyond.
+
+
+                                 XIII.
+
+    Alas, that pleasures never last,
+    That we must leave the fairy woods
+    And pass along the great highway.
+    As much as horizons may beckon,
+    They flee us the more we pursue
+    To distances we ne’er can reach.
+
+
+                                  XIV.
+
+    The more we give the less we gain—
+    This is a bitter truth to tell.
+    Yet passion is a fleeting thing
+    As flowers wane in summer’s heat,
+    Thus eager kisses, thigh to thigh
+    Turn phantoms with the colder morn.
+
+
+                                  XV.
+
+    Why had you, dearest, to leave me!
+    Why must friend from friend depart.
+    Perchance, I shall find the answer
+    Midst howling winds and rain
+    Where sombre forests sway and moan
+    And lightnings stir the darkest lairs.
+
+
+                                  XVI.
+
+    Few think they can give without gain,
+    They attempt to barter with love.
+    Love comes, it is here, it departs
+    Leaving wet eyes and broken hearts.
+    How when we are young can we guess:
+    Love’s winter ne’er returns to spring.
+
+
+                                 XVII.
+
+    Love is a growth, a wondrous plant
+    That scatters its seed-pods unseen,
+    That sheds rarest unknown delights
+    To those few that worship the dream.
+    For love squanders all its treasures,
+    Why should it ask for a return?
+
+
+                                 XVIII.
+
+    When youth departs, when love grows dim,
+    To grey routine hope dwindles down,
+    Sup well, sit warm, drink deep, sleep sound,
+    Thus run the hours from the glass.
+    New vistas beckon here and there
+    Yet men stay, sullen, where they are.
+
+
+                                  XIX.
+
+    Oh, to escape from the city,
+    Into the blue, shimmering night,
+    It speaks of all I could have loved,
+    It speaks of all I longed to see,
+    To understand, to own, and feel—
+    Why did so little come to me!
+
+
+                                  XX.
+
+    Ah, my fate is not different,
+    It is like that of all the rest.
+    There grew flowers at the wayside—
+    They were mine. I did not cull them.
+    There were chances made for blessing
+    When both of us remained unblessed.
+
+
+                                  XXI.
+
+    Can a being ever be yours?
+    Do you know the thoughts of a friend?
+    Why stray your wishes to strangers
+    When you own a heart that is true?
+    Sunlight passes. The night draws near.
+    Have you been loyal to anyone?
+
+
+                                 XXII.
+
+    We reap the harvest that we sow.
+    Rich crops may sear in rainless heat
+    Waste over night by wind or frost—
+    Harsh laws of chance and circumstance!
+    Yet if your seeds were vain as chaff
+    Your own will never come to you.
+
+
+                                 XXIII.
+
+    Let me pass on to the seashore.
+    Watch the traverse of white sails,
+    The seagulls in their spiral flight,
+    The breakers that brighten the waves,
+    And as in rambles of boyhood
+    Fling pebbles out into the sea.
+
+
+                                 XXIV.
+
+    They skip o’er the gleaming surface,
+    They sink and vanish from sight
+    As all that abides on this earth.
+    Yet on the surface like stray thought,
+    Each ripple owns an inner sway
+    And wave-like stirs the azure brine.
+
+
+                                  XXV.
+
+    The circle widens, travels farther,
+    With each emotion keenly felt
+    Onward it pushes ’cross the waves
+    Of storm-lashed oceans to unbend
+    Its tide of beauty on the shore
+    Of some hope-swept and sun-kissed isle.
+
+
+                                 XXVI.
+
+    And there amidst some rarer air
+    To blossom forth in some great deed—
+    May it be done by hand or mind—
+    For the upheaval of the race,
+    To reach some pinnacle of truth
+    Where light envelops you and all.
+
+
+                                 XXVII.
+
+    This is the land where giant minds,
+    Vaster than light, vaster than space
+    Hear whisperings of the infinite,
+    And with proud sorrow in their eyes,
+    Their wild-maned coursers ever ready,
+    Soar far into the skies of thought.
+
+
+                                XXVIII.
+
+    Yet who can follow flights like these,
+    Who plucks the stars from night’s blue vault!
+    Imagination, sluggish thing,
+    Will not obey the gayer moods,
+    Our mind can only peer as far
+    As fate has lent it eyes to see.
+
+
+                                 XXIX.
+
+    Men do not think, they merely dream,
+    They only long for crude, rough things,
+    Madly chasing will-o’-the-wisps,
+    Success by force they try to grasp,
+    It lures them on to wilder scenes
+    Where wolves in packs hunt dismal prey.
+
+
+                                  XXX.
+
+    Why this dull haste, this sordid waste
+    Of youth and manhood’s fullest powers?
+    To amass riches for your heirs
+    The highest interests seem low,
+    And no man’s pelf does command health,
+    Nor can it hold friendship or love.
+
+
+                                 XXXI.
+
+    So many do as others do,
+    They cannot rise from the green mould
+    With which their thoughts are overgrown.
+    For them no lotus petals blow,
+    They peevish bow to any yoke,
+    And mole-like dig beneath the ground.
+
+
+                                 XXXII.
+
+    Thus people born in low estate
+    Must drag their burden day by day,
+    ’Tis hard to mend what is inborn
+    And slow the lift to higher planes.
+    If drudgery rules from morn to night—
+    They needs must suffer earthly bane.
+
+
+                                XXXIII.
+
+    They stir the coals, press the bellows—
+    White iron shimmers in the forge
+    The air is dust, the houses black,
+    Smoke dragons coil ’round culm and stack
+    And belch foul breath into the street.
+    Where is the sun? Has day turned night?
+
+
+                                 XXXIV.
+
+    What use to speak to serfs like these
+    Of odors sweet of new-mown hay,
+    Red and blue flowers in the wheat,
+    The old homestead, barns and stables,
+    Cows shambling home the sunset road—
+    The angelus over harvest fields.
+
+
+                                 XXXV.
+
+    There’s joy in labor; so they say,
+    And well that its praises are sung,
+    Or mankind in pale-mouthed despair
+    Would leave factory, forge and shop,
+    Stead living through their daily toil
+    Without a thought that death is near.
+
+
+                                 XXXVI.
+
+    Afraid of death men do not think
+    Of their vague meaning on this earth.
+    Blindly they hope for after-bliss
+    Or sneer at things they can not guess,
+    For is not death the cause of all
+    That ever troubled human brains!
+
+
+                                XXXVII.
+
+    Why do we live, why do we hope,
+    Why does this world exist at all!
+    How do we dare to love and mate
+    When every path is strewn with thorns,
+    When children share in our fate
+    And age is glad to greet the night!
+
+
+                                XXXVIII.
+
+    And is it endless sleep and night.
+    Deliverance or new keen pain?
+    Hot pitch or stale ambrosia!
+    There are too many gods adored,
+    Can one be right, all others wrong—
+    Who solves the problem why we are?
+
+
+                                 XXXIX.
+
+    There is no answer to the quest,
+    Who knows where we will meet again!
+    The star realms opening at night
+    Tell us of other wonder worlds—
+    Are they spinning through space for us,
+    Shall we breathe there an ampler air?
+
+
+                                  XL.
+
+    Follow yon pilgrims of the East
+    Through avenues of cypress dim,
+    Through golden temples, portals red—
+    Faithful they climb the holy hill
+    And there confront an empty space
+    Is that the signet of the grave!
+
+
+                                  XLI.
+
+    Some think they know and others doubt,
+    But who can offer balm to all.
+    If all were good and fair to meet
+    No need there be of paradise,
+    We would not long for other skies
+    And gather fruit from every tree.
+
+
+                                 XLII.
+
+    But what sad use the world has made
+    Of nature’s boundless plenitude.
+    The frank and free, the sane and true
+    Are trodden down by foolish crowds.
+    Greed, barren, shameless, rules supreme,
+    There is no room for Christ on earth.
+
+
+                                 XLIII.
+
+    They dream of universal peace
+    In times when greed still cruder grows
+    Than in the days of Skalds and Huns—
+    Oh, dream of a fraternal race,
+    Of happiness to all of man!
+    When will love stronger prove than war!
+
+
+                                 XLIV.
+
+    The sword shall break the sword they say,
+    And force shall strangle force some day.
+    Thus men march toward battles red,
+    Their mangled bodies strew the plains,
+    While o’er the corpse the mother wails,
+    Her firstborn slain, her pride in life.
+
+
+                                  XLV.
+
+    Why should youth be killed from afar,
+    Races struggle in deadly clutch!
+    Are no more fallow fields to plough?
+    Is death’s scythe not keen enough!
+    Oh, mankind, when will you waken
+    To an honor nobler than death!
+
+
+                                 XLVI.
+
+    If no tread of marching armies
+    Answered a nation’s bugle peal,
+    If young and old refused to bear
+    Arms ’gainst brethren they do not know,
+    Then only, in some dim future
+    May we greet the dawn-doves of peace.
+
+
+                                 XLVII.
+
+    One holy war has to be fought—
+    To make both man and woman free:
+    The world will flash with signal lights,
+    Each land ring with its people’s voice—
+    For from those crimson rivulets
+    Will rise a saner sun-warm life.
+
+
+                                XLVIII.
+
+    For certain things needs must be changed,
+    Times cannot stay so dull and grey.
+    Men must rough a freer wind-blown life,
+    Women no longer shed their bloom
+    In drudgery for bed and fare,
+    And children age before their time.
+
+
+                                 XLIX.
+
+    Draughts of pure air, bright beams of light
+    Are free gifts coming from the skies,
+    Why should sad mothers, children frail
+    In dark and gruesome hovels pine,
+    Freeze and starve, and with thirsty eyes
+    See mirth with song and dance glide by.
+
+
+                                   L.
+
+    And hunger is a fearful thing.
+    It dwarfs the better part in man,
+    Naught but a withered husk it leaves
+    Of some thing that should live and breathe.
+    All nobler impulses turn ghosts,
+    Haunting waste places of the mind.
+
+
+                                  LI.
+
+    It lifts the knife to deadly thrusts,
+    It turns to brutes all those it sways,
+    It presses torches into fists,
+    And peaceful men turn to revolt.
+    We stand at brinks of volcanoes
+    Yet smilingly dot them with homes.
+
+
+                                  LII.
+
+    What can we do, how can we help!
+    The poor can never help the poor,
+    The rich but scatter alms derived
+    From what is due the common herd.
+    The weed plots are crowded thick,
+    Who cuts a path for weary feet!
+
+
+                                 LIII.
+
+    Oh, the helplessness of the aged,
+    Of the needy, sick, and lonely.
+    Can you explain why they suffer,
+    Must some lose all while others thrive?
+    Can no one wear a thornless crown
+    Without some hurt to human kind?
+
+
+                                  LIV.
+
+    Oh, these homes of blighted reason,
+    Who would not weep at sights like these.
+    Few years ago they were like us,
+    They worked and played, they loved and laughed,
+    And now—beasts without reason;
+    Where err their erstwhile joys and hopes!
+
+
+                                  LV.
+
+    And those who lurk in deadly sin,
+    Whose book of life reads blood and gold,
+    Thieves, bandits, outcasts, vagrom folks,
+    Eternal victims of the law,
+    Who cannot change, who have no chance
+    To wash their grimy hands from crime.
+
+
+                                  LVI.
+
+    They know not what to do on earth,
+    Their cup is filled with hate and lust.
+    None has taught them. Will you teach them?
+    Have you a larger soul than they?
+    You have drawn a lucky number,
+    For them gay fortune went astray.
+
+
+                                 LVII.
+
+    In foolish kindness some aspire
+    To staunch the ever-aching wound,
+    And so they teach, and so they preach.
+    How vain to think that your idea
+    May cure the vanity of things,
+    ’Tis shuttlecock and battledore.
+
+
+                                 LVIII.
+
+    How can I give right directions
+    When I am a wanderer myself!
+    Onward I stroll and ever on
+    In my own way courting the sun
+    And fashioning Arcadia
+    Of passing winds and flying clouds.
+
+
+                                  LIX.
+
+    For my happiness cannot be yours;
+    In humble ecstasy I could live
+    In a hill-town, among roses,
+    With robins feasting at my table,
+    While woods and fields, valleys and streams
+    Around would be my promised land.
+
+
+                                  LX.
+
+    You might not like such simple fare,
+    For you the winds may blow too mild—
+    I cannot tread your well-paved roads
+    Though verdant they may seem to you.
+    Each path leads to some point of view,
+    What you like best, is best for you.
+
+
+                                  LXI.
+
+    Sunshine we want but also shadows,
+    Each joy demands its note of pain,
+    Each cheek must know the fall of tears
+    That many dream-swept hopes were vain.
+    Sorrow digs up unknown treasures
+    Within the caverns of the mind.
+
+
+                                 LXII.
+
+    Have you ever lost a treasure
+    More precious far than gold or health!
+    Trailed a white hearse with faltering steps
+    That bore your dearest dream away,
+    Sat at the deathbed of your mother.
+    Or closed a friend’s dull staring eyes!
+
+
+                                 LXIII.
+
+    You know, the frost that chills the core,
+    That all we love is naught but clay.
+    Silent a boat glides o’er the Styx,
+    Yet it leaves light within its wake;
+    As weary plains grow green with rain
+    The soul expands in tear-starred nights.
+
+
+                                 LXIV.
+
+    Tears furrow thought, they strengthen will,
+    Cleanse the foul places of the mind,
+    Yield soothing light to ship-wrecked hearts.
+    Happy those who, sorrow-driven,
+    Bright moments wrest from waves of pain
+    And sail their barks to peaceful ports.
+
+
+                                  LXV.
+
+    This is the true philosophy,
+    Every child may learn the lesson—
+    Blaze your own trail the best you can
+    Without trespassing foreign ground;
+    Smile, play, and sing, and be alive
+    To every blow of circumstance.
+
+
+                                 LXVI.
+
+    To meet the hours as they come,
+    Salute the days as they pass by,
+    To bend your neck to no one’s yoke,
+    To be full master of yourself,
+    To do a kindness when you can—
+    That is the happiness of life.
+
+
+                                 LXVII.
+
+    To help a friend in dire needs,
+    To speak a word to the oppressed,
+    To think of things that help mankind,
+    To scatter joy, unasked, unblessed—
+    For knowing minds divine the rest—
+    That is the happiness of life.
+
+
+                                LXVIII.
+
+    Yes, life is vain, life is empty,
+    But why repeat a sad refrain,
+    This echo of Khayyam’s quatrains,
+    As long as each day has a morrow,
+    As long as orchards bloom again,
+    And empty cups may be refilled.
+
+
+                                 LXIX.
+
+    Though we recall that days are short,
+    Let’s make the passing moments hum.
+    Bees do murmur in the heather,
+    Does sundew exist only for them!
+    A little joy today seems fairer
+    Than the brightest strongholds of Spain.
+
+
+                                  LXX.
+
+    There are some joys all may attain,
+    To spouse some cause however slight,
+    To be a host to loyal friends,
+    To found some freeholds of your own,
+    Where mothers laugh and children romp,
+    And fare in health and fragrance there.
+
+
+                                 LXXI.
+
+    Some day religion unbiased
+    May sponsor stern needs of the day,
+    Life grow untrammeled and joyous
+    Without the black magic of law.
+    Science and art prove their uses
+    And quicken the heart-beats of all.
+
+
+                                 LXXII.
+
+    You, people, come out of your dreams,
+    Woo fortune and you may win her,
+    Fill the world with acts of good cheer,
+    Forget grey cares and ragged toil,
+    Face bravely the swell and the gale
+    And strike out for headlands unknown.
+
+
+                                LXXIII.
+
+    Seek beauty and you will find her,
+    Brave the surge of the crowded street,
+    Or rest at the mountain’s green slope
+    And commune with trees and the birds,
+    With the soil and the mossgrown rocks,
+    And pray at the shrine of the gods.
+
+
+                                 LXXIV.
+
+    There are roses and there is youth,
+    There are joys and sorrows and love,
+    Dawn and twilight, the noonday sun,
+    The rolling plains, sky and the sea,
+    None have lost their old-time mystery,
+    Events pass away, beauty survives.
+
+
+                                 LXXV.
+
+    Let us wrest beauty from all there is,
+    Each and all in their own poor way,
+    And blithely onward life will flow,
+    Rare like a long-drawn summer’s eve,
+    And we’ll hail and bless each moment
+    Before it fades into the dark.
+
+
+
+
+------------------------------------------------------------------------
+
+
+
+
+ ● Transcriber’s Notes:
+    ○ Inconsistent spelling and hyphenation were made consistent only
+      when a predominant form was found in this book.
+    ○ Text that was in italics is enclosed by underscores (_italics_).
+
+
+
+
+
+
+
+End of the Project Gutenberg EBook of My Rubaiyat, by Sadakichi Hartmann
+
+*** END OF THIS PROJECT GUTENBERG EBOOK MY RUBAIYAT ***
+
+***** This file should be named 58664-0.txt or 58664-0.zip *****
+This and all associated files of various formats will be found in:
+        http://www.gutenberg.org/5/8/6/6/58664/
+
+Produced by hekula03, Barry Abrahamsen, and the Online
+Distributed Proofreading Team at http://www.pgdp.net (This
+file was produced from images generously made available
+by The Internet Archive)
+
+Updated editions will replace the previous one--the old editions will
+be renamed.
+
+Creating the works from print editions not protected by U.S. copyright
+law means that no one owns a United States copyright in these works,
+so the Foundation (and you!) can copy and distribute it in the United
+States without permission and without paying copyright
+royalties. Special rules, set forth in the General Terms of Use part
+of this license, apply to copying and distributing Project
+Gutenberg-tm electronic works to protect the PROJECT GUTENBERG-tm
+concept and trademark. Project Gutenberg is a registered trademark,
+and may not be used if you charge for the eBooks, unless you receive
+specific permission. If you do not charge anything for copies of this
+eBook, complying with the rules is very easy. You may use this eBook
+for nearly any purpose such as creation of derivative works, reports,
+performances and research. They may be modified and printed and given
+away--you may do practically ANYTHING in the United States with eBooks
+not protected by U.S. copyright law. Redistribution is subject to the
+trademark license, especially commercial redistribution.
+
+START: FULL LICENSE
+
+THE FULL PROJECT GUTENBERG LICENSE
+PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK
+
+To protect the Project Gutenberg-tm mission of promoting the free
+distribution of electronic works, by using or distributing this work
+(or any other work associated in any way with the phrase "Project
+Gutenberg"), you agree to comply with all the terms of the Full
+Project Gutenberg-tm License available with this file or online at
+www.gutenberg.org/license.
+
+Section 1. General Terms of Use and Redistributing Project
+Gutenberg-tm electronic works
+
+1.A. By reading or using any part of this Project Gutenberg-tm
+electronic work, you indicate that you have read, understand, agree to
+and accept all the terms of this license and intellectual property
+(trademark/copyright) agreement. If you do not agree to abide by all
+the terms of this agreement, you must cease using and return or
+destroy all copies of Project Gutenberg-tm electronic works in your
+possession. If you paid a fee for obtaining a copy of or access to a
+Project Gutenberg-tm electronic work and you do not agree to be bound
+by the terms of this agreement, you may obtain a refund from the
+person or entity to whom you paid the fee as set forth in paragraph
+1.E.8.
+
+1.B. "Project Gutenberg" is a registered trademark. It may only be
+used on or associated in any way with an electronic work by people who
+agree to be bound by the terms of this agreement. There are a few
+things that you can do with most Project Gutenberg-tm electronic works
+even without complying with the full terms of this agreement. See
+paragraph 1.C below. There are a lot of things you can do with Project
+Gutenberg-tm electronic works if you follow the terms of this
+agreement and help preserve free future access to Project Gutenberg-tm
+electronic works. See paragraph 1.E below.
+
+1.C. The Project Gutenberg Literary Archive Foundation ("the
+Foundation" or PGLAF), owns a compilation copyright in the collection
+of Project Gutenberg-tm electronic works. Nearly all the individual
+works in the collection are in the public domain in the United
+States. If an individual work is unprotected by copyright law in the
+United States and you are located in the United States, we do not
+claim a right to prevent you from copying, distributing, performing,
+displaying or creating derivative works based on the work as long as
+all references to Project Gutenberg are removed. Of course, we hope
+that you will support the Project Gutenberg-tm mission of promoting
+free access to electronic works by freely sharing Project Gutenberg-tm
+works in compliance with the terms of this agreement for keeping the
+Project Gutenberg-tm name associated with the work. You can easily
+comply with the terms of this agreement by keeping this work in the
+same format with its attached full Project Gutenberg-tm License when
+you share it without charge with others.
+
+1.D. The copyright laws of the place where you are located also govern
+what you can do with this work. Copyright laws in most countries are
+in a constant state of change. If you are outside the United States,
+check the laws of your country in addition to the terms of this
+agreement before downloading, copying, displaying, performing,
+distributing or creating derivative works based on this work or any
+other Project Gutenberg-tm work. The Foundation makes no
+representations concerning the copyright status of any work in any
+country outside the United States.
+
+1.E. Unless you have removed all references to Project Gutenberg:
+
+1.E.1. The following sentence, with active links to, or other
+immediate access to, the full Project Gutenberg-tm License must appear
+prominently whenever any copy of a Project Gutenberg-tm work (any work
+on which the phrase "Project Gutenberg" appears, or with which the
+phrase "Project Gutenberg" is associated) is accessed, displayed,
+performed, viewed, copied or distributed:
+
+  This eBook is for the use of anyone anywhere in the United States and
+  most other parts of the world at no cost and with almost no
+  restrictions whatsoever. You may copy it, give it away or re-use it
+  under the terms of the Project Gutenberg License included with this
+  eBook or online at www.gutenberg.org. If you are not located in the
+  United States, you'll have to check the laws of the country where you
+  are located before using this ebook.
+
+1.E.2. If an individual Project Gutenberg-tm electronic work is
+derived from texts not protected by U.S. copyright law (does not
+contain a notice indicating that it is posted with permission of the
+copyright holder), the work can be copied and distributed to anyone in
+the United States without paying any fees or charges. If you are
+redistributing or providing access to a work with the phrase "Project
+Gutenberg" associated with or appearing on the work, you must comply
+either with the requirements of paragraphs 1.E.1 through 1.E.7 or
+obtain permission for the use of the work and the Project Gutenberg-tm
+trademark as set forth in paragraphs 1.E.8 or 1.E.9.
+
+1.E.3. If an individual Project Gutenberg-tm electronic work is posted
+with the permission of the copyright holder, your use and distribution
+must comply with both paragraphs 1.E.1 through 1.E.7 and any
+additional terms imposed by the copyright holder. Additional terms
+will be linked to the Project Gutenberg-tm License for all works
+posted with the permission of the copyright holder found at the
+beginning of this work.
+
+1.E.4. Do not unlink or detach or remove the full Project Gutenberg-tm
+License terms from this work, or any files containing a part of this
+work or any other work associated with Project Gutenberg-tm.
+
+1.E.5. Do not copy, display, perform, distribute or redistribute this
+electronic work, or any part of this electronic work, without
+prominently displaying the sentence set forth in paragraph 1.E.1 with
+active links or immediate access to the full terms of the Project
+Gutenberg-tm License.
+
+1.E.6. You may convert to and distribute this work in any binary,
+compressed, marked up, nonproprietary or proprietary form, including
+any word processing or hypertext form. However, if you provide access
+to or distribute copies of a Project Gutenberg-tm work in a format
+other than "Plain Vanilla ASCII" or other format used in the official
+version posted on the official Project Gutenberg-tm web site
+(www.gutenberg.org), you must, at no additional cost, fee or expense
+to the user, provide a copy, a means of exporting a copy, or a means
+of obtaining a copy upon request, of the work in its original "Plain
+Vanilla ASCII" or other form. Any alternate format must include the
+full Project Gutenberg-tm License as specified in paragraph 1.E.1.
+
+1.E.7. Do not charge a fee for access to, viewing, displaying,
+performing, copying or distributing any Project Gutenberg-tm works
+unless you comply with paragraph 1.E.8 or 1.E.9.
+
+1.E.8. You may charge a reasonable fee for copies of or providing
+access to or distributing Project Gutenberg-tm electronic works
+provided that
+
+* You pay a royalty fee of 20% of the gross profits you derive from
+  the use of Project Gutenberg-tm works calculated using the method
+  you already use to calculate your applicable taxes. The fee is owed
+  to the owner of the Project Gutenberg-tm trademark, but he has
+  agreed to donate royalties under this paragraph to the Project
+  Gutenberg Literary Archive Foundation. Royalty payments must be paid
+  within 60 days following each date on which you prepare (or are
+  legally required to prepare) your periodic tax returns. Royalty
+  payments should be clearly marked as such and sent to the Project
+  Gutenberg Literary Archive Foundation at the address specified in
+  Section 4, "Information about donations to the Project Gutenberg
+  Literary Archive Foundation."
+
+* You provide a full refund of any money paid by a user who notifies
+  you in writing (or by e-mail) within 30 days of receipt that s/he
+  does not agree to the terms of the full Project Gutenberg-tm
+  License. You must require such a user to return or destroy all
+  copies of the works possessed in a physical medium and discontinue
+  all use of and all access to other copies of Project Gutenberg-tm
+  works.
+
+* You provide, in accordance with paragraph 1.F.3, a full refund of
+  any money paid for a work or a replacement copy, if a defect in the
+  electronic work is discovered and reported to you within 90 days of
+  receipt of the work.
+
+* You comply with all other terms of this agreement for free
+  distribution of Project Gutenberg-tm works.
+
+1.E.9. If you wish to charge a fee or distribute a Project
+Gutenberg-tm electronic work or group of works on different terms than
+are set forth in this agreement, you must obtain permission in writing
+from both the Project Gutenberg Literary Archive Foundation and The
+Project Gutenberg Trademark LLC, the owner of the Project Gutenberg-tm
+trademark. Contact the Foundation as set forth in Section 3 below.
+
+1.F.
+
+1.F.1. Project Gutenberg volunteers and employees expend considerable
+effort to identify, do copyright research on, transcribe and proofread
+works not protected by U.S. copyright law in creating the Project
+Gutenberg-tm collection. Despite these efforts, Project Gutenberg-tm
+electronic works, and the medium on which they may be stored, may
+contain "Defects," such as, but not limited to, incomplete, inaccurate
+or corrupt data, transcription errors, a copyright or other
+intellectual property infringement, a defective or damaged disk or
+other medium, a computer virus, or computer codes that damage or
+cannot be read by your equipment.
+
+1.F.2. LIMITED WARRANTY, DISCLAIMER OF DAMAGES - Except for the "Right
+of Replacement or Refund" described in paragraph 1.F.3, the Project
+Gutenberg Literary Archive Foundation, the owner of the Project
+Gutenberg-tm trademark, and any other party distributing a Project
+Gutenberg-tm electronic work under this agreement, disclaim all
+liability to you for damages, costs and expenses, including legal
+fees. YOU AGREE THAT YOU HAVE NO REMEDIES FOR NEGLIGENCE, STRICT
+LIABILITY, BREACH OF WARRANTY OR BREACH OF CONTRACT EXCEPT THOSE
+PROVIDED IN PARAGRAPH 1.F.3. YOU AGREE THAT THE FOUNDATION, THE
+TRADEMARK OWNER, AND ANY DISTRIBUTOR UNDER THIS AGREEMENT WILL NOT BE
+LIABLE TO YOU FOR ACTUAL, DIRECT, INDIRECT, CONSEQUENTIAL, PUNITIVE OR
+INCIDENTAL DAMAGES EVEN IF YOU GIVE NOTICE OF THE POSSIBILITY OF SUCH
+DAMAGE.
+
+1.F.3. LIMITED RIGHT OF REPLACEMENT OR REFUND - If you discover a
+defect in this electronic work within 90 days of receiving it, you can
+receive a refund of the money (if any) you paid for it by sending a
+written explanation to the person you received the work from. If you
+received the work on a physical medium, you must return the medium
+with your written explanation. The person or entity that provided you
+with the defective work may elect to provide a replacement copy in
+lieu of a refund. If you received the work electronically, the person
+or entity providing it to you may choose to give you a second
+opportunity to receive the work electronically in lieu of a refund. If
+the second copy is also defective, you may demand a refund in writing
+without further opportunities to fix the problem.
+
+1.F.4. Except for the limited right of replacement or refund set forth
+in paragraph 1.F.3, this work is provided to you 'AS-IS', WITH NO
+OTHER WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PURPOSE.
+
+1.F.5. Some states do not allow disclaimers of certain implied
+warranties or the exclusion or limitation of certain types of
+damages. If any disclaimer or limitation set forth in this agreement
+violates the law of the state applicable to this agreement, the
+agreement shall be interpreted to make the maximum disclaimer or
+limitation permitted by the applicable state law. The invalidity or
+unenforceability of any provision of this agreement shall not void the
+remaining provisions.
+
+1.F.6. INDEMNITY - You agree to indemnify and hold the Foundation, the
+trademark owner, any agent or employee of the Foundation, anyone
+providing copies of Project Gutenberg-tm electronic works in
+accordance with this agreement, and any volunteers associated with the
+production, promotion and distribution of Project Gutenberg-tm
+electronic works, harmless from all liability, costs and expenses,
+including legal fees, that arise directly or indirectly from any of
+the following which you do or cause to occur: (a) distribution of this
+or any Project Gutenberg-tm work, (b) alteration, modification, or
+additions or deletions to any Project Gutenberg-tm work, and (c) any
+Defect you cause.
+
+Section 2. Information about the Mission of Project Gutenberg-tm
+
+Project Gutenberg-tm is synonymous with the free distribution of
+electronic works in formats readable by the widest variety of
+computers including obsolete, old, middle-aged and new computers. It
+exists because of the efforts of hundreds of volunteers and donations
+from people in all walks of life.
+
+Volunteers and financial support to provide volunteers with the
+assistance they need are critical to reaching Project Gutenberg-tm's
+goals and ensuring that the Project Gutenberg-tm collection will
+remain freely available for generations to come. In 2001, the Project
+Gutenberg Literary Archive Foundation was created to provide a secure
+and permanent future for Project Gutenberg-tm and future
+generations. To learn more about the Project Gutenberg Literary
+Archive Foundation and how your efforts and donations can help, see
+Sections 3 and 4 and the Foundation information page at
+www.gutenberg.org
+
+
+
+Section 3. Information about the Project Gutenberg Literary Archive Foundation
+
+The Project Gutenberg Literary Archive Foundation is a non profit
+501(c)(3) educational corporation organized under the laws of the
+state of Mississippi and granted tax exempt status by the Internal
+Revenue Service. The Foundation's EIN or federal tax identification
+number is 64-6221541. Contributions to the Project Gutenberg Literary
+Archive Foundation are tax deductible to the full extent permitted by
+U.S. federal laws and your state's laws.
+
+The Foundation's principal office is in Fairbanks, Alaska, with the
+mailing address: PO Box 750175, Fairbanks, AK 99775, but its
+volunteers and employees are scattered throughout numerous
+locations. Its business office is located at 809 North 1500 West, Salt
+Lake City, UT 84116, (801) 596-1887. Email contact links and up to
+date contact information can be found at the Foundation's web site and
+official page at www.gutenberg.org/contact
+
+For additional contact information:
+
+    Dr. Gregory B. Newby
+    Chief Executive and Director
+    gbnewby@pglaf.org
+
+Section 4. Information about Donations to the Project Gutenberg
+Literary Archive Foundation
+
+Project Gutenberg-tm depends upon and cannot survive without wide
+spread public support and donations to carry out its mission of
+increasing the number of public domain and licensed works that can be
+freely distributed in machine readable form accessible by the widest
+array of equipment including outdated equipment. Many small donations
+($1 to $5,000) are particularly important to maintaining tax exempt
+status with the IRS.
+
+The Foundation is committed to complying with the laws regulating
+charities and charitable donations in all 50 states of the United
+States. Compliance requirements are not uniform and it takes a
+considerable effort, much paperwork and many fees to meet and keep up
+with these requirements. We do not solicit donations in locations
+where we have not received written confirmation of compliance. To SEND
+DONATIONS or determine the status of compliance for any particular
+state visit www.gutenberg.org/donate
+
+While we cannot and do not solicit contributions from states where we
+have not met the solicitation requirements, we know of no prohibition
+against accepting unsolicited donations from donors in such states who
+approach us with offers to donate.
+
+International donations are gratefully accepted, but we cannot make
+any statements concerning tax treatment of donations received from
+outside the United States. U.S. laws alone swamp our small staff.
+
+Please check the Project Gutenberg Web pages for current donation
+methods and addresses. Donations are accepted in a number of other
+ways including checks, online payments and credit card donations. To
+donate, please visit: www.gutenberg.org/donate
+
+Section 5. General Information About Project Gutenberg-tm electronic works.
+
+Professor Michael S. Hart was the originator of the Project
+Gutenberg-tm concept of a library of electronic works that could be
+freely shared with anyone. For forty years, he produced and
+distributed Project Gutenberg-tm eBooks with only a loose network of
+volunteer support.
+
+Project Gutenberg-tm eBooks are often created from several printed
+editions, all of which are confirmed as not protected by copyright in
+the U.S. unless a copyright notice is included. Thus, we do not
+necessarily keep eBooks in compliance with any particular paper
+edition.
+
+Most people start at our Web site which has the main PG search
+facility: www.gutenberg.org
+
+This Web site includes information about Project Gutenberg-tm,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
+

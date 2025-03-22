@@ -1,0 +1,1386 @@
+﻿The Project Gutenberg eBook of The Snow Man, by Laurence Housman
+
+This eBook is for the use of anyone anywhere in the United States and
+most other parts of the world at no cost and with almost no restrictions
+whatsoever. You may copy it, give it away or re-use it under the terms
+of the Project Gutenberg License included with this eBook or online at
+www.gutenberg.org. If you are not located in the United States, you
+will have to check the laws of the country where you are located before
+using this eBook.
+
+Title: The Snow Man
+       A metrical play in one act
+
+Author: Laurence Housman
+
+Release Date: March 14, 2023 [eBook #70285]
+
+Language: English
+
+Produced by: Charlene Taylor, Krista Zaleski and the Online Distributed
+             Proofreading Team at https://www.pgdp.net (This file was
+             produced from images generously made available by The
+             Internet Archive/American Libraries.)
+
+*** START OF THE PROJECT GUTENBERG EBOOK THE SNOW MAN ***
+
+
+
+
+
+Transcriber’s Notes
+
+Obvious typographical errors have been silently corrected. Variations
+in hyphenation and accents have been standardised but all other
+spelling and punctuation remains unchanged.
+
+Italics are represented thus _italic_.
+
+
+
+
+  The Snow Man: a Metrical
+  Play in One Act:
+  by Laurence Housman
+
+
+  Samuel French: Publisher
+
+  28-30 West Thirty-eighth Street: New York
+
+  LONDON
+
+  Samuel French, Ltd.
+
+  26 SOUTHAMPON STREET STRAND
+
+
+  _PRICE TWENTY-FIVE CENTS_
+
+
+
+
+  Copyright, 1916,
+  by LAURENCE HOUSMAN
+
+
+    CAUTION.--Amateurs and Professionals are hereby warned that
+    “THE SNOW MAN”, being fully protected under the copyright
+    laws of the United States, is subject to royalty, and any
+    one presenting the play without the consent of the author or
+    his authorized agent, will be liable to the penalties by law
+    provided. Application for the right to produce “THE SNOW MAN”
+    must be made to Samuel French, 28-30 West 38th Street, New York
+    City.
+
+ALL RIGHTS RESERVED.
+
+
+
+
+THE SNOW MAN.
+
+
+
+
+CHARACTERS.
+
+
+  JOAN               _A peasant woman_
+  MARY ANN      }
+  MATTHEW MARK  }       _Her children_
+  JASPAR                 _Her husband_
+  THE SNOW MAN
+
+
+
+
+THE SNOW MAN
+
+
+    SCENE:--_A poor peasant dwelling, barely furnished with
+    articles of the roughest description, a tressle-table, two
+    benches,--a large one serving as a window-seat, and a smaller
+    one standing by the hearth,--a wooden chair, a spinning wheel,
+    a large bread pan, a shelf containing household crockery, and
+    on the inner wall of the ingle a few pots and pans hanging
+    on the wall. The room is wide and low; to the left is a deep
+    hooded fireplace with containing walls on either side of
+    it,--to one side a bread oven, to the other a cubby-bed with
+    doors; opposite to the fireplace is a door leading to the
+    woodshed. The house door is at the back rather to the right;
+    in its left a long low window extends almost to a line with
+    the fireplace. In the right hand corner stands a large chest.
+    The roof is of heavy beams gray with smoke, and between them
+    shows an inner surface of thatch, the walls are of blue plaster
+    marked by mildew, with patches here and there where the plaster
+    has peeled off. It is winter and daylight is drawing in.
+    Outside the world is white with snow. A peasant-woman moves
+    to and fro with quick dogged pace. The pace of a hard worker
+    tired but always pushed for time. She takes black bread out of
+    the oven, lays it out on the table, cuts off two pieces, and
+    puts the remainder into the bread-pan. Then she takes down the
+    garments from before the fire, presses them with a heavy iron,
+    and puts them away in the chest. While crossing the room to
+    and fro she economizes her time, never going empty-handed.
+    She puts milk to warm on the fire, and gets down two small
+    mugs from a shelf. She also gets from the cubby-bed two night
+    garments, and hangs them to warm over the bench by the hearth.
+    While she is thus engaged, children’s voices are heard outside,
+    laughing and shouting. The woman, absorbed in her work, pays
+    no attention. Two small romping figures occasionally pass the
+    window. Presently they begin to sing._
+
+CHILDREN.--
+
+  Here we have a snowman, a snowman, a snowman!
+  Oh, where does he come from, and what shall be his name?
+  He says his name is no man, no man, no man!
+  And nowhere and nowhere the land from which he came.
+
+    (_Now again_)
+
+  Oh, why did you come here, oh, snowman, oh, snowman?
+  And will you now a friend be, or will you be a foe?
+  “Oh, whether I a friend am, or whether I’m a foe-man,
+  It’s here I mean to stay now, until I have to go!”
+
+    (_Now again_)
+
+  But what should you go for, oh, snowman, oh, snowman?
+  And why would you leave us, when home lies at hand?
+  “Oh, when the sun calls me, then I can wait for no man,
+  But back I must go again, to my own land!”
+  And now we’ve made him, he’ll have to stay,
+  Ha! Ha! Ha! He can’t get away.
+
+    (_The door bursts open, the two children run in_: MATTHEW MARK
+    _and_ MARY ANN.)
+
+MARY.--
+
+  Oh, mother, come and look at our snowman.
+
+MATTHEW.--
+
+  Mother, do look at him.
+
+MARY.--
+
+  When we began
+  A-building him, we didn’t ever know
+  How big he’d get to be--he seemed to grow
+  All by himself!
+
+MATTHEW.--
+
+  Mother, do look!
+
+JOAN.--
+
+  There, there!
+  It’s “look,” “look,” “look,” all day!
+
+    (_She speaks in a good-humored scolding tone which the children
+    seem not in the least afraid of. She goes and looks out_)
+
+  Well, I declare,
+  You’ve done a silly thing--made ’im to stand
+  Right in the door!--with no room either ’and
+  For folks to get by.
+
+MATTHEW.--
+
+  Yah!
+
+MARY.--
+
+  Yah! Ah, ha! That’s why.
+
+MATTHEW.--
+
+  We didn’t want to let no folk get by
+  To steal our muvver!
+
+    (_He rubs against her_)
+
+JOAN.--
+
+  Here, and what d’yer mean
+  Getting yourself all wet like this? You’ve been
+  And clammed yourself,--you too. Now off you go!
+  Take all those things off! One can’t ever know
+  What children will be up to next. Come here!
+
+    (_Catches hold of_ MATTHEW)
+
+  Now you undress yourself.
+
+    (_To_ MARY)
+
+  You get in there
+  Into the warm. Stand still, stand still, I say,
+  And put this round yer. Oh, so that’s the way
+  You do when I ain’t looking? All day long
+  You’re up to mischief. Always something wrong
+  Soon as my back is turned. That heap o’ snow
+  How long’s that to stay there, I’d like to know?
+  Here, take your milk, and there’s a bit o’ bread
+  For both on yer. Don’t want it? Ah, it’s bed
+  You’d best be off to! There, put your mug down!
+  Now come and get into your nighty-gown.
+  Ah, you sweet thing! Well, kiss your mother then!
+  But you mind what I say--no more snowmen
+  To-morrow!
+
+    (_Crosses the room_)
+
+MARY.--
+
+  Mother--Mother--will there be
+  Anyone here to-morrow? Shan’t we see
+  Someone?
+
+JOAN.--
+
+  See someone?
+
+MARY.--
+
+  I mean, won’t there no
+  Man come with a spade and clear away the snow?
+  Last year one come.
+
+JOAN.--
+
+  That was your father,--he
+  Haven’t been near us since, and where he be
+  God alone knows. Here! Don’t fill your ’ead
+  With silly fancies! You get on to bed.
+
+    (_She goes out into the woodshed_)
+
+MATTHEW.--
+
+  Say! Say! She’s gone! come along, Mary Ann
+  And have another look at our snowman.
+
+    (_They run across to the window_)
+
+  Snowman! Snowman!
+
+MARY. It’s no good, he don’t hear, he’s gone to sleep.
+
+    (_Re-enter_ JOAN.)
+
+JOAN. Ah, what are you up to there? Back you go, quick. Or else you’ll
+get the rod! (_They skip back to the fireplace_) Now you kneel down and
+say your prayers. “Pray God”----
+
+    (_The two children kneel at bench with their backs to the
+    fire._)
+
+CHILDREN. “Pray God”----
+
+JOAN. (_As she moves about folding up clothes, etc._) “Pray God make
+Baba good”----
+
+CHILDREN. Pray God make Baba good.
+
+JOAN. “Give Baba bread.”
+
+CHILDREN. Give Baba bread.
+
+JOAN. “Give all the hungry food”----
+
+CHILDREN. Give all the hungry food.
+
+JOAN. “Peace to the dead.” (_Crosses herself_)
+
+CHILDREN. Peace to the dead.
+
+    (JOAN _stands lost in reverie and speaks unconsciously by
+    rote_.)
+
+JOAN. “God bless”--(_She turns and looks out_)
+
+CHILDREN. God bless--(_They wait to be prompted_)
+
+MATTHEW. Say, muvver, shall we pray for the snowman too? Shall us?
+Shall us?
+
+JOAN. (_Still musing_) Nay, nay! You leave the snowman out! He knows
+his way--he knows his way.
+
+CHILDREN.--
+
+                { sister  }
+  Bless mother, { brother } kind friends all about,
+  Bring Dada home, and leave the snowman out.
+      Amen.
+
+    (JOAN _stands lost in her own thoughts. The children creep
+    behind her toward the window._)
+
+MARY. Good-night, snowman!
+
+MATTHEW. Good-night!
+
+    (_They approach_ JOAN.)
+
+MARY. Good-night, mother!
+
+JOAN. Good-night, darling!
+
+MATTHEW. Night, mother.
+
+JOAN. Night-night, my dear,--night-night!
+
+    (MARY ANN _goes and opens cubby-bed and begins to climb in_.
+    MATTHEW _stops outside_.)
+
+MATTHEW.--
+
+  Matthew, Mark, Luke and John,
+  Guard the bed that I lie on;
+  Four corners to my bed,
+  Four angels at my head,
+  One to watch, and one to pray,
+  And two to----
+
+JOAN. There, you get in! you’ve prayed enough to-night. (_She goes to
+close doors_)
+
+MARY. Don’t shut it up yet, mother, leave a light.
+
+JOAN.--
+
+  Just you be quiet. Be thankful you lie warm,
+  There’s some as won’t to-night. I can hear storm
+  A-coming on.
+
+    (_She leaves door of cubby-bed half open._)
+
+MATTHEW. Sing, mother, will ye sing?
+
+JOAN. (_Putting away the bread and the milk-mugs and folding up the
+strewn garments; starts to sing in a dull toneless voice with little
+tune_)
+
+  There come a man to a maid, and said,
+    All in a year and a day----
+  “So thou be mine now let us be wed
+    Out of the world and away.”
+
+  Said the maid to the man, “If I thee wed
+    Out of the world and away,
+  Bide ’e at home, and find me bread----
+    Just for a year and a day.”
+
+  They hadn’t been wed, the maid and the man,
+    For a year, for a year and a day,
+  Before a want in his heart began,
+    To be out to the world and away.
+
+  “Oh, wife, there’s come a call to my blood,
+    To be out in the world and away,
+  By road and river, by field and flood,
+    Just for a year and a day.”
+
+  Out and away to the world he went,
+    By road and river and sea.
+  Oh, man of the road, is your heart content?
+    Will ’e never come back to me?
+
+    (_She goes and looks at the children and sees that they are
+    asleep_)
+
+  Oh, man of the road, is your heart content?
+    Will ’e never come back to me?
+
+    (_While she sings, the firelight dies down and the light of the
+    candle loses its warmth. Outside is a sound of rising wind, and
+    the soft lash of snow against the pane. She goes and looks out
+    of window_)
+
+  Ah, there be storm, black blasts with icy breath!
+  The night’s gone colder now, aye cold like death,
+  Cold!
+
+    (_She shivers--three knocks are struck on the door_)
+
+  Who be there? Who is it? Whence do’e come?
+
+    (_Another knock, very faint_)
+
+  Have you no word? What, are ye deaf and dumb?
+    Or--dead?
+
+    (_Knock. The light burns blue. She opens the door. Pause.
+    Slowly the snowman enters and moves across the room toward the
+    bed_)
+
+  No, stop! Not there, not there!
+
+    (_She interposes and lays hold of him. A cold rigour seizes
+    her_)
+
+SNOWMAN. Why do you touch me?
+
+JOAN. Why do you come here? Who are you? Answer! (_He again moves
+forward_) No, you don’t go there! You shan’t, you shan’t come nigh of
+’em.
+
+SNOWMAN. Take care! My touch is--cold!
+
+JOAN.--
+
+  You think I’m feard o’ that?
+  You think them eyes as I be looking at
+  Have any fear for me, or shape of dread?
+  Worse that what life ’ave?
+
+    (_With a sort of exultation_)
+
+  Why, if I were dead!
+
+    (_Pause. The snowman lifts his hand and points toward the bed._
+    JOAN _sees his meaning_.)
+
+SNOWMAN. If you were dead?
+
+JOAN.--
+
+  No, no, I say you lie!
+  My little ’uns? God wouldn’t let ’em die.
+  ’A wouldn’t have the heart, ’a wouldn’t have the heart.
+
+SNOWMAN.--
+
+  Yet there’s a heart,
+    Now quick to beat,
+  Which, this same night,
+    Must lose its heat.
+  To give strength to a lame man’s feet.
+
+JOAN.--
+
+  A lame man?
+
+SNOWMAN.--
+
+  Gray-headed, bent,
+  He scarce can go,
+  His strength is spent
+  In drifts of snow,
+  And all the icy blasts that blow.
+
+JOAN.--
+
+  I don’t know who you mean.
+
+SNOWMAN.--
+
+  Give me your hand,
+  And you shall see,
+  Here, close at hand, snow-bound goes he.
+  Give me your hand,
+  And come with me.
+
+JOAN.--
+
+  With you? Why do you think I’d come with you?
+  I’ve got my children, I’ve a husband, too,
+  One as I love.
+
+SNOWMAN.--
+
+  And he--does he love you?
+
+JOAN.--
+
+  That’s no concern o’ yourn!
+  Aye, ’a did once, Aye! and ’a will again,
+  Some day, perhaps. When he first married me,
+  ’A did,--’a did! We’ve sat here in this room
+  A-kissing by the hour! That were before
+  The children come. Children do make a house
+  No comfort to a man. He had his right
+  To go. He didn’t want ’em, but I did!
+  I did!
+  Aye! and I’ve ’ad ’em now a whole seven years,
+  Worked for ’em, I lived for ’em, starved for ’em,
+  And I’d die
+  So it could better ’em.
+
+SNOWMAN.--
+
+  And what--for him?
+
+JOAN.--
+
+  I’ve broke my ’eart for ’im; it’s past its work,
+  And now it ain’t no use--no use--to ’im.
+
+SNOWMAN.--
+
+  Its use has come. Oh, woman give
+  Your heart to me, I’ll make it live.
+  And what you lend he shall receive.
+
+JOAN.--
+
+  You can’t. You can’t do that----
+  You can’t raise up the sun when once it’s set;
+  You can’t put new roots in us, when we’re old,
+  Dried up, and withered.
+
+SNOWMAN.--
+
+  Yet within kind earth
+  Dry seed goes sown
+  And springs again to birth.
+
+JOAN.--
+
+  I’ve ’ad enough of earth. I’ve sowed, I’ve reaped,
+  I’ve gathered, and I’ve strawed. But me and ’im
+  We won’t meet any more. He ’aven’t come,
+  Nigh me--not for a year.
+  And when he did come back--he went again
+  Next day.
+
+SNOWMAN. Went? Where?
+
+JOAN. Nowhere. He roves about. Seeing the world, ’e calls it. Roving
+blood. That’s been ’is curse; and mind, ’is roving blood, it haven’t
+always roved. He liked his ease, he liked the victuals I give him well
+enough, he liked his fireside, and he liked his bed when I was by ’im.
+Ah! And then one day he’d ’ad enough of comfort, and was off,--looking
+for what? ’Ardship? He might have ’ad that ’ere if he’d but stayed.
+Aye, that ’e could--for it’s been ’ard enough--with they two there. Ah,
+you may look at ’em, they ’aven’t known trouble--yet they was with me
+all the time. Why, there’ve been days when I’ve not ’ad enough to eat
+myself. And what ’ave fed me? Just to ’ear ’em laugh and think they
+’aven’t known. What do you look at me like that for? What do you know?
+What did you come for? Say!
+
+SNOWMAN. To bring you comfort.
+
+JOAN. Comfort? I’ve got no place for comfort in me now. It isn’t that I
+want--it’s rest.
+
+SNOWMAN. ’Tis rest I bring.
+
+JOAN. Where’s ’e?
+
+SNOWMAN. Here--near at hand. Come, come and do not be afraid. (_He
+takes her hand_)
+
+JOAN. Oh, dearie me. This feels like death. Like death!
+
+    (_As they touch hands a mist draws over the stage, the walls
+    of the house seem to fade away, the sound of the storm grows
+    loud around them. They stand in a white world full of obscure
+    movement and pale drifting forms._)
+
+SNOWMAN. What do you see?
+
+JOAN. A waste of snow.
+
+SNOWMAN. Anyone there?
+
+JOAN. No one I know. No--only you. What? You say you saw him on the
+road, coming? How do you know that it was ’im? Yes--yes--’e was like
+that. But younger, ’andsomer than that,--not lame----
+
+  No, he was never lame--a young, young man,
+  And strong!----
+  Oh, lost his way? You say ’e’d lost his way?
+  Well, maybe that might tire ’im just a bit,
+  But oh, he’d find it! Oh, trust him for that!
+  He’s been all round the world--and lost his way
+  Through coming ’ome. Yes, yes, he’s coming ’ome.
+  Ah! Now I see ’im. Yes, I’m ’ere, I’m ’ere!
+  Waiting for yer,--waiting--expecting yer.
+  Ah, never mind. Though yer don’t love me, still
+  It’s back to me you come! Yer can’t ’elp that
+  That’s ’ow God made yer. That’s why He made me.
+  No! I can’t reach yer. No, he’s got my hand,
+  Holding it, holding it,--and won’t leave go!
+  I’d ’elp yer, if I could. I’d die for yer!
+  But he won’t let me go.
+  ----I’m cold, I’m cold!
+  Can’t see!--I’ve lost my way,
+  And I shan’t--never--any more come home!
+
+    (_The snowman looses her hand, and she falls. The mist clears
+    from a dark stage, the walls close in again, the chamber
+    remains in darkness. A figure stumbles past the window, the
+    door is thrown open, the Snowman stands aside. Enter_ JASPAR.)
+
+JASPAR.--
+
+  Home! Home, at last! Who’s there? Anyone there?
+  What? Nobody? No fire? Oh, bitter cold----
+  It feels like death!
+
+    (_Fumbles for match-box_)
+
+  Here, fool, give me a light!
+  Light, can’t yer? Ah, what’s that, what’s that, what’s that?
+  Who are yer? What for are you lying there?
+  Get up! Get up! What makes ’e be so cold?
+  So clammed?
+
+    (_Strikes a light_)
+
+  What the,--! My wife! It be my wife!
+  Wife! Don’t ’e hear me? It be I, come back,
+  Jaspar come back--Jaspar come home again----
+  Jaspar--why don’t ’e answer? There, now there!
+  Have that to warm yer. Oh, ye’ll soon come round,
+  Ye’ve starved yerself, ye--! Ah--she’s dead, she’s dead!
+
+    (_He lifts her onto the chair by the hearth and now holds the
+    candle to her face, then draws away with a growing fear of what
+    other deaths may be there. He advances to the crib, and looks
+    in on the sleeping children. He assures himself that they are
+    alive. It startles him to fresh hope; he turns back to his
+    wife_)
+
+  No, she ain’t dead, she can’t be, they’re alive!
+  She wouldn’t leave ’em. No, she can’t be dead.
+  Wife, do ’e hear? The children be alive.
+  You wouldn’t go and leave ’em, no, not you----
+  ’Twouldn’t be like yer. There, my--there, come, come!
+  Take warmth o’ me,--out of my ’eart and soul!
+  I’ll make ye warm.
+
+    (_He takes her to his heart_)
+
+  Why, I was coming ’ome.
+  I’d ’a been yere before, but I lost my way,
+  Got buried in the snow. Then I ’eard you
+  A-callin’ me! I thought I saw your face,
+  Then it all went, and then, my feet grew strong,
+  Life come to me, and warmth, and here I be!
+  Can’t ’e speak to me? Be ye gone so far
+  As ’e can’t ’ear me? Not the word I’d say
+  To tell ’e how I loved ’e?
+  Ah, now I be in ’ell, I be in ’ell!
+  And ’a won’t never know.
+
+    (_Her hand falls out across chair, pointing toward the crib_)
+
+  What’s that to say?
+  Oh, the dear hand. Yes, I’ll look after ’em.
+  They shan’t know want--and I won’t go away----
+  The way I’d wish to go. I’ll bear my life
+  And all the burden of it. There, there, my lass,
+  Rest ye in peace, I’ll do my best by ’em!
+  I’ll do my best.
+
+    (_He bends and kisses her on the lips. The Snowman makes a pass
+    toward her with his hand. She moves, and opens her eyes, all
+    dazed and dreaming_)
+
+JOAN. Who’s that, who’s that got hold o’ me? Let go! I must go to ’im.
+
+JASPAR. No, no, bide ’e still. Here’s Jaspar!
+
+JOAN. Jaspar!
+
+JASPAR. Oh, you be alive! (_He sinks down broken, with his head on
+her breast. She takes his head in her hands stroking it softly. The
+Snowman moves slowly to the door, fades through it, and disappears_)
+
+JOAN. So you’ve come back, I knew you’d come--some day. What’s this?
+(_She touches the coat_)
+
+JASPAR. My coat. I found you lyin’ there cold, so I put it round yer.
+But you made no sign--until I thought as yer was dead.
+
+JOAN. Dead? Would I leave ’em? Leave my little ’uns?
+
+JASPAR. Ah, there you do get home. It’s a true charge. It’s what I done.
+
+JOAN. You ’ad the roving blood. You couldn’t ’elp it.
+
+JASPAR. It ain’t brought me no joy.
+
+JOAN.--
+
+  Jaspar, I think you’ve come here in a dream.
+  Put your arms round me and ’old me. Don’t let go.
+  Help me to dream, I’d like for it to last
+  Just one more hour--put your ’ead on my heart.
+  And don’t you speak--don’t speak--I want to dream,
+  You be come back again! I want to dream.
+
+    (_They lie still in each other’s arms. Dawn light begins to
+    creep in. A sound of sliding snow is heard on the roof, a sharp
+    twittering of birds; down across the window masses of snow fall
+    in soft thunder. There follows a sound of dropping water: the
+    thaw has begun. The outer world grows radiant with light. The
+    doors of the cubby-bed fly open, the two children peep out. A
+    soft but heavy crash of falling snow is heard. It strikes the
+    door._)
+
+MARY. Mother, what’s that? Get up, get up, it’s light! (_Jumps out
+of bed, followed by_ MATTHEW) Oh, come and look! The snow’s all
+falling--right down off the roof. Look how it’s letting go!
+
+MATTHEW. Oh, the snowman. Look at the snowman! Oh! (_Opens door_)
+
+MARY. Mother, the snowman’s tumbled in the night.
+
+    (JOAN _opens her eyes_.)
+
+JOAN. Hush, hush, don’t wake ’im. Come ’e and look ’ere.
+
+    (_The children approach softly, curious and surprised._)
+
+MARY. Who is it, mother?
+
+JOAN. The snowman, my dear. He’s come to stay.
+
+
+CURTAIN.
+
+
+
+
+THE WORLD’S BEST PLAYS
+
+By Celebrated European Authors
+
+A NEW SERIES OF AMATEUR PLAYS BY THE BEST AUTHORS, ANCIENT AND MODERN,
+ESPECIALLY TRANSLATED WITH HISTORICAL NOTES, SUGGESTIONS FOR STAGING,
+Etc., FOR THE USE OF SCHOOLS, COLLEGES, AND DRAMATIC CLUBS
+
+BARRETT H. CLARK
+
+General Editor
+
+
+With the immensely increased demand for new plays for purposes of
+production by amateurs comes a correspondingly great demand for a
+careful selection of those plays which can be easily and well presented
+by clubs and colleges. The plays in the present series have been chosen
+with regard to their intrinsic value as drama and literature, and at
+the same time to their adaptability to the needs and limitations of
+such organizations.
+
+The Series, under the personal supervision of Mr. Barrett H. Clark,
+instructor in the department of Dramatic Literature at Chautauqua,
+New York, assistant stage manager and actor with Mrs. Fiske (season
+1912-1913), now comprises 44 titles, more will make their appearance
+during the year. Eventually there will be plays from ancient Greece
+and Rome, Italy, Spain, France, Russia, Germany, and the Scandinavian
+countries, representative of some of the best drama of all ages and
+lands.
+
+Each Play is prefaced by a concise historical note by Mr. Clark and
+with a few suggestions for staging.
+
+
+
+
+Plays Now Ready
+
+
+=INDIAN SUMMER=, a comedy in one act by MEILHAC and HALEVY. This little
+play, by two of the most famous writers of comedy of the last century,
+has been played at the Comédie Francaise at Paris for upwards of forty
+years, and remains one of the brightest and most popular works of the
+period. PRICE 25 CENTS.
+
+=ROSALIE=, by MAX MAUREY. A “Grand Guignol” comedy in one act, full
+of verve and clever dialogue. Rosalie, the stubborn maid, leads her
+none too amiable master and mistress into uncomfortable complications
+by refusing to open the front door to a supposed guest of wealth and
+influence. PRICE 25 CENTS.
+
+=MODESTY=, by PAUL HERVIEU. A delightful trifle by one of the most
+celebrated of living dramatists. PRICE 25 CENTS.
+
+=THE ART OF BEING BORED=, (_Le Monde où l’on s’Ennuie_), a comedy in
+three acts by EDOUARD PAILLERON. Probably the best-known and most
+frequently acted comedy of manners in the realm of nineteenth century
+French drama. It is replete with wit and comic situations. For nearly
+forty years it has held the stage, while countless imitators have
+endeavored to reproduce its freshness and charm. PRICE 25 CENTS.
+
+=A MARRIAGE PROPOSAL=, by ANTON TCHEKHOFF, a comedy in one act, by one
+of the greatest of modern Russian writers. This little farce is very
+popular in Russia, and satirizes the peasants of that country in an
+amusing manner. PRICE 25 CENTS.
+
+=THE GREEN COAT=, by ALFRED DE MUSSET and EMILE AUGIER. A slight and
+comic character sketch of the life of Bohemian artists in Paris,
+written by one of France’s greatest poets and one of her best-known
+dramatists. PRICE 25 CENTS.
+
+=THE WAGER=, by GIUSEPPE GIACOSA. This one act poetic comedy, written
+by the most celebrated dramatist of modern Italy, was the author’s
+first work. It treats of a wager made by a proud young page, who risks
+his life on the outcome of a game of chess. PRICE 25 CENTS.
+
+=PANURGE’S SHEEP=, a comedy in one Act by MEILHAC and HALEVY. A famous
+and often-acted little play based upon the obstinacy of a charming
+woman, who is finally induced to marry. 1 man, 2 women. PRICE 25 CENTS.
+
+=THE LAW-SUIT= (Der Prozess), a comedy in one act by RODERICH BENEDIX.
+A famous comedy by the well-known German-dramatist--author of “The
+Obstinate Family,” and “The Third Man.” The play is full of amusing
+situations and bright lines. 5 men. PRICE 25 CENTS.
+
+=THE THIRD MAN= (Der Dritte), a comedy in one act by RODERICH BENEDIX.
+A highly amusing little comedy based upon the obstinacy of human
+beings, and proves the truth of the saying that “love finds a way.” 3
+women, 1 man. PRICE 25 CENTS.
+
+=THE GENTLEMAN TRADESMAN= (Le Bourgeois Gentile-homme), a comedy in
+four acts by MOLIERE. One of the best-known comedies of the celebrated
+master of comedy. “The Gentleman Tradesman” ridicules the affectations
+of M. Jourdain, a rich parvenu. 9 men, 5 women. PRICE 50 CENTS.
+
+=THE SICILIAN= (Le Sicilien), a farce in two scenes by MOLIERE. One of
+the lighter comedies of intrigue. This play is laid in Sicily, and has
+to do with the capture of a beautiful Greek slave from her selfish and
+tyrannical master. 4 men, 3 women. PRICE 25 CENTS.
+
+=DOCTOR LOVE= (L’Amour Medecine), a farce in three acts by MOLIERE. An
+uproarious farce, satirizing the medical profession. Through it runs
+the story of a young girl who pretends to be ill in order that she may
+marry the man she loves. 5 men, 4 women. PRICE 25 CENTS.
+
+=THE AFFECTED YOUNG LADIES= (Les Precieuses Ridicules), a comedy in
+one act by MOLIERE. The famous satire on intellectual and social
+affectation. Like most of Moliere’s plays, the theme in this is ever
+modern. 3 women, 6 men. PRICE 25 CENTS.
+
+=I’M GOING!= A comedy in one act by TRISTAN BERNARD. A delightful bit
+of comedy of obstinacy and reconciliation. 1 man, 1 woman. PRICE 25
+CENTS.
+
+=THE FAIRY= (La Fee), a romantic comedy in one act by OCTAVE FEUILLET.
+Laid in a hut in Normandy, this little comedy is full of poetic charm
+and quiet humor. The element of the supernatural is introduced in order
+to drive home a strong lesson. 1 woman, 3 men. PRICE 25 CENTS.
+
+=THE VILLAGE= (Le Village), a comedy in one act by OCTAVE FEUILLET. The
+author here paints the picture of an elderly couple, and shows that
+they have not realized their happiness until it is on the point of
+being taken from them. 2 women, 2 men. PRICE 25 CENTS.
+
+=THE DOCTOR IN SPITE OF HIMSELF=, by MOLIERE. A famous farce by the
+greatest of French dramatists. Sganarelle has to be beaten before he
+will acknowledge that he is a doctor, which he is not. He then works
+apparently miraculous cures. The play is a sharp satire on the medical
+profession in the 17th Century. PRICE 25 CENTS.
+
+=BRIGNOL AND HIS DAUGHTER=, by CAPUS. The first comedy in English of
+the most sprightly and satirical of present-day French dramatists.
+PRICE 50 CENTS.
+
+=CHOOSING A CAREER=, by G. A. DE CAILLAVET. Written by one of the
+authors of “Love Watches.” A farce of mistaken identity, full of
+humorous situations and bright lines. PRICE 25 CENTS.
+
+=FRENCH WITHOUT A MASTER=, by TRISTAN BERNARD. A clever farce by one
+of the most successful of French dramatists. It is concerned with the
+difficulties of a bogus-interpreter who does not know a word of French.
+PRICE 25 CENTS.
+
+=PATER NOSTER=, a poetic play in one act, by FRANCOIS COPPEE. A
+pathetic incident of the time of the Paris Commune, in 1871. PRICE 25
+CENTS.
+
+=THE ROMANCERS=, a comedy in three acts, by EDMOND ROSTAND. New
+translation of this celebrated and charming little romantic play by the
+famous author of “Cyrano de Bergerac” and “Chantecler.” PRICE 25 CENTS.
+
+=THE MERCHANT GENTLEMAN=, (Le Bourgeois Gentil-homme), by MOLIERE. New
+translation of one of Moliere’s comic masterpieces, a play which is
+peculiarly well adapted to amateur production. PRICE 50 CENTS.
+
+=THE HOUSE OF FOURCHAMBAULT=, by EMILE AUGIER. One of the greatest of
+recent French family dramas. Although the play is serious in tone, it
+contains touches which entitle it to a position among the best comedies
+of manners of the times. PRICE 50 CENTS.
+
+=PANURGE’S SHEEP=, a comedy in one Act by MEILHAC and HALEVY. A famous
+and often-acted little play based upon the obstinacy of a charming
+woman, who is finally induced to marry. 1 man, 2 women. PRICE 25 CENTS.
+
+=THE LAW-SUIT=, (Der Prozess), a comedy in one act by RODERICH BENEDIX.
+A famous comedy by the well-known German-dramatist--author of “The
+Obstinate Family,” and “The Third Man.” The play is full of amusing
+situations and bright lines. 5 men. PRICE 25 CENTS.
+
+=THE THIRD MAN= (Der Dritte), a comedy in one act by RODERICH BENEDIX.
+A highly amusing little comedy based upon the obstinacy of human
+beings, and proves the truth of the saying that “love finds a way.” 3
+women, 1 man. PRICE 25 CENTS.
+
+=THE GENTLEMAN TRADESMAN= (Le Bourgeois Gentile-homme), a comedy in
+four acts by MOLIERE. One of the best-known comedies of the celebrated
+master of comedy. “The Gentleman Tradesman” ridicules the affectations
+of M. Jourdain, a rich parvenu. 9 men, 5 women. PRICE 50 CENTS.
+
+=THE SICILIAN= (Le Sicilien), a farce in two scenes by MOLIERE. One of
+the lighter comedies of intrigue. This play is laid in Sicily, and has
+to do with the capture of a beautiful Greek slave from her selfish and
+tyrannical master. 4 men, 3 women. PRICE 25 CENTS.
+
+=DOCTOR LOVE= (L’Amour Medecine), a farce in three acts by MOLIERE. An
+uproarious farce, satirizing the medical profession. Through it runs
+the story of a young girl who pretends to be ill in order that she may
+marry the man she loves. 5 men, 4 women. PRICE 25 CENTS.
+
+=THE AFFECTED YOUNG LADIES= (Les Precieuses Ridicules), a comedy in
+one act by MOLIERE. The famous satire on intellectual and social
+affectation. Like most of Moliere’s plays, the theme in this is ever
+modern. 3 women, 6 men. PRICE 25 CENTS.
+
+=I’M GOING!= A comedy in one act by TRISTAN BERNARD. A delightful bit
+of comedy of obstinacy and reconciliation. 1 man, 1 woman. PRICE 25
+CENTS.
+
+=THE FAIRY= (La Fee), a romantic comedy in one act by OCTAVE FEUILLET.
+Laid in a hut in Normandy, this little comedy is full of poetic charm
+and quiet humor. The element of the supernatural is introduced in order
+to drive home a strong lesson. 1 woman, 3 men. PRICE 25 CENTS.
+
+=THE VILLAGE= (Le Village), a comedy in one act by OCTAVE FEUILLET. The
+author here paints the picture of an elderly couple, and shows that
+they have not realized their happiness until it is on the point of
+being taken from them. 2 women, 2 men. PRICE 25 CENTS.
+
+=THE BENEFICENT BEAR=, a comedy in three acts, by GOLDONI. One of the
+best-known comedies of the Father of Italian Comedy. A costume piece
+laid in 18th century France, the principal character in which is a
+good-hearted, though gruff, old uncle. 4 men, 3 women. PRICE 25 CENTS.
+
+=GRAMMAR= (La Grammaire), a farce in one act by LABICHE. An amusing
+and charming comedy by one of the greatest of 19th century French
+dramatists. 4 men, 1 woman. PRICE 25 CENTS.
+
+=THE TWO COWARDS= (Les Deux Timides), a comedy in one act by LABICHE.
+A very amusing and human little comedy, in which a strong-willed girl
+helps her father choose for her the man she wishes to marry. 2 women, 3
+men. PRICE 25 CENTS.
+
+=MASTER PATELIN, SOLICITOR=, a comedy in three acts. Special version by
+BRUEYS. One of the most famous of early French farces. The setting and
+character belong to the late Middle Ages. The play is concerned with
+the crooked dealings of a clever lawyer. 7 men, 2 women. PRICE 25 CENTS.
+
+=CRISPIN, HIS MASTER’S RIVAL=, a comedy in one act by LE SAGE. A famous
+comedy by the author of “Gil Blas,” concerned with the pranks of two
+clever valets. 18th century costumes and settings. 4 men, 3 women.
+PRICE 25 CENTS.
+
+=THE LEGACY=, a comedy in one act by MARIVAUX. A delicate high comedy
+of intrigue. Marivaux one of the masters of old French comedy, and this
+play is full of deft touches of characterization. 2 women, 4 men. PRICE
+25 CENTS.
+
+=AFTER THE HONEYMOON=, a farce in one act by WOLFGANG GYALUI. A
+Hungarian farce full of brilliant dialog and movement. 1 man, 1 woman.
+PRICE 25 CENTS.
+
+=A CHRISTMAS TALE=, a poetic play by MAURICE BOUCHOR. A beautiful
+little miracle play of love and devotion, laid in 15th century Paris. 2
+men, 2 women. PRICE 25 CENTS.
+
+=CRAINQUEBILLE=, a play in three scenes by ANATOLE FRANCE. A delightful
+series of pictures of Parisian street life, by the author of “The Man
+Who Married a Dumb Wife.” 12 men, 6 women. PRICE 25 CENTS.
+
+=JEAN-MARIE=, a poetic play in one act by ANDRE THEURIET. A pathetic
+play of Norman peasant life. 2 men, 1 woman. PRICE 25 CENTS.
+
+=THE REBOUND=, a comedy in one act by L. B. PICARD. A clever comedy of
+intrigue, and a satire of social position. 2 women, 5 men. PRICE 25
+CENTS.
+
+=THE DOCTOR IN SPITE OF HIMSELF=, by MOLIERE. A famous farce by the
+greatest of French dramatists. Sganarelle has to be beaten before he
+will acknowledge that he is a doctor, which he is not. He then works
+apparently miraculous cures. The play is a sharp satire on the medical
+profession in the 17th Century. PRICE 25 CENTS.
+
+=BRIGNOL AND HIS DAUGHTER=, by CAPUS. The first comedy in English of
+the most sprightly and satirical of present-day French dramatists.
+PRICE 50 CENTS.
+
+=CHOOSING A CAREER=, by G. A. DE CAILLAVET. Written by one of the
+authors of “Love Watches.” A farce of mistaken identity, full of
+humorous situations and bright lines. PRICE 25 CENTS.
+
+=FRENCH WITHOUT A MASTER=, by TRISTAN BERNARD. A clever farce by one
+of the most successful of French dramatists. It is concerned with the
+difficulties of a bogus-interpreter who does not know a word of French.
+PRICE 25 CENTS.
+
+=PATER NOSTER=, a poetic play in one act, by FRANCOIS COPPEE. A
+pathetic incident of the time of the Paris Commune, in 1871. PRICE 25
+CENTS.
+
+=THE ROMANCERS=, a comedy in three acts, by EDMOND ROSTAND. New
+translation of this celebrated and charming little romantic play by the
+famous author of “Cyrano de Bergerac” and “Chantecler.” PRICE 25 CENTS.
+
+=THE MERCHANT GENTLEMAN= (Le Bourgeois Gentil-homme), by MOLIERE. New
+translation of one of Moliere’s comic masterpieces, a play which is
+peculiarly well adapted to amateur production. PRICE 50 CENTS.
+
+*** END OF THE PROJECT GUTENBERG EBOOK THE SNOW MAN ***
+
+Updated editions will replace the previous one--the old editions will
+be renamed.
+
+Creating the works from print editions not protected by U.S. copyright
+law means that no one owns a United States copyright in these works,
+so the Foundation (and you!) can copy and distribute it in the
+United States without permission and without paying copyright
+royalties. Special rules, set forth in the General Terms of Use part
+of this license, apply to copying and distributing Project
+Gutenberg™ electronic works to protect the PROJECT GUTENBERG™
+concept and trademark. Project Gutenberg is a registered trademark,
+and may not be used if you charge for an eBook, except by following
+the terms of the trademark license, including paying royalties for use
+of the Project Gutenberg trademark. If you do not charge anything for
+copies of this eBook, complying with the trademark license is very
+easy. You may use this eBook for nearly any purpose such as creation
+of derivative works, reports, performances and research. Project
+Gutenberg eBooks may be modified and printed and given away--you may
+do practically ANYTHING in the United States with eBooks not protected
+by U.S. copyright law. Redistribution is subject to the trademark
+license, especially commercial redistribution.
+
+START: FULL LICENSE
+
+THE FULL PROJECT GUTENBERG LICENSE
+PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK
+
+To protect the Project Gutenberg™ mission of promoting the free
+distribution of electronic works, by using or distributing this work
+(or any other work associated in any way with the phrase “Project
+Gutenberg”), you agree to comply with all the terms of the Full
+Project Gutenberg™ License available with this file or online at
+www.gutenberg.org/license.
+
+Section 1. General Terms of Use and Redistributing Project
+Gutenberg™ electronic works
+
+1.A. By reading or using any part of this Project Gutenberg™
+electronic work, you indicate that you have read, understand, agree to
+and accept all the terms of this license and intellectual property
+(trademark/copyright) agreement. If you do not agree to abide by all
+the terms of this agreement, you must cease using and return or
+destroy all copies of Project Gutenberg™ electronic works in your
+possession. If you paid a fee for obtaining a copy of or access to a
+Project Gutenberg™ electronic work and you do not agree to be bound
+by the terms of this agreement, you may obtain a refund from the
+person or entity to whom you paid the fee as set forth in paragraph
+1.E.8.
+
+1.B. “Project Gutenberg” is a registered trademark. It may only be
+used on or associated in any way with an electronic work by people who
+agree to be bound by the terms of this agreement. There are a few
+things that you can do with most Project Gutenberg™ electronic works
+even without complying with the full terms of this agreement. See
+paragraph 1.C below. There are a lot of things you can do with Project
+Gutenberg™ electronic works if you follow the terms of this
+agreement and help preserve free future access to Project Gutenberg™
+electronic works. See paragraph 1.E below.
+
+1.C. The Project Gutenberg Literary Archive Foundation (“the
+Foundation” or PGLAF), owns a compilation copyright in the collection
+of Project Gutenberg™ electronic works. Nearly all the individual
+works in the collection are in the public domain in the United
+States. If an individual work is unprotected by copyright law in the
+United States and you are located in the United States, we do not
+claim a right to prevent you from copying, distributing, performing,
+displaying or creating derivative works based on the work as long as
+all references to Project Gutenberg are removed. Of course, we hope
+that you will support the Project Gutenberg™ mission of promoting
+free access to electronic works by freely sharing Project Gutenberg™
+works in compliance with the terms of this agreement for keeping the
+Project Gutenberg™ name associated with the work. You can easily
+comply with the terms of this agreement by keeping this work in the
+same format with its attached full Project Gutenberg™ License when
+you share it without charge with others.
+
+1.D. The copyright laws of the place where you are located also govern
+what you can do with this work. Copyright laws in most countries are
+in a constant state of change. If you are outside the United States,
+check the laws of your country in addition to the terms of this
+agreement before downloading, copying, displaying, performing,
+distributing or creating derivative works based on this work or any
+other Project Gutenberg™ work. The Foundation makes no
+representations concerning the copyright status of any work in any
+country other than the United States.
+
+1.E. Unless you have removed all references to Project Gutenberg:
+
+1.E.1. The following sentence, with active links to, or other
+immediate access to, the full Project Gutenberg™ License must appear
+prominently whenever any copy of a Project Gutenberg™ work (any work
+on which the phrase “Project Gutenberg” appears, or with which the
+phrase “Project Gutenberg” is associated) is accessed, displayed,
+performed, viewed, copied or distributed:
+
+  This eBook is for the use of anyone anywhere in the United States and
+  most other parts of the world at no cost and with almost no
+  restrictions whatsoever. You may copy it, give it away or re-use it
+  under the terms of the Project Gutenberg License included with this
+  eBook or online at www.gutenberg.org. If you are not located in the
+  United States, you will have to check the laws of the country where
+  you are located before using this eBook.
+
+1.E.2. If an individual Project Gutenberg™ electronic work is
+derived from texts not protected by U.S. copyright law (does not
+contain a notice indicating that it is posted with permission of the
+copyright holder), the work can be copied and distributed to anyone in
+the United States without paying any fees or charges. If you are
+redistributing or providing access to a work with the phrase “Project
+Gutenberg” associated with or appearing on the work, you must comply
+either with the requirements of paragraphs 1.E.1 through 1.E.7 or
+obtain permission for the use of the work and the Project Gutenberg™
+trademark as set forth in paragraphs 1.E.8 or 1.E.9.
+
+1.E.3. If an individual Project Gutenberg™ electronic work is posted
+with the permission of the copyright holder, your use and distribution
+must comply with both paragraphs 1.E.1 through 1.E.7 and any
+additional terms imposed by the copyright holder. Additional terms
+will be linked to the Project Gutenberg™ License for all works
+posted with the permission of the copyright holder found at the
+beginning of this work.
+
+1.E.4. Do not unlink or detach or remove the full Project Gutenberg™
+License terms from this work, or any files containing a part of this
+work or any other work associated with Project Gutenberg™.
+
+1.E.5. Do not copy, display, perform, distribute or redistribute this
+electronic work, or any part of this electronic work, without
+prominently displaying the sentence set forth in paragraph 1.E.1 with
+active links or immediate access to the full terms of the Project
+Gutenberg™ License.
+
+1.E.6. You may convert to and distribute this work in any binary,
+compressed, marked up, nonproprietary or proprietary form, including
+any word processing or hypertext form. However, if you provide access
+to or distribute copies of a Project Gutenberg™ work in a format
+other than “Plain Vanilla ASCII” or other format used in the official
+version posted on the official Project Gutenberg™ website
+(www.gutenberg.org), you must, at no additional cost, fee or expense
+to the user, provide a copy, a means of exporting a copy, or a means
+of obtaining a copy upon request, of the work in its original “Plain
+Vanilla ASCII” or other form. Any alternate format must include the
+full Project Gutenberg™ License as specified in paragraph 1.E.1.
+
+1.E.7. Do not charge a fee for access to, viewing, displaying,
+performing, copying or distributing any Project Gutenberg™ works
+unless you comply with paragraph 1.E.8 or 1.E.9.
+
+1.E.8. You may charge a reasonable fee for copies of or providing
+access to or distributing Project Gutenberg™ electronic works
+provided that:
+
+• You pay a royalty fee of 20% of the gross profits you derive from
+  the use of Project Gutenberg™ works calculated using the method
+  you already use to calculate your applicable taxes. The fee is owed
+  to the owner of the Project Gutenberg™ trademark, but he has
+  agreed to donate royalties under this paragraph to the Project
+  Gutenberg Literary Archive Foundation. Royalty payments must be paid
+  within 60 days following each date on which you prepare (or are
+  legally required to prepare) your periodic tax returns. Royalty
+  payments should be clearly marked as such and sent to the Project
+  Gutenberg Literary Archive Foundation at the address specified in
+  Section 4, “Information about donations to the Project Gutenberg
+  Literary Archive Foundation.”
+
+• You provide a full refund of any money paid by a user who notifies
+  you in writing (or by e-mail) within 30 days of receipt that s/he
+  does not agree to the terms of the full Project Gutenberg™
+  License. You must require such a user to return or destroy all
+  copies of the works possessed in a physical medium and discontinue
+  all use of and all access to other copies of Project Gutenberg™
+  works.
+
+• You provide, in accordance with paragraph 1.F.3, a full refund of
+  any money paid for a work or a replacement copy, if a defect in the
+  electronic work is discovered and reported to you within 90 days of
+  receipt of the work.
+
+• You comply with all other terms of this agreement for free
+  distribution of Project Gutenberg™ works.
+
+1.E.9. If you wish to charge a fee or distribute a Project
+Gutenberg™ electronic work or group of works on different terms than
+are set forth in this agreement, you must obtain permission in writing
+from the Project Gutenberg Literary Archive Foundation, the manager of
+the Project Gutenberg™ trademark. Contact the Foundation as set
+forth in Section 3 below.
+
+1.F.
+
+1.F.1. Project Gutenberg volunteers and employees expend considerable
+effort to identify, do copyright research on, transcribe and proofread
+works not protected by U.S. copyright law in creating the Project
+Gutenberg™ collection. Despite these efforts, Project Gutenberg™
+electronic works, and the medium on which they may be stored, may
+contain “Defects,” such as, but not limited to, incomplete, inaccurate
+or corrupt data, transcription errors, a copyright or other
+intellectual property infringement, a defective or damaged disk or
+other medium, a computer virus, or computer codes that damage or
+cannot be read by your equipment.
+
+1.F.2. LIMITED WARRANTY, DISCLAIMER OF DAMAGES - Except for the “Right
+of Replacement or Refund” described in paragraph 1.F.3, the Project
+Gutenberg Literary Archive Foundation, the owner of the Project
+Gutenberg™ trademark, and any other party distributing a Project
+Gutenberg™ electronic work under this agreement, disclaim all
+liability to you for damages, costs and expenses, including legal
+fees. YOU AGREE THAT YOU HAVE NO REMEDIES FOR NEGLIGENCE, STRICT
+LIABILITY, BREACH OF WARRANTY OR BREACH OF CONTRACT EXCEPT THOSE
+PROVIDED IN PARAGRAPH 1.F.3. YOU AGREE THAT THE FOUNDATION, THE
+TRADEMARK OWNER, AND ANY DISTRIBUTOR UNDER THIS AGREEMENT WILL NOT BE
+LIABLE TO YOU FOR ACTUAL, DIRECT, INDIRECT, CONSEQUENTIAL, PUNITIVE OR
+INCIDENTAL DAMAGES EVEN IF YOU GIVE NOTICE OF THE POSSIBILITY OF SUCH
+DAMAGE.
+
+1.F.3. LIMITED RIGHT OF REPLACEMENT OR REFUND - If you discover a
+defect in this electronic work within 90 days of receiving it, you can
+receive a refund of the money (if any) you paid for it by sending a
+written explanation to the person you received the work from. If you
+received the work on a physical medium, you must return the medium
+with your written explanation. The person or entity that provided you
+with the defective work may elect to provide a replacement copy in
+lieu of a refund. If you received the work electronically, the person
+or entity providing it to you may choose to give you a second
+opportunity to receive the work electronically in lieu of a refund. If
+the second copy is also defective, you may demand a refund in writing
+without further opportunities to fix the problem.
+
+1.F.4. Except for the limited right of replacement or refund set forth
+in paragraph 1.F.3, this work is provided to you “AS-IS”, WITH NO
+OTHER WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PURPOSE.
+
+1.F.5. Some states do not allow disclaimers of certain implied
+warranties or the exclusion or limitation of certain types of
+damages. If any disclaimer or limitation set forth in this agreement
+violates the law of the state applicable to this agreement, the
+agreement shall be interpreted to make the maximum disclaimer or
+limitation permitted by the applicable state law. The invalidity or
+unenforceability of any provision of this agreement shall not void the
+remaining provisions.
+
+1.F.6. INDEMNITY - You agree to indemnify and hold the Foundation, the
+trademark owner, any agent or employee of the Foundation, anyone
+providing copies of Project Gutenberg™ electronic works in
+accordance with this agreement, and any volunteers associated with the
+production, promotion and distribution of Project Gutenberg™
+electronic works, harmless from all liability, costs and expenses,
+including legal fees, that arise directly or indirectly from any of
+the following which you do or cause to occur: (a) distribution of this
+or any Project Gutenberg™ work, (b) alteration, modification, or
+additions or deletions to any Project Gutenberg™ work, and (c) any
+Defect you cause.
+
+Section 2. Information about the Mission of Project Gutenberg™
+
+Project Gutenberg™ is synonymous with the free distribution of
+electronic works in formats readable by the widest variety of
+computers including obsolete, old, middle-aged and new computers. It
+exists because of the efforts of hundreds of volunteers and donations
+from people in all walks of life.
+
+Volunteers and financial support to provide volunteers with the
+assistance they need are critical to reaching Project Gutenberg™'s
+goals and ensuring that the Project Gutenberg™ collection will
+remain freely available for generations to come. In 2001, the Project
+Gutenberg Literary Archive Foundation was created to provide a secure
+and permanent future for Project Gutenberg™ and future
+generations. To learn more about the Project Gutenberg Literary
+Archive Foundation and how your efforts and donations can help, see
+Sections 3 and 4 and the Foundation information page at
+www.gutenberg.org
+
+Section 3. Information about the Project Gutenberg Literary
+Archive Foundation
+
+The Project Gutenberg Literary Archive Foundation is a non-profit
+501(c)(3) educational corporation organized under the laws of the
+state of Mississippi and granted tax exempt status by the Internal
+Revenue Service. The Foundation's EIN or federal tax identification
+number is 64-6221541. Contributions to the Project Gutenberg Literary
+Archive Foundation are tax deductible to the full extent permitted by
+U.S. federal laws and your state's laws.
+
+The Foundation's business office is located at 809 North 1500 West,
+Salt Lake City, UT 84116, (801) 596-1887. Email contact links and up
+to date contact information can be found at the Foundation's website
+and official page at www.gutenberg.org/contact
+
+Section 4. Information about Donations to the Project Gutenberg
+Literary Archive Foundation
+
+Project Gutenberg™ depends upon and cannot survive without
+widespread public support and donations to carry out its mission of
+increasing the number of public domain and licensed works that can be
+freely distributed in machine-readable form accessible by the widest
+array of equipment including outdated equipment. Many small donations
+($1 to $5,000) are particularly important to maintaining tax exempt
+status with the IRS.
+
+The Foundation is committed to complying with the laws regulating
+charities and charitable donations in all 50 states of the United
+States. Compliance requirements are not uniform and it takes a
+considerable effort, much paperwork and many fees to meet and keep up
+with these requirements. We do not solicit donations in locations
+where we have not received written confirmation of compliance. To SEND
+DONATIONS or determine the status of compliance for any particular
+state visit www.gutenberg.org/donate
+
+While we cannot and do not solicit contributions from states where we
+have not met the solicitation requirements, we know of no prohibition
+against accepting unsolicited donations from donors in such states who
+approach us with offers to donate.
+
+International donations are gratefully accepted, but we cannot make
+any statements concerning tax treatment of donations received from
+outside the United States. U.S. laws alone swamp our small staff.
+
+Please check the Project Gutenberg web pages for current donation
+methods and addresses. Donations are accepted in a number of other
+ways including checks, online payments and credit card donations. To
+donate, please visit: www.gutenberg.org/donate
+
+Section 5. General Information About Project Gutenberg™ electronic works
+
+Professor Michael S. Hart was the originator of the Project
+Gutenberg™ concept of a library of electronic works that could be
+freely shared with anyone. For forty years, he produced and
+distributed Project Gutenberg™ eBooks with only a loose network of
+volunteer support.
+
+Project Gutenberg™ eBooks are often created from several printed
+editions, all of which are confirmed as not protected by copyright in
+the U.S. unless a copyright notice is included. Thus, we do not
+necessarily keep eBooks in compliance with any particular paper
+edition.
+
+Most people start at our website which has the main PG search
+facility: www.gutenberg.org
+
+This website includes information about Project Gutenberg™,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.

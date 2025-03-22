@@ -1,0 +1,2958 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 61981 ***
+
+Transcriber's Note.
+
+References in the book to its illustrations are by "Plate" with Roman
+numerals. The illustrations themselves are labelled "Plate" with Arabic
+numerals. A plate's number in Roman numerals is equal to a plate's
+number in Arabic numerals. In several instances the author has spelled
+words differently to the accepted way. That spelling is retained in
+this transcription. The illustration on the book's cover is referred to
+in the text as Plate 16.
+
+
+
+
+  PEEPS AT NATURE
+
+  EDITED BY
+  THE REV. CHARLES A. HALL
+
+
+
+
+  V. BRITISH BUTTERFLIES
+
+
+
+
+IN THE SAME SERIES
+
+
+  EACH CONTAINING 16 FULL-PAGE ILLUSTRATIONS
+  (EIGHT OF WHICH ARE IN COLOUR)
+  LARGE CROWN 8VO. PICTURE COVER
+
+  BIRD LIFE OF THE SEASONS
+  COMMON BRITISH BEETLES
+  BRITISH MOTHS
+  WILD FLOWERS AND THEIR WONDERFUL WAYS
+  BRITISH LAND MAMMALS
+  BRITISH FERNS, CLUB-MOSSES, &c.
+  NATURAL HISTORY OF THE GARDEN
+  ROMANCE OF THE ROCKS
+  THE NATURALIST AT THE SEA-SHORE
+  POND LIFE
+  REPTILES AND AMPHIBIANS
+
+
+  PUBLISHED BY
+  A. AND C. BLACK, LTD., 4, 5 AND 6, SOHO SQUARE, LONDON, W. 1
+
+
+AGENTS
+
+  AMERICA          THE MACMILLAN COMPANY
+                     64 & 66 FIFTH AVENUE, NEW YORK
+
+  AUSTRALASIA      OXFORD UNIVERSITY PRESS
+                     205 FLINDERS LANE, MELBOURNE
+
+  CANADA           THE MACMILLAN COMPANY OF CANADA, LTD.
+                     ST. MARTIN'S HOUSE, 70 BOND STREET, TORONTO
+
+  INDIA            MACMILLAN & COMPANY, LTD.
+                     MACMILLAN BUILDING, BOMBAY
+                     309 BOW BAZAAR STREET, CALCUTTA
+
+[Illustration:
+
+  PLATE 1.
+  1. Swallow Tail
+  2. Black-veined White
+  3. Large Garden White (Female)
+  4. Small Garden White (Male)
+  5. Green-veined White (Female)
+  6. Bath White (Male)
+  7. Orange Tip
+  8. Wood White (Male)
+  9. Pale Clouded Yellow]
+
+
+
+
+  BRITISH
+  BUTTERFLIES
+
+  BY
+
+  A. M. STEWART
+
+  CONTAINING 16 ILLUSTRATIONS, FIGURING
+  ALL THE SPECIES, VIZ.:
+
+  8 FULL-PAGE IN COLOUR
+  8 PAGES FROM PHOTOGRAPHS
+
+  A. & C. BLACK, LTD.
+
+  4, 5 & 6 SOHO SQUARE, LONDON, W. 1
+  1918
+
+
+
+
+_First published May, 1912_
+
+
+
+
+INTRODUCTORY EDITORIAL NOTE
+
+
+I take it that this little "Peep at Nature," needs no apology; the
+exquisite coloured plates, produced direct from natural butterflies
+by the three-colour process, are a sufficient justification of its
+appearance.
+
+The author is a practical entomologist of many years' standing. He
+writes from the fulness of a rich experience in the fields. He justly
+advocates the "Paisley" method of setting insects. I know it to be
+the more expeditious, and less calculated to damage specimens, than
+the ordinary process. His notes on the preservation of larvæ will be
+welcome in many quarters.
+
+The publishers desire me to express their indebtedness to Messrs.
+Watkins and Doncaster, 36, Strand, W.C., for kindly arranging and
+lending the specimens from which the coloured plates have been produced.
+
+  CHARLES A. HALL.
+
+
+
+
+CONTENTS
+
+
+  CHAPTER                                               PAGE
+
+       INTRODUCTORY EDITORIAL NOTE                       v
+
+       LIST OF ILLUSTRATIONS                            vii
+
+  I.   THE LIFE-HISTORY OF A BUTTERFLY                   1
+
+  II.  THE CAPTURE AND PRESERVATION OF BUTTERFLIES       13
+
+  III. THE BRITISH BUTTERFLIES DESCRIBED                 29
+
+       INDEX                                             88
+
+
+
+
+LIST OF ILLUSTRATIONS
+
+
+  PLATE
+
+  I. SWALLOW-TAIL--BLACK-VEINED WHITE--LARGE
+  GARDEN WHITE--SMALL GARDEN WHITE--GREEN-VEINED
+  WHITE--BATH WHITE--ORANGE-TIP--WOOD
+  WHITE--PALE CLOUDED YELLOW[*]                     _Frontispiece_
+
+                                                      FACING PAGE
+
+  II. METHOD OF SETTING WITH BRISTLE AND BRACES            9
+
+  III. "COP" OF 120'S COTTON ON STAND, AND SETTING-NEEDLE
+  FOR "PAISLEY" METHOD OF SETTING                          16
+
+  IV. CLOUDED YELLOW--BRIMSTONE--SILVER-WASHED
+  FRITILLARY, ETC.[*]                                      25
+
+  V. GLANVILLE FRITILLARY--HEATH FRITILLARY, ETC.[*]       32
+
+  VI. "PAISLEY" METHOD OF SETTING                          35
+
+  VII. APPARATUS FOR PRESERVING LARVÆ                      38
+
+  VIII. RED ADMIRAL--PAINTED LADY--MILK-WEED, ETC.[*]      41
+
+  IX. MARBLED WHITE--MOUNTAIN RINGLET--SCOTCH
+  ARGUS, ETC.[*]                                           48
+
+  X. DARK GREEN FRITILLARY--HIGH BROWN FRITILLARY,
+  ETC.                                                     51
+
+  XI. LARVA OF LARGE GARDEN WHITE--PUPA OF LARGE
+  GARDEN WHITE, ETC.                                       54
+
+  XII. SMALL HEATH--GREEN HAIRSTREAK--PURPLE HAIRSTREAK,
+  ETC.[*]                                                  57
+
+  XIII. ADONIS BLUE--CHALK-HILL BLUE--LITTLE BLUE,
+  ETC.[*]                                                  64
+
+  XIV. PUPA OF RED ADMIRAL--LARVA OF RED ADMIRAL,
+  ETC.                                                     73
+
+  XV. BROWN ARGUS--AZURE BLUE--SILVER-STUDDED BLUE,
+  ETC.                                                     80
+
+  XVI. LIFE-HISTORY OF SMALL TORTOISESHELL BUTTERFLY:
+  OVA--LARVÆ--PUPA--MALE INSECT (TO RIGHT)--FEMALE
+  (LEFT)--FOOD-PLANT (NETTLE)[*]                   _On the cover_
+
+[*] These eight illustrations are in colour; the others are in black
+and white.
+
+
+
+
+BRITISH BUTTERFLIES
+
+
+
+
+CHAPTER I
+
+THE LIFE-HISTORY OF A BUTTERFLY
+
+
+What is the difference between a butterfly and a moth, and how am I to
+distinguish between them? is a question very often put to the student
+of insect life--the entomologist.
+
+Butterflies and moths both belong to the Natural Order, _Lepidoptera_,
+or scale-winged insects. Butterflies may be distinguished as day
+flyers, and the moths fly by night. The main physical difference
+between them appears in the forms of the antennæ, or horns; in the
+butterflies these organs are club-shaped at the extreme ends. But the
+antennæ of the various species do not all follow a common pattern.
+In some the knob is abrupt and much smaller, after the manner of a
+drum-stick; in others, the thickening commences well down the shaft,
+and is gradually increased until it very much resembles an Indian club.
+The antennæ of the moths, on the other hand, show much diversity of
+form, and in a great many species they are totally different in the
+male and female. A very common and beautiful form is the feathered,
+or comblike, antenna; another is long and threadlike, and some show
+a combination of these two forms; others, again, seem to be striving
+after the butterfly type, and approach the club shape. It should
+be noted that not a few moths fly during the day, but it is rare,
+exceedingly rare, to find a butterfly abroad after sundown. With a
+little practice in observation, the novice soon learns to distinguish
+between the two.
+
+The stages of development of butterflies and moths are practically the
+same: first the egg; next the caterpillar, or larva; then the pupa, or
+chrysalis; and, lastly, the imago, or perfect insect.
+
+The eggs of the Lepidoptera are surpassingly beautiful. Are they like
+birds' eggs? Not at all! In the first place they are too minute for
+comparison with the larger product of the birds; both in colour and
+form they more nearly resemble small shells or pearls, as a great many
+of them are beautifully opalescent, especially when empty. A good
+hand-lens will reveal a great deal of their beauty, but the low power
+of an ordinary compound microscope will be necessary to enable you
+to see all the nice detail of pattern sculptured on their surfaces.
+Each species of butterfly, or moth, produces eggs of particular shape
+and ornamentation, so it is quite possible, in most cases, to say to
+which species an egg belongs. How long the egg may remain unhatched
+depends a good deal upon which butterfly's egg it is, the season of
+the year, and the temperature. Not many butterflies pass the winter in
+this country in the egg state, that season being usually passed either
+as a half-fed hibernating caterpillar, or as a chrysalis; and in a
+few cases it is only the female which passes the winter in some secure
+retreat, to emerge again in the spring, and then deposit her eggs on
+the fresh-growing verdure. But, generally speaking, eggs laid during
+the summer hatch out in from ten to sixteen days. And it is well to
+be on the lookout for the young larvæ even earlier, if you intend to
+rear some species in confinement. If you have secured eggs to rear
+from, watch them from day to day to see if they darken, as they often
+assume a dark leaden hue immediately before hatching. This is a useful
+warning, and serves as a hint to have plenty of fresh food ready for
+the young family about to arrive.
+
+The caterpillars are ravenous eaters; you will not notice this fact
+particularly at first, because they are then such tiny creatures,
+but in proportion to their size their eating capacity is enormous.
+They grow at an exceedingly rapid rate and to such an extent that
+they literally burst their skins! In a very short time--three or
+four days--the old skin bursts and out comes Mr. Caterpillar with a
+brand-new one. And this is the manner of their growth; several times
+(five or six) this skin-shedding process is repeated. And then the
+creature prepares for the last and final change before turning into a
+butterfly.
+
+There are one or two more points I would ask you to notice about our
+caterpillar ere we pass on to consider his next stage. The legs are
+generally sixteen in number. There are six true legs, one pair on each
+of the first three body-segments behind the head; four more pairs near
+the anal end, and the last segment carries another pair, known as the
+"anal claspers." The first six may be said to represent the same legs
+in the perfect insect. Note also the breathing holes, or spiracles,
+placed in a row along either side of the larva. The head _seems_ to
+carry very large eyes, but it does not really do so; the real eyes
+are very minute, and it requires a good strong pocket-lens to make
+them out. There are twelve of them all told, and they are not all of
+equal size. There are six on either side of the mouth, and the three
+larger ones on each side are not very difficult to find. The mouth is
+furnished with strong mandibles for biting and chewing food, and also
+contains the spinneret for the production of the silk used on various
+occasions. All these details should be carefully noted--the head, the
+eyes, the breathing spiracles, the mandibles, the fore-legs and claws,
+and the hind- or pro-legs. Mark the totally different types of feet
+which terminate these two sets of legs. You will need to use your lens
+for this observation, and to enable you to see the beautiful structure
+of the pro-leg foot, it will be necessary for you to examine it through
+a compound microscope. It is well for the young entomologist to know
+these more prominent features of a caterpillar's economy, if for no
+other reason than to be able to answer the questions that are sure to
+be put to him on these and many other points.
+
+But only a small percentage of the larvæ that are born into the world
+live to become butterflies; some seasons a larger number than usual
+may escape, and then we have a butterfly year, but the relentless
+ichneumon flies soon restore the balance. They, too, have their young
+to provide for, and a strange mode of existence they have. Once you get
+to know these ichneumons at sight, you will be astonished at the number
+of them. All the summer through you will find them hawking about the
+trees, bushes, nettles, and heather, and, indeed, wherever larvæ are to
+be found, there, too, you will find these flies. There are many species
+of them. Once a female has discovered a larva its doom is sealed. The
+ordinary larva has very few defensive weapons; he may wriggle and
+squirm and _look_ terrifying, but all the same the ichneumon sets
+about her task of placing one or two, and in many cases a dozen or
+two, of her eggs either upon or under his skin. These eggs soon hatch,
+and the little white maggots pass their existence inside the doomed
+creature, eating all the tissues away, at first avoiding the vital
+organs, which they leave until the last. When they have reached their
+allotted span, and are about to change to the pupa state themselves,
+they soon finish off their victim, and all that remains of what might
+have been a brilliant butterfly is a little shrivelled bit of skin and
+a host of little--or it may be a few big--black, brown, or grey flies.
+Sentiment apart, these parasitic flies are extremely useful. When you
+consider the large number of eggs laid by a single female butterfly or
+moth--from two to six hundred is a fair average--you will realize that
+if this enormous progeny were to survive and go on increasing without
+any check, the vegetation of the world would very soon prove quite
+inadequate to support the vast army of caterpillars, to say nothing of
+you and me.
+
+You may at some time find a dozen or two larvæ of some particular
+species of butterfly or moth, and at the time of collecting them they
+may seem healthy and all right, but weeks afterwards you may discover
+that only a very small number will change to chrysalids, the ichneumons
+having had the rest. If you can catch and induce a female butterfly to
+give you a batch of eggs in captivity, then you may be sure, providing
+your treatment of them has been right, that all your brood will arrive
+at the perfect state.
+
+The next stage we have to consider we will pass over briefly. The
+change from the larva to the chrysalis is always a very fascinating
+performance to watch, not that one could sit and see the whole
+performance right through from start to finish, the time occupied is
+too long for that. Generally the process lasts a day or two, but by
+watching at frequent intervals, where several individuals are engaged
+at the same operation and each at its own stage of the work, it is
+not difficult to follow the whole process of the transformation. Try
+it with the larva of the Large Garden White butterfly, perhaps the
+commonest, and therefore the easiest to procure; you will gather plenty
+of "stung" or "ichneumoned" examples, but still a sufficient number
+should be clean to serve your purpose.
+
+We will not enter into all the details of the "spinning-up" process
+and describe how an attachment is secured at the anal extremity, and
+how our little friend "loops the loop." Some species, such as the
+Tortoiseshell, get over this part of their difficulty by omitting the
+loop altogether, and therefore hang head downward, suspended only by
+the hooks and silk at the tail. Concealment during this stage is the
+creature's only hope and chance of survival; other defence they have
+none. Their colour may occasionally protect them by virtue of making
+them harmonize beautifully with their surroundings. The ichneumons
+seldom molest them during the chrysalis stage; but birds and small
+animals have sharp eyes when foraging for food, so it is usually far
+more difficult to discover these chrysalids than to find the feeding
+caterpillars.
+
+The time passed as a chrysalis is very variable; ten days to a
+fortnight in summer is sufficient for many species; others pass
+over the whole winter, like the spring brood of our common white
+butterflies, so that these can be sought for during the winter months
+under the overhanging portion of palings, walls, outhouses, and in
+similar situations. The cold does not seem to injure them; it may, and
+generally does, retard their emergence, and possibly has some effect on
+the colours of the wings, but it cannot change their ultimate pattern.
+Experiments have been tried with various chrysalids, part of a brood
+being hatched out after being submitted to a very low temperature,
+and another part of the same brood after being treated with a high
+temperature. Speaking generally, the coloration of those subjected to
+the cold treatment was brightened and intensified, and Nature does the
+same thing in her own way. The early summer butterflies, which pass
+through the winter as chrysalids, are almost invariably larger and
+brighter than the midsummer or autumn brood of the same species.
+
+But suppose our caterpillar to have successfully run the
+gauntlet--ichneumon, bird, beast, and beetle--and to have become
+a healthy pupa, and that the time has arrived when he must make
+the last and greatest transformation in his short and interesting
+career. Several days prior to his exit as a butterfly taking place, a
+noticeable change occurs in the apparent colour of the chrysalis.
+
+As a matter of fact it is not the chrysalis shell which is changing
+colour, but the developing insect, the colours of which are beginning
+to show through it, at first rather faintly; but latterly the pattern
+of the wings can be distinctly seen, and the whole body surface gets
+darker. When this stage is reached, the advent of our butterfly is not
+long delayed. The hour chosen is usually early in the morning, so that
+by the time the sun is high and the fresh perfumed flowers are nodding
+in the breeze, our little butterfly has expanded and dried his wings,
+and is now quite prepared for the beautiful and consummating act in the
+wonderful drama of his existence.
+
+[Illustration: PLATE 2
+
+Method of Setting with Bristle and Braces]
+
+While he is drying his wings and preparing for a life amongst sunshine
+and flowers, we might spend a few minutes with him ere he leaves us,
+and the more so, as now he looks his very best, arrayed in all his
+new-found finery. Such wings! no wonder he looks proud as he slowly
+opens and closes them, repeating this action over and over again as if
+to prove their smooth working before he launches forth upon the air.
+
+And the wonderful pattern of these wings is all built up of tiny scales
+placed as regularly as the slates on a roof. Your pocket-lens will
+show you much of this, but to examine the individual scales, their
+various shapes and structure, you will require a compound microscope.
+These scales are the "dust" you will find on your finger and thumb if
+ever you pick up a butterfly in such an unscientific manner. You will
+notice, too, that the under sides of the wings bear quite a different
+design from the upper sides; this is nearly always the case, and in
+many foreign butterflies this difference between the two sides is so
+very remarkable as to be quite startling in its effect. Well I remember
+an old sergeant-major, who had spent many years in India, and had done
+a lot of "butterfly dodging" in his day, telling me of this wonderful
+effect. He said one would come upon an open piece of meadow-land
+blazing with flowers and butterflies, but, on being disturbed, the
+whole crowd of insects would rise in the air, and then, he would say,
+they looked like a different set altogether. When you capture a few
+specimens of any species, examine closely the under sides, and in any
+case, if you wish to preserve them, always set one of each sex with the
+under side uppermost.
+
+Next to the wings the head claims our attention; it supports three
+very essential organs--the eyes, the horns, or antennæ, and the tongue,
+or sucker.
+
+The antennæ are undoubtedly the organs of smell, which is perhaps the
+most highly developed sense in the Insect World. That the eyes are
+a marvel of beauty, and that the tongue is a finely finished little
+instrument for its work no one can question; but the sense of smell
+has a much longer range than even the eye, with all its facets. And
+you will generally find, in relation to the faculty which any animal
+or insect has to exert most so as to procure its food and propagate
+its kind, the organ of that faculty reaches the highest point of
+development and service.
+
+The eyes of the condor and the gannet must be marvellous in range and
+penetrating power. I have watched scores of the latter birds sailing
+and hovering 150 feet and more above a troubled sea. Suddenly there
+would be a slight pause, and then a rocket-like dive right down into
+the waves below. To see a fish on the surface from such a height would
+be a great feat, but to see and catch one a dozen feet deep in a broken
+sea as a gannet can do, is wonderful indeed.
+
+With butterfly and moth the sense of smell is of the greatest
+importance. Their vision is good, but short in range; so to find the
+flowers wherein lies their food the sight is good, but the power to
+detect them by scent must be far better. "Over the hedge is a garden
+fair," and if a butterfly cannot see through the hedge, he can at least
+smell through it. He could fly over it? Yes, but if his sense of smell
+says there is nothing there for him, you see he is saved the time and
+trouble; and his life is short.
+
+"Assembling" and "treacling" for moths are two methods employed by
+insect-hunters to secure an abundance of specimens otherwise difficult
+to obtain, and in both cases it is this same wonderful sense of smell
+which is the insect's undoing.
+
+For "assembling," a captive virgin female is taken at dusk to the
+locality where the species is likely to occur, and if males are
+about they very soon make their appearance. The female being in a
+gauze-covered box, they will swarm over it in their efforts to find
+an entrance, and when thus engaged can be easily captured. As for the
+subtle odour emitted by the lady, you or I could never detect it,
+yet these moths come swarming from far and near. I once witnessed a
+curious phase of this instinct on a hillside in Arran. My attention was
+arrested by a number of males of _Bombyx Quercus_ (variety, _Callunæ_),
+keeping near and flying over a certain spot, and, thinking a female
+might be about, I went over to investigate. It was a female, but a dead
+and crushed one; how it had met its end I could only conjecture; but
+evidently, although the insect was mutilated, the scent still lingered,
+and brought the males circling round. This large moth flies boldly
+during the day, and in Arran the larvæ feed on the heather.
+
+The eyes of a butterfly are large and of the usual insect
+pattern--_i.e._, compound, being made up of a number of tiny lenses,
+hexagonal in shape, like the honeycomb of the domestic bee. Roughly,
+about three thousand of these lenses go to make up the two eyes. As
+pointed out, their range of vision is comparatively short, but within
+their range vision must be very keen--before, behind, above, and below.
+I once saw a sparrow try to capture a Large Garden White in a street
+in the town; he darted at it again and again, much in the manner of
+the ordinary spotted flycatcher, but the butterfly seemed to have no
+difficulty in evading him, and eventually he gave up the game.
+
+A small portion of the eye makes a good slide for the microscope,
+but the individual lenses are hardly visible through an ordinary
+hand-glass. On the top of the head are one or two small simple eyes,
+which do not look as if they could be of much service, but one never
+knows, and the butterflies will not tell, although they have long
+tongues.
+
+The tongue is a very pretty structure; when not in use it lies coiled
+up in spiral fashion like a watch-spring, and is then well protected by
+two little side-covers called the "palpi." Needless to say, the tongue
+cannot sting. No moth or butterfly has a stinging organ; the tongue
+is too delicate for any "cut and thrust" work. It is not difficult to
+mount a butterfly's tongue for the microscope, and its examination
+well repays the trouble. Particularly noticeable under the microscope
+are the little bell-shaped suckers placed in long rows near the tip.
+If you wish to make and examine a cross section, take the head of
+a freshly killed specimen and extend the tongue in a little melted
+paraffin wax; when this is thoroughly set, cut it across in very thin
+slices with a sharp razor; place one on a glass slide, then on to the
+microscope stage, and there you are! You will soon discover that the
+simple-looking tube is a very complicated affair, and quite a little
+study in itself.
+
+We will not linger over what remains of the anatomy of our butterfly.
+The legs are six in number, but occasionally the first pair are useless
+for walking, and only the middle and last pairs are fully developed.
+Always remember the maximum number of legs for all insects is six.
+Caterpillars may have more or less; they occur as footless grubs with
+no legs at all, while some have as many as sixteen legs.
+
+The last, or abdominal, section of a butterfly's body carries the
+sexual organs; it is usually more slender in the males than in the
+females.
+
+
+
+
+CHAPTER II
+
+THE CAPTURE AND PRESERVATION OF BUTTERFLIES
+
+
+In the rearing of butterflies from eggs and in watching them all
+through their larval stages, we learn a great deal concerning their
+life and habits, and finally secure perfect specimens for the cabinet.
+But the glories of the chase and the charm of the country ramble weigh
+more in the balance with the naturalist, and the story of a captured
+specimen is often far more interesting than the record of a bred one.
+
+Of butterfly nets used in the chase there are many and varied patterns
+in the market. I made my own and a better balanced one it would be hard
+to find. Having seen and handled a few in my time, my experience has
+been that they are mostly too heavy, have too many loose parts, and
+their weight is badly distributed. Indeed, I saw one lately which felt
+more like a hammer in one's hand. I think if you try to get one made
+after the pattern here described and figured on p. 15, you will not be
+disappointed with it.
+
+Now, it is one of the avowed purposes of this little book to make the
+study and collecting of butterflies cost _all_ the time a boy can
+spare, and little, or, at least, not much in money. The requirements
+for a ring folding net are 2 yards of steel wire, rather less than 1/8
+inch in thickness (cost about threepence); three copper rivets and
+washers, 3/16 inch by 3/8 inch long (cost one penny); one 1/4-inch iron
+screw-head bolt and nut (one penny). Cut the wire into two pieces,
+each 20 inches long, and two pieces 16 inches long. If you can get a
+tinsmith friend to turn the eyes for you, so much the better; you will
+thus avoid the most difficult part of the operation, but you would lose
+some valuable lessons and the satisfaction of having made the whole
+thing yourself.
+
+The accompanying cut will show you how the eyes are turned and riveted,
+and how the nut is fixed in the tube which the tinsmith will make
+for you, and he will also solder the nut in the narrow end for a few
+coppers. Or you can get him to make the whole concern, as I have done
+for a friend of mine. I simply gave the tinsmith mine for a pattern,
+and in a few days he handed me over an exact duplicate, and only
+charged one shilling and sixpence for it.
+
+[Illustration: DETAILS OF FOLDING-NET.
+
+ 1, Ring open, about 16 inches diameter; 2, tin tube with nut soldered
+ in at narrow end; 3, net complete, showing wooden handle fitting
+ into tin tube. Detail A shows how eyes are turned; B, larger eye for
+ passing over screw; C, screw soldered in position.]
+
+The net itself is easily made. You will need 1-1/2 yards of the best
+and strongest muslin and a piece of stout twilled cotton, with which to
+make the hollow binding round the wire for strength. This binding must
+be at least 2 inches deep, so as to slip off and on the ring easily
+when you wish to repair the ring or wash the net. Get green muslin if
+you care for it; I tried green, too, but speedily gave it up, as I
+found the white net more effective for seeing and handling moths in
+after dark.
+
+Do not shape the net down to too fine a point; rather make it more of a
+cup-shape and nearly the depth of your arm. And, lastly, while we are
+on the subject of the net, always carry a few strips of gum paper with
+you on an excursion; they are very handy and effective for repairing a
+damage, say, after contact with a bramble-bush.
+
+Most butterflies are very impatient in the net, and strongly resent
+their imprisonment, so either double your net over the instant a
+capture is made, or catch the net by the neck, so to speak, with your
+left hand, leaving your right free for the pinching process. Pinching
+must be very carefully done, or your specimen may be spoiled. It can
+be done only when the wings are closed; you give the insect a sharp
+nip between your finger and thumb nails, right under the junction
+of the wings and the body--_i.e._, on the under side of the thorax,
+always taking care not to crush or mangle the specimen. Do not attempt
+to actually kill it; just give a sufficient pinch to stun it; then
+you may open the net, remove your specimen, and pin it in your
+collecting box, which should be as nearly air-tight as you can make it,
+and lined with sheet cork. Place some freshly pounded laurel-leaves
+secured in a piece of muslin at one end of your box. The fumes given
+off by the bruised leaves soon kill the insects. Don't use ammonia for
+killing butterflies; it alters their colours, and, in fact, ruins some
+altogether. Cyanide of potassium or laurel-leaves are the best killing
+agents, and the latter are by far the safest for boys to handle, as
+cyanide is very poisonous.
+
+[Illustration: PLATE 3
+
+"Cop" of "120's" Cotton on Stand, and Setting-Needle for "Paisley"
+Method of Setting]
+
+Specially-made entomological pins can be purchased from all dealers
+in naturalists' requisites. Black enamelled pins are the vogue just
+now, and they last longer than the silvered or gilt ones, and resist
+"grease" better. Many insects, you should know, have a small, and
+some a large, amount of oil in their bodies, which gradually makes
+its presence seen, first in the abdomen, and later it spreads (if not
+checked) to the wings. The oil, coming in contact with the white or
+yellow pin, soon corrodes it through; the black enamel resists its
+action longest. Try to check this "greasing" of your specimens on
+its first appearance on the body, and if you notice it before it has
+spread to the wings all may be well. Break the abdomen off at once, and
+drop it into benzine, where you can let it remain a day or two. Then
+transfer it to a box of fine dry plaster of Paris for another day or
+so, and you will be surprised how beautiful and clean it will come out.
+Another hint: Push a little pin into each body when broken off, and
+attach a _white_ thread to the pin; now you can do what you like with
+the body without touching it with your fingers; lastly, replace each
+body, sticking it in position with a dab of entomological gum, to be
+had from Messrs. Watkins and Doncaster, 36, Strand, W.C.
+
+Supposing you have arrived home with a few butterflies, and wish to set
+them. This is best done as soon as possible after they are killed. They
+may remain unset a few days if kept damp and yet properly aired; you
+must prevent them from hardening on the one hand, and getting mouldy on
+the other, through too long and close keeping; so have a watchful eye
+on them until set.
+
+Setting-boards can be either bought or made. This is a question for
+each worker to determine for himself. Some collectors may have special
+facilities for making them, while others may have a profusion of pocket
+money wherewith to buy them. When I was a boy I made my own. It was a
+work of necessity. As a lad I had always so many specimens to set in
+summer-time that it would have been sheer ruination to have bought all
+the boards required.
+
+On Plate II. you have an illustration of a setting-board, and the
+photograph is in itself an indication of how butterflies are to
+be set before being placed in the permanent collection. Note the
+setting-bristle mounted in a cube of cork. This is used to hold the
+wing in position while the card braces are being placed. The collector
+can easily mount a bristle for himself. A cat, badger, or other whisker
+will serve; do not try to push it through the cube of cork, but glue
+it between two pieces; by doing so you will save your bristle from
+being spoiled and make a firmer job.
+
+Keep your old _thin_ postcards, from which to cut braces, and always
+have a boxful of various sizes handy, and in the same box, in a
+separate compartment, have an abundance of small, thin pins. Good
+setting, like other operations, is largely a matter of practice. Be
+careful not to injure the wings in any way, and place your braces on
+them so that they will not leave marks. I find a common fault with
+beginners is that they do not lower the specimen far enough down into
+the groove of the setting-board, with the result that the wings are
+bent and deformed by the braces pressing them down. See that the wings
+of your specimens lie flat and naturally spread out over the surface of
+the board on either side of the groove.
+
+A setting-needle is sometimes an exceedingly useful tool. A very
+neat one can be made in a few minutes with a goose quill, a little
+sealing-wax, and the finest sewing-needle you can secure. Melt the wax
+and fill one end of the quill for half an inch or so, heat the eye end
+of the needle until nearly red-hot, and push it into the wax. This tool
+is very useful for adjusting a wing as occasion demands.
+
+Let your insects remain as long as possible on the boards; they should
+be left on for a fortnight in warm, dry weather, but longer in the
+spring and autumn. The wings of imperfectly dried specimens are liable
+to spring up, or droop.
+
+There is another method of setting Lepidoptera which only requires
+to be more widely known to quickly supersede the use of braces and
+bristle. It is sometimes called the "Northern" method, but I prefer
+to call it the "Paisley," because it was first used in that town. Its
+advantages are: Greater speed, less apparatus, less expense, and less
+liability to damage the specimens. Instead of the usual setting-board,
+a block is used--that is to say, your setting-boards are cut up into
+short pieces, in length a little less than the width of the board.
+Thus, a board 2-1/2 inches wide should be cut into pieces 1-3/4 inches
+long. As no corked surface is needed these blocks can be made or bought
+very cheaply; the usual cost, from a joiner, is about two shillings
+per hundred. The only other requisite is a cop of very fine cotton
+"120^8" or even finer if you can get it. This you will be able to
+obtain from a cotton-spinner or his agent; by-and-by, as this method
+of setting becomes more widely known the dealers will probably stock a
+few of these fine cotton-yarn cops.[#] Plate III. will show you how to
+construct a stand for the cop. The rest is easy. Pin your insect in the
+same way as you would do for braces; place it on the block with wings
+well down on its surface, holding the block in your left hand. Give
+your cotton a turn round the extreme edge of the block, then bring it
+directly above your insect. Now blow the wing on the left side as far
+forward as you wish it to go, and, while it is held extended by your
+blowing, bring the cotton down gently across it and there you have it,
+secured in position. Give two or three extra turns to hold it safe and
+repeat the operation for the other wing. If the wings should be stiff
+and refuse to go far enough forward, secure them as far forward as they
+will blow, with one turn of the cotton only, then gently assist them
+farther with a setting-needle. When in a satisfactory position, give
+the few extra turns of the cotton. I can set from sixty to one hundred
+and twenty insects in an hour by this method.
+
+[#] Readers desirous of adopting this most excellent method of setting,
+and yet experiencing difficulty in getting suitable cotton-yarn,
+should communicate with the author, Mr. A. M. Stewart, 38, Ferguslie,
+Paisley.--EDITOR.
+
+In removing an insect from a block, draw a sharp knife across the back
+of the block and lift off _all_ the cotton at once. If the body of the
+specimen being set needs support, as sometimes happens, give the cotton
+two or three cross turns, and with your setting-needle raise the body
+on to this as shown on Plate VI. One hint more: See that your lines
+diverge from near the body at the bottom to near the tip of the wings
+at the top; the reason for this is that if you have to slip the wing
+forward under a turn of the thread it will not be damaged if the thread
+is arranged as indicated, whereas if your thread be laid on, say, from
+the outer bottom corner in towards the head, it would then scrape the
+wing, and be sure to remove some of the scales, thus damaging the
+specimen. The correct method is shown on Plate VI. With ordinary care
+and usage a good cop should last a year or two.
+
+After your insects are set, by whatever method, they need to be put
+aside in a dry, airy place to harden, and be secured against the
+ravages of mice and spiders. For their better protection, it is usual
+to place them in a "drying case," which need not be an elaborate
+affair. My drying case was constructed out of an empty box obtained
+from the grocer; judging from the legend on the outside it had once
+contained tins of preserved apples. This is set up on end with the
+bottom removed and made into cross shelves. Light muslin cloth is
+tacked on in place of the bottom, so as to admit air but exclude dust.
+On the front, where the lid was originally nailed, is a hinged frame,
+covered with the same material, acting as a door. This drying house is
+not exactly pretty, but it has served its purpose admirably for many
+years.
+
+A representative of the larva of each species is now considered
+essential to a complete collection of butterflies, and it is rendered
+even more perfect if egg-shells and chrysalis cases can also be
+included.
+
+We now have a fairly easy and reliable process for preserving larvæ, a
+process which any aspiring young collector can carry through without
+much trouble or expense. It is really very simple and costs little.
+True, one can purchase apparatus specially made for the work for ten,
+or even five, shillings, but equally good results can be obtained with
+the expenditure of a few pence and a little ingenuity. I strongly
+advise young folk to make their own apparatus; by so doing they develop
+resourcefulness, and a handy youngster is not likely to make a failure
+of his life.
+
+In the first place you will need a hot-air chamber. Any empty
+toffee-tin will serve this purpose; one somewhere about 6 inches long
+by 4 inches in diameter will be a handy size. Get a piece of copper
+or soft iron wire, such as milliners use; give the wire two or three
+turns round the tin, twisting it as tightly as you can: then give the
+two free ends a turn or two round a gas-bracket near the burner, so as
+to bring your tin, with the open end next you, just over the burner.
+Or you may mount the tin over a spirit-lamp, in which event you will
+not be troubled with soot gathering on the outside of your oven. You
+now have an oven which you can make as hot as you want it by regulating
+your flame; you will soon discover the right temperature in which to
+dry a skin quickly without burning it. The skins of small, thin-skinned
+caterpillars dry very quickly, whilst those of large moths, such as the
+Oak Eggar, dry more slowly even with more heat.
+
+Your next requirement is a glass blowpipe: this you can purchase at
+the chemist's for a copper. Ask for a glass tube about a foot long and
+a quarter of an inch in diameter. Now, this tubing is made of a very
+soft and pliable kind of glass, and by heating it over a flame you
+should have no difficulty in drawing out one end of the tube into a
+fine point, not too long and not too abrupt; the illustration (Plate
+VII.) will show you the right length of the point. Hold the end over
+the gas-jet, keep turning it round, and in a minute it will become red
+and soft; remove the end of the tube from the flame, grasp it with a
+pair of forceps, and gently and steadily pull the heated portion until
+it is drawn to a point of the required length. Nip off the part you
+caught with the forceps, and your tube is ready. Or another way is to
+heat the tube in the middle, and pull the two ends apart; this will
+give you two blowpipes, and you can make a fine point to one for small
+caterpillars and a wider aperture to the other for large ones. I used
+to know a friendly chemist who would "point" as many tubes as I wanted
+at his Bunsen burner in a few minutes. To complete your blowpipe, you
+will need about 2 inches of a watch-spring--any watch-repairer will
+give you a broken spring. The photograph on Plate VII. shows how the
+piece of spring is placed and used; it is bent to the required shape
+while heated, and bound in position with fine copper wire. The wire I
+use is the same as that required for mounting dried larva skins; it can
+be obtained at any shop where electrical appliances are sold; it is an
+extremely fine wire covered with green silk thread.
+
+Your larva-preserving outfit is completed with a sheet of
+blotting-paper and an ordinary lead pencil. I will now describe the
+process.
+
+[Illustration:
+
+  PLATE 4.
+  1. Clouded Yellow (Male)
+  2. Brimstone (Male)
+  3. Silver-washed Fritillary (Male)
+  4. Dark-green Fritillary (Male)
+  5. High Brown Fritillary
+  6. Queen of Spain Fritillary
+  7. Small Pearl-bordered Fritillary
+  8. Pearl-bordered Fritillary
+  9. Greasy Fritillary]
+
+There could be no better species to begin with than the caterpillar
+of the Large Garden White butterfly; get one as nearly full-grown as
+possible, lay it out on the blotting-pad before you, place the lead
+pencil across it gently, but firmly, just behind the head, and roll it
+towards the tail. This kills the larva instantly, and empties out its
+internal organs by the anal orifice. Roll your pencil over it again
+to make sure the skin is thoroughly clean inside; then insert your
+blowpipe into the anal orifice, letting the spring down on the last
+segment so as to hold the skin on; apply your mouth to the other end
+of the blowpipe, blow the skin out gently, and insert in the hot-air
+oven. Keep blowing gently for a few seconds; watch progress; touch the
+skin with your finger to see if it is getting hard and dry. Don't blow
+too hard and make it look like a bursting sausage; try to keep it as
+natural in appearance as possible. In a few minutes it will be quite
+hard and dry; when dry, raise the spring, and a slight touch with the
+thumb-nail will liberate it from the blowpipe. The skin is now ready
+for mounting on silk-covered wire or a thin dry twig with a little
+entomological gum or seccotine. Our specimen is now ready to take its
+place in the collection.
+
+We now have to face the problem of storing the collection. It is
+probably beyond the means of a young collector to purchase a cabinet
+with drawers, costing ten shillings per drawer, and he will be well
+advised to keep his specimens in store-boxes which he may be able
+to make for himself. I made some very serviceable ones with scented
+soap-boxes got from our grocer. Any size will do, but it is best to
+have your boxes all of one size if possible, say 10 inches by 14 inches
+by 4 inches. Get a few light deal boxes about these dimensions, nail
+on the lids, paper them all over the outside with good stout brown
+packing-paper having a glossy surface; paste it on with thin glue; set
+aside a day or two to dry. When dry, take a sharp saw and cut the
+boxes round the sides and ends, so that each box is divided into two
+equal traylike halves. Glue a stout cardboard shell round the inside
+of one half, and attach the other half by two small brass hinges. The
+cardboard shell rises above the sides of the tray, and when the other
+half of the box is folded over it "stays put," as the Yankee says;
+and, in addition, you have a fairly air-tight construction. These
+store-boxes fold after the manner of a book-form chess or draught
+board. Each half requires to be lined on the inside with sheet cork,
+which you can get from dealers in entomologists' sundries, and finally
+covered with thin white paper. Such a store-box costs less than one and
+sixpence. Keep two or three boxes for duplicate specimens, and as many
+for your permanent collection. By-and-by you will want glass-topped
+cases, but by the time you have arrived at that stage you should have
+gained sufficient experience to enable you to know where to buy them.
+
+See that every specimen before being transferred to your permanent
+collection bears with it a small label setting forth the date and place
+of capture, thus:
+
+  EPPING,
+  9/6/11.
+  _J. Roberts._
+
+  ABBEY WOOD, HERTS,
+  7/9/11.
+  _Robertson._
+
+Keep these tickets as inconspicuous as possible and with the writing or
+printing in such a position as to be easily read without requiring to
+remove the insect.
+
+The following list of British butterflies is thoroughly modern, and
+in labelling your specimens you should adopt its nomenclature, and
+also follow the order given in arranging your collection. Both Latin
+and English names are included, but if you wish to be a thorough
+entomologist you should accustom yourself to use the scientific names.
+The Latin name is the same everywhere "from China to Peru." If you use
+an English name of a butterfly in writing to a foreign collector he
+will probably fail to recognize the species referred to, but if you
+give the scientific name he will know it at once.
+
+
+LIST OF BRITISH BUTTERFLIES
+
+ARRANGED IN THEIR FAMILIES AND GENERA, WITH THEIR SCIENTIFIC AND
+POPULAR NAMES.
+
+  Family: PAPILIONIDÆ.
+
+    _Papilio machaon._
+      SWALLOW-TAIL.
+
+  Family: PIERIDÆ.
+
+    _Aporia cratægi._
+      BLACK-VEINED WHITE.
+
+    _Pieris brassicæ._
+      LARGE WHITE.
+
+    _Pieris rapæ._
+      SMALL WHITE.
+
+    _Pieris napi._
+      GREEN-VEINED WHITE.
+
+    _Pieris daplidice._
+      BATH WHITE.
+
+    _Euchloë cardamines._
+      ORANGE-TIP.
+
+    _Leucophasia sinapis._
+      WOOD WHITE.
+
+    _Colias hyale._
+      PALE CLOUDED YELLOW.
+
+    _Colias edusa._
+      CLOUDED YELLOW.
+
+    _Gonepteryx rhamni._
+      BRIMSTONE.
+
+  Family: NYMPHALIDÆ.
+
+    _Argynnis selene._
+      SMALL PEARL-BORDERED FRITILLARY.
+
+    _Argynnis euphrosyne._
+      PEARL-BORDERED FRITILLARY.
+
+    _Argynnis lathonia._
+      QUEEN OF SPAIN FRITILLARY.
+
+    _Argynnis aglaia._
+      DARK GREEN FRITILLARY.
+
+    _Argynnis adippe._
+      HIGH BROWN FRITILLARY.
+
+    _Argynnis paphia._
+      SILVER-WASHED FRITILLARY.
+
+    _Melitæa aurinia._
+      GREASY FRITILLARY.
+
+    _Melitæa cinxia._
+      GLANVILLE FRITILLARY.
+
+    _Melitæa athalia._
+      HEATH FRITILLARY.
+
+    _Vanessa c-album._
+      COMMA.
+
+    _Vanessa polychloros._
+      LARGE TORTOISESHELL.
+
+    _Vanessa urticæ._
+      SMALL TORTOISESHELL.
+
+    _Vanessa io._
+      PEACOCK.
+
+    _Vanessa antiopa._
+      CAMBERWELL BEAUTY.
+
+    _Vanessa atalanta._
+      RED ADMIRAL.
+
+    _Vanessa cardui._
+      PAINTED LADY.
+
+    _Limenitis sibylla._
+      WHITE ADMIRAL.
+
+  Family: APATURIDÆ.
+
+    _Apatura iris._
+      PURPLE EMPEROR.
+
+  Family: SATYRIDÆ.
+
+    _Melanargia galathea._
+      MARBLED WHITE.
+
+    _Erebia epiphron._
+      MOUNTAIN RINGLET.
+
+    _Erebia æthiops._
+      NORTHERN BROWN, OR SCOTCH ARGUS.
+
+    _Pararge ægeria._
+      SPECKLED WOOD.
+
+    _Pararge megæra._
+      WALL BROWN.
+
+    _Satyrus semele._
+      GRAYLING.
+
+    _Epinephele janira._
+      MEADOW BROWN.
+
+    _Epinephele tithonus._
+      SMALL MEADOW BROWN.
+
+    _Epinephele hyperanthus._
+      RINGLET.
+
+    _Cænonympha typhon._
+      MARSH RINGLET.
+
+    _Cænonympha pamphilus._
+      SMALL HEATH.
+
+  Family: LYCÆNIDÆ.
+
+    _Thecla betulæ_.
+      BROWN HAIRSTREAK.
+
+    _Thecla w-album._
+      WHITE-LETTER HAIRSTREAK.
+
+    _Thecla pruni._
+      BLACK HAIRSTREAK.
+
+    _Thecla quercus._
+      PURPLE HAIRSTREAK.
+
+    _Thecla rubi._
+      GREEN HAIRSTREAK.
+
+    _Polyommatus dispar._
+      LARGE COPPER.
+
+    _Polyommatus phlæas._
+      SMALL COPPER.
+
+    _Lycæna bætica._
+      LONG-TAILED BLUE.
+
+    _Lycæna ægon._
+      SILVER-STUDDED BLUE.
+
+    _Lycæna astrarche._
+      BROWN ARGUS.
+
+    _Lycæna icarus._
+      COMMON BLUE.
+
+    _Lycæna bellargus._
+      CLIFDEN BLUE.
+
+    _Lycæna corydon._
+      CHALK-HILL BLUE.
+
+    _Lycæna argiolus._
+      AZURE BLUE.
+
+    _Lycæna semiargus._
+      MAZARINE BLUE.
+
+    _Lycæna minima._
+      LITTLE BLUE.
+
+    _Lycæna arion._
+      LARGE BLUE.
+
+  Family: ERYCINIDÆ.
+
+    _Nemeobius lucina._
+      DUKE OF BURGUNDY.
+
+  Family: HESPERIDÆ.
+
+    _Syrichthus malvæ._
+      GRIZZLED SKIPPER.
+
+    _Nisoniades tages._
+      DINGY SKIPPER.
+
+    _Hesperia thaumas._
+      SMALL SKIPPER.
+
+    _Hesperia lineola._
+      ESSEX SKIPPER.
+
+    _Hesperia actæon._
+      LULWORTH SKIPPER.
+
+    _Hesperia sylvanus._
+      LARGE SKIPPER.
+
+    _Hesperia comma._
+      SILVER-SPOTTED SKIPPER.
+
+    _Carterocephalus palæmon._
+      CHECKERED SKIPPER.
+
+The remaining pages of this volume will be devoted to a description
+of the species mentioned in the foregoing list, together with notes
+on habits and other points. Assisted by the splendid coloured plates,
+which are produced from actual specimens, and the notes in the
+following pages, the young collector should have no difficulty in
+identifying the specimens he secures.
+
+
+
+
+CHAPTER III
+
+THE BRITISH BUTTERFLIES DESCRIBED
+
+
+THE SWALLOW-TAIL (_Papilio Machaon_), Plate I., Fig. 1.--I find, in
+Scotland, where I live, that the first question put by friends looking
+over one's insect treasures usually refers to this butterfly. "Is
+that a British butterfly?" they ask; and on being assured that it is,
+they tender the information that they never saw one like it in this
+neighbourhood; and it takes much explanation to make them understand
+how rare and local some butterflies and moths are.
+
+Alas! he is our one and only Swallow-Tail--the connecting link between
+our small island family and the great host of tropical and subtropical
+Swallow-Tails that flaunt their gorgeous colours under sunnier skies.
+And we hope he may long remain with us. The incentive to travel and
+capture this butterfly in his native haunts is not so great as it may
+have been half a century ago. For a few pence, or by exchange, the
+larva or chrysalis can be had from a dealer, and with ordinary care and
+attention it is not a difficult species to rear, and thus see alive.
+
+That this species is already getting scarcer should be a warning to
+all who are interested in the preservation of our native fauna. Its
+extermination might not be a very difficult task; and although it is
+common in many places on the Continent, its reintroduction into England
+would certainly be attended with great trouble and difficulty.
+
+Two years ago (1909) an experiment was made, under very favourable
+conditions, to "naturalize" a colony of this fine butterfly at Easton,
+near Dunmow, in Essex, the property of Lord Warwick. Lord Warwick and
+Professor Meldola laid down a large number of chrysalids which duly
+hatched, and, although the surrounding marsh land had been liberally
+stocked with the food-plant, yet no eggs or larvæ were found after the
+butterflies had passed their season, nor have any been seen since.
+
+Doubtless the butterfly has many natural enemies, and when we consider
+the draining, burning, and rush-cutting that go on in these fen lands,
+it will be apparent that the time cannot be far distant when an effort
+will need to be made, such as at Wicken, to provide "Cities of Refuge,"
+for many of our rare and persecuted little friends. I speak for birds,
+butterflies, flowers and ferns. An educated public taste would do more
+for them all than any amount of Acts of Parliament.
+
+The Swallow-Tail measures fully 3 inches across the expanded wings;
+the prevailing tint is a pale primrose yellow, with bars and masses of
+black, the latter powdered with yellow scales on the fore-wings, and
+with pale blue on the hind-wings. There are also two red eye spots on
+the inner angle of the hind-wings near the tails. The under side looks
+not unlike a washed-out version of the upper, with a little more red on
+the hind-wings.
+
+The caterpillar, too, is very beautiful, being green in colour, belted
+with black, and the black is studded with red spots. It thrives well on
+various members of the carrot family--carrot, parsley, fennel, celery;
+it has occasionally been found feeding on the common carrot leaves in
+rural gardens in neighbourhoods where the insect abounds.
+
+The chrysalis, in which form the insect passes through the winter,
+is hung up in quite the orthodox manner, belted round the back and
+attached at the tail. If you should find chrysalids in this position
+during the winter months and wish to remove them, cut away the whole
+support, and set them up again in your hatching cage, as you found
+them. Always avoid unnecessary handling of these delicate objects.
+
+There are certainly two, and probably three, broods during a favourable
+summer, so this butterfly may be captured from May to August. Its
+headquarters are in the Fen counties of Cambridge and Norfolk, and it
+is found in many similar localities in fewer numbers.
+
+BLACK-VEINED WHITE (_Aporia Cratægi_), Plate I., Fig. 2.--This
+is one of the rarest of our butterflies, though why it should be so is
+rather difficult to say. As it feeds upon hawthorn in the larval state
+the puzzle is all the greater, as a commoner or more widely distributed
+plant it would be hard to find. It may be also found on blackthorn,
+cherry, plum, apple, and pear. It is not difficult to distinguish this
+fine insect from all the other "Whites" on our list. The wings are
+rather thinly scaled; you can note this by holding the insect up to the
+light, and looking through the wing with an ordinary pocket-lens. Do
+the same with its near neighbour, the Large Garden White, and you will
+see a difference--the Black-Veined White is semi-transparent, while the
+other is quite dense.
+
+The almost black network of veins is another unmistakable feature, as
+is the entire absence of a fringe to the wings. Two and a half inches
+is the average expanse of the extended wings.
+
+[Illustration:
+
+  PLATE 5.
+  1. Glanville Fritillary
+  2. Heath Fritillary
+  3. Comma
+  4. Small Tortoiseshell
+  5. Large Tortoiseshell
+  6. Camberwell Beauty
+  7. Peacock]
+
+The caterpillar is rather hairy, dull-coloured underneath, black on the
+back, with two lines of broad red spots running from head to tail. When
+you find this caterpillar, you generally get a whole brood of them, as
+they are gregarious and live under a web until nearly fully fed.
+
+The chrysalis is of a bright straw colour, spotted and streaked with
+black, and is not so angular as the chrysalis of the Large Garden White.
+
+The butterfly is out in midsummer, and is rarely seen outside of the
+most southern counties, and even there it seems to prefer the coast.
+In Continental gardens it sometimes attacks the fruit-trees in such
+numbers as to constitute a plague.
+
+THE LARGE GARDEN WHITE BUTTERFLY (_Pieris brassicæ_) Plate I., Fig. 3,
+is well known to everybody. Town and country seem to be the same to
+him; indeed, I do believe he lives and thrives best in the town and
+village gardens; only twice have I met with the larva in a really wild
+situation, once finding a few caterpillars on a lonely shore in Arran,
+and I once got a chrysalis on a beech-tree trunk on the border of a
+large wood. Cabbage, kale, savoy, and cress, are the plants which the
+female usually selects as the most suitable to lay her eggs on, but as
+the caterpillars grow towards maturity there are few plants they will
+not attack, especially if they are driven by hunger and a lack of their
+usual food. The butterfly hardly needs description; suffice it to say
+that the female, besides having a rather larger expanse of black at the
+tip of the fore-wing, has also two black spots and a dash (see figure)
+on the same wing. These are entirely wanting on the upper side of the
+male, but are present on the under side. The male is a little smaller
+than the female. Beyond question this butterfly is the most destructive
+of all the British species; fortunately it is largely held in check by
+ichneumon flies. Once I brought home a dozen or two caterpillars of
+this species from an isolated locality on the Mull of Kintyre, hoping
+to obtain some possible varieties. Not one butterfly did I hatch; they
+had all been stung, and mostly by a large grey dipterous fly (Plate
+XI., Fig. 4), although some few contained the little blackish imp which
+is their usual parasite. This little fellow it is who spins the small
+cocoons round the shrivelled skin of the victim (see Plate XI., Figs.
+3, 5).
+
+The eggs are laid singly or in small groups on the backs of leaves, and
+are somewhat long; they are straw-coloured, and stand up on end, so
+they are not difficult to find and collect, or destroy if too numerous.
+The caterpillar is yellow, speckled with black, and slightly spiny;
+it is also one of the easiest and most satisfactory to preserve. The
+chrysalis may be found during the winter attached to walls and fences.
+The butterfly is common throughout the summer.
+
+SMALL GARDEN WHITE (_Pieris rapæ_), Plate I., Fig. 4.--This butterfly
+is very like the last, but much smaller. Both species are generally
+found together. On the wing and in the caterpillar state they find the
+same nooks and corners in which to pass the winter as chrysalids.
+
+[Illustration: PLATE 6
+
+"Paisley" Method of Setting]
+
+But the caterpillars are very different in appearance. In this species
+the colour is a soft velvety green, with a faint yellow line down the
+back. Stretched at full length on the midrib of a cabbage-leaf, it is
+by no means a conspicuous object, and may be quite easily overlooked;
+but if you see the leaves riddled with holes, and find excrement lying
+between them and at the base, don't cease looking until you find the
+culprit, sometimes deep in a cabbage, or on the back of the outer
+leaves.
+
+Other caterpillars besides those of the Large and Small Whites may
+be present in force, notably those of the Cabbage moth (_Mamestra
+brassicæ_), large stout caterpillars varying from green to black; they
+are far too numerous, so have no compunction about destroying all you
+find. The caterpillar is apt to lose its colour in preserving, as is
+the case with all green caterpillars.
+
+GREEN-VEINED WHITE (_Pieris napi_), Plate I., Fig. 5.--Unlike
+the last two species, this White is more often found in the country
+than the town, and in my experience it is only a casual visitor to
+suburban gardens. I have never found the caterpillars there.
+
+To distinguish it from the last species it is only necessary to examine
+the under side, where both fore- and hind-wings are strongly veined
+with greyish-black, the female particularly so. On the upper side the
+veins are distinctly marked, but the line is finer.
+
+In a rather wet meadow where Ladies' Smock abounds in early June, I
+have seen this butterfly in profusion, and not at all easy to capture
+when the sun was high. But when King Sol is sinking in the west, and
+all decent butterflies have gone to rest, a turn through the same
+meadow while the light still lingers reveals the Veined Whites all at
+rest on the flower-heads of the Ladies' Smocks. It is then quite easy
+to select a few of the best, and search for varieties, until in the
+deepening twilight butterflies and flowers became so blended as to
+present only a whitish blurr to the eye. There are two broods--one out
+in June, the other in August.
+
+The caterpillar is green, with yellow spots on the sides, and may be
+found on various plants of the cruciferous order, the cress group in
+particular. I have found it on the Ladies' Smock (_Cardamine pratense_)
+and on the large-flowered Bitter Cress (_Cardamine amara_). For your
+collection always mount at least one of each sex with the under side
+uppermost. The specimen figured is a female; the male has only one
+round spot on each fore-wing.
+
+BATH WHITE (_Pieris Daplidice_), Plate I., Fig. 6.--This is the rarest
+of all our Whites; indeed, it is doubtful if it breeds in this country
+at all. A few specimens are taken annually on the south-east coast and
+neighbourhood, and the likelihood is that they are migrants from the
+Continent.
+
+On the other hand, it is just possible that on account of its close
+resemblance to the Green-Veined White when on the wing, it is often
+passed over when mixed up with and flying amongst a number of that
+species.
+
+The sexes are easily distinguished by the female having the upper side
+of the hind-wings broadly checkered with a double band of black spots,
+which is entirely wanting in the male. The under side, however, of both
+sexes is beautifully marbled in dark green on a creamy white ground.
+The caterpillar is a dull green with yellow lines on back and sides,
+and may be fed on cabbage or Dyer's Rocket. The chrysalis is very
+similar to that of the Small Garden White.
+
+The butterfly may be met with in May and June, and again in August and
+September.
+
+THE ORANGE-TIP BUTTERFLY (_Euchloë Cardamines_), Plate I., Fig. 7.--This
+is the only member of its genus inhabiting this country, though there
+are several others met with on the Continent. It has a wide range in
+Britain and may be met with from Aberdeenshire to the south coast of
+England, although it appears to be becoming scarcer and more local in
+the northern half of the kingdom. The ground colour of the upper side of
+the wings is white, with a large orange patch occupying almost the outer
+half of the fore-wing, relieved by a black tip and a black spot. In the
+female these black marks are larger, but the orange is entirely wanting.
+The under side of the fore-wing is like the upper, but the under side of
+the hind-wing is beautifully marbled in dark green, an effect obtained
+by the commingling of black scales on a yellow ground.
+
+The caterpillar is green, with a white line on the sides, and feeds on
+various species of _Cardamine_; hence meadow-lands are its favourite
+resorts, and there the curious sharp-looking little chrysalis may be
+found hung up to some dead stem during winter.
+
+The butterfly appears in early June and does not generally survive that
+month.
+
+THE WOOD WHITE BUTTERFLY (_Leucophasia sinapis_), Plate I., Fig. 8.
+--This is the smallest and most fragile of our white butterflies. The
+wings are white with a black tip on the fore-wing, and the under side
+of the hind-wing clouded with black scales. The body is long, slender,
+and a little flattened laterally. It is not a common species, and is
+very local where it does occur. It has been found as far north as
+the Lake District, and down to the south coast. It is unrecorded for
+Scotland, but has been taken in Ireland.
+
+The caterpillar is green, with yellow lines on the sides; it feeds on
+various members of the pea family--Vetch, Trefoil, etc. It appears on
+the wing in May, and sometimes a second brood occurs in August; so you
+may look for the caterpillar in June and again in September.
+
+THE PALE CLOUDED YELLOW BUTTERFLY (_Colias Hyale_), Plate I.,
+Fig. 9.--I think there can be little doubt that this fine butterfly
+is on the increase with us; from all over the southern counties come
+records of its comparative plenty. In the _Entomologist_ (October,
+1911) I read of over one hundred being seen or captured by various
+collectors. Norfolk, Suffolk, Essex, Kent, Bucks, are amongst the
+favoured places, and Lucerne- or Clover-fields are the attractions.
+
+[Illustration: PLATE 7
+
+Apparatus for Preserving Larvæ]
+
+The question of the migration of this and the following species
+is still very far from being satisfactorily settled. That we do get
+a swarm over from the Continent when conditions are favourable is a
+matter of common knowledge, but whether we have resident and permanent
+colonies of our own is still doubtful. In any case this year (1911)
+has been a _Hyale_ year, and we give thanks. The ground colour of
+this butterfly is a pale primrose-yellow. There is a broad black
+border beginning at the tip of the fore-wing and continuing on to the
+hind-wing, where it gradually dies out at the bottom angle; placed
+on this band of black are a few yellow spots. There is also a black
+spot on the fore-wing, and a faint orange spot near the middle of
+the hind-wing. The under side is more of a yellow shade, and a line
+of brown spots runs round the outer margin of both wings. There is a
+silvery spot in the centre of the hind-wings, like a figure 8 bordered
+with pinkish brown, and in fine fresh specimens the fringe is of the
+latter colour. The female is a shade lighter in ground colour and also
+shows more black.
+
+The caterpillar may be looked for in June and July on Clover and
+Lucerne; it is green, with yellow lines running along the back and
+sides. The chrysalis is green with a single yellow line.
+
+The latter half of August and the first half of September cover the
+best period of its flight in this country; on the Continent there is a
+spring brood.
+
+THE CLOUDED YELLOW (_Colias Edusa_), Plate IV., Fig. 1.--As with
+the last species, we have still much to learn of the habits of this
+fine butterfly. Some years it is plentiful, while in others hardly
+a specimen will be seen--and as for the caterpillars, we never hear
+of them being successfully searched for. The probability is that
+from a few spring visitors from the Continent we get a number of
+descendants in August, when a great many more arrive from across the
+Channel and mingle with them. The distribution of nearly all animals
+is regulated by the food-supply, the climate, or their enemies; yet
+none of these seem to satisfactorily account for the disappearance
+and reappearance of _Edusa_ with us. It is a strong flying insect
+with a roving disposition, and on quite a few occasions it has been
+noted as far north as Arran and the Ayrshire coast, in Scotland. The
+brilliant orange and black wings make its identity unmistakable. Not
+so, however, with the light sulphur-coloured female variety, which
+very nearly approaches the typical female form of _Hyale_, but it
+may be distinguished by the broader black band on both fore- and
+hind-wings, and a heavy sprinkling of black scales near the base of the
+former, and all over the latter. The orange spot too, in the centre
+of the hind-wing is deeper, and, being on a darker ground, looks much
+brighter. There is no corresponding male variation.
+
+The caterpillar is dark green, with a light line on each side, varied
+with yellow and orange touches. It feeds on various plants of the pea
+order--vetches, trefoils, clovers, etc. The chrysalis is brown spotted,
+and is striped with a yellow line. The butterfly appears with us during
+August and September.
+
+[Illustration:
+
+  PLATE 8.
+  1. Red Admiral
+  2. Painted Lady
+  3. Milk Weed
+  4. White Admiral
+  5. Purple Emperor (Male)]
+
+THE BRIMSTONE BUTTERFLY (_Gonepteryx rhamni_), Plate IV., Fig. 2.--When
+I glance at this beautiful butterfly, I always feel inclined to laugh,
+not _at_ the butterfly--oh dear no!--but at a practical joke I once saw
+through, much to the astonishment of a soldier friend. He had brought
+home a large assortment of fine butterflies from India, and in going
+over the stock my attention was arrested by the peculiar pattern on
+one of them. For ground colour and outline it certainly resembled our
+own Brimstone, but what weird markings! Turning the hand-glass on it
+revealed the fact that it was _hand-painted_. I asked the sergeant
+who did this, and then he suddenly remembered, and gave vent to a
+loud guffaw. "The scamps, by Jove! That carries me back to a certain
+mess-room at Darjeeling when this insect was handed over to me by a
+certain young officer as a great rarity. He was sure there was not
+another like it in the camp; and he was right. Lots of our fellows went
+'butterfly dodging,' and had big collections to take home; but not
+one of them had this one. They named it 'The Officer's Fancy.' Now, I
+recollect seeing this same officer out sketching and fooling around
+with a box of paints. It's clever, though, isn't it? He took us all
+completely in." This was hardly to be wondered at! The colours had been
+very delicately laid on, and the pattern adopted was of the eye-spot
+and streak order, so that the whole effect was quite harmonious and in
+good taste.
+
+But the Brimstone requires no artificial aids to make it a warm
+favourite with all butterfly lovers; if it lacks variety of colouring,
+it more than makes up for it in the beautiful sweeping outlines of
+the wings. No other butterfly on our list can show such sweet harmony
+of line and contour. Like a breeze-blown daffodil, he greets us on
+our early spring rambles, just when the opening blossoms and leafy
+buds are all doubly welcome, in that we have missed their friendly
+presence through the long days of winter. The female hibernates in
+all sorts of out-of-the-way corners--in dense holly-bushes, piles of
+brushwood, chinks of walls, etc., coming forth again in May or even
+earlier to deposit her eggs on the Buckthorn and its allies. The
+antennæ are rather short and more like a club than a drum-stick, while
+the beautiful white silken mane along the back is quite a noticeable
+feature. The female is of a much lighter tint than the male.
+
+The caterpillar is green, with paler sides, along which runs a white
+line: it may be found on the Buckthorn from May till July. The
+chrysalis, which is supported on the tail and band principle, is green
+and yellow, and rather oddly shaped. It hatches in the course of about
+three weeks. This butterfly is a plentiful insect south of the Border,
+but we have yet to record it for Scotland.
+
+THE SMALL PEARL-BORDERED FRITILLARY (_Argynnis Selene_), Plate IV.,
+Fig. 7.--Like all the members of its family the ground colour of
+the wings of this insect is a reddish-brown, marbled and spotted
+with black. For size it differs little from the next species, and
+the upper surface of the two being so much alike, it is sometimes
+difficult to distinguish between them. The under side (Plate X.,
+Fig. 3), especially of the hind-wings, however, renders the task of
+identification comparatively easy: the ground colour is a deeper brown
+in this species and causes the pearl border to stand out in stronger
+relief; besides, numerous other pearl spots brighten its surface. It is
+a local butterfly, with a wide range of distribution both in England
+and Scotland; and where it does occur it is generally common. In the
+South it may be double brooded, but in the North the June flight is all
+we see of it for the year.
+
+The caterpillar is black, with an interrupted white line along the
+back; the spines are brown; it feeds on the dog violet (_Viola
+canina_). The chrysalis is ash-coloured.
+
+THE PEARL-BORDERED FRITILLARY (_Argynnis Euphrosyne_), Plate IV.,
+Fig. 8.--Perhaps this is the commoner of these twin butterflies,
+though its range of distribution is much the same as the foregoing.
+In its case, also, the under side of the _hind_-wings furnishes
+us with the main points of distinction. Here the markings are a
+warm mid-red shade on an ochreous ground; the pearl border is very
+pronounced, and in the middle of the wing a single pearl reposes.
+Nearer the body there is another smaller spot hardly so bright. If
+you set several of these two species with the under side uppermost,
+you will soon get quite familiar with the difference between them.
+Plate X., Figs. 3, 5, shows this distinction.
+
+The caterpillar is similar to the last species and prefers _Viola_ as
+a food-plant, but I have found it in little colonies where it most
+certainly must have fed on other plants, as _Violas_ of any species
+were distinctly rare in the district, which is wet and marshy. For
+Scotland there is a single brood in June, while in the South it is
+double-brooded--May and August.
+
+THE QUEEN OF SPAIN FRITILLARY (_Argynnis Lathonia_), Plate IV.,
+Fig. 6.--This is, unfortunately, the rarest of all our Fritillaries;
+unfortunately, because it is the most beautiful and brilliant. In
+outline the fore-wing differs from that of the two preceding species,
+being slightly concave on the outer margin, while the hind-wing bears
+a slight trace of scalloping. But it is on the under side where
+all the treasures lie. A row of seven pearl spots adorns the outer
+margin of the hind-wing; then comes a row of small dark spots, each
+with a pearl-spot in its centre; then a profusion of large and small
+glittering patches completes this beautiful wing. The under side of the
+fore-wing has only three (or sometimes a tiny fourth) pearl spots near
+the tip. This butterfly is taken occasionally in clover-fields in our
+south-eastern counties. The specimens taken there are possibly migrants
+from the Continent.
+
+The caterpillar is dark, with a white line on the back, yellow lines
+on the sides, and is clothed with short red spines. It may be found on
+_Violas_. As this insect is double-brooded on the Continent, it is well
+to look out for it during the whole summer from May to September.
+
+THE DARK GREEN FRITILLARY (_Argynnis Aglaia_), Plate IV., Fig. 4.--The
+only claim this handsome species has to be called green lies in the
+fact that the under side of the hind-wing has for its ground colour a
+delightful tawny green. But the main attraction is the lovely rows of
+pearl spots ornamenting the under side (Plate X., Fig. 1); and there
+are four of these rows. One, and it is perhaps the finest, runs round
+near the outer margin, and consists of nine gems; the next, a little
+nearer the body, has eight, and is slightly irregular; the next row has
+only three, rather widely apart; and the fourth, and last, has also
+three very small ones quite near the base of the wing. The under sides
+of the fore-wings have also their pearl spots. Near the outer margin
+you will find a row with eight of them, beginning boldly near the tip;
+they gradually fade until the last of the row is barely visible. On
+some male specimens there are two silvery spots also near the tip, but
+on other specimens these are absent. The under side of the fore-wing
+has very little green to show; the tip of the wing is just tinted,
+and this tint is carried along the costal margin. I have described
+the under side in some detail, as I have seen it described as having
+only three rows of spots on the hind-wing, and no pearl spots at all
+on the fore-wing; and for another reason, I want you always to confirm
+your captures by a good textbook, as by so doing you will learn some
+valuable lessons in comparison and observation, and in noting details;
+and also it will enable you, perhaps, to add some fine variations to
+your collection.
+
+The caterpillar lives on various species of wild _Viola_, and may be
+found on them in the early summer, but as the butterfly has a wide
+range of distribution, season and locality make it vary a good deal
+in the time of its appearance. It has been found from the North of
+Scotland to the South of England. July is the month to look for it.
+I always find it more abundant near the coast. It is a bold flying
+species, and often difficult to capture; but in good settled weather I
+have taken it frequently at rest on thistle-tops _at sundown_.
+
+THE HIGH BROWN FRITILLARY (_Argynnis Adippe_), Plate IV., Fig. 5.--In
+this and the foregoing we have again two species very easy to confound,
+and all the more so when we note that stable characters are somewhat
+hard to find on the upper surface of the wings--in general the ground
+colour in _Adippe_ is richer and darker, and the outer margin of the
+fore-wing is not so rounded as in _Aglaia_, being either straight or
+very slightly concave. The arrangement of the second row of spots,
+which runs round near the outer margin of both wings, is different in
+the two species, but they are very inconstant and even vary in the
+sexes; so the _under side_ must be again consulted (Plate X., Fig. 2).
+And here we have an unfailing test. In _Adippe_, on the _under side_ of
+the hind-wing near the outer margin, there is a row of dark red spots
+lined internally with black, and in the centre there is a small pearl
+spot. These eyelike spots are never present in _Aglaia_. The general
+green tint, too, of _Aglaia_ is absent in _Adippe_. The silvery spots
+on the under side of the fore-wing of _Aglaia_ are rarely to be seen
+in this species. In some females of _Adippe_ three shadowy spots are
+visible near the tip. I have never seen these on a male; so we have it
+that, in the great majority of specimens of _Adippe_, the under side
+of the fore-wing is devoid of silvery spots. While _Adippe_ may be
+fairly common in the South, it is by no means so widely distributed,
+nor does it range so far north as _Aglaia_. In Scotland it is unknown.
+
+The caterpillar is dark grey, with a whitish line along the back, and
+is covered with rust-red spines. It feeds on _Viola_. The butterfly
+appears in July.
+
+THE SILVER-WASHED FRITILLARY (_Argynnis Paphia_), Plate IV.,
+Fig. 3.--This is the largest of our native Fritillaries, and is easily
+distinguished from the others by an entire absence of the silvery spots
+so characteristic of this genus. The upper surface of the male is of
+a warm, orange-brown, streaked and dotted with black on both wings;
+the under side of the fore-wing is much lighter, the spots on it are
+smaller, and the tip is marked with olive; the hind-wing under side
+bears a fine combination of pale olive with faint lavender and silver
+streaks, while its outer margin is distinctly scalloped. The female
+is quite different. In it the ground colour of the upper side of the
+fore-wings is much paler, and the black streaks along the veins are
+absent. The hind-wings have the same pale tint, but with a more decided
+tinge of olive, while the under sides of both wings, and especially
+of the hind ones, are pale olive green, and the scalloping round the
+outer margin of both wings is more pronounced. In the female variety
+_Valesina_, the upper surface has a dark olive ground shading out
+towards the tip of the fore-wings. This, with the black spots lying on
+it, gives the butterfly quite a black appearance at a little distance.
+This variation is mostly found in the New Forest. The butterfly is
+common in many districts of England, but is rare in Scotland.
+
+The caterpillar is covered with long spines, nearly black, and has a
+pale line along the back and sides; it feeds on Dog Violet and Wild
+Raspberry. The chrysalis is rather stout, hangs by the tail, and is
+greyish, with shining points. The perfect insect is out in July and
+August.
+
+THE GREASY FRITILLARY (_Melitæa aurinia_), Plate IV., Fig. 9.--This may
+not seem a pretty or poetical name for a butterfly. Beauty, poetry,
+and the "fitness of things," might have suggested a more appropriate
+title; but, as Dickens has said, "the wisdom of our ancestors is not
+to be disturbed by unhallowed hands," and as the technical name is in
+this instance some compensation, we may have to let it go at that.
+"Greasy" the butterfly is not, but only _looks_ as if it were, when
+slightly worn; and, owing to some peculiarity in the arrangement of its
+scales, this slight wearing is very soon accomplished. Happily it is
+not a difficult insect to rear, and fine specimens without a suspicion
+of greasiness in their appearance can thus be had for the cabinet.
+This butterfly is quite distinct from any other British Fritillary,
+inasmuch as it has two very distinct ground colours on the upper side
+of its wings, a rich orange-brown and a pale ochreous yellow. The bands
+of this latter shade are bordered with dark brown; a reference to the
+coloured figure will show how these colours are disposed. It is a
+rather variable species, and is widely distributed. It is found in
+glens and damp meadows and is generally abundant where found, though
+local.
+
+[Illustration:
+
+  PLATE 9.
+  1. Marbled White
+  2. Mountain Ringlet
+  3. Scotch Argus
+  4. Speckled Wood
+  5. Wall Brown
+  6. Grayling (Male)
+  7. Meadow Brown (Female)
+  8. Small Meadow Brown
+  9. Ringlet
+  10. Marsh Ringlet]
+
+The caterpillar is black, with a greyish line along the sides, and
+a small white dot above this between each segment. The chrysalis is
+ashen, with red and black spots; it is rather "dumpy," and may be
+found on various low plants early in the summer, and again, in some
+southern localities, in the autumn. Like nearly all the Fritillaries
+the larvæ hibernate while very small, so it is best to leave them in
+their natural state until fairly well fed. Narrow-leaved Plantain,
+Scabious, and, some observers say, Foxglove and Speedwell, are its
+favourite foods. The times of flight are May and August. In many Scotch
+localities, Argyllshire, Ayrshire, etc., this species is abundant.
+
+THE GLANVILLE FRITILLARY (_Melitæa Cinxia_), Plate V., Fig. 1.--This
+little butterfly is one of the "threatened species." If due care and
+discretion be not exercised, there is a possibility of its becoming
+extinct in this country. "Threatened people live long," but it were
+wise not to push our little friend too far; and wiser still if
+collectors who live in or near its favourite haunts would not only try
+to preserve it, but also make some attempt to spread its range into
+other localities apparently suitable for its propagation. We have far
+too few native butterflies to run the risk of losing any we have. And
+as the food-plant is the Ribbed or Narrow-leaved Plantain, it follows
+that even were this species as abundant as its food would warrant, it
+could not possibly do any harm to anyone, either gardener or farmer.
+The ground colour might be called Fritillary brown, relieved with the
+usual black bands and spots; the hind-wings show a distinct row of
+black spots on a light ground running round near the outer margin. But
+the under side (Plate X., Fig. 4) is more striking and unmistakable,
+especially that of the hind-wing. The fringe itself is dotted at
+intervals with black; then follows a line of crescent spots on a
+cream-coloured ground; a fulvous band scalloped with a black outline
+traverses the wing, and on this band are dark spots edged with red.
+Then there is a cream band with black spots, and a broken-up band of
+fulvous spots edged with black. There is cream again next the body,
+with a few more black spots. The under side of the upper wing is a
+light orange-brown, and cream towards the tip, and bears a few black
+spots.
+
+The caterpillar is black, with dark red between the segments; head
+and pro-legs red; spines short, crowded, black. The chrysalis is
+stout, yellowish-grey, dotted with black, and is sometimes enclosed
+in a loose web. The chrysalids I have reared always adopted this mode
+of concealment and protection. I have also been much impressed with
+the strong resemblance of the caterpillar to the flower-heads of the
+Narrow-leaved Plantain, amongst which it lives. The Isle of Wight
+appears to be the headquarters of the species, and it is found in a few
+other localities on the mainland. It appears in May and June.
+
+[Illustration:
+
+  PLATE 10
+  1. Dark Green Fritillary (under side)
+  2. High Brown Fritillary (under side)
+  3. Small Pearl Bordered Fritillary (under side)
+  4. Glanville Fritillary (under side)
+  5. Pearl Bordered Fritillary (under side)
+  6. Heath Fritillary (under side)]
+
+THE HEATH FRITILLARY (_Melitæa Athalia_), Plate V., Fig. 2.--There is
+more black, or dark brown, on the upper surface of this species, hence
+the insect looks darker in general aspect than any of the foregoing
+Fritillaries. The under side, too (Plate X., Fig. 6), is marked very
+like _Cinxia_, but the light bands on the hind-wings are more of a
+yellow tint, and the line of black spots through the central band are
+wanting; the veins are also more prominent and black. Altogether it is
+not difficult, on comparing the two under sides, to at once distinguish
+them.
+
+It is also a rather local species, being confined to the South of
+England and Ireland. Both caterpillar and chrysalis are very like those
+of the last species; the spines, however, are rust-coloured. It feeds
+on Plantain. The perfect insect is out from May to July.
+
+THE COMMA BUTTERFLY (_Vanessa c-Album_), Plate V., Fig. 3.--The
+tatterdemalion of the family, it looks, indeed, as if some hungry
+caterpillars had been dining on its wings, and had been scared away
+in the middle of the feast, leaving all sorts of rags and tatters to
+attest their visit. The costal margin is the only line left entire;
+all the others are deeply scalloped and indented. Two tails form
+the longest projections from the middle of the outer edge of the
+hind-wings. The ground colour is a uniform rusty red, varied with black
+spots arranged in the same order as in other species of this genus.
+There is a dark border round the outer margin of both wings. The under
+side is strikingly different from the upper, and looks extraordinarily
+like a dry, withered leaf, the more so on account of its ragged
+outline. In the middle of the hind-wing is a very clear comma-shaped
+mark; from this the insect takes its name.
+
+The caterpillar is yellowish on the back for the first five segments,
+then white to the tail; under side brown. The spines are shorter than
+in others of this group. It feeds on Hop, Elm, Gooseberry, Nettle,
+Willow, and Sloe. The chrysalis is brown, with gilt points. The
+butterfly appears in July and is rather local, being found mostly in
+the Midlands and Wales. It has been recorded for Scotland, but not of
+late years.
+
+THE LARGE TORTOISESHELL BUTTERFLY (_Vanessa Polychloros_), Plate V.,
+Fig. 5.--The ground colour of this handsome species is a tawny yellow,
+marked with three large black patches along the costa of the fore-wing;
+between these patches the colour is somewhat lighter. There are four
+other black spots occupying the centre of the wing, which also has a
+black border dotted with brown; hind-wing tawny, with one black patch
+on the upper margin, but not extending inward to the body as a similar
+spot does in the next species (_Urticæ_). The dark border is continued
+along this wing, and is studded with blue spots edged with a paler
+line. This species might be confused by the novice with the next,
+but not if the two were together for comparison; then the points in
+which they differ are seen to be distinct and permanent. In _Urticæ_
+the light ground between the costal blotches is yellow and the outer
+spot blue-white; there are only _three_ black spots in the centre of
+the wing, the largest one being continued _down to the margin_, which
+is not the case with the corresponding spot in _Polychloros_. On the
+hind-wing the black patch continues downward towards the bottom angle
+and inwards to the body, whereas this spot neither goes in nor down in
+_Polychloros_. Lastly, the ground colour in _Urticæ_ is of a bright
+red, almost a scarlet, with the blue spots extending into _both_ wings.
+
+The caterpillar of _Polychloros_ is brown, spiny, and striped along the
+back and sides; it feeds on Elm, Willow, and Cherry, during the summer
+months. The butterfly appears in August.
+
+It is by no means so common with us as its smaller and gayer cousin,
+being confined mostly to the South of England. There are occasional
+records for Scotland; I was present when a specimen was captured by a
+friend on the coast of Argyllshire in the year 1887.
+
+THE SMALL TORTOISESHELL BUTTERFLY (_Vanessa Urticæ_), Plate V.,
+Fig. 4.--Among the many puzzling problems that naturalists have to
+solve, few present greater attractions than those relating to the
+migration and hibernation of animals. The birds have long claimed the
+attention of ornithologists in this respect, but the insects have in a
+great measure been neglected. However, there are signs of a revival.
+Migratory and hibernating butterflies are well enough represented
+in the British list to supply material for much patient and useful
+research. The facts about them are not all known--not by any means.
+We know, or fancy we do, that the dominating factor in both cases is
+the food-supply, but that there are other and important elements to be
+considered is beyond dispute. The Small Tortoiseshell is a hibernating
+species, but why does it not deposit its eggs in the autumn, and go
+the way of all flesh and butterflies? Could it not evolve a method of
+securing its eggs so that the young caterpillars might have a fair
+chance of survival when ushered into the world? Or has it found it
+easier and safer to take care of these eggs itself during the long
+winter months, and then, when returning spring once more brings the
+Nettle-shoots above ground, launch forth upon the wing once more, to
+seek and to find a home and a larder for its numerous children to be?
+What would be the fate of these eggs if laid in the autumn? Who can
+tell? Various enemies and agencies would be constantly at work seeking
+to destroy them. The Nettles have all died down and left hardly a trace
+behind. And what the rain and wind had not scattered far and wide, the
+ants and beetles would account for.
+
+The Small Tortoiseshell is perhaps the best known of all our coloured
+butterflies, occurring, as it does, all over the country from Land's
+End to John o' Groats. It is very like the last species, though smaller
+and brighter; but as I pointed out the various distinguishing marks in
+describing _Polychloros_, I need not go into them again.
+
+The caterpillars feed in companies when young, spreading themselves
+over the Nettles as they grow older. They are black on the back with
+a checkered double line along the sides; across each segment is a
+row of branched spines with numerous small simple hairs between.
+The chrysalis hangs by the tail; it is grey-brown, with gilt points.
+The eggs are laid in May, and the butterfly appears towards the end
+of June, and continues more or less abundant until October, when the
+females retire to some safe corner in old walls or outhouses, there to
+await the passing of the winter.
+
+[Illustration:
+
+  PLATE 11
+  1. Larva of Large Garden White
+  2. Pupa of Large Garden White
+  3. Ichneumon Cocoons
+  4. Dipterous Parasite of Large G. White
+  5. Ichneumon Flies hatched from 3
+  6. Pupa of Small Tortoiseshell
+  7. Larva of Small Tortoiseshell
+  8. Larva and Pupa of Glanville Fritillary
+  9. Larva of Greasy Fritillary]
+
+THE PEACOCK BUTTERFLY (_Vanessa Io_), Plate V., Fig. 7.--This
+beautiful species is too well known, and too distinct in its colour and
+pattern to require any written description.
+
+Few butterflies possess a name which so aptly describes them, and
+to make a mistake in its identification is hardly possible. All its
+efforts seem to have been exspended on the ornamentation of the upper
+surface, for the under side has hardly an attractive note. Dark and
+sombre though it be, it is well adapted for concealment during its
+period of hibernation.
+
+The caterpillar is black, with bands of white dots round each segment,
+and the spines are larger than in the Small Tortoiseshell. It feeds
+in batches on Nettles, from June to August. The chrysalis inclines to
+green and has burnished spots. This species is common in England, and
+is occasionally met with in the South and West of Scotland.
+
+THE CAMBERWELL BEAUTY (_Vanessa Antiopa_), Plate V., Fig. 6.--Why does
+not this handsome butterfly settle down amongst us, increase and
+multiply, and thus swell the little band of real natives who gladden
+the eye of the entomologist on his country rambles? It is a common
+insect over most of the Continent, and most abundant in North America,
+well up into Canada, where the winter is extremely severe. We have the
+food-plant in abundance, yet it is questionable if ever the Camberwell
+Beauty has been found in any but the winged state in this country.
+Records there are of its capture year after year, but there never seems
+to be progeny left by these occasional visitors. The wings are a dark
+chocolate-brown, bordered with creamy white. Between the brown and the
+white is a broad black band studded with blue spots; there are also
+two white spots on the costal margin near the tip of the fore-wing.
+It measures from 2-1/2 to 3-1/2 inches in expanse, North American
+specimens being the largest.
+
+The caterpillar is black, with white dots, and has a row of red spots
+along the back. The pro-legs are also red, spines black. It feeds on
+the Willow. The chrysalis is brown, with darker spots; its abdominal
+points are sharp and angular. Single specimens of this species occur in
+most seasons from August to October, generally in the South, but it has
+been recorded for Scotland on several occasions.
+
+THE RED ADMIRAL (_Vanessa Atalanta_), Plate VIII., Fig. 1.--He
+must have been a poet who first conceived so appropriate a name for
+this gallant rover. Possibly he was living long ago--
+
+  "When Britons truly ruled the waves,
+  In good Queen Bess's glorious days,"
+
+or later, when Nelson's old "wooden walls" spread their bellying sails
+to catch the breeze. Those were days of romance. Fancy the Admiral of a
+super-Dreadnought--that big, black abortion of coal and iron--being
+associated with a butterfly! We would rather peer into the future and
+elect our aerial commander the "Red Admiral" of a fleet of graceful
+aeroplanes. This would certainly be more appropriate.
+
+[Illustration:
+
+  PLATE 12.
+  1. Small Heath
+  2. Green Hairstreak
+  3. Purple Hairstreak (Female)
+  4. White-letter Hairstreak
+  5. Black Hairstreak
+  6. Brown Hairstreak (Female)
+  7. Large Copper (Male)
+  8. Small Copper
+  9. Long-tailed Blue
+  10. Silver-studded Blue (Male)
+  11. Brown Argus
+  12. Common Blue (Male)]
+
+The colours of this butterfly on the upper surface are singularly bold,
+striking, and, withal, simple. They furnish a good test of colour
+discrimination. I have heard them spoken of as "jet black," "intense
+black," or "velvety black." If you take a specimen into a good light,
+you will see that the whole area enclosed by the scarlet bands is
+a deep coffee-brown, while outside the band, on the fore-wing, the
+colour is black splashed with white, and there is a blue streak near
+the outer margin. The under side is a marvel of beauty too complex and
+wonderful for cold print. Common though this insect is all over our
+island from August to chill October, who can say that he has discovered
+his "retreat and hiding-place" from the storms and frosts of winter?
+Indeed, there are those who boldly assert that the Red Admiral _does
+not_ hibernate with us at all, and, consequently, we are indebted each
+year for our supply to spring visitors from the Continent, which may be
+the reason why in some years it is more abundant than in others.
+
+The caterpillar is a powdery yellow-grey in colour, sometimes inclining
+almost to black; a line of white spots appears on each side; there are
+some darker markings along the back, and a row of branched spines light
+in colour crosses the middle of each segment. You will generally find
+it hiding within a curled Nettle-leaf during the day. The chrysalis is
+grey, with a few shining points.
+
+THE PAINTED LADY (_Vanessa cardui_), Plate VIII., Fig. 2, is
+quite a suitable companion for a "Red Admiral," and they are often seen
+in company, although _cardui_ is the earlier on the wing by at least a
+fortnight, and often a month. The ground colour of the upper surface is
+a rosy orange, varied with black and brown markings, while the white
+spots near the tip of the fore-wing are almost similar to those of the
+Red Admiral. Here, too, the under side is an exquisite bit of painting.
+It reminds one of a frosted window done in harmonious secondary
+colours. No doubt this subtle pattern must be protective, for you
+will notice that when the insect is at rest with the wings shut, the
+bright portion of the under side of the fore-wing is concealed. This is
+decidedly a migratory species, and it is an open question whether it
+hibernates in Britain. In Scotland we never see it until the autumn,
+and occasionally it arrives in fair numbers. We had one extraordinary
+swarm about the year 1880; I remember being on holiday at the time on
+the Island of Cumbrae, in the Firth of Clyde. _Cardui_ was everywhere,
+and even fighting for possession of the Thistle-tops. In 1911 I had to
+be content with the sight of two specimens in Arran, but I heard of
+several more.
+
+Like the other _Vanessa_ caterpillars, the larva of this species is
+thorny, brown, and bears lines and spots of yellow. It may be found on
+Thistles and Nettles in May and June. The chrysalis is like that of
+_Atalanta_ in colour, but hardly so stout.
+
+THE WHITE ADMIRAL (_Limenitis Sibylla_), Plate VIII., Fig. 4.--This
+butterfly is almost black on the upper surface, relieved by white bars
+and spots, and there is a row of dense black spots near the outer
+margin of the hind-wings. These white marks are carried through the
+wings to the under side, but the ground there is formed of various
+shades of brown, with some black dots and pencillings--while on the
+under surface of the body, and spreading out from it on to the wings,
+is a considerable region of a light sky-blue tint, very pleasing to the
+eye.
+
+The caterpillar feeds on Honeysuckle, and is a lively green; the spines
+are reddish, those on the third, fourth, and sixth segments being
+larger than the others. There is also a white line bordered with brown
+along each side. The head is also red, with two lines of white down the
+face. The chrysalis is dark green, with silvery dots and lines, and
+bears grotesquely swollen lumps. This is a butterfly that I am afraid
+is becoming scarcer year by year; it is confined to the South. It is
+out in July.
+
+THE PURPLE EMPEROR (_Apatura Iris_), Plate VIII., Fig. 5, is
+undoubtedly the king of the forest glade. Wearing the regal purple,
+he looks down upon the world from his lofty throne on the top of some
+lordly oak. Somehow the build of this fine insect when seen in the hand
+cannot fail to impress the beholder with a sense of muscular power. The
+thorax is long, broad, and deep--more so than in any other British
+butterfly--and the abdomen, head, and antennæ are in like proportion.
+The wings are ample and in shape smart and serviceable. No loose scales
+or fluffy hairs soften the firm compactness of his whole bearing. Dark
+brown and purple alternate with the changing light all over the upper
+surface; a dash or two of red, and one eye-spot on the bottom angle
+of the hind-wing, with a bar and a few spots of white, are the main
+additions to the changing hues of the purple. The under side has a
+daring lightning flash of blue-white on a brown and olive ground on the
+hind-wing. The fore-wing (under side) has various spots of black and
+white on a darker ground, while there is also one eye-spot near the
+outer angle. He is said to have a fondness for carrion, and this queer
+taste is sometimes his undoing, as he is more readily captured when
+indulging his appetite than when soaring round the crown of some lofty
+oak.
+
+But it is better still to seek for the caterpillars. These may be found
+on low Sallows or Poplars. They are green, dusted with white, and have
+oblique dashes of yellow on the sides; they taper considerably towards
+the tail, while the head is adorned with a pair of horns. The chrysalis
+is similarly coloured while alive, but when its inhabitant is gone
+the colour vanishes with it, and all that remains looks like a little
+bit of crumpled tissue paper. It may be found suspended to the under
+side of a leaf of the food-plant. The butterfly is out in July in the
+southern counties, and is oftener seen than captured.
+
+THE MARBLED WHITE BUTTERFLY (_Melanargia Galathea_), Plate IX.,
+Fig. 1.--We now come to a group of butterflies (the _Satyridæ_) quite
+the reverse in build and habits from the Emperors and Admirals. Of
+medium or small size, though the wings are ample, the body is small and
+the muscular power is never great; hence they are soft and downy, never
+fly far at a stretch, and are, although many of them common, very local
+in their habits.
+
+And the Marbled White is no exception to the group. His name may
+suggest something hard, polished, and durable, yet he is anything but
+that. I wonder what his name might have been had he been common north
+of the Tweed, and not known in the South? To Sir Walter Scott, James
+Hogg (the Ettrick Shepherd), or Professor Blackie, the similarity of
+the black and white wings to the checking and soft, embracing folds of
+their own beloved tartan plaids would at once have appealed to their
+imagination, and henceforth they would have alluded to him as the
+"Shepherd's Plaid" butterfly.
+
+Creamy-white, with grey and black checking, and a few eye-spots on the
+black band of the hind-wings complete his simple scheme of colour. The
+under side is somewhat similar to the upper. Although common enough
+where it is found, it is a very local and stay-at-home butterfly.
+
+The caterpillar is a grass-feeder, and is green, with a red head and
+tail. It tapers considerably towards both extremities. They are very
+small when they hibernate. The butterfly is out in July and August.
+
+THE MOUNTAIN RINGLET BUTTERFLY (_Erebia Epiphron_), Plate IX.,
+Fig 2.--It is strange that this fragile little fellow should choose
+the rough mountainside for his home. In a boggy hollow of Ben Lomond,
+nearly 2,000 feet above the sea, buried in snow almost the whole winter
+through, I know a colony of this butterfly which lives and flourishes
+under these seemingly impossible conditions. Doubtless it could be
+found on many more of our Highland hills.
+
+The wings are a dark, fulvous brown, with an inconstant red bar near
+the outer edge of both wings, and on this rusty bar are usually a few
+small eye-spots, sometimes absent, or reduced to mere specks. The under
+side is almost similar. It is a very easily damaged little creature,
+requiring great care in handling, and I may add that in catching it is
+always advisable to carefully select your specimens _on the ground_, as
+quite a large percentage always appear to be rubbed, so soon do they
+become unfit for the cabinet even in the height of their season, which
+occurs during the first fortnight of July.
+
+The caterpillar is said to be green, and feeds upon various grasses. It
+is also found on the mountains of Cumberland and Westmorland.
+
+THE SCOTCH ARGUS BUTTERFLY (_Erebia Æthiops_), Plate IX., Fig. 3.--Like
+all butterflies, the Scotch Argus is seen at its best in its native
+haunts. You feel it has a subtle kind of association with its
+surroundings that defies definition. Seeing this species flirting
+about in dozens in a dell where the air is heavily laden with the
+perfume of Bog-myrtle and Honeysuckle, and where dragon-flies, bees,
+hover-flies, wasps, and ants, raise a drowsy hum dear to the ear of
+the entomologist, not to mention the hordes of bloodthirsty little
+midges, tends to the formation of a mental impression, which we always
+associate with this beautiful butterfly. It takes strange notions, too,
+at times. I have found it often "at home" as described above, and,
+again, I have come upon it solitary and alone on the bare hillside, far
+from the madding colony amongst which it was born. Five such wanderers
+I once encountered in a single day in August. All were on the move,
+either seeking a lost home or lover, or possibly pastures new.
+
+The breeding ground is generally some sheltered glade or open corner of
+a wood. The butterfly is coloured a beautiful dark, velvety brown, with
+a broad, irregular tawny red band near the outer margin of both fore-
+and hind-wings. Within this band on the fore-wings are three black
+spots, each having a tiny white spot in its centre, and the hind-wings
+have in most cases a similar adornment; but as these spots are subject
+to great variation, always aim at securing a good row for your cabinet
+in order to show as many variations as you can find.
+
+The under sides of the sexes differ from each other and are
+distinctive. In the female the under side of the fore-wing is marked
+very much the same as the upper side, but the whole colour scheme is
+lighter, while the hind-wings are a lighter brown, with a pale lavender
+band, distinctly iridescent and with just a trace of spots. The male,
+though nearly the same in markings, is very much darker.
+
+The caterpillar is a grass-feeder, and is green, with some lighter and
+darker stripes. It is very like the grass it lives amongst. The eggs
+are laid in the autumn, and the young caterpillars hibernate.
+
+THE SPECKLED WOOD BUTTERFLY (_Pararge Ægeria_), Plate IX., Fig.
+4.--There must be something peculiar about this butterfly, which
+always reminds me of a snake; it is curious how such an idea gets
+into one's head and sticks there. I have a lot of preserved home and
+foreign snakes, and not a few of them are checkered and marked like
+this butterfly's wings; one large skin of a boa constrictor bears
+a remarkable resemblance both in colour and spots. Nature seems to
+delight in these eyelike markings--you will find them on the trout, the
+peacock, the leopard, and on certain beetles, flowers, and birds' eggs.
+Wherever you find them they are always beautiful and interesting, and
+have a certain protective use.
+
+The Speckled Wood is more easily recognized than described. The upper
+side is of a dull brown, spotted with pale yellow, or (as in some
+northern specimens I have taken) with white. There is one eye-spot near
+the tip of the fore-wing, and a row of three, sometimes four, similar
+spots in a submarginal row on the hind-wings. The under side is richer
+and warmer in colour, having a purple tinge, while the eye-spots of
+the hind-wings are nearly obsolete, but the spot on the fore-wing
+is, if anything, brighter. It is a fairly common species, and
+loves quiet, shady lanes on the edge of woodlands. In the South it is
+double-brooded. The female is larger and brighter than the male. The
+caterpillar is a grass-feeder, and is green, with lighter stripes. The
+butterfly is out from May to August.
+
+[Illustration:
+
+  PLATE 13.
+  1. Adonis Blue (Male)
+  2. Chalk-hill Blue (Male)
+  3. Little Blue
+  4. Azure Blue
+  5. Large Blue
+  6. Duke of Burgundy Fritillary
+  7. Grizzled Skipper
+  8. Dingy Skipper
+  9. Small Skipper
+  10. Lulworth Skipper
+  11. Large Skipper (Female)
+  12. Pearl Skipper (Male)
+  13. Checkered Skipper]
+
+THE WALL BROWN BUTTERFLY (_Pararge megæra_), Plate IX., Fig. 5.--A
+rather smaller butterfly than the last, with the same number and
+arrangement of the eye-spots. The ground colour is, however, a light
+tawny brown, with dark brown markings. There is a broad diagonal
+bar across the fore-wings of the male. All the wings are bordered
+with brown. The female has two zigzag lines in place of the bar, and
+consequently has a lighter appearance; she is usually a bit larger
+than her mate. The under side of the hind-wings is a beautiful study
+in greys and browns, with the dainty little eye-spots double ringed.
+This species is common on waste lands and roadsides throughout the
+country; it is local in Scotland, but abundant where found, especially
+in Ayrshire. There are two broods only in the South.
+
+The caterpillar is light green, with lines on the back and sides, and
+may be swept from grasses with the net in midsummer. The chrysalis is
+short and stout, and is found suspended by the tail to a strong grass
+stem.
+
+The butterfly loves to rest on walls and stones which have been warmed
+by the sun; hence the name the "Wall Brown."
+
+THE GRAYLING BUTTERFLY (_Satyrus Semele_), Plate IX., Fig. 6.--This
+fine butterfly is larger and bolder in flight than any other of this
+group in our country. But you must always remember that butterflies
+love the sunshine, and without its cheering presence they are all very
+dull fellows indeed. Hence it is that a butterfly may appear, and
+really is, difficult to catch on a bright, warm day; yet it may fall an
+easy victim, and give but indifferent sport on a dull one. The Grayling
+has a strong partiality for living near the sea, and is found all along
+the west coast of Scotland, whether it be on a rock-bound shore or in
+a sandy, sheltered bay. During July and August one is pretty sure to
+encounter the Grayling sporting along just above high-water mark, and,
+not infrequently, whole colonies of them. The lichen-covered rocks
+above the shore are his favourite resting-place, and here he can sit
+and bask in the sun, and once he has closed his wings he may be said to
+have disappeared, so beautifully does the under side of his wings blend
+with the colour of the surrounding rocks. He shows a certain amount of
+wisdom, too, at times, for if you make a stroke at him with a net and
+miss, he is off to sea, flit-flitting just above the water, and making
+a wide detour before coming back to land.
+
+The wings are brown, with an irregular light tawny band, in which, on
+the fore-wing, are two eye-spots, and on the hind-wing only one. But
+the finest ornamentation is on the under side of the hind-wings, which
+bear a strong resemblance to a granite rock speckled with lichens.
+
+The caterpillar, I think, feeds mostly at night, as I have found it
+during the day under stones in hilly districts near the sea. It is
+variable in colour--brownish to black, with a few lighter lines on the
+back and sides, and it has a dirty putty-colour on the under side. It
+feeds on grass in May. The butterfly is out from July to September. It
+appears in August in Scotland.
+
+THE MEADOW BROWN BUTTERFLY (_Epinephele Janira_), Plate IX., Fig.
+7.--Perhaps this is the commonest of all our brown butterflies. On
+roadside or hillside, moor or meadow, one can hardly fail to notice
+this homely brown insect all through the summer rambles. The males
+are smaller and dingier than the females. They have an obscure
+reddish patch on the fore-wing which, with an eye-spot, relieves the
+upper surface of dark brown. The females are brighter and often more
+variable, the fulvous patch on their fore-wings being large and bright,
+and even extending into a band on the hind-wings. There is occasionally
+an inner patch of suffused yellow on the centre of the fore-wings; the
+under side is a paler brown, with a decided band of grey-brown on the
+hind-wing, which is also slightly scalloped.
+
+The caterpillar is a delicate green, with a white line on either side,
+and may be swept from moorland grasses in May and June. The chrysalis
+is short and dumpy; pale papery grey, rather fragile, and is hung up by
+the tail to a grass-stem. The butterfly is out practically all through
+the summer.
+
+THE SMALL MEADOW BROWN (_Epinephele Tithonus_), Plate IX., Fig.
+8.--Also a common species, but does not so range far north. Wings, a
+bright tawny red inclining to yellow, bordered with dark brown, with
+an indistinct diagonal bar across the wings in the male. There is also
+a black spot near the tip of the fore-wings containing two tiny white
+spots; occasionally there are two small eye-spots on the hind-wings
+also. The under side of the hind-wing is shaded with red-brown and pale
+ochre, and bears a few small white spots surrounded by red rings. Under
+side of the upper wing is pale tawny yellow with outer edge dark; there
+is a black spot at the tip with _two_ white dots in it.
+
+The caterpillar varies from green to grey-brown; there is a dark red
+line along the back, and two light lines run along each side. It is
+a grass-feeder, and prefers a drier situation than the last species.
+Perhaps this is the reason for it being found in Ayrshire, the driest
+and sandiest county in Scotland. July and August are the butterfly's
+months.
+
+THE RINGLET BUTTERFLY (_Epinephele Hyperanthus_), Plate IX., Fig.
+9.--This is a common and not very attractive-looking butterfly. Its
+colours, if it can be said to have any, are dingy in the extreme.
+The upper surface is a dark sooty-brown hardly relieved by a few
+faint eye-spots, which are very small and not always present. A
+dirty white fringe completes the upper side. The under side affords
+some compensation, however, for here we have the ringlets in some
+variety--pale yellow for the outer ring, which encloses black with a
+white spot in the centre. They are arranged three on the upper wing and
+five on the lower. They vary in size, as will be seen from the figure
+(Plate XIV., Fig. 9). It is not a very lively insect; it frequents dry
+pasture-fields in Scotland, preferring those bordering the sea.
+
+The caterpillar is like the last species, but a greener grey; it feeds
+on grasses. The butterfly is out in July. When you do happen upon this
+species, keep a sharp lookout for varieties, as it has quite a range of
+well-known "sports"; the variation is mostly on the under surface.
+
+THE MARSH RINGLET (_Cænonympha Typhon_), Plate IX., Fig. 10.--This
+insect has to be sought for on the swampy moorlands and mountains of
+the North. It is of a dingy fawn-colour, sometimes brighter, often as
+if it had been held over the fire and "Peat-reekit." It is somewhat
+remarkable what a number of creatures inhabiting this same region have
+gradually come to assume a similar coloration. Many of the Highland
+cattle on these moors have this dirty tawny-yellow tint; the deer and
+the hare find protection under the same guise. The upper surface of
+the Marsh Ringlet is varied with a few eye-spots, though I possess
+specimens with no spots at all, while others have four on each of
+the hind-wings and two on each of the fore-wings. The under side is
+generally better marked by eyes, six forming a row round the outer
+margin of each hind-wing, of which the first and last are usually the
+largest; fore-wing under side--two eye-spots, the one nearest the tip
+being the larger. There is also a light bar across this wing, and
+this is continued on to the hind-wing, where it broadens out and is
+irregular and often interrupted. The ground colour here is a subdued
+green-grey, getting lighter towards the fringe. Females have more ample
+and rounded wings than the males. I find the most comfortable way to
+hunt this butterfly is with bare feet and legs, and the trousers well
+tucked up, which will perhaps convey some idea of the nature of the
+ground it loves to flit over. Splash, splash you go over the _Sphagnum_
+and Cotton-grass, Heather and Marsh Wortleberry, while overhead the
+eerie cries of the curlew and the lapwing remind the naturalist that
+there are many young families hidden amongst the Heather, who will
+rejoice when they see the last of him and that fearful net of his.
+
+The caterpillar is green, with white lines, and feeds on Cotton-grass
+in May. The butterfly appears towards the end of June.
+
+THE SMALL HEATH BUTTERFLY (_Cænonympha Pamphilus_), Plate XII.,
+Fig. 1.--This can be best described as a smaller and brighter edition
+of _Typhon_; occasionally a _large_ specimen may even be mistaken for
+a _small Typhon_, but you can always tell the smaller species by the
+presence of only one eye-spot on the tip of the fore-wing, and no
+eye-spots anywhere else. Its habits, too, are different, preferring, as
+it does, a much drier and more pastoral country to sport over. And its
+range is also wider, being found all over the country from June till
+September.
+
+The caterpillar is green and a grass-feeder. I have swept it from grass
+in August.
+
+THE BROWN HAIRSTREAK (_Thecla betulæ_), Plate XII., Fig. 6.--There are
+five British species included in the very distinct group of interesting
+little butterflies, to which this species belongs. All of them are
+nearly black on the upper surface, but the undersides are exceedingly
+chaste in pattern, if not showy in colour. The Brown Hairstreak is the
+largest of the five. The male is a dark brown relieved by a lighter
+spot edged with black on the fore-wing, and the bottom angle of the
+hind-wing and the little tails are orange. The female has an orange
+bar across the fore-wing. The under side (Plate XIV., Fig. 7) is a
+tawny orange inclining to deep orange at the margins; a double white
+irregular line edged with black runs across the hind-wings, and between
+these lines the tawny shade is darker; the fringe is white.
+
+The caterpillar is green, marked with diagonal yellow lines and tapers
+considerably towards each extremity. It feeds on Birch and Blackthorn.
+Though by no means a common insect, it is found in a great many
+localities from North to South of England, but not in Scotland. The
+butterfly is out in August.
+
+THE WHITE-LETTER HAIRSTREAK (_Thecla w-album_), Plate XII., Fig. 4.--A
+smaller and, on the upper surface, a blacker insect than the last.
+Excepting for a small indistinct spot in the centre, and near the outer
+margin of the fore-wing, the upper surface is devoid of markings of any
+kind. The under side, however, provides all the distinctive features
+necessary for identification. The colour is a cool brown-grey, the
+fore-wing being traversed by a white line; the hind-wing has a similar
+white line, which forms a W at the basal angle; under it is a broad
+orange scalloped band, edged with black and white; the extreme outer
+edge is black, and this black edging scallops into the orange band.
+Tail black.
+
+The caterpillar feeds on Elm; is pale green, with yellow bars and two
+rows of whitish humps along the back. It may be got by beating the Elm
+in early summer. The Butterfly appears in July, but is far from common,
+York being about its northern limit.
+
+THE BLACK HAIRSTREAK (_Thecla pruni_), Plate XII., Fig. 5.--About the
+same size as the last, but many individuals are smaller. The ground
+colour is almost black, but near the tail are two or three conspicuous
+orange spots, which are not present in _w-Album_. The orange band on
+the under side of the hind-wing is much bolder and is edged with black
+spots on _both_ sides, the inner row of spots being partially ringed
+with white; the white hairstreaks are fainter and slightly interrupted.
+This is the rarest of the group, and confined to a few localities in
+the South and South-East.
+
+The caterpillar is green, with yellow spots and lines; it is found on
+Sloe and Oak. The perfect insect is out in July.
+
+THE PURPLE HAIRSTREAK (_Thecla quercus_), Plate XII., Fig. 3.--The
+commonest and most widely distributed of the Hairstreaks extending well
+into Scotland where, however, it is not common. The upper surface in
+the male is shot with purple, while the female has a patch on either
+fore-wing of a still more pronounced sheen. The under side (Plate XIV.,
+Fig. 8) is a cool grey; the "hairstreak" is white and strongly defined
+by an inner edging of dark brown. There are also two orange eye-spots
+near the tail, which in this species is rather small.
+
+[Illustration:
+
+  PLATE 14
+  1. Pupa of Red Admiral
+  2. Larva of Red Admiral
+  3. Larva of Small White
+  4. New Small Skipper
+  5. Pupa of Small White (showing hole through which ichneumons emerged)
+  6. Larva of White Admiral
+  7. Brown Hairstreak (under side)
+  8. Purple Hairstreak (under side)
+  9. Ringlet (under side)]
+
+The caterpillar is a reddish-brown and grey mixture, with a lighter
+angular pattern along the back, and a light line along the sides. It
+feeds on Oak.
+
+I once came upon a small colony of this little butterfly flying round
+some Oak-trees in Argyllshire, but not one of them came lower than 15
+feet from the ground, and after trying a variety of expedients I had to
+retire discomfited without a single capture. A visit to the same spot
+on subsequent days failed to reveal a single specimen. August was the
+month. In the South it is out in June.
+
+THE GREEN HAIRSTREAK (_Thecla rubi_), Plate XII., Fig. 2.--The
+smallest of the British Hairstreaks and a fairly common species. Deep
+dingy brown above, bright emerald-green below, traversed by white
+hairstreaks, although in some specimens I have taken these white lines
+are absent. An elusive little butterfly, as when it settles amongst
+green herbage with the wings closed it is rendered almost invisible, so
+well does it harmonize with its surroundings.
+
+The caterpillar is green, spotted and striped with yellow; it feeds on
+Bramble and Broom. The butterfly is out in June generally, but I have
+found it in the closing days of May in a favourable season. In the
+South a second brood appears in August. It reaches as far north as
+Perthshire, and is frequently met with in the West Highlands.
+
+THE LARGE COPPER BUTTERFLY (_Polyommatus Dispar_), Plate XII.,
+Fig. 7.--I am afraid there is now only one British locality where this
+fine butterfly can be successfully pursued. Strange to say it is not
+one of the few places where it was found so abundantly a century ago.
+Neither is it any use going after it there with a net, or any other of
+the usual appliances.
+
+The correct place and method are no great secret, being, as it is, in
+the very heart of London--to wit, Stevens' Auction Rooms, King Street,
+Covent Garden. A cheque-book there is a more reliable, and, if properly
+handled, sure means of bringing a specimen into one's collection. I
+don't suppose there is anybody now alive who remembers having seen the
+Large Copper flitting about its native Fen lands so long ago as 1850 or
+thereabout, for the precise date is difficult to discover. The Large
+Copper has become as extinct as the dodo or the great auk. Fortunately,
+many specimens are still to be seen in old and well-preserved
+collections, and not a few of these have already passed through the
+hands of the auctioneer. There are various Continental "Coppers" which
+more or less resemble the "dear departed." And it is as well that the
+points of difference should be well known, as these foreigners can be
+had for a few pence. _Dispar_ sells at as many pounds.
+
+The male and female differ very much from each other, the male being
+a clear scarlet copper tint, with black margins and a small black
+spot in the centre of the fore-wing. The female is larger and not so
+brilliant; the black marginal band on the fore-wing is broader, and
+has a row of black spots in addition to the central black spot. The
+hind-wings are much dingier, except for a brighter band round the
+outer margin next the black outline. It was out in July and August in
+the Fen lands of the south-eastern counties. Various causes have been
+assigned as the reason for its disappearance. Draining of, and burning
+rubbish on, these wastes, and the constant persecution the insect had
+to endure from mercenary natives who, once they discovered there was
+money in it--and the more money, doubtless, the scarcer it became--all
+lent their quota of assistance towards finally exterminating this fine
+butterfly.
+
+THE SMALL COPPER BUTTERFLY (_Polyommatus Phlæas_), Plate XII.,
+Fig. 8.--Less in size but hardly less brilliant in colour, the Small
+Copper is not likely to share the fate of its larger relative. A
+lively, restless, little imp it is, and has well earned the title of
+"the flea," by which it is known in some districts.
+
+As it is the "only Copper we possess now," a detailed description is
+unnecessary, but I would direct the young collector's attention to the
+fact that there are some nice variations of this common little species
+apt to be overlooked, perhaps the most striking being a white form,
+and another and commoner one having a row of blue spots on the upper
+surface of the hind-wings.
+
+The caterpillar feeds on various species of Sorrel, and is green with
+three red lines.
+
+There are several broods in the year, but it is generally more abundant
+in the autumn. Found everywhere.
+
+THE LONG-TAILED BLUE (_Lycæna Bætica_), Plate XII., Fig. 9.--While
+there is no doubt this lovely little blue has been repeatedly taken
+on our shores, the fact remains that we must still regard it as an
+occasional visitor only. It may, and we all hope it will, yet be
+classed amongst our resident fauna. From what we know of it, it seems
+to have a more than usually wide range; it is recorded for Europe,
+Africa, Western Asia, East Indies, and Australia. The male is a deep
+blue, with two black spots just above the tails; the female shows more
+brown. The under side is quite different from that of any of our native
+blues, being barred and spotted in white, and two shades of fawn-brown,
+with two green spots near the tail. A lookout for it may be kept all
+along our south coast during July and August.
+
+THE SILVER-STUDDED BLUE (_Lycæna Ægon_), Plate XII., Fig. 10.--In
+all of the group to which this insect belongs, numbering about ten
+species, the males differ very much in colour, especially on the upper
+surface, from the females. The males are nearly always blue of various
+shades, and the females brown and blue in varying proportions.
+
+In _Ægon_, the male is a warm violet-blue, the outer margins being
+bordered with black. The female is brown shot with blue, which becomes
+more intense near the outer margin of the hind-wings, where there is
+a row of orange spots touching an outer row of black spots; but these
+two rows may be nearly or altogether absent. The under side (Plate
+XV., Fig. 4) is banded with orange and black-spotted, the black spots
+being ringed with white. The silver studs are on the outer margin
+of the orange band, principally on the hind-wings. This is a fairly
+abundant species all over England on dry soils, and has been met with
+in Scotland. The caterpillar is green, sometimes brown, with a darker
+line along the back and white lines on the sides. It feeds on Clover,
+Vetch, Broom, and other leguminous plants. The butterfly is out in July
+and August.
+
+THE BROWN ARGUS (_Lycæna Astrarche_), Plate XII., Fig. 11.--Here is
+a "blue" in which _both_ sexes are brown, a rather unusual thing. In
+every other particular, however, it bears the family hall-mark. The
+upper surface is dark brown, bordered with bright orange spots. The
+under side (Plate XV., Fig. 6) is banded with orange and spotted with
+black dots ringed with white. For the Scotch variety, _Artaxerxes_,
+these spots are solid white, and there is in addition a _white
+discoidal spot_ on the upper side of the fore-wing. This variety is
+local in Scotland, but fairly numerous where found, generally near
+the sea, and plentiful all along the Ayrshire coast in June and July.
+It is said to feed on _Helianthemum_, but has probably many other
+food-plants, such as the Hemlock Stork's-bill (_Erodium cicutarium_),
+which is common where it flies.
+
+The caterpillar is green, with a darker line along the back, and a pale
+line on each side; head black and shining. There are many intermediate
+forms between _Artaxerxes_ and the type.
+
+THE COMMON BLUE (_Lycæna Icarus_), Plate XII., Fig. 12.--Known to
+everyone who sees anything at all of the country. It is _the_ blue
+butterfly, noticed even by those who hardly know a butterfly from a
+bullfrog.
+
+An intelligent little chap he is, too, with an eye for his own safety,
+as I once found when I had the opportunity of observing quite a number
+of them on a piece of waste ground near the sea. The weather was
+dull and threatening rain, and not a butterfly was on the wing; but
+I could see plenty of our common blue friend hanging on, with closed
+wings, to the ends of rushes, grass-stalks, and on thistle-tops; but
+always when I came within a step or two they adroitly changed their
+position, putting whatever they were resting or hanging on between us,
+just edging round the corner as it were, so as to be out of sight.
+Apparently the idea of _flying_ away from an enemy was here considered
+as too risky under the conditions which prevailed; the safest plan was
+to hide, so hide they did. It was the funniest game of hide-and-seek
+I ever played. I have since seen the small blue dragon-flies adopt
+the same tactics on the rushes by the side of a pond. No wonder this
+little fellow is so common. In the struggle for existence he has shown
+himself able and well-fitted to survive; nevertheless I had a good time
+amongst them that afternoon and boxed some fine varieties. The male
+bears a warm shade of blue, and the female is from nearly black to
+brown, with a blue blush spreading from the body outwards, both wings
+being bordered with a row of orange and black spots, often on a ground
+of white. Sometimes, too, there is a discoidal black spot edged with
+white; but the females are very variable. The under side (Plate XV.,
+Fig. 5) has the characteristic markings of the "blues," and, excepting
+that the female is a little darker in ground colour, both sexes are
+pretty much alike.
+
+The caterpillar is green, with a dark line on the back, and a light
+yellow line on each side; it feeds on Trefoil and Clover. The perfect
+insect is common everywhere from June till August.
+
+THE CLIFDEN BLUE, OR ADONIS BLUE (_Lycæna Bellargus_), Plate XIII.,
+Fig. 1.--It will be sufficient to point out the specific characters
+of each of these blues without going into minute detail, which would
+be wearisome, even if it were possible (which it is not) to paint in
+words what Nature has painted so admirably on the butterflies' wings.
+The male Adonis is a brilliant azure blue; fringe, deep and white, and
+divided into sections by black lines. Female, brown to nearly black,
+with a row of orange and black spots round the base of the hind-wing
+and sometimes continued faintly into the fore-wing; it is browner on
+the under side than the male. Both resemble the Common Blue very much,
+but the spots are scarcely so numerous or so bold. The wings, however,
+are generally more ample, those of the males being more rounded.
+
+The caterpillar is green, with a darker line on the back, and a
+yellow line on each side; spotted with orange on the back. This is
+a fairly common species confined mostly to the South, where, being
+double-brooded, it is out in June and August.
+
+THE CHALK-HILL BLUE (_Lycæna Corydon_), Plate XIII., Fig. 2.--A larger
+insect than the last, and the male an extremely pale iridescent blue,
+which is shaded off at the margins into a black border, with a white
+fringe checked with black. Female, dark brown, black and white checked
+fringe; eye-spots nearly obsolete along the margin of both wings. Under
+side in male almost white, shading to pale green, blue next the body
+on the fore-wing; hind-wing, with a wash of pale brown for the ground;
+spots black, outlined with white. A marginal row of orange spots is
+confined to the hind-wing in the male, but extends to the fore-wing in
+the female; the ground colour of it, however, is a pale fawn, which
+sets forth the eye-spots beautifully.
+
+The caterpillar is green, striped on the back and sides with yellow. A
+decidedly southern species, frequenting the chalk downs of the South
+and the Isle of Wight, or the limestone districts of the Midlands. It
+is out in July and August.
+
+THE AZURE BLUE OR HOLLY BLUE (_Lycæna Argiolus_), Plate XIII.,
+Fig. 4.--This is a very dainty little butterfly of a deep sky-blue,
+with rounded wings narrowly fringed with white, ticked with black. The
+female has a broad, irregular, black border, occasionally extending
+well into the wing. But the under side (Plate XV., Fig. 3) marks a
+new departure, being of a very pale, shimmering blue, with only a
+few small, black spots, which form an incomplete row on fore- and
+hind-wings.
+
+[Illustration:
+
+  PLATE 15
+  1. Brown Argus (var. _Artaxerxes_)
+  2. Brown Argus (var. _Artaxerxes_) (under side)
+  3. Azure Blue (under side)
+  4. Silver-Studded Blue (under side)
+  5. Common Blue (under side)
+  6. Brown Argus (under side)
+  7. Mazarine Blue (upper side)
+  8. Mazarine Blue (under side)
+  9. Chalkhill Blue (under side)
+  10. Large Blue (under side)
+  11. Little Blue (under side)]
+
+The caterpillar is green, with a dark line on the back, and a black
+head. It feeds on the _flowers_ of Holly, Ivy, and Buckthorn.
+
+Being double-brooded, the perfect insect appears first in April and
+May, and again in August. It is generally distributed in England,
+though commonest in the South; not known to occur in Scotland.
+
+THE MAZARINE BLUE (_Lycæna semiargus_), Plate XV., Figs. 7 and
+8.--Males, a very dark purple-blue--in fact, this is our darkest
+"Blue," and shares the distinction with the Long-Tailed Blue of being
+extremely scarce. Possibly those met with now are visitors from the
+Continent. The blue deepens into a black border at the margins; fringe
+short and white. Female, a uniform dark brown; under side a pale buff
+colour, with an irregular row of black spots edged with white. There
+are no orange spots on this species. It is said to feed on Thrift;
+hence it is likeliest to be met with near the coast during July. Good
+Continental specimens can be purchased cheaply, or got by exchange.
+And I hold it is better to fill in your row with these, carefully
+labelling them to indicate their source, than to have an empty space
+always staring you in the face. Unless this species becomes more
+common, the average collector's chance of capturing British specimens
+is exceedingly remote.
+
+THE LITTLE BLUE (_Lycæna Minima_), Plate XIII., Fig. 3.--The smallest
+of our butterflies, the average expanse being only 3/4 inch. Male,
+blackish-brown dusted with blue towards the base of the wings. Female,
+solid brown; under side (Plate XV., Fig. 11) a pale salmon, blue
+spotted as in _Argiolus_, with black outlined with white; no orange
+spots on either sex.
+
+The caterpillar is dull green, orange-striped on back and sides. It
+feeds on Trefoils, etc. This species is local, but common all over the
+British Isles, except in the extreme North. It is one of our early
+species, appearing in May and June.
+
+THE LARGE BLUE (_Lycæna Arion_), Plate XIII., Fig. 5.--This is the
+largest of our "Blues" and the rarest of our really resident species,
+and although it appears to be able to hold its own and maintain its
+numbers fairly well, I would strongly urge collectors to at least let
+all the "fair" and worn specimens retain their liberty. Again and again
+I have seen specimens set up and sent out in exchange that should never
+have been taken. Of a dark blue colour, black-bordered, _Arion_ can
+always be recognized by the row of black spots across the middle of the
+fore-wing; they are sometimes very large in size. There is occasionally
+a row of black spots round both wings, just inside the margin. The
+under side (Plate XV., Fig. 10) is a pale grey, gradually shading into
+a bright blue-green next the body, profusedly spotted with black in
+white rings.
+
+The caterpillar, which feeds on Wild Thyme in the spring, is dark
+rust-coloured. The butterfly is out in July, and is found mostly in the
+extreme south-west counties.
+
+THE DUKE OF BURGUNDY FRITILLARY (_Nemeobius Lucina_), Plate XIII.,
+Fig. 6.--Very like a diminutive member of the Fritillary family, but
+it has no real connection with it, and better still, it has a whole
+family (_Erycinidæ_) and genus to itself, being the only one of its
+kind found in Europe. The upper surface is a tawny orange, with dark
+brown checkerings, while a row of marginal black spots runs round the
+outer margins. The under side of the hind-wings has a double row of
+pale, almost white, spots across the centre, and black spots, similar
+to those on the upper side, round the edge.
+
+The caterpillar is short and tapering, pale brown with a darker line on
+the back, and a lighter one on the sides. It feeds on Primrose. This
+species is said to be double-brooded in the South, out in June and
+again in August as far north as Carlisle and the Lake District. Note:
+the female has six perfect walking legs, the male only four, the front
+pair being rudimentary, as with many of the larger butterflies.
+
+THE GRIZZLED SKIPPER (_Syrichthus Malvæ_), Plate XIII., Fig. 7.--The
+Skippers, of which there are eight species in this country, are often
+referred to as the connecting-link between the butterflies and moths,
+and not without some justification. The antennæ are somewhat short,
+club-shaped, and _hooked_ at the extremity. The head is large, and
+the antennæ spring from just above the eyes; their base is thus wide
+apart. Compare a Skipper with a Blue in which the roots of the antennæ
+almost touch. The body of the Skipper is stout and mothlike, and the
+wings not so ample, and more angular than in the average butterfly. The
+caterpillars live in a rolled leaf or several leaves spun together, and
+pupate in a slight cocoon.
+
+The Grizzled Skipper is a small butterfly measuring just over 3/4 of
+an inch in expanse. The ground colour is nearly black, checkered with
+white square spots, as is also the fringe. The under side is lighter.
+
+The caterpillar is a rusty brown, with lighter lines on the back and
+sides. The species is doubled-brooded, appearing in May and August,
+and is generally distributed over the country as far north as the
+South-West of Scotland.
+
+THE DINGY SKIPPER (_Nisoniades Tages_), Plate XIII., Fig. 8.--This
+is dull grey-brown, and very Quaker-like in its sombre garb, with a
+lighter and a darker band across the wings. The under side is a pale
+drab, with a few faint light spots. And truly one may be excused if at
+times it is mistaken for a night-flying moth.
+
+The caterpillar feeds on trefoil, and is green, with four yellow lines
+and some black dots; it is very stout in the middle, tapering to either
+end. This Skipper is also doubled-brooded, appearing in May and August,
+generally on dry soils such as the chalk, or limestone, or, as in
+Scotland, on the sand-dunes of Ayrshire, where it is locally common.
+
+THE SMALL SKIPPER (_Hesperia Thaumas_), Plate XIII., Fig. 9.--Upper
+side a uniform tawny-orange shade, with a dark brown or black border.
+There is also a black dash across the fore-wing of the male, which is
+absent in the female. On the under side there is a tawny patch along
+the inner margin of the hind-wing, and the tip of the fore-wing is
+light. These are good identification points, as they are fairly stable.
+
+The caterpillar is green, with two white lines on the back and a yellow
+line on either side. It feeds on grasses in the spring. The butterfly
+appears in July and is common in England, but is not known in Scotland.
+
+THE NEW SMALL SKIPPER (_Hesperia Lineola_), Plate XIV., Fig. 4.--Is
+very like the last, so much so, that it had been taken for many years
+by collectors and confused with _Thaumas_. There were few collections
+that did not possess a mixed series. But once its identity was
+established, it was soon placed in its rightful position. It may be
+distinguished from _Thaumas_ by the absence of the fulvous patch on
+the inner margin of the under side of the hind-wings, and also by the
+absence of the light tip on the under side of the fore-wing. The black
+dash across the upper side of the fore-wing of the male is fainter,
+shorter, and more often altogether absent. The under side of the
+hind-wing is a light buff without marks of any kind.
+
+The caterpillar is a bronze-green, with four yellow lines on the back
+and one on the sides; it feeds on grasses in damp meadows, mostly in
+the south and south-eastern counties. The species is local, but common
+where it occurs. Out in July and August.
+
+THE LULWORTH SKIPPER (_Hesperia Actæon_), Plate XIII., Fig. 10.--An
+extremely local species, being only found in two or three localities
+on the south coast. It may be distinguished from the two preceding
+Skippers, first, by its more dingy colour; second, by the female having
+a semicircular row of light spots near the tip of the fore-wing. These
+are very faintly visible in some males, but they have, in addition, a
+black streak along the centre of the wing. The under side in both sexes
+is similar, a pale dingy fawn, with no particular markings. The antennæ
+are very short.
+
+The caterpillar is green, with a dark line on the back, and a double
+line of yellow on each side. This species may be looked for on rough
+ground facing the sea during July and August.
+
+THE LARGE SKIPPER (_Hesperia Sylvanus_), Plate XIII., Fig. 11.--Upper
+surface tawny-orange shading into darker at the margin of both wings;
+on this dark margin are a few pale spots, mostly at the tip of the
+fore-wing. The male has an almost black streak near the centre of the
+fore-wing; this is not present in the female. The under side is a light
+tawny olive, with pale lighter spots.
+
+The caterpillar is green, with a dark line on the back, and a light
+stripe on the sides. It is a grass-feeder. This Skipper is abundant all
+over England in May and again in August, but is rare in Scotland.
+
+THE PEARL SKIPPER (_Hesperia Comma_), Plate XIII., Fig. 12.--This
+species is not quite so large as the last. It is darker, and the
+spot markings are much brighter and more decided. This is the case
+especially on the under side, as there the spots are bright enough to
+suggest pearls. Hence the name.
+
+Note, too, the dark streak in the middle of the fore-wing of the male;
+it is divided along the centre by a white line. This white line is
+wanting in the Large Skipper. The dark streak is only on the upper
+wings of the males. _Comma_ is also a more local and scarce insect,
+being confined mostly to the South of England.
+
+The caterpillar is greyish-red, and has a double dark line on either
+side; it feeds on various Vetches and Trefoils. The butterfly is out in
+July and August.
+
+THE CHECKERED SKIPPER (_Carterocephalus Palæmon_), Plate XIII.,
+Fig. 13.--The upper side of this butterfly is speckled and bordered
+with tawny-orange spots on a dark brown ground. The under side has a
+lighter ground colour, and the spots are outlined with dark brown.
+
+The caterpillar is dark, almost black, with a yellow line on the sides,
+and, as it hibernates over the winter, may be looked for in the spring.
+It feeds on grasses and Plantain.
+
+This is a very local species, and I am afraid, to judge from reports,
+becoming rarer. The south and south-eastern counties are the favoured
+localities.
+
+THE MILKWEED BUTTERFLY (_Danais Erippus_; variety, _Archippus_), Plate
+VIII., Fig. 3.--This is an American species, but an occasional visitor
+to our shores, and, as it is a strong-flying species with the bump of
+adventure abnormally developed, it is now met with in many lands where
+it was at one time unknown. I have large fine specimens from Canada, so
+it can stand the rigours of the Canadian winter; and if it should find
+a suitable food-plant for the caterpillars here, we may hope, in the
+near future, to add this fine butterfly to the select little band of
+British butterflies.
+
+
+
+
+INDEX
+
+
+  British Butterflies described, 29
+
+  Butterflies, antennæ of, 1, 10
+    capture and preservation, 13
+    eyes of, 11
+    how to kill, 16
+    list of British, 27
+    sense and smell, 10
+    sight, 10
+    tongues of, 12
+
+  Butterfly net, 14
+
+
+  Collection, storing of, 25
+
+
+  Drying-case, 22
+
+
+  Entomological pins, 17
+
+
+  FAMILIES OF BUTTERFLIES.
+    _Apaturidæ_, 28
+    _Erycinidæ_, 29
+    _Hesperidæ_, 29
+    _Lycenidæ_, 28
+    _Nymphalidæ_, 27
+    _Papilionidæ_, 27
+    _Pieridæ_, 27
+    _Satyridæ_, 28
+
+
+  "Grease," treatment of, 17
+
+
+  Ichneumons, 5
+
+
+  Larvae, preservation of, 22
+
+  _Lepidoptera_, 1
+
+  Life-story of Butterflies, 1
+
+
+  Pins, entomological, 17
+
+
+  Scales, 9
+
+  Setting boards, 18
+    bristle, 18
+    needle, 19
+    Paisley method, 20
+    with braces, 18
+
+  SPECIES OF BUTTERFLIES:
+    Blue, Adonis, 79
+      Azure, 80
+      Chalkhill, 80
+      Clifden, 79
+      Common, 78
+      Holly, 80
+      Large, 82
+      Little, 81
+      Long-tailed, 76
+      Mazarine, 81
+      Silver-studded, 76
+    Brimstone, 41
+    Brown Argus, 77
+    Camberwell Beauty, 55
+    Clouded Yellow, 39
+      Pale, 38
+    Comma, 51
+    Copper, Large, 74
+      Small, 75
+    Fritillary, Duke of Burgundy, 82
+      Dark Green, 44
+      Glanville, 49
+      Greasy, 48
+      Heath, 51
+      High Brown, 46
+      Pearl-bordered, 43
+      Queen of Spain, 44
+      Silver-washed, 47
+      Small Pearl-bordered, 42
+    Grayling, 65
+    Hairstreak, Black, 72
+      Brown, 71
+      Green, 73
+      Purple, 72
+      White-letter, 71
+    Meadow Brown, 67
+      Small, 67
+    Milkweed, 87
+    Orange-tip, 37
+    Painted Lady, 58
+    Peacock, 55
+    Purple Emperor, 59
+    Red Admiral, 56
+    Ringlet, 68
+      Marsh, 69
+      Mountain, 62
+    Scotch Argus, 62
+    Skipper, Checkered, 87
+      Dingy, 84
+      Grizzled, 83
+      Large, 86
+      Lulworth, 85
+      New Small, 85
+      Pearl, 86
+      Small, 84
+    Small Heath, 70
+    Speckled Wood, 64
+    Swallow Tail, 29
+    Tortoiseshell, Large, 52
+      Small, 53
+    Wall Brown, 65
+    White Admiral, 59
+      Bath, 36
+      Black-veined, 32
+      Green-veined, 35
+      Large Garden, 33
+      Marbled, 61
+      Small Garden, 34
+      Wood, 38
+
+
+BILLING AND SONS, LTD., PRINTERS, GUILDFORD, ENGLAND
+
+
+
+
+
+End of the Project Gutenberg EBook of British Butterflies, by A. M. Stewart
+
+*** END OF THE PROJECT GUTENBERG EBOOK 61981 ***

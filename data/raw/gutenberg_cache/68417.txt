@@ -1,0 +1,967 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 68417 ***
+
+  TRANSCRIBER’S NOTE
+
+
+  Text in italics is shown in _underscores_.
+
+  Text in Small Caps was converted to ALL CAPS.
+
+  Punctuation and text was retained as in the original except for
+  a change on page 17, “and exit upstairs” to “and exits upstairs”.
+
+
+
+
+  The Lighting of the
+  Christmas Tree
+
+  In the Vassar Series of Plays
+  Edited by Gertrude Buck
+
+
+  Adapted by Josephine L. Palmer and Annie L.
+  Thorp, by permission of Messrs. Doubleday,
+  Page & Co., from “The Christmas Guest,” by
+  Selma Lagerlof.
+
+  Samuel French: Publisher
+
+  28-30 West Thirty-eighth St. : New York
+
+  LONDON
+
+  Samuel French, Ltd.
+
+  26 SOUTHAMPTON STREET, STRAND
+
+
+
+
+  COPYRIGHT, 1917, BY JOSEPHINE L. PALMER AND
+  ANNIE L. THORP
+
+  COPYRIGHT, 1921, BY SAMUEL FRENCH
+
+  _All Rights Reserved_
+
+“THE LIGHTING OF THE CHRISTMAS TREE” is fully protected by copyright,
+and all rights are reserved.
+
+Permission to act, to read publicly, or to make any use of this play
+must be obtained from Samuel French, 28-30 West 38th Street, New York
+City.
+
+It may be presented by amateurs upon payment of a royalty of five
+dollars for each performance, payable to Samuel French one week before
+the date when the play is given.
+
+Professional rates quoted on application.
+
+Whenever this play is produced the following notice must appear on all
+programs, printing and advertising for the play: Produced by special
+arrangement with Samuel French of New York.
+
+
+
+
+THE VASSAR SERIES OF PLAYS
+
+
+Every play in this series has been written by a member of the
+Play-Writing Class at Vassar College. But each play as printed is the
+product of a group-activity. Not merely an individual seated at a desk,
+but a community working together in a theater, is responsible for it in
+its final form.
+
+Some of these plays have been “tried out” by the Vassar Dramatic
+Workshop and some by the Community Theatre of Poughkeepsie, New
+York. By the coöperative efforts of all who were associated in these
+enterprises--actors, committee workers and financial supporters--these
+plays have been given a sympathetic and intelligent production before
+audiences also intelligent and sympathetic, whose reaction has afforded
+the writers much valuable criticism. In the preliminary readings
+and rehearsals, also, occasional weak points which had escaped the
+ordeal of class criticism came to light and were strengthened by the
+author’s revision. In fact, the plays as they appear in this series
+are literally a collaboration of the writers with innumerable friendly
+critics in the play-writing class, the cast and the audience. And it
+would be ungracious to put the fruits of this collaboration at the
+service of the public without grateful acknowledgment to all those who
+have in any way helped to establish and carry on the Vassar Dramatic
+Workshop or the Community Theatre of Poughkeepsie.
+
+In recent years there has been an increasing demand for well-written,
+dramatically effective one-act plays, suitable for production by
+semi-professional companies or by amateur organizations of serious
+purpose and some degree of training. To aid in supplying this demand
+is the purpose of the Vassar Series of Plays. Other plays written by
+members of the Play-Writing Class at Vassar College may be secured in
+typewritten form by application to The Workshop Bureau of Plays, Vassar
+College.
+
+All the plays in this series are protected by copyright. A royalty of
+five dollars for each production must be paid to Samuel French, 28-30
+West 38th Street, New York City, at least one week before the date of
+the performance.
+
+
+
+
+LIGHTING OF THE CHRISTMAS TREE
+
+PRODUCING THE PLAY
+
+
+The beautiful Swedish national costumes should be used for this play.
+Any good reference book on the costumes of various nations and many
+books about travel in Sweden will furnish illustrations that may be
+copied, varying the colors when necessary to produce a harmonious
+relation with one another. Since this is a modern play, only the
+servants, who are, of course, peasants, would be likely to wear these
+costumes on ordinary occasions, but members of the upper classes
+sometimes assume them for the festivities of the Christmas season. We
+may, therefore, take advantage of this possibility, to increase the
+picturesqueness of our play by using the colorful Swedish dress for all
+the characters.
+
+A real Swedish interior, carefully reproduced from trustworthy
+illustrations, would also be effective. Not all the furniture found
+in any illustration should, of course, be used for the stage setting.
+A few pieces only should be chosen, with a view to composing without
+unnecessary “clutter” into a beautiful and characteristically Swedish
+whole.
+
+The lines of this play are exceptionally simple in their phrasing and
+yet so full of meaning that no word or syllable should be lost by the
+audience. An intelligent, sympathetic rendering of each speech is
+especially important, but clear-cut enunciation and a beautiful quality
+of voice are also very desirable, particularly for Olga, Liljekrona and
+the two children.
+
+Olga is obviously the very heart of this play. She makes a
+charming picture with the little boys over the Christmas tree, the
+candle-lighting in the windows, and the story of the Christ-Child’s
+wanderings. Her tender love for her home and her instinctive fear of
+any influence which may tend to lower its ideals or to draw Liljekrona
+away from it, must be so clearly brought out in the acting (as it is
+in the lines) that the audience will understand and even partially
+sympathize with her anxiety to be rid of the drunken vagrant, Ruster.
+
+This anxiety is sharpened by the approach of the Christmas season,
+which she feels should be celebrated as a beautiful home festival,
+just by themselves. But even as Olga carries her point and Ruster is
+about to leave the house, she is assailed by remorse for the selfish
+impulse to protect her home at the unfortunate old man’s expense. This
+should be clearly indicated in the tone and manner with which she asks
+Liljekrona to give Ruster something extra for Christmas and to lend him
+his fur coat.
+
+The departure of Ruster ends the first stage of the play’s action,
+in which Olga has attempted to secure happiness for herself and her
+household by the refusal of her hospitality to some one in sore need
+of it. Ruster had seemed to her a discordant element when present, but
+his absence seems to bring ten-fold more unhappiness. All the Christmas
+preparations go wrong. Sigurd’s cookie-dough figure of the Christ-Child
+“doesn’t look like anything,” the E string of Liljekrona’s fiddle has
+snapped and he has no new one, Torstein has gone to drive Ruster and
+they cannot dance without him, the sheaves for the sparrows have been
+forgotten, and finally Liljekrona withdraws to his own room to play the
+stormy music which Olga understands as a portent of his return to the
+old life of wandering.
+
+In this section of the play, Liljekrona controls the action and should
+dominate the scene. Olga attempts, in vain, to infuse joy into the
+Christmas observances. Liljekrona’s bitterly self-reproachful speech
+about the lonely and the hungry people,--“When they pass so close
+as to touch our sleeve,--we do not see them, we do not stop them,
+but let them plod their path alone,”--shows that he will no longer
+deceive himself as to the heartlessness of their own action. And when
+he says--“Your candles are too late. The door is closed. The voice is
+gone,”--Olga sees that on the eve of Christmas and in the name of its
+fitting observance, she has betrayed its very spirit of hospitality and
+kindness.
+
+The sound of the music from Liljekrona’s room, full of the old, wild
+passion for the open road, brings to Olga realization of the price
+she must pay for this mistake, “if God does not work a miracle in the
+night.” Her intense suffering at this point marks the crucial moment
+in the play and must be conveyed by action and facial expression as
+well as by a poignant rendering of the lines. The moment must be
+held perceptibly, after she sinks into her chair, until the sound of
+sleighbells, at first far off and gradually approaching, breaks the
+spell.
+
+The bells usher in the third stage of the action, which is markedly
+different in feeling-tone from the other two. Instead of the fear and
+the cloaked unkindness of the first scene and the growing self-reproach
+of the second, we have the exaltation of complete surrender to generous
+impulse. Olga’s joy in the “miracle” which she so little deserved or
+expected must shine from her face and from every word and action, as
+soon as she realizes that Ruster has indeed returned and she has a
+chance to repair the wrong she has done. Her inspiration to ask Ruster
+to look after the children while she is out of the room should be so
+acted as to show that there is something behind her simple request.
+She will prove her gratitude for this chance to atone, by trusting her
+dearest treasures to the man she had feared to have remain in the house
+with them.
+
+The scene of the children with Ruster gives the actor an opportunity
+to show the battered, dissipated old man, afraid of the innocent
+eyes of the children, but gradually put at his ease by their
+complete unconsciousness and their real interest in the one thing he
+knows,--flute-playing. Ruster’s complete collapse when the children’s
+absorption in reading allows him to realize his own desolate situation,
+and Olga’s offer to make him their tutor, need only be played with
+entire simplicity and sincerity by both actors, to bring tears to the
+eyes of many people in the audience.
+
+Olga’s explanation to Liljekrona of her plans for Ruster and why she
+is taking this great risk, bring her once more into a position of
+leadership. This is emphasized by the action, as first Liljekrona, then
+the children and finally Ruster, kiss Olga’s hand, while her curtain
+speech to Ruster gives the needed touch of humility and graciousness to
+her exaltation.
+
+The curtain should be raised quickly after it has been lowered, so as
+to make the tableau of the lighting of the tree seem, as it is, an
+essential part of the play.
+
+                                                   GERTRUDE BUCK.
+
+
+
+
+CHARACTERS
+
+
+  LITTLE RUSTER: a flute-player.
+  LILJEKRONA: a violinist, host of Lofdala.
+  OLGA: his wife.
+  OSWALD   }
+  SIGURD   } his little sons.
+  HALLA: the cook.
+  TORSTEIN: the man-servant.
+
+First produced by the Vassar Dramatic Workshop, December 16, 1916.
+
+
+
+
+THE LIGHTING OF THE CHRISTMAS TREE
+
+
+  SCENE: _The living-room of_ LOFDALA, _a Swedish manor house. It
+  is the afternoon before Christmas and the room has an atmosphere
+  of comfort and warmth; outside it is snowing. To the left is a
+  large Swedish fireplace, with its hanging black chimney-hood,
+  crane and shining kettles. A high wooden bench, a table and
+  armchair are drawn close to the fire. A heavy, iron-hinged door
+  opens outdoors at the center back. On either side are windows. At
+  the left a door leads into the kitchen, and at the right a flight
+  of stairs leads to the bedrooms. By the stairs stands a Christmas
+  tree as yet unlighted. There is a music cabinet against the back
+  wall, left; and an oblong table at the right; a carved wooden
+  chest stands beside the fireplace._
+
+  TIME: _about 1890_.
+
+  OLGA _is discovered arranging candles on the tree. She
+  is slender and moderately tall, with large eyes and rich dark
+  hair braided about her head. She wears Swedish holiday dress._
+
+  (_Enter_ OSWALD _and_ SIGURD, _running downstairs with their
+  hands full of cotton. They are six and four years old_, OSWALD
+  _being a little the taller. They are bright-faced, tow-headed
+  little boys, and are dressed in their embroidered holiday
+  suits._ OSWALD _stops halfway down, and leaning over the
+  banisters drops bits of cotton on the tree_.)
+
+OSWALD. See, Mother, it’s snowing.
+
+SIGURD. Look, Mother--it’s snowing. (_Turns at the foot of the stairs
+and runs back to_ OSWALD.)
+
+OSWALD. Don’t make such big flakes, Sigurd.
+
+SIGURD. But I’m making it snow hard.
+
+OSWALD. Oh, look, that fell on a candle.
+
+OLGA. We need some more snow over here. Come down and make it snow on
+these branches.
+
+OSWALD. But, Mother, we need some most on this side--like this.
+
+SIGURD. Where is Father?
+
+OLGA. He has gone out with Torstein in the sledge to gather green
+boughs to make the house look like Christmas.
+
+SIGURD. It’ll soon be Christmas, Mother. When can we light the candles?
+
+OLGA. When Father comes home. Have we used up all the snow, Oswald?
+
+OSWALD. Yes, I will get some more. (_Starts upstairs._) Oh! (_Draws
+back as he discovers_ RUSTER, _who has just entered and is standing on
+the landing. He is unkempt and his shabby, black coat is buttoned up
+to his chin. His eyes are small and blurred and his dark hair stands
+out like a cloud about his head. But he is not wholly unattractive. His
+features are well-formed and his black mustache is twirled at a proud
+angle. He carries his music pen and manuscript. His voice is cracked
+and harsh._)
+
+OLGA. (_Looking up_) Why, Ruster!
+
+RUSTER. (_Shivering_) I thought you might be having punch. My bones
+are frozen working up in that cold room. It would take a taste of
+hell-fire to warm me up. (_Drinking from his flask._)
+
+OLGA. (_Turning toward the boys--raising her hand as if to silence_
+RUSTER) The punch has not been made yet, Ruster. Children, have you
+forgotten your Christmas cookies? Halla will help you make them if you
+run out to her.
+
+OSWALD. Oh, I know what I want to make.
+
+SIGURD. What, Oswald?--What?
+
+OSWALD. I want a raisin in mine. (_Pushing open the door._) Can I,
+Halla?
+
+  (_Exeunt to kitchen._ OLGA _crosses to_ RUSTER.)
+
+OLGA. If you are cold, Ruster, why not stay here by the fire and copy
+your music? Is there much more to do?
+
+RUSTER. (_Seating himself and arranging pages_) Liljekrona says there
+is no hurry. When will he be home?
+
+OLGA. As soon as he has filled the sledge with boughs, for he knows we
+need him here on Christmas Eve. (_She goes to the window. Sleighbells
+are heard._) There they are, coming up the drive. We must have some
+place to put the branches. (_She spreads a cloth on the floor._ RUSTER
+_steals a drink from his flask. The door opens. Enter_ LILJEKRONA. _He
+is a tall, finely erect man, clad in a heavy fur coat that is covered
+with snow. As he takes off his cap, he discloses a mass of light hair
+brushed back from an unusually high forehead. His face is at once
+sensitive and strong. He carries a load of boughs._) Well, what an
+armful you have!
+
+LILJEKRONA. (_Gaily_) Tell the children I have brought home the whole
+forest for our Christmas.
+
+OLGA. Put down your forest over here. Was it very cold?
+
+LILJEKRONA. There has been a fine flurry all morning. (OLGA _helps him
+off with his coat_.) But the fire feels good!
+
+RUSTER. This is the warmest place in the house.
+
+LILJEKRONA. How is it going? (_Looking over_ RUSTER’S _shoulder_.) You
+haven’t forgotten how a page ought to look, have you, Ruster?
+
+RUSTER. No, I can copy, but I cannot play. I have almost forgotten the
+sound of my flute. Nobody wants a flute-player nowadays! They do not
+care for music any more in Varmland and they do not want to learn.
+
+LILJEKRONA. Yes, Varmland is not like Ekeby when we knew it.
+
+RUSTER. It’s a pity we ever left there, Liljekrona! We have never had
+such playing since--you with your violin and I with my flute. Old
+Torwaldson waving his angry stick! By Heaven, he called the souls out
+of us!
+
+LILJEKRONA. Yes, the violins sobbing--then the horns, the winds, the
+basses--each breaking over the other in thundering waves.
+
+RUSTER. Holy Mother!--that was living!
+
+LILJEKRONA. And from one patron off on the road to another, and along
+the way, what gay evenings in the tent and at the inn when a man was
+free from care!
+
+RUSTER. How you could play then! Shall I forget that night in Olaf’s
+garden? You made your fiddle sing as though your heart were in tune
+with its strings. But now, Christ’s blood! you never play like that.
+
+OLGA. He plays more beautifully now than he ever did at Ekeby.
+
+LILJEKRONA. No, there is not so much time for practice here.
+
+RUSTER. And the old spirit has gone out of you.
+
+LILJEKRONA. I sometimes think so myself. It is hard to settle down
+after a life of wandering. Something wild keeps crying in my soul,
+bidding me be off again.
+
+OLGA. Why is not home the place for music, Liljekrona? Surely those who
+love you most care most to hear. Must you seek your inspiration from
+strangers?
+
+LILJEKRONA. No, Olga, you are more to me than a world of strangers. It
+is you alone who hold me here.
+
+RUSTER. Yes--you have a warm fire and a full cellar to keep you at
+home. (LILJEKRONA _shrugs and turns away impatiently_.) But what about
+the man who has not money enough to fill his flask? (_Bitterly._) My
+horse, and carriole, and fur coat--they’re all gone! (_Drinks, then
+laughs boisterously._) But still I have friends--lots of friends in
+Varmland, and they’re always glad to see me and give me a cup of cheer!
+(_He drains his flask and wipes his mustache with the back of his
+hand._ LILJEKRONA _rises disgustedly and crosses the room_.)
+
+OLGA. (_Pointedly_) Have you more copying to do still, Ruster?
+
+RUSTER. (_Blinking at her_) The “Folksong” is almost finished. I was
+thinking, Liljekrona--that when that is done, there are two others you
+showed me yesterday, that would go well with this.
+
+LILJEKRONA. It is better alone.
+
+RUSTER. But those two shepherd songs. I took the book to my room. Wait
+till I bring it down. (_He rises unsteadily. Exit._)
+
+OLGA. (_Going to_ LILJEKRONA) Liljekrona, don’t give him more copying,
+or we shall be obliged to keep him over Christmas.
+
+LILJEKRONA. He must be somewhere.
+
+OLGA. Our Christmas is spoiled if he stays. He is so dirty and he
+drinks so. And think how bad it is for the children.
+
+LILJEKRONA. But he is an old friend.
+
+OLGA. Yet on Christmas Eve--we have kept thinking how happy we should
+be, telling stories and dancing about the tree. And you would play
+our favorite tunes. (_She looks wistfully about the partly decorated
+room._) But now all the pleasure is gone if Ruster stays!
+
+LILJEKRONA. Formerly you were glad to see him.
+
+OLGA. Yes--we all were. But not since he has become a drunkard. And,
+Liljekrona, I am afraid----
+
+LILJEKRONA. Afraid of what, dear?
+
+OLGA. (_Impetuously_) Let him go somewhere else for Christmas.
+
+LILJEKRONA. How can we send him away? It would be inhospitable. Nobody
+wants him any more than we do.
+
+OLGA. But the children, Liljekrona.
+
+  (_Enter_ RUSTER _with book_.)
+
+RUSTER. Here it is. (_Handing book to_ LILJEKRONA.)
+
+LILJEKRONA. Yes, I remember.
+
+RUSTER. Shall I copy them?
+
+LILJEKRONA. No--I can play these from the book.
+
+RUSTER. This is a poor transcription. It should be written in D instead
+of F.
+
+LILJEKRONA. Well, I can transpose it.
+
+RUSTER. I have not copied the words for the “Folksong.” Do you want it
+done?
+
+LILJEKRONA. No, it will do as it is.
+
+RUSTER. Well then, it is finished. (_Half-heartedly._) I suppose I must
+be going. (_Glances toward the window._)
+
+LILJEKRONA. (_Indifferently_) You had better stay where you are over
+Christmas.
+
+RUSTER. (_Catching the note in_ LILJEKRONA’S _voice, and with
+indignant pride_.) What do you mean, Liljekrona, shall I stay here
+because I have nowhere else to go? Why, only think how they are
+standing and waiting for me in the big ironworks in the parish of
+Bro. The guest-room will be already in order and the glass of welcome
+filled. I must hurry. I only do not know to whom I should go first.
+
+LILJEKRONA. Very well, you may go if you will.
+
+RUSTER. (_Emphatically_) Yes, I must go--at once.
+
+  (_Enter_ TORSTEIN _with logs for the fire_.)
+
+OLGA. If you wish, Torstein will drive you down. Are the horses still
+harnessed, Torstein?
+
+TORSTEIN. Yes, Ma’am.
+
+OLGA. Then bring the sledge around.
+
+RUSTER. And bring it at once. I have only to get my treasures and I am
+ready. (_Picks up his music pen and exits upstairs._)
+
+TORSTEIN. He’s not going to stay over Christmas?
+
+OLGA. You must hurry back, Torstein. The snow is getting deep.
+
+  (_Exit_ TORSTEIN. LILJEKRONA _looks over the music sheets on
+  table, and takes money from his pocket_.)
+
+OLGA. You will slip in something for Christmas?
+
+LILJEKRONA. Of course.
+
+OLGA. (_Taking down fur coat and warming it_) Will you lend him your
+big coat? Torstein can bring it back. (_After a pause._) As long as he
+wishes to go himself, it is as well to let him.
+
+  (_Enter_ RUSTER _with his belongings tied up in a blue-striped
+  cotton handkerchief, and his flute under his arm_.)
+
+LILJEKRONA. (_Meeting him and giving him what he has earned_) That is
+always poor payment for art, Ruster, but it may serve you, somehow.
+
+RUSTER. (_Dazedly_) Yes.
+
+OLGA. Will you put on this coat, Ruster? (_Helping him into coat._) You
+must keep warm, and watch that your hands and face are well covered.
+And tell Torstein where to take you in Bro.
+
+RUSTER. (_Shaking himself together and going toward door_) I’ll
+be there in time for a glass of punch and the Christmas tree at
+Erickson’s--or Oscar’s--or----
+
+  (LILJEKRONA _opens the door for him and he goes out slowly_.)
+
+OLGA. (_Calling after him_) A happy Christmas to you!
+
+LILJEKRONA. (_Faintly_) Good luck, Ruster.
+
+RUSTER. (_Dully, from without_) Good-bye.
+
+  (LILJEKRONA _closes the door and they look out the window until
+  the sleighbells jingle off_. OLGA _turns back to the room_.)
+
+OLGA. Now as soon as the boughs are up, we shall be ready for our
+Christmas tree. Don’t you think some holly would be nice for the table,
+Liljekrona? (_As_ LILJEKRONA _does not answer, she stoops and picks up
+sprigs of holly from the pile of branches, then goes to the kitchen
+door and calls_.) Children, what are you doing? Come and bring your
+play in here. (_She arranges the holly in a brass bowl on the long
+table._ LILJEKRONA _begins to put the boughs up over the door_.)
+
+  (_Enter_ OSWALD, _carrying with great care a board with some
+  dough on it, and_ SIGURD _running ahead with his fingers covered
+  with dough_.)
+
+SIGURD. (_Running to_ LILJEKRONA) Father! See my fat dough fingers.
+
+LILJEKRONA. What are you making, Sigurd?
+
+OSWALD. Christmas things for Halla to bake.
+
+SIGURD. Then they will be brown and we can eat them just like the round
+cookies. See, Mother.
+
+OSWALD. Only these aren’t round cookies, Mother. (_Sits down on the
+floor with the dough._)
+
+SIGURD. No. There is a Christmas tree.
+
+OSWALD. And I made a star.
+
+SIGURD. And I’m going to make---- (_Runs and whispers to his mother._)
+
+OLGA. A what, dear?
+
+OSWALD. (_Looking up from the floor_) A little Christ-Child we’re going
+to make.
+
+SIGURD. A little bit of a baby Christ-Child.
+
+OLGA. (_Kissing his forehead_) That will be a lovely Christmas task.
+
+OSWALD. (_Getting up and pulling at_ LILJEKRONA, _who yields_) Look,
+Father! Look at my cookie! To-night I’ll eat it for supper.
+
+LILJEKRONA. Yes. (_Pause._) I wonder how many little boys will be
+eating their Christmas cookies to-night, and how many will be without a
+bite of Christmas dinner, hungry and cold.
+
+OSWALD. Won’t they have any Christmas dinner, Father?
+
+LILJEKRONA. Some won’t. (_He turns back and continues to put up
+boughs._)
+
+SIGURD. Why won’t those little boys have any Christmas dinner, Mother?
+
+OLGA. Father meant, dear, that some children are too poor to buy any.
+
+OSWALD. Where are the poor children?
+
+OLGA. I’m afraid there are some in every village, Oswald.
+
+SIGURD. In our valley, Mother?
+
+OLGA. Yes, dear, I’m afraid there are.
+
+OSWALD. Then, Mother, if Sigurd and I made some good cookies, could we
+take them down to those poor children?
+
+OLGA. If only we knew just where we could find them, Oswald. It is hard
+sometimes to know where the lonely people are, and the hungry ones.
+
+LILJEKRONA. And when they pass so close as to touch our sleeve on the
+way we do not see them, we do not stop them, but let them plod their
+path alone.
+
+OLGA. (_Stung by_ LILJEKRONA’S _remark_) It is a good thought, Oswald.
+Take them out to Halla now, so she can bake them before to-morrow.
+
+SIGURD. I can’t make a Christ-Child, Mother. _(With a sob._) It doesn’t
+look like _anything_.
+
+OSWALD. (_With a laugh_) It looks like a star.
+
+OLGA. (_Rising_) Let me see, dear. I think Mother would know what that
+was. Take it to Halla and she will bake it. Then wash those sticky
+hands. It is time to light the tree. (_Exeunt_ OSWALD _and_ SIGURD.
+_Takes violin from the cabinet and gives it to_ LILJEKRONA.) You will
+play for us to dance?--one of the old polkas, Liljekrona.
+
+LILJEKRONA. (_Pettishly_) My E string has snapped.
+
+OLGA. Well, put on a new one. Quick, before the children come back.
+
+  (LILJEKRONA _goes slowly upstairs with his violin_. OLGA _pulls
+  out the tree from the corner and starts to light the candles with
+  a taper. Enter_ HALLA _with a punch bowl and the glasses, which
+  she places on the long table_. OSWALD _and_ SIGURD _follow, each
+  carrying a plate of cakes_.)
+
+OSWALD. Mother! Are you lighting the tree instead of Father?
+
+OLGA. Yes. Do you want to help?
+
+OSWALD. Oh, yes.
+
+SIGURD. And I want to, too.
+
+OLGA. You shall, dear. But first put the cakes on the table. (OSWALD
+_and_ SIGURD _deposit their cakes and run to the tree_. OLGA _gives her
+taper to_ SIGURD.) Here, Sigurd, first the low ones--there. (_Lighting
+another taper._) Now, Oswald. Can you do it, dear?
+
+OSWALD. You light those, Mother. (_Pointing to higher ones._)
+
+OLGA. There.
+
+SIGURD. The top one of all isn’t lit, Mother.
+
+OLGA. No, Father is the only one who can reach that. We’ll have to
+leave it. Come, Halla.
+
+  (_Enter_ LILJEKRONA _by the stairs without his violin_.)
+
+OLGA. We’re all ready for a polka.
+
+LILJEKRONA. I have no new string for my fiddle.
+
+OLGA. But you _can_ play on three strings.
+
+LILJEKRONA. I can remember no polkas.
+
+OLGA. (_Approaching him persuasively_) Why, Liljekrona, can’t you play
+anything? Sha’n’t we be able to dance at all?
+
+LILJEKRONA. Torstein is not back yet. He is the best dancer of all.
+Perhaps it was hard to find the house. (_Goes to the window._)
+
+OLGA. Well then, we’ll wait our dancing for Torstein, and have our
+punch and cakes while they are hot.
+
+LILJEKRONA. The sparrows are twittering about the window sill most
+miserably. Where is the pole with the sheaves for them?
+
+OLGA. I did not think of it till now. Did you remember, Halla?
+
+HALLA. No, I didn’t. Poor little things!
+
+LILJEKRONA. How is it that you forgot on this day, of all days? Do old
+customs mean nothing to you? Or is it the heartlessness of those who
+shut their eyes to the meaning of old beliefs? At Ekeby no one ever
+forgot!
+
+OLGA. (_Disturbed_) No, my dear, we are not heartless. The sheaves
+shall be put out as soon as Torstein returns. Come, shall we have our
+punch and cakes? Children, are you hungry?
+
+OSWALD. I am.
+
+SIGURD. I want a cookie from my plate.
+
+LILJEKRONA. And there are no candles in the windows. Nothing is done as
+it used to be. (_He seats himself on the wooden bench._)
+
+OLGA. Oh, why--why, I had intended to light the candles. (_Goes to
+mantel._) Come, children, before you have your cookies will you help
+Mother? (_She takes from the shelf above the fireplace two wooden
+frames, in each of which is set a row of candles. She lights them and
+gives one to each of the boys._) Careful. Put them on the windowsills.
+
+OSWALD. I want mine in this window. You put yours over there, Sigurd.
+
+OLGA. Halla, take the punch to the table by the fire. (OLGA _seats
+herself near_ LILJEKRONA.) Come, children. (OSWALD _and_ SIGURD _come
+to her side_.) Sigurd, do you know why we put candles in the windows on
+Christmas Eve?
+
+OSWALD. So that people can see where we live!
+
+OLGA. Yes--dear; and there is a story that the little Christ-Child goes
+about on Christmas Eve looking for a welcome. (_She pours some punch
+for_ LILJEKRONA, _who is looking intently at her_.)
+
+SIGURD. And if he sees our lights, Mother, will he come to our house?
+
+OLGA. Yes, dear, and when you hear him say: “Behold I stand at the
+door and knock----” (_She passes glass of punch to_ LILJEKRONA.)
+
+LILJEKRONA. (_Ignoring it, and meeting her glance with a steady gaze_)
+“And if any man hear my voice and will open the door, I will come in
+and sup with him, and he with me.” Your candles are too late. The door
+is closed. The voice is gone. (_Rises and exits slowly to his room._)
+
+OSWALD. (_After a pause_) Why did Father go away, Mother?
+
+HALLA. Is it anything the matter with the punch, Ma’am?
+
+OLGA. (_Hesitating_) No, Halla, it’s not the punch--I think he’s
+not--very happy----
+
+SIGURD. Won’t he come back, Mother? Who will tell us stories?
+
+  (_Wild music is heard from_ LILJEKRONA’S _room. It rises and
+  falls in passionate rushes and casts a spell over those who
+  listen_.)
+
+OLGA. (_Rising suddenly at the sound_) He is playing. Why--he has not
+played like that since he came home. It is his great heart full of
+revolt from all that is small about us. “You thought to bind me,” he is
+saying, “you thought to make me as small-minded as yourselves.” Oh, I
+was wrong! I thought to shut out unhappiness, but with it I have shut
+out love. To-morrow he will be gone, if God does not work a miracle
+in the night. (_She sinks into her chair and covers her face with her
+hands. The boys sit quite still and look with awe at their mother._
+HALLA _wrings her hands in a half-understanding and miserable way_.)
+
+  (_Sleighbells are heard._ HALLA _goes to the window_.)
+
+HALLA. It must be Torstein come back again at last. No, there are two
+of them. And yet that’s Torstein. He’s getting out. He’s helping the
+other. (_In a tone of horror._) Why, it must be Ruster with him!
+
+OLGA. (_Until now heedless, looking and drying her eyes_) _Ruster_, did
+you say, Halla? Has Ruster come back again? (_She approaches the window
+and looks out._) Surely it is he! (_She opens the door. The two men
+enter. They are covered with snow._ TORSTEIN _is blue with the cold,
+and_ RUSTER _seems half-frozen. His mustache hangs down over his mouth.
+He leans on_ TORSTEIN. _The children jump up from the floor._) Ruster,
+you are welcome back to Lofdala. (_She loosens his coat and leads him,
+with_ TORSTEIN’S _help, to the fire_. HALLA _draws up the armchair into
+which_ RUSTER _sinks weakly. The children watch._)
+
+TORSTEIN. (_Apologetically_) I had to bring him back, Ma’am. At every
+house they were either going away over Christmas, or were crowded with
+company. They didn’t even ask him to get out of the sledge. And the
+snow was so thick I thought we’d both be frozen.
+
+OLGA. You did well to bring him, Torstein. (_She rubs_ RUSTER’S _hands
+to give them life_. TORSTEIN _stands by the fire_.) Halla, is the punch
+still hot?
+
+HALLA. Yes, Ma’am.
+
+OLGA. Then pour out a glass. It will warm him.
+
+  (HALLA _pours out two glasses. One she gives to_ TORSTEIN, _the
+  other_ OLGA _holds to_ RUSTER’S _lips_.)
+
+TORSTEIN. (_Smacking his lips_) Um! That puts life into you! (_Sets
+down his glass._) Well, I must drive the horses around, or they’ll be
+drifted in.
+
+  (_Exit by front door._ OSWALD _and_ SIGURD _watch from the
+  window_.)
+
+RUSTER. (_Gaining consciousness and looking about with a sad, puzzled
+expression_) How did I come here again? It is strange, all strange to
+be in Liljekrona’s house--I thought---- (_Abruptly._) Why are you so
+kind to me? I am only an old broken-down instrument....
+
+OLGA. We are glad to see you, Ruster! And I want you to think--you have
+never been away. Let me have your wet coat. (_Helps him out of it._)
+Halla will dry it in the kitchen.
+
+  (_Exit_ HALLA _with coat_.)
+
+OLGA. (_Refilling his glass and putting it on the table by him_) Are
+you warmer now?
+
+RUSTER. Yes--quite warm, thank you.
+
+OSWALD. (_Offering the cookie he has been holding_) Here’s a cookie.
+(SIGURD, _who is about to eat the last fragment of his, stops and holds
+it out to_ RUSTER.)
+
+RUSTER. (_Starting up suddenly_) I can’t stay here! I am of no
+use--here--or anywhere!
+
+OLGA. (_Putting a hand on his arm_) You are mistaken, Ruster. You may
+help, if you will. I must attend to setting the table for dinner and
+the children will be quite forsaken. Will you look after them a little?
+
+RUSTER. (_Rising, alarmed_) I can’t do that!--Why, I--they----
+
+  (_Exit_ OLGA, _resolutely_. RUSTER _looks after her, then turns,
+  and seeing his glass of punch on the table, starts to pick it up.
+  He encounters the steady gaze of the children, restrains himself
+  and fumbles in his pocket. He draws out his flute and blows a
+  note on it. The boys come closer._)
+
+OSWALD. How do you do that? (RUSTER _does not answer, but blows again_.)
+
+SIGURD. Why do you lift your fingers?
+
+RUSTER. To make the notes.
+
+SIGURD. Let me try! (RUSTER _places his little fingers over two of the
+stops_. SIGURD _blows, but no sound comes_. OSWALD _laughs_.)
+
+OSWALD. Let _me_ try! (RUSTER _shows him also--but still no tone_.) How
+do you do it? (_He tries again._)
+
+RUSTER. I blow in here. (_Showing them._) And I keep the holes covered
+with my fingers. When I want to make a note, I lift up a finger, like
+this. (_He blows._)
+
+SIGURD. Blow another.
+
+RUSTER. (_Blows another. Then both over again_) This is A and this is B.
+
+OSWALD. A and B. You can’t play _them_. They’re letters.
+
+RUSTER. Yes, and in music they are the names of the notes. (_Takes out
+a score and with a crayon makes a few notes._) This is the way they
+look.
+
+SIGURD. Let me see.
+
+OSWALD. No! That’s not right! That’s not what’s in our storybook!
+See--I’ll show you. (_He runs to music cabinet, and from lower cupboard
+pulls out a battered cloth book._)
+
+RUSTER. (_To_ SIGURD) Can this boy spell his name?
+
+SIGURD. Yes--S I G U R D!
+
+OSWALD. See--look at _our_ book. There isn’t any A and B like that!
+That is A and that is B. (_Pointing._)
+
+RUSTER. Can you read that?
+
+OSWALD. Yes, I can read it.
+
+  (_Enter_ OLGA _with tablecloth, glasses and silver. She smiles at
+  the group and quietly begins to arrange the table._)
+
+OSWALD. (_Reading_) “Far away, in the deep forest there once grew----”
+
+BOTH CHILDREN. “A pretty Fir-_Tree_. The sun shone full upon _him_, the
+breeze played freely around _him_, and in the n--n----” (_Looking up
+questioningly at_ RUSTER.)
+
+RUSTER. “Neigh-bor-hood.”
+
+OSWALD. “Neighborhood grew many Fir-Trees.”
+
+BOTH CHILDREN. “Some older, some younger.”
+
+OSWALD. (_Turning from the book_) Look--I’ll draw you a fir-tree. (_He
+draws on_ RUSTER’S _music score--spreading it on the floor_.)
+
+SIGURD. (_Slowly_) “But the little Fir-Tree was not happy; he was
+always long--longing to be tall; he th--th----”
+
+  (RUSTER, _who during the last part of the reading has been paying
+  no attention, suddenly covers his face with his hands. His
+  shoulders shake a little._ SIGURD _looks up frightened_. OLGA
+  _crosses quickly to him_.)
+
+OLGA. (_Gently_) Ruster--Ruster! Don’t feel badly!
+
+RUSTER. (_Sobbing softly_) Yes--I am of no use any more.
+
+OLGA. (_Sympathetically_) I know--I know. You cannot make a living by
+your music and you are destroying yourself with brandy. You have been
+turned away from every door where you have knocked. But, Ruster----
+
+RUSTER. Yes, I am worn out. I ought to be thrown away! Nobody needs me.
+
+OLGA. But don’t you see that to be with the children, as to-night,
+would be something for you? If you would teach children you would be
+welcomed everywhere. Look at them, Ruster! (_She places the boys in
+front of him._) Look at them!
+
+RUSTER. (_Blinking_) I dare not!
+
+OLGA. (_Laughing joyously_) Then you must accustom yourself to them,
+Ruster! Perhaps you could help them with their reading. They need a
+schoolmaster! (_Turning to children triumphantly._) How would you like
+that, children?
+
+  (_Enter_ LILJEKRONA, _violin under his arm_. RUSTER _remains
+  motionless by the fireplace with bowed head_.)
+
+LILJEKRONA. Why are you laughing, Olga, what is it?
+
+OLGA. Nothing--but that Ruster has come again!
+
+LILJEKRONA. (_Perplexed_) Ruster here again?
+
+OLGA. (_Beaming_) Yes, and he is going to stay with us to teach our
+little boys.
+
+LILJEKRONA. Ruster! (_With amazement_) You have asked him to teach----?
+
+OLGA. Yes, Oswald and Sigurd. He has been helping them this afternoon.
+
+LILJEKRONA. But--has he promised to give up----?
+
+OLGA. He has promised nothing. But there is much about which he must be
+careful when he has to look little children in the eyes every day.
+
+LILJEKRONA. You’re sure he can do it?
+
+OLGA. (_Not heeding_) If it had not been Christmas, perhaps I should
+not have ventured; but if our Lord dared to place His own son among us
+sinners, surely we can dare to let our children try to save a human
+soul.
+
+  (LILJEKRONA’S _face twitches and twists. He gently kisses his
+  wife’s hand as if asking forgiveness._)
+
+LILJEKRONA. The children must come and kiss their Mother’s hand! (_They
+do so, though not just knowing why._)
+
+OLGA. (_Going to_ RUSTER _and holding out her hand_) Ruster, it is you
+who have made our Christmas happy. (_He kisses her hand._)
+
+
+  CURTAIN
+
+  (_The lifted curtain reveals the whole family gathered about the
+  tree_, HALLA, TORSTEIN _and all, while_ LILJEKRONA _lights the
+  topmost candle_.)
+
+*** END OF THE PROJECT GUTENBERG EBOOK 68417 ***

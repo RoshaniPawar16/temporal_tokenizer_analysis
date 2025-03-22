@@ -1,0 +1,680 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 62592 ***
+
+Transcriber Note
+
+Text emphasis is denoted as _Italics_ and =Bold=. Whole and fractional
+parts of numbers as 12-3/4.
+
+
+
+
+                    U. S. DEPARTMENT OF AGRICULTURE
+
+                      FARMERS' BULLETIN No. 1460
+
+
+                        SIMPLE PLUMBING REPAIRS
+
+                              IN THE HOME
+
+
+PLUMBING often gets out of order, and upon prompt attention to the
+little repair jobs depends its smooth, satisfactory operation. This
+bulletin describes simple ways of doing little things, with the aid of
+a few simple tools, to keep home plumbing in good working order.
+
+
+  Washington, D. C.                   Issued September 1925
+                                       Revised October 1936
+
+
+
+
+SIMPLE PLUMBING REPAIRS IN THE HOME
+
+
+By George M. Warren, _associate hydraulic engineer, Division of
+Structures, Bureau of Agricultural Engineering_
+
+
+
+
+CONTENTS
+
+
+                                                 Page
+
+
+  Faucets                                           1
+
+  Stop and waste cocks                              5
+
+  Ball cocks                                        6
+
+  Flush valves for low tanks                        7
+
+  Clogged pipes                                     7
+
+  Thawing pipes                                     9
+
+  Removing scale from water hacks and coils        10
+
+  Leaks in pipes and tanks                         11
+
+  Cracked laundry tubs                             13
+
+  Hose menders or splicers                         13
+
+
+HOW BEST to make small plumbing repairs is a problem that comes to most
+householders, as it is sometimes difficult to secure the services of
+a plumber. In such situations a little knowledge on the part of the
+householder often saves much delay, trouble, and expense. Where local
+or State plumbing regulations are in force, and extensive repairs or
+alterations are contemplated, the householder should make sure that the
+work is duly authorized and is done by a properly qualified plumber.
+
+Few persons realize the potential danger lurking in leaky waste pipes,
+drains, and sewers, or in piping between systems, whereby sewage or an
+impure water supply may even in the slightest degree gain access to a
+potable water supply.
+
+In making repairs it is often necessary to tighten or to loosen a screw
+or nut, and the householder is sometimes uncertain in which direction
+it should be turned. To screw or tighten an ordinary right-hand screw,
+nut, or bolt, first think of the head of the part to be turned as being
+the face of a clock and the screw driver or wrench as being the shaft
+which turns the clock hands, and then rotate the tool from left to
+right, in the same direction that the clock hands move. Conversely, to
+unscrew or loosen, rotate the tool from right to left, in the direction
+opposite to clockwise. Small brass screws and stems are easily twisted
+off and rendered useless, especially if a large tool is used to turn
+them. Undue strain should be avoided, as it may result in the part or
+parts being broken at an unfortunate time.
+
+
+
+FAUCETS
+
+
+SEAT WASHERS
+
+Badly worn washers make faucets noisy, hard to operate, and wasteful of
+water. Moderate force on the handle of a faucet in good repair should
+stop all flow and drip. Figure 1 shows an ordinary half-inch =T=-handle
+compression faucet which closes against the pressure of the water. To
+replace the seat washer, shut off the water to the faucet. Unscrew the
+cap nut with a monkey wrench. (Placing cloth or thick paper between the
+jaws of the wrench saves marring the cap nut.) Take hold of the faucet
+handle and unscrew the stem from the body of the faucet. With a screw
+driver remove the washer screw at the bottom of the stem. This screw is
+often hard to start. Applying one or two drops of kerosene and lightly
+tapping the head of the screw may help to loosen it in the stem. Use
+strong, even force on the screw driver, the blade of which should have
+a good square edge to fit the slot. The head of the screw often splits
+before the shank of the screw turns in the stem, because it is already
+corroded and weakened. If it splits, deepen the slot in the head with
+a hacksaw, cutting a little into the shank of the screw. No harm is
+done if the saw cuts slightly into the stem of the faucet. The washer
+screw may now be turned with a small screw driver. Replace the old
+washer with a new one, replace the washer screw, screw the stem into
+the faucet, and screw down the cap nut. Rubber and fiber composition
+washers for hot- or cold-water faucets cost 10 to 15 cents a dozen. A
+"floating" washer, costing 15 cents, is very serviceable. A few washers
+of the needed sizes should be kept in the home. If none are at hand, a
+temporary washer may be cut from a piece of leather, rubber, or sheet
+packing. Leather is preferable on cold-water faucets and rubber on
+hot-water faucets.
+
+[Illustration: Figure 1.--Compression faucet.]
+
+[Illustration: Figure 2.--Compression faucet for a washstand.]
+
+Figure 2 shows an ordinary 3/8-inch, 4-ball-handle compression faucet
+for a washstand. To replace the seat washer, shut off the water to
+the faucet and open the faucet one or two turns of the handle. With a
+monkey wrench on the hexagonal part of the stuffing box unscrew the
+stuffing box from the body of the faucet. Lift out the stem, replace
+the old washer with a new one, as previously described, and screw the
+stuffing box into the body.
+
+A worn washer with constant leakage over the seat of a compression
+faucet, together with grit lodging there, often causes the seat to
+become cut, nicked, and grooved. The trouble occurs more often in
+hot-water than in cold-water faucets. Such seats can easily be reground
+or squared with a simple seat dressing tool, two types of which are
+shown in figure 3, _A_ and _B_. A seat dresser with four cutters for
+different-sized faucets costs about $2, and its use saves buying new
+faucets. To dress the seat of a faucet, unscrew the stem from the
+body to the faucet, as above described. Screw the adjustable, threaded
+cone of the tool (see fig. 3, _A_) down into the body of the faucet,
+as shown in figure 3, _C_, thus centering it over the seat. With the
+hand, as shown in figure 3, _D_, gently rotate the wheel handle at the
+top of the tool several times, and the cutter on the bottom of the stem
+squares the seat. Turn the faucet bottom side up and shake out the
+cuttings. Reassemble the faucet and turn on the water to wash out any
+remaining cuttings.
+
+[Illustration: Figure 3.--Faucet seat dressers: _A_, dresser with
+inside adjustable cone; _B_, dresser with outside adjustable cone; _C_,
+dresser A screwed into a compression faucet; _D_, rotating the wheel
+handle and cutter.]
+
+Seat washers are subject to damage from metal filings left in newly
+installed water pipes. A good plumber, before screwing up a piece of
+pipe, always stands the pipe on end and raps it with a hammer to clear
+the bore.
+
+Figure 4, _A_, shows an ordinary half-inch lever-handle Fuller faucet
+which closes with the pressure. As shown in figure 4, _B_, the bottom
+of the spindle is eccentric, so that slight turning of the handle moves
+the rubber ball to and from the beveled seat. To replace the ball shut
+off the water to the faucet. Unscrew the body from the tailpiece with
+the hands or with a monkey wrench on the hexagonal part of the body of
+the faucet. It may be necessary to apply a wrench to the hexagonal nut
+on the tailpiece and press the wrench downward to prevent unscrewing
+the tailpiece. Unscrew the stem nut, which holds the brass cap and
+rubber ball on the stem. Put on a new ball and replace cap and nut. Red
+rubber balls are considered to be better than black balls for hot-water
+faucets. Avoid using too large a ball, as swelling of the rubber may
+hinder the flow. Screw the faucet into the tailpiece. Just before the
+joint closes or "makes up", wrap a little string packing or candle
+wicking around the thread on the faucet to make the joint water-tight.
+
+[Illustration: Figure 4.--Fuller faucet: _A_, body unscrewed from
+tailpiece; _B_, spindle and stem removed from body.]
+
+
+TOP WASHERS AND PACKINGS
+
+A top washer or packing; snugly fitting the stem is necessary to
+prevent leakage upward through the cap nut when a faucet is opened. If
+the space is too tightly packed, the stem binds, nudging it hard to
+operate the faucet; if too loosely packed, water spurts from the top of
+the cap nut. Figure 5, _A_, shows a soft rubber-and-fabric top washer
+suitable for the compression faucet shown in figure 1. This washer is
+one-eighth of an inch thick and rests on the top of the body of the
+faucet, making a water-tight joint when the cap nut is screwed down.
+Just below the soft washer and inside the top of the body a thin brass
+washer is placed to take the wear when the faucet is fully opened.
+These washers are separated in the illustration but are together when
+placed in a faucet.
+
+[Illustration: Figure 5.--Top washers and packings: _A_, top washers
+commonly used in ordinary compression faucets (fig. 1); _B_, top
+washers which fill the space beneath the cap nut (fig. 1) _C_, candle
+wick packing and brass washer for washstand faucet (fig. 2); _D_,
+spindle packing for Fuller faucet (fig. 4).]
+
+New faucets of the kind shown in figure 1 usually have the top washers
+shown in figure 5, _B_. The rubber washer fills the space beneath the
+cap nut, and the thin fiber and brass washers are for the purposes
+described above. If no top washer is available, the space may be
+packed with candle wicking or soft twine, to which a little mutton or
+beef tallow should be applied to lubricate the stem, to preserve the
+packing, and to make it more impervious to water.
+
+When placing the top washer or washers on a compression faucet of
+the kind shown in figure 1, it is unnecessary to shut off the water
+provided the faucet is closed. With the right hand keep the faucet
+closed and with a monkey wrench in the left hand unscrew the cap nut.
+Unscrew the handle screw and remove handle and cap nut. Put on new
+washers as shown in figure 5, _A_, or 5, _B_, and reassemble the parts.
+
+Figure 5, _C_, shows the stem packing for the washstand faucet shown
+in figure 2. The packing space is very small and is filled with candle
+wicking lubricated with tallow. There is a thin brass friction washer
+in the bottom of the stuffing box, and a hexagonal packing nut screws
+into the top of the box. To renew the candle wicking, keep the faucet
+closed. Unscrew the packing nut with a monkey wrench, wrap a little
+wicking around the stem, and screw the packing nut down against the
+wicking and into the stuffing box.
+
+Spindle packing for a Fuller faucet (see fig. 4) is shown in figure 5,
+_D_, and consists of three collars or rings obtainable from plumbing
+dealers for a few cents. A lead ring or packing about one-eighth of an
+inch long goes first (lowest) on the spindle; then a rubber-and-fabric
+composition packing about one-fourth of an inch long; then a brass
+packing about one-fourth of an inch long. Screwing down the cap nut
+compresses the composition packing, and the metal packings take up
+friction and wear. To put in new packings, shut off the water from the
+faucet and remove the handle and cap nut, as described in connection
+with compression faucets.
+
+[Illustration: Figure 6.--Stop and waste cock; _A_, parts assembled;
+_B_, parts unassembled.]
+
+
+
+
+STOP AND WASTE COCKS
+
+
+Figure 6, _A_, shows an adjustable socket-lever handle, ground key,
+flat way, stop and waste cock to shut off water to part or all of a
+piping system and to drain the higher situated pipes from which the
+flow is cut off. A stop and waste should always be placed on the
+house supply pipe just inside the house or the cellar wall. They are
+very useful on branch pipes from a cellar or kitchen to upstairs
+or back rooms subject to freezing temperatures or other temporary
+discontinuance of the supply. Figure 6, _B_, shows the disassembled
+parts, all of which except the handle are brass. The key or plug is
+ground to a water-tight fit in the body of the cock, and water is
+turned on or off by giving the handle a quarter turn. Turning the
+handle crosswise of the pipe shuts off the supply, and the dead water
+drains back through the small round hole in the side of the plug and
+out the waste tube.
+
+Many stop and waste cocks have broken or bent handles or are otherwise
+rendered useless, because people do not understand them. As received
+from dealers, the nut on the bottom of the plug is generally screwed up
+tight, making it difficult or impossible to turn the handle and plug.
+Long periods of disuse frequently cause the plug to stick fast in the
+body. The plug is easily loosened by slightly unscrewing the bottom
+nut and striking the lower end of the plug a few light blows with a
+hammer. Slight leakage caused by wear of the plug or dirt around it
+may be prevented by cleaning the plug and tightening the bottom nut. A
+plug badly worn from long or continual use can be reground, but it is
+usually better and cheaper to get a new plug or a complete new cock.
+
+
+
+
+BALL COCKS
+
+
+Figure 7, _A_, shows an ordinary compound-lever ball cock to control
+the water supply in a flush tank. The float ball and the seat washer on
+the bottom of the plunger are the only parts likely to need repairs.
+The buoyancy of the float is the force which lowers the plunger,
+shutting off the water as the tank fills. A leaky, water-logged float
+holds the plunger up, permitting constant flow and waste of water. A
+small leak in a copper float can be soldered; but if in bad condition,
+the float should be replaced by a new one. A good copper, bakelite, or
+hard-rubber float 4 by 5 inches costs 25 to 50 cents.
+
+[Illustration: Figure 7.--Ball cock; _A_, parts assembled; _B_,
+plunger, washer, and cap.]
+
+Figure 7, _B_, shows the plunger and washer-holder cap which screws
+on the bottom of the plunger. The washer should be of soft rubber or
+leather, because the force which holds it to its seat is not heavy. The
+cap is thin brass. To replace the washer, shut off the water and drain
+the tank. Unscrew the two thumbscrews which pivot the float-rod lever
+and plunger lever. Push the two levers to the left, drawing the plunger
+lever through the head of the plunger. Lift out the plunger, unscrew
+the cap on the bottom of the plunger, insert a soft, new washer, and
+reassemble the parts. The cap may be so corroded and weakened that it
+breaks during removal from the plunger. A new cap is then necessary,
+and it is well to have one or two on hand. When putting a washer on a
+ball cock, examine the seat to see that it is free of nicks and grit.
+The seat may need regrinding, as explained under compression faucets.
+
+
+
+
+FLUSH VALVES FOR LOW TANKS
+
+
+Figure 8 shows a common type of flush valve for a low tank. Probably
+no other plumbing in the home needs attention so often. It is under
+water and subject to fouling and neglect. The hollow rubber ball gets
+out of shape and fails to drop squarely into the hollowed seat. The
+handle and lever fail to work smoothly or the lift wires get out of
+plumb, causing the ball to remain up when it should drop to its seat.
+To remove these difficulties, stop inflow to the tank by holding up
+the float of the ball cock or supporting it with a stick. Drain the
+tank by raising the rubber ball. If the ball is worn, out of shape,
+or has lost its elasticity, unscrew the lower lift wire from the ball
+and replace it with a new one. A 2-1/2-inch rubber ball costs about
+25 cents, and a new one should always be kept in the house. The lift
+wires should be straight and plumb. The lower lift wire is readily
+centered over the center of the valve by means of the adjustable guide
+holder. By loosening the thumbscrew, the holder is raised, lowered, or
+rotated about the overflow tube! By loosening the lock nut and turning
+the guide screw, the horizontal position of the guide is fixed exactly
+over the center of the valve, these adjustments are very important.
+The upper lift wire should loop into the lever armhole nearest to a
+vertical from the center of the valve. A tank should empty within 10
+seconds. Owing to lengthening of the rubber ball and insufficient rise
+from its seat, the time may be longer than 10 seconds and the flush
+correspondingly weak. This trouble may be overcome by shortening the
+loop in the upper lift wire. A drop or two of lubricating oil on the
+lever mechanism makes it work more smoothly.
+
+[Illustration: Figure 8.--Flush valve for low tank.]
+
+
+
+
+CLOGGED PIPES
+
+
+Rust and dirt in water pipes are more or less successfully removed
+as follows: Tie a piece of small, stout cord to each end of a 2-foot
+length of small chain. Each piece of cord should be a little longer
+than the length of pipe to be cleaned. Attach the free end of one of
+the cords to a stiff steel wire and push the wire and cord through the
+pipe. By means of the cords pull the chain back and forth through the
+pipe, and then thoroughly flush the pipe with clean water under strong
+pressure. Long lines may be opened at intervals and cleaned section by
+section.
+
+Other methods are: Using a swab or wire brush attached to a small steel
+or brass rod; flushing with a powerful hand pump; or filling the pipe
+with diluted muriatic acid and allowing it to stand in the pipe long
+enough for the acid to act. If the treatment is unsuccessful it should
+be repeated. A mixture of 1 part of acid and 7 parts of water allowed
+to stand overnight in 1,000 feet of badly rusted 1-inch pipe has given
+good results. After the acid treatment the pipe should be flushed long
+and thoroughly with clean water to remove as fully as possible all
+dirt, rust, and traces of acid.
+
+When new piping is put in, abrupt turns are sometimes made with =T=
+branches instead of elbows. The unused leg of the branch can be closed
+with a screw plug, thus permitting easy access to the interior of the
+pipe.
+
+=Caution:= When a stop and waste (or valve) on a water service is
+closed to permit cleaning or repairs, care should be taken to prevent
+the formation of a vacuum in the high parts of the water piping and
+the connections to plumbing fixtures; otherwise siphon action may draw
+pollution from water closets having water-controlled or seat-operated
+flush valves and from bathtubs, washbasins, laundry tubs, or other
+fixtures in which the spout (discharge end of the water line) is lower
+than the fixture rim, or worse, below the fixture overflow. Vacuum and
+siphon action may be destroyed by opening the highest connected faucet
+or an air cock in the top of the water line or by equipping the system
+with suitable automatic vacuum breakers.
+
+[Illustration: Figure 9.--Cleaning out a sink trap.]
+
+All waste pipes and traps are subject to fouling. Dirt collects in
+the bottom and grease adheres to the sides. The usual way of clearing
+ordinary fixtures traps is to unscrew the clean-out ping, as shown
+in figure 9, and wash out the obstructing matter or pull it out with
+a wire bent to form a hook. Small obstructions are often forced down
+or drawn up by the use of a simple rubber force cup (sometimes called
+"the plumber's friend") costing 30 to 60 cents. This device is shown in
+figure 10. The cup is placed over the fixture outlet and the fixture is
+partially filled with water. The wood handle of the cup is then worked
+rapidly down and up, causing alternate expulsion of the water from
+beneath the cup and suction upward through the waste pipe and trap. If
+a trap and the waste pipe from it are clogged with grease, hair, or
+lint, it is best to open or disconnect the trap and dig out the greasy
+matter with a stick. The use of chemical solvents in waste pipes is
+explained in Farmers' Bulletin 1426, "Farm Plumbing."
+
+[Illustration: Figure 10.--Rubber force cup.]
+
+A variety of inexpensive flexible coil wire augers and sewer rods are
+available for removing obstructions--mainly newspapers, rags, toilet
+articles, grease, garbage, or other solids--from traps, waste pipes,
+sewers, and drains. The growth of roots in sewers and drains causes
+much trouble which better workmanship in making the joints would have
+avoided. Augers and rods come in various sizes and lengths. Stock
+lengths for clean-out augers for closet bowls are 3, 6, and 9 feet
+and cost from $1 upward. Figure 11 shows two kinds of flexible augers
+for general purposes. The upper is 4 feet long and has a small steel
+cable from the handle to the wire hooks. The hooks can be drawn into
+the coil, thus facilitating entry into a trap. The lower auger is 8
+feet long, has a crank handle and corkscrew point generally preferred
+for closet-bowl work. Placing a few sheets of toilet paper in the bowl
+and then flushing usually indicates whether the obstruction has been
+dislodged.
+
+Flexible coil steel waste-pipe cleaners commonly come in diameters of
+3/16, 1/4, 3/8, 1/2, and 5/8 inch and in lengths of 6, 9, 15, 25, 50,
+and 100 feet. The 3/16-inch size in 9-foot length without handle or
+corkscrew point costs about $1. The 1/4-inch size in 9-foot length with
+automatic grip handle costs slightly more. The small sizes are very
+useful in sink, lavatory, and bathtub traps and waste pipes.
+
+Flat steel sewer rods, equipped with either an oval or a revolving
+spear point and an automatic grip handle, come in stock lengths of
+25, 50, 75, and 100 feet, in widths of 1/4 to 1-1/2 inches, and in
+thicknesses of 1/16 and 1/8 inch. A rod 1/16 by 3/4 inch and 50 feet
+long costs $4 to $5; a rod 1/8-inch thick, costing $5 to $8, is
+desirable for ordinary sewer-cleaning purposes. Round sewer rods of
+7/8-inch hickory or ash in 3- or 4-foot lengths with hook couplings
+and simple sewer brushes and root cutters are described in Farmers'
+Bulletin 1227, Sewage and Sewerage of Farm Homes.
+
+[Illustration: Figure 11.--Coil spring augers.]
+
+
+
+
+THAWING PIPES
+
+
+The middle of a frozen pipe should never be thawed first, because
+expansion of the water confined by ice on both sides may burst the
+pipe. When thawing a water pipe, work toward the supply, opening a
+faucet to show when the flow starts. When thawing a waste or sewer
+pipe, work upward from the lower end to permit the water to drain away.
+
+Applying boiling water or hot cloths to a frozen pipe is simple
+and effective. Where there is no danger of fire a torch or burning
+news-paper run back and forth along the frozen pipe gives quick
+results. Underground or otherwise inaccessible pipes may be thawed as
+follows: Open the frozen water pipe on the house end. Insert one end
+of a small pipe or tube. With the aid of a funnel at the other end of
+the small pipe pour boiling water into it and push it forward as the
+ice melts. A piece of rubber tubing may be used to connect the funnel
+to the thaw pipe. Hold the funnel higher than the frozen pipe, so
+that the hot water has head and forces the cooled water back to the
+opening, where it may be caught in a pail. The head may be increased
+and the funnel may be more conveniently used if an elbow and a piece of
+vertical pipe are added to the outer end of the thaw pipe, as shown in
+figure 12. Add more thaw pipe at the outer end until a passage is made
+through the ice. Withdraw the thaw pipe quickly after the flow starts.
+Do not stop the flow until the thaw pipe is fully removed and the
+frozen pipe is cleared of ice. A small force pump is often used instead
+of a funnel and is much to be preferred for opening a long piece of
+pipe. If available, a jet of steam may be used instead of hot water;
+being hotter, it is more rapid.
+
+[Illustration: Figure 12.--Thawing a frozen pipe.]
+
+Frozen traps and waste pipes are sometimes thawed by pouring in caustic
+soda or lye, obtainable at grocery stores for about 25 cents per pound.
+Chemicals of this character should be labeled "Poison" and should be
+kept where children cannot get them. To prevent freezing, the water
+in the traps of a vacant house should be removed during cold weather,
+and the traps should be filled with kerosene, crude glycerin, or a
+very strong brine made of common salt and water, or other substance
+mentioned in Farmers' Bulletin 1426, Farm Plumbing.
+
+
+
+
+REMOVING SCALE FROM WATER BACKS AND COILS
+
+
+Hard water causes a limy deposit or scale on the inside of water backs
+and heating coils. If allowed to accumulate the scale retards the
+circulation and heating of the water and, by closure of the bore, may
+prove dangerous. Moreover, continued neglect makes it increasingly
+difficult to remove the scale.
+
+The water back or coil should be removed from the fire box. At the
+union or other joints nearest the fire box disconnect all pipes and
+unscrew them from the water back. If there is a clamp which holds the
+fire-brick lining against the oven, loosen it and remove side and
+end linings. Lift out the water back and take it out on the ground.
+Soft scale or sludge may be removed by pounding the water back with
+a mallet or hammer and then flushing with a strong jet of water. A
+long gouge or chisel is used on those surfaces that can be reached.
+Sometimes the water back is heated in a blacksmith's forge and then
+pounded, but unless carefully done this treatment may break it. Some
+householders keep a spare water back for use while the other is being
+cleaned.
+
+Waters of varying chemical composition cause scale differing in
+composition and hardness. Ordinary limestone (calcium carbonate) scale,
+if not of excessive thickness, may readily be removed with muriatic
+acid. Gypsum (calcium sulphate) scale is hard and resistant and with
+other constituents in their more compact forms is little affected by
+muriatic acid. The water back should be laid on the ground and filled
+with a strong solution of the acid in water. The strength of the
+solution should vary with the amount of deposit, the ordinary mixture
+being 1 part of acid and 5 to 7 parts of water. If the deposit is very
+thick, the acid needs little dilution. Commercial muriatic acid in
+bottles containing 6 pounds (about 2-1/2 quarts) costs 20 to 25 cents a
+pound. The bottle should be labeled "Muriatic acid--poison"; and, like
+the chemicals previously mentioned, it should be kept where children
+cannot get it. Heating the water back hastens the action of the acid.
+At the end of an hour or two, or sooner if the deposit is dissolved,
+pour the solution from the water back and flush it thoroughly with hot
+water to remove the acid. If all the deposit has not been removed,
+repeat the operation, making sure that the acid is completely washed
+out before replacing the water back. In replacing the water back it is
+important to have it level, using a spirit level for this purpose.
+
+Similar methods may be used with copper coils. Place the coil (or
+heater) on two sticks over a large bowl. With the aid of a lead funnel
+pour the acid solution down through the coil. Dip from the bowl and
+continue to circulate the solution through the coil until the deposit
+is dissolved. The coil should then be thoroughly washed out with hot
+water.
+
+The hot-water flow pipe close to a water back or coil frequently
+becomes thickly covered with scale. If the pipe is brass, it may be
+disconnected and treated with acid and then washed out with hot water.
+If the pipe is galvanized iron and in bad condition, it will probably
+be more satisfactory to replace it with new pipe.
+
+
+
+
+LEAKS IN PIPES AND TANKS
+
+
+A small leak in a water pipe can be stopped in an emergency as follows:
+Place a flat rubber or leather gasket over the leak and hammer a piece
+of sheet metal to fit over the gasket; secure both to the pipe with
+a clamp obtainable at hardware or 5-and-10-cent stores. A small leak
+under low pressure is sometimes stopped by shutting off the water
+and then embedding the pipe in richly mixed portland-cement mortar
+or concrete. Broken sewer pipe can be repaired in like manner, and a
+wrapping of wire netting embedded in the mortar or concrete increases
+its strength. However, it is better to relay the sewer and make all
+joints water-tight and root-proof as described in Farmers Bulletin
+1227, Sewage and Sewerage of Farm Homes. A small hole in cast-iron pipe
+may be tapped for a screw plug.
+
+Where a leaky screw joint cannot be tightened with a pipe wrench, the
+leak is sometimes stopped with a blunt, chisel or calking tool and
+hammer. Sometimes a crack or hole is cleaned out and then plugged and
+calked with lead, or a commercial iron cement mixed to the consistency
+of stiff putty. Sometimes a pipe band, a clamp with two bolts (similar
+to but stronger than the one shown in fig. 14), or a split sleeve is
+employed to hold a thin coating of iron cement or a gasket over a leak.
+If the leak is at a screw joint, the band is usually coated inside with
+one-eighth of an inch of iron cement and then slipped over the pipe.
+Keeping the bolt farthest from the coupling or fitting a little tighter
+than the other, both bolts, are tightened. During the tightening, the
+band should be driven with a hammer snugly against the coupling or
+fitting.
+
+In addition to these methods and devices, there are several kinds of
+good, inexpensive, ready-made pipe and joint repairers obtainable of
+manufacturers and dealers.
+
+A corroded and leaky spot in a steel tank or range boiler can be closed
+with an inexpensive repair bolt or plug obtainable from dealers. Figure
+13 shows a home-made repairer consisting of a three-sixteenths by
+3-inch toggle bolt costing 10 cents and a flat rubber gasket, brass
+washer, and nut. The link of the bolt, after being passed through the
+hole, takes an upright position, and screwing up the nut forces the
+gasket tightly against the outside of the boiler.
+
+[Illustration: Figure 13.--Home-made repairer; _A_, passing the link of
+the toggle bolt through the hole (enlarged) in the tank; _B_, side view
+of edge of tank with bolt, washers, and nut after being tightened; _C_,
+outside view of completed job.]
+
+A small hole must be reamed or enlarged with a round file to a diameter
+of about five-eighths inch. The metal beneath the gasket should be
+firm and clean. A little candlewick packing may be wrapped around the
+bolt to prevent leakage along the bolt. Sometimes a hole is closed by
+driving in a tapered steel pin to turn the metal inward, forming a
+surface which can be tapped for an ordinary screw plug. A hole in the
+wall of a tank or pipe having considerable thickness can be easily and
+quickly closed by screwing in a tapered steel tap plug which cuts and
+threads its way through the wall. These plugs in different sizes are
+obtainable of dealers and a monkey wrench is the only tool required to
+insert them; it is unnecessary to shut off or drain the water from the
+tank or pipe.
+
+A small leak at a seam or rivet can often be closed by merely rubbing a
+cold chisel along the beveled edge of the joint. Do not attempt to calk
+a seam unless the plates have considerable thickness and the rivets are
+closely spaced and are close to the calking edge, and then use extreme
+caution. Run a regular calking tool or blunt chisel along the beveled
+edge, tapping the tool very lightly with a light hammer to force the
+edge of the upper plate against and into the lower plate.
+
+
+
+
+CRACKED LAUNDRY TUBS
+
+
+Cracks in slate, soapstone, or cement laundry tubs are made water-tight
+with a mixture of litharge and glycerin or a specially prepared
+commercial cement. The litharge and glycerin are mixed and stirred to
+form a smooth heavy paste free from lumps. The crack should be cleaned
+out to remove all grease and dirt and the paste should be worked into
+the crack with a case knife. A paste of portland cement and water, or
+of the white of an egg and fresh lump lime, has been used successfully
+for this purpose.
+
+[Illustration: Figure 14.--Hose menders: Above, hose mender and hose
+coupling; below, two pieces of hose joined with a mender. The left-hand
+piece is fastened with wire twisted with a pair of pliers, and the
+right-hand piece is clamped.]
+
+
+
+
+HOSE MENDERS OR SPLICERS
+
+
+A break in garden hose can be quickly repaired or two pieces of hose
+can be joined with a 10- or 15-cent iron or brass hose mender or
+splicer shown in figure 14 (upper left). Cut off the defective piece of
+hose, insert the mender in the good ends of the hose, and wire or clamp
+the hose as shown in figure 14 (below). Menders come to slip inside of
+1/2-, 3/4-, or 1-inch hose. The regular brass hose coupling shown in
+figure 14 (upper right), which costs 25 to 40 cents, can be used for
+this purpose.
+
+
+
+                U. S. GOVERNMENT PRINTING OFFICE: 1946
+
+             For sale by the Superintendent of Documents,
+                   U. S. Government Printing Office
+                Washington 25 D. C.  --   Price 5 cents
+
+
+       *       *       *       *       *
+
+
+Transcriber Note
+
+Illustrations were repositioned so as to not split paragraphs.
+
+
+
+
+
+
+
+
+
+End of Project Gutenberg's USDA Farmer's Bulletin 1460, by George M. Warren
+
+*** END OF THE PROJECT GUTENBERG EBOOK 62592 ***

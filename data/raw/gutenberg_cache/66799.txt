@@ -1,0 +1,744 @@
+﻿The Project Gutenberg eBook of Ditching Procedure, B-29s with
+Four-Gun Turret, by Henry E Bergschneider
+
+This eBook is for the use of anyone anywhere in the United States and
+most other parts of the world at no cost and with almost no restrictions
+whatsoever. You may copy it, give it away or re-use it under the terms
+of the Project Gutenberg License included with this eBook or online at
+www.gutenberg.org. If you are not located in the United States, you
+will have to check the laws of the country where you are located before
+using this eBook.
+
+Title: Ditching Procedure, B-29s with Four-Gun Turret
+
+Author: Henry E Bergschneider
+
+Release Date: November 23, 2021 [eBook #66799]
+
+Language: English
+
+Produced by: Stephen Hutcheson, Sue Clark and the Online Distributed
+             Proofreading Team at https://www.pgdp.net
+
+*** START OF THE PROJECT GUTENBERG EBOOK DITCHING PROCEDURE, B-29S
+WITH FOUR-GUN TURRET ***
+
+
+
+HEADQUARTERS, PYOTE ARMY AIR FIELD
+
+Office of the Director of Training
+
+Pyote, Texas
+
+12 June 1945
+
+SUBJECT: Ditching Procedure, B-29's with Four-Gun Turret
+
+TO: All Holders of 2AF manuals 50-26, 50-27, 50-37, 50-43, 50-56 and
+    100-7 Sec. IV
+
+1. In accordance with 2AF Ltr. 50-36, 2 June 1945, the inclosed
+procedures are effective immediately and will be inserted in all copies
+of the above-listed manuals now in use or to be issued for use.
+
+By order of Lt. Col. ZUMWALT:
+
+<signature>
+
+HENRY E. BERGSCHNEIDER,
+
+Major, Air Corps,
+
+Training Secretary.
+
+
+
+
+(2AF Manuals 50-26, 50-27, 50-56, 50-37, 50-43, 100-7 Sec. IV. Rev 2
+June 1945.)
+
+DITCHING PROCEDURE
+
+1. The first series of ditching positions for the B-29 were suggested by
+the "BOEING AIRCRAFT COMPANY", manufacturers of the aircraft. These
+positions were on trial, but were as logical as could be devised without
+actual ditching experience. The Boeing procedure and its various
+modifications have all been steps in the right direction. Changes have
+been based on actual ditching experience and procedures set forth here
+are results of all ditching experiences to date. They are not to be
+considered permanent. As new ditching characteristics of the B-29 are
+learned, they will be incorporated to assure the safest procedures
+possible.
+
+2. The importance of these approved methods cannot be stressed too
+highly. Modifications in these procedures may NOT be made at the
+discretion of the airplane commander.
+
+3. Experience to date proves that ditching characteristics of the B-29
+are superior to those of any other aircraft now used by the Army Air
+Forces. The greatest factor in ditching is the airplane's buoyancy
+qualities. The B-29 has demonstrated, even during mediocre ditchings,
+that it will stay afloat for long periods and does not sink easily. On a
+moderately successful ditching, the aircraft is apt to stay afloat for
+at least ten (10) minutes and may float for several hours.
+
+4. Ditching impacts are severe. Every precaution must be taken to pad
+against impact in the ditching position. Parachute, cushions, clothing,
+etc., will be used for this purpose. During impact the individual's head
+must be well protected. The flak helmet will be worn only when the head
+can be braced against something substantial. In all positions, the legs
+should be flexed to absorb the effects of a sudden jar.
+
+5. When injured crew members are aboard they will be put in the proper
+positions and/or supported between the legs of other crew position. This
+may be difficult, but it has proven successful on numerous occasions.
+
+6. Ditching position practice, as a part of completed ditching drill, is
+a "MUST" for all combat crews. Every step in ditching procedure must be
+practiced and learned thoroughly by the entire crew as a unit, in order
+to eliminate confusion. Practice it against time until the entire
+process becomes second nature.
+
+Paragraphs 7 through 91 are Ditching Procedure instructions for the
+various B-29 crew positions. These are reproduced separately for
+insertion in the applicable S.O.P.'s for these positions.
+
+92. If time permits, take one or more parachutes from the ditched
+aircraft. The silk can be used to catch rain water and the shrouds have
+no end of use. The web belt, which supports the canteen, should be
+buckled on after removal of flak vests.
+
+93. Prior to ditching all escape hatches will be jettisoned or opened to
+prevent jamming in the event that the fuselage accordions.
+
+94. An important phase of crew cooperation is the estimation of time
+remaining aloft and the position where the ditching will take place. The
+most efficient Air-Sea Rescue Agency is only as efficient as the
+cooperation it receives from crews in distress. The rescue agency must
+get notification of the ditching and the position. Crews must practice
+transmitting procedure until it becomes S.O.P. The engineer, with the
+information available, will make an estimate as to the time remaining
+aloft. This information will to passed to the navigator, who, on the
+basis of the information supplied, will estimate the position of
+ditching. The position will be given to the radio operator who will
+transmit the information to personnel who can effect a rescue.
+
+95. This system of cooperation will not always be applicable, but it is
+a framework for crew cooperation.
+
+EQUIPMENT:
+
+96. Combat crews are subject to last-minute changes in aircraft.
+Therefore, it is essential to standardize the location of emergency
+equipment within the aircraft. Individual responsibility for the removal
+of this equipment must also be fixed.
+
+97. The locations of the emergency equipment are based on their
+accessibility for the crews when in ditching position.
+
+98. The later B-29 aircraft are equipped with the new modified E-2 raft.
+This raft has its accessory kit lashed to the raft itself. The older
+type utilizes the A-3 raft which stows the accessory kit in the airplane
+proper.
+
+CHANGES:
+
+99. As new developments are made in the Air-Sea Rescue field, existing
+procedures and equipment will be modified. Research in this field is
+being conducted in the United States as well as in the theatres of
+operation. The new information, as it becomes available, will to
+disseminated to the units of the command via publications and by
+Personal Equipment Officers.
+
+                      ----------END----------
+
+100. A combat crew thoroughly trained in procedures and equipment is a
+crew with plenty of life assurance which may, one day, pay the largest
+kind of dividend----HUMAN LIFE------.
+
+
+
+
+[Transcriber's Note: On this page in the original, the "DITCHING
+PROCEDURE" block shown below (items "a" through "i" and the two "NB"
+items) was struck out with a large, red "X". Revised Radio Operator
+ditching procedure instructions were provided on the subsequent page.]
+
+
+                         B-29--11-MAN CREW
+
+RADIO OPERATOR                                        DITCHING PROCEDURE
+
+a. Acknowledge in turn: "RADIO OPERATOR DITCHING."
+
+b. Remove parachute harness, flak suit and winter flying boots.
+
+c. Transmit position, course, altitude, and ground speed as received
+from Navigator on DF. Relay fix or bearings obtained to Navigator.
+
+d. Give DF contact all data without waiting too long for answer.
+
+e. Destroy classified material.
+
+f. Continue to send emergency signals. On command, from Pilot to take
+ditching position, screw down transmitter key.
+
+g. Remain at Radio Operator's seat with safety belt fastened, resting
+cushioned back and head against upper turret wall.
+
+h. After airplane comes to rest, exit through astrodome.
+
+i. Inflate life vest and proceed to right wing.
+
+NB Get Gibson Girl (SCR578) out.
+
+NB On two gun turrets seated on floor back against read of Engineer's
+panel, or braced in seat.
+
+
+                                                           CRASH LANDING
+
+a. Sends position report obtained from Navigator.
+
+b. Take sitting position on floor with back against Pilot's armor
+plate. Squeeze in with Flight Engineer and brace foot across the aisle.
+Pad with chute and cushion.
+
+Exit: Pilot's (right) window. 2EX, Engineer's hatch.
+
+Quick Crash: Lay on floor with feet against engineer's panel or ditching
+position.
+
+
+                                                                 BAILOUT
+
+a. Destroy classified material etc.
+
+b. Send position obtained from Navigator.
+
+   Exit: 1st man out nose wheel well. 2EX, bomb-bay.
+
+
+
+
+[Transcriber's Note: Two different pages were in the original for the
+Radio Operator's Ditching Procedure. This is the second page.]
+
+
+      2 June 1945    Emergency Procedure B-29    11 or 12 Man Crew
+
+Radio Operator                                        Ditching Procedure
+
+a. Acknowledge in turn. "RADIO OPERATOR DITCHING."
+
+b. Remove parachute harness, flak suit, and winter flying boots. Wear
+flying gloves if possible.
+
+c. Destroy classified materials: Check IFF setting.
+
+d. Continue to send emergency signals. On command of the Pilot, clamp
+down transmitter key.
+
+e. Lower the trailing antenna full length, watch current meter and
+notify AC of height above water when it grounds. (100-110 feet)
+
+f. Pocket remaining two smoke grenades or put in shirt front. Keep
+grenades in cases.
+
+g. Remain in position with safety belt fastened; facing aft, with back,
+shoulders and head pressing against upper turret wall as close to center
+as possible, cushioning back and head with parachutes, bracing legs
+against bulkhead.
+
+h. After forward movement of aircraft has ceased, pull both life raft
+release handles.
+
+i. Exit through astrodome to right life raft.
+
+N.B. Set Gibson Girl (SCR 578) out.
+
+
+Radio Operator                                             Crash Landing
+
+a. Sends position report obtained from Navigator.
+
+b. Take sitting position on floor with back against Pilot's armor
+plate. Squeeze in with Flight Engineer and brace foot across the aisle.
+Pad with chute and cushion.
+
+Exit: Engineer's hatch. Secondary Exit: Pilot's window.
+
+
+Radio Operator                                                   Bailout
+
+a. Destroy classified material.
+
+b. Send position obtained from Navigator.
+
+Exit: Nose wheel well, 2nd. Secondary Exit: Bomb-bay.
+
+
+Radio Operator                                                  Take-Off
+
+a. Take-off position: In seat.
+
+b. Procedure: Fasten safety belt. Face aft and brace head with hands
+behind neck, shoulders and back against upper turret. If time permits,
+remove astrodome prior to crash.
+
+c. Exit: Remove parachute and exit through astrodome.
+
+
+
+
+[Transcriber's note: To allow the information in the FUSE CHART to be
+presented within page width restraints, the original table has been
+reformatted into a multi-line format.]
+
+              RADIO OPERATORS SUPER-FORTRESS FUSE CHART
+
+RADIO SET
+  FUSE RATING
+  NUMBER AND LOCATION
+  PURPOSE
+
+274N COMMAND RECEIVER
+  10 Amp.
+  One active and one spare in each rec.
+  In low V. line to dyn.
+
+274N COMMAND MODULATOR
+  20 Amp.
+  2 active on right end of modulator and two spare on the left end
+  In low V. line to dyn. in L.V. line to heaters.
+
+348 LIAISON RECEIVER
+  5 Amp.
+  In the receiver proper.
+  In L.V. line to dyn.
+
+AN/ART-13 COLLINS TRANSMITTER.
+  1 Amp.
+  In dynamotor proper.
+    Breaks H.V. line if press. relay fails.
+  Two circuit breakers on the base of the Collins dyn.
+    In L.V. input to dyn & L.V. input Xmitter.
+
+269G or AN/ARN 7 RADIO COMP.
+  5 Amp.
+  One active and one spare in radio compass relay shield.
+  Removes 115 V. 400 cycle from set.
+
+RC-43 MARKER BEACON RECEIVER
+  10 Amp.
+  One active and one spare in radio compass relay shield.
+  Removes L.V. from Radio Comp. & Marker Beacon.
+
+RC-36-B Interphone
+  15 Amp.
+  1 active & 1 spare in radio comp. relay shld.
+  In L.V. line to dyn.
+
+AN/AIC-2 Interphone
+  One circuit breaker somewhere near the amplifier.
+  In L.V. line to dyn.
+
+ANTENNA REEL
+  10 Amp.
+  Between bomb bays in fuse box #183
+  Removes L.V. from motor.
+
+ANTENNA REEL RELAY
+  2 Amp.
+  1 active & 1 spare in radio comp. relay shld.
+  Removes L.V. from relay.
+
+522 VHF COMMAND
+  40 Amp.
+  Fuse box #862 located on right side fire control room. May have reset
+    switch instead.
+  In L.V. line to dynamotor
+
+595/695 IFF
+  10 Amp.
+  1 active & 1 spare in radio comp. relay shld.
+  In L.V. line to dynamotor
+
+RADIO OPERATORS SUIT
+  20 Amp.
+  Engineers Aft fuse panel.
+  Removes power from suit.
+
+RC 103 (B/L) BC-733-D Lateral receiver.
+   10 Amp.
+   One active and one spare in Junction Shield, fuse box #586 located
+     behind A/C seat.
+   In L.V. line to dynamotor
+
+AN-ARN-5A (B/L) R-89/ARN-5A Vertical glide path receiver.
+  10 amp circuit breaker
+  On front of Junction Shield, (fuse box #586) behind A/C's seat.
+  In L.V. input to the set. The set has no dynamotor.
+
+
+
+
+Transcriber's notes:
+
+    This is the ditching procedure specifically for a Radio Operator on
+    a B-29.
+
+    In item #93, "all excape hatches" changed to "all escape hatches".
+
+    Correction in original to first ditching procedure, "BAILOUT"
+    section, item "b.": "1st man out" (typed) changed to "2nd man out"
+    (handwritten.)
+
+*** END OF THE PROJECT GUTENBERG EBOOK DITCHING PROCEDURE, B-29S WITH
+FOUR-GUN TURRET ***
+
+Updated editions will replace the previous one--the old editions will
+be renamed.
+
+Creating the works from print editions not protected by U.S. copyright
+law means that no one owns a United States copyright in these works,
+so the Foundation (and you!) can copy and distribute it in the
+United States without permission and without paying copyright
+royalties. Special rules, set forth in the General Terms of Use part
+of this license, apply to copying and distributing Project
+Gutenberg-tm electronic works to protect the PROJECT GUTENBERG-tm
+concept and trademark. Project Gutenberg is a registered trademark,
+and may not be used if you charge for an eBook, except by following
+the terms of the trademark license, including paying royalties for use
+of the Project Gutenberg trademark. If you do not charge anything for
+copies of this eBook, complying with the trademark license is very
+easy. You may use this eBook for nearly any purpose such as creation
+of derivative works, reports, performances and research. Project
+Gutenberg eBooks may be modified and printed and given away--you may
+do practically ANYTHING in the United States with eBooks not protected
+by U.S. copyright law. Redistribution is subject to the trademark
+license, especially commercial redistribution.
+
+START: FULL LICENSE
+
+THE FULL PROJECT GUTENBERG LICENSE
+PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK
+
+To protect the Project Gutenberg-tm mission of promoting the free
+distribution of electronic works, by using or distributing this work
+(or any other work associated in any way with the phrase "Project
+Gutenberg"), you agree to comply with all the terms of the Full
+Project Gutenberg-tm License available with this file or online at
+www.gutenberg.org/license.
+
+Section 1. General Terms of Use and Redistributing Project
+Gutenberg-tm electronic works
+
+1.A. By reading or using any part of this Project Gutenberg-tm
+electronic work, you indicate that you have read, understand, agree to
+and accept all the terms of this license and intellectual property
+(trademark/copyright) agreement. If you do not agree to abide by all
+the terms of this agreement, you must cease using and return or
+destroy all copies of Project Gutenberg-tm electronic works in your
+possession. If you paid a fee for obtaining a copy of or access to a
+Project Gutenberg-tm electronic work and you do not agree to be bound
+by the terms of this agreement, you may obtain a refund from the
+person or entity to whom you paid the fee as set forth in paragraph
+1.E.8.
+
+1.B. "Project Gutenberg" is a registered trademark. It may only be
+used on or associated in any way with an electronic work by people who
+agree to be bound by the terms of this agreement. There are a few
+things that you can do with most Project Gutenberg-tm electronic works
+even without complying with the full terms of this agreement. See
+paragraph 1.C below. There are a lot of things you can do with Project
+Gutenberg-tm electronic works if you follow the terms of this
+agreement and help preserve free future access to Project Gutenberg-tm
+electronic works. See paragraph 1.E below.
+
+1.C. The Project Gutenberg Literary Archive Foundation ("the
+Foundation" or PGLAF), owns a compilation copyright in the collection
+of Project Gutenberg-tm electronic works. Nearly all the individual
+works in the collection are in the public domain in the United
+States. If an individual work is unprotected by copyright law in the
+United States and you are located in the United States, we do not
+claim a right to prevent you from copying, distributing, performing,
+displaying or creating derivative works based on the work as long as
+all references to Project Gutenberg are removed. Of course, we hope
+that you will support the Project Gutenberg-tm mission of promoting
+free access to electronic works by freely sharing Project Gutenberg-tm
+works in compliance with the terms of this agreement for keeping the
+Project Gutenberg-tm name associated with the work. You can easily
+comply with the terms of this agreement by keeping this work in the
+same format with its attached full Project Gutenberg-tm License when
+you share it without charge with others.
+
+1.D. The copyright laws of the place where you are located also govern
+what you can do with this work. Copyright laws in most countries are
+in a constant state of change. If you are outside the United States,
+check the laws of your country in addition to the terms of this
+agreement before downloading, copying, displaying, performing,
+distributing or creating derivative works based on this work or any
+other Project Gutenberg-tm work. The Foundation makes no
+representations concerning the copyright status of any work in any
+country other than the United States.
+
+1.E. Unless you have removed all references to Project Gutenberg:
+
+1.E.1. The following sentence, with active links to, or other
+immediate access to, the full Project Gutenberg-tm License must appear
+prominently whenever any copy of a Project Gutenberg-tm work (any work
+on which the phrase "Project Gutenberg" appears, or with which the
+phrase "Project Gutenberg" is associated) is accessed, displayed,
+performed, viewed, copied or distributed:
+
+  This eBook is for the use of anyone anywhere in the United States and
+  most other parts of the world at no cost and with almost no
+  restrictions whatsoever. You may copy it, give it away or re-use it
+  under the terms of the Project Gutenberg License included with this
+  eBook or online at www.gutenberg.org. If you are not located in the
+  United States, you will have to check the laws of the country where
+  you are located before using this eBook.
+
+1.E.2. If an individual Project Gutenberg-tm electronic work is
+derived from texts not protected by U.S. copyright law (does not
+contain a notice indicating that it is posted with permission of the
+copyright holder), the work can be copied and distributed to anyone in
+the United States without paying any fees or charges. If you are
+redistributing or providing access to a work with the phrase "Project
+Gutenberg" associated with or appearing on the work, you must comply
+either with the requirements of paragraphs 1.E.1 through 1.E.7 or
+obtain permission for the use of the work and the Project Gutenberg-tm
+trademark as set forth in paragraphs 1.E.8 or 1.E.9.
+
+1.E.3. If an individual Project Gutenberg-tm electronic work is posted
+with the permission of the copyright holder, your use and distribution
+must comply with both paragraphs 1.E.1 through 1.E.7 and any
+additional terms imposed by the copyright holder. Additional terms
+will be linked to the Project Gutenberg-tm License for all works
+posted with the permission of the copyright holder found at the
+beginning of this work.
+
+1.E.4. Do not unlink or detach or remove the full Project Gutenberg-tm
+License terms from this work, or any files containing a part of this
+work or any other work associated with Project Gutenberg-tm.
+
+1.E.5. Do not copy, display, perform, distribute or redistribute this
+electronic work, or any part of this electronic work, without
+prominently displaying the sentence set forth in paragraph 1.E.1 with
+active links or immediate access to the full terms of the Project
+Gutenberg-tm License.
+
+1.E.6. You may convert to and distribute this work in any binary,
+compressed, marked up, nonproprietary or proprietary form, including
+any word processing or hypertext form. However, if you provide access
+to or distribute copies of a Project Gutenberg-tm work in a format
+other than "Plain Vanilla ASCII" or other format used in the official
+version posted on the official Project Gutenberg-tm website
+(www.gutenberg.org), you must, at no additional cost, fee or expense
+to the user, provide a copy, a means of exporting a copy, or a means
+of obtaining a copy upon request, of the work in its original "Plain
+Vanilla ASCII" or other form. Any alternate format must include the
+full Project Gutenberg-tm License as specified in paragraph 1.E.1.
+
+1.E.7. Do not charge a fee for access to, viewing, displaying,
+performing, copying or distributing any Project Gutenberg-tm works
+unless you comply with paragraph 1.E.8 or 1.E.9.
+
+1.E.8. You may charge a reasonable fee for copies of or providing
+access to or distributing Project Gutenberg-tm electronic works
+provided that:
+
+* You pay a royalty fee of 20% of the gross profits you derive from
+  the use of Project Gutenberg-tm works calculated using the method
+  you already use to calculate your applicable taxes. The fee is owed
+  to the owner of the Project Gutenberg-tm trademark, but he has
+  agreed to donate royalties under this paragraph to the Project
+  Gutenberg Literary Archive Foundation. Royalty payments must be paid
+  within 60 days following each date on which you prepare (or are
+  legally required to prepare) your periodic tax returns. Royalty
+  payments should be clearly marked as such and sent to the Project
+  Gutenberg Literary Archive Foundation at the address specified in
+  Section 4, "Information about donations to the Project Gutenberg
+  Literary Archive Foundation."
+
+* You provide a full refund of any money paid by a user who notifies
+  you in writing (or by e-mail) within 30 days of receipt that s/he
+  does not agree to the terms of the full Project Gutenberg-tm
+  License. You must require such a user to return or destroy all
+  copies of the works possessed in a physical medium and discontinue
+  all use of and all access to other copies of Project Gutenberg-tm
+  works.
+
+* You provide, in accordance with paragraph 1.F.3, a full refund of
+  any money paid for a work or a replacement copy, if a defect in the
+  electronic work is discovered and reported to you within 90 days of
+  receipt of the work.
+
+* You comply with all other terms of this agreement for free
+  distribution of Project Gutenberg-tm works.
+
+1.E.9. If you wish to charge a fee or distribute a Project
+Gutenberg-tm electronic work or group of works on different terms than
+are set forth in this agreement, you must obtain permission in writing
+from the Project Gutenberg Literary Archive Foundation, the manager of
+the Project Gutenberg-tm trademark. Contact the Foundation as set
+forth in Section 3 below.
+
+1.F.
+
+1.F.1. Project Gutenberg volunteers and employees expend considerable
+effort to identify, do copyright research on, transcribe and proofread
+works not protected by U.S. copyright law in creating the Project
+Gutenberg-tm collection. Despite these efforts, Project Gutenberg-tm
+electronic works, and the medium on which they may be stored, may
+contain "Defects," such as, but not limited to, incomplete, inaccurate
+or corrupt data, transcription errors, a copyright or other
+intellectual property infringement, a defective or damaged disk or
+other medium, a computer virus, or computer codes that damage or
+cannot be read by your equipment.
+
+1.F.2. LIMITED WARRANTY, DISCLAIMER OF DAMAGES - Except for the "Right
+of Replacement or Refund" described in paragraph 1.F.3, the Project
+Gutenberg Literary Archive Foundation, the owner of the Project
+Gutenberg-tm trademark, and any other party distributing a Project
+Gutenberg-tm electronic work under this agreement, disclaim all
+liability to you for damages, costs and expenses, including legal
+fees. YOU AGREE THAT YOU HAVE NO REMEDIES FOR NEGLIGENCE, STRICT
+LIABILITY, BREACH OF WARRANTY OR BREACH OF CONTRACT EXCEPT THOSE
+PROVIDED IN PARAGRAPH 1.F.3. YOU AGREE THAT THE FOUNDATION, THE
+TRADEMARK OWNER, AND ANY DISTRIBUTOR UNDER THIS AGREEMENT WILL NOT BE
+LIABLE TO YOU FOR ACTUAL, DIRECT, INDIRECT, CONSEQUENTIAL, PUNITIVE OR
+INCIDENTAL DAMAGES EVEN IF YOU GIVE NOTICE OF THE POSSIBILITY OF SUCH
+DAMAGE.
+
+1.F.3. LIMITED RIGHT OF REPLACEMENT OR REFUND - If you discover a
+defect in this electronic work within 90 days of receiving it, you can
+receive a refund of the money (if any) you paid for it by sending a
+written explanation to the person you received the work from. If you
+received the work on a physical medium, you must return the medium
+with your written explanation. The person or entity that provided you
+with the defective work may elect to provide a replacement copy in
+lieu of a refund. If you received the work electronically, the person
+or entity providing it to you may choose to give you a second
+opportunity to receive the work electronically in lieu of a refund. If
+the second copy is also defective, you may demand a refund in writing
+without further opportunities to fix the problem.
+
+1.F.4. Except for the limited right of replacement or refund set forth
+in paragraph 1.F.3, this work is provided to you 'AS-IS', WITH NO
+OTHER WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PURPOSE.
+
+1.F.5. Some states do not allow disclaimers of certain implied
+warranties or the exclusion or limitation of certain types of
+damages. If any disclaimer or limitation set forth in this agreement
+violates the law of the state applicable to this agreement, the
+agreement shall be interpreted to make the maximum disclaimer or
+limitation permitted by the applicable state law. The invalidity or
+unenforceability of any provision of this agreement shall not void the
+remaining provisions.
+
+1.F.6. INDEMNITY - You agree to indemnify and hold the Foundation, the
+trademark owner, any agent or employee of the Foundation, anyone
+providing copies of Project Gutenberg-tm electronic works in
+accordance with this agreement, and any volunteers associated with the
+production, promotion and distribution of Project Gutenberg-tm
+electronic works, harmless from all liability, costs and expenses,
+including legal fees, that arise directly or indirectly from any of
+the following which you do or cause to occur: (a) distribution of this
+or any Project Gutenberg-tm work, (b) alteration, modification, or
+additions or deletions to any Project Gutenberg-tm work, and (c) any
+Defect you cause.
+
+Section 2. Information about the Mission of Project Gutenberg-tm
+
+Project Gutenberg-tm is synonymous with the free distribution of
+electronic works in formats readable by the widest variety of
+computers including obsolete, old, middle-aged and new computers. It
+exists because of the efforts of hundreds of volunteers and donations
+from people in all walks of life.
+
+Volunteers and financial support to provide volunteers with the
+assistance they need are critical to reaching Project Gutenberg-tm's
+goals and ensuring that the Project Gutenberg-tm collection will
+remain freely available for generations to come. In 2001, the Project
+Gutenberg Literary Archive Foundation was created to provide a secure
+and permanent future for Project Gutenberg-tm and future
+generations. To learn more about the Project Gutenberg Literary
+Archive Foundation and how your efforts and donations can help, see
+Sections 3 and 4 and the Foundation information page at
+www.gutenberg.org
+
+Section 3. Information about the Project Gutenberg Literary
+Archive Foundation
+
+The Project Gutenberg Literary Archive Foundation is a non-profit
+501(c)(3) educational corporation organized under the laws of the
+state of Mississippi and granted tax exempt status by the Internal
+Revenue Service. The Foundation's EIN or federal tax identification
+number is 64-6221541. Contributions to the Project Gutenberg Literary
+Archive Foundation are tax deductible to the full extent permitted by
+U.S. federal laws and your state's laws.
+
+The Foundation's business office is located at 809 North 1500 West,
+Salt Lake City, UT 84116, (801) 596-1887. Email contact links and up
+to date contact information can be found at the Foundation's website
+and official page at www.gutenberg.org/contact
+
+Section 4. Information about Donations to the Project Gutenberg
+Literary Archive Foundation
+
+Project Gutenberg-tm depends upon and cannot survive without
+widespread public support and donations to carry out its mission of
+increasing the number of public domain and licensed works that can be
+freely distributed in machine-readable form accessible by the widest
+array of equipment including outdated equipment. Many small donations
+($1 to $5,000) are particularly important to maintaining tax exempt
+status with the IRS.
+
+The Foundation is committed to complying with the laws regulating
+charities and charitable donations in all 50 states of the United
+States. Compliance requirements are not uniform and it takes a
+considerable effort, much paperwork and many fees to meet and keep up
+with these requirements. We do not solicit donations in locations
+where we have not received written confirmation of compliance. To SEND
+DONATIONS or determine the status of compliance for any particular
+state visit www.gutenberg.org/donate
+
+While we cannot and do not solicit contributions from states where we
+have not met the solicitation requirements, we know of no prohibition
+against accepting unsolicited donations from donors in such states who
+approach us with offers to donate.
+
+International donations are gratefully accepted, but we cannot make
+any statements concerning tax treatment of donations received from
+outside the United States. U.S. laws alone swamp our small staff.
+
+Please check the Project Gutenberg web pages for current donation
+methods and addresses. Donations are accepted in a number of other
+ways including checks, online payments and credit card donations. To
+donate, please visit: www.gutenberg.org/donate
+
+Section 5. General Information About Project Gutenberg-tm electronic works
+
+Professor Michael S. Hart was the originator of the Project
+Gutenberg-tm concept of a library of electronic works that could be
+freely shared with anyone. For forty years, he produced and
+distributed Project Gutenberg-tm eBooks with only a loose network of
+volunteer support.
+
+Project Gutenberg-tm eBooks are often created from several printed
+editions, all of which are confirmed as not protected by copyright in
+the U.S. unless a copyright notice is included. Thus, we do not
+necessarily keep eBooks in compliance with any particular paper
+edition.
+
+Most people start at our website which has the main PG search
+facility: www.gutenberg.org
+
+This website includes information about Project Gutenberg-tm,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.

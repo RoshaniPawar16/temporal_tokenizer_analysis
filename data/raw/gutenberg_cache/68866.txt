@@ -1,0 +1,1922 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 68866 ***
+
+NOW READY.
+
+_Second and Enlarged Edition._
+
+The Steel Square
+
+AND ITS USES.
+
+By FRED. T. HODGSON.
+
+
+This is the only work on THE STEEL SQUARE AND ITS USES ever published.
+It is Thorough, Exhaustive, Clear, and Easily Understood. Confounding
+terms and scientific phrases have been religiously avoided where
+possible, and everything in the book has been made so plain that a boy
+twelve years of age, possessing ordinary intelligence, can understand
+it from end to end.
+
+The New Edition is Illustrated with over Seventy-five Wood-cuts,
+showing how the Square may be used for solving almost every problem in
+the whole Art of Carpentry.
+
+The following synopsis of the contents of the work will give some idea
+of its character and scope.
+
+ --History of the “Square.”--Description, with Explanation of the
+ Rules, Figures, Scales, and Divisions shown on good Squares.
+
+ --Brace Rules, Octagonal Scale, Board, Plank and Scantling Rules,
+ fully explained and described.
+
+ --How to lay out Rafters, Hips, Jack-Rafters, Purlins, Bevel Works,
+ etc., etc.
+
+ --Backing for Hips, Lengths and Bevels of Valley Rafters. Laying out
+ Stairs and Strings.
+
+ --How to describe Circles, Ellipses, Parabolas and other figures, with
+ the Square.
+
+ --How to obtain Bevels for Hoppers and all kinds of Splayed Work and
+ Spring Mouldings, by the Square.
+
+ --Bisecting Circles, Proportion of Circles, Division of Widths,
+ Bisection of Angles, Diminishing Stiles, Centering Circles, etc., etc.
+
+ --Theoretical Rafters, Cuts for Mitre Boxes, Measurement of Surfaces,
+ including Painting, Plastering, Shingling, Siding, Flooring, Rough
+ Boarding, Tinning and Roofing.
+
+ --Rules for describing Octagons and Polygons of every description and
+ how to find their angles and areas.
+
+ --Rules for finding the lengths of Rafters and Hips of Irregular
+ Roofs, Cuts for Equal and Unequal Mitres, Trusses and Bevel Timber
+ Work.
+
+ --The Development of Hip and Curved Roofs; Veranda Rafters, Straight
+ and Curved; Hopper Cuts of all kinds, Angle Corner-pieces, Splayed
+ Work for Gothic Heads, etc., etc., and many other things useful to the
+ Operative Mechanic.
+
+
+  Handsomely Bound in Cloth with Gilt Title.
+  Price ONE DOLLAR.
+
+  INDUSTRIAL PUBLICATION COMPANY.
+
+  New York.
+
+
+
+
+  HINTS FOR PAINTERS,
+
+  DECORATORS,
+
+  AND PAPER-HANGERS.
+
+  BEING
+
+  A SELECTION OF USEFUL RULES, DATA, MEMORANDA, METHODS,
+  AND SUGGESTIONS FOR HOUSE, SHIP AND FURNITURE PAINTING,
+  PAPER-HANGING, GILDING, COLOR MIXING, AND OTHER
+  MATTERS USEFUL AND INSTRUCTIVE TO PAINTERS
+  AND DECORATORS.
+
+  Prepared with Special Reference to the Wants of Amateurs.
+
+  BY
+
+  AN OLD HAND.
+
+
+  NEW YORK:
+  THE INDUSTRIAL PUBLICATION COMPANY.
+  1882.
+
+
+
+
+PREFACE.
+
+
+This little work is intended to furnish the PRACTICAL
+HOUSE-PAINTER--THE EVERY-DAY WORKMAN--with information sufficient to
+enable him to understand his business intelligently. One of its objects
+is to deal with the nature, characteristics, qualities, and defects of
+the materials employed by the class of artisans for whom it is written;
+and to a limited extent this has been done with as little theory as
+possible; high-sounding technicalities have also been avoided wherever
+the author has been able to make himself understood without them.
+
+It is thought the young painter may derive great profit and advancement
+from a careful study of this book, as the hints, rules, and recipes it
+contains are reliable, practical, and of every-day use.
+
+The author has consulted many works on the subject, and is indebted
+to many of them for much of the matter contained, among which may be
+mentioned “Building Construction and Materials,” “House-Painter’s
+Hand-Book,” “Artists’ and Tradesmen’s Companion,” “Painter’s Guide,”
+“Chevreul’s Oils and Paints,” and several other works of more or less
+note. To this has been added many things discovered by the actual
+experience of the writer.
+
+
+
+
+CONTENTS.
+
+
+                                              PAGE
+
+  Preface,                                     iii
+
+  Preliminary,                                   7
+
+  Preparation of Surfaces,                       7
+
+  Materials Used,                                8
+
+  Bases and Vehicles,                           10
+
+  White Lead, Genuine and Adulterated,          10
+
+  Linseed and other Oils,                       13
+
+  Driers,                                       14
+
+  Coloring Paints,                              15
+
+  Blacks and Blues,                             16
+
+  Yellows,                                      17
+
+  Browns,                                       18
+
+  Pinks and Reds,                               19
+
+  Lakes and Orange,                             20
+
+  Green,                                        21
+
+  Proportion of Ingredients in Mixed Paints,    22
+
+  Table showing the composition of the
+  different coats of white paint, and the
+  quantities required to cover 100 yards of
+  new work,                                     23
+
+  Operations,                                   24
+
+  Preparing the Work,                           25
+
+  Taste in Color,                               30
+
+  Graining--General Remarks,                    32
+
+  Graining in Oak, Mahogany, Rosewood, Walnut,
+  Maple, Satin-wood, Granites, Marbles, etc.,   36
+
+  Rules for Mixing Compound Colors,             41
+
+  Miscellaneous Receipts, for Painting Iron,
+  Stucco, Glass; Gilding, Gilding on Glass,
+  Gilding Fretwork, Painting on Gilded Panels,
+  Gilding on Wood, Gilding Letters, Gilder’s
+  Size, Staining Wood, Staining Floors,
+  Varnishing, Painting Brick-work and Masonry,
+  French Polish, Wood-filling, Rules for
+  Painters to Observe,                          43
+
+  Paper-hanging,                                54
+
+  Operations,                                   56
+
+  Cleaning Paper-hangings,                      57
+
+  Varnishing Paper,                             57
+
+  The Making of Paste,                          58
+
+  Useful Hints and Table for Estimating Cost
+  of Work and Materials,                        59
+
+
+
+
+HINTS FOR PAINTERS AND PAPER-HANGERS.
+
+
+There is a general belief abroad that anybody can execute all that is
+required of a house-painter. This is a very popular error; it is not
+so easy to prepare and apply a coat of paint in a thorough workmanlike
+manner as some may imagine. It is still less easy to paint in parti
+colors; and very few can produce a good piece of graining.
+
+The painter should not only be acquainted with the method of applying
+paint when it is provided for him, and the brush placed in his hand,
+but he should know the composition of the colors; the manner in which
+they are made, and the colors which must harmonize with each other when
+they are associated together. These observations being of a practical
+nature and the result of experience, are commended for his perusal and
+study.
+
+=Preparation.=--All surfaces painted should be first thoroughly dry and
+free from dust. All heads of nails should be punched or “set” below the
+surface of the wood, and after the priming is dry, the holes formed
+by the heads, as well as all cracks, defects, etc., should be filled
+up with putty made of raw linseed oil and whiting. To prevent knots
+or “fat” spots from showing through, they should receive two coats of
+shellac varnish, and when dry rubbed down with sand-paper. The shellac
+should be applied with a small brush. It dries soon and may be painted
+over as soon as dry. Shellac prepared this way is called “knotting,”
+and can be purchased wherever painters’ materials are kept for sale.
+
+=Materials.=--The principal materials used for painting, _i.e._, white
+lead and oxide of zinc, are so well known that it is unnecessary to
+allude particularly to their manufacture at present. Before using them
+they should be mixed with pure raw linseed oil. Turpentine may be
+used in cold weather to make the paint work easy, as the oil is apt
+to chill, which thickens it and makes it difficult to apply. In warm
+weather, however, turpentine should not be used in priming any parts
+where the sun shines upon. In cold weather it is always necessary
+to use litharge or some other drier; or the work will remain a long
+time before it hardens; in summer, however, driers in most cases are
+unnecessary, for if the wood to be painted is as well seasoned as it
+ought to be there is little danger of the paint being washed off by
+rain, as it will mostly be absorbed in the surface.
+
+To make satisfactory work it is imperative that all cans, pots and
+brushes used in painting be perfectly clean at the start, and kept so
+whenever the conditions will permit. A marble slab and muller will be
+required to grind the finer colors used. Sometimes a small cast-iron
+mill will be found useful not only to grind colors; but to pass the
+tinted color through, so that it may be thoroughly mixed. It is
+scarcely necessary to say that it is presumed the workman will know
+what brushes he will require according to the work he has in hand.
+His large ground paint brush, called a “pound-brush;” his half-size,
+for smaller work; his fitch and sash tools, duster, pallet, putty and
+hasp knives; oval and flat varnish brushes, varnish-pot, step-ladders
+and long ladders, mahl-stick, pallet-board, gilding-knife, camel and
+sable hair-pencils, whitewash brushes, jack for window work, cushion,
+tip-pole, etc., etc.
+
+Large brushes, such as 6-0 size, should be bridled when new by winding
+good twine around them about one-third up the length of the bristles,
+and as the brush wears, this binding can be unwound. Care should be
+taken to use the brushes so that they will have a flat wedge-shaped
+point, straight on the edge. This can be done by holding the brush
+always in one position. If brushes are turned round and round in the
+hand while in use, they wear round and stubby on the point and soon
+become useless for fine or smooth work.
+
+Brushes that are in use every day should be placed in water half the
+depth of the bristles at night, taking care that brushes containing
+different colors do not come in contact with one another. If they
+are to be laid aside for any length of time, however, they should be
+washed with warm water and soap after being thoroughly cleansed with
+turpentine, and laid away in a moist place.
+
+As a general thing it is better to buy putty already made at a regular
+paint store, where you may depend upon its being made of good whiting
+and linseed oil than to make it. Putty should not be used until the
+work has been primed, for new paint holds the putty very firmly.
+
+White lead is to be judged of by being well ground and possessing the
+mellowness given to it by age.
+
+It is well known amongst painters that the best article is the most
+economical, as it works out with more ease, and repays the difference
+of cost in its better appearance and extra durability. Linseed oil is
+also better for having due age, for the same reasons as the white
+lead, working with softness and advantage after parting with the water,
+which is generally combined with new oil.
+
+In most cases _driers_ are added to paints to cause them to dry more
+quickly, and a _solvent_ is sometimes required to make the paints
+work more freely. When the color required differs from that of the
+main paint used, the desired tint is obtained by adding a staining
+or coloring pigment. The materials generally employed may, for
+convenience, be classed as follows:
+
+=Bases.=--White lead, red lead, zinc white, oxide of iron.
+_Vehicles._--Oils, spirits of turpentine. _Solvents._--Spirits of
+turpentine. _Driers._--Litharge, acetate of lead, sulphate of zinc and
+binoxide of manganese, red lead, etc. _Coloring Pigments._--Ochres,
+lampblack, umber, sienna, and many metallic salts that will be
+hereinafter mentioned.
+
+White lead may be obtained either pure or mixed with various
+substances, such as sulphate of baryta, sulphate of lead, whiting,
+chalk, zinc white, etc. These substances do not combine with oil as
+well as does white lead, nor do they so well protect any surface to
+which they are applied. Sulphate of baryta, the most common adulterant,
+is a dense, heavy, white substance, very like white lead in appearance.
+It absorbs very little oil, and may frequently be detected by the
+gritty feeling it produces when the paint is rubbed between the finger
+and thumb.
+
+=White Lead= is sold either dry, in powder or lump, or else ground
+in oil in a paste containing from 7 to 9 per cent. of linseed oil,
+and more or less adulterated, unless specially marked “genuine.” When
+slightly adulterated with a very white sulphate of baryta, like that
+of the Tyrol, the mixture is considered preferable for certain kinds
+of work, as the barytes communicates opacity to the color and protects
+the lead from being speedily darkened by sulphurous smoke or vapors.
+White lead improves by keeping, and when of good quality, will go much
+further and last much better than when employed fresh; moreover, paint
+made with new lead has a tendency to become yellow. It should not be
+exposed to the air or it will turn grey.
+
+Of all the bases used for paints, white lead is the most commonly used,
+and for surfaces of wood it affords in most cases the best protection,
+being dense, of good body, and permanent. It has the disadvantage,
+however, of blazening when exposed to sulphur acids, and of being
+injurious to those who handle it.
+
+Red lead is produced by raising _massicot_ (the commercial name for
+oxide of lead) to a high temperature, short of fusion, during which
+it absorbs oxygen from the air and is converted into red lead or
+_minium_, an oxide of lead. The color is lasting, and is unaffected by
+light when it is pure and used alone, but any preparation containing
+lead or acids mixed with it deprive it of color, and impure air makes
+it black. It may be used for a drier, as it possesses many of the
+properties of litharge; it is also often employed in painting wrought
+iron work, to which it adheres with a tenacity not equalled by any
+other paints; it is sometimes objected to for this purpose, on the
+ground that galvanic action is set up between the lead and the iron.
+It is also frequently used for priming on wood work, and is especially
+adapted for hard woods. It is frequently adulterated with brick dust;
+this may be detected by heating the powder in a crucible, and treating
+it with dilute nitric acid; the lead will be dissolved but the brick
+dust will remain. It is also adulterated with colcother, a sesquioxide
+of iron. Sulphide of antimony, or antimony vermilion, is sometimes
+used as a substitute for red lead. It is sold in a very fine powder,
+without taste or smell, and which is insoluble in water, alcohol, or
+essential oils. It is but little acted upon by acids, and is said to be
+unaffected by air or light. It is adapted for mixing with white lead,
+and affords an intensely bright color when ground in oil.
+
+Oxide of zinc, or zinc white, is durable in water or oil; it
+dissolves in hydrochloric acid; it does not blacken in the presence
+of sulphuretted hydrogen; and it is not injurious to the men who make
+it, or to the painters who use it; but on the other hand, it does not
+combine with oil well, and is wanting in body and covering power, and
+is difficult to work. It is easily acted upon by the carbonic acid
+in rain water, which dissolves the oxide, and it therefore is unfit
+for outside work. The acids contained in unseasoned wood also have a
+great effect upon it. When pure and used for inside work, it retains
+its color well, and will stand washing for many years without losing
+any of its freshness. When dry it becomes very hard, and will take a
+fine polish. This paint is suitable for any place that is subjected
+to vapors containing sulphur, or in places where foul air is emanated
+from decaying animal matter. In such positions, of course, zinc paints
+should not be mixed with “patent” or other driers which contain lead.
+The best driers to employ with it are sulphate of manganese and
+sulphate of zinc. This white is recommended as being preferable to
+white lead for painting on a dark ground. The reason of this is that
+the soap formed by the combination of the lead and oil in lead paints
+is semi-transparent, and the dark ground shows through it. The want of
+density, however, in zinc paints, is a great drawback to their use,
+and the purest zinc oxide is not always the best for paint on account
+of its low specific gravity; and in this respect, the American zinc
+whites, which are frequently very pure, do not generally give as good
+satisfaction as the zinc whites made in Belgium.
+
+=Vehicles.=--Oils are divided into two classes--fixed oils and volatile
+oils. Fixed oils are extracted by pressure from vegetable substances,
+they are of a fatty nature, do not evaporate in drying, and will bear
+a temperature short of 500° Fahr., without decomposing. They are
+subdivided into drying oils, which become thick upon exposure to air.
+Of these, linseed oil is most commonly used as an ingredient for paint.
+Its qualities when pure are excellent, and it may be considered the
+best of all oils for use in paint, putty, and other similar substances.
+It oxidizes and becomes thick upon exposure to the air. This property
+is very much increased by adding other substances to it and boiling
+them together. It is superior in drying powers, tenacity, and body to
+any other fixed oil. The best oil comes from the Black Sea and the
+Baltic; that from the East Indian seed is inferior, as the seed is less
+carefully cleaned, and contains too much stearine. Raw linseed oil is
+clear and light in color, works smoothly, and is used for internal
+works, for delicate tints, and for grinding up colors. Boiled oil is
+much thicker, darker, and more apt to clog. It is used for outside
+work, as its greater body and rapidity in drying make it a quicker and
+more efficient protection.
+
+=Volatile Oils= are generally obtained by distillation, and have an
+odor resembling that of the plant from which they are obtained. They
+are, as a rule, colorless at first, but upon exposure to air and light
+they become darker, thicker, and eventually are converted into a kind
+of resin. Spirits of turpentine is the best variety of this class for
+mixing with ordinary paints. Naptha and benzine are sometimes used
+instead of turpentine, but not often, and their use is not recommended
+when the latter can be obtained. Good spirits of turpentine is lighter
+in weight and more inflammable than bad. It is colorless and has a
+pleasant pungent smell, whereas the smell of inferior qualities is
+disagreeable. It is used as a solvent for resins and other substances
+in making varnishes; also in paint to make it work more smoothly. It
+is useful also in flatting coats, but will not stand exposure to the
+weather.
+
+=Driers.=--Driers are substances added to paint in order to cause
+the oils to thicken and solidify more rapidly. The action of these
+substances is not thoroughly understood. Chevreuil has shown that the
+drying of linseed oil is caused by the absorption of oxygen; and there
+can be no doubt that for the most part driers act as carriers of oxygen
+to the oil, a very small quantity producing considerable effects.
+
+The best driers are those which contain a large proportion of oxygen,
+such as litharge, acetate of lead, red lead, sulphate of zinc,
+verdigris, etc. They are sometimes used to improve the drying qualities
+of the oil with which the paint is mixed, or they may themselves be
+ground up with a small quantity of oil, and added to the paint just
+before it is used.
+
+Litharge or oxide of lead is the drier most commonly used, and is
+produced in extracting lead from its ores. It can be produced on a
+small scale by scraping off the dross which forms on molten lead
+exposed to a current of air. _Massicot_ is a superior kind of litharge,
+being produced by heating lead to an extent insufficient to fuse the
+oxide. Sugar of lead, or, as it is more frequently called, acetate of
+lead, ground in oil, and copperas and white vitriol (sulphate of zinc),
+are also used as driers, especially for light tints. Oxide of manganese
+is quicker in its effects, but is of a very dark color, and seldom used
+except for deep tints. Japanners’ gold size and verdigris (acetate of
+copper) are also much used for dark colors. Care must be taken not to
+apply too much of the size, or it will make the paint brittle. Red
+lead (oxide of lead) is often used as a drier when its color will not
+interfere with the tint required. It is not so rapid in its action as
+litharge or massicot. Sulphate of manganese is the best drier for zinc
+white, about 6 or 8 ounces only being used for 100 lbs., of ground zinc
+white paint. The manganese should be mixed with a small quantity of the
+paint first, and then added to the bulk. If great care be not taken in
+mixing the drier the work will be spotted. Sulphate of zinc is also a
+good drier for zinc paint.
+
+Patent driers contain oxidizing agents, such as litharge or acetate of
+lead ground and mixed in oil, and therefore in a convenient form for
+immediate use. There is great danger, however, in using such driers,
+unless they are of the best quality from a reliable maker. Some of the
+inferior descriptions depend for their drying qualities upon lime.
+
+The following points should be observed in using driers:--
+
+1st. Not to use them unnecessarily with pigments which dry well in oil
+color.
+
+2d. Not to employ them in excess, which would only retard the drying.
+
+3d. Not to add them to the color until about to be used.
+
+4th. Not to use more than one drier to the same color.
+
+5th. To avoid the use of patent driers, unless known to be of good
+quality.
+
+6th. To avoid the use of driers in the finishing coat of light colors,
+as they are liable to injure the color.
+
+=Coloring Pigments.=--It will be impossible in a small work of this
+sort to give anything like a complete list of the pigments used to
+produce the colors and tints used by the house painter and decorator. A
+few of the most useful may, however, be mentioned. It is not proposed
+to give a detailed description of them, but merely to distinguish those
+that are injurious from the others. Many of these, such as the ochres,
+umbers, etc., are from natural earths; others are artificially made.
+They may generally be purchased either in the form of dry powder or
+ground in oil.
+
+=Blacks.=--Lampblack is the soot produced by burning oil, resin, small
+coal, resinous woods, coal tar or tallow. It is in the state of very
+fine powder; works smoothly; is of a dense black color and durable, but
+dries very slowly in oil.
+
+Vegetable black is a better kind of lampblack made from oil. It is very
+light, free from grit, and of a good color. It should be used with
+boiled oil, driers, and a little varnish. Raw linseed oil or spirits of
+turpentine keeps it from drying.
+
+Ivory-black is obtained by calcining waste ivory in close vessels and
+then grinding. It is intensely black when properly burned. Bone-black
+is inferior to ivory-black, and prepared in a similar manner from
+bones. Blue-black and Frankfort black of the best quality are made from
+vine twigs; inferior qualities from other woods charred and reduced to
+powder. In Europe some other blacks are used, but we seldom meet with
+them in this country.
+
+=Blues.=--Prussian blue is made by mixing prussiate of potash with
+a salt of iron. The prussiate of potash is obtained by calcining
+and digesting old leather, blood, hoofs, or other animal matter
+with carbonate of potash and iron filings. This color is much used,
+especially for dark blues, making purples, and intensifying black.
+It dries well with oil. Slight differences in the manufacture cause
+considerable variation in tint and color, which leads to the material
+being known by different names--such as Antwerp blue, Berlin blue,
+Hærlem blue, Chinese blue, etc. Indigo is produced by steeping certain
+plants in water, and allowing them to ferment. It is a transparent
+color; works well in oil or water, but is not durable, especially when
+mixed with white lead.
+
+Ultramarine was originally made by grinding the valuable mineral _Lapis
+lazuli_. Genuine ultramarine so made is very expensive, but artificial
+French and German ultramarines are made of better color, and cheaply,
+by fusing and washing and reheating a mixture of soda, silica, alum,
+and sulphur. This blue is chiefly used for coloring wall papers.
+
+Cobalt blue is an oxide of cobalt made by roasting cobalt ore. It makes
+a beautiful color, and works well in water or oil.
+
+Smalt, Saxon blue and Royal blue are colored by oxides of cobalt.
+
+There are a few other blues, such as Celestial or Brunswick blue, damp
+blue and verditer, that are chemical compounds, compounds of alum,
+copper, lime, and other substances; but they are so seldom used in this
+country that it is unnecessary to describe them in detail.
+
+=Yellows.=--Chrome yellows are chromates of lead, produced by mixing
+dilute solutions of acetate or nitrate of lead and bichromate of
+potash. This makes a medium tint known as “middle chrome.” The addition
+of sulphate of lead makes this paler, when it is known as “lemon
+chrome,” whereas the addition of caustic lime makes it “orange chrome”
+of a darker color. The chromes mix well with oil and with white lead
+either in oil or water. They stand the sun well, but like other lead
+salts, become dark in bad air. Chrome yellow is frequently adulterated
+with gypsum.
+
+Naples yellow is a salt of lead and antimony, supposed to have been
+originally made from a natural volcanic product at Naples. It is not so
+brilliant as chrome, but has the same characteristics. King’s yellow is
+made from arsenic, and is therefore a dangerous color to handle, or
+use for internal work. It is not durable, and it injures several other
+colors when mixed with them. Chinese yellow, arsenic yellow, and yellow
+orpiment are other names for this yellow.
+
+Yellow ochre is a natural clay colored by oxide of iron, and found
+abundantly in many parts of the world. It is not very brilliant, but is
+well suited for distemper work, as it is not affected by light or air.
+It does not lose its color when mixed with lime washes as many other
+colors do. There are several varieties of ochres, all having the same
+characteristics differing only in color which varies from a golden to a
+dark brown.
+
+=Terra De Sienna=, or raw Sienna, is a clay, stained with oxides of
+iron and manganese, and of a dull yellow color. It is durable both in
+oil and water, and is useful in all work, especially in graining.
+
+=Browns.=--Browns generally owe their color to oxide of iron. Raw umber
+is a clay similar to ochre colored by oxide of iron. The best comes
+from Turkey; it is very durable both in water and in oil; does not
+injure other colors when mixed with them.
+
+=Burnt Umber= is the last mentioned material burnt to give it a darker
+color. It is useful as a drier, and in mixing with white lead to make a
+stone color.
+
+=Vandyke Brown.=--This color is an earthy dark brown mineral; it is
+durable both in oil and water, and is frequently employed in graining.
+
+=Purple Brown= is of a reddish-brown color. It should be used with
+boiled oil--and a little varnish and driers for outside work.
+
+=Burnt Sienna= is produced by burning raw sienna. It is the best color
+for shading gold.
+
+=Brown Pink= is a vegetable color often of a greenish hue. It works
+well in water and oil, but dries badly, and will not keep its color
+when mixed with white lead. Spanish brown and brown ochre are clays
+colored naturally by various oxides.
+
+=Reds.=--Carmine, made from the cochineal insect, is the most
+brilliant red color known. It is, however, too expensive for ordinary
+house painting, and is not durable. It is sometimes used for inside
+decoration.
+
+=Red Lead.=--This color has already been described on page 11.
+
+=Vermilion.=--This is a sulphide of mercury in a natural state as
+cinnabar. The best comes from China. Artificial vermilion is also
+made both in China and in this country from a mixture of sulphur
+and mercury. Genuine vermilion is very durable, but when mixed with
+red lead, as it is sometimes, it will not stand the weather. It can
+be tested by heating in a test tube; if genuine it will entirely
+volatilize. German vermilion is the tersulphide of antimony, and is of
+an orange-red color.
+
+=Indian Red.=--This color is a ground hematite ore brought from Bengal;
+it is sometimes made artificially by calcining sulphate of iron. The
+tints vary, but a rosy hue is considered the best. It may be used with
+turpentine and a little varnish to produce a dull surface, drying
+rapidly, or with boiled oil and a little driers, in which case a glossy
+surface will be produced, drying more slowly.
+
+=Chinese Red= and Persian red are chromates of lead, produced by
+boiling white lead with a solution of bichromate of potash. The tint of
+Persian red is obtained by the employment of sulphuric acid.
+
+=Venetian Red= is obtained by heating sulphate of iron produced as a
+waste product at tin and copper works. It is often adulterated by
+mixing sulphate of lime with it during the manufacture. When pure, it
+is often called “bright red.” Special tints of purple and brown are
+frequently required, which greatly enhance the value of the material.
+These tints should be obtained in the process of manufacture, and not
+produced by mixing together a variety of different shades of color.
+When the tint desired is attempted to be obtained by this latter course
+it is never so good, and the materials produced are known in the trade
+as ‘faced colors,’ and are of inferior value.
+
+=Rose Pink.=--This is made of a sort of chalk or whiting stained with
+a tincture of Brazil wood. It fades very quickly, but it is used for
+paperhangings, common distemper, and for staining cheap furniture.
+
+=Lakes.=--These are made by precipitating colored vegetable tinctures
+by means of alum and carbonate of potash. The alumina combines with
+the organic coloring matter and separates it from the solution. The
+tincture used varies in the different descriptions of lake. The best,
+made from cochineal or madder, is used for internal work. Drop lake
+is made by dropping a mixture of Brazil wood through a funnel on to
+a slab. The drops are dried and mixed into a paste with gum water.
+It is sometimes called “Brazil wood lake.” Scarlet lake is made from
+cochineal; so also are Florentine lake, Hamburg lake, Chinese lake,
+Roman lake, Venetian lake and Carminated lake.
+
+=Orange.=--Chrome orange is a chromate of lead, brighter than
+vermillion, but less durable. Orange ochre is a bright yellow ochre
+burnt to give it warmth of tint; it dries and works well in water or
+oil, and is very durable. It is known also as Spanish ochre. Orange red
+is produced by a further oxidation than is required for red lead. It is
+a brighter and better color.
+
+=Greens.=--These, of course, may be made by mixing blue and yellow
+together, but such mixtures are less durable than those produced direct
+from copper, arsenic, etc. The latter are, however, objectionable
+for use in distemper or on wall papers, as they are very injurious
+to health. Brunswick green of the best kind is made by treating
+copper with sal-ammoniac. Chalk, lead and alum are sometimes added.
+It has rather a bluish tinge; dries well in oil, is durable, and not
+poisonous. Common Brunswick green is made by mixing chromate of lead
+and Prussian blue with sulphate of baryta. It is not as durable as
+real Brunswick green. Mineral green is made from bi-basic carbonate of
+copper; it weathers well. Verdigris is acetate of copper. It furnishes
+a bluish-green color, durable in oil or varnish, but not in water; it
+dries rapidly, but requires great care in using owing to its poisonous
+qualities. Green verditer is a carbonate of copper and lime; is not
+very durable. Prussian green is made by mixing different substances
+with Prussian blue. There are a number of other greens made from
+copper, but they all possess in a greater or lesser degree, the same
+qualities as the foregoing. Emerald or Paris green is made of verdigris
+mixed with a solution of arsenious acid. It is of a very brilliant
+color, but is very poisonous; is difficult to grind, and dries badly in
+oil. It should be purchased ready ground in oil, as in that case the
+poisonous particles do not fly about, and the difficulty of grinding
+is avoided. Scheele’s green and Vienna green are also arseniates of
+copper, and highly poisonous. Chrome green should be made from the
+oxide of chromium, and is very durable. An inferior chrome green is
+made, however, by mixing chromate of lead and Prussian blue, as above
+mentioned, and is called Brunswick green. The chrome should be free
+from acid or the color will fade; it may be tested by placing it for
+several days in strong sunlight.
+
+=Proportions of Ingredients in Mixed Paint.=--The composition of paints
+should be governed by the nature of the material to be painted. Thus
+the paints respectively best adapted for painting wood and iron differ
+considerably. The kind of surface to be covered, _i. e._, a porous
+surface requires more oil than one that is impervious. The nature and
+appearance of the work to be done. Delicate tints require colorless
+oil; a flatted surface must be painted without oil, which gives gloss
+to a shining surface. Again, paint used for surfaces intended to be
+varnished must contain a minimum of oil. The climate and the degree of
+exposure to which the work will be subjected; thus, for outside work
+boiled oil is used, because it weathers better than raw oil. Turps is
+avoided as much as possible, because it evaporates and does not last;
+if, however, the work is to be exposed to the sun, turps are necessary
+to prevent the paint from blistering. The skill of the painter also
+affects the composition; a good workman can lay on even coats with a
+smaller quantity of oil and turps than a man who is unskilful; extra
+turps, especially, are often added to save labor. The quality of the
+materials makes an important difference in the proportions used. Thus
+more oil and turps will combine with pure than with impure white lead;
+thick oil must be used in greater quantity than thin oil. When paint
+is purchased ready ground in oil, a soft paste will require less turps
+and oil for thinning than a thick paste. Lastly, the different coats
+of paint vary in their composition; the first coat laid on to new work
+requires a good deal of oil to soak into the material; on old work the
+first coat requires turpentine to make it adhere; the intermediate
+coats contain a proportion of turpentine to make them work smoothly,
+and to the final coats the coloring materials are added, the remainder
+of the ingredients being varied as already described, according as the
+surface is to be glossy or flatted.
+
+The exact proportion of the ingredients best to be used in mixing
+paints varies according to their quality, the nature of the work
+required, the climate, and other considerations. The composition of the
+paint for the different coats also varies considerably. The proportions
+given in the following table, must, therefore, only be taken as an
+approximate guide when the materials are of good quality.
+
+ _Table showing the composition of the different coats of white paint,
+ and the quantities required to cover 100 yards of newly worked pine._
+
+ --------------+-------+--------+---------+---------+--------+---------+
+               |  RED  | WHITE  |   RAW   |  BOILED | TURPE- | DRIERS. |
+               | LEAD. | LEAD.  | LINSEED | LINSEED | NTINE. |         |
+               |       |        |   OIL.  |   OIL.  |        |         |
+ --------------+-------+--------+---------+---------+--------+---------+
+               |       |        |         |         |        |         |
+ _Inside work, |       |        |         |         |        |         |
+ 4 coats       |  lbs. |   lbs. |    pts. |         |        |   lbs.  |
+ not flatted._ |       |        |         |         |        |         |
+               |       |        |         |         |        |         |
+ Priming**     |  ¹⁄₂  |    16  |     6   |     --  |    --  |   ¹⁄₄   |
+               |       |        |         |         |        |         |
+ 2d Coat       |   *   |    15  |   3¹⁄₂  |     --  |   1¹⁄₂ |   ¹⁄₄   |
+               |       |        |         |         |        |         |
+ 3d Coat       |   --  |    13  |   2¹⁄₂  |     --  |   1¹⁄₂ |   ¹⁄₄   |
+               |       |        |         |         |        |         |
+ 4th Coat      |   --  |    13  |   2¹⁄₂  |     --  |   1¹⁄₂ |   ¹⁄₄   |
+               |       |        |         |         |        |         |
+ _Inside work, |       |        |         |         |        |         |
+ 4 coats and   |       |        |         |         |        |         |
+ flatting._    |       |        |         |         |        |         |
+               |       |        |         |         |        |         |
+ Priming       | 1¹⁄₂  |    16  |     6   |     --  |   ¹⁄₂  |   1-8   |
+               |       |        |         |         |        |         |
+ 2d Coat       |   --  |    12  |     4   |     --  |   1¹⁄₂ |   1-10  |
+               |       |        |         |         |        |         |
+ 3d Coat       |   --  |    12  |     4   |     --  |    0   |   1-10  |
+               |       |        |         |         |        |         |
+ 4th Coat      |   --  |    12  |     4   |     --  |    0   |   1-10  |
+               |       |        |         |         |        |         |
+ Flatting      |   --  |     9  |     0   |     --  |   3¹⁄₂ |   1-10  |
+               |       |        |         |         |        |         |
+ _Outside work,|       |        |         |         |        |         |
+ 4 coats       |       |        |         |         |        |         |
+ not flatted._ |       |        |         |         |        |         |
+               |       |        |         |         |        |         |
+ Priming***    |   2   |  18¹⁄₂ |     2   |    2    |    --  |   1-8   |
+               |       |        |         |         |        |         |
+ 2d Coat       |   --  |    15  |     2   |    2    |    ¹⁄₂ |   1-10  |
+               |       |        |         |         |        |         |
+ 3d Coat       |   --  |    15  |     2   |    2    |    ¹⁄₂ |   1-10  |
+               |       |        |         |         |        |         |
+ 4th Coat      |   --  |    15  |     3   |   2¹⁄₂  |    0   |   1-10  |
+               |       |        |         |         |        |         |
+ --------------+-------+--------+---------+---------+--------+---------+
+
+* Sometimes just enough red lead is used to give a flesh-colored tint.
+
+** Sometimes more red lead is used and less drier.
+
+*** When the finished color is not to be pure white, it is better to
+have nearly all the oil boiled oil. All boiled oil does not work well.
+For pure white a larger proportion of raw oil is necessary, because
+boiled oil is too dark.
+
+
+For every 100 square yards, besides the materials enumerated in the
+foregoing, 2¹⁄₂ lbs. of white lead and 5 lbs. of putty will be required
+for stopping.
+
+The area which a given quantity of paint will cover depends upon the
+nature of the surface to which it is applied, the proportion of the
+ingredients and the state of the weather. When the work is required to
+dry quickly, more turpentine is added to all the coats.
+
+In repainting old work, two coats are generally required, the old
+painting being considered as priming. Sometimes another coat may be
+deemed necessary.
+
+For outside old work exposed to the sun, both coats should contain
+one pint of turpentine and four pints of boiled oil, the remaining
+ingredients being as stated in the foregoing table. The extra
+turpentine is used to prevent blistering.
+
+In cold weather more turpentine should be used to make the paint flow
+freely.
+
+=Operations.=--All priming should be rubbed out as far as possible,
+for if it is flowed out loosely or laid on thick it will be apt to
+blister and run. In priming over spots, however, where _patching_ is
+being done, it may sometimes be necessary to leave the coat thick or
+heavy, for new work can never be re-touched and look well, after the
+work is second coated or finished; for such re-touching would show and
+spoil the whole work. In priming the paint should flow easily, and the
+brush should be pressed on to the wood so that the paint will be forced
+into the pores. In all cases it is a great saving of time to cover as
+large a surface as convenient before smoothing or finishing off. All
+work on the same surface should be finished at the one application,
+if possible, for “laps”--which form the junctions of work done at
+different times--should be avoided wherever they can, as they are sure
+to disfigure the work where they exist. Of course, it is sometimes
+impossible to avoid laps, but where they must occur, care should be
+taken to make the connection with as little “lap” as possible or it
+will be certain to show through the work when finished. The defect, if
+occurring during the second coating, will show much worse than in the
+priming coat.
+
+In painting, like everything else, a system must be followed to make
+much headway. Experience, perhaps, is the only effective teacher in
+this matter; and any rules laid down by us will have but little effect,
+if the operator does not, or can not systematize. The workman who
+follows a system will do nearly twice as much work with less labor,
+than the man who works only by the rule of thumb. In painting blinds,
+lattices, railings, cut brackets or other similar work, some method of
+operation should be adopted. A little observation on the part of the
+operator, will soon teach him the best methods to adopt in doing any
+particular kind of work.
+
+=Preparing the Work.=--In preparing work for painting, too much care
+cannot be exercised, as succeeding coats and the final result depend
+very much on the proper condition of the work when the priming coat is
+applied. First, all the rough places in the wood should be rubbed down
+with a block covered with sandpaper; and the mouldings and beads should
+be well cleaned out with sandpaper. Then (and this is a matter of prime
+importance) every knot, however small, every indication of sap on the
+wood, or discoloration of any kind, and every appearance of pitch or
+gum, should be carefully varnished over with white shellac varnish, if
+the work is to be finished in white or light tints--or with varnish
+made from unbleached or common shellac, if the work is to be finished
+in dark shades. The common shellac, in the latter case, answers
+equally well with the bleached article, and at less cost. This should
+not, under any circumstances, be neglected, as it is impossible, in the
+nature of things, otherwise to make good work.
+
+When work is to be finished with two coats, the putty used for
+stopping the nail-heads and other indentations should be made of white
+lead, worked up with common whiting to the proper consistency, and
+the filling should be done after the first coat shall have become
+well dried. When more than two coats are to be applied, the filling
+should be done between the first and second coats, with ordinary pure
+linseed-oil putty.
+
+It should be adopted as a rule, never to apply pure white as a priming
+coat; no matter whether the work is to be finished with one or four
+coats, the result will always be more satisfactory if the first coat be
+stained. A little finely-ground lampblack answers as well for this as
+anything.
+
+The only way to produce solid, uniform work, is by making every
+succeeding coat lighter in tint than the one which preceded it. This
+is especially the case with walls, and other extended flat surfaces.
+No matter what the finish is to be, the first coat should always be
+darker than the one which succeeds it; and the darker the shade of
+the finishing coat, the more important it is that this rule should be
+observed. If the work is to be finished with black, prime with black.
+If with green, let that be the color of all the preceding coats. If
+with blue, let that color be the ground work. What can be more stupid
+than applying to work which is to be finished in imitation of black
+walnut a priming coat of white? All work should be primed especially
+with regard to the finishing color.
+
+There is not half enough of dark colors used in priming applications.
+Venetian red, finely ground in boiled oil, deeply stained with
+black--and used very thin, in order to stain the wood as much as
+possible--is the best first coat for work which is to be finished
+in imitation of black walnut or other dark wood. The succeeding
+coats should be as dark as may be with a view to the proper shade of
+ground-work for the graining. In such case, if (as must happen in the
+ordinary course of events) the work becomes bruised or “chipped”--by
+an accidental knock from a chair leg or other article of house
+furniture--the general appearance of it is little impaired thereby.
+Quite the contrary, however, is the case if the underneath coats are
+white. Then, an accident of the kind before mentioned, shows a white
+spot, which staringly proclaims the work to be a delusion and a sham.
+Dark colors, too, as the Venetian red before mentioned, make better
+foundations than white lead or zinc. They dry harder and “rub” better,
+and, what is most important, cost less.
+
+This matter having been duly considered, let us now proceed to the
+coats succeeding the first. Before applying a second coat, the
+first should be carefully rubbed, and all the nail-heads and other
+indentations carefully stopped with pure linseed-oil putty--using
+for flat surfaces a square-bladed putty-knife. Puttying with the
+fingers should never be tolerated (good work is now the subject under
+consideration). This done, the whole should be carefully examined
+to ascertain if the oil in the former coat shall have revealed any
+resinous or pitchy spots, not previously covered with the shellac.
+These preliminaries being attended to, the work may be considered
+ready for a second coat. The directions as to rubbing with sandpaper
+are to be observed in all the succeeding coats. As a rule, on interior
+work, paint should never be applied to a surface which has not been
+previously rubbed.
+
+Sandpaper for fresh work and pumice-stone for old work. Always distrust
+the education of a painter in his trade who goes to work without a lump
+of pumice-stone, a sheet of sandpaper, a putty-knife, and a rag to wipe
+off the spatters--sparks, as the Irish not inaptly call them. Apropos
+of spatters! Every painter has seen (the result too of unpardonable
+negligence) plates of glass so covered with spatters, that to remove
+them would require more time than would serve to paint the woodwork of
+a “full-trimmed” window.
+
+In priming work which is to be finished in oak, finely-ground French
+ochre is recommended. The objection to this pigment, that it does
+not work smoothly and easily under the brush, has arisen from its
+coarseness. Finely ground in boiled oil, it works as smoothly as white
+lead, and makes an excellent foundation for the succeeding coats.
+
+For walls the first coat should be as dark in shade and as thin as
+practicable, the object being to stain the plaster as much as possible.
+Indeed, if the whole mass of plaster could be stained through and
+through, it would be desirable to so stain it.
+
+The use of glue in wall painting is of doubtful propriety. It should
+never, under any circumstance, be put on until after the second coat,
+and then rubbed on with a rag, very lightly. In first-class work,
+however, its use is not recommended.
+
+Plaster mixed with weak glue-size--which prevents its setting too
+rapidly--is the best material for stopping walls preparatory to
+painting, and each coat of paint should be carefully rubbed with worn
+sand-paper, before the succeeding coat is put on. For preparing walls
+a small pocket-trowel will be found a most serviceable tool, or a
+trowel-shaped putty-knife, which article has come into general use.
+
+The preparation of ceilings for whitewashing (or kalsomining as this
+operation is sometimes pretentiously called) is an operation requiring
+some skill and knowledge of “how to do it.” A dirty ceiling, which has
+been subjected to successive coats of whitewash, whether of lime, or
+of whiting and glue-size, cannot be made solidly and smoothly white by
+additional whitewashing. The mass has become spongy, and sucks up the
+water so quickly that the material cannot be evenly distributed. In
+such case the only way is to begin anew, to go at once “down to hard
+pan” by removing all the previous applications by washing and scraping.
+This is best effected with a broad-bladed square-pointed putty-knife,
+keeping the ceiling wet meanwhile. Plaster (hard-finish) is not of
+uniform density, and some spots are much more absorbent than others. To
+remedy this a mixture of soft soap and alum, dissolved in water, should
+be applied with a broad kalsomine brush.
+
+It is not assumed that mere verbal instructions can teach the art of
+whitening or tinting walls and ceilings in water-colors. To produce
+good results, great skill in preparing the materials and dexterity in
+manipulation are required; and such work should be intrusted only to
+competent hands. A mass of unsuitable material may be cheaply put upon
+a ceiling; but when the same shall require repainting, the cost of
+labor will be greater in removing the previous coating, than will be
+the whole cost of repainting. These remarks, too, apply equally to all
+kinds of painting; and reference is made to the whitening and tinting
+of ceilings only, because of the general impression that this kind of
+work may be performed by anybody.
+
+The materials and tools used in painting are too costly to wasted and
+worn by incompetent handling. “Painting just to keep the gardener or
+hostler out of idleness,” will prove in most cases a left-handed
+economy. Such experiments are prudent only when the services of skilled
+workman cannot be obtained.
+
+=Taste in Color.=--In rooms to be lived in, simple white for color
+of walls and paint, as well as any extremely dark treatment, should
+be avoided. The walls of rooms should be such backgrounds as will
+best suit the complexions and dresses of the larger number of people.
+Delicate white intensifies by contrast any unpleasantness or want of
+perfection; extreme dark would make people look white and ghastly.
+Neutral colors will be found the best--generally some grey or cool
+color that will contrast with warmth of complexions. On no account let
+an absolutely pure color be used for general surfaces. Nature provides
+no such color in pigments. Her yellows are greenish or reddish, and
+so on. Nor does she use it to any extent in inanimate nature. So much
+so that you will find that if you have much difficulty in describing
+a color, you may be certain it is good; the more difficulty the more
+beauty. Nature trusts mainly to gradations of tone, using vivid color
+in small quantities only, as in the touches on bright flowers and
+butterflies. This teaching of nature will be found seconded in the
+pictures of the greatest artists, and in following such teaching, it is
+necessary to consider the object to which (in domestic work, say) the
+rooms are to be devoted. A drawing-room, it is agreed, should be light,
+festive and gay; dining-room at once more sober, and with more depth
+and warmth, as befits its uses. You must also consider the light and
+shade; openings, and the positions of them; for these may (or may not)
+effect for you contrast of tone, and may even touch the question of the
+good sense of your whole scheme of decoration.
+
+In a lecture delivered before the British Architectural Association,
+on this subject, the lecturer suggested that in the treatment of a
+drawing-room the walls should be a light neutral grey, fawn color,
+or pale green (not dark, but not white). Dados are suitable for all
+rooms, even drawing-rooms. They may be made of wood, painted as the
+room doors, or of stamped leather, or of the French paper imitations
+of stamped leather. A frieze does not interfere with the heads of
+sitters, and adds much interest if it has its sentiment or story. If
+flowers form part of your decorations, have no relief, no imitation
+of nature’s light and shade. A wall must be a wall; if, neglecting
+this, you introduce illusions to the eye, the sense of solidity will
+not be suggested. The Japanese decorate on correct principles, with
+truth to the idea derived from nature, and truth in art, adaptation of
+representation to materials and method. As regards the woodwork there
+should be no graining anywhere; its aspect, however well executed,
+is repulsive. Real woods are always beautiful. Plain painting may be
+darker or lighter than the general wall surfaces; both will look well.
+The doors may have stencilled decorations in angles of panels; birds or
+butterflies, or plants, or any beautiful natural objects will supply
+motives. The ceilings should rarely be wholly white, except of halls or
+where the light is defective. Papered ceilings look well. The use of
+gold is generally satisfactory; it reflects a warm tone on everything
+below. Put a good amount of color on a ceiling--not, however, making it
+so dark as to bring it too close to the eye. The carpet must be either
+lighter or darker than the walls. This is following out the artist’s
+rule, to make either background or foreground run into the figure. If
+this is not done in painting, a woman in white satin, for instance,
+against a dark floor and dark walls, will look like a cut-out figure
+stuck on, and the same sort of result would occur in rooms. As in
+ordinary life dresses are dark in color, where a light wall tone has
+been recommended, the carpet will have to be darker than the walls. Not
+too vivid in color, however, and of course, no flowers, ferns, birds’
+nests, and such like fearful things. _Furniture and hangings_ should
+not be too much alike in color; have, say, the carpet one tone, the
+coverings of the furniture another, and the curtains and other hangings
+a third. Have summer and winter hangings and furniture coverings; those
+for the former light and cheerful, the others with more warmth, and
+suggestive of comfort and home life. A table-cloth, occasional chair,
+or a rug, may supply a bit of effective contrast with prevailing hues
+of hangings, etc., and a spot of vivid color in a vase or some small
+hanging will complete the formal decoration of the room.
+
+=Graining.=--The art of imitating the grain of the more expensive
+woods has been brought to a great degree of perfection, but of late
+years so many unskilled workmen have undertaken to imitate the natural
+grain of wood with such imperfect results, that this beautiful branch
+of painting has fallen into partial disuse. A few remarks, therefore,
+to the uninitiated may not be inappropriate in this work. Mahogany,
+satinwood, rosewood, mottled and walnut roots, maple, and some
+others, are frequently imitated; and it is seldom that a house is
+finished without some graining being introduced. The imitation of the
+above-mentioned woods are best performed in ground distemper (water
+colors) which are always preferable and more economical purchased
+ready prepared. Oak, chestnut, ash and similar long-grained woods, are
+best executed in oil-color, particularly for outdoor work. For drawing
+rooms, delicate party colors are preferable, as they harmonize better
+with the neutral tints on the walls or delicate tinted papers. The
+process of graining is very simple. To be an accomplished grainer,
+practice and an artistic taste is very necessary. Too frequently
+the imitation is overdone, the shading too deep and obtrusive, and
+the work made too glaring with figure and varnish, has an unnatural
+appearance; a grainer should always avoid attempting to over-do nature.
+The following is an approved method:--The surface on new wood should
+be prepared with three coats of oil paints for the ground color, and
+regulated in shade by the color of the wood to be imitated, making due
+allowance for the graining tint that is to cover it. The ground colors
+should always be perfectly dry before the graining is commenced. The
+painter then preparing small quantities of the colors he requires,
+applies it thinly and evenly over the surface and proceeds to wipe
+out with his thumb and a piece of white cotton cloth the figure of
+the grain. Some grainers use rubber instead. We cannot here explain
+all the different processes for the imitation of the grain of wood.
+Many painters have a method of their own, which from long practice
+produce excellent results. In some cases, graining in distemper may
+be adopted with great success for indoor work, and if the colors are
+put on thin, so that the varnish will penetrate through into the
+ground color, this kind of graining is as durable as oil-color, and is
+susceptible of being made far more beautiful, and soft looking in the
+imitation of mottled woods. For blending distemper colors, a badger’s
+hair blender should be frequently used to soften down and blend the
+tints where necessary; but for blending oil-color, in order to produce
+an elongation of the grain, we have found a flat varnish brush, kept
+moderately damp and clean, preferable to the badger’s hair. When the
+work is dry, the shades necessary for some woods should be laid on
+in distemper-color (some use thin oil-colors) and then covered with
+two coats of good oil varnish. Common varnish should never be used on
+outside work.
+
+=Oak Graining.=--In oak graining the color is made in the following
+manner:--Procure some finely-ground burnt umber and raw sienna (or
+Vandyke brown and raw sienna if a dark oak be required), and thin
+with equal parts of linseed oil and turpentine. Add a large quantity
+of patent dryer to make it stand the comb. The color is now ready
+for use. The graining color is brushed over the work in the ordinary
+way with a pound brush, care being taken not to put too much color
+on, else it is liable to look dirty. A dry dusting brush is now used
+to stipple with, which, if properly done, will distribute the color
+evenly. It is now ready for combing. First take a medium or coarse-cut
+gutta-percha comb, and draw it down one side of the panel, then use a
+finer one to complete it. This comb will leave the marks of the grain
+in clear unbroken lines from top to bottom of the panel. We now take
+a fine steel comb and go over the whole of the previous combing; but
+in drawing this comb down, we either move it in a slanting or diagonal
+direction across the previous combing, or draw it down with a quick and
+short wavy motion and curl. Both the former and latter motions will
+break up the long lines left by the gutta-percha comb into short bits,
+which, of course, represent the pores or grains of the real wood. Next
+take out the lights of figuring or veining. This is effected by means
+of a piece of washleather, held tightly over the thumb nail. Every time
+a few lights are wiped out the leather should be moved slightly, so
+that the same part of the leather will not be used twice, thus ensuring
+clean work. There are various methods of doing this, but they require
+much more practice. When the figures are all wiped out they will
+require to be softened. By softening we mean the imitation of those
+half shades seen upon and about the figures in the real wood. These
+are imitated by doubling a piece of washleather into a small roll,
+and with the side of this the grain is partly wiped away or softened.
+Care should be taken not to wipe off the whole of the grain. If the
+operator has a piece of the real wood to look at occasionally he will
+be materially assisted. As soon as the oil color is dry it should be
+over-grained. This is effected in water color. Next go over the work
+with a bit of sponge and soap to prevent it “cissing.” Before laying
+on the over-graining, wash out the sponge and wipe the work. It is now
+ready to receive the color. Grind up finely a little vandyke brown in
+water, and dilute it with table-beer and water. It is then ready. Take
+a flat hog-hair brush, 3 in. to 4 in. wide, dip it in the color and
+draw it over the work, in most cases in the direction of the combing,
+but occasionally crossing. The hair of the brush, being thinly placed,
+will separate into patches, and hence the color will be deposited in
+streaks, resembling the natural gradations which the wood presents. If
+you have not a brush of this kind a sponge may be used to put in the
+streak and to soften off. Then dry varnish in the usual way.
+
+=Spirit Graining for Oak.=--2 lbs. whiting, ¹⁄₄ lb. gold size, thinned
+down with spirits of turpentine, then tinge your whiting with vandyke
+brown and raw sienna ground fine. Strike out your light with a pitch
+or piece of rubber dipped in turpentine, tinged with a little color
+to show the lights. If your lights do not appear clear, add a little
+more turpentine. Turpentine varnish is a good substitute for the above
+mentioned. This kind of graining must be brushed over with beer with a
+clean brush before varnishing. Strong beer must be used for glazing up
+top graining and shading.
+
+=Old Oak in Distemper.=--To make an exceedingly rich color for the
+imitation of old oak, the ground is a composition of stone ochre or
+orange chrome and burnt sienna; the graining is burnt umber or vandyke
+brown, to darken it a little. The above colors may be used for oil as
+well.
+
+=Pollard Oak.=--Ground color, a mixture of chrome yellow, vermilion
+and white lead, to bring it to a rich light buff. The graining colors
+are vandyke brown and small portions of raw and burnt sienna and lake,
+ground in beer or vinegar. Fill a large brush with color and spread it
+over the surface to be grained, and soften with a badger hair brush.
+Take a moistened sponge and dapple round and round in kind of knobs,
+then soften very lightly, after which draw a softener from one set of
+knobs to the other while wet, to form a multiplicity of grain, and
+finish the knobs with a hair pencil, in some places in thicker clusters
+than others. When dry, put the top grain on in a variety of directions,
+and varnish with turpentine and gold size; then glaze up with vandyke
+and strong beer. Finish with copal varnish. This is for distemper only.
+
+=Mottled Mahogany.=--The ground is prepared with the best Venetian red,
+red lead, and a small proportion of white lead. The graining colors are
+burnt sienna, ground in beer, with a small portion of vandyke brown.
+Cover the surface to be grained, soften with a badger hair brush, and
+while wet take a damp sponge and go over the lights a second time, in
+order to give a variety of shade; then blend the whole of the work with
+the badger softener. Put the top grain on with the same color. When
+dry, varnish. For distemper only.
+
+=Rosewood.=--Mix vermilion and a small quantity of white lead for the
+ground. Take rose-pink, tinged with a little lamp-black or vandyke
+brown, and grind very fine in oil, then take a flat graining brush,
+with the hairs cut away at unequal distances, and cut down the grain as
+if wending round a knob. When nearly dry, take a graining comb that is
+used for oak, and draw down the grain. This will give it the appearance
+of nature. Then varnish. This makes an excellent and durable imitation.
+
+=Another for Rosewood.=--This ground is prepared with vermilion and
+small quantities of white lead and crimson lake. When the ground is
+dry, and made very smooth, take vandyke brown, ground in oil, and
+with a very soft tool spread the color over the surface in different
+directions, forming a kind of knots. Before the work is dry take a
+piece of leather, and with great freedom strike out the light veins;
+having previously prepared the darkest tint of vandyke brown or gum
+asphaltum, immediately take the flat graining brush with few hairs in
+it, called a top grainer, and draw the grain over the work and soften.
+When varnished, the imitation will be excellent.
+
+=Curled Maple in Oil.=--Prepare a rich ground by mixing chrome yellow,
+white lead and burnt sienna. For the graining color, grind equal parts
+of raw sienna and umber with a little burnt copperas and turpentine,
+and mix it with a small quantity of grainer’s cream, thin the color
+with oil; then fill a tool and spread the surface even and rub out the
+lights with sharp edge of a piece of buff leather, wiping it frequently
+to keep it clean; soften the edges of the work very lightly, and when
+dry, put on the top grain with burnt umber and raw sienna ground in
+beer with the white of an egg beat into it. Varnish.
+
+=Curled Maple in Distemper.=--Prepare a light yellow for the ground,
+by mixing chrome yellow and white lead, tinged with Venetian red. The
+graining color is a mixture of equal portions of raw sienna and vandyke
+brown, ground in beer. Spread the surface to be grained in an even
+manner; then with a piece of cork rub across the work to and fro, to
+form the grains which run across the wood; soften, and when dry lightly
+top grain with the same color. Varnish.
+
+=Bird’s Eye Maple in Oil.=--The ground is a light buff, prepared with
+white lead, chrome yellow and a little vermilion or English Venetian,
+to take off the rawness of the yellow. The graining color is equal
+parts of raw umber and sienna, ground in oil to the proper consistency.
+Spread the surface of the work with this color, and having some of the
+same prepared a little thicker, immediately take a sash tool or sponge
+and put on the dark shades, and soften with a badger hair brush; before
+the color is dry put on the eyes by dabbing the dotting machine on the
+work, or by striking the colors short and sharp with the tips of the
+fingers, then blend slightly the eyes in one direction only. When dry,
+put on the grain with the camels hair pencil on the prominent parts to
+imitate the small hearts of the wood. The same graining colors to be
+ground in here for distemper.
+
+=Walnut in Oil.=--The ground is formed with ochre, Indian red, umber,
+and white. The graining coat is similar to that described under the oak
+heading, and is prepared with vandyke brown; and for the darker shades,
+fine ivory-black; the wiping out and blending to resemble that in
+mahogany; the fine dark veins of ivory-black to be lightly and wavily
+drawn over the work after it is blended. It is then ready for the
+varnish.
+
+=Satin-wood in Distemper.=--This ground is prepared with white lead,
+stone ochre and small quantities of chrome yellow and burnt sienna. The
+graining color is one-third of raw sienna and whiting, ground in pale
+ale, very thin; then spread the color over the surface to be grained.
+While wet soften, and have ready a wet roller or mottling brush, in
+order to take out the lights; blend the whole with the badger hair
+brush, and with the same color put on the top grain. Varnish.
+
+=To Imitate Granite in Oil.=--For the ground color, stain your white
+lead to a light lead color, with lamp-black and a little rose-pink.
+Throw on black spots with a coarse brush or graniting machine. A pale
+red also, and fill up with white before the ground is dry.
+
+=Another for the Same.=--A black ground; when half dry throw in
+vermilion, a deep yellow, and white spots.
+
+=Marble.=--For _White Marble_, get up a pure white ground, then hold
+a lighted tallow candle near the surface, and allow the smoke to form
+the shades and various tints desired. This will make a very handsome
+imitation. _Black Marble._--Imitation is made by streaking a black
+surface with colors, using a feather and pencil. Another plan is to
+get up a smooth black surface; then take the colors, green, yellow,
+red, white, etc., ground thick in gold size, and streak the surface
+with a stick or hair pencil. Allow it to dry, and apply a heavy coat
+of lamp-black and yellow ochre mixed, mixed rough stuff. When all is
+hard, rub down to a level surface with lump pumice-stone, varnish and a
+beautiful variegated marble will be the result.
+
+=Red Marble.=--For the ground put on a white tinged with lake or
+vermilion; then apply deep red patches, filling up the intermediate
+spaces with brown and white mixed in oil; then blend them together; if
+in quick drying colors, use about half turpentine and gold size. When
+dry, varnish, and while the varnish is wet, put in a multitude of fine
+white threads, crossing the whole work in all directions, as the wet
+varnish brings the pencil to a fine point.
+
+=Jasper Marble.=--Put on a white ground lightly tinged with blue; then
+put on patches of rich reds or rose-pink, leaving spaces of the white
+ground; then partly cover these spaces with various browns to form
+fossils, in places running veins; then put in a few spots of white in
+the centre of some of the red patches, and leaving, in places, masses
+nearly white. When dry use the clearest varnish.
+
+=Blue and Gold Marble.=--For the ground color put on a light blue;
+then take blue, with a small piece of white lead and some dark common
+blue, and dab on the ground in patches, leaving portions of the ground
+to shine between; then blend the edges together with a duster or a
+softener; afterwards draw on some white veins in every direction,
+leaving large open spaces to be filled up with a pale yellow or gold
+paint; finish with some fine white running threads, and a coat of
+varnish at last.
+
+=Black and Gold Marble.=--This description of marble is very chaste,
+and is in great demand. The ground is a deep black, or a dead color,
+in gold size, drop black and turpentine; second coat, black japan.
+Commence veining; mix white and yellow ochre with a small quantity of
+vermilion to give a gold tinge; dip the pencil in this color, and dab
+on the ground with great freedom some large patches, from which small
+threads must be drawn in several directions.
+
+In the deepest part of the black a white vein is sometimes seen running
+with a number of small veins attached to it, but care must be taken
+that these threads are connected with and run, in some degree, in the
+same direction with the thicker veins. If durability is not an object,
+and the work required in a short time, it may be executed very quickly
+in distemper colors, and when varnished, it will look well.
+
+=Compound Colors.=--The following tints can be formed by mixing the
+colors as below. The shades can be made to suit any taste by the
+exercise of a little judgment in proportioning the colors:
+
+_Cream._--White lead, yellow and red.
+
+_Drab._--White, Prussian blue and vermilion.
+
+_Fawn._--White, stone ochre and vermilion.
+
+_Flesh._--Lake, white lead, and a little vermilion.
+
+_Grey_, Pearl--White lead, Prussian blue, and a very little black.
+
+_Grey_, Flaxseed.--White lead, Prussian blue, and a little lake.
+
+_Gold._--Massicot, or Naples yellow, with a small quantity of Realgar
+and Spanish white.
+
+_Green_, Light willow.--White, mixed with verdigris.
+
+_Green_, Grass.--Yellow pink with verdigris.
+
+_Green_, Pea.--White lead and chrome or Paris green.
+
+_Green_, Dark.--Black and chrome green.
+
+_Green_, Olive.--Prussian blue and French yellow; mix to the tints
+required. This is a cheap and handsome color for outside work, such as
+doors, carts, wagons, railway cars, etc.
+
+_Jonquil._--Yellow, pink and white lead. This color is only for
+distemper.
+
+_Lead._--Prussian blue and white, with a light shade of white.
+
+_Olive._--For distemper, use indigo and yellow pink mixed with whiting
+or white lead powder.
+
+_Olive._--Red, green, or black and yellow.
+
+_Pearl._--White lead, Prussian blue and red.
+
+_Purple._--Dark red mixed with violet.
+
+_Purple._--White, Prussian blue and vermilion.
+
+_Red_, Dark.--English Venetian, red lead and litharge.
+
+_Red_, Light.--Venetian red, and red lead in equal parts.
+
+_Red_, Deep.--Vermilion, with a very small quantity of red lead.
+
+_Stone._--White, with a little spruce ochre.
+
+_Straw._--White lead and yellow.
+
+_Snuff._--Yellow, sienna and red.
+
+_Slate._--White lead, black, red and blue.
+
+_Steel._--Ceruse, Prussian blue, fine lac and vermilion.
+
+_Salmon._--White lead, yellow and red.
+
+_Walnut._--Tree color; two-thirds white lead and one-third red ochre,
+yellow ochre and umber, mixed according to the shade sought. If veining
+is required, use different shades of the same mixture. (See article on
+graining).
+
+_Yellow_, Light.--French yellow and white lead. A little red lead may
+be used.
+
+_Another._--French yellow, white and red lead.
+
+_Another._--A mixture of a small portion of Prussian blue, French
+yellow, white lead and Turkey umber and burnt vitriol, or litharge,
+will produce different shades of yellow, according to the preponderance
+of one of the above colors.
+
+_Yellow._--Bright for floors, white lead, French yellow, chrome yellow
+a little, some red lead and litharge; mix with equal parts of boiled
+oil and turpentine and use it thin.
+
+_Yellow_, Dark.--French yellow and a little red.
+
+_Yellow_, Lemon.--Yellow pink, with Naples yellow. For distemper only.
+
+
+
+
+MISCELLANEOUS RECEIPTS.
+
+
+=For Iron.=--A good paint for preserving iron exposed to the weather,
+is made as follows:
+
+Pulverized oxides of iron, such as yellow and red iron ochres, or brown
+hematite iron ores, finely ground, and simply mixed with linseed oil
+and a dryer.
+
+White lead applied directly to iron is thought to have a corrosive
+effect. It may be applied over more durable colors.
+
+Red lead, when pure, is very durable. An instance is recorded of iron
+painted with it having been under water for nearly 50 years, and had
+not been affected by rust.
+
+Sheet iron, before being used for roofs or other outside purposes,
+should be heated and dipped into hot linseed oil, which will penetrate
+into it. Tinned iron in roofs has been found to corrode quicker than in
+former years, owing to the more general use of coal.
+
+=Paint for Rusty Iron.=--Black Japan varnish, mixed with turpentine,
+to make it thinner if necessary, is one of the best preventatives; but
+the iron must be dry when you put it on. If you can warm the iron when
+painting it, so much the better. If not sufficiently opaque, you may
+put in dry finely pulverized paint, such as lamp-black. Red lead, with
+linseed oil is also a good paint for rusted iron; so are the mineral
+reddish-browns which consist of oxide of iron; they become very hard,
+and are used for the iron-work of the elevated railroads in this city.
+
+=To Paint on Stucco.=--Great care is required in painting upon
+stucco, for the work must not only be thoroughly dry, but free from
+any liability of dampness; that is to say, the walls themselves must
+be dry. It is, consequently, usual to allow the stucco to remain for
+several months before it is painted; and this is especially necessary
+when it covers over a large surface, as in the walls of churches,
+chapels and theatres. If the paint be applied too soon, the work will
+have a blotched appearance, and be probably filled with small vesicles,
+formed during the evaporation of the water. When the work is dry, it
+may be prepared by covering it with a coat of linseed oil, boiled
+with dryer. This must be laid on very carefully, or the face will be
+irregular. The color may then be applied, and four coats will not be
+too much, the work being new. Persons are generally so anxious to have
+their buildings finished, that they disregard the future appearance of
+the work, and within a few weeks after the application of the stucco,
+cover it with paint. But it would, in all cases, be sufficient to wash
+the surface with distemper, as it would give a finished appearance to
+the building, and make it less necessary to hurry the work. When the
+work is sufficiently dry to receive the oil-colors the distemper color
+should be removed by washing, and when the stucco is dry apply the
+oil-color. The tints may be regulated by mingling different colors, as
+in all other kinds of painting.
+
+Plastered walls should not be painted until they are thoroughly dry,
+and all settling in a new house has taken place. If painted too soon
+they will blister.
+
+Unseasoned wood should never be painted, as it stops the pores of the
+wood and the sap acidulates, causing dry rot. Greasy surfaces must be
+washed with water mixed with lime or soda, otherwise the paint will not
+adhere to it.
+
+=Mixing Quick Drying Paint.=--Venetian blinds should be painted to dry
+dead, then varnish; but few take this trouble. Mix the paint as under:
+White lead, boiled oil, and the least drop of turps; mix sufficient
+of each to form a creamy mixture; then add about 1 oz. patent drier
+to each 1 lb. of paint. If you want the paint darker use enough burnt
+umber to give the required tint. If you want to varnish, omit the oil
+and use turps.
+
+=Transparent Paint for Glass.=--Take for blue pigment, Prussian blue;
+for red, crimson lake; for yellow, Indian yellow; and for other shades,
+a mixture of the appropriate primary colors. Rub them in a size made
+as follows: Venice turpentine, 2 parts; spirits of turpentine, 1 part,
+and apply with a brush. The colors are moderately fast unless exposed
+too long to direct sunlight. A solution of the various aniline dyes in
+shellac varnish has also been recommended.
+
+=Gilding.=--Gold leaf is the only successful application. First put
+on a coat of Japan gold size, and when that is “tacky,” and nearly
+dry, lay on the gold-leaf and dab it with a small tuft of cotton-wool.
+Where you buy the gold-leaf you can buy a gilder’s tool for applying
+it; but in order to get a smooth surface it must (when perfectly dry)
+be burnished with an agate burnisher, which you will also get at the
+color-shop, but you will not be able to burnish gold-leaf on the bare
+wood. You can, if you like, varnish with pale copal varnish.
+
+=Gilding on Glass.=--Glass letters are gilt the same way as you would
+a name on a glass door. You can easily get a good burnish if you take
+a little trouble. Get some of the best cotton wool at a chemist’s, and
+well polish the gold with it; the gold must be thoroughly dry. Then go
+over it with your size boiling hot; do not touch the same place twice
+with the brush, or you will bring the gold up; repeat the process three
+or four times, being sure to have your gold dry each time, the hotter
+the size the brighter will be the burnish; be careful, however, and not
+break the glass with the heat.
+
+=Gilding Fretwork, etc.=--The first thing to be done is to whiten the
+work. To do this scrape some whitening very fine, place it in a pipkin
+with a lump of gilder’s size, and water sufficient to make it of the
+consistency of thick cream, when heated over a fire; then, with a
+camel-hair pencil, paint it on the object several times, allowing
+each coat to dry before applying the next. When the several coatings
+have raised it to the thickness of ¹⁄₁₆ in., set it aside for twelve
+or more hours, to harden; when hardened, smooth the surface with very
+fine sandpaper first, and finally with a piece of cork; when using
+the cork frequently dip it in water, and, when practicable, use it in
+a circular motion. Thus far successful, the next thing is to lay on
+the gold. To gild, then, dissolve some gilder’s--not common size--in
+water, and heat, and with a full brush lay it on the surface of the
+object. Cut the gold leaf, on a pad of buff leather, with a clean
+cut of the knife (much easier said than done; perseverance, however,
+with the cost of a book or two of gold mutilated, and a large amount
+of patience exhausted, will overcome the difficulty), to the size
+required; take these up on a tip (a row of long hairs placed between
+two bits of cardboard)--the professional way to do this is to strike
+the hair of the tip against the gilder’s own whiskers or hair--and
+gently lay them on the surface of the object, taking care that each
+succeeding piece slightly overlaps the preceding. When dry, a small
+piece of fine sponge, dipped in a weak solution of size water, should
+be gently passed over it to give a uniform appearance. If the bright
+gold requires to be deadened, deep ormolu should be used in a similar
+way after sizing. The yellow used for the ungilt portions consists of
+gilder’s yellow, dissolved in size water, and is put on with a brush.
+
+=Painting on Gilded Panels.=--There is no preparation needed to paint
+in oils on a gilded panel. No mediums are required, the ordinary oil
+colors being used unmixed. If required to dry flat and to remain so,
+they are mixed with turpentine and left unvarnished. If the shiny look
+of oils is to be retained, they are slightly diluted with boiled oil,
+and varnish with white hard varnish when dry.
+
+=Gilding on Wood.=--To gild in oil, the wood, after being properly
+smoothed, is covered with a coat of _gold size_, made of drying linseed
+oil mixed with yellow ochre; when this has become so dry as to adhere
+to the fingers without soiling them, the gold leaf is laid on with
+great care and dexterity, and pressed down with cotton wool; places
+that have been missed are covered with small pieces of gold leaf, and
+when the whole is dry, the ragged bits are rubbed off with cotton. This
+is by far the easiest mode of gilding; any other metallic leaves may
+be applied in a similar manner. _Pale leaf gold_ has a greenish yellow
+color, and is an alloy of gold with silver. Dutch gold leaf is only
+copper colored with the fumes of zinc; being much cheaper than gold
+leaf, is very useful when large quantities of gilding are required in
+places where it can be defended by the weather, as it changes color if
+exposed to moisture, and it should be covered with varnish. _Silver
+leaf_ is prepared every way the same as gold leaf; but when applied,
+should be kept well with varnish, otherwise it is liable to tarnish; a
+transparent yellow varnish will give it the appearance of gold.
+
+Whenever gold is fixed by means of linseed oil, it will bear washing
+off, which burnished gold will not.
+
+=To Gild Letters.=--When the sign is prepared as smooth as possible, go
+over it with a sizing made by white of an egg dissolved in about four
+times its weight of cold water; adding a small quantity of fuller’s
+earth, this to prevent the gold sticking to any part but letters. When
+dry, set out the letters and commence writing, laying on the size as
+thinly as possible, with a sable pencil. Let it stand until you can
+hardly feel a slight stickiness, then go to work with your gold leaf
+knife and cushion, and gild the letters. Take a leaf upon the point of
+your knife, after giving it a slight puff into the back part of your
+cushion, and spread it on the front part of it as straight as possible,
+give it another slight puff with your mouth to flatten it out. Now cut
+it to the proper size, cutting with the heel of your knife forwards.
+Now rub the tip of the knife lightly on your hair; take up the gold
+on the point, and place it neatly on the letters; when they are all
+covered, get some very fine cotton wool, and gently rub the gold until
+it is smooth and bright. Then wash the sign with clean water to take
+off the egg size.
+
+=Sign Writing in Colors, Etc.=--On an oak ground ornamental letters, in
+ultra-marine blue, filled in with gold and silver leaf, blocked up and
+shaded with burnt sienna. _Another._--Gold letters on a white marble
+ground, blocked up and shaded with a transparent brown or burnt sienna.
+_On glass._--Gold letters shaded with burnt sienna. _Another._--Gold
+letters shaded with black on a _scarlet_ or _chocolate ground_. On a
+rich _blue ground_ shaded with black, look very well. _On a purple_
+ground, pink letters shaded with white. Mix ultra-marine and vermilion
+for a ground color, white letters shaded with grey. _Vermilion
+ground_, chrome yellow stained and vermilion and lake, for the letters
+shaded with black.
+
+A substitute for the above colors: Rose-pink and red lead; and for the
+letters stone yellow, white lead and Venetian red. Mix your colors for
+writing in boiled oil, and use for dryer gold size. Other good grounds
+for gold letters are, blues, vermilion, lake and Saxon. When your sign
+is ready for gilding, follow the directions under the head “_To Gild
+Letters on Wood_.”
+
+=Gilder’s Size.=--Drying or boiled linseed oil, thickened with yellow
+ochre, or calcined red ochre, and carefully reduced to the utmost
+smoothness by grinding. It is thinned with oil of turpentine.
+
+=Staining Wood a Dull Black.=--The work required to be stained should
+be colored with drop-black and size. When this is thoroughly set it
+should be papered off and colored again, and then be papered off again.
+The polish should also be stained with drop black and a little indigo.
+Next polish to a perfect surface, and let it set. After the wood has
+absorbed all the polish possible, polish again, and dull it with the
+finger dipped in fine emery; a fine metallic surface will thus be
+obtained.
+
+=Staining Floors.=--The best and cheapest and only permanent stain
+for floors is permanganate of potash. Buy it by the ¹⁄₄ lb., and at
+a wholesale chemist’s; mix about ¹⁄₄ oz. in a quart of water. Apply
+freely and quickly to a dry floor with either cloth or brush, the
+latter if you care for staining your hand. Repeat the process for
+a very dark oak color; when dry, oil with burnt oil or beeswax and
+turpentine; you cannot wash this color out. Benson’s stain is only
+permanganate of potash. At first for a few moments the color is bright
+magenta, but this at once changes to a dark permanent brown. For fifty
+cents a whole house may be stained.
+
+=Varnishing Wood.=--After smoothing wood with veneer scraper, brush on
+thick coat of shellac varnish; then use fine sandpaper, No. 0. Do this
+three times for close grained woods, such as black cherry, and four
+times for porous wood, such as chestnut. Have two dishes. Into one put
+finely ground pumice; into the other raw or boiled oil. Apply a mixture
+of these with a piece of hair-cloth or broad-cloth. Don’t rub too hard.
+Finish up with rotten stone, which will remove pumice and oil. Above is
+a good dead varnish. _Another._--Take encaustic wax, heat, and apply
+with a cork; rub in well, brush on thin coat shellac varnish, finish
+with pumice and oil.
+
+=Solvent for Old Putty and Paint.=--Soft soap mixed with a solution
+of potash or caustic soda, or pearlash and slaked lime mixed with
+sufficient water to form a paste. Either of these laid on with an old
+brush or rag, and left for some hours, will render the putty or paint
+easily removable. _Another._--Slack three pounds of stone quicklime in
+water, then add one pound of pearlash, and make the whole about the
+consistence of paint. Apply it to both sides of the glass, and let it
+remain for twelve hours, when the putty will be so softened that the
+glass may be easily taken out of the frame. _Another._--Break the putty
+up in lumps the size of a hen’s egg, add a small portion of raw linseed
+oil, and water sufficient to cover the putty, boil this in an iron
+vessel for about ten minutes and stir it when hot. The oil will mix
+with the putty, then pour the water off and it will be like fresh made.
+For removing hard putty from a window sash take a piece of square iron,
+make the same red hot, and run it along the putty till it gets soft.
+The putty will peel off without injuring the wood work.
+
+=Wash for Outside Work.=--For woodwork slake half a bushel of fresh
+lime, by pouring over it boiling water sufficient to cover it 4 or 5
+inches deep, stirring it until slacked; add 2 lbs. of sulphate of zinc
+(white vitrol) dissolved in water. Add water enough to bring all to the
+consistency of thick whitewash; it may be colored by adding powdered
+ether, Indian red, umber, etc. If lampblack is added to colors, it
+should first be thoroughly dissolved in alcohol. The sulphate of zinc
+causes the wash to become hard in a few weeks.
+
+=Another for Brick, Masonry, and Rough-cast.= Slake half a bushel
+of lime as before; then fill a barrel ²⁄₃ full of water, and add a
+bushel of hydraulic cement. Add 3 lbs. of sulphate of zinc previously
+dissolved in water. The whole should be of the thickness of paint. The
+wash is improved by stirring in a peck of white sand, just before using
+it. It can be colored as before described.
+
+=French Polish.=--Coat with one or more coats of shellac and rub down
+smooth; make a rubber by rolling up a piece of flannel about 3 or 4
+inches wide until it is about 1¹⁄₂ inches in diameter, and tie it round
+with cord. Lay the end of the rubber on the mouth of a thin necked
+bottle and apply the varnish to it, having previously shaken up the
+contents in the bottle; then enclose the end of the rubber with a piece
+of soft linen doubled, and moisten the face of the linen with a little
+raw linseed oil.
+
+Pass the rubber with a quick, light and circular motion over the
+surface until the varnish becomes dry, or nearly so, and charge the
+rubber again with varnish until 3 coats have been laid on, when a
+little oil may be applied to the rubber and two more coats laid on. In
+the finishing coat wet the inside of the cloth with a little alcohol,
+and rub quickly and lightly over the whole surface. Lastly wet the
+linen cloth with a little oil and alcohol without varnish, and rub as
+before until dry.
+
+The varnish is the usual preparation of shellac. See cabinet maker’s
+varnish.
+
+=Wood Filling Composition.=--Boiled linseed oil, 1 qt.; turpentine,
+3 qts.; corn starch, 5 lbs.; Japan, 1 qt.; calcined magnesia, 2 oz.;
+mix thoroughly. _Another._--Whitening, 6 oz.; Japan, ¹⁄₂ pt.; boiled
+linseed oil, ¹⁄₂ pt.; turpentine, ¹⁄₂ pt.; corn starch, 1 oz.;
+mix well together and apply to the wood. Add coloring if required.
+_Another._--Linseed oil, 1 qt.; spirits of turpentine, ¹⁄₂ pt.; lime,
+the size of a base-ball, broken fine. Let the mixture simmer on a
+stove, covered over, for two or three hours, then strain through a
+coarse cloth. It is to remain on 24 hours, then rub off with a woolen
+cloth and polish.
+
+=German Filling.=--Fill the pores with raw tallow and plaster of Paris
+well amalgamated before a fire in cold weather. Darken, if required,
+with any coloring to suit. When well rubbed in give a coat of shellac
+and French polish or varnish.
+
+=Polish for Walnut Wood.=--Mix with two parts of good alcoholic shellac
+varnish, one part of boiled linseed oil, shake well, and apply with a
+pad formed of woolen cloth. Rub the furniture briskly with a little of
+the mixture until the polish appears.
+
+=Rules the Painter Should Observe.=--Never eat or sleep without washing
+the hands and face and rinsing the mouth. Keep the buckets, brushes,
+etc., clean, so that they may be handled without smearing the hands.
+Never sleep in a paint shop nor in a newly painted room. Never allow
+paint to accumulate on the clothing or finger nails. Never wash the
+hands in turpentine, as it relaxes the muscles and injures the joints;
+any animal oil or even linseed oil is better. Never drink water that
+has stood any length of time in a paint shop or newly painted room.
+Never use spirituous liquors as it unites with the mineral salts and
+tends to harden them and causes inflammation of the parts where they
+concrete. Milk, sweet oil and the like should be used freely, as they
+tend to soften the accumulated poisons and carry them off. Vinegar and
+acid fruits used constantly, unite.
+
+
+
+
+PAPER-HANGING.
+
+
+The art of putting on, or “Hanging” paper is very simple, and is easily
+learned; but to make a tasteful choice of paper for various situations,
+is not so easy, hence the following remarks, which may be of service to
+the workman or others on whom the selection of paper may devolve.
+
+Walls to a room should be regarded only in the light of a frame-work
+to what the room contains, and should be decorated so as to bring into
+prominence and not eclipse the other parts of the chamber. Nothing
+destroys the effect of a room so much as a handsome but staring wall
+paper, or a wall so profusely ornamented as to strike upon the eye to
+the exclusion of the rest of the decorations, thus bringing forward
+what should be the background into the most conspicuous place. A
+modern drawing room is always difficult to decorate artistically,
+because of the taste of its builders for heavy cornices, prominent
+mantelpieces, and rooms too lofty for their size; and as all these
+misnamed “embellishments” are too costly to remove by tenants, the only
+plan to pursue is to destroy their effect by exercising both taste and
+ingenuity. First, with regard to the ceiling, the ornamental plaster
+boss in its center should be removed, and the ceiling tinted a color
+that harmonizes with the wall paper, as no harmonies can be hoped for
+when what produces them is surmounted with the glaring white of an
+ordinary ceiling. The tint used must be one that softens into the wall
+paper, not one that contrasts; thus, if the tone of the room is that of
+a soft grey blue, the ceiling should be a clear flesh pink; or should a
+grey gre picked out with black be the chosen color, then it should be
+colored a subdued lemon.
+
+Some people cover their ceilings with a whole colored paper, and border
+it with a stencilled pattern representing the thin garlands so familiar
+upon Queen Anne decorations, but this is a more troublesome plan than
+the simple coloring, which answers all the purpose. The walls, if they
+are lofty, require a high dado. These high dados give a look of comfort
+and “home” that is absent from the modern high pitched room papered
+with one uniform pattern. The dado is divided 3 feet to 4 feet from the
+ceiling, and the coloring of the lower portion must always be heavier
+than that used on the upper or a top heavy look will be given to the
+room. When many pictures are to be hung up the lower part of the dado
+should be of a whole color, either a whole colored paper or a painted
+wall, as pictures are only shown off upon such a background. Where a
+whole tint is used for the lower part of the dado, the upper portion
+should be decorated with a frieze paper of a good bold pattern, but
+of subdued coloring and of tint that harmonizes with the lower. Thus,
+the color used about the frieze should be the same as that on the
+lower part, but of a lighter shade, intermixed with some other colors
+that form a harmonious link between the two shades. Contrasts must
+be carefully avoided, but pale pinks, blue and ambers can be blended
+together above a subdued grey blue ground. The two portions of the dado
+should be joined together with a light wooden (black or brown) railing,
+or with a line of paint.
+
+The dado decoration can be altered by placing the pattern paper upon
+the lower part and leaving the upper plain-colored with or without
+a stencilled pattern upon it. This will suit a room where not many
+pictures are required, or that is already rather dark. Some part of the
+wall should always be in plain color, as the eye requires rest; and no
+pattern, however subdued in hue, can give the relief to the mind that
+a bit of plain coloring affords, and this scarcity of ornament in one
+part of a room is amply repaid by the effect it gives to such parts as
+are bright and should be bright. The true theory of effect is to use
+but one or two bright colors in a room, and to surround them by soft
+and subdued tints that throw up and do not destroy their brilliancy; a
+number of bright colors placed together destroy each other, and leave
+no impression upon the mind but glare and vulgarity. Having settled
+upon your paper and ceiling, have the woodwork and cornice of the room
+painted either a shade lighter or darker than the walls, and shroud up
+the mantelpiece with curtains, etc., of satin sheeting embroidered with
+crewels, and instead of the usual looking glass over the fire-place,
+have a mirror surrounded with brackets holding china; or have a black
+wooden mantelpiece made with squares of looking glass set in. The
+back-ground of your room being thus completed in a manner really to be
+a back-ground, your furniture will look twice as well as if it were
+stared out of countenance by the walls, and one need hardly add that
+all your friends will delight in a room that throws up and brings out
+their dresses and faces, instead of killing them by its glaring tints.
+
+=Operations.=--To prepare the walls, make a size of glue and water,
+then give the walls a coat of a very weak solution of the same. To
+make a paste, take two pounds of fine flour, put in a pail; add cold
+water, and stir it up together in a thick paste. Take a piece of alum
+about the size of a small chestnut, pound it fine and throw it into the
+paste; mix well. Then provide about six quarts of boiling water and
+mix while hot with the paste until the whole is brought to a proper
+consistency. This makes an excellent paste, and fit for use when cold.
+
+=Cleaning Paper-Hangings.=--A very good method to clean paper-hangings
+is that used oftentimes in cleaning the margins of prints. Cut into
+eight pieces a quartern loaf two days old, and after having swept all
+the dust from the paper-hangings, commence from the ceiling downward,
+and somewhat lightly rub the paper with a downward stroke with one of
+the pieces of bread. Continue this round the room, and then commence
+lower down in the same way till the whole of the surface of the paper
+has been gone over. The bread will from time to time get dirty, and
+it should be cut off as often as required. Care should be exercised
+not to rub the paper with a cross or horizontal stroke, only with the
+perpendicular movement of the hand or the paper may peel off the walls
+from the joints. With careful manipulation, paper will look almost as
+good as new.
+
+=Varnishing Paper-hangings.=--When papers are hung in places where
+there is much passing, they are subject to greater wear than in an
+ordinary room, and varnishing is resorted to, to make them more
+durable, as it prevents soiling; they may also be cleaned with a damp
+cloth, and are not in wear so likely to be damaged by rubbing off the
+wall. Halls, lobbies, staircases, and offices are sometimes varnished
+for durability, but as a rule the appearance is not improved. The paper
+must be sized twice, the first being dry before the next is applied,
+when the varnish is laid evenly on. It is necessary to size the paper
+twice, as the first time may not effectually cover it, when the varnish
+would stain the paper as badly as if oil had been applied. The size
+necessary for sizing the paper before varnishing should be clean and
+transparent. Parchment cuttings boiled down in water and strained will
+make excellent size for this purpose. Before it is cold it should be
+either strained through calico, or poured off, leaving the bits at the
+bottom. A patent size is sold for this purpose, but parchment size is
+the most reliable. Use clean brushes for size and varnish.
+
+=A Paste that will Keep Well.=--A correspondent writes to a journal
+this formula for a non-poisonous paste that will keep well in hot
+weather: Wheat flour, 1 ounce; powdered alum, ¹⁄₂ drachm; water,
+sufficient, or 8 ounces; oil of clove, or wintergreen, 3 or 4 drops.
+Rub the flour and the alum with the water to the consistency of milk;
+place this over a moderate fire, and stir constantly, until the
+paste drops from the wooden paddle in jelly-like flakes, and has the
+appearance of glycerite of starch. While the mass is still hot, add the
+essential oil, and pour the paste into an earthenware pot or open jar.
+In the course of about an hour a crust forms on the top; pour gently on
+this an inch of water, more or less. When some paste is wanted, decant
+the water, take out the quantity needed, and put some water again on
+the remainder, repeating the operation each time. Paste may be kept in
+this way for months, and will never be troubled with flies.
+
+
+
+
+USEFUL HINTS FOR ESTIMATING COST OF WORK AND MATERIALS.
+
+
+All surface painting is measured by the superficial yard, girting every
+part of the work covered, always making allowance for the deep cuttings
+in mouldings, carved work, railings or other work that is difficult to
+get at.
+
+Where work is very high and scaffolding or ladders have to be employed,
+allowances must be made.
+
+The following rules are generally adopted in this country in the
+measurement of work. Surfaces under six inches in width or girt are
+called 6 inches; from six to 12 inches, 12 inches; over 12 inches
+measured superficial. Openings are deducted, but all jambs, reveals or
+casings are measured girt.
+
+Sashes are measured solid if more than two lights. Doors, shutters and
+paneling are measured by the girt, running the tape in all quirks,
+angles or corners. Sash doors measure solid. Glazing in both windows
+and doors is always extra. The tape should be run close in over the
+battens, on batten doors, and if the stuff is beaded, add one inch in
+width for each bead.
+
+Venetian blinds are measured double. Dentels, brackets, medallions,
+ornamented iron work, balusters, lattice work, palings or turned work
+should all be measured double. Changing colors on base boards, panels,
+cornices, or other work, one-fourth extra measurement should be allowed
+for each tint.
+
+Add five per cent. to regular price for knotting, puttying, cleaning
+and sand-papering.
+
+For work done above the ground floor charge as follows: Add five per
+cent. for each story of 12 feet or less, if interior work; if exterior
+work, add one per cent. for each foot of height above the first 12 feet.
+
+It is impossible to give prices for painting that will be reliable in
+any one section of this country for more than a month, as the cost of
+materials and labor is continually varying, but we offer the following
+hints, which may assist the workman to make a fairly just estimate of
+work:
+
+For plain colors on wood--
+
+  First coat, per yard,    $--
+  2 coats, add   ”          4-5
+  3 coats,  ”    ”          1¹⁄₂
+
+Now, by this rule, if the first coat was 10 cents, two coats would be
+18 cents, and three coats would be 25 cents. This is a simple method
+and easily understood, and is adapted to any sort of plain painting or
+graining.
+
+Graining, with one or two coats of good varnish, is worth, at this
+writing, from 65 cents to $2.00 per yard, and marbling from $1.50 to
+$2.75 per yard.
+
+Marbling mantels is worth from $5.00 to $20.00, according to style of
+marble and beauty of finish. All of the above prices are based on the
+understanding that the workman furnishes all tools and materials.
+
+
+
+
+Transcriber’s Notes
+
+Missing and incorrect punctuation has been fixed.
+
+Due to space restrictions, the data originally in a remarks column in
+the table has been restructured into footnotes in the text version.
+
+Page 8: “in cold whether” changed to “in cold weather”
+
+Page 29: The 2 sentences beginning with “The materials and tools used”
+are missing words in this and later editions and have been left as per
+the original.
+
+Page 52: “wollen cloth” changed to “woolen cloth”
+
+Page 54: The sentence beginning with “The tint used” has an incomplete
+word in this and later editions and has been left as per the original.
+
+*** END OF THE PROJECT GUTENBERG EBOOK 68866 ***

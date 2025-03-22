@@ -1,0 +1,2040 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 69197 ***
+
+                          Transcriber's note:
+
+    This version of the text cannot represent certain typographical
+    effects. Italics are delimited with the '_' character as _italic_.
+
+    The few minor errors, attributable to the printer, have been
+    corrected. Please see the transcriber's note at the end of this
+    text for details regarding the handling of any textual issues
+    encountered during its preparation.
+
+    ----------------------------------------------------------------
+
+
+
+
+                                SKETCHES
+                                  FROM
+                        THE HISTORY OF MEDICINE
+
+                          Ancient and Modern.
+
+
+                               =AN ORATION=
+
+                             DELIVERED BEFORE
+
+                          THE HUNTERIAN SOCIETY,
+
+                        AT THE LONDON INSTITUTION,
+
+                       ON THE 13TH FEBRUARY, 1867,
+
+                                    BY
+
+                       W^M. SEDGWICK SAUNDERS, M.D.
+
+ LICENTIATE OF THE ROYAL COLLEGE OF PHYSICIANS, EDINBURGH.—VICE-PRESIDENT
+    OF THE HUNTERIAN SOCIETY.—TREASURER TO THE NEW SYDENHAM SOCIETY.—
+      EXAMINING PHYSICIAN TO THE EAST INDIAN—SCINDE AND DELHI—BOMBAY
+      AND BARODA—GREAT SOUTHERN OF INDIA—CALCUTTA AND SOUTH EASTERN
+        —AND OUDE AND ROHILKUND RAILWAY COMPANIES.—MEDICAL OFFICER
+        TO THE CITY OF GLASGOW LIFE ASSURANCE CORPORATION AND THE
+           METROPOLITAN FIRE BRIGADE, &c.—AUTHOR OF THE “CAUSES
+                AND PREVENTION OF CHOLERA” AND “REPORTS ON
+                  CHOLERA IN THE CITY OF LONDON, 1866.”
+
+                  PRINTED AT THE REQUEST OF THE COUNCIL.
+
+                        _For Private Circulation._
+
+
+
+
+
+
+
+                                 LONDON:
+
+         PRINTED BY M. & W. COLLIS. 50, BOW LANE, CHEAPSIDE, E.C.
+
+                                  1868.
+
+
+
+
+                                ORATION.
+
+
+Mr. President,
+
+I purpose to devote the time, which your indulgence has placed at my
+disposal this evening, to laying before you the results of some
+inquiries into the origin and history of medicine and of the medical
+profession; regarding the subject rather from a _social_ than from a
+_scientific_ point of view.
+
+My scheme will introduce you to some of your old acquaintances; not for
+instruction, but to remind you of those passages in their lives which
+may have been pressed out of your memories by the sterner realities of
+professional duties.
+
+An inquiry into the origin of medicine must begin with the history of
+man himself, since pain and death are the inevitable conditions of his
+existence; and the desire to mitigate the former, and postpone the
+triumphs of the latter arose from, and has kept pace with, the
+development of the various diseases to which time and circumstances have
+subjected him.
+
+The _primal man_, we know, was created pure and innocent, free from
+liability to pain, and possessed of unmixed capacity for the enjoyment
+of the pleasures that surrounded him; glowing with health, and with
+every emotion redolent of new delight. At sight of him,
+
+    Each hill gave sign of gratulation,
+    Joyous the birds; fresh gales and gentle airs
+    Whisper’d it to the woods; and from their wings
+    Flung rose, flung odours from the spicy shrub:—
+
+Apprehension of the miseries to which his progeny were doomed, would
+have marred this happiness; hence his ignorance of evil, and his belief
+that the felicity he enjoyed would be as permanent as it was perfect.
+But our business is with man in his _actual_ condition; the sport of
+
+                        “All maladies
+    Of ghastly spasm, or racking torture, qualms
+    Of heart-sick agony, all feverous kinds,
+    Convulsions, epilepsies, fierce catarrhs,
+    Intestine stone, and ulcer, colic pangs,
+    Demoniac phrensy, moping melancholy,
+    And moon-struck madness, pining atrophy,
+    Marasmus and wide wasting pestilence,
+    Dropsies and asthmas, and joint-racking rheums,
+    And over them triumphant Death his dart
+    Shook, but delayed to strike.”——
+
+Undertaking to examine the subject _ab initio_, we must take into
+account the sources of our information, and as our knowledge of every
+event _antecedent to the discovery of writing_ must have been
+transmitted by oral or traditional agencies, we have to settle, in some
+degree, how far such evidence is worthy of credence.
+
+According to popular belief, the Noahic flood destroyed the whole human
+race, with the exception of Noah and his family; who were therefore the
+sole depositories of the traditions of the events which had occurred
+between the time of Adam and themselves. The great longevity of these
+antediluvian fathers made this oral transmission easy; and we know, that
+the sons of Noah lived to see the birth of Abraham, whom, as the founder
+of circumcision, we claim as the first operative surgeon on record.
+
+In dealing with dates, I adopt the commonly accepted chronology, unmoved
+by those refined speculations so much in favour at this time.
+
+I begin with Moses, for whatever evidence may be urged upon us in the
+shape of marbles, or monuments, claiming an antiquity anterior to the
+advent of the Jewish lawgiver, it is a positive and unimpeachable fact,
+that no _writings_ are in existence, which in point of age reach within
+many centuries of the Pentateuch; indeed, as we shall presently see, the
+oldest of the Greek writers are, in comparison with Moses, but as the
+children of yesterday.
+
+The five books of Moses were written 1500 years before Christ. Hesiod,
+the father of Greek literature, flourished 500 years later; and Homer,
+the next in succession, nearly a century after Hesiod.
+
+Herodotus places Homer 400 years before himself; thus bringing the
+“father of history,” as he is termed by Cicero, to about 500 years
+before the advent of our Saviour, so that the difference of date between
+the author of the Pentateuch and the oldest Greek historian cannot be
+much less than 1000 years.
+
+I pass over the pretended antiquity of the Chinese and Parsis records:
+these have been disposed of very satisfactorily, and however much
+_fancy_ may dwell upon the losses to literature inflicted by the Caliph
+Omar, when he destroyed the Alexandrian library,[1] in the year 640, a
+very little reflection will convince us that as these treasures, real or
+assumed, had been ransacked for ages, by the brightest spirits of Greece
+and Rome, everything worthy of note has been handed down to us.
+
+-----
+
+Footnote 1:
+
+  The library destroyed by the Caliph Omar, was situated in the temple
+  of Serapis, and consisted of 300,000 volumes; in addition to which
+  there existed in the Bruchion quarter of the city of Alexandria, a
+  second collection of 400,000 books, which was accidentally lost by
+  fire during the war with Julius Cæsar.
+
+  Alexandria (founded 332 B.C.) stood in an intermediate position
+  between the east and west, and united the commerce of Europe, Aralia,
+  and India; here came first into collision the Greek and Oriental mind;
+  here the Septuagint translation of the Old Testament was written; and
+  the collections formed by the ancient kings of Egypt were rapidly
+  enriched and enlarged by the interchange of ideas with the Greek
+  philosophers.
+
+-----
+
+The _learned_ talk about the writings of the Assyrians, the Babylonians,
+and the Egyptians; but they do not produce a single scrap of tangible
+evidence in support of these pretensions.
+
+It may, however, be contended, that although there are no _writings_
+extant, _traditional_ evidence is very strong; and this establishes a
+high antiquity for Lycurgus, who lived 900 years before the Christian
+era. The more, therefore, we inquire, the stronger the proof becomes,
+that Moses as a lawgiver flourished 600 years before the highest
+claimant to our veneration on the grounds of primitiveness; and thus we
+are entitled to assume that the Greek legislator took much that is
+excellent, in the laws ascribed to him, from his Jewish predecessor.
+
+Lycurgus lived about the time that Shishak, king of Egypt, destroyed the
+temple of Solomon, and carried away many captives: it is therefore no
+very extravagant supposition, that the Pentateuch of Moses was known to
+the great lawgiver. During the peaceful reign of king Solomon, the
+intercourse between the Jews and the Egyptians was frequent and
+extensive, for the great monarch, needing the assistance of skilful
+artificers for the construction of the Temple at Jerusalem, broke down
+that barrier of exclusiveness that had previously isolated his people.
+
+Now the _learned_ of that day were seekers after wisdom wherever it was
+to be found; and moreover, as the fame of Solomon was co-extensive with
+the then existing world, so acute an observer as the _founder_ of the
+Grecian law could not fail to use the materials which the wide spread
+knowledge of the Jewish kings sayings and doings had placed within his
+reach.
+
+Every Jew was required to read the law, or hear it read, once a
+year—each individual therefore became a living depository of its truths,
+and, consequently, a somewhat competent teacher of those who might
+desire to be instructed in such matters.
+
+_Moses_ then comes before us as the first _writer_, and the first
+_lawgiver_; and we shall now proceed to show that to these titles he
+added the still greater distinction of being the first _physician_, and
+promulgator of sanitary precautions.
+
+At present, however, I will not further intrude upon your patience, but
+leaving his claims where I have placed them, pass on to the
+consideration of the character of the laws themselves;—and here we
+arrive at a body of enactments so excellent, so well adapted, not only
+to the requirements of a nomadic people wandering in a wild country, but
+to that _same_ people when they subsequently became dwellers in cities,
+and suffered all the encumbrances of a more advanced civilization.
+_Moses_ made laws for _all_ times and for _all_ communities, _general_
+as well as _particular_, reaching the _nation_ through every individual
+member thereof; his rules for the preservation of health embraced the
+consideration of personal cleanliness enforced as a _religious_
+obligation in order that he might thereby enlist the unvarying
+co-operation of the priesthood.
+
+In a climate incentive to animal enjoyments he placed strict barriers
+for the preservation of _chastity_, and decreed that matters relating to
+sexual intercourse should be under the surveillance of the priest;
+directions were also given to the _menstruous_ woman, and for her
+conduct during _pregnancy_ and in _childbed_. The ordinance of
+circumcision was devised not alone for ablutionary purposes, but for
+_other well understood_ objects conducive to purity. Further, it was
+directed how the man should order himself in affections of the virile
+organs; and more emphatically, what he was bound to observe when the
+terrible _leprosy_ afflicted him. In such a calamity he was compelled to
+withdraw from his house, to be separated from society, and present
+himself to the priest at various periods during the progress of the
+disease; he was also to remain in a cheerless exclusion, where, if by
+chance any unwary passenger came in sight, the sufferer was commanded to
+cry aloud, _unclean! unclean!_ When convalescence and health returned,
+the _priest_ pronounced him cured of his leprosy, and he was then
+permitted to return to his home; but if the leprosy was supposed to
+cling to the _habitation_, _that_, too, was subjected to isolation, and
+in some instances to total destruction.
+
+The _same precautions_ obtain in our own times, although nearly 3400
+years have elapsed since they were first insisted upon by Moses.
+
+Thus, we are told by Dr. Thompson, an eminent American writer on the
+Holy Land (where he resided many years), that lepers are everywhere
+regarded as unclean, and that at Jerusalem (where there is always a
+considerable number of them) a separate quarter in the city is assigned
+to them, to which they are rigidly confined. Dr. Thompson says: “I have
+seen them cast out of the villages where they resided, and no healthy
+person would touch them, eat with them, or use any of their clothes or
+utensils, and even the Arab tent dwellers cast them out of camp. The
+leper beggars stand apart, and never attempt to touch you, even as it
+was in the time of the Saviour, when the ten lepers stood afar off and
+lifted up their voice of entreaty.”
+
+The same writer furnishes us with the following graphic description,
+which, as coming from an eye witness, we have deemed worthy of notice:—
+
+“Sauntering down the Jaffa road, on my way to the Holy City, I was
+startled by the sudden apparition of a crowd of beggars, sans eyes, sans
+nose, sans hair, sans everything; they held up their handless arms,
+unearthly sounds gurgled through throats without palates, and, in a
+word, I stood horrified, when, for the first time, I found myself face
+to face with a leper.” He then goes on to say: “For many years I have
+sought to get at the mystery of its origin, but neither books nor
+learned physicians have thrown any light upon it. I have suspected that
+this remorseless enemy originates in some self-propagating animalcules,
+and thus I can conceive the possibility of the contagion reaching the
+walls of a dwelling. No one has spoken with authority, as to what it
+proceeds from or how it is generated.
+
+“New born babes of leprous parents are often as pretty and healthy in
+appearance as other children, but the ‘_scab_’ comes on by degrees, the
+hair falls off, joint after joint of the fingers and toes shrink up, the
+gums are absorbed, and the teeth fall out and disappear; the nose, the
+eyes, the palate are slowly consumed, and finally the wretched victim
+sinks into the earth under a disease beyond the control of medicine,
+which cannot even mitigate its tortures.
+
+“To my mind there is no conceivable manifestation of Divine power more
+triumphantly confirmatory of Christ’s divinity than the cleansing of a
+leper with a word.”[2]
+
+-----
+
+Footnote 2:
+
+  The contagiousness of Leprosy was held in universal belief up to the
+  seventeenth century, when certain writers on the subject began to
+  question the validity of a doctrine which had been handed down to them
+  through successive ages, by all the early observers of the Jewish,
+  Egyptian, Arabian, Grecian, and Hindoo countries, and the view then
+  advanced has been confirmed by the report of the Committee recently
+  appointed by the College of Physicians, who state that:—“The all but
+  unanimous conviction of the most experienced observers in different
+  parts of the world, is quite opposed to the belief that leprosy is
+  _contagious_ or _communicable_ by _proximity_ or _contact_.”
+
+  On the other hand we have to consider the testimony afforded us by the
+  shrewd and intelligent teachers of ancient times. Thus, Aretæus
+  believed it to be as contagious as the _plague_, and like _it_
+  communicable by respiration; and _Œtius_, following _Archigenes_,
+  thought that “the air became contaminated through the effluvia of the
+  sores.” _Avicenna_ believed leprosy to be contagious in the _general_
+  sense of that term; _Avenzoar_ by contact; _Haly Abbas_ and
+  _Alsaharavius_ through the respiration; and _Rogerius_ “_per coitum_.”
+
+  [These interesting facts are taken from an able article in the Lancet,
+  February 9, 1867.]
+
+-----
+
+The initiatory rite of circumcision was, by Divine command, first
+performed by Abraham in the year of the world 2107, or about 1897 years
+before Christ:—At the age of 99 years, Abraham, together with his son
+Ishmael and all his dependents were circumcised.
+
+Ishmael at this time was thirteen years old, and, as we are informed by
+Josephus, was the founder of the Arabian nation, who to this day do not
+circumcise until after the thirteenth year.
+
+Isaac, the child of promise, the heir who was to carry on the race of
+the patriarch, was circumcised on the eighth day after his birth, and
+this, among the Hebrews, became a law, and a statute for ever.
+
+One of the tapestries at Hampton Court, in the time of Holbein,
+represents the operation being performed upon Isaac, with what appears
+to be a knife made of stone, which was the instrument used for many ages
+for this purpose.
+
+By the kindness of my friend, the Rev. William Sparrow Simpson, the
+learned Librarian and Minor Canon of St. Paul’s Cathedral, I am enabled
+to show you some of these knives of stone; and further evidence of the
+employment of such implements will be found in Exodus 4th chapter and
+25th verse, where it is written—“Then Zipporah took a sharp stone and
+cut off the foreskin of her son and cast it at his (Moses) feet.”[3]
+
+-----
+
+Footnote 3:
+
+  _Pliny_ tells us that the priests of _Cybele_, the mother of the gods
+  had sharp stones with which they cut themselves in their extasies.
+  _Catullus_ says, that _Atys_ emasculated himself with such an
+  instrument.
+
+  The Rabbinical law stands thus: “we may circumcise with anything, even
+  with a flint, with crystal (glass) or with anything that cuts, _except
+  with the sharp edge of a reed_, because the _enchanters_ make use of
+  that, or it may bring on a disease.” Again we have the evidence of
+  _Leutholf_ that the Æthopians used _stone knives_ for circumcision in
+  his time, 1581. Speaking of the _Alnajah_, an Æthopian race, he
+  says:—“Alnajah gens Æthiopum cultris lapideis circumcisionem peragit.”
+
+  Mr. E. B. Tylor in his “Researches into the Early History of Mankind,”
+  has suggested as the probable reason why stone was used as a cutting
+  instrument, that it was less likely to cause inflammation than either
+  bronze or iron. And _Pliny_ states that the mutilation of the priests
+  of _Cybele_ was done with a sherd of Samian ware to avoid the same
+  danger.
+
+-----
+
+Some writers believe that the practice of circumcision existed for ages
+amongst the Heathens before the time of Abraham, whilst others have not
+hesitated to date its origin as far back as our first fathers, asserting
+that Adam was taught by the angel Gabriel to satisfy an oath he had made
+to cut off that flesh, which after his fall had rebelled against his
+spirit.
+
+Much has been written with regard to the comparative _antiquity_ of this
+custom among the Egyptians and Ethiopians; a point upon which the
+erudite Herodotus leaves us in doubt.
+
+Circumcision of _both_ sexes exists amongst the Abyssinians, Nubians,
+Egyptians (both ancient and modern), Hottentots, and probably many other
+nations. But in Turkey, Persia, and in the South Sea Islands, and those
+of the Indian Seas, the practice is confined to the _male_ sex. The
+Mohammedans adopt the rite of circumcision, and Mahomet himself was
+circumcised, although no mention is made of the fact in the Koran.
+
+Doubtless, the so-called circumcision of women, as it is practised in
+some countries, is a modification of what _we_ understand by the term,
+and involves structures other than the clitoris or nymphæ; and it is
+equally true that the custom is adopted by many races totally
+irrespective of any religious significance.
+
+Sonnini de Manoncourt, a distinguished traveller and naturalist of the
+eighteenth century “having examined a young girl of Egyptian origin,
+about eight years old, found a thick, flabby, and fleshy excrescence,
+covered with skin, which grew above the commissure of the labia, and
+hung down half an inch, resembling in size and shape the caruncle
+pendent from the bill of a turkey cock.”
+
+Conditions of a similar nature are said to exist among the women of the
+interior of Africa, and are probably due to climatic influences, but the
+more common forms of disease are those of simple hypertrophy of the
+external parts of generation; and it is not unreasonable to suppose that
+the surgical interference necessary for their removal has given rise to
+the general term of circumcision.
+
+“Simple _excision_ of the _clitoris_ has been practised for very many
+centuries by certain nations,” and I purpose quoting some interesting
+observations just published by Dr. T. H. Tanner, upon the subject. His
+first extract is from Strabo, the geographer, A.D. 21, who, in speaking
+of the Egyptians, says:—“They _circumcise_ the males and _excise_ the
+females, as is the custom also among the Jews, who are of Egyptian
+extraction.” The custom appears to have been continued down to a recent
+period, and Mr. W. G. Brown,[4] who resided for some time at Darfour,
+North Africa, writing in 1779, thus alludes to it:—“The excision of
+females is a peculiarity with which the northern nations are less
+familiar; yet it would appear that this usage is more evidently founded
+on physical causes, and is more clearly a matter of convenience, than
+the circumcision of males, as it seems not to have been ordained by the
+precept of any inspired writer.”
+
+-----
+
+Footnote 4:
+
+  Travels in Africa, Egypt, and Syria, from the year 1792 to 1798, p.
+  347. London, 1799.
+
+-----
+
+“This excision is termed in Arabic ‘_chafadh_.’ It consists of cutting
+off the clitoris a little before the period of puberty, or at about the
+age of _eight_ or _nine_ years.”
+
+Again, the Nubian traveller[5] _Burckhardt_ tells us—“The daughters of
+the Arabs _Ababde_, and _Djaafere_, who are of Arabian origin, and
+inhabit the western bank of the Nile from Thebes, as high as the
+cataracts, and generally those of all the people to the south of _Kenne_
+and _Esne_ (as far as Sennaar) undergo circumcision, or rather
+_excision_ (excisio-clitoridis,) at the age of from _three_ to _six_
+years: Girls thus treated are called _mukhaeyt_.”
+
+-----
+
+Footnote 5:
+
+  Travels in Nubia, by the late John Lewis Burckhardt, p. 332. London,
+  1819.
+
+-----
+
+But perhaps the most trustworthy account of the circumcision of females
+in Western Africa is that given by the late Mr. W. F. Daniel, who was a
+distinguished member of our own profession. He tells us that “The
+excisive process in Western Africa is variously performed in accordance
+with the usages of the different districts where it is resorted to. The
+operation consists either of:—
+
+“1. Simple excision of the clitoris; 2. excision of the nymphæ; 3.
+excision of both nymphæ and clitoris; 4. excision of a portion of the
+labia pudendi, with either or all of the preceding structures.
+
+“The history of the operation is involved in obscurity; that it was
+secretly inculcated as one of those gloomy rites which the female
+proselyte had to undergo, as a preliminary measure, prior to her
+initiation into those dread mythological creeds, which, in Egypt and the
+adjoining countries were swathed in the folds of an allegorical and
+almost impenetrable mysticism, is the most likely inference.”
+_Eventually_ the progressive decay of the religious institutions,
+gradually led to its promulgation and practice among the masses of the
+people; for the _priests_, who, independent of their scientific
+attainments, were also well versed in medicine, might have advocated its
+use both in a moral and hygienic point of view, as conducive to the
+welfare of the female population.
+
+I have been led into this digression by reflecting over the barbarous
+and unphilosophical meddling of certain practitioners of our metropolis
+who are, in effect, degrading our practice of surgery to the level of
+that of the savages we have just described, without possessing the same
+claim to our consideration on the score of ignorance, barbarism, and
+superstition. The modern antic yclept “_clitoridectomy_” (to which I
+refer), is, as the “Lancet” says, “a proceeding which, if it be
+_useless_, is a _lamentable mistake_, and if it be _unnecessary_, _a
+cruel outrage_.”
+
+The next proposition we may fairly look for will be to imitate still
+further the customs of these Western Africans who, in certain tribes,
+whenever a girl shows any very strong indication of sexual feeling
+(before she is betrothed), at once proceed to produce an obliteration of
+her vagina by the intense inflammatory action set up by the forcible
+introduction of a mass of the “capsicum fructescens,” or bird pepper—to
+my mind not one shade more inhuman or barbarous than unsexing a woman
+for ever, upon an assumption which grossly libels our female population.
+
+The position taken by the early Christians in reference to the practice
+of circumcision was decidedly antagonistic, so far as any value, in a
+_religious_ point of view, should be ascribed to it; nevertheless, their
+apostles and teachers permitted it to continue, at the discretion or
+inclination of those who chose to submit to it.
+
+It is an interesting fact to note that the Copts, whose Christianity
+dates back from the persecution of Diocletian (called the era of
+martyrs) in 303, and the Abyssinian Christians, who also reckon from the
+fourth century, adopt the custom to this day, from a belief that it
+gives them a further chance of entering Paradise, beyond the baptism
+they receive as Christians. It is also singular that these sects accept
+several other doctrines and precepts of the Mohammedans and Jews, among
+whom they dwell.
+
+The precise mode of operating upon males varies in different countries.
+In Madagascar three separate and distinct operations are inflicted upon
+the individual. In the South Sea Islands the natives simply slit up the
+prepuce on its dorsal aspect, and in earlier times the practice was to
+cut the prepuce all round the corona, avoiding the frœnum. In the Fiji
+Islands the instrument used is a sharp splinter of bamboo.
+
+Upon females the process of excision is performed by aged women. In
+Egypt the custom is still maintained; and the women of the _Said_ travel
+about from town to village, crying out “Circumcisor! who wants a
+circumcisor?” In Old Calabar, Mr. Daniel had the opportunity of
+witnessing the operation, which is likewise performed _there_ by aged
+females. The girl having been placed on the knees of a woman, with the
+legs apart, the clitoris was seized, _forceps-like_, by two pieces of
+bamboo or palm-sticks, and being gently drawn forth, was severed with a
+sharp razor.
+
+Among the Jews the peculiar and distinctive mark of circumcision is
+perpetuated in our days, and without any material change of ceremonial.
+The _modus operandi_ is as follows:—The godfather being seated, takes
+the child on his knees, and the operator (who may be the father of the
+child, if capable, or some friend of the family, or a professed expert)
+takes up with his fingers, or a pair of tweezers, as much of the prepuce
+as he intends to cut off, and, on applying the knife, says—“Blessed be
+Thou, O God, who hast commanded us to use circumcision.” He then sucks
+the blood, and spits it into a cup of wine, and having applied styptics
+to the wound, retakes the cup, and having blessed _it_ and the child,
+pronounces the name of the child, and moistens his lips with the
+contents of the cup. Various prayers are then said, and the ceremony is
+concluded.
+
+Though the modern Jews generally use a steel instrument, there is this
+remarkable exception—that, when a male child dies before the eighth day,
+it is circumcised prior to burial, and this is done, not with the
+ordinary instrument, but with a fragment of glass or flint.
+
+The practice extended to the Ishmaelites, and, as we have already
+stated, was subsequently adopted by Mahomet, so that a very large
+section of the human race are to this day, participators of a rite
+established considerably more than 3000 years ago.
+
+The subject cannot be dismissed without noticing the fact that the Jews
+under their various captivities, subjugations, and persecutions,
+endeavoured, in some instances, to obliterate the marks of circumcision.
+This is abundantly proved, not only by contemporary writers, but by the
+evidence of Epiphanius, Celsus, Galen, Paulus Ægineta, Fallopius, and
+others, who have enlarged upon the means adopted for the accomplishment
+of this object. It is, further, a noteworthy circumstance that the Jews
+_entirely_ suspended the practice of circumcision during the forty years
+of their wanderings in the wilderness.
+
+In contemplating the sufferings of this unfortunate race, the heart
+sickens at the punishments which resulted from their resistance to
+foreign usurpation. Unable to discern the hand of God in their
+humiliation, their struggles were, indeed, hopeless, but not the less
+heroic. Captives in Babylon, after a long and cruel servitude, they were
+restored only to be again scattered by the destruction of Jerusalem,
+under Titus. Through the varying fortunes of the Romans, no
+resting-place seems to have been vouchsafed to them; plundered and
+disgraced, the fall of Rome only eventuated, as far as _they_ were
+concerned, in a change of masters. Ruthless persecutors tracked them
+through the dark ages, and what Heathenism spared, Christianity
+despoiled; our pious ancestors praising God when they had a chance of
+maltreating an Israelite.
+
+For these reasons, and with such incentives, can we doubt that the timid
+amongst them would endeavour to remove the means of identity which
+circumcision afforded.
+
+We have so refined away the simplicity of the patriarchal times, that it
+is almost necessary to apologise for alluding to the reverential awe
+with which all matters relating to the seed of Abraham were regarded. It
+was a solemn and impressive act when the Patriarch, believing that the
+time was come for his son Isaac to have a wife, sent for his chief
+servant, and said, “Put, I pray thee, thy hand under my thigh, and swear
+by the Lord that thou wilt choose a wife for my son out of mine own
+kindred;” and the servant, with his hand on his master’s genitals, took
+the required oath; and we all know how faithfully he performed it.
+Whilst this simple, but deeply significant ceremony was being enacted,
+the heart of the father of the faithful was doubtless filled with
+contemplations of the great purposes for the accomplishment of which the
+organs of generation were appropriately considered as the direct agents.
+
+This mode of taking the oath is further adverted to in the 47th chapter
+of Genesis, when Jacob is taking his farewell of his children.
+
+In our blind adoration of classical heathenism we undervalue the sublime
+and not less poetical incidents which mark the rise, progress,
+culmination, and decay of that people with whom our highest interests
+are identified. If, for instance, the Book of Job had not been written
+under inspiration, and had been accidentally discovered among the ruins
+of the _first_ Babylon, our antiquarians would have regarded it as the
+loftiest of epics; and especially so if, instead of inculcating the
+worship of the true God, its subject had been the glorification of
+whatever false deity might have been in the ascendant when this most
+ancient poem was composed.
+
+The prejudices of education subjugate the judgment, and the gross and
+sensual attributes with which the Greek poets invested their deities,
+are accepted with complacency, if not with admiration; even Pope, their
+great panegyrist, describes their heroes thus:—
+
+    “Gods, partial, changeful, profligate, unjust,
+     Whose attributes were _rage_, _revenge_, and _lust_.”
+
+This, of course, will be set down for rank blasphemy against the canons
+of taste. We are exuberant in our praises of the _genius_ of Homer, and
+not to worship his _inventive_ powers is an offence of the deepest dye;
+but when we are barbarous enough to critically examine this wonderful
+mythology, and to determine the claims to applause—say of supreme
+Jove—we are rather troubled by the difficulty of reconciling the ways of
+the first intelligence with our commonplace notions of decency. The
+intrigues of the father of the gods, the artifices by which he eludes
+the jealousy of his wife Juno, his incestuous, and, if they were not
+classical, we should call them filthy debaucheries, draw largely upon
+our faith in the beauties of these records of high Olympus; and our
+admiration for the poet is sadly tinctured with disgust for the images
+in which his creative powers are developed.
+
+Thus much of the ceremonial laws. Of the moral law, the law of God, it
+becomes me not to speak; its obligations are as eternal as its author;
+the everlasting truths of the decalogue have been incorporated more or
+less into every system of religion and ethics which has been enunciated
+during the ages interposing between us and the period in which they were
+first promulgated on Mount Sinai.
+
+In dismissing Moses and his times, I crave your particular attention to
+the manner in which the characters of priest and physician met in the
+same person. As we proceed we shall find that this junction of
+attributes continues through all the variations of time and
+circumstances. The terrors of the _unseen_, overawing the ignorant,
+placed them at the mercy of those daring minds which in every age have
+assumed the office of interpreters of the will of the _demon_, or the
+behests of the benign Deity. To deal as a mediator between the threats
+of the terrible avenger and the awe-stricken victim of his own
+bewildered imagination, to avert the consequences of the threatened
+storm, or to turn aside any other manifestation of approaching evil is
+the office of the _medicine-man_ of the North American Indian and the
+_Obeah_ doctor of the African. Shrewd observers of nature, these
+wretched impostors monopolize the whole of the intelligence, such as it
+is, of the hordes of the human race upon whom the light of reason has
+never dawned, or has dawned in vain.
+
+There is yet another aspect of the medical character, infinitely more
+agreeable and important, and the consideration of it will bring us to
+the times immediately preceding the days of the father of medicine. I do
+not propose to penetrate into the story of Esculapius and his divine
+origin, which probably, in an esoteric sense, merely meant that the
+Giver of all good had inspired him with a knowledge of the healing art;
+but (with a passing glance at Homer, the greatest poet of his own or any
+subsequent age), proceed to offer some general observations on the
+position which the study of medicine acquired under the tutorship of the
+philosophers.
+
+The siege of Troy is supposed to have taken place about three hundred
+years before the _Iliad_ was sung, and in that early time it appears
+that the cultivation of our art formed part of the general education of
+kings and warriors.[6]
+
+-----
+
+Footnote 6:
+
+  “As for Medicine, something of it must have been understood in that
+  age, though it was so far from perfection, that, according to Celsus,
+  (book i.) what concerned _diet_ was invented long after by
+  Hippocrates. The accidents of life make the search after remedies too
+  indispensable a duty to be neglected at any time; accordingly, he
+  tells us, that the Egyptians, who had many medicinal plants in their
+  country, were all Physicians, and perhaps he might have learnt his own
+  skill from his acquaintance with that nation.
+
+  “The state of war in which Greece lived, required a knowledge in the
+  healing of wounds, and this might make him breed his princes,
+  Achilles, Patroclus, Podalirius and Machaon, to the science; what
+  Homer thus attributes to others he himself knew, and he has given us
+  reason to believe, not slightly, for if we consider his insight into
+  the structure of the human body, it is so nice, that he has been
+  judged by some to have wounded his heroes with too much science; or,
+  if we observe his cure of wounds, which are the accidents proper to an
+  epic poem, we find him directing the chirurgical operations, sometimes
+  infusing lenitives, at other times bitter powders, when the effusion
+  of blood required astringent qualities.”—_Pope’s Essay on the
+  Character of Homer._
+
+-----
+
+Homer introduces us to Machaon the son of Esculapius, who, when Menelaus
+was treacherously wounded by Pandarus, is called to his aid:
+
+    “When the wound appeared in sight, where struck
+     The stinging arrow, from the clotted blood
+     He cleansed it, and applied with skilful hand
+     The healing ointments, which, in friendly guise,
+     The learned _Chiron_ to his father gave.”[7]
+
+-----
+
+Footnote 7:
+
+  Lord Derby’s Translation.
+
+-----
+
+Making due allowance for the debasing fable with which every great name
+or talent is overlaid, it is rational to suppose that Chiron, the
+teacher of Esculapius, was one of those shepherd philosophers, who like
+their Babylonian brethren absorbed all the knowledge of the times; but
+Homer gives us other examples in support of this idea. Chiron was the
+preceptor of Achilles, and when Machaon is himself wounded, Patroclus is
+sent by Achilles to his assistance; on his arrival he is urged by
+Eurypylus, to
+
+    “Draw the deadly dart,
+     With luke-warm water wash the gore away:
+     With healing balm the raging smart allay,
+     Such as sage _Chiron_, sire of pharmacy,
+     Once taught Achilles, and Achilles thee.”—_Pope._
+
+He also complains that
+
+    “Of two great _surgeons_, Podalirius stands
+     This hour surrounded by the Trojan bands,
+     And great _Machaon_ wounded in his tent
+     Now wants the succour which so oft he lent.”
+
+Then
+
+    “Patroclus cut the forky steel away,
+     And in his hand a bitter root he pressed,
+     The wound he washed and styptic juice infused,
+     The closing flesh that instant ceased to glow,
+     The wound to torture and the blood to flow.”
+
+Machaon seems to have largely shared the goodwill of the Grecian hosts.
+Nestor, in his anxiety, says:—
+
+     A wise Physician skilled in wounds to heal,
+     Is more than _armies_ to the public weal.
+
+Military leaders in our days have no such weakness as this. Studied
+neglect seems to them the befitting recompense of those on whom they
+must necessarily rely for the health and sanitary welfare of their
+troops.
+
+As we are still in the age of fable, it may not be out of place to
+notice with what tenacity the human mind clings to those delusions which
+fear engenders, and weak hopes sustain: with all our boasted
+enlightenment, the _marvellous_ and the _incredible_ have more
+worshippers than the _real_ and the _true_. Let us not wonder then, that
+the pure monotheism enunciated in the Holy Scriptures had so little
+charm for the sensuous and imaginative Greeks. Socrates, who, by the
+simple force of reason and philosophy had reached the very portals of
+the temple in which was enshrined the idea of the unity of God, in his
+_last hour_ “sacrifices a cock to Esculapius.” The reputed offspring of
+an impure deity, History is unhappily more abundant in records of human
+folly and superstition, than in examples of purity of thought and
+action—simplicity is everywhere despised—facts are distorted or made
+subservient to sensations; for example:—It is not enough to tell us that
+Chiron was skilled in physic, but to suit the depraved appetites of the
+vulgar he is a _centaur_, and Esculapius a _god_. It is therefore with
+something like relief that the name of Hippocrates comes before us, for
+in him we have a _reality_, and in his works a remarkable record of the
+condition of medical science in the fifth century before Christ. He was
+born at Cos, a small island off the coast of Caria, not in Greece
+proper, in the first year of the 80th Olympiad.
+
+Hippocrates was descended from Esculapius by his father’s side, and from
+Hercules by his mother’s, and was the son of Heraclides, a physician of
+the family of the Asclepiadæ, who furnish us with the very earliest
+instance of a body of philosophers devoting themselves to the healing
+art; for, although Pythagoras, who lived immediately before Hippocrates,
+and Democritus, who was his contemporary, were both learned physicians,
+yet, whatever fame they acquired, was ascribed to their powers as mental
+philosophers and rhetoricians.
+
+It has been urged by way of apology for the mystery in which the
+philosophers shrouded their wisdom, that “science, like modesty, should
+cover itself with a veil to increase the charms of the treasure it
+conceals;” and this principle has been, throughout all ages, more
+generally acted upon than avowed.
+
+The character of Hippocrates is at once a study for the physician and
+the moralist; the former will appreciate the astonishing evidences which
+his works afford, of a deep acquaintance with the whole subject of
+medicine, and his admiration will be increased by the remembrance that
+all the principles laid down by this great and good man, were the
+results of his own experience.
+
+No treatises on disease existed anterior to his time to aid him in his
+investigations of the phenomena of nature, although it is true that in
+the Asclepion or temple of Esculapius at Cos, records were kept and
+votive tablets preserved commemorative of cures performed, and of the
+remedies by which they were effected. But if the physician admires his
+talents, the moralist does honour to the qualities of his mind and the
+goodness of his heart. Benevolent and disinterested, pious towards the
+gods, and incorruptibly devoted to his country, he instructed his fellow
+men, not by shedding maudlin tears over their follies, like Heraclides,
+nor by the coarse laughter of his friend Democritus, but by a calm and
+even walk of life, mitigating sorrow by his skill, and showing the form
+and beauty of virtue by his example.
+
+His portrait of a worthy physician may well serve for his own likeness,
+and in its description we shall observe that the exalted principles of
+professional ethics therein inculcated, are as strictly applicable to
+our own times as they were to those which he himself enlightened and
+adorned. His words are:—“The physician who is an honour to his
+profession, is he who has merited the public esteem by profound
+knowledge, long experience, consummate integrity, and irreproachable
+life; who, esteeming all the wretched as equals in the eyes of the
+Divine Being, hastens to their assistance, speaks with mildness, listens
+with attention, bears with their impatience, and inspires that
+confidence which sometimes of itself restores life; sensibly alive to
+their sufferings, carefully studies the causes and progress of the
+complaint; not disconcerted by unforseen accidents, but, in emergencies,
+having exhausted his own resources, holds it a duty to call in his
+brethren of the healing art to assist him with their advice. Having
+struggled with all his strength against the malady, he is happy and
+modest in success, and in failure congratulates himself that he has, at
+least, alleviated the sufferings of his patient.”
+
+One of the great obstacles to the advancement of anatomy and physiology
+was the universal reverence for the dead which the Greeks and Romans
+shared in common with all the people of antiquity. Among the Jews, to
+touch a dead body exposed the offender to a penance of seven days’
+exclusion and privation from the ordinary comforts of life; and it is
+almost superfluous to add, that the Egyptians made this reverence a part
+of their religion.
+
+He, then, who ventured on the dissection of the human body, did so at
+great personal risk, and for more than 600 years after the foundation of
+Rome, no instance is known of the existence of any public professor of
+anatomy. About that time Archagathus, a Greek, practised surgery in
+Rome; and it appears that his use of the knife, and the actual cautery,
+was so abhorrent to the general feeling, that he was saluted with the
+opprobrious title of “Carnifex.” Even in later days the learned
+Tertullian classed anatomists and butchers together in a philippic he
+pronounced against Herophilus, whom he charged with having tried
+experiments on the living body. He commences:—“Herophilus, the
+physician, or butcher, whichever you please, who to become better
+acquainted with men, ripped them up alive,” &c. &c.
+
+Of this same Herophilus, who appears to have been a man of humour, as
+well as genius, there is an excellent story told:—A certain _Diodorus_,
+a contemporary philosopher and teacher of paradoxes, declared that there
+was no such thing as _motion_. “If a body _moves_,” says he, “it moves
+into the place where it _is_, _or_ into the place where it _is not_; now
+it does not move into the place where it _is_, for what is _in_ a place
+_remains_ there, and, consequently, one cannot say that _it moves_. It
+also cannot move in a place where _it is not_; and therefore, it does
+not move at all.” This acute gentleman having dislocated his arm, begged
+the services of Herophilus, who, smiling, said:—“Either the bone of your
+arm is moved into the place where it _was_, or into the place where it
+_was not_; now it cannot move, according to your principles, either in
+one place or another, consequently it is not displaced at all.” The poor
+teacher of paradoxes saw that Herophilus was laughing at him, and in an
+agony cried out:—“Leave, I pray you, _dialectics_ and _sophisms_ to me,
+and treat me according to the laws of medicine.”
+
+The inference that dissection was not openly allowed, will be
+strengthened by a short reference to the subject of the embalmment of
+the dead—the first mention of this custom is found in the 50th Chapter
+of Genesis; where, at the second verse, we read:—That “Joseph commanded
+his servants, the physicians, to embalm his father, and the physicians
+embalmed Israel;” and at 26th verse of the same chapter it is
+written:—“So Joseph died, being an hundred and ten years old, and they
+embalmed him.”
+
+The Egyptians believed that so long as the human body could be saved
+from putrefaction or decay, the soul of that body continued in
+existence; and from this feeling arose the custom of embalming, so
+common in remote ages. The embalmer was, in a certain sense, a _sacred_
+functionary; nevertheless, it was the fashion to make a show of
+resistance, when he began his operation, in order to mark the innate
+horror of any, however necessary, profanation of the dead body.
+Herodotus relates that in Egypt the mummy embalmers made the incision in
+the side of the corpse with a sharp æthiopic stone. Of these stones two
+varieties have been found in the tombs in Egypt, both of chipped flint,
+and very neatly made. One kind is like a very small cleaver; the other
+has more of the character of a lancet. The account given by Diodorus
+Siculus of the resistance offered to the embalmer is, as follows:—“And
+first, the body being laid on the ground, he who is called the scribe
+marks on its left side how far the incision is to be made; then the
+so-called slitter (paraschistes) having an æthiopic stone, and cutting
+the flesh as far as the law allows, instantly runs off, the bystanders
+pursuing him, and pelting him with stones, cursing him, and, as it were,
+turning the horror of the deed upon him, for he who hurts a citizen is
+held worthy of abhorrence.”[8] Immediately after death the corpse was
+put into the hands of the embalmer, who in the presence of the friends
+of the deceased, made an incision into the left side, as above
+described, through which he extracted all the intestines, leaving the
+heart and kidneys; the intestines were then washed in palm wine, and a
+solution of astringent gums. The _brain_ was removed through the
+nostrils by means of a hooked instrument, contrived for the purpose, and
+the cavity filled with aromatic oils. The body was now anointed with
+spice-oils and balsamic gums (frankincense being prohibited), and
+allowed to remain for thirty days, after which it was immersed in a
+solution of nitre for from forty to seventy days (the latter being the
+extreme limit allowed); it was then enveloped in aromatised cere-cloths,
+and all being ready, consigned to the coffin, on which were painted
+emblems indicative of the condition of the deceased. The process is said
+to have cost £300 of our money, and was, of course, only applicable to
+the rich. The fee for embalmment alone, varied from a _Talent_ (which
+has been estimated by some as equivalent to £193 15s., and by others to
+£243 15s. of our present money) to a _Mina_, in value about £3 4s. 7d.
+
+-----
+
+Footnote 8:
+
+  Taken from E. B. Tylor—“Early History of Mankind,” p. 217.
+
+-----
+
+The embalmment of the middle classes was, in some degree, regulated by
+their means; the simplest form being, the destruction of the intestines
+with strong oil of tar, and after their removal soaking the body in a
+strong solution of nitre for a period not exceeding seventy days.
+
+Some have ascribed the practice of embalming to the fact of the
+periodical inundations of the Nile rendering interment impossible at
+such seasons, and hence have thought that necessity had quite as much to
+do with the custom as the religious principle: but this idea is not well
+founded, for although the Nile continues to overflow, embalmings have
+ceased for ages.
+
+After Hippocrates the name of Aristotle comes before us. Aristotle, the
+pupil and friend of the venerable Plato, whose doctrines he adopted and
+developed, lectured at Athens 370 years before Christ. As a physician
+and naturalist he was far in advance of his contemporaries, and as a
+mathematician and moral philosopher, his transcendent learning was, for
+ages, the theme of every scholar; and his “System of the Universe”
+adopted by the whole of the civilized world. These great qualities
+attracted the attention of Philip of Macedonia, who chose him as the
+tutor of his son Alexander (the Great). Ignorance and superstition were,
+however, omnipotent, and for having enunciated the doctrine of one God,
+and a supreme first cause, the priests of the various temples seeing
+their craft in danger, excited the populace, who threatened his life.
+Warned by the fate of Socrates, he retired to Chalcis to wear away a
+life embittered by personal suffering, and sorrow for the folly and
+ingratitude of his countrymen.
+
+The heart’s deepest feelings are roused at the remembrance of the deeds
+of violence perpetrated against every benefactor of mankind who has had
+the courage to promulgate truths beyond the comprehension of the vulgar
+on the one hand, and opposed to the vested interest of established
+errors on the other. The fate of Aristotle is a common result, not
+confined to the dark ages, nor without examples amongst ourselves.
+
+The learned Philo of Alexandria, who lived A.D. 40, has given us an
+interesting account of the very remarkable sect living in Egypt in his
+day, known as the “Theraputæ,” or “healers.” He describes them as a
+confraternity who, after having received a special training in the
+University of Alexandria, devoted themselves to the healing art; they
+led a secluded, contemplative life, and laid the foundation of the
+monastic system. Eusebius calls them Christians, but this is not
+confirmed by Philo, who was a member of the sect; they were, probably,
+Platonists, or philosophical pagans. They ascribed their cures to
+prayers, fastings, and incantations, eschewed all material remedies, and
+medicaments, but made free use of magical rites of both forms—the
+leucomancy, or white magic, used in invoking the gods, and necromancy
+when the demons were to be propitiated or coerced. St. Luke, before his
+conversion, is supposed to have been a Therapeut; and St. Paul denounces
+some of their errors. Of their faults we cannot judge, but we may admire
+the benevolence with which they devoted themselves alike to the physical
+and moral welfare of their fellow men—in this respect, no unworthy
+forerunners of Him who commanded his disciples, not only to “instruct
+the ignorant,” but to “heal the sick.”
+
+We pass over three centuries to come to the time of Celsus, who, in the
+reign of Tiberius and the first century of our Lord, was established at
+Rome; where he acquired great honour and renown. To these he was fairly
+entitled by the extent of his learning and the especial attention he
+paid to surgery and medicine. His principles governed the medical world
+without a rival until the time of Galen, who divided the empire with him
+for centuries.
+
+Celsus was the first native Roman physician whose name has been
+transmitted to us: the practice of medicine and surgery being, prior to
+his time, in the hands of eminent Greeks and Asiatics, excepting that
+there existed in Rome (at that period) a race of native practitioners,
+who belonged to the class of slaves[9] or persons of low degree; and to
+whom were entrusted only the subordinate branches of the healing art.
+
+-----
+
+Footnote 9:
+
+  See Notes and Letters of Pliny.
+
+-----
+
+The great proficiency of Celsus on the subjects of rhetoric, philosophy,
+military tactics, and rural economy, as mentioned by Quintilian, has
+induced many of our older writers to doubt whether he ever really
+practised medicine and surgery, or, whether, like the elder Cato, he
+simply studied them as a branch of general knowledge; and this
+scepticism has been favoured by the fact of his name being omitted by
+Pliny, in his “Treatise on the History of Medicine.”
+
+On the other hand, no one, I think, can rise from the perusal of his
+celebrated work, “De Medicina,” without being thoroughly convinced that
+his intimate acquaintance with the theory and practice of medicine,
+surgery, and pharmacy, could only have resulted from close bedside
+observation.
+
+Galen was born at Pergamos, in Asia, in the second century; his learning
+was great, and his literary labours enormous. Having traversed Egypt and
+Greece, and acquired a knowledge of every science taught in the schools
+there, he settled in Rome. His works have been estimated at over 300
+volumes—medical, physical, and metaphysical. He practised bleeding more
+frequently than his predecessors, but he gave very careful directions as
+to the conditions under which venesection should be resorted to, as well
+as to the quantity of blood to be taken.
+
+Averroes, Avicenna, and other Arabian physicians held him in great
+veneration; and Dr. Alison says:— “For centuries after his death his
+doctrines and tenets were regarded in the light of oracles, which few
+persons had the courage to oppose; and the authority of Galen alone was
+estimated at a much higher rate than that of all the medical writers
+combined, who flourished during a period of more than twelve centuries.”
+
+Rome, in its decadence, was too much occupied with the intrigues and
+villainies of the factions by which it was ultimately destroyed, to
+spare any time for the culture of science. It was not until after the
+total disappearance of the Eastern Empire, and the hollow tranquillity
+which succeeded the triumphs of Mahomet, and the subsequent subjugation
+of Spain by the Moors, that learning reared its head in Alexandria, and
+the Arabian physicians came into view.
+
+Although Greece had disappeared, even in the noonday of its glory, its
+literature never possessed more devoted admirers, nor more faithful
+exponents than are to be found among the Arabian philosophers, and yet
+what a striking contrast is exhibited in the characters of the two
+people. Whilst making the philosophy of Greece their own, they by no
+means lost their distinctiveness and individuality. The Greeks delighted
+in all that was brilliant and fascinating, like the beautiful scenery of
+Attica and Asia Minor. The Arabs were thoughtful and grave, monotonous
+and arid, like the deserts they inhabited. The genius of poetry
+illumined all the meditations of the former, and their thoughts were
+graceful, even in their errors; whilst the reflections of the latter
+were dull and melancholy, albeit they were based on truths.
+
+A dreary night now ensues—we have no name of note until Paulus Ægineta
+in 640—but what a series of historically grand events interpose: The
+invasion of Europe by the Huns—Division of the Roman Empire—Taking of
+Rome by Alaric—Visigoths established in Spain—Saxon heptarchy
+begun—Conquest of Italy by Totila—Birth of Mahomet, down to the taking
+of Alexandria by the Arabs—Greece and Rome having virtually disappeared;
+and our next author (Paulus) probably present at the burning of the
+great library of the Ptolemies.
+
+Paulus Ægineta is entitled to our homage, as the author of an abridgment
+of the works of Galen, and many excellent treatises on medical subjects,
+especially on those incident to childbed, and the diseases of women; he
+was the first writer upon _small-pox_ and _measles_, and the originator
+of the theory of _zymosis_, which has received so much attention of
+late. Paulus died about the middle of the seventh century, and with him
+expired the last of the Greek writers upon medicine. His labours have
+been thought worthy of being translated by the Sydenham Society.
+
+Avicenna, who lived in the year 980, deserves a fuller notice than we
+can afford him; his works are said to present great clearness and
+acuteness. At the early age of eighteen he was chosen Physician to the
+Court of the Caliph of Bagdad, where for some offence he was imprisoned,
+and ultimately died. He has been called the “Hippocrates of the Arabs.”
+
+Rhazes was contemporary with Avicenna, and has attracted the respectful
+attention of the lovers of ancient medicine. His most esteemed work is a
+treatise on small-pox, which was translated by Dr. Mead in 1548.
+
+I will conclude these sketches of the Arabian schoolmen with a brief
+notice of Averroes, the most eminent of them:—
+
+This profound scholar was born at Cordova, in Spain, of which city his
+father was the alcade, about the year 1120. He was educated in Morocco,
+then in its glory, and in the celebrated schools there studied law,
+philosophy, and medicine. His admiration for Aristotle was unbounded,
+and his unwearied application to the examination of that great man’s
+works, secured for him the reputation of being the ablest commentator on
+the Aristotelian philosophy. He rose to the dignity of a judge in
+Morocco, but the freedom of his opinions being in advance of the age, he
+was imprisoned for some years, and only released on recanting his
+errors; he died 1206, during the Caliphate of Almanzer.
+
+The glories of the Moorish power now began to wane, and after repeated
+discomfitures in 1516, that intelligent and highly civilized people were
+finally expelled by Ferdinand the Catholic: the cross triumphs—the
+crescent retires, and takes with it all that is admirable in arts, or
+humanizing in science; the Spaniard has chased away Mahomet, and
+receives the Inquisition as the first-fruits of his conquest.
+
+The war against opinion was carried on so vigorously that Copernicus,
+whose acute perception had discovered the errors of Aristotle’s theory
+of heavenly bodies, was fiercely denounced. Copernicus was born in
+Westphalia in 1473, he studied at Cracow, where he received the degree
+of Doctor of Medicine; at Bologna his piercing genius discovered that
+the sun was the centre of the planetary system, that the earth was a
+planet and revolved round the sun like other planets, and thus was first
+made known the true system of the universe. These discoveries being
+distasteful to the church, the Pope issued a sentence of
+excommunication; and the great astronomer died with a heart oppressed by
+such unmerited persecution.
+
+These discoveries were further pursued by another learned physician,
+Galileo, who was born at Pisa in 1564. He entered the university there
+in 1581, and prosecuted his studies with such zeal and success, that in
+a very few years he became Professor of Mathematics. He now began his
+career as a teacher of the philosophy of Copernicus, and soon received
+unpleasant evidences that the disciple of truth must be ready to suffer.
+A congregation of cardinals, monks, and mathematicians of the old
+school, determined that his works were heretical and dangerous, and the
+holy inquisition sentenced him to prison. After remaining incarcerated
+some months he was taken before his judges, and required to renounce his
+errors, and with his hand upon the Gospel, to swear that they were
+sinful and detestable. Having performed this horrid penance, his
+conscience upbraided him, and as he rose from his knees, he exclaimed,
+“yet it does move,” for which relapse he was further sentenced to
+perpetual imprisonment. He continued thus secluded for many years,
+during which time blindness, deafness, and pains in his limbs embittered
+his existence, and death at length, more merciful than the Holy See,
+released him from his trials. Newton was born in the year in which this
+noble martyr died.
+
+For the edification of the worshippers of the “good old times,” a few
+more instances of the loving kindness which prevailed may be acceptable.
+
+The clerical sages of the University of Salamanca pronounced that the
+assertion of Christopher Columbus, that a continent existed beyond the
+seas, was blasphemous and feloniously wicked. A bishop of Salsburg
+expressing his belief in the existence of the antipodes was denounced by
+the bishop of Mentz as a dangerous heretic, and committed to the flames.
+
+Bigotry, however, is not confined to any one creed, since we know that
+Calvin the reformer, a man who had suffered persecution without learning
+mercy, no sooner found himself invested with the power to punish the
+freedom of thought in which he had himself indulged, than he persecuted
+to death the learned physician, Michael Servetus, not for any immoral
+proclivity, but because he believed him to be unsound on the doctrine of
+the Trinity. Servetus took the degree of Doctor of Medicine at the
+University of Paris about the year 1535. He is the author of some
+medical treatises on the circulation of the blood, and also translated
+Ptolemy’s geography; he was for some time in constant correspondence
+with Calvin, but as the “Odium theologicum” is the bitterest, Calvin
+shewed his christian charity by causing his antagonist to be consigned
+to the flames.
+
+But I must hasten forward, Fallopius looms in the distance, and with him
+our medical celebrities come fast and numerous. Gabriel Fallopius was
+born at Modena about the year 1523, and was one of the great triad of
+anatomists in Italy who, at the close of the 16th century, laid the
+foundation of the modern science of anatomy. Fallopius succeeded
+Vesalius in the chair of anatomy and surgery at Padua in 1557. His
+career was brilliant but short, and he died in 1562. It should be
+mentioned that Fallopius shared the usual fate of great discoverers; his
+originality was disputed, and his learning questioned; but it has been
+always so, and in appreciating the works of our predecessors, we must
+keep in view the enormous difficulties by which every onward step,
+whether in art or science, is beset:
+
+    “Envy doth merit, as its shade pursue.”
+
+truth does indeed ultimately prevail, but too frequently the heart of
+the discoverer is broken before the obtuseness of the mediocrities in
+power, by whom it is obstructed, can be overcome.
+
+Although a little diverging from the strict chronological order, I must
+here introduce to you our old acquaintance, Paracelsus; this eccentric
+genius had too little virtue to be admired, and too much talent to be
+despised. He was born at Zurich, in Switzerland, in 1493, and was
+consequently contemporary with many more learned, but less celebrated
+men; an unblushing and presumptuous egotist, he presents himself, in a
+moral point of view, as the exact antithesis of the amiable and virtuous
+Hippocrates. That he made some very useful discoveries must be granted
+to him; he introduced the use of opium into Germany, and was the first
+practitioner who employed preparations of mercury, antimony, sulphur,
+iron, and other remedies.
+
+Van Helmont is the most indulgent of his biographers, and Lord Bacon the
+most severe; but perhaps the description given by Zimmerman comes
+nearest the truth—“Paracelsus burnt publicly at _Bàle_ the works of
+Galen, Avicenna, and other eminent predecessors, because, he said, ‘they
+knew nothing of the cabballa and magic,’ which lay at the root of all
+medical and natural laws. He undertook to cure all diseases by the use
+of certain words and charms. He enjoined secresy on his disciples, and
+certainly was the first _great quack_ from whom the numerous band of
+Charlatans have proceeded.”
+
+He has left his mantle behind him, and his descendants, with none of his
+brains, have largely inherited his presumption. On the occasion of his
+inauguration in the Chair of Medicine, he thus expresses himself:—
+
+“Know,” says he, “that my _cap_ has more learning than all your
+professors, and my beard more experience than all your academies! I
+speak to you Greeks, Latins, Frenchmen, Italians, &c. &c. _You_ will
+follow _me_, _I_ shall not follow _you_. You, I say, doctors of Paris,
+Montpellier, Dalmatia, of Athens; you Jews, Arabs, Spaniards, English, I
+tell you all that nature obeys me; and if God does not deign to assist,
+I have yet the devil to resort to. I am king of all science, and command
+all the hosts of hell.”
+
+We have in this impostor the very embodiment of the true quacks of
+to-day; their language is indeed a little subdued, but their pretensions
+are as large; and, let me add, that whereas Paracelsus, in his days, had
+the countenance and support of many persons of rank, so in ours, there
+does not exist an ignorant pretender without the patronage of the great,
+and this patronage, too often, in the exact ratio of his presumption and
+falsehood.
+
+It must not be overlooked that this arch imposter died miserably, in
+poverty, induced by dissipation, and the possessor of the “elixir of
+immortality” breathed out his drunken soul at the age of fifty.
+
+We have a lively picture of the state of things begotten of this man in
+the pages of Burton, an example in himself of the power of credulity,
+and a proof that great scholastic learning was by no means at variance
+with the wild vagaries of the times. He appears not unconscious of his
+peculiarities, and offers the following apology for his frequent
+reference to callings other than his own:—
+
+“If any physician shall infer ‘ne sutor ultra crepidam,’ and be grieved
+that I have intruded into his profession, I tell him, in brief, he does
+the same by us:—I know many of his sect who have taken Orders in hope of
+a Benefice—’tis a common transaction; and why may not a melancholy
+divine, who can get nothing but by _Simony_, profess _Physic_? Marsilius
+Ficinus was ‘semel et simul,’ a priest and physician, at once ‘sacerdos
+et medicus;’ and also divers Jesuits are at this time ‘permissu
+superiorem,’ chirurgeons, panders, bawds and midwives. Many poor vicars,
+for want of other means, are driven to turn mountebanks, quacksalvers
+and empirics; and in every village have we not wizards, alchymists,
+barbers, goodwives, Paracelsians (as they call themselves), possessing
+great skill, and in such numbers that I marvel how they shall all find
+employment?”
+
+Burton lived about 1576, and was consequently of the same age as our own
+great Harvey, of whom we shall speak presently.
+
+Let me offer you one specimen on the subject of demoniacal possession,
+first introducing you to a new character, Cornelius Gemma, who was born
+at Louvain in 1535, and was one of the greatest scholars of his age, a
+professor of medicine in his native town (the chair having been
+conferred upon him by the great Duke of Alva, who governed the low
+countries), and whose writings embrace the subjects of medicine,
+mathematics, magic, and spiritual possession. Like Cardan, he was
+thought a little extreme in some views, but this one example suffices to
+demonstrate the evil influences of Paracelsus. Gemma, in his second book
+on natural miracles, says:—“A young maid, called Katherine Gualter, a
+cooper’s daughter, in the year 1571, had such strange passions that
+three men could not hold her. She purged a live eel—I myself saw and
+touched—a foot and a half long; she vomited twenty-four pounds of
+fulsome stuff of all colours twice a day for fourteen days, and after
+that great _balls of hair_, _pieces of wood_, _pigeons’ dung_, _coals_,
+and after them _two pounds_ of pure blood, and then again coals and
+stones (_of which some had inscriptions_) bigger than a walnut. All this
+I saw with horror. Physic could do no good, so she was handed over to
+the clergy.”
+
+Marcellus Donatus relates a story of a country fellow who had four
+knives in his belly, every one a span long, and indented like a saw;
+also a wreath of hair, and much other baggage. How they “came into his
+guts” he knew not.
+
+This personal testimony of Gemma is a melancholy proof that the light of
+christianity, during fifteen centuries, had done but little towards the
+emancipation of the human mind from the trammels of superstition, for,
+we find Josephus, who lived A.D. 30, also favoring us with his
+_personal_ testimony to facts quite as marvellous, and no doubt as
+veracious, as those recorded by our Dutch philosopher. Yet although
+common sense rejects such “materials of history” where shall we look for
+better evidence of authenticity than is thus furnished by two men of
+unimpeachable integrity. The pride of enlightenment is indeed checked by
+the reflection that A.D. 1867 we hear of believers in “Spiritual
+Manifestation” not only among the vulgar but in classes of society where
+the yearning after the mysterious sets both reason and philosophy at
+defiance.
+
+The universality of belief in the existence of demons, and their
+occasional possession of the bodies of men, pervades the whole course of
+sacred and profane history, and Josephus, in enumerating the great
+qualities of King Solomon, bears testimony to the power of the Jewish
+Monarch as an “_Exorcist_:”—After informing us that Solomon exceeded all
+men in knowledge of natural things, that he was familiar with every sort
+of tree, from the cedar to the hyssop on the wall; that he knew the
+habits of every living creature, whether upon the earth, or in the seas,
+or in the air, and described their several attributes like a
+philosopher, and demonstrated his exquisite knowledge of them; he goes
+on to say:—“God also gave him understanding to attain to skill against
+demons for the benefit of mankind; for having composed incantations,
+whereby diseases are removed, he also left behind him certain kinds of
+exorcisms whereby demons may be expelled so as never to return, and this
+method of cure is effectual or prevails much among us to this day: for
+_I saw_ one Eleazar, my countryman, in the presence of Vespasian and his
+sons, and many tribunes and other soldiers, deliver men who were seized
+by these demons. The cure was in this manner:—Applying to the nostrils
+of the demoniacs a ring, having under the seal one of those roots of
+which Solomon taught the virtues, he drew out the demon from the
+nostrils of the man who smelled to it:—The man presently falling down,
+the Exorcist mentioned the name of _Solomon_, and reciting the charms
+composed by _him_, adjured the demon never to return:—Moreover Eleazar,
+to satisfy all the company of his power, placed a small vessel full of
+water, in which feet are washed, and commanded the demon as he went out
+of the man to overthrow it, that all present might be sensible that he
+had left the man: this being done the wisdom of Solomon was manifest.”
+
+In the seventh book of his “Wars of the Jews,” he gives us the following
+account of one of the roots employed by Exorcists:—“On the north side of
+the City of Machœrus there is a valley, in which is a place called
+Baaras, in which is found a plant bearing the same name: it is of a
+flaming colour and towards evening shines very bright: it is not easy to
+be gathered for it withdraws itself and does not stay unless one pours
+upon it the urine of a woman, or menstruous blood, and even then it is
+certain death to him who takes it unless he carries the root hanging
+down upon the hand—There is another way of getting it without
+danger:—They dig all round it, so that a very little bit of the root is
+left in the ground, then they tie a dog to it, and the dog attempting to
+follow him who tied it, the root is easily pulled up, but the dog dies
+presently, as it were, instead of the man who would get the plant,
+afterwards there is no danger to those who touch it. With all these
+dangers the root is desirable, for demons, as they are called, who are
+the spirits of wicked men entering into the living, and killing those
+who have no help, this root presently expels; if it be only brought near
+to them who are diseased.”
+
+We have already shewn how it took the devils by the nose.
+
+Before we proceed, it may not be out of place to notice the general
+belief in astrology, and especially lunar influences, which prevailed at
+this period. Herbs and roots had their several patrons, and it was only
+when gathered and preserved under certain prescribed circumstances that
+their specific virtues were assured.
+
+Similar superstitions are not yet extinct; even in this year of grace,
+1867, we are not quite emancipated from the ignorance of the middle
+ages, and it is not a very unusual thing to see an advertisement in the
+_Times_ announcing a “child’s caul” for sale. These and such like
+absurdities,
+
+    “Though it make the unskilful laugh,
+     Cannot but make the judicious grieve.”
+
+Nor is this credulity confined to the illiterate classes. The dupes of
+St. John Long, as many of us may remember, included “potent, grave, and
+reverend signiors,” and on his memorable trial, a certain noble lord[10]
+gave evidence that Mr. Long had extracted a piece of lead from his head.
+Some scoffers think it a pity that the quack, having succeeded to some
+extent, left so much behind.
+
+-----
+
+Footnote 10:
+
+  The Earl of Shrewsbury.
+
+-----
+
+In speaking of Harvey, it is difficult to strike out any new path in a
+tale that has been told so often. Yet, we may extract something out of
+the consideration of the times in which he lived, and the men by whom he
+was surrounded. He was born at Folkestone, in 1578, and commenced his
+travels at 19 years of age. What his previous education had been does
+not appear, but we find him at the age of 24 elected Doctor of Medicine
+at Padua—then the most famous University in the world. On his return to
+England he received the honour of the degree of Doctor of Medicine at
+Cambridge. James the First, and his son, Charles the First, favoured him
+with their countenance, and in 1628 he was induced to publish an account
+of his great discovery. As a matter of course he was at once denounced
+as a visionary; personal abuse was unsparingly poured upon him; but as
+the grand fact enunciated was not to be shaken, his enemies turned round
+and discovered that, after all, it was not new, and had been the
+doctrine of many eminent physicians from the earliest days. The old, old
+story: the same sickening detraction—the same miserable envy rife in
+every age and clime. Harvey died in 1658.
+
+Shakespeare was 14 years old when Harvey was born, and the garrulous but
+erudite Burton was about the same age, yet strange to say, the great
+poet seems to have been unknown to the men of his own generation:
+scholars knew nothing of poor players, and he who was born to delight
+and instruct the future of mankind shone with but small lustre then.
+
+The history of medicine in England now begins, although for some time
+subsequently medical instruction was sought for in the schools of Italy,
+France and Holland. The Reformation had swept away the monastic
+institutions; but during the depressing middle ages, all the learning
+that barbarism had spared took refuge in the cloister. The monks
+practised physic very extensively, and considering the ignorance and
+superstition of the period, it was natural that the vulgar should prefer
+the medical assistance of those who arrogated to themselves the
+immediate assistance of Heaven in the preparation of their remedies. The
+women were especially fond of consulting the monks, if there be any
+truth in the old epigram:—
+
+            “To Esculapian monks the good wives roam
+             What marvel, they have husbands sick at home.”
+
+The alchymists again, like their lineal descendants in our days,
+professed to have discovered the philosophers stone, and _universal
+specifics_, and they were, as they are now, believed in proportion to
+their presumption. The practice of medicine being chiefly engrossed by
+empirics and monks, the latter very readily obtained licenses from the
+Bishops of the various dioceses who had authority to examine candidates,
+without having themselves any knowledge of the subjects in question,
+beyond that acquired in their general education.
+
+By the 5th Henry VIII., chap. vi., we find there were but twelve regular
+Surgeons practising in all London, and about the same number of
+Physicians.
+
+The college of Physicians in London owes its foundation to Dr. Thomas
+Linacre, of All Soul’s, Oxford, a man of profound learning, who had won
+honours at Rome, Bologna, and Florence.
+
+Linacre, through his interest with Wolsey, a wise and liberal patron of
+learning, obtained, in 1518, letters patent from Henry the Eighth,
+constituting a corporate body of regular Physicians in London. He was
+elected the first president, and meetings were held at his house in
+Knight Ryder Street until his death. With a munificence not without many
+worthy imitators in our profession, as we shall presently point out, he
+bequeathed this house to the College.
+
+His successor in the presidential chair was one of those bright lights
+who have contributed largely to the fame of medicine, in what I have
+already called its social and scientific aspect, and therefore deserves
+a passing notice. Dr. John Caius Kaye, of Gonville Hall, Cambridge, was
+Court Physician to Edward the Sixth, and as he retained the favour of
+Mary, after the demise of the pious young King, he procured from her a
+license to advance Gonville Hall into a _College_ under the name of
+Gonville and Caius College, on condition of enlarging the institution at
+his own expense. In order to devote himself to this object, he resigned
+the presidency of the College of Physicians, and completed his buildings
+at Cambridge. The mansion of learning thus raised by his liberality,
+became the retreat of his old age, and having given up the dignified
+position of _Master_, with a disinterestedness equalled only by his
+generosity, he continued to reside there as a gentleman commoner until
+his death in 1573.
+
+Harvey was elected president of the College of Physicians in 1654, but
+excused himself on account of his age and infirmities. Such, however,
+was his attachment to that body (best evinced by _donationes inter
+vivos_), that in 1656, he made over his personal estate in perpetuity
+for its use, having previously (on the occasion of the College being
+removed from Knight Ryder Street to Amen Corner) built them a library
+and public hall,[11] which he granted for ever to the corporation,
+together with his own valuable collection of books and instruments.
+Harvey’s grand result was the work of a quarter of a century of
+unremitting toil. An admirer wrote:—
+
+    “There didst thou trace the blood, and first behold
+     What dreams mistaken sages coined of old.
+     For till thy Pegasus the fountain brake,
+     The crimson blood was but a crimson lake,
+     Which first from thee did tyde and motion gaine,
+     And veins became its channel, not its chaine.
+     With _Drake_ and _Ca’ndish_ hence thy bays are curl’d,
+     Fam’d circulator of the lesser world.”
+
+He died in 1658.
+
+-----
+
+Footnote 11:
+
+  Now the site of Stationers’ Hall.
+
+-----
+
+I may here mention, that, after the fire of London, the College of
+Physicians was rebuilt on a site in Warwick Lane, which, until the
+erection there of the palatial residence of Guy of Warwick, the King
+maker, was called Eldenesse Lane.
+
+Sir Christopher Wren was the architect of the new College, and its
+burnished dome gave Garth the opportunity of displaying his powers of
+satire thus:—
+
+    “Witness a dome, majestic to the sight,
+     And sumptuous arches bear its oval height;
+     A golden globe, placed high, with artful skill,
+     Seems to the distant sight—a gilded pill.”
+
+Amongst the remarkable men of Harvey’s time were Shakespeare, Bacon, Van
+Helmont, and Sydenham, all of whom had personal intercourse with him; of
+these we shall first notice Thomas Sydenham, who was born in 1624.
+Boerhaave called him the second Hippocrates on account of his close
+observation of the natural phenomena of disease, but he is too well
+known to us to require any detailed description either of his method, or
+of his general knowledge. The story of his reply to Dr. Blackmore, when
+asked by him what books he should read, that “Don Quixote was a very
+good book” has been erroneously supposed to express his contempt for
+learning, but the joke was a personal one. Blackmore was a poet, and
+Sydenham saw that the man who consulted him did not possess the stuff of
+which doctors are made, he therefore referred him to the most lively
+piece of writing then in existence, as furnishing fitter pabulum for a
+poet, than the dry discussions of medical subjects could afford. To
+describe the character of Sydenham, it would be necessary to call to our
+aid the highest forms of panegyric; a good and honourable man, living in
+harmony with his brethren, and as far as the troubled state of the
+country would allow, in peace with all men. He lived to see the
+revolution of 1688 accomplished, and his aspirations as a patriot being
+thus gratified, he died in the following year.
+
+Contemporary with Sydenham, we find the celebrated Sir Wm. Petty, the
+founder of the Lansdowne family. He was the eldest son of Anthony Petty,
+who, Aubrey the Antiquary tells us, was a clothier in Romsey. In his
+early days he showed great liking for all mechanical operations, and at
+twelve years of age had acquired considerable skill in carpentry and
+smiths’ work. Educated at the free school of his native place, at the
+age of fifteen he began his remarkable career as a self-helping man;
+from his own account, we learn that he went over to Caen, in Normandy,
+with a little stock of merchandise, and had such good success that out
+of the profits he educated himself in the French tongue, and perfected
+his knowledge of classics and mathematics. In his twentieth year he had
+saved about three-score pounds, and acquired as much progress in
+mathematics as any of his age: to his love of learning was joined the
+desire to acquire wealth; he was at all times _practical_, and seems to
+have held pecuniary advantage to be the most comprehensive form of the
+practical. He tells us that when the civil wars between the King and
+Parliament grew hot “I had _sixty pounds_ in money and went into the
+Netherlands and France for three years, and vigorously pursued my
+studies, especially that of medicine at Utrecht, Leyden, Amsterdam, and
+Paris. I returned to Romsey with about _ten pounds more_ than I had
+carried out of England.” In Paris, Petty made the acquaintance of
+Hobbes, who retired early from the civil wars. Hobbes soon discovered
+the capacity of his young friend, and read with him the Anatomy of
+Vesalius. He entered at Brazennose College, Oxford, in April, 1648, and
+took his degree there as Doctor of Physic, in March, 1649. The date of
+his admission to the College of Physicians is 25 June, 1650. He had been
+previously deputy to Doctor Thomas Clayton, Professor of Anatomy at
+Oxford, who laboured under the singular disqualification of having an
+insurmountable aversion to the sight of a mangled corpse. On the
+resignation of Clayton in 1651, Petty became Anatomical Professor, and
+about the same time he succeeded Dr. Knight in the Professorship of
+Music in Gresham College. About the year 1645, the Royal Society was
+formed, and Petty was one of the earliest members of the Oxford branch.
+
+In 1652 he was appointed Physician to the Army in Ireland, which post he
+retained for seven years, at a salary of twenty shillings a day, while
+his practice produced him £400 a year more. His first great step to
+wealth, however, arose from his dealings with the forfeited lands in
+Ireland, and in a few years he managed his financial affairs so
+skilfully that he acquired a rental of £18,000 a year; part of this he
+was dispossessed of at the Restoration, as being unfairly obtained. He,
+however, had still a large fortune at his command, and bought the Earl
+of Arundel’s house and gardens in Lothbury, and erected thereupon the
+buildings forming Tokenhouse Yard, which was partly destroyed by the
+great fire. Petty had the tact to make his peace with the new
+government, and became a favourite with Charles II., who knighted him,
+and bestowed on him the place of Surveyor General for Ireland; and it is
+said, by Aubrey, that he was created Earl of Kelmore, though he never
+assumed the title. When the College of Physicians obtained its new
+Charter his name was published in the list of Fellows, although he had
+then resigned practice. The universality of his genius is clearly shewn
+by the list of his published works. He was a man of a genial character
+and handsome person:—“If he has a mind to it,” says Aubrey, “he will
+preach extempore, either as a Presbyterian, Independent, or as a Capucin
+friar, or Jesuit.” As a proof of his humour, when he was challenged to
+fight by Sir H. Sankey, he told his opponent, that as his short sight
+would not allow of the usual mode of warfare, he would meet him, if he
+was so minded, in a dark cellar, each to have a carpenter’s axe for his
+weapon: this the knight declined. He died in 1687 of a gangrene of the
+foot, and was buried at Romsey, by the side of his father and mother:
+there lie his remains, covered with a flat stone, on which an illiterate
+workman has cut these words:—“_Here layes Sir William Pety._”
+
+The part played by the Good-Wives and Ladies Bountiful in this age
+deserves a passing notice, and we will make one or two quotations from
+books especially devoted to their use. Thus: “To make Oil of
+Swallows:—Take lavender cotton, spikenut grass, ribwort, and twenty
+other simples, of each a handful, sage of virtue, camomiles and red
+roses, of each two handsful, _twenty live_ swallows; beat all together
+in a mortar, add a quart of neatsfoot oyl or May-butter, and mix. This
+oyl is exceeding sovereign for any broken bones, bones out of joint, or
+any grief of the sinews.”
+
+“The ‘_Usnea Humana_’[12] described as a moss two lines long, grown on
+the skulls of malefactors who have been a long time exposed to the air.
+This little plant is found chiefly in England and Ireland, where the
+bodies of men are left hanging in chains for many years after their
+execution. It is of a volatile astringent nature, good for bleeding of
+the nose, and of use internally for epilepsy.” The writer adds, “I have
+seen in the apothecaries’ shops in London these skulls exposed with the
+Usnea upon them.” Then again we have a whole tribe of “holy remedies”
+and cabalistic charms, &c.
+
+-----
+
+Footnote 12:
+
+  Corroborative evidence of the esteem in which this remedy was held
+  will be found in Macaulay’s account of the death scene of Charles
+  II.:—“All the medical men of note in London were summoned. Several of
+  the prescriptions have been preserved; one of them is signed by
+  fourteen doctors. The patient was bled largely. Hot iron was applied
+  to his head. A loathsome volatile salt, _extracted from human skulls_,
+  was forced into his mouth.”
+
+  [This volatile salt is thus described in the Dictionares des Drogues:
+  Amsterdam, 1716. “L’Usnée humaine contient beaucoup de sel volatil et
+  d’huile; elle ne bouillonne point avec les acides.”]
+
+-----
+
+Hiera Picra and Solomon’s seal are used to this day. The charm for burns
+is as follows:—“In the name of, &c. There came two angels from the East,
+one brought fire, the other water; I command them both: out fire!! in
+water!! and so I say _Amen_.” This is mumbled by the charmer, and the
+sufferer is relieved without daring to doubt, for if he _doubts_ the
+charm is destroyed. Warts and wens are disposed of by a similar process.
+
+So much for the march of intellect; in its progress very much like the
+military goose step.
+
+A belief in the curative power of the Royal touch over scrofulous
+affections continued to be universally held so late as the time of
+William III. Shakespeare gives us an account of it in the tragedy of
+Macbeth, which I have thought worth transcribing. In the 4th Act, Scene
+3rd, a room in the King, of England’s palace:—
+
+
+                   Enter a Doctor.
+
+  Malcolm.   Comes the king forth, I pray you?
+
+  Doctor.    Ay sir: There are a crew of wretched souls
+             That stay his cure. Their malady convinces
+             The great assay of art: but, at his touch,
+             Such sanctity hath heaven given his hand,
+             They presently amend.       [Exit Doctor.
+
+  Macduff.   What’s the disease he means?
+
+  Malcolm.                          ’tis called the Evil:
+             A most miraculous work in this good king;
+             Which often, since my here-remain in England,
+             I have seen him do. How he solicits heaven,
+             Himself best knows: but strangely-visited people;
+             All swoln and ulcerous, pitiful to the eye,
+             The mere despair of surgery, he cures;
+             Hanging a golden stamp about their necks,
+             Put on with holy prayers; and ’tis spoken,
+             To the _succeeding_ royalty he leaves
+             The healing benediction.
+
+
+Macaulay gives us the following graphic account of the practice of
+touching for the scrofula, as performed by that _most religious_ and
+_gracious_ King Charles the Second.
+
+“This ceremony had come down almost unaltered from the darkest of the
+dark ages to the time of Newton and Locke. The Stuarts frequently
+dispensed the healing influences in the Banqueting House. The days on
+which this miracle was to be wrought were fixed at sittings of the Privy
+Council, and were solemnly notified by the clergy in all the parish
+churches of the realm. When the appointed time came, several divines in
+full canonicals stood round the canopy of state. The surgeon of the
+royal household introduced the sick. A passage from the sixteenth
+chapter of the Gospel of St. Mark was read. When the words ‘They shall
+lay their hands on the sick, and they shall recover’ had been
+pronounced, there was a pause, and one of the sick was brought up to the
+King. His Majesty stroked the ulcers and swellings, and hung round the
+patient’s neck a white ribbon, to which was fastened a gold coin. The
+other sufferers were then led up in succession; and, as each was
+touched, the chaplain repeated the incantation, ‘They shall lay their
+hands on the sick, and they shall recover.’ Then came the epistle,
+prayers, antiphones and a benediction.... Theologians of eminent
+learning, ability, and virtue gave the sanction of their authority to
+this mummery; and, what is stranger still, medical men of high note
+believed, or affected to believe, in the balsamic virtues of the royal
+hand. We must suppose that every surgeon who attended Charles the Second
+was a man of high repute for skill; and more than one of the surgeons
+who attended Charles the Second, has left us a solemn profession of
+faith in the King’s miraculous power.... We cannot wonder that, when men
+of science gravely repeated such nonsense, the vulgar should believe it.
+Still less can we wonder that wretches tortured by a disease over which
+natural remedies had no power should eagerly drink in tales of
+preternatural cures: for nothing is so credulous as misery. The crowds
+which repaired to the palace on the days of healing were immense.
+Charles the Second, in the course of his reign, touched near a hundred
+thousand persons. The number seems to have increased or diminished as
+the King’s popularity rose or fell.
+
+“In 1682, he performed the rite eight thousand five hundred times. In
+1684, the throng was such that six or seven of the sick were trampled to
+death. James, in one of his progresses, touched eight hundred persons in
+the choir of the Cathedral of Chester. The expense of the ceremony was
+little less than ten thousand pounds a year, and would have been much
+greater but for the vigilance of the royal surgeons, whose business it
+was to examine the applicants, and to distinguish those who came for the
+cure from those who came for the gold.” (_History of England, Vol. III.,
+p. 478._)
+
+William the Third gave great offence to the nonjurors by sneering at a
+practice sanctioned by the highest ecclesiastical authorities; yielding
+to importunity, he once consented to lay his hands on a patient, but his
+good sense compelled him to exclaim:—“God give you better health and
+more wisdom, my friend.”
+
+Shortly after the death of Sydenham came Dr. Freind, who was born in
+1675. Being a man of worth and learning, he soon acquired a leading
+position in his profession, and having devoted himself early in life to
+the study of politics, he was returned to Parliament as member for
+Launceston, where, having warmly espoused the cause of the amiable
+Atterbury, he fell under the censure of Walpole, who sent him to the
+Tower on a charge of treason. This misfortune gave rise to one of the
+finest instances of devotion, on the part of his friend Mead, that has
+ever been recorded for the honour of human nature. Walpole was taken
+seriously ill, and of course sent for Mead, who at that time was the
+most popular physician. The doctor is reported to have addressed the
+minister thus:—“You are very ill, Sir Robert, and I can cure you; but
+one condition is indispensable. Dr. Freind has been in prison some
+months, and my esteem for him is so great that I will not prescribe a
+single thing for you until he is set at liberty.” Walpole hesitated, but
+Mead was resolute, and at length the tyrant gave way. Freind was
+released, and Mead when he paid his first visit of congratulation, took
+with him a considerable sum of money, the produce of fees he had
+received from Freind’s patients during his incarceration. Freind was a
+voluminous writer, and compiled a history of medicine in which he
+attacked some of the opinions of Leclerc, who had gone more extensively
+and accurately into the subject.
+
+Next in order, we must say a few words of Dr. Mead. Richard Mead was
+born in 1673, at Stepney. Political troubles drove his father, who was
+rector of the parish, into Holland, where this future ornament of the
+medical profession was educated, at Utrecht, under Grœvius. He continued
+his studies at Leyden, and travelling into Italy, took his degree of
+doctor at Padua. On his arrival in England, whither his fame had
+preceded him, the University of Oxford confirmed his title, and the
+College of Physicians received him with applause, as did the Royal
+Society (then but recently established.) He soon became the leading
+practitioner of the day, and in course of time Physician to George the
+Second. For more than half a century he attended at St. Thomas’s
+Hospital, and is said to have suggested to Guy the foundation of the
+hospital known by that name. A more noble, disinterested, and generous
+man than Mead never lived. His emoluments were very large, and his
+benevolence and hospitality kept pace with his income. It is stated that
+no poor applicant ever left his door unrelieved.
+
+    “Large was his bounty, and his soul sincere,
+     Heaven did a recompense as largely send.”
+
+After a life of 80 years, he died full of honours, leaving his many
+literary labors as monuments of his talents and industry.
+
+The reign of Queen Anne has been called the Augustan age of literature
+in England, and was in no less degree looked upon as the great day of
+medical science. Amongst the literary men we have to name Swift,
+Addison, Warburton, Pope, Steele, Parnell, Rowe, Gay, and others; and
+amongst Physicians—Freind, Mead, Radcliffe, Cheselden, Arbuthnot, Garth,
+&c. &c.
+
+Radcliffe next comes under notice; he was a man cast in a rougher mould
+than Mead. John Radcliffe was born at Wakefield, in Yorkshire, in 1650,
+and educated at Oxford, where he became a Fellow of Lincoln College;
+after a two years residence he resigned his Fellowship and devoted
+himself to physic, removed to London, and settled in Bow-street, Covent
+Garden. He was a man of ready wit, and great conversational powers, with
+much pleasantry and frankness. In 1686 he was appointed physician to
+Princess Anne of Denmark, and after the revolution was often consulted
+by William the Third; the latter on his return from Holland sent for
+Radcliffe, and shewing him his ankles swollen, and his body emaciated,
+the doctor brusquely said, “Truly I would not have your Majesty’s two
+legs for your three kingdoms.” This sally lost him the king’s favour,
+nevertheless he still prospered, and sat in Parliament for the borough
+of Buckingham.
+
+In the last illness of Queen Anne, Radcliffe was sent for, but excused
+his attendance on account of indisposition; the Queen died the next day,
+and Radcliffe was greatly censured, which is said to have hastened his
+own death, which took place three months after.
+
+There is a story told of his quarrel with Sir Godfrey Kneller, the
+celebrated painter. They were next door neighbours, and enjoyed a
+certain garden in common. Kneller complained that Radcliffe took no care
+that the door leading into this garden should be kept properly shut, and
+sent a snappish message to the doctor, that if he were not more mindful
+he would shut up the door and keep the key. Radcliffe’s answer was,
+“Tell Sir Godfrey Kneller he may do what he likes with the door provided
+he does not paint it.” Kneller retorted to this sarcasm, “Tell the
+doctor I will take anything from him except his physic.”
+
+I cannot find that Radcliffe ever published any work; but at his death
+he left the munificent sum of £40,000 to the University of Oxford for
+the formation of a public library of medical and philosophical science,
+and a further considerable sum to provide for an annual augmentation of
+books and instruments. Garth, in allusion to this bequest, remarked that
+for Radcliffe to found a library was as if an Eunuch should establish a
+Seraglio.
+
+Samuel Garth was among the celebrities of this time: the correspondent
+of Bolingbroke, the friend of Swift and Addison, and the patron of Pope,
+he must have possessed great merit to have reached such a position. He
+was born of a good family in Yorkshire: the date of his birth I have
+been unable to discover, but he was admitted a Fellow of the College of
+Physicians in 1693. Johnson classes him with the English Poets, and in
+his description of him says, “He is always mentioned as a man of
+benevolence, and it is just to suppose that his desire to help the
+helpless disposed him with so much zeal to undertake the founding of a
+dispensary:—Whether physicians have, as Temple says, _more_ learning
+than the other faculties I will not stay to inquire, but I believe every
+man has found in physicians great liberality and dignity of sentiment,
+very prompt effusion of benevolence, and willingness to exert a
+lucrative art, where there is no hope of lucre.”
+
+Garth was an active and zealous Whig, and consequently familiarly known
+to all the great men of that party; his orthodoxy was questioned, but it
+was the fashion of the times to be a free thinker. Pope apostrophises
+him in his second pastoral:—
+
+    “Accept, O! Garth, the muses early lays,
+     That add this wreath of ivy to thy bays.”
+
+And again, in conjunction with Arbuthnot, in “the Farewell to London:”—
+
+    “Farewell Arbuthnot’s raillery
+     On every learned sot,
+     And Garth the best good Christian he
+     Although he knows it not.”
+
+Pope’s favourite physician was Dr. John Arbuthnot, and never was
+grateful affection better bestowed. He was the son of an Episcopal
+clergyman in Scotland, born in 1675, and went through a course of
+academical studies at Aberdeen, where he also took the degree of Doctor
+of Physic. On his arrival in London he supported himself as a teacher of
+mathematics, in which he was a great proficient, and became known to the
+world of letters by his examination of Dr. Woodward’s “Account of the
+Deluge,” and by an able treatise on the “Advantages of Mathematical
+Learning.” The first book of the memoirs of “Martinus Scriblerus” has
+also been attributed to him. An accident introduced him to Prince George
+of Denmark, and led the way to his appointment as Physician to Queen
+Anne; he retained the favour of the Court until the death of the Queen,
+when, being more than suspected of Jacobite proclivities, he was
+compelled to leave his quarters in St. James’s Palace, and retired to a
+small house in Dover Street.
+
+Pope dedicated to him the prologue to his satires, and thus gracefully
+mentions him:—
+
+    “Friend to my life (which did not you prolong,
+     The world had wanted many an idle song.”)
+
+The concluding stanzas are so full of tenderness that I venture to give
+them:—
+
+    “Oh! friend, may each domestic bliss be thine,
+     Be no unpleasing melancholy mine,
+     Me, let the tender office long engage
+     To rock the cradle of reposing age,
+     With lenient arts extend a mother’s breath,
+     Make langour smile and smooth the bed of death.
+     Explore the thought, explain the asking eye,
+     And keep a while one parent from the sky!
+     On cares like these, if length of days attend,
+     May Heaven, to bless those days, preserve my friend,
+     Preserve him social, cheerful, and serene,
+     And just as rich as when he served a Queen.”
+
+About the time of his preferment he made the acquaintance of the great
+luminaries of art and learning, particularly Swift, (the mad parson as
+he was first designated) Pope, Gay, Parnell, Atterbury, Congreve, &c.,
+and greatly assisted, with his ready and witty pen, the ambitious
+Bolingbroke.
+
+What is greatly to his honour, in the midst of an age of scoffers, he
+retained a deep sense of the importance of personal religion, and seems
+to have lived in the affectionate esteem and remembrance of his friends;
+Swift said of him, “Oh! if the world had a dozen Arbuthnots in it, I
+would burn my travels” (Gulliver’s); and on another occasion expresses
+himself thus, “Arbuthnot has more wit than all we have, and his humanity
+is equal to his wit.”
+
+For some time before his death he suffered from asthma and dropsy, and
+bore his affliction with characteristic fortitude and resignation. He
+died in 1734, leaving a son, who was one of Pope’s executors, and two
+daughters.
+
+Next to the illustrious Scotchman whom we have just dismissed, comes a
+very worthy native of the Emerald Isle—Hans Sloane, the son of Alexander
+Sloane, the head of a colony of Scotchmen, who, in the reign of James I.
+settled in the north of Ireland. Hans was born at Killileagh, in the
+year 1660. He very early showed a liking for Natural History, and on his
+arrival in London attended lectures on Anatomy, Botany, and their
+kindred sciences, and formed a close intimacy with Boyle and Ray. After
+four years study he visited Paris and Montpellier, in which places he
+took his degrees in Medicine. In 1684 he returned to London and
+commenced practice, being a Fellow of the Royal Society and of the
+College of Physicians. On the appointment of the Duke of Albemarle to
+the government of Jamaica he accompanied that nobleman, and thus
+acquired a rich addition to his Museum of Natural History. George the
+First created him a Baronet, and on the death of Sir Isaac Newton, he
+became President of the Royal Society—estimable as a man, and eminent in
+science, he lived to a great age, and at his decease, bequeathed his
+museum to the nation, conditionally on the sum of £20,000 being paid to
+his executors for the benefit of his survivors: this sum bore no
+proportion to the value of his collection, and as it laid the foundation
+of the British Museum, it must ever be regarded as a patriotic and
+generous act.
+
+A curious illustration of the observant mind of Sir H. Sloane is
+furnished by the fact of his having noticed that the natives of the West
+Indian Islands, who eat much of the green fat of the turtle, perspired a
+yellow oil; the explanation being that the true green fat of the turtle
+is a green-coloured cellular tissue enclosing a yellow oil, which passes
+through the system undigested. The anatomical data on which this
+statement is advanced have been, at a comparatively recent period,
+verified by actual experiments performed by the late Dr. Pereira,
+assisted by our much esteemed former President, Dr. Daldy. It occurred
+to my mind that this fact in dietetics might present a lesson of caution
+to an audience peculiarly exposed, as citizens of London, to the
+temptation of eating a material, which, however appetising, is incapable
+of healthy assimilation.
+
+In a sketch of such limited pretension we are compelled to pass over
+names well deserving a niche in the temple of Esculapius:—every letter
+of the alphabet furnishes its contingent. To many of the men, into whose
+labours we have here entered, the civilised world is indebted for their
+contributions to general literature, as well as to the science of
+medicine; and in our endeavour to chronicle their importance, we can
+never cease to admire the fertility of their talents, and the extent of
+their industry in bringing to light so much useful knowledge out of the
+scanty materials by which their enquiries were aided:—Akenside, Bacon,
+Boyle, Blackmore, Cheselden, Darwin, Petty, Ray, among others, may be
+noted as examples.
+
+We have now reached the period at which legitimate medicine was
+established in this country; and as my discourse has already exceeded
+the assigned limits, it remains only to record our solemn tribute of the
+affectionate remembrance we all entertain towards those members of our
+society whose faces we shall so sadly miss in our next sessional
+meetings. Constituted as our cherished society is, as a friendly
+gathering of kindred spirits, actuated by mutual necessities, meeting as
+brothers, knowing no rivalry but the desire to impart, each to other,
+the results of our matured experience, it is with more than ordinary
+grief that we bow submissively when Providence sees fit to lessen our
+numbers by death.
+
+But it is not we alone who have sustained a loss. The name of Barlow
+will live for ages to come as the type of the scientific physician of
+the nineteenth century. A man of cultivated intellect, of elegant mind
+and blameless life, of calm judgment and exalted feeling, I look upon
+his death as nothing less than a calamity to the whole medical
+profession.
+
+Too soon, alas! after him, we were shocked by the almost sudden removal
+of the accomplished and genial Jeaffreson, endeared to his brethren by
+those solid endowments which mark and govern the high minded
+practitioner and amiable gentleman—no less than to the public by those
+qualities that are inherent in a warm, kindly, and generous nature. And,
+what then shall we say of our dear friend, Henry Blenkarne, so recently
+carried to his rest. Who can ever forget his pure and simple nature, his
+spotless life, and those endearing virtues which attached him so closely
+to all whose privilege it was to enjoy his friendship—one of Nature’s
+gentlemen, delicate and considerate of the feelings of others, generous
+to the poor at the sacrifice of his valuable life, ready at all seasons
+to give his time for the promotion of any and every benevolent scheme in
+connexion with our calling; we shall long mourn over the good old man.
+As I stood by and saw his remains committed to the ground but the other
+day, my mind reverted to the other honoured members I have mentioned,
+and I felt that one and all had realized and fulfilled to the letter the
+following monition of Bacon:—
+
+“I hold every man a debtor to his profession, from the which as men of
+course do seek to receive countenance and profit, so ought they of duty
+to endeavour themselves, by way of amends, to be a help and ornament
+thereunto.”
+
+I now beg permission to draw the curtain. I have laid before you, with
+but little skill, some rapid sketches of our illustrious predecessors. I
+have shown how worthily they have fulfilled their mission; and, having
+approached the advent of that great man, to whose memory we dedicate
+this evening, I make my bow and retire, first thanking you for the
+attention you have accorded to my dull recital. I pause now because I
+can add nothing to your knowledge of the character and labours of John
+Hunter. His patience under such difficulties as would have destroyed an
+ordinary worker, and his sublime indifference to personal comfort and
+advantage when the interest of that science, which he so well loved was
+in question—are “familiar in your ears as household words.”
+
+But, whilst we honour him by these periodical meetings, and by the
+discussion of subjects the elaboration of which formed the happiness of
+his life, it is only in the great museum, founded by his energy, that
+the grandeur of his character can be felt.
+
+In that hallowed path, in which he delighted to tread, the mantle of his
+genius has fallen upon one who, with a kindred love, aided by the
+marvellous instinct of his own original mind, still follows out the
+investigations of the great author, adding each day something to the
+knowledge which went before, and still turning over some new page of the
+book of Nature, wherein the finger of God has written, in characters
+hitherto undeciphered, fresh evidences of His glorious infinity. Under
+the auspices of our honorary member, Professor Owen, we gaze and admire.
+
+
+
+
+                                THE END.
+
+
+
+
+                          Transcriber’s notes:
+
+    ● The errors deemed most likely to be the printer’s have been
+      corrected, and are noted here.
+    ● Where hyphenation occurs on a line break, the decision to retain
+      or remove is based on occurrences elsewhere in the text.
+    ● Errors in punctuation and quotes have been silently restored.
+    ● The footnotes were moved near the corresponding paragraph.
+    ● The numbers below reference the page or footnote and line in the
+      original book.
+
+
+  reference  correction      original text
+     5.24    lawgiver        Jewish law-giver, it is a positive
+    fn3.11   Alnajah         Speaking of the alnajah, an
+    34.13    fellow men      he instructed his fellow-men,
+    fn8.1    Tylor           Taken from E. B. Tyler—“Early History
+    56.11    Harvey          our own great Hervey, of whom we
+    60.10    menstruous      menstrous blood, and even then it is
+    68.23    carpentry       skill in carpentery and smiths’ work.
+     92.6    knowledge       something to the knowlege which went
+
+    ----------------------------------------------------------------
+
+*** END OF THE PROJECT GUTENBERG EBOOK 69197 ***

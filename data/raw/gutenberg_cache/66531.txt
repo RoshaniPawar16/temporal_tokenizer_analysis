@@ -1,0 +1,1857 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 66531 ***
+
+[Illustration:
+
+CHAMBERS’S JOURNAL
+
+OF
+
+POPULAR
+
+LITERATURE, SCIENCE, AND ART
+
+Fifth Series
+
+ESTABLISHED BY WILLIAM AND ROBERT CHAMBERS, 1832
+
+CONDUCTED BY R. CHAMBERS (SECUNDUS)
+
+NO. 44.—VOL. I.      SATURDAY, NOVEMBER 1, 1884.      PRICE 1½_d._]
+
+
+
+
+HOW THE WEATHER IS MADE AND FORECAST.
+
+
+In the minds of foreigners, it is held to be one of the many
+peculiarities of the people of these islands that so much of their
+casual conversation consists of remarks on the weather. The national
+temperament is often held to be responsible for this failing; but some
+of the blame must no doubt be laid at the door of the weather itself.
+Our climate presents such a record of change and uncertainty, that we
+need not wonder if it is always in our minds, and the first subject on
+our lips when we meet a friend. Other lands may have their cold and
+hot, dry, and rainy periods, that come round in the proper order year
+after year with unvarying monotony; but with us it may be said of the
+weather, that we rarely know what a day or an hour may bring forth.
+Even the seasons seem occasionally to be independent of any necessity
+of visiting us at the particular time of the year at which we have
+been taught to expect them. Spring weather in November, or a winter
+temperature in July, or a November fog in the merry month of May, all
+seem to be amongst the possibilities of our climate.
+
+Happily, our meteorologists are at length beginning to define with
+growing clearness and confidence the laws which underlie and regulate
+the complicated and ever varying phenomena which we call the weather,
+and many of these laws, like most natural laws, are beautiful in
+their simplicity. Although ‘weather wisdom’ is as old as history
+itself, the science of the weather or meteorology is a growth of the
+last few years. The weather wisdom of our forefathers may in the
+light of present knowledge be divided into sense and nonsense. Under
+the nonsense may be included not only such proverbs as that which
+attributed to St Swithin’s day and certain other times and seasons,
+occult influences over the weather, but most of the information of the
+old almanacs, which used to ascribe the character of the weather to
+the positions and movements of the heavenly bodies and the age and
+changes of the moon. The prevalence of the belief that the weather
+was regulated by such influences, can only be accounted for by the
+well-known love of the human mind for the wonderful and inexplicable.
+Much of the old weather lore, however, had a large element of truth
+in it, and was the result of the collective experience of many
+generations, which had found that certain phenomena were generally
+followed by certain conditions of weather. The saying, that a rosy
+sky in the morning presages rainy weather, and the same appearance
+in the evening, fine weather, was current weather lore before the
+Christian era, and is recognised as being, in a certain sense, true at
+the present day. Amongst sailors, farmers, shepherds, and such like,
+weather maxims, the result of observation and experience, have always
+been current, and the value of many of these is now recognised and
+explained by science.
+
+The first step towards acquiring an insight into the causes which
+control our weather is a study of the laws which regulate the flow and
+changes of the winds in these islands. The air is the great medium
+in which all the changes of weather are elaborated. We live at the
+bottom of a great ocean of air, which extends for many miles upwards,
+and which is always heaving and changing, like the other ocean which
+it covers. The winds, which are the ever-changing currents which flow
+through this invisible sea, are, roughly speaking, the principal
+factors in the making of the weather. Many of us know very well the
+general character of the weather which accompanies the wind from the
+principal points of the compass, that which comes from the moist warm
+south-west, for instance; or with the blustering, shower-bringing
+north-wester; or with the harsh, dry, east wind in spring; but to most
+of us the wind itself ‘bloweth where it listeth.’ The movements of the
+air and changes of the wind are, however, subject to laws, a knowledge
+of which is in some degree necessary before we can understand how our
+weather is made for us.
+
+A simple definition of the wind which we ordinarily experience is
+that it is air obeying the force of gravity, in seeking to return to
+an equilibrium which has been disturbed. By the aid of the barometer
+we are able to form some idea of what is constantly taking place
+in the great ocean above us. The principle upon which this simple
+and useful instrument is constructed is easily understood. The air
+presses downwards upon the earth’s surface with a weight averaging
+nearly fifteen pounds to the square inch. If a portion of the surface
+of any fluid is relieved from this pressure by inverting over it a
+tube exhausted of air, the weight of the air upon the surface outside
+will force the fluid up into the tube until the weight of the column
+counterbalances the pressure which the air would exercise upon the
+amount of surface covered by the mouth of the tube. A column of mercury
+in such a case will rise in an air-exhausted tube to a height of about
+thirty inches; while water, from its lighter specific gravity, rises to
+a height of about thirty-four feet before it counterbalances the weight
+of the air above. The depth, and consequently the pressure, of the air
+overhead is, however, constantly varying within certain limits; and the
+column of mercury in the barometer enables us to keep a faithful record
+of the movements of the waves of air in the great ocean under which we
+live. At times, the depth of air above us is comparatively shallow, and
+the pressure beneath is lessened; the column of mercury is not raised
+so high, and the barometer is said to fall. At other times, the air
+is heaped up in particular places; the pressure beneath is increased,
+and the barometer is said to rise. In stormy weather, the column of
+water in a water-barometer where the scale is very large may be seen to
+pulsate with every change of pressure from the air-waves at the surface.
+
+The winds are nothing more than the rush of air from the regions of
+high pressure to fill up the spaces where low pressure prevails. Thus,
+if the column of mercury should stand 28.6 inches high at London, with
+a gradual rise as we travelled northward, until the barometer-reading
+was 29 inches at Edinburgh at the same time, this would indicate that
+a region of depression existed over the former place, and we should
+expect a rush of air in the form of wind blowing upon London from the
+north.
+
+When the barometrical readings taken simultaneously at stations
+distributed over a wide area are compared, the distribution of
+atmospheric pressure can be ascertained, and it is possible to tell
+from this the force and direction of the winds prevailing within this
+area, and generally also the weather which is likely to be experienced.
+The greater the inequality of pressure, the greater will be the rush of
+air to the centre of depression, and the stronger will be the wind. The
+wind, however, does not flow in a straight line from a region of high
+to a region of low pressure. The surrounding air from all quarters has
+a tendency to flow in, and, as with water, which rushes to the centre
+of a funnel when it is flowing out at the bottom, a gyratory movement
+is the result. The wind blows round a centre of depression in this
+way, always curving inward towards the centre; and in the northern
+hemisphere, this gyratory movement of the wind is always in a direction
+against the hands of a watch, while the contrary is the case in the
+southern hemisphere. These principles of the relation of the winds to
+atmospheric pressure hold good without exception over all the world.
+They were first definitively stated in America twenty-five years ago;
+but Professor Buys Ballot of Utrecht first drew attention to them in
+Europe, and the law expressing them is now generally recognised as Buys
+Ballot’s law.
+
+In ordinary circumstances in our latitude, the winds are generally
+regulated by the differences in pressure induced by contrasts between
+continents and oceans. Where the air becomes heated, an area of low
+pressure is produced, the warm air becoming rarefied and ascending, and
+the heavier cold air rushing in from the sides to supply its place. In
+winter, the weather over these islands is controlled to a great extent
+by the winds which sweep round a large area of depression which exists
+over the Atlantic, the mean centre of which is about midway between
+the continents of Europe and America, in the latitude of the Orkney
+Islands. This depression is the result of the contrast produced between
+the comparatively warm air over this portion of the Atlantic and the
+much colder air over the northern portion of Europe and America,
+which is continually flowing in to supply the place of the lighter
+and constantly ascending warm air. The winds sweeping round this
+centre strike our shores from the south-west. This depression is not
+stationary, but is continually shifting over a large but well-defined
+area, and it gives rise to many subsidiary eddies, or small cyclone
+systems as they are called, which sometimes skirt our coasts, or travel
+over these islands, bringing with them the storms of wind and rain and
+sudden changes of the wind with which we are familiar. In spring, the
+prevailing winds from the east and north-east, so much dreaded by many,
+are the result of a large cyclonic system formed by the sudden increase
+of temperature over middle and southern Europe, as the sun’s rays gain
+strength and the days lengthen. The temperature is not yet sufficiently
+high to bring in the air from off the Atlantic, as happens when the
+season is further advanced, so that the cold air rushes in from the
+polar regions in a huge eddy, striking our coasts from the east and
+north-east, and bringing in its train all the attendant miseries which
+make our English spring a time to be dreaded by the weak and ailing.
+
+A knowledge of the general principles which direct the flow of our
+prevailing winds is, however, only of general assistance in enabling
+us to forecast the weather which we experience in these islands. This
+is governed and produced to a great extent by the development of
+subsidiary centres of depression in and between the great cyclonic
+systems. These generally approach our shores from the west, travelling
+in a north-easterly direction; and they are responsible for most of
+the variable weather with which we are so familiar. They generally
+carry with them a certain well-defined course of weather. The readings
+of the barometer taken simultaneously at many places over a wide
+area on a system such as that now controlled by the Meteorological
+Office, enables us to determine the approach and development of these
+small cyclonic systems, and so to forecast with a certain degree of
+confidence the weather likely to be experienced in a certain district
+from twelve to twenty-four hours in advance. Most of the disturbing
+influences reach us from the west; and as the west coast of Ireland
+is the extreme limit to which our stations reach in that direction,
+we can receive only very short notice of their approach. This is
+one of the principal reasons why, with the means at present at our
+disposal, we cannot expect to make our weather science as perfect
+as in a country such as America, where the central office receives
+warnings from stations dispersed over the face of a vast continent.
+Nevertheless, we have made great advances since 1861, when the first
+weather forecasts were prepared and issued in this country by the Board
+of Trade, under the superintendence of the late Admiral Fitzroy. The
+forecasts at that time, although admitted to be of considerable utility
+to the country, were thought to be scarcely accurate enough to justify
+their continuance upon the system then in operation, and they were
+discontinued in 1866.
+
+In the following year, the Meteorological Office was constituted
+upon its present footing, and the daily publication of forecasts has
+continued down to the present. Considering that—judging from the
+forecasts published daily in the newspapers—the chances of a successful
+forecast are on the average about seventy-nine per cent. for ordinary
+weather, while the percentage of successes is slightly higher in the
+case of storm warnings, it is evident that the Meteorological Office is
+capable of rendering important service to the community at large. Every
+morning, the central office in London receives telegraphic reports
+from fifty-three stations. It also receives thirteen reports every
+afternoon, and nineteen each evening. Besides the numerous well-placed
+observation stations in the British Islands, there are twenty-three
+foreign reporting stations, extending along the entire western coast
+of Europe, from which information is received, in accordance with
+arrangements made with the meteorological organisations in Norway,
+Sweden, Denmark, Germany, Holland, and France. The morning observations
+are made at all the British stations at eight A.M. Greenwich time, and
+are transmitted direct to the Meteorological Office, where they are
+received between nine and ten o’clock. Thus are given the barometrical
+and thermometrical readings at the various stations at eight A.M.;
+the direction and force of the wind, and the state of the weather,
+together with any changes of importance which may have been noticed in
+the course of the preceding day. From these reports, weather charts
+are made out, forecasts of the weather are prepared and issued to the
+evening papers in London and the provinces; and a telegraphic résumé of
+the weather, or, if necessary, intelligence of storms, is despatched to
+various points on our coasts and to foreign countries. The forecasts
+for the morning daily papers are issued at half-past eight P.M. on
+the previous evening. They are prepared from reports received from
+twenty-six home and six foreign stations; but although these are the
+most widely distributed and read of any issued from the office, they
+are much less complete than the eight A.M. forecasts.
+
+The _Times_ publishes every morning with the forecasts the weather
+chart issued by the department. This chart shows the condition and
+movements of the atmosphere over the British Isles and the vicinity;
+the distribution of pressure; the temperature, state of the sea, and
+the force and direction of the winds blowing within the area at six
+P.M. on the previous day.
+
+The familiar dotted lines termed isobars, which are such a feature in
+weather maps of this sort, are lines at all places along which the
+barometer stands at the same height. Except where their regularity
+is broken by the existence of subsidiary disturbances, these lines
+extend in gradually widening circles around a centre of depression,
+the barometer always standing highest along the outside curve, and
+gradually and regularly falling towards the centre; so that if we could
+view our atmosphere from above one of those centres of depression, we
+would see a deep hollow, with sides sloping downwards to the centre,
+towards which the revolving air was being gradually indrawn, like water
+in an eddy.
+
+At intervals, we receive warning across the Atlantic, from the _New
+York Herald_ weather bureau, respecting storms which are crossing
+the Atlantic towards our coasts, and which are often described as
+‘likely to develop dangerous energy’ on their way. Although many of
+those warnings are subsequently justified, or partially justified,
+it must not be supposed that these are storms which have left the
+American continent on their way to us, and that it has been possible
+to calculate their course across the Atlantic and predict the
+time of arrival upon our coasts. Mr Clement Ley, Inspector to the
+Meteorological Council, tells us that it is not yet satisfactorily
+shown that storms cross the Atlantic from America, and he presumes that
+arrangements must be effected by which the logs of passing steamers may
+be consulted in America as to the character of the weather experienced
+in crossing from this country; and from the information received in
+this manner, it is possible to arrive at conclusions respecting the
+direction and character of storms travelling towards this side of the
+Atlantic, and to anticipate their arrival by telegraph, the warning
+being flashed beneath the ocean in time to reach us long before the
+storm itself.
+
+The variety and complexity of the phenomena which have to pass under
+careful observation render the science of the weather an exceedingly
+difficult one to study, more especially as, up to the present, we have
+done little more than master its fundamental principles. The time ought
+not, however, to be far distant when we shall have the means at our
+disposal to enable us to forecast the weather with a nearer approach to
+certainty than we can attain at present. The results already obtained
+by the Meteorological Office are certainly encouraging, and it must
+be remembered that, in attempting to forecast the weather in this
+country, it labours under two serious disadvantages. The first is our
+geographical position, which at present precludes us from obtaining
+any but the shortest notice of weather approaching from the west—the
+point from which most of our weather comes. The other drawback is of a
+pecuniary nature, and it is to be regretted that it prevents us from
+testing to the full limit the usefulness of the Meteorological Office.
+It may be argued that, in this country, storms are seldom so sudden or
+disastrous as to justify us in maintaining at a very much larger outlay
+an organisation which would enable us to be warned of their approach.
+It is, however, only necessary to take into account the enormous losses
+in life and property occasioned every year by the weather in shipwreck
+alone, in order to appreciate what might be the value to the nation of
+a properly organised system of weather science, did it only succeed in
+reducing, even by a small percentage, the annual number of wrecks on
+our coasts.
+
+
+
+
+BY MEAD AND STREAM.
+
+BY CHARLES GIBBON.
+
+
+CHAPTER LIV.—POOR COMFORT.
+
+Madge awakened from the reverie into which she had fallen, to find
+Aunt Hessy’s kind eyes resting on her inquiringly and with a shade of
+sorrow in them. She, however, instantly awoke, brightened and spoke
+with cheerful confidence, although there was a certain note of timidity
+in her voice indicating that she had not yet quite recovered from the
+effects of the scene in her bedroom.
+
+‘You see, aunt, how wickedly Philip has been deceived, and that I was
+right to trust Mr Shield.’
+
+‘Yes, but—Mr Beecham?’
+
+Madge’s cheeks flushed, the smile disappeared, and the head was lifted
+with something like impatience. It seemed as if the pronunciation
+of Beecham’s name in that questioning tone revealed to her the full
+significance of Wrentham’s insinuations—that she was not acting fairly
+to Philip.
+
+‘I have told you, aunt, that he is Mr Shield’s friend, and that
+he is doing everything that can be done to help Philip out of his
+difficulties. You cannot doubt that whatever I may do is for the same
+object.’
+
+‘Ah, child, I never doubted thee. My doubt is that whilst desiring to
+do right thou may’st have done wrong in giving the trust to a stranger
+thou’rt afraid to give to those that love thee.’
+
+‘Mr Beecham will himself tell you before the week is out that he gave
+me such proofs of his friendship as would have satisfied even you.’
+
+‘Well, well, we shall say no more, child, till the time comes;
+but never expect goodman Dick to be patient with what he thinks
+unreasonable. See what a handle this rogue Wrentham—I always felt
+that he was a rogue—has made of thy name to help him in cheating and
+bamboozling Philip! Take my word, we may turn our toes barely an inch
+from the straight path at starting, but we’ll find ourselves miles from
+it ere the end if we do not make a quick halt and go back.’
+
+‘I have only held my tongue,’ said the girl quietly enough, but the
+feeling of offended innocence was there.
+
+‘Holding the tongue when one should speak out is as bad as telling a
+book of lies—worse, for we don’t know how to deal with it.’
+
+‘I should be less sorry for vexing you, aunt,’ said the niece, ‘if I
+did not know that by-and-by you will be sorry for having been vexed
+with me.’
+
+‘So be it.—But now let us finish clearing up the room, and we’ll get
+the bedstead down in the morning. Dr Joy says that Mr Hadleigh is not
+nearly so much hurt as was thought at first, and that they may be able
+to move him in a day or two.’
+
+When the arrangements for turning the sitting-room into a bedroom had
+been completed—and there were nice details to be attended to in the
+operation, which the dame would intrust to no other hands than her own
+and her niece’s—Madge went in search of Pansy.
+
+Her sudden appearance in the kitchen interrupted the boisterous mirth
+which was going forward. When she inquired for Pansy Culver, there was
+an abashed look on the faces of those who had permitted the girl to go
+without inquiring whither; but Jenny Wodrow answered saucily:
+
+‘She got into a state when I was talking about Caleb Kersey, and
+slipped out before any of us could say Jack Robinson.’
+
+The silent reproof in the expression of Madge’s tender eyes had its
+effect even on this self-assertive damsel. Jerry Mogridge hobbled up to
+his young mistress.
+
+‘I’ll find her for you, Missy,’ he said cheerily, for he was in the
+happy state of mind of one who has enjoyed a good meal and knows that
+there is a good sleep lying between him and the next day’s toil.
+
+They went out to the yard, and Jerry, opening the door of the dairy,
+thrust his head into the darkness with the invocation: ‘Come out ov
+here, Pansy Culver; what are you doing there? Missy wants you.’ There
+was no answer, and after groping his way amidst cans and pails standing
+ready for the morning’s milk, he returned muttering: ‘She ain’t there
+anyhow. I’ll get the lantern, Missy, and we’ll soon find her, so being
+as she ha’n’t gone to her father’s.’
+
+Whilst Jerry went for the lantern, the moon began to light the
+snow-covered ground, and Madge discovered Pansy in the doorway of the
+stable. She was leaning against the door as if support were necessary
+to save her from falling. Madge put her arm round the girl, and drawing
+her out from the shadows into the moonlight, saw that the face was
+white as the snow at their feet, and felt that the form was shivering
+with agitation more than with cold.
+
+‘I knew it would upset you, Pansy; and intended to tell you myself, but
+wanted to do it when we were alone.’
+
+‘It doesn’t matter, Missy,’ answered the girl through her chattering
+teeth; ‘but thank you kindly. There’s no help for it now. I’ve been
+the ruin of him, and standing out here, I’ve seen how wicked and cruel
+I’ve been to him. I knew what he was thinking about, and I might have
+told him not to think of it—but I liked him—I like him, and I wish they
+would take me in his place. They ought to take me, for it was me that
+drove him to it.’
+
+‘Hush, hush, Pansy,’ said Madge with gentle firmness; ‘Caleb is
+innocent, and will be free in a few days. It was only some foolish
+business he had with Coutts Hadleigh which brought him under
+suspicion.’
+
+‘Yes, yes, but it was about me that he went to speak to Mr Coutts—and
+Mr Coutts never said anything to me that a gentleman might not say.
+Only he was very kind—very kind, and I came to think of him, and—and—it
+was all me—all me! And you, though you didn’t mean it, showed me
+how wrong it was, and I went away. And if Caleb had only waited,
+maybe—maybe.... I don’t know right what I am saying; but I would have
+come to myself, and have tried to make him happy.’
+
+This hysterical cry showed the best and the worst sides of the girl’s
+character. For a brief space she had yielded to the vanity of her sex,
+which accepts the commonplaces of gallantry as special tributes to the
+individual, and so had misinterpreted the attentions which Coutts would
+have paid to any pretty girl who came in his way. She had been rudely
+startled from her folly, and was now paying bitter penance for it. She
+took to herself all the blame of Caleb’s guilt, and insisted that she
+should be in jail, not him.
+
+Madge allowed her feelings to have full vent, and then was able to
+comfort her with the reiterated assurance of Caleb’s innocence, which
+would be speedily proved.
+
+The fit being over, Pansy showed herself to be a sensible being, and
+listened attentively to the kindly counsel of her friend. She agreed
+to follow her original plan, namely, to see her father in the morning
+and then return to Camberwell to devote her whole energies to the task
+of reclaiming her grandfather from his foolish ways and bringing him
+out to Ringsford. Madge was certain that this occupation would prove
+the best antidote to all Pansy’s unhappy thoughts and self-reproaches.
+Meanwhile it was arranged that Pansy should not have Jenny Wodrow for
+her bedfellow.
+
+       *       *       *       *       *
+
+Affairs at the farm had gone on uncomfortably from the moment
+Dick Crawshay expressed displeasure with his niece. She made what
+advances she could towards reconciliation; but she did not yet offer
+any explanation. He was obliged to accept her customary service as
+secretary; but it was evident that he would have liked to dispense with
+it. Neither his appetite nor his slumbers were disturbed, however; and
+he slept soundly through the night whilst the fire was raging at the
+Manor. It was not until the wain with its load of milk-cans had started
+for the station that he heard from Jerry Mogridge the report of what
+had occurred.
+
+Then yeoman Dick mounted his horse and rode at full speed to Ringsford
+to offer what help it might be in his power to render, grumbling at
+himself all the way for not having been sooner aware of his neighbour’s
+danger. Finding Mr Hadleigh in the gardener’s cottage, where there was
+want of space and convenience, the farmer with impetuous hospitality
+invited the whole family to Willowmere. The invalid could not be
+removed until the doctor gave permission; but Caroline and Bertha were
+at once escorted to the farm. Miss Hadleigh remained at the cottage to
+assist the housekeeper in nursing her father: she was moved to do so by
+a sense of duty as well as by the knowledge that Alfred Crowell would
+come out as soon as he heard of the disaster, and he would expect to
+find her there.
+
+In the bustle and excitement of the first part of the day there was
+only one person who thought much about Philip and of the effect this
+new calamity might have upon him in his present state. As the afternoon
+advanced, everybody was wondering why he neither came nor sent any
+message. The arrival of Pansy relieved Madge on this and other points;
+and she was happily spared for that night the pain of learning that
+Philip did visit the gardener’s cottage without calling at Willowmere.
+
+Postman Zachy delivered two welcome letters in the cold gray light of
+the winter morning. Both were from Austin Shield—one for Mrs Crawshay,
+the other for Madge. The first simply stated that his old friend might
+expect to see him in a few days, and that he believed she would have
+reason to give him the kindly greeting which he knew she would like to
+give him. The second was longer and contained important information.
+
+‘Be patient and trust me still,’ it said. ‘You have fixed the week
+as the limit of your silence: before the time is out I shall be at
+Willowmere. Philip has acted in every way as I would have him act under
+the circumstances, except in the extreme mercy which he extends to
+the man Wrentham; but he pleads that it is for the sake of the poor
+lady and child whose happiness depends on the rascal, and I have been
+obliged to yield. At the last moment Wrentham attempted to escape, and
+would have succeeded but for the cleverness of the detective, Sergeant
+Dier.
+
+‘Be patient, and have courage till we meet again.’
+
+‘Be patient—have courage:’ excellent phrases and oftentimes helpful;
+but was there ever any one who at a crisis in life has found the words
+alone satisfactory? They by no means relieved Madge of all uneasiness,
+although she accepted them as a token that her suspense would soon be
+at an end. In one respect she was keenly disappointed: there was not a
+hint that the proofs she had given Mr Shield of Mr Hadleigh’s innocence
+of any complicity in his misfortunes had been yet acknowledged to be
+complete. Had that been done, Philip would have forgotten half his
+worries. Mr Shield was aware of that—he must be aware of it, and yet he
+was silent. She could not help thinking that there was some truth in Mr
+Hadleigh’s view of the eccentricity of his character.
+
+
+
+
+THE NEW MEDIÆVAL ROOM AT THE BRITISH MUSEUM.
+
+
+One of the rooms at the British Museum, left vacant by the removal of
+the Natural History Collection to South Kensington, has lately been
+re-opened, under the title of the Mediæval Room, with a collection
+of curious objects, many of which possess strong personal as well as
+antiquarian interest. The articles shown range from the twelfth century
+downwards. Some of them have already been on exhibition in another part
+of the building; but the majority are now publicly shown for the first
+time. The various items have been carefully arranged and labelled by
+Messrs Franks and Read, the curators of the Ethnological Department,
+the fullness of the appended descriptions more than compensating for
+the temporary lack of a catalogue.
+
+Among the curiosities of more modern date is a silver-mounted
+punch-bowl of Inveraray marble, formerly the property of the poet
+Burns, and presented by his widow to Alexander Cunningham. Not far
+distant rests the Lochbuy brooch, a massive ornament four inches in
+diameter, said to date from about the year 1500, and to have been
+fashioned out of silver found on the estate of Lochbuy, in Mull. Its
+centre is a large crystal, surrounded by upright collets bearing
+pearls of considerable size. It was long preserved as a sort of
+heirloom in the Lochbuy family, but passed out of it by the marriage
+of a female representative, and in course of time became part of the
+Bernal Collection, whence it was acquired by the British Museum. Hard
+by it is a handsomely carved casket, made of the wood of Shakspeare’s
+mulberry tree, and presented in 1769, with the freedom of the town of
+Stratford-on-Avon, to David Garrick. The majority of the exhibits,
+however, belong to very much earlier periods. There is a choice
+display of horn and tortoiseshell snuff and tobacco boxes, two of
+the latter—duplicates, save in some unimportant particulars—bearing
+the arms of Sir Francis Drake, and the representation of a ship in
+full sail. We are told that boxes of this same pattern are frequently
+offered to collectors as having been the personal property of the great
+admiral; but an inscription on one of the specimens here exhibited
+shows that they were actually made by one John Obrisset in 1712.
+
+An ordinary-looking piece of rock-crystal in one of the cases claims
+to be the veritable ‘show-stone’ or divining crystal of Dr Dee, the
+celebrated astrologer and alchemist of Queen Elizabeth’s time. Dee’s
+own account of the origin of the show-stone was as follows. He declared
+that one day in November 1582, while he was engaged in prayer, the
+angel Uriel appeared to him and presented him with a magic crystal,
+which had the quality, when steadfastly gazed into, of presenting
+visions, and even of producing articulate sounds. These sights and
+sounds, however, were only perceptible to a person endowed with the
+proper mediumistic faculty. This the doctor himself unfortunately
+lacked; but such a person was soon found in one Edward Kelly, who
+was engaged as the doctor’s assistant, and produced ‘revelations’
+with Joseph-Smith-like facility. Indeed, his revelations had more
+than one point in common with those of the Mormon apostle, for it is
+recorded that on one occasion he received a divine command that he
+and the doctor should exchange wives, which edifying little family
+arrangement was actually carried out, with much parade of prayer and
+religious ceremonial. It seems probable that Dee really believed
+in the manifestations, and was himself the dupe of his unscrupulous
+associate. Kelly was accustomed to describe what he saw and heard in
+the magic crystal, and Dr Dee took notes of the mystic revelations.
+These notes were, in 1659, collected and published in a folio volume
+by Dr Meric Casaubon, an eminent scholar of that day, who appears to
+have believed that the revelations were really the work of spirits,
+though of doubtful character. From these notes it would appear that
+Dee was possessed of two, if not more, divining crystals of various
+sizes. After his death, a stone, said to be one of these, came into the
+possession of the Earl of Peterborough, and thence into that of Lady
+Elizabeth Germaine. It subsequently fell into the hands of the then
+head of the House of Argyll, by whose son, Lord Frederick Campbell,
+it was presented to Horace Walpole. For many years it formed part of
+the Strawberry Hill Collection, and there was appended to the leather
+case in which it was contained a manuscript note, in Walpole’s own
+handwriting, describing it as ‘the black stone into which Dr Dee used
+to call his spirits,’ and recording the above facts respecting it. On
+the dispersion of the Strawberry Hill Collection in 1842, the stone
+in question is said to have been purchased, at the price of thirteen
+pounds, by Mr Smythe Pigott; and at the sale of that gentleman’s
+library in 1853, to have passed into the hands of Lord Londesborough.
+As to the later history of this particular stone, we have no
+information; but it is clearly not identical with the one in the
+British Museum. Horace Walpole’s is described as being a ‘black stone.’
+Others add that it was in shape a flat disk, with a loop or handle,
+and it is generally believed to have been a highly polished piece
+of cannel coal. The one in the British Museum more nearly resembles
+the descriptions given of Lady Blessington’s crystal, employed for
+a similar purpose by Lieutenant Morrison, the Zadkiel of ‘almanac’
+celebrity. It is a ball, about two inches in diameter, of rather dark
+rock-crystal, and, as Mr Read informs us, has been in the possession of
+the British Museum for nearly a century. Assuming, however, that, as
+stated in Casaubon’s notes, Dr Dee used two or more magic specula, this
+may of course have been one of them.
+
+This mystic crystal is appropriately flanked by a collection of
+oriental talismans, some in metal, for suspension from the neck; others
+of agate or chalcedony, engraved with charms and cabalistic signs, for
+reproduction on wax or parchment. Here also are a couple of bezoar
+stones, formerly much esteemed as possessing occult medical virtues,
+particularly as an antidote to poison. The genuine bezoar stone is a
+calculus found in the stomach of the goat or antelope. The specimens
+here shown are artificial, being compounded from a recipe in the
+possession of Sir Hans Sloane. They claim, however, to have all the
+virtues of the genuine article, which we think extremely probable! They
+have a peculiar aromatic smell, which probably assisted the belief in
+their hygienic properties.
+
+In another of the cases we find post-mortem casts of the faces of
+Charles II. and Oliver Cromwell. A third, anonymous when acquired by
+the Museum, has since been identified as that of Charles XII., king of
+Sweden. The musket-wound in the temple, by which he fell, is plainly
+observable. Not far distant are a leathern ‘black-jack’ and a couple
+of ‘chopines,’ the latter, however, not being, as French scholars
+might be inclined to suppose, the measure of that name, but a sort of
+stilt about sixteen inches in height, with a shoe at the upper end,
+and formerly worn by the Venetian ladies. Shakspeare alludes to this
+queer article where he makes Hamlet say, addressing one of the female
+players, ‘By’r Lady, your ladyship is nearer heaven than when I saw
+you last, by the altitude of a chopine.’ Here, too, are a couple of
+the mallets and a ball used in the old game of pall-mall. The present
+specimens were found in the house of Mr Vulliamy, situated in the
+street of the same name, which adjoins the ancient Mall. The ball is of
+wood, about two and a half inches in diameter; and the mallets, save
+that their heads are bound with iron, are almost precisely similar to
+those used in croquet at the present day.
+
+There are sundry curious ivories, among them being a drinking-horn made
+out of a single tusk, elaborately carved, and mounted with copper-gilt.
+It bears the inscription:
+
+    Drinke you this, and thinke no scorne
+    Although the cup be much like a horne.
+
+It bears the date 1599, and is in general appearance like a fish, with
+a sort of scoop, or spoon-bowl, projecting from the mouth. There are
+indications that it was originally fashioned as a horn for blowing, but
+was afterwards converted to its present purpose. A small tablet of the
+same material represents ‘Orator’ Henley preaching. On the floor in the
+centre of the building, presumably Henley’s chapel in Lincoln’s Inn
+Fields, is seen an inscription indicating that the notorious Colonel
+Charteris lies buried there. Immediately in front of the preacher
+stands a bear on his hind-legs, holding a staff; and the congregation
+are represented with horns, exaggerated noses, heads of animals, and
+other deformities. The preacher appears to be uttering the words, ‘Let
+those not calumniate who cannot confute.’
+
+In another part of the room is a choice collection of ancient watches,
+pocket dials, and timepieces of various descriptions, some of very
+eccentric character. There are oval watches, octagon watches, and
+cruciform watches; watches in the form of tulips and other flowers.
+There is a dial in the form of a star, and another in the shape of
+a lute. A gilt clock, of considerable size, in the form of a ship,
+with elaborate mechanical movements, is said to have been made for
+the Emperor Rudolf II. A pocket dial shown has a special interest, as
+having belonged to Robert Devereux, Earl of Essex, some time favourite
+of Queen Elizabeth. This dial bears the arms of the ill-fated earl,
+together with an inscription showing that it was made by one James
+Kynvyn, in 1593.
+
+Astrolabes, nocturnals, and other astronomical instruments, English
+and foreign, are largely represented. There are ancient chess and
+backgammon boards, with men carved or stamped in divers quaint
+fashions; and a number of drinking-cups in bronze, rock-crystal, and
+silver, among those of the last material being a small goblet of
+graceful fashion long known as the ‘Cellini’ cup, but believed to be
+in truth of German workmanship. An elegant tazza of rock-crystal,
+mounted with silver-gilt, has a medallion portrait of Queen Elizabeth
+in its centre; but whether it actually belonged to the Virgin Queen is
+uncertain.
+
+The connoisseur in enamels will here find a large and varied
+collection, ranging from the _cloisonné_ of the Byzantine to the _champ
+levé_ of the early Limoges school, and the surface-painting of later
+artists. Some of the specimens shown are extremely beautiful; indeed,
+this collection alone would well repay the trouble of a visit. One of
+the earlier specimens, a plate of German enamel, represents Henry of
+Blois, Bishop of Winchester, and brother to King Stephen. Among the
+more curious specimens of this ancient art are sundry bishops’ crosiers
+of various dates, and a couple of ‘pricket’ candlesticks, in which the
+candle, instead of being dropped into a socket in the modern manner, is
+impaled upon an upright point.
+
+A small _pietà_ of the sixteenth century, placed in one corner of the
+room, deserves a special mention. The figures are in wax, skilfully
+draped with real silk and lace. Such a combination has usually a tawdry
+appearance, but it has no such effect in this instance. The name of
+the modeller has not been handed down to us, but he was unquestionably
+a true artist. The look of death on the Saviour’s face, and the
+heart-broken expression of the Madonna as she bends over to kiss
+his blood-stained brow, are almost painfully real. The power of the
+representation is the more remarkable from its small size, the whole
+group being only about eight inches square.
+
+In a collection numbering many hundreds of items, it is obviously
+impossible even to mention more than a very small proportion of the
+whole. We have spoken more particularly of such as have some personal
+or historical association connected with them; but on the score of
+antiquity alone, such a collection as this must be full of interest
+to thoughtful minds. Who can gaze upon these relics of the distant
+past without yearning to look back into the far-off times when all
+these things were new? What would we give to see, ‘in their habit
+as they lived,’ the men who fashioned these ancient timepieces, who
+drank from these crystal cups, and played tric-trac on these quaint
+backgammon boards? It needs but small imagination to call up Burns and
+his boon-companions carousing around the marble punch-bowl, with ‘just
+a wee drap in their e’e;’ but who shall name the knights who wore this
+iron gauntlet or that _repoussé_ breastplate? Their ‘bones are dust,
+their good swords rust,’ and yet here is part of their ancient panoply,
+well-nigh as perfect as when it left the armourer’s anvil four hundred
+years ago. Truly, they did good work, these mediæval artificers. The
+struggle for existence was not so intense; they did not hurry, as in
+these high-pressure days. Believing, with old George Herbert, that
+‘we do it soon enough, if that we do be well,’ they wisely took their
+time, caring little to do quick work, so long as they did good work.
+And so their handiwork remains, _monumentum ære perennius_, a standing
+memorial of the good old time when ‘art was still religion,’ and labour
+was noble, because the craftsman put his heart into his work.
+
+
+
+
+ONE WOMAN’S HISTORY.
+
+_A NOVELETTE._
+
+BY T. W. SPEIGHT.
+
+
+CHAPTER V.
+
+Five minutes later, Archie Ridsdale burst abruptly into the room.
+‘Here’s a pretty go!’ he exclaimed. ‘Read this, please, dear Madame De
+Vigne,’ putting a telegram into her hand.
+
+Madame De Vigne took it and read: ‘“From Beck and Beck, Bedford Row,
+London.”’
+
+‘The guv’s lawyers,’ explained Archie.
+
+‘“To Archibald Ridsdale, _Palatine Hotel_, Windermere.—We are
+instructed to request you to be at our office at ten A.M. to-morrow, to
+meet Sir William Ridsdale.”’
+
+Mora looked at him as she gave him back the telegram.
+
+‘The last train for town,’ said Archie, ‘leaves in twenty-five minutes.
+My man is cramming a few things into a bag, and I must start for the
+station at once.’
+
+‘Were you not aware that your father had arrived from the continent?’
+
+‘This is the first intimation I’ve had of it. You know how anxiously
+I’ve been expecting an answer to the second letter I wrote him nearly a
+month ago.’
+
+‘It would seem from the telegram that he prefers a personal interview.’
+
+‘I’m glad of it for some things. He has never refused me anything when
+I’ve had the chance of talking to him, and I don’t suppose he will
+refuse what I shall undoubtedly ask him to-morrow.’
+
+Madame De Vigne shook her head. ‘You are far too sanguine. Sir William
+knows already what it is you want him to do. He knew it before,
+when—when’——
+
+‘When he sent Colonel Woodruffe as his plenipo. to negotiate terms with
+the enemy—meaning you,’ said Archie, with a laugh. ‘A pretty ambassador
+the colonel made!’
+
+Madame De Vigne, who had risen and was gazing out of the window again,
+did not answer for a little while. At length she said: ‘Archie, while
+there is yet time, before you see your father to-morrow, I beg of you
+once more seriously to consider the position in which you will place
+yourself by refusing to break off your engagement with my sister. That
+Sir William will sanction your marriage with Clarice, I do not for one
+moment believe. What father in his position would?’
+
+Archie, when he burst into the room, had omitted to close the door
+behind him. It was now pushed a little further open, and, unperceived
+by either of the others, Clarice, dressed for walking, stepped into the
+room.
+
+‘Naturally, he must have far higher, far more ambitious views for his
+only son,’ continued Madame De Vigne. ‘As the world goes, he would be
+greatly to blame if he had not. So, Archie,’ she said, as she took both
+his hands in hers, ‘when you leave us to-night, I wish you clearly
+to understand that you go away unfettered by a tie or engagement of
+any kind. You go away as free and untrammelled as you were that sunny
+afternoon when you first set eyes on my sister. I speak both for
+Clarice and myself.’
+
+Here Clarice came quickly forward. ‘Yes—yes, dear Archie, that is so,’
+she exclaimed. ‘You are free from this hour. I—I shall never cease to
+think of you, but that won’t matter to any one but myself.’
+
+‘Upon my word, I’m very much obliged to both of you,’ answered Archie,
+who was now holding a hand of each. ‘I don’t know whether to laugh or
+be angry. A nice, low, mean opinion you must have formed of Archie
+Ridsdale, if you think he’s the sort of fellow to act in the way you
+suggest.’ Then turning to Clarice, he said: ‘Darling, when you first
+told me that you loved me, you believed me to be a poor man—poor in
+pocket and poor in prospects. That made no difference in your feelings
+towards me. There was then no question of a rich father coming between
+us—and I vow that neither he nor any one else in the world _shall_ come
+between us! I love and honour my father as much as any son can do; but
+this is one of those supreme questions which each man must decide for
+himself.’
+
+‘I have said my say—the raven has croaked its croak,’ said Madame De
+Vigne with a little shrug, as she crossed to the other side of the
+room. ‘You are a wilful, headstrong boy, and I suppose you must be
+allowed to ruin yourself in your own way.’
+
+‘Ruin, indeed!’ exclaimed Archie as he drew Clarice to him. ‘I don’t
+in the least care who looks upon me as a ruin, so long as this sweet
+flower clings to me and twines its tendrils round my heart!’ And with
+that he stooped and kissed the fair young face that was gazing so
+lovingly into his own.
+
+‘Ah—boys and girls—girls and boys—you are the same all the world over,’
+said Madame De Vigne with a sigh.
+
+‘And you won’t be able to go to the picnic to-morrow,’ remarked Clarice
+plaintively.
+
+Nanette appeared. ‘The carriage is at the door, sir. The driver says he
+has only just time to catch the train.’
+
+‘I’m going to the station, dear, to see Archie off,’ said Clarice to
+her sister.
+
+‘Good-bye—for a little while,’ said Archie, as he took Madame De
+Vigne’s hand. ‘The moment I have any news, you shall hear from me; and
+in any case, you will see me back before we are many days older.’
+
+‘Good-bye—and good-bye. Above all things, don’t forget the love and
+obedience you owe your father, and remember—the moment you choose to
+claim your freedom, it is yours.’
+
+‘Ah, dear Madame De Vigne’——
+
+She interrupted him with a slight gesture of her hand. ‘Do not think me
+hard—do not think me unkind. I have to remember that I am this girl’s
+sister and mother in one.’
+
+‘But’——
+
+‘Not another word.’ She took his head in both her hands and drew it
+towards her, and kissed him on the forehead. ‘Bon voyage! Dieu vous
+protège. The prayers of two women will go with you.’
+
+There was a tear in Archie’s eye as he turned away. Nanette was
+standing by the open door. A moment later, and the young people were
+gone.
+
+Madame De Vigne stepped out into the veranda and waved her handkerchief
+as the carriage drove off.
+
+‘He will marry her whether Sir William gives his consent or not,’ she
+mused. ‘He is in youth’s glad spring-tide, when the world is full of
+sunshine, and the dragons that beset the ways of life seem put there
+only to be fought and overcome. Well—let me but see my darling’s
+happiness assured, and I think that I can bear without murmuring
+whatever Fate may have in store for myself.’ She stepped back into
+the room, and as she did so, Nanette opened the door once more and
+announced—‘Colonel Woodruffe.’
+
+A slight tremor shook Madame De Vigne from head to foot. She drew a
+long breath, and advanced a step or two to meet the colonel as he
+entered the room.
+
+‘I told you that I should come,’ said Colonel Woodruffe, with a rich
+glow on his face as he went forward and held out his hand.
+
+‘And you are here,’ answered Madame De Vigne, who had suddenly turned
+very pale.
+
+‘Did you not expect me?’
+
+‘Yes,’ she answered, as for a moment she looked him full in the eyes.
+
+She sat down on an ottoman, and the colonel drew up a chair a little
+distance away. He was a tall, well-built, soldier-like man, some
+thirty-eight or forty years old.
+
+‘You know the purpose that has brought me?’ he asked.
+
+‘I have not forgotten.’
+
+‘Two months ago I had the temerity to ask you a certain question. I,
+who had come to judge you, if needs were to condemn, had ended by
+losing my heart to the only woman I had ever met who had power to
+drag it out of my own safe keeping. You rejected my suit. I left you.
+Time went on, but I found it impossible to forget you. At length I
+determined again to put my fortune to the proof. It was a forlorn hope,
+but I am an old soldier, and I would not despair. Once more I told you
+all that I had told you before; once more I put the same question to
+you. This time you did not say No, but neither did you say Yes. To-day
+I have come for your answer.’ He drew his chair a little closer and
+took one of her hands. ‘Mora, do not say that your answer to-day will
+be the same as it was before—do not say that you can never learn to
+care for me.’
+
+She had listened with bent head and downcast eyes. She now disengaged
+her hand, rose, crossed to the window, and then came back. She was
+evidently much perturbed. ‘What shall I say? what shall I say?’ she
+asked half aloud.
+
+The colonel overheard her and started to his feet. ‘Let me tell you
+what to say!’ he exclaimed.
+
+She held up her hand. ‘One moment,’ she said. Then she motioned to him
+to be seated, and herself sat down again.
+
+‘Has it never occurred to you,’ she began, ‘to ask yourself how much or
+how little you really know about the woman whom you are so desirous
+of making your wife? Three months ago you had not even learnt my name,
+and now—even now, how much more do you know respecting me and my
+antecedents than you knew the first day you met me?’
+
+‘I know that I love you. I ask to know nothing more.’
+
+‘You would take me upon trust?’
+
+‘Try me.’
+
+She shook her head a little sadly. ‘It is not the way of the world.’
+
+‘This is a matter with which the world has nothing to do.’
+
+‘Colonel Woodruffe—I have a Past.’
+
+‘So have all of us who are no longer boys or girls.’
+
+‘It is only right that you should know the history of that Past.’
+
+‘Such knowledge could in nowise influence me. It is with the present
+and the future only that I have to do.’
+
+‘It is of the future that I am now thinking.’
+
+‘Pardon me if I scarcely follow you.’
+
+‘How shall I express to you what I wish to convey?’ She rose, crossed
+to the table, and taking up a book, began to turn its leaves carelessly
+over, evidently scarcely knowing what she was about. ‘If—if it so
+happened that I were to accede to your wishes,’ she said—‘if, in short,
+I were to become your wife—and at some future time, by some strange
+chance, some incident or fact connected with my past life, of which
+you knew nothing, and of which you had no previous suspicion, were to
+come to your knowledge, would you not have a right to complain that I
+had deceived you? that I had kept silence when I ought to have spoken?
+that—that’——
+
+‘Mora—Mora, if this is all that stands between me and your love—between
+me and happiness, it is nothing—less than nothing! I vow to you’——
+
+‘Stay!’ she said, coming a step or two nearer to him. ‘Do not think
+that I fail to appreciate your generosity or the chivalrous kindness
+which prompts you to speak as you do. But—I am thinking of myself as
+well as of you. If such a thing as I have spoken of were to happen,
+although your affection for me might be in nowise changed thereby,
+with what feelings should I afterwards regard myself? I should despise
+myself, and justly so, to the last day of my life.’
+
+‘No—no! Believe me, you are fighting a shadow that has no substance
+behind it. I tell you again, and I will tell you so a hundred times,
+if need be, that with your Past I have nothing whatever to do. My
+heart tells me in accents not to be mistaken that you are a pure and
+noble-minded woman. What need a man care to know more?’
+
+‘I should fail to be all that you believe me to be, were I not to
+oppose you in this matter even against your own wishes.’
+
+‘Do you not believe in me? Can you not trust me?’
+
+‘Oh, yes—yes! I believe in you, and trust you as only a woman can
+believe and trust. It is the unknown future and what may be hidden
+in it, that I dread.’ She crossed to the chimney-piece, took up the
+letter, gazed at it for a moment, and then went back with it in her
+hand. ‘Since you were here five days ago, I have written this—written
+it for you to read. It is the life-history of a most unhappy woman. It
+is a story that till now has been a secret between the dead and myself.
+But to you it must now be told, because—because—oh! you know why. Take
+it—read it; and if after that you choose to come to me—then’——
+
+Not a word more could she say. She put the letter into his hand, and
+turning abruptly away, crossed to the window, but she saw nothing for
+the blinding mist of tears that filled her eyes.
+
+Colonel Woodruffe, with his gaze fixed on the letter, stood for a
+moment or two turning it over and over in his fingers. Then he crossed
+to the fireplace. In a stand on the chimney-piece were some vesta
+matches. He took one, lighted it, and with it set fire to the letter,
+which he held by one corner till it was consumed. Madame De Vigne had
+turned and was watching him with wide-staring eyes.
+
+‘“Let the dead Past bury its dead,”’ said the colonel gravely, as the
+ashes dropped from his fingers into the grate. ‘Your secret shall
+remain a secret still.’
+
+‘’Tis done! I can struggle no longer,’ said Madame De Vigne to herself.
+
+The colonel crossed to her and took one of her hands. ‘Nothing can come
+between us now,’ he said. ‘Now you are all my own.’
+
+He drew her to him and touched her lips with his. All her face flushed
+rosy red, and into her eyes there sprang a light of love and tenderness
+such as he had never seen in them before. Never had he seen her look
+so beautiful as at that moment. He led her back to the ottoman and sat
+down beside her.
+
+‘Tell me, dearest,’ he said, ‘am I the same man who came into this room
+a quarter of an hour ago—doubting, fearing, almost despairing?’
+
+‘Yes, the same.’
+
+‘I began to be afraid that I had been changed into somebody else. Well,
+now that the skirmish is over, now that the fortress has capitulated,
+suppose we settle the terms of victory. How soon are we to be married?’
+
+‘Married! You take my breath away. You might be one of those
+freebooters of the middle ages who used to hang their prisoners the
+moment they caught them.’
+
+‘We are prepared to grant the prisoner a reasonable time to make her
+peace with the world.’
+
+Madame De Vigne laid a hand gently on his sleeve. ‘Dear friend, let us
+talk of this another time,’ she said.
+
+‘Another time then let it be,’ he answered as he lifted her hand to his
+lips. ‘Meanwhile’——
+
+‘Yes, meanwhile?’
+
+‘I may as well proceed to give you a few lessons in the art of making
+love.’
+
+‘It may be that the pupil knows as much of such matters as her teacher.’
+
+‘That has to be proved. You shall have your first lesson to-morrow.’
+
+‘Merci, monsieur.’
+
+‘By Jove! talking about to-morrow reminds me of something I had nearly
+forgotten.’ He started to his feet and pulled out his watch. ‘Now that
+you have made me the happiest fellow in England, I must leave you for a
+little while.’
+
+‘Leave me?’ she exclaimed as she rose to her feet.
+
+‘Only for a few hours. On my arrival here I found a telegram from my
+brother. He has been staying at Derwent Hall, near Grasmere. To-morrow
+he starts for Ireland. We have some family matters to arrange. If I
+don’t see him to-night, we may not meet again for months. I’m sorry at
+having to go, but you won’t mind my leaving you till to-morrow?’
+
+‘Can you ask? Do you know, I’m rather glad you are going.’
+
+‘Why glad?’
+
+‘Because it will give me time to think over all that has happened this
+evening. I—I feel as if I want to be alone. You are not a woman, and
+can’t understand such things.’
+
+Again his arm stole round her waist. The clock on the mantel-piece
+struck the hour. Mora disengaged herself. ‘Twilight seems to have come
+all at once,’ she said. ‘You will have a dark drive. It is time for you
+to go.’
+
+‘More’s the pity.’
+
+‘To-morrow will soon be here; which reminds me that we have arranged
+for a picnic to-morrow at High Ghyll Force.’
+
+‘You will be there?’
+
+‘Clarice and Miss Gaisford have induced me to promise.’
+
+‘If I should happen to drive round that way on my return, should I be
+looked upon as an intruder?’
+
+‘As if you didn’t know differently from that!’
+
+‘Then possibly you may see me.’
+
+‘I shall expect you without fail.’
+
+‘In that case I will not fail.—My driver will be wondering what has
+become of me.’
+
+‘Good-night,’ said Mora impulsively.
+
+‘Harold,’ he said softly.
+
+‘Harold—dear Harold!’ she answered.
+
+‘My name never sounded so sweet before,’ exclaimed the colonel as, with
+a parting embrace, the gallant wooer quitted the apartment.
+
+‘Heaven bless you, my dearest one!’ she murmured as the door closed.
+Then she sank on to a seat and wept silently to herself for several
+minutes. After a time she proceeded to dry her eyes. ‘What bundles of
+contradictions we women are! We cry when we are in trouble, and we cry
+when we are glad.’
+
+Nanette came in, carrying a lighted lamp. She was about to close the
+windows and draw the curtains, but her mistress stopped her. After the
+hot day, the evening seemed too fresh and beautiful to be shut out.
+Nanette turned down the flame of the lamp till it seemed little more
+than a glowworm in the dusk, and then left the room.
+
+‘How lonely I feel, now that he has gone,’ said Mora; ‘but to-morrow
+will bring him again—to-morrow!’
+
+She crossed to the piano and struck a few notes in a minor key. Then
+she rose and went to the window. ‘Music has no charms for me to-night,’
+she said. ‘I cannot read—I cannot work—I cannot do anything. What
+strange restlessness is this that possesses me?’ There was a canary in
+a cage hanging near the window. It chirruped to her as if wishful of
+being noticed. ‘Ah, my pretty Dick,’ she said, ‘you are always happy so
+long as you have plenty of seed and water. I can whisper my secret to
+you, and you will never tell it again, will you? Dick—he loves me—he
+loves me—he loves me! And I love him, oh, so dearly, Dick!’
+
+She went back to the piano and played a few bars; but being still beset
+by the same feeling of restlessness, she presently found her way again
+to the window. On the lawn outside, the dusk was deepening. The trees
+stood out massive and solemn against the evening sky, but the more
+distant features of the landscape were lost in obscurity. How lonely
+it seemed! There was not a sound anywhere. Doubtless, several windows
+of the hotel were lighted up, but from where Mora was standing they
+were not visible. Dinner was still in progress; as soon as it should
+be over, the lawn would become alive with figures, idling, flirting,
+smoking, seated under the trees, or promenading slowly to and fro.
+At present, however, the lady had the whole solemn, lovely scene to
+herself.
+
+She stood gazing out of the window for some minutes without moving,
+looking in her white dress in the evening dusk like a statue chiselled
+out of snowy marble.
+
+‘My heart ought to beat with happiness,’ she inwardly communed; ‘but it
+is filled with a vague dread of something—I know not what—a fear that
+has no name. Yet what have I to fear? Nothing—nothing! My secret is
+still my own, and the grave tells no tales.’
+
+Suddenly a breath of air swept up from the lake and shook the curtains.
+She looked round the dim room with a shudder. The tiny tongue of flame
+from the lamp only served, as it were, to make darkness visible. She
+made a step forward, and then drew back. The room seemed full of
+weird shadows. Was there not something in that corner? It was like a
+crouching figure, all in black, waiting to spring upon her! And that
+curtain—it seemed as if grasped by a hidden hand! What if some one were
+hiding there!
+
+She sank into the nearest chair and pressed her fingers to her eyes.
+‘No—no—no!’ she murmured. ‘These are only my own foolish imaginings. O
+Harold, Harold! why did you leave me?’
+
+Next moment the silence was broken by the faint, far-away sound of a
+horn, playing a slow, sweet air. Mora lifted her head and listened.
+
+‘Music on the lake. How sweet it sounds. It has broken the spell that
+held me. It seems like the voice of a friend calling through the
+darkness. I will walk down to the edge of the water. The cool air from
+the hills will do me good.’
+
+There was a black lace scarf hanging over the arm of a couch; she took
+it up and draped it over her head and round her throat and shoulders.
+Her foot was on the threshold, she was in the act of stepping out into
+the veranda, when she heard a voice outside speaking to some other
+person. The instant she heard it she shrank back as though petrified
+with horror.
+
+‘That voice! Can the grave give up its dead?’ she whispered as though
+she were asking the question of some one.
+
+Next moment the figures of two men, one walking a little way behind
+the other, became distinctly outlined against the evening sky as they
+advanced up the sloping pathway from the lake. The first of the two men
+was smoking, the second was carrying some articles of luggage.
+
+The first man came to a halt nearly opposite the windows of Madame
+de Vigne’s sitting-room. Turning to the second man, he said, with a
+pronounced French accent: ‘Take my luggage into the hotel. I will stay
+here a little while and smoke.’
+
+The second man passed forward out of sight. The first man, still
+standing on the same spot, took out another cigar, struck a match,
+and proceeded to light it. For a moment by the light of the match his
+features were plainly visible; next moment all was darkness again.
+
+But Madame De Vigne, crouching behind the curtains of the dimly lighted
+room, had seen enough to cause her heart to die within her.
+
+‘The grave _has_ given up its dead! It is he!’ her blanched lips
+murmured.
+
+Some minutes later, Clarice Loraine, on going into the sitting-room,
+found her sister on the floor in a dead faint.
+
+
+
+
+AN EDUCATIONAL PIONEER.
+
+
+It would be difficult to find a more unique or more interesting
+educational body than the so-called Brothers of the Christian Schools.
+Founded some two hundred years ago by the venerable John Baptist de la
+Salle, on lines which the best schools of to-day have not hesitated
+to adopt, the influence of this Institute has spread over all the
+civilised, and even to some regions of the uncivilised world. Its
+extension to Great Britain is but of recent date, and only seven
+schools have as yet been inaugurated. The thoroughness and practical
+value of the instruction given are mainly due to a strict adherence to
+the ‘object’ lesson principle.
+
+Hitherto, we have been accustomed to associate this with the
+Kindergarten ideas of Pestalozzi and Froebel; but although their
+efforts to lighten the intellectual labours of the young were mainly
+instrumental in bringing ‘playwork’ to its present perfection,
+recent researches have shown that the venerable Dr de la Salle in
+his educational plan strongly urged that pupils should be taken to
+exhibitions and so forth, where their masters could give practical
+illustrations of special studies. Zoological or botanical gardens
+were in this way to be visited, that the uses and benefits of certain
+animals or plants might be demonstrated; and school museums, herbaria,
+geological, mineralogical, and other collections were afterwards to be
+formed by the pupils themselves. And not only did De la Salle institute
+object-teaching, but he was also the first to introduce class methods.
+Before his time, children were for the most part taught individually,
+or, where this was not so, large numbers were collected in one room,
+each in turn going to the teacher to have separate instruction, whilst
+the others were allowed to remain idle, free to torment one another or
+the little victim at the master’s table. Great care was taken by De la
+Salle in examining and placing the children committed to his care in
+the classes best fitted for them; and the success of his method was
+so great, that the numerous schools opened by the Brothers under his
+direction soon became overcrowded.
+
+His great object was to reach the poor, and to train them to a
+knowledge of a holy life and an independent livelihood. The opposition
+he met with was at times very great. The ire of professional
+writing-masters was first aroused; the poor had necessarily been
+debarred from learning to write, because only the well-to-do could
+afford the stipulated fees, and writing-masters were therefore employed
+to do all the correspondence of those who could not write. So, when De
+la Salle undertook to teach every child who came to him what had been
+in some senses a secret art, their fury vented itself in an opposition
+so overpowering that they drove the Brothers from their schools in
+Paris and threw their furniture into the streets. The opposition was
+only temporary, however; and as time passed, fresh schools were opened,
+not only in France and her colonies, but in every European country, and
+many parts of America, as well as in one or two districts of Asia and
+Africa.
+
+The Institute of the Brothers of the Christian Schools, though
+nominally Roman Catholic, is truly catholic in its widest sense, for,
+besides admitting children of every religious denomination, secular
+learning is admirably provided for. Their greatest successes have
+perhaps been achieved in the art of writing and drawing, as applied
+to all technical industries and art products. One illustration of the
+results of their method of teaching writing in a remote region where
+the pupils are not the easiest to train, may be cited as an example.
+When the treaty of commerce between France and Madagascar in 1868 was
+about to be signed, Queen Ranavalona was much struck by the beautiful
+caligraphy of the copy presented to her by the Chancellor of the French
+Consulate, and she determined that hers should not be inferior. The
+pupils in all the chief schools in the island furnished examples of
+handwriting to the queen’s prime-minister, but without satisfying her
+taste. At last, an officer who had seen the Brothers’ schools suggested
+that one of their pupils should compete. A young boy, Marc Rabily-Kely,
+sent in some beautiful specimens of different styles of writing; and
+the copying of the treaty was at once intrusted to him. When the two
+copies were presented side by side, a murmur of applause went round
+at the sight of Queen Ranavalona’s copy, and all cried out: ‘Resy ny
+vasoha’ (The whites are beaten). This is only one instance among many,
+and shows how much can be done by systematic training in the art of
+writing, a subject much neglected in the majority of schools.
+
+But De la Salle did not stop short at educating the poor; he was
+the first to found training colleges for masters, and the first to
+institute regular boarding-schools in which everything relating to
+commerce, finance, military engineering, architecture, and mathematics
+was taught, and in which trades could be learned. Besides these, he
+founded an institution in which agriculture was taught as a science.
+At St Yon, where the first agricultural school was started, a large
+garden was devoted to the culture of specimens of fodder-plants,
+injurious plants, grain, plants peculiar to certain soils, fruits and
+flowers. The students of to-day study all this, and in addition to
+working on model farms, visit all the best farms around, are sent with
+special professors to attend certain markets and sales of live-stock,
+and have special field-days for practically studying botany, geology,
+and entomology. The innovations introduced by De la Salle extended
+to other matters than practical education. Before French boys in his
+day were allowed to study their own language, they were obliged to
+learn to read Latin, and thus years were sometimes spent in acquiring
+a certain facility in reading a language they never understood. De la
+Salle changed all this, in spite of repeated opposition, and succeeded
+in making the vernacular tongue the basis of their teaching instead of
+Latin. Owing to this change, the poor scholars progressed much more
+rapidly than those in other schools, and the Brothers’ Institutes were
+soon far ahead of all the elementary schools of their day. The way in
+which they have held their position even till to-day is shown by the
+results of the public examinations in Paris during the last thirty-five
+years. Out of sixteen hundred and thirty-five scholarships offered
+during this time, pupils of these schools have obtained thirteen
+hundred and sixteen. This in itself is an enormous proportion; but
+it is even greater than it appears, when we consider that seculars
+had more schools, fewer pupils per teacher, and thus a better chance
+to advance the individual scholar, and as a rule, a richer class of
+scholars to select from. These scholarship examinations have recently
+been discontinued, though not until after the Brothers’ pupils were
+excluded from competition in consequence of the so-called ‘laicisation’
+of schools in 1880, after which the Brothers of Paris gave up their
+government schools and opened voluntary ones.
+
+The whole educational scheme of De la Salle was admirably complete;
+but perhaps the most interesting feature of the whole—now that we
+are familiarised with his systems for teaching special subjects by
+their spread in their original or a modified form to most European
+countries—was his very simple plan for enforcing discipline. He was
+always loath to believe unfavourable accounts of any pupil, and in
+the first place took pains to discover whether the failings were the
+result of the misdirection of those in authority or of the pupil’s
+own wilfulness. When there was evidently a necessity for punishment,
+the culprit was put in a quiet and fairly comfortable cell. Once shut
+in alone, his notice was attracted to stands obviously intended for
+flowers, to empty cages and other things which reminded the little
+prisoner that there were good and beautiful enjoyments for those who
+deserved them. One of the first questions the boys generally asked
+was why there were nails for pictures, cages for birds, &c., and yet
+neither pictures nor birds. In answer, they were told that as they
+improved they would be supplied with all these good things; that if
+they left off using profane or bad language, a bird would be put in the
+cage; that as soon as they became industrious and worked well, their
+prison vases would be adorned with flowers; that when they acknowledged
+their previous wrong-doing, pleasant pictures would be hung on the
+panels; that when their repentance was seen to be sincere, they would
+rejoin their schoolfellows; and that in time they would be allowed to
+go back to their families.
+
+The system worked so well, and is still found to succeed so thoroughly,
+that it is almost a wonder it has not become more general. It has
+certainly many advantages over the plan of giving boys so many hundred
+lines to write, which is a mere task, soon forgotten, and benefiting
+no one. But as there are only seven schools, and those of very recent
+foundation, in England, we may perhaps still have to wait before
+hearing that this discipline is at all general. In the meantime, all
+interested in the training of the young might derive valuable hints
+from studying this and other methods initiated by the pioneer of
+popular education not only in France, but in all Europe.
+
+
+
+
+THE MISSING CLUE.
+
+A TALE OF THE FENS.
+
+
+CHAPTER I.—THE ARRIVAL AT THE ‘SAXONFORD ARMS.’
+
+If any misanthropic subject of His Most Gracious Majesty King George
+II. had wished to withdraw himself from the bustle of public life and
+turn recluse in real good earnest, he could scarcely have chosen a
+district more likely to suit his retiring taste than the country in the
+vicinity of Saxonford. Scarcely aspiring to the dignity of a village,
+the place so named was merely a cluster of cottages formed upon the
+edge of a rough highway leading apparently to nowhere. In ancient
+times this spot had been of somewhat more importance, for it was here
+that a religious house of no inconsiderable size had flourished. But
+those days had long passed away; and in 1745 the only remnant of the
+monastery which survived the depredations committed by man and the
+all-effacing hand of Time was a gray skeleton tower, a silent witness
+to its departed conventual magnificence. Being erected, as was usually
+the case with fen settlements, upon a rise of comparatively high land,
+the remains commanded a view of an almost unbroken horizon. Standing
+at some distance from the hamlet which had arisen round the monastic
+ruin was a quaint dilapidated structure, known to the scattered natives
+of those parts as the _Saxonford Arms_. Whatever might have been the
+causes that induced the architect to build such an inn—for it was
+by no means a small one—in so lonely a part, must remain a matter
+of conjecture. A visitor was almost unknown at the old inn. There
+it stood, weather-beaten and time-worn as the gray old tower which
+overlooked it, and much more likely to tumble down, if the truth be
+told.
+
+At the time we speak of, the scene appeared unusually calm and
+beautiful, for the day was drawing to an end, and it was close upon
+sunset, a period which is seldom seen to so much advantage as in the
+low-lying districts of the fens. The weather had been unusually hot,
+and the sinking sun shed a warm glow over a tract of well-browned
+country, making its rich hues seem richer still. In the glassy water of
+the river, the vivid sky was reflected as in a mirror, while the tall
+tops of the sedge-rushes that bordered it were scarcely stirred by a
+breath of air. A rotten timber bridge, which might have been erected in
+the time of Hereward, spanned the stream at a short distance from the
+old inn; crossing this, the road dipped down and led the way between
+patches of black peat, cultivated land, and unreclaimed watery morass,
+straight towards the south.
+
+A small party of strong sunburnt fen labourers were seated on the rough
+benches in front of mine host’s ancient house of entertainment, some of
+them swarthy, black-bearded men, others with light tawny hair and blue
+eyes. True types of the hardy race were they; their strong, uncovered
+brown arms, which had all day long been working under a baking sun,
+upon a shadeless flat, telling a tale of sinewy power that came not a
+jot under the renowned strength of their mighty ancestors. Mine host
+himself, a ruddy-faced man of middle age, was there too, smoking a long
+well-coloured pipe, and gazing in a thoughtful way across the long
+stretch of fen, over which the shades of night were steadily creeping.
+
+‘What be ye gaping at, master?’ quoth one of the brawny labourers, as
+the landlord shaded his eyes with his hand and endeavoured to make out
+some indistinct object.
+
+‘What’re ye looking after, Hobb?’ asked another one in a bantering
+tone. ‘Can’t ye believe your own eyes, man?’
+
+‘Nay, Swenson, I can’t,’ returned mine host, lowering his hand and
+turning to the person who addressed him. ‘I want a good pair sadly.’
+
+‘You’re like to get ’em staring over the fen in that way, my boy!’
+remarked Swenson with a hoarse laugh.
+
+‘Lend me your eyes here, Harold,’ went on the innkeeper. ‘Take a squint
+across that bank and tell me what you see.’
+
+‘What be the good o’ askin’ me?’ returned the man. ‘I can’t tell a
+barn-door from a peat-stack at fifty yards’ distance.’
+
+‘I’ll tell ye, Dipping,’ cried a young sunburnt giant, starting up from
+the bench on which he had been sitting. ‘Where is’t?’
+
+‘You see yon tall willow?’
+
+‘Him as sticks up there by the dike?’
+
+‘Ay. Look out there to the left o’ it, across the fen, and tell me what
+ye see.’
+
+The fellow’s blue eyes were directed with an earnest gaze towards the
+distant spot which the landlord pointed out; and then he turned sharply
+round and exclaimed: ‘It be two horsemen.’
+
+‘Are ye sure?’ asked mine host, as he bent his brows and vainly tried
+to make out the far-off speck.
+
+‘Quite sure,’ was the reply. ‘They’re coming up the road by the old
+North Lode.—There; now they’re passing One Man’s Mill.’
+
+‘I see ’em!’ exclaimed Swenson, pointing towards a solitary windmill,
+the jagged sails of which formed a slight break in the long line of
+misty flatness.
+
+‘Perchance they be travellers, and will want beds for the night,’ said
+mine host, roused to action by the mere possibility of such an event
+occurring. ‘I will see that the place is got ready for them.’
+
+‘Hobb Dipping is soon counting his chickens,’ remarked one of the
+uncouth fenmen, laughing, as the landlord of the _Saxonford Arms_
+disappeared.
+
+‘Ay, it’s like him all over,’ rejoined Swenson, while he gathered up
+some implements and prepared to go.—‘Are ye coming with me, Harold?’
+
+‘No, my boy; I’m agoing to stop and see who yon horsemen may be. News
+are scarce in these parts. If you’re off now, why, good-night to ye.’
+
+Swenson nods, bids the man good-night, and then strides off in the
+direction of the old gray tower. The major part of the loiterers go
+with him; but three or four still linger, looking along the misty road,
+and waiting as if in expectation of something.
+
+A light up in one of the windows of the inn tells that Hobb Dipping
+is preparing his best room for the reception of the approaching
+travellers, in case it should be needed; and a savoury smell of hot
+meat which issues forth through the open doorway of the hostel makes
+the few hungry watchers that remain feel inclined to seek their own
+supper-tables. At length mine host has finished his task, and the most
+presentable apartment that the house contains is ready for instant
+occupation if necessary. Honest Hobb Dipping gazes wistfully out of a
+rickety diamond-paned window, and thinks that his labour must have been
+in vain. The moon is rising from the shadow of a thick bank of vapour,
+its dim red outline as yet but faintly seen through the misty cloud.
+It is getting late; the travellers must have passed by the bridge, and
+ridden along the flood-bank. ‘If they know not the way well,’ mutters
+Dipping to himself, ‘they’ll lose themselves in the fen for certain. An
+awkward path that be, specially binight, with a damp fog rising.’
+
+At this moment, a clatter of horses’ hoofs breaks the silence, and
+two horsemen canter over the shaky timber bridge and draw up in front
+of the old inn. Mine host bustles about shouting a number of confused
+directions; the one youthful domestic which the place boasts of running
+helplessly to and fro and doing nothing. The foremost rider, suddenly
+leaping from his horse, strides into the inn, and flings himself into a
+chair, ordering a private room and supper to be made ready at once.
+
+Honest Dipping hurries about, unused to strangers of distinction,
+bringing in liquor and glasses, meat, platters and knives, besides a
+quantity of other things that are not wanted, the stranger meanwhile
+having taken possession of the room up-stairs which had been hurriedly
+prepared for him.
+
+Presently follows the gentleman’s servant, a short muscular fellow,
+with a sullen, lowering countenance; and a short conversation takes
+place between the man and his master.
+
+‘Are the horses put up, Derrick?’
+
+‘Yes, sir.’
+
+‘And the pistols?’
+
+‘Here they are, Sir Carnaby.’
+
+‘Loaded, of course?’
+
+‘Ay, sir, both of them.’
+
+‘Right! Now, what think you of this part? Is it not quiet enough for
+us? I never was in such a dead-alive wilderness before; and taking that
+into consideration, I fancy it is possible to last out a few days even
+in this ghastly shanty. After that, I shall ride to Lynn and take ship,
+for, as I live, the country is getting too hot to hold me.’
+
+Derrick gave vent to a sound resembling a grunt, and muttered a few
+words containing seemingly some disparaging reference to the ‘king over
+the water.’
+
+‘Hush, you fool!’ exclaimed his master in a low whisper; ‘you should
+know better than to speak of what does not concern you. Be wise, and
+hold your tongue.’
+
+‘Your pardon, Sir Carnaby,’ replied Derrick; ‘it shall not be spoken of
+again.’
+
+‘And mind, Derrick, in case we should be inquired after, let the rustic
+boors know that I am Mr Morton, a landowner from somewhere or other.
+You, Derrick, are John Jones; so mind and answer to your name. D’ye
+hear?’
+
+The attendant’s face relaxed into a sly grin as he answered: ‘I hear,
+sir.’
+
+The truth is, Mr Morton—or to call him by his proper name, Sir
+Carnaby Vincent—was a young baronet of good family, and reputed to
+be enormously rich. In consequence of his being mixed up in some
+disturbances occasioned by the Jacobite party, he had found it
+necessary, at a previous period, to avoid the cognisance of the
+authorities. But a certain nobleman having interested himself in
+the youthful plotter’s behalf, the affair was hushed up, and Sir
+Carnaby returned to society once more. Having a relish for all kinds
+of intrigue, besides being of too excitable a temperament to exist
+long in a state of quiet, the madcap young fellow again entered heart
+and soul into the intrigues of Prince Charles’ followers, and this
+time succeeded only too well in attracting notice. A warrant was
+issued for his apprehension; and Sir Carnaby once more had to seek
+safety in flight, taking with him a quantity of valuable papers, and
+the blessings of all his companions engaged in the perilous cause.
+He was accompanied by only one person, his servant Derrick, a rough
+but doggedly faithful retainer, who had followed the fortunes of his
+house for nearly thirty years. Derrick himself cared not a jot for the
+Jacobite party to which Sir Carnaby was so attached; his first thought
+was to follow his master, and share the dangers which he might have
+to encounter. Their retreat from the metropolis was safely effected,
+much to the satisfaction of the baronet, who was really seriously
+alarmed at this second unlucky discovery. From London they journeyed
+through Cambridgeshire, Sir Carnaby’s plan being to lie quiet for a
+few days in the heart of the fens, then afterwards proceeding to some
+obscure seaport on the borders of the Wash, to take sail for a foreign
+land, where he could best forward the fortunes both of himself and his
+hapless Prince.
+
+
+CHAPTER II.—THE JACOBITE.
+
+‘Where did you place the saddle-bags, Derrick?’ asked Sir Carnaby, when
+Hobb Dipping had quitted the old wainscoted apartment in which his
+distinguished visitor was about to partake of supper.
+
+Speech was a gift which nature had bestowed very sparingly upon the
+attendant; moreover, he was possessed of a rough, unmelodious voice.
+Pointing towards a chair in one corner, he slowly ejaculated: ‘There,
+sir—underneath.’
+
+‘Good!’ said Sir Carnaby, seating himself at the table.—‘By the way,
+Derrick, I think it would be just as well to look after the innkeeper:
+his glances are a trifle too curious to please me. When I have finished
+my supper, you had better descend into the public room and try to
+ascertain his opinion of us.’
+
+‘Right, sir,’ replied the attendant.
+
+‘Come from behind my chair, you varlet,’ said the baronet, motioning
+him at the same time with his hand. ‘Draw up to the table and break
+your fast with me; we shall gain time by so doing.’
+
+Derrick sat down respectfully at the farther end of the board, and
+gazed in a thoughtful way at a dark patch of sky which could be seen
+through the diamond-shaped panes of glass in a window opposite him.
+
+‘You seem in no hurry to refresh the inner man,’ remarked Sir Carnaby.
+‘What are you thinking of, Derrick?’
+
+‘A dream, sir.’
+
+‘A what?’
+
+‘A dream, sir,’ repeated Derrick—‘one I had last night.’
+
+‘Well, as your mind appears to be somewhat uneasy,’ remarked Sir
+Carnaby, with a slight smile playing over his features, ‘I should
+recommend open confession as being the proper thing to relieve it.’
+
+‘There’s little enough to tell, sir,’ said Derrick; ‘’twas only a bit
+of dark sky up there that brought it back to me.’
+
+‘Well,’ said Sir Carnaby simply.
+
+‘It seemed to me,’ continued the attendant, ‘as if I was riding alone,
+holding your horse by the bridle. The moon was up, and the sky looked
+the same as it does out there. I can remember now quite plain that I
+felt kind of troubled, but what about, I know just as little as you,
+sir.’
+
+‘Is that the whole story?’ asked Sir Carnaby with a laugh. ‘Well, I
+can tell you, good Derrick, so far as riding alone goes, your prophecy
+is likely to prove a true one, though I certainly don’t intend you to
+carry off my horse with you.—See here; this is something more important
+than a heavy-headed dream. You must start to-morrow for the Grange. Be
+in the saddle early, and don’t spare your spurs.’
+
+‘Am I to go alone, sir?’
+
+‘Certainly. The journey has no object beyond the delivery of this
+letter; and as inquiry is sure to be pretty rife concerning me, I shall
+stay where I am and await your return.’
+
+Derrick received the sealed envelope which was handed to him with a
+gruff but respectful ‘Right, sir,’ and then relapsed into his customary
+silence.
+
+‘I shall leave it to your discretion to find out the way,’ said Sir
+Carnaby. ‘Of course you will go armed?’
+
+The attendant opened his coat without speaking and touched the hilt of
+a stout hanger which he wore at his side.
+
+Sir Carnaby smiled. ‘Yes,’ he said; ‘you are ready enough to play
+at blood-letting; but that sort of thing is best avoided. Let your
+movements be as quiet and speedy as possible; and when you reach your
+destination, seek out Captain Hollis by means of that address. Give the
+note into his hands, then make haste back. I shall have other work for
+you when you return.’
+
+‘More plots,’ thought Derrick, but he merely uttered a grunt and
+pocketed the letter.
+
+‘This room,’ continued the baronet, ‘seems to be parlour and bedchamber
+in one. So far well. If there should be any occasion to consult me
+again before you start, one rap at this door will be quite sufficient
+to wake me. I am a light sleeper.’
+
+‘Anything more, sir?’
+
+‘Nothing more to-night; you have all my orders for the
+present.—Good-night, Derrick.’
+
+‘Good-night, sir.’
+
+When the last faint clank of Derrick’s boots has ceased to ring upon
+the staircase, Sir Carnaby Vincent rises and locks the door, glancing
+outside first, to see that no one lurks without. This being done, he
+carefully bars the shutters over the window, looks inside two cupboards
+which the room contains, and then having ascertained that he is not
+likely to be overlooked, draws forth the afore-mentioned saddle-bags. A
+strange look of anxiety passes over the fugitive’s face as he plunges
+his hand into one of them, and brings out a small, shallow, oaken box,
+black with age. Its contents are apparently of no little value, for
+the lid is secured by two locks, and a corresponding number of blotchy
+red seals, upon which may be deciphered the impression of a crest. Sir
+Carnaby turns the box over and examines its fastenings, then rises and
+walks slowly round the room, as if in search of something. His manner
+at this moment is most strange, and the light step with which he treads
+over the old flooring does not awaken enough creaking to disturb a
+mouse. Four times round the room he goes, with a curious expression on
+his face which would puzzle even a skilful physiognomist to interpret,
+then stooping down, he places the box on the floor and appears to
+listen.
+
+
+
+
+THE MUSK-RAT OF INDIA.
+
+FROM AN ANGLO-INDIAN.
+
+
+The musk-rat is from six to eight inches long, of a slatish-blue
+colour, with a long movable snout, and diminutive eyes. Its skin is
+very loose, and quite conceals the extremities, only allowing the feet
+to be seen. This formation occasions the peculiar pattering of its
+run. The tail, broad at its base, is pinkish and bare of everything
+except a few hairs; ears are diminutive. Loathed and detested by all,
+this creature leads a charmed life; only a few dogs will kill it, and
+then there is always sneezing and a little foaming afterwards. Cats
+follow but won’t touch it; it is, moreover, equally avoided by more
+aristocratic rats and mice. As the animal runs along the wall of the
+room, it emits a kind of self-satisfied purr, which, if alarmed, breaks
+into a squeak, and immediately the scent-bottle is opened. If there is
+light to see the tiny creature, you will observe it scanning with its
+nose all parts of the horizon in search of what caused the alarm; the
+eyes apparently being unequal to the task.
+
+Musk-rats have a singular habit of always running along the walls of
+a room, never crossing from one wall to the other; hence, as they are
+not swift movers, they are easily overtaken, and a blow from a cane
+instantly kills the animal. Traps are of little use in capturing these
+creatures; and if one is captured, that trap is for ever useless as
+regards ordinary rats and mice, which won’t approach it after being
+contaminated. ‘Muskies’ are omnivorous and very voracious. During the
+rains, the insect world is on the wing. If at this season you place
+a night-light on the ground near the beat of a musk-rat, you will be
+amused at watching its antics in trying to catch some of the buzzers
+round the light, or those crawling up the wall, and will be surprised
+at its agility. The captives are ruthlessly crunched, and the animal
+never seems satiated; at the same time its enjoyment is evinced by
+its purring. Woe betide him should another musky invade this happy
+hunting-ground! War is at once proclaimed, and immediately the two are
+fighting for their lives, squeaking, snapping, biting, rolling over
+and over, and all the time letting off their awful scent-bottles. You,
+in the comparative distance, just escape the disgusting odour; but the
+insect invasion catch it full, and quickly leave the scene. And so the
+fight goes on, until you happily catch both the combatants with one
+blow of your cane, and the stinking turmoil ceases; and having thrown
+open the doors to ventilate the room, you are glad to retire to rest.
+
+I was awakened one night at Arrah by the squeaking and stench of two
+musk-rats, which were in mortal combat near my bed. Quietly rising and
+seizing my slipper, I smote the combatants a wrathful blow, to which
+one succumbed, and the other escaped through the venetian. I then lay
+down again, but only to hear the hateful p-r-r-r-r of ‘musky,’ who had
+come to look after his dead brother. Seizing him, he carried him off
+to the venetian, and there dropped him with a squeak, as I rose to my
+elbow. Bringing the dead rat back and laying my slipper handy, I again
+lay down. Very soon I heard the disgusting purr and saw the dead musky
+being carried off; and now the slipper was true, and both muskies lay
+prone.
+
+Apropos to this, if you throw out a dead rat or mouse, he is at once
+swooped upon by a kite or crow; but both these scavengers will avoid
+a dead musk-rat; the kite will swoop and pass on as if he had not
+noticed the odour, whilst our old friend the crow will alight at a
+safe distance, and with one eye survey the dead shrew. Perhaps in that
+glance a whiff from the scent-bottle reaches him, for he hops off a
+yard or two, caws, and then rubs his beak once or twice on the ground.
+Then he takes an observation with the other eye, caws, and flies up
+into the overhanging nína tree. No one will touch the dead musk-rat;
+even those faithful undertakers, the burying-beetles, avoid him.
+
+Now, what is the scent of the musk-rat like? When I was last at home in
+1875, I went into a greenhouse on a hot summer day, and found it given
+up to the musk-plant. ‘Muskies! muskies!’ I exclaimed, as I fled from
+the stifling, dank, and fetid atmosphere. Get up that combination—a
+hot day, a dank, humid, and suffocating greenhouse given up to the
+musk-plant, and you will have the full effect of only one full-blown
+musky. The odour of the plant, heavy when close, is delicate when
+diffused; the scent of the musk-rat, on the other hand, is heavy when
+diffused, and insupportable when near. The marvellous diffusibility of
+this odour is illustrated in many ways. It has long been maintained
+that the musk-rat has only to pass over a closely corked bottle of
+wine to destroy its contents. I have tasted sherry so destroyed, and
+at the same time have placed corked bottles of water in the runs of
+musk-rats without any defilement. The odour won’t permeate glass, so
+the bottle of sherry must have been contaminated by a defiled cork.
+Place a porous water-goblet (_sooráhí_) in the run of a musk-rat, and
+defilement is secure; and if that goblet endures for a hundred years,
+it will during that century affect all water which may be put into it.
+These animals seem to enjoy communicating their disgusting odour to
+surrounding objects. It doesn’t follow that mere contact conveys it,
+for I have often handled these animals without contamination; but there
+is undoubtedly—setting aside the scent-bottle as a means of defence—an
+instinctive marking of objects for purposes of recognition, sheer
+mischief, or for the easing of the secretion organ.
+
+Another anomaly pertains to this animal: though so disgusting to
+others, it is not so to itself; and it is one of the tidiest and most
+cleanly of animals. Its nesting arrangements, too, are very peculiar;
+nothing is more greedily utilised than paper, which it tears up. Some
+years ago, I lived in a boarded house, and used to be nightly worried
+by a pattering and purring musky dragging a newspaper towards a certain
+corner. Arrived there, it disappeared down a hole and pulled the paper
+after it—that is, as much as would enter the hole. If I gently removed
+the paper, the inquisitive nose would appear ranging round the hole,
+and shortly after, the animal itself in quest of the paper. I had the
+boarding taken up, and there, in a paper nest, lay five pink and naked
+muskies, all heads, with hardly any bodies, and quite blind.
+
+I cannot find one redeeming trait in the character and conduct of
+_Sorex cœrulescens_, and I must admit that he is an ill-favoured beast,
+and of questionable utility.
+
+
+
+
+A DAY IN EARLY SUMMER.
+
+
+    A little wood, wherein with silver sound
+      A brooklet whispers all the sunny day,
+    And on its banks all flow’rets which abound
+      In the bright circle of the charmèd May:
+    Primroses, whose faint fragrance you may know
+      From other blooms; and oxlips, whose sweet breath
+    Is kissed by windflowers—star-like gems which blow
+      Beside pale sorrel, in whose veins is death;
+    Larch-trees are there, with plumes of palest green;
+      And cherry, dropping leaves of scented white;
+    While happy birds, amid the verdant screen,
+      Warble their songs of innocent delight.
+    Surely they err who say life is not blest;
+    Hither may come the weary and have rest.
+
+            J. C. H.
+
+       *       *       *       *       *
+
+Printed and Published by W. & R. CHAMBERS, 47 Paternoster Row, LONDON,
+and 339 High Street, EDINBURGH.
+
+       *       *       *       *       *
+
+_All Rights Reserved._
+
+*** END OF THE PROJECT GUTENBERG EBOOK 66531 ***

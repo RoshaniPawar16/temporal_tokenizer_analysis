@@ -1,0 +1,1517 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 67920 ***
+
+Transcriber’s Notes:
+
+  Typographical and punctuation errors have been silently corrected.
+
+
+
+
+                    A Further Investigation of the
+                        Symmetrical Chloride of
+                   Paranitroorthosulphobenzoic Acid.
+
+                             Dissertation.
+
+                 Submitted to the Board of University
+                Studies of the Johns Hopkins University
+                for the Degree of Doctor of Philosophy.
+
+                                — by —
+                         William E. Henderson.
+
+                                 1897
+
+
+
+
+Acknowledgment.
+
+
+The author esteems it a privilege as well as a pleasure to give
+expression to his sincere sense of gratitude to Prof. Remsen,under
+whose guidance this work was carried on not only for instruction
+received in the lecture room, but for his frequent suggestion, and his
+constant and friendly interest in the work as it progressed. These have
+at all times been an encouragement and an incentive.
+
+He wishes also to express his appreciation of the instruction and
+kindly guidance in the laboratory, of Drs. Morse and Renouf, as well as
+of Dr. Ames of the Physical Laboratory.
+
+
+
+
+Contents.
+
+
+       I. Introduction.                                    Page 1
+
+      II. Preparation of the Acid Potassium Salt
+          of Paranitroorthosulphobenzoic Acid.                  6
+
+     III. Preparation of the Symmetrical Chloride
+          of Paranitroorthosulphobenzoic Acid.                 12
+
+      IV. Properties of the Symmetrical Chloride
+          of Paranitroorthosulphobenzoic Acid.                 19
+
+       V. The Action of Benzene and Aluminium
+          Chloride on the Symmetrical Chloride
+          of Paranitroorthosulphobenzoic Acid.                 22
+
+          The Barium Salts of
+          Paranitroorthobenzoybbenzenesulphonic Acid.          24
+
+      VI. The Action of Alcohols on the Symmetrical Chloride
+          of Paranitroorthosulphobenzoic Acid.                 30
+             1. Methyl Alcohol.                                31
+             2. Ethyl Alcohol.                                 32
+                Action of Ethyl Alcohol on the Unsymmetrical
+                Chloride.                                      36
+
+     VII. The Action of Phenols on the Symmetrical Chloride
+          of Paranitroorthosulphobenzoic Acid.                 38
+             1. Phenol.                                        40
+             2. Orthocresol.                                   48
+             3. Paracresol.                                    51
+             4. Hydroquinone.                                  53
+             5. Resorcin.                                      56
+             6. Pyrogallol.                                    59
+             7. β-naphthol.                                    61
+
+    VIII. The Action of Aniline on the Symmetrical Chloride
+          of Paranitroorthosulphobenzoic Acid.                 62
+
+      IX. The Action of Phosphorus Oxychloride on the Fusible
+          Anilid of Paranitroorthosulphobenzoic Acid.          71
+
+       X. The Action of Reagents on the Dianil of
+          Paranitroorthosulphobenzoic Acid.                    77
+             1. Of Hydrochloric Acid.                          77
+             2. Of Alcoholic Potash.                           78
+             3. Of Glacial Acetic Acid.                        79
+
+      XI. Conclusions.                                         82
+
+          Biographical.                                        85
+
+
+
+
+I. Introduction.
+
+
+The sulphobenzoic acids have been the subject of investigation in this
+laboratory for a number of years past. Among the many interesting
+facts that have been brought to light in the course of this study,
+perhaps no others have been attended with more interest than the
+discovery of well characterized isomerism in the case of the chlorides
+of orthosulphobenzoic acid, and its paranitro derivative; together
+with the preparation of a series of isomeric derivatives of these
+substances. The chlorides themselves have been isolated in the
+crystalline condition, and have been found to differ markedly, not
+only in chemical, but in physical properties as well.
+
+The first evidence that such isomerism existed, was obtained by Remsen
+and Coates[1] who, in the course of an investigation of the action of
+aniline upon the chloride of orthosulphobenzoic acid, obtained two
+isomeric anilids quite different in properties, which they designated
+as fusible and infusible respectively. The following year, Remsen and
+Kohler[2] obtained one of the chlorides in crystalline form, together
+with an oil which they did not succeed in crystallizing.
+
+This however was accomplished the succeeding year by Remsen and
+Saunders[3], and a still more satisfactory result was obtained by
+Remsen and McKee[4] in 1895. The chloride melting at 79° was found to
+yield only the fusible anilid, together with an anil, while from the
+lower melting chloride, in addition to these, the infusible anilid was
+also formed.
+
+[1] Am. Chem. Journ. XVII, 311.
+
+[2] Ibid XVII, 230.
+
+[3] Ibid XVII, 354.
+
+[4] Ibid XVIII, 794.
+
+In 1895, Gray[5] isolated the two corresponding isomeric chlorides of
+paranitroorthosulphobenzoic acid, the lower melting chloride being
+obtained in small quantity only. The succeeding year Hollis[6] made a
+more careful study of this lower melting chloride, and prepared it in
+considerable quantity.
+
+From evidence drawn from the action of ammonia upon these chlorides,
+taken in connection with a number of other facts, the higher melting
+chloride is identified as the one possessing a symmetrical structure,
+while the lower melting chloride possesses an unsymmetrical structure.
+The first one, when treated with ammonia is slowly transformed into the
+ammonium salt of paranitrobenzoic sulphinide:
+
+[5] Inaug. Diss. J. H. Univ. 1895.
+
+[6] Inaug. Diss. J. H. Univ. 1896.
+
+                              CO
+                              / \
+        COCl                 /   N.NH₄
+       /                    /   /
+    C₆H₃——SO₂Cl + 4NH₃ = C₆H₃——SO₂     + 2NH₄Cl.
+       \                        \
+        NO₂                      NO₂
+
+while the lower melting chloride is quickly transformed into the
+ammonium salt of paranitroorthocyanbenzenesulphonic acid:
+
+         CCl₂
+         / \
+        /   O               CN
+       /   /               /
+    C₆H₃——SO₂   + 4NH₃ = C₆H₃——SO₂ONH₄ + 2NH₄Cl.
+       \                   \
+        NO₂                 NO₂
+
+Gray’s study of the symmetrical chloride was confined for the most part
+to the preparation of a series of salts of this latter acid, and to
+an investigation of the action of aniline upon the chloride itself.
+It was thought to be of interest to extend this study to a wider
+range of reactions, as well as to improve, if possible, the method of
+preparing the chloride in pure condition. At the suggestion of Prof.
+Remsen this work was accordingly undertaken.
+
+
+
+
+II. Preparation of Material.
+
+
+The method employed in the preparation of paranitroorthosulphobenzoic
+acid was essentially that described by Hart,[7] Kastle,[8] Gray[9]
+and Hollis.[10] The details of it are repeated here for the purpose of
+calling attention to certain facts that came under the author’s notice.
+
+[7] Am. Chem. Journ. I, 350.
+
+[8] Ibid XI, 177.
+
+[9] Inaug. Diss. J. H. Univ. 1845.
+
+[10] Inaug. Diss. J. H. Univ. 1896.
+
+100 grams of paranitrotoluene are added to 400 grams of fuming sulfuric
+acid, and the mixture heated in a balloon flask at 100° on a water
+bath. The heating is continued until a few drops of the mixture, added
+to cold water, dissolves completely to a clear solution. The time
+required for this operation varies much with the conditions. Continued
+stirring very considerably hastens the reaction, as paranitrotoluene
+forms a layer on the acid, which presents a small surface to its
+action. With constant stirring the reaction is complete in a few hours,
+whereas if no stirring is resorted to, as much as several days may be
+required, especially when large quantities are employed at one time.
+
+When the reaction is complete, the mixture is poured into a
+large volume of water, and neutralized with calcium carbonate.
+In the filtrate from calcium sulphate, the calcium salt of
+paranitroorthotoluene sulphonic acid is found, and this is converted
+into the potassium salt in the usual way.
+
+The oxidation of the potassium salt is effected as follows. 50 grams of
+the salt are dissolved in 2½ litres of water, and to this is added a
+solution of 15 grams of potassium hydroxide. The mixture is heated to
+100° on a water-bath, and when this temperature is reached, 110 grams
+of potassium permanganate are added. Heating is continued until the
+solution is decolorized, care being taken to prevent the evolution of
+free oxygen.
+
+The oxides of manganese are then filtered off, the filtrate neutralized
+with hydrochloric acid, and evaporated to about one fifth of its
+original volume. Strong hydrochloric acid is them added in excess, and
+on cooling the acid potassium salt of paranitroorthosulphobenzoic acid
+separates in very slender colorless needles completely filling the
+liquid.
+
+For the success of this operation it is important that the potassium
+salt of paranitroorthotoluenesulphonic acid and the potassium hydroxide
+should both be perfectly dissolved before they are heated together.
+If the two substances lie together in solid form at the bottom of the
+flask, a very slight elevation of temperature leads to the formation
+of an extremely troublesome red substance, which is very difficult
+to remove. It is almost impossible to remove it from the oxidation
+product by recrystallization, since any considerable amount of it has
+a marked influence on the solubility of the salt, rendering it much
+more soluble. It persists throughout all subsequent transformations of
+paranitroorthosulphobenzoic acid, and should therefore be carefully
+avoided.
+
+Otto Fischer[11] has shown that in concentrated solution, potassium
+hydroxide acts on nitro derivatives of toluene, with the formation
+of various colored substances derived from stilbene. In the case
+of paranitroorthotoluenesulphonic acid, he describes the substance
+formed as possessing a cherry red color. The reactions involved in its
+formation are:
+
+         CH₃          HC ============ CH
+        /            /                 \
+    2C₆H₃——SO₂OK = C₆H₃——SO₂OK  KO.O₂S——C₆H₃ + 2H₂O
+        \            \                 /
+         NO₂          \               /
+                       \  /-- O --\  /
+                         N         N
+                          \-- O --/
+
+By oxidation this passes to a nitro compound of the composition
+
+       HC============ CH
+       /               \
+    C₆H₃——SO₂OK  KOO₂S——C₆H₃
+       \               /
+        NO₂         O₂N
+
+It was no doubt the formation of substances of this nature that
+occasioned the color observed in some of the oxidations.
+
+[11] Ber. XXVI-2231; XXVIII-2281
+
+The only effective method of separating this colored substance was
+found to be to pass to the neutral salt of paranitroorthosulphobenzoic
+acid, by making the solution slightly alkaline. The salt of this
+colored substance is also formed and the two can be separated by a few
+recrystallizations in a fairly satisfactory manner.
+
+The yield in both of the transformations involved in the preparation
+of paranitroorthosulphobenzoic acid does not fall far short of the
+theoretical.
+
+
+
+
+III. Preparation of the Symmetrical Chloride of
+Paranitroorthosulphobenzoic Acid.
+
+
+This chloride was first separated from its unsymmetrical isomer
+by Gray[12]. It was obtained by allowing a chloroform solution of
+the mixed chlorides to evaporate until the chloroform had almost
+entirely disappeared. In the thick liquid so obtained, crystals of the
+symmetrical chloride were formed. It was also obtained by applying the
+method devised by Bucher in connection with the corresponding chloride
+of orthosulphobenzoic acid—i.e. by the action of dilute ammonia on the
+mixed chlorides. Gray also found that the best conditions for securing
+a relatively large proportion of the symmetrical chloride were, the
+employment of as low a temperature as possible in the formation of the
+chlorides, and of as small an excess of phosphorus pentachloride as
+would suffice for the reaction.
+
+[12] Inaug. Diss. J. H. Univ. 1895.
+
+After many experiments, under widely differing conditions, the
+following method of procedure, embodying the results of Gray’s work,
+was adopted.
+
+Dehydrated acid potassium salt of paranitroorthosulphobenzoic acid,
+and phosphorus pentachloride, in the ratio of 40: 55 grams, are
+brought together in a mortar and intimately mixed. The mixture is
+put into an evaporating dish, and placed on a sulphuric acid bath,
+previously heated to 150°. As soon as the action has been well started,
+the dish is removed, and the reaction allowed to proceed without
+further heating. When it is complete, and the contents of the dish
+has cooled down to the temperature of the room, the oily product is
+poured slowly into a salts bottle containing ice water, the bottle
+being frequently shaken during the process. The shaking is continued
+with renewed portions of water, as long as the wash water is cloudy.
+The water is then poured off, the brownish gummy chloride dissolved
+in chloroform, and the solution placed in a good-sized separating
+funnel. Ice water is then added, and the contents of the funnel treated
+with successive portions of ammonia (desk ammonia diluted one half).
+Shaking is continued after each addition until the odor of ammonia has
+disappeared, and ice is added from time to time as may be required.
+
+When it is found that the odor of ammonia persists after several
+minutes’ shaking, the chloroform layer, which is usually filled with a
+solid substance that has separated during the process, is drawn off,
+filtered, and dried with calcium chloride.
+
+By this process all of the unsymmetrical chloride is converted into the
+ammonium salt of paranitroorthocyanbenzenesulphonic acid, according to
+the equation:
+
+          CCl₂
+         / \
+        /   O              CN
+       /   /              /
+    C₆H₃——SO₂  + 4NH₃ = C₆H₃——SO₃NH₄ + 2NH₄Cl.
+       \                  \
+        NO₂                NO₂
+
+while the symmetrical chloride remains for the most part unchanged,
+though some of it is converted into the ammonium salt of
+paranitrobenzoic sulphinide:
+
+                              CO
+                             /  \
+        COCl                /    N.NH₄
+       /                   /    /
+    C₆H₃——SO₂Cl + 4NH₃ = C₆H₃——SO₂ + 2NH₄Cl.
+       \                   \
+        NO₂                 NO₂
+
+It was found that working in this way the symmetrical chloride could
+be prepared in pure condition, free from its isomer. The chloroform
+completely evaporates in a short time leaving fine crystals of the
+symmetrical chloride. In case the evaporation is slow and incomplete,
+it may be concluded that not all of the unsymmetrical chloride has been
+removed. The yield was uniformly about 40 per cent of the theoretical.
+
+From the water used to wash the chlorides a considerable amount of the
+original salt can be recovered, as the reaction under the conditions
+employed, is never complete.
+
+An examination was made of the substance mentioned as separating in
+the chloroform solution of the chlorides, during the treatment with
+ammonia, and it was found to possess the following properties. It
+is insoluble in benzene, chloroform, acetone, ether and ligroin;
+soluble in glacial acetic acid, from which it separates on cooling
+in colorless, crystalline condition; insoluble in the cold in
+water, alcohol and ammonia, but by boiling with these reagents, or
+by long standing in the cold, it is dissolved with decomposition.
+It was dissolved in hot water and the solution, which was acid
+in reaction, was neutralized with potassium carbonate. On adding
+an excess of hydrochloric acid to the solution, and allowing
+it to cool, characteristic crystals of acid potassium salt of
+paranitroorthosulphobenzoic acid separated. These properties identify
+the substance as the anhydride of this acid.
+
+The formation of the corresponding anhydride of orthosulphobenzoic acid
+by the action of phosphorus pentachloride upon its acid potassium salt
+was observed by Sohon[13], who made use of the reaction to prepare this
+anhydride in quantity.
+
+[13] Inaug. Diss. J. H. Univ. 1896.
+
+
+
+
+IV. Properties of the Symmetrical Chloride of
+Paranitroorthosulphobenzoic Acid.
+
+
+As first obtained, the crystals of the symmetrical chloride resemble
+irregularly shaped pieces of amber, both in color, and in lustre.
+On recrystallization from chloroform or ether, they may be obtained
+perfectly colorless, and are often of very simple crystallographic
+form. The chloride crystallizes in the monoclinic system, and possesses
+a very remarkable crystallizing power, in which respect it differs
+noticeably form its isomer. Even in chloroform solution that is far
+from dry, crystals appear with the greatest ease.
+
+The habit of the crystals differs very much according to the
+conditions of crystallization. Not infrequently almost perfectly
+formed crystals of the simplest form—the oblique octahedron—were
+obtained though for the most part the form was much more complicated,
+pinacoid and dome faces, together with basal planes being prominent.
+As a rule, the crystals were not suitable for crystallographic work,
+as the faces are usually uneven and the edges rounded. By proper
+precautions however, good ones were obtained, and measurements of these
+will be found in this dissertation when it appears in print.
+
+The size of some of the crystals obtained was unusual for substances
+of this class. One crystal obtained with no special precautions, save
+letting a solution of the chloride stand undisturbed for several days,
+in a rather cool place measured 3 × 2.5 × 1.5 cm., and weighed 11.2
+grams. The crystals are quite compact, their density being abut 1.85.
+They melt at 98° (uncorr.) The chloride is quite stable in crystalline
+condition. Even in moist air the crystals were unchanged, and retained
+their lustre as long as they were in my possession.
+
+An analysis for chlorine gave the following results.
+
+        .2200 gram gave      .2212 gram AgCl.
+
+                 COCl
+                /
+    Cal. for C₆H₃——SO₂Cl
+                \
+                 NO₂
+                              Found.
+             Cl = 24.94       24.83
+
+
+
+
+V. The Action of Benzene and Aluminium Chloride on the Symmetrical
+Chloride of Paranitroorthosulphobenzoic Acid.
+
+
+Hollis[14] in his study of the action of these reagents upon the
+unsymmetrical chloride, tested their action upon one portion of the
+symmetrical chloride, and found the products to be identical in the two
+cases. A few experiments were made in confirmation of these results,
+and the same products, in general, were obtained. It was observed
+however that the reactions differ in the relative ease with which
+they are brought about. In the case of the symmetrical chloride, the
+reaction is a much more vigorous one. On adding aluminium chloride to
+a solution of the symmetrical chloride, in benzene, action begins
+at once the temperature of the hand, and very little external heat,
+and that only in the latter stages of the operation, is needful for
+the completion of the reaction. The application of much heat converts
+all of the product into thick tarry substances from which nothing
+satisfactory could be obtained.
+
+[14] Inaug. Diss. J. H. Univ. 1896.
+
+When the reaction was complete, the resulting product was isolated and
+purified in accordance with the directions given by Hollis. Repeated
+trials showed that, as in the case of the unsymmetrical chloride, only
+one phenyl group could be introduced by this method. The resulting
+compound, paranitroorthobenzoylbenzenesulphon chloride, was identical
+with that derived from the unsymmetrical chloride. Owing, however,
+to the fact that so much more decomposition occurs in the reaction
+with the symmetrical chloride, in paranitroorthobenzoylbenzene sulphon
+chloride could not be obtained in perfectly pure condition. In
+appearance it agreed closely with that described by Hollis, forming
+very characteristic greenish, rhombic crystals. These melted, not very
+sharply, at 174° instead of 177° as observed by Hollis.
+
+Accordingly, to establish the identity of the two compounds beyond
+any doubt, the material on hand was converted into the barium salt of
+paranitroorthobenzoylbenzene sulphonic acid. This was done by boiling
+the sulphon chloride with dilute hydrochloric acid until complete
+solution had been effected; evaporating to dryness on a water-bath;
+dissolving the residue in hot water, and neutralizing with barium
+carbonate. On filtering the hot solution from the excess of carbonate,
+and allowing it to cool, the barium salt separated.
+
+The solution was somewhat colored by impurities, and the long needles
+in which the salt crystallized were also somewhat colored. They were
+analysed with the expectation that they would prove to be specimens
+of the salt described by Hollis as having three, or three and a half
+molecules of water of crystallization, in as much as the conditions
+under which they were formed were favorable to the formation of salts
+with these ratios of water of crystallization. Hollis found that this
+salt could be obtained with at least four different ratios of water
+of crystallization viz. three, three and a half, six and seven
+molecules respectively. The analysis was as follows, the amount of
+barium being calculated on the basis of the anhydrous salt.
+
+0.3087 gram lost 0.064 gram at 210°, and gave 0.0759 gram BaSO₄.
+
+    Cal. for (C₁₃H₈O₆NS)₂Ba + 11H₂O         Found.
+                        H₂O = 20.90         20.73
+                         Ba = 18.29         18.23
+
+The mother-liquor, in which the crystals remaining from analysis were
+redissolved, was warmed, but not boiled, with boneblack, to remove
+impurities. When filtered, the solution was perfectly colorless, and
+on standing for some time, well formed colorless, rhombic crystals
+appeared. On analysis they gave results as follows.
+
+0.2804 gram lost 0.0405 gram at 210°, and gave 0.0759 gram BaSO₄.
+
+    Cal. for (C₁₃H₈O₆NS)₂Ba + 7H₂O.         Found.
+                        H₂O = 14.40         14.44.
+                         Ba = 18.29         18.03.
+
+In making a further supply of the salt it was found that if the
+solution, after filtering from the barium carbonate, was diluted to
+such an extent that no crystals separated on cooling, then on slow
+evaporation under a bell-jar the first crystals to appear were very
+long slender needles. As evaporation proceeded, these needles became
+much thicker assuming prismatic proportions, and corresponded in
+appearance to the salt described by Hollis as having six molecules of
+crystal water.
+
+As growth proceeded, the crystals became dark in color, and the
+mother-liquor correspondingly clearer, the crystals evidently absorbing
+the impurity in their growth.
+
+When the solution had become quite colorless, rhombic crystals of the
+salt containing seven molecules of water of crystallization appeared.
+The larger prismatic crystals were carefully removed, and redissolved
+in water in order to see if the same phenomena would repeat themselves.
+This in fact was the case, crystals of both types appearing in the
+same way as described. Without separating the crystals in this second
+experiment, water was added, and the crystals dissolved. The solution
+was then warmed briskly with boneblack, and filtered. From the
+filtrate, which was colorless, nothing but rhombic crystals having
+seven molecules of water of crystallization could be obtained,
+although a great many variations in the conditions were tried. Analysis
+of these last crystals was as follows:
+
+0.2400 gram lost 0.035 gram at 210°, and gave 0.0637 gram BaSO₄.
+
+    Cal. for (C₁₃H₈O₆NS)₂Ba + 7H₂O.         Found.
+                        H₂O = 14.40         14.58
+                         Ba = 18.29         18.27
+
+Hollis states that treatment with boneblack decomposes this salt,
+and hence he did not purify it prior to crystallization. From the
+experiments just described it seems probable that the impurities
+present affect the crystalline habit, and the degree of hydration of
+this salt in a very striking manner. By careful warming with boneblack
+no decomposition was observed, and the crystals so obtained have
+constantly seven molecules of crystal water.
+
+
+
+
+VI. The Action of Alcohols upon the Symmetrical Chloride of
+Paranitroorthosulphobenzoic Acid.
+
+
+Kastle[15] found that when the chlorides of paranitroorthosulphobenzoic
+acid (which he supposed to be an individual) were dissolved in alcohol,
+and the solution boiled for some time, the acid etherial salt of
+paranitroorthosulphobenzoic acid was the final product. The reactions
+were shown to be:
+
+            COCl                   COOC₂H₅
+           /                      /
+      I. C₆H₃——SO₂Cl + C₂H₅OH  = C₆H₃——SO₂Cl  + HCl.
+           \                      \
+            NO₂                    NO₂
+
+            COOC₂H₅                COOC₂H₅
+           /                      /
+     II. C₆H₃——SO₂Cl + C₂H₅OH  = C₆H₃——SO₂OC₂H₅ + HCl
+           \                      \
+            NO₂                    NO₂
+
+            COOC₂H₅                   COOC₂H₅
+           /                         /
+    III. C₆H₃——SO₂OC₂H₅ + C₂H₅OH  = C₆H₃——SO₂OH + (C₂H₅)₂O
+           \                         \
+            NO₂                       NO₂
+
+[15] Am. Ch. Journ. XI--281.
+
+Kastle, it will be observed, gave the symmetrical formula to this
+mixture of chlorides. Several acid etherial salts were made, and a
+series of the neutral salts of various metals described by him.
+
+The action of pure symmetrical chloride was studied in the same general
+manner to see if the resulting products would be the same as those
+formed from the mixed chlorides.
+
+
+1. Action of Methyl Alcohol upon the Symmetrical chloride.
+
+A portion of the chloride was dissolved in methyl alcohol, and the
+solution boiled until a drop added to cold water gave no precipitate,
+of unchanged chloride. The alcohol was then distilled off, and the
+thick syrup remaining, diluted with water. This solution was
+neutralized with barium carbonate and filtered. On cooling, the barium
+salt crystallized in shining mica-like plates, or in yellowish needles
+corresponding accurately with those described by Kastle. They gave the
+following analytical results.
+
+0.2664 gram lost 0.0211 gram at 150°, and gave 0.0870 gram BaSO₄.
+
+             [    COOCH₃  ]
+             [   /        ]
+    Cal. for [C₆H₃——SO₂O  ]   Ba + 3H₂O
+             [   \        ]
+             [    NO₂     ]2
+                                                Found
+                             H₂O =  7.79         7.88
+             [anhydrous salt] Ba = 20.85        20.85
+
+
+2. In like manner the barium ethyl salt was made. It also agreed
+perfectly with Kastle’s description, crystallizing in fine, colorless
+needles, forming in tufts from a not too concentrated solution. In case
+it is necessary to concentrate these solutions, it is of advantage
+to add a small quantity of alcohol to the solution as this prevents
+any great amount of saponification, which otherwise takes place to a
+noticeable extent.
+
+Analysis.
+
+    I. 0.2824 gram lost 0.0276 gram at 180°, and gave 0.0860 gram BaSO₄.
+
+   II. 0.2655 gram lost 0.0262 gram at 190°, and gave 0.0815 gram BaSO₄.
+
+              [    COOC₂H₃ ]
+              [   /        ]
+     Cal. for [C₆H₃——SO₂O  ] Ba + 4H₂O.
+              [   \        ]
+              [    NO₂     ]2
+                                                 Found.
+                                               I       II
+                         H₂O =  9.51          9.77    9.86
+                         Ba  = 20.00         19.84   20.02
+
+Kastle also found that by dissolving the mixed chlorides in alcohol
+in the cold, and allowing the solution to evaporate, there separated
+after a time, crystals of the chloride of the acid etherial salt of
+paranitroorthosulphobenzoic acid whose formation and composition are
+represented in equation I.
+
+This same product was sought for when pure symmetrical chloride was
+employed, but without success. In every case, crystals of unchanged
+chloride separated, or else it was found that it had been completely
+converted into the acid etherial salt. In another trial cold water
+was carefully added in small portions, since Kastle found that such
+treatment facilitated the separation of the substance; the chloride
+alone appeared. Still other attempts were made to obtain the substance
+by adding a large amount of water to the solution of the chloride
+in alcohol, after it had stood for some time. In this way, quite a
+precipitate was thrown down, and this was filtered off and crystallized
+from ether. It always proved to be the symmetrical chloride, and none
+of the other substance was obtained.
+
+Karslake[16] in working with the symmetrical chloride of
+orthosulphobenzoic acid, was unable to isolate the analogous compound,
+although from the mixed chlorides, by the action of alcohols, Remsen
+and Dohme[17] had obtained chloro-etherial salts.
+
+[16] Inaug. Diss. J. H. Univ. 1895.
+
+[17] Am. Ch. Journ. XI, 341.
+
+In as much as the pure symmetrical chloride is relatively stable in
+cold alcohol (it can be crystallized from warm alcohol with very
+little loss), it is possible that it is more stable than the chloro
+etherial salt, and that in consequence the latter, when formed, yields
+more readily to the further action of alcohol than does the unacted
+on chloride. Hence when the action begins, it at once proceeds to the
+limit. The fact that the symmetrical chloride is rather sparingly
+soluble in cold alcohol, making the use of concentrated solutions
+impossible, may also be a factor in the case. Whatever may be the
+cause, this substance could not be obtained under any conditions that
+were devised.
+
+Having in my possession a very small specimen of crystallized
+unsymmetrical chloride, it was submitted to the action of ethyl
+alcohol, under as nearly as possible the conditions employed by Kastle.
+Crystals of a colorless substance were obtained, which in every respect
+agreed with Kastle’s description of the chloride of the acid ethyl
+etherial salt of paranitroorthosulphobenzoic acid. Crystallized from
+ether they melted at 68°.
+
+The conditions employed by Kastle in preparing the chloride would
+undoubtedly lead to a relatively large proportion of unsymmetrical
+chloride, and it is to this chloride that the formation of the chloro
+etherial salt is apparently due.
+
+
+
+
+VII. The Action of Phenols upon the Symmetrical Chloride of
+Paranitroorthosulphobenzoic Acid.
+
+
+Remsen and Saunders[18] in their investigation of the chlorides of
+orthosulphobenzoic acid, studied the action of phenol upon these
+substances, and from both the symmetrical chloride and the mixed
+chlorides, they obtained a normal diphenyl ether together with a
+red substance which was not further studied. It was formed in small
+quantity and was probably the corresponding sulphonphthalein. Later
+McKee[19] obtained these same substances from both the symmetrical
+and the unsymmetrical chlorides. R. Meyer[20] obtained analogous
+substances by the action of various phenols upon phthalyl
+chloride. It seemed probable, therefore, that the chlorides of
+paranitroorthosulphobenzoic acid would yield similar derivatives,
+and a study was accordingly made of the reaction of the symmetrical
+chloride with a series of phenols. The products in some instances were
+exceedingly difficult to deal with, possessing properties that made it
+impossible to prepare them for analysis, but even in such cases there
+could be little doubt as to the general nature of the reactions which
+had occurred.
+
+[18] Am. Chem. Journ. XVII, 347.
+
+[19] Ibid. XVIII, 798.
+
+[20] Ber. XXVI, 204.
+
+
+1. The Action of Phenol upon the Symmetrical Chloride of
+Paranitroorthosulphobenzoic Acid.
+
+A portion of the symmetrical chloride was brought together with
+somewhat more than double the molecular amount of phenol. The mixture
+was placed in a good-sized test-tube and the temperature gradually
+raised by means of a sulphuric acid bath.
+
+As soon as the phenol melts, some slight action occurs, as is indicated
+by the fact that the mixture assumes a bright red color. No appreciable
+amount of hydrochloric acid gas is evolved however, until the liquid
+mixture has reached a temperature of about 115°. At this point the
+gas is freely evolved, and the action is complete at a temperature
+of 125°. The temperature observations were made by means of a
+thermometer used as a stirring rod in the mixture. During the heating,
+the color of the liquid becomes a much more intense red, growing darker
+in shade, and the liquid itself becomes somewhat viscous but does not
+solidify while hot.
+
+When cool, the melt was repeatedly extracted with boiling water,
+the aqueous solution being very deep purple in color. The colored
+matter was removed very slowly in this manner, and so the process
+was continued with dilute alkali. A solid insoluble residue was thus
+obtained, of a light-brownish color. This was dissolved in alcohol,
+boiled with boneblack and filtered. On cooling, needles of a straw
+yellow color were deposited from the alcoholic solution.
+
+This proved to be the normal diphenyl etherial salt of
+paranitroorthosulphobenzoic acid, the formation of this substance being
+expressed by the equation:
+
+        COCl                   COOC₆H₅
+       /                      /
+    C₆H₃——SO₂Cl + 2C₆H₅OH = C₆H₃——SO₂OC₆H₅ + 2HCl.
+       \                      \
+        NO₂                    NO₂
+
+Analysis of the substance gave the following results:
+
+      I. 0.1627 gram gave 0.3398 gram CO₂ and 0.0510 gram H₂O.
+
+     II. 0.1999 gram gave 0.4180 gram CO₂ and 0.0600 gram H₂O.
+
+    III. 0.2649 gram gave 0.1561 gram BaSO₄.
+
+                 COOC₆H₅
+                /
+    Cal. for C₆H₃——SO₂OC₆H₅
+                \
+                 NO₂                 Found.
+                               I       II     III
+
+              C = 57.14      56.97    57.03    ——
+              H =  3.26       3.47     3.33    ——
+              S =  8.02       ——       ——    8.09
+
+This substance melts at 119° (uncorr).
+
+It possesses properties similar to those of the diphenyl etherial
+salt of orthosulphobenzoic acid described by Saunders. It is
+insoluble in water, and is unaffected by hydrochloric acid or aqueous
+alkali. On heating for a short time with alcoholic potash, the
+needles were transformed into a voluminous precipitate. This was
+filtered off, dissolved in water, and hydrochloric acid was added.
+On cooling, characteristic crystals of the acid potassium salt of
+paranitroorthosulphobenzoic separated.
+
+Analysis.
+
+0.1392 gram lost 0.009 gram at 150° and gave 0.0385 gram K₂SO₄.
+
+                 COOH
+                /
+    Cal. for C₆H₃——SO₂OK + H₂O
+                \
+                 NO₂
+                                     Found.
+                  H₂O =  5.95     H₂O =  6.51
+                    K = 13.65       K = 13.35
+
+No attempt was made to isolate the corresponding intermediate
+chlor-etherial salt of the composition
+
+        COOC₆H₅
+       /
+    C₆H₃——SO₂Cl
+       \
+        NO₂
+
+or its acid as was done by McKee[21] in his work on the analogous
+etherial salt of orthosulphobenzoic acid.
+
+[21] Am. Ch. Journ. XVIII-799
+
+On evaporating the aqueous extract from the original melt almost to
+dryness on the water-bath, there was a deposit on the sides of thedish
+of scales possessing a beautiful bronze-green metallic lustre They
+formed a deep purple solution in alkalis, or magenta, if the solution
+was very dilute, and orange-yellow in acids. On acidifying the alkaline
+extract with hydrochloric acid, this same substance was precipitated
+as a brownish flocculent precipitate. It was, however, found to be
+impossible to obtain this substance in pure condition. The amount
+formed in the reaction is small, and its properties were such as to
+render work with it very difficult. The method of precipitation is not
+satisfactory because, owing to the fact that the substance is soluble
+in acid solutions to an unusual extent for substances of this class,
+the solution had to be concentrated to such a degree as to render the
+precipitated substance very impure from acids and alkali salts. These
+could not be removed by washing, obviously, without again dissolving
+the substance. From its properties however, and its color reactions,
+there can be little doubt that the substance is a sulphonphthaleïn,
+and that it is always formed in considerable quantities in the
+reaction of phenol upon the symmetrical chloride.
+
+It was noticed that the aqueous extract of the mass left after fusion
+was almost always decidedly acid in reaction, and it was thought that
+this might be due to the formation of an acid etherial salt, whose
+formation would be expressed by the equations:
+
+        COCl                   COOC₆H₅
+       /                      /
+    C₆H₃——SO₂Cl + C₆H₅OH = C₆H₃——SO₂Cl + HCl.
+       \                      \
+        NO₂                    NO₂
+
+        COOC₆H₅            COOC₆H₅
+       /                  /
+    C₆H₃——SO₂Cl + H₂O = C₆H₃——SO₂OH + HCl.
+       \                  \
+        NO₂                NO₂
+
+Accordingly, the solution was saturated with barium carbonate, the
+excess of carbonate removed by filtration, the filtrate concentrated,
+and allowed to cool. Crystals in the form of pearly scales separated,
+which upon analysis proved to be the neutral barium salt of
+paranitroorthosulphobenzoic acid.
+
+0.2291 gram anhydrous salt gave 0.1386 gram BaSO₄.
+
+                   COO
+                  /   \
+                 /     Ba
+                /     /
+    Cal. for C₆H₃——SO₂O
+                \
+                 NO₂
+                                   Found
+            Ba = 35.85             35.57
+
+This would seen to indicate that the reaction is an incomplete one even
+in the presence of excess of phenol. No indications of the formation of
+an acid etherial salt was observed.
+
+
+2. The Action of Orthocresol upon the Symmetrical Chloride of
+Paranitroorthosulphobenzoic Acid.
+
+With orthocresol the reaction proceeds with more difficulty. A higher
+temperature was required (135°-145°), and quite an amount of tarry
+material was obtained from which very little could be extracted. The
+product was warmed repeatedly with dilute alkali, the solution so
+obtained neutralized with hydrochloric acid, and distilled with steam
+for several hours to free it from cresol. The resulting solution was
+then evaporated to small volume, and acidified with hydrochloric acid.
+A considerable precipitate was thrown down, which was easily filtered
+off and dried. In this condition it is a dark purple-red powder, lumps
+of which possessed a yellowish-bronze metallic lustre. In dilute
+alkaline solution it forms a deep-bluish purple solution, while in
+acids it is crimson, or light yellow if the solution is dilute. It is a
+excellent indicator, especially with ammonia.
+
+In the insoluble tarry substance the etherial salt was sought for
+and obtained in small quantity only. As this substance is soluble in
+alcohol, and separates again on cooling in much the same condition,
+the etherial salt could not be isolated be crystallization from this
+solvent. By boiling the substance with benzene, purifying the filtrate
+with boneblack, and allowing the benzene to evaporate, an almost
+colorless gummy substance was obtained, which when dissolved in
+alcohol, crystallizes in small colorless needles which melt at 89°-90°.
+They were not obtained in quantity sufficient for analysis, but there
+was little doubt that they were crystals of the diorthocresol etherial
+salt.
+
+Apparently much more decomposition occurred in this reaction than
+when paracresol was employed, probably in consequence of the higher
+temperature required for the reaction.
+
+
+3. The Action of Paracresol upon the Symmetrical Chloride of
+Paranitroorthosulphobenzoic Acid.
+
+This reaction was conducted in the same manner as with phenol. No
+hydrochloric acid was evolved until a temperature of about 110° was
+reached, although after melting, the solution had steadily darkened to
+a deep reddish-brown color. At 130°, after heating for several hours,
+hydrochloric acid ceased to be evolved. The product was treated as in
+the last experiment. The alkaline extract did not exhibit any marked
+color reactions, such as were observed in most of these experiments,
+being dull reddish-brown in both acid and alkaline solution.
+
+The insoluble residue crystallized from alcohol in light brown
+transparent crystals, which did not lose their color by repeated
+crystallization, and boiling with boneblack, and melted sharply at
+117°. From benzene they crystallized in colorless needles or flat,
+narrow plates. These become opaque on exposure to the air, apparently
+through loss of benzene of crystallization.
+
+Analysis of the needles from alcohol gave the following results:
+
+     I. 0.2372 gram of substance gave 0.5137 gram CO₂ and
+        0.0965 gram H₂O.
+
+    II. 0.2223 gram gave 0.1203 gram BaSO₄.
+
+                COOC₆H₄.CH₃
+               /
+    Cal. for C₆H₃——SO₂OC₆H₄.CH₃
+               \
+                NO₂
+                                   Found.
+                                 I       II
+            C = 59.08          59.06
+            H =  3.98           4.52
+            S =  7.49                   7.43
+
+
+4. The Action of Hydroquinone upon the Symmetrical Chloride of
+Paranitroorthosulphobenzoic Acid.
+
+Action with hydroquinone occurs at 120°-135°, the mixture at the same
+time becoming dark colored and viscous.
+
+On cooling, the product was powdered and treated with dilute alkali.
+It readily dissolved, without residue, forming a dark red solution.
+In concentrated solution the addition of acid produces a voluminous
+precipitate, dark brown in color, which when washed, and dried in paper
+forms an almost black powder. A dilute solution of this powder is dark
+red when alkaline, orange-yellow when acid.
+
+From the way in which this powder was obtained, and owing to the fact
+that its solubility prevented repeated washing, it was evident that it
+would not give close analytical results for a calculated formula. It
+was thought, however, that analysis would give a general idea of the
+composition.
+
+Analysis of different specimens gave results for sulphur which averaged
+about 5.5%. The percentage required for the formula
+
+          C[C₆H₃(OH)₂]₂
+         / \
+        /   O
+       /   /
+    C₆H₃——SO₂
+       \
+        NO₂
+
+which represents the simplest sulphonfluoresceïn, is 7.43.
+
+The compound could hardly have been so far from pure as to occasion
+such a discrepancy in results as this. It would appear, therefore, that
+more than two molecules of hydroquinone enter into the reaction with
+one molecule of the chloride. Should four molecules be involved in the
+reaction, leading to a compound of some such formula as
+
+           C[C₆H₃(OH)₂]
+          / \
+         /   O
+        /   /
+    C₆H₃——SO[C₆H₃(OH)₂]₂
+        \
+         NO₂
+
+the theoretical percentage of sulphur would be 6.00 which corresponds
+much more closely with the results obtained.
+
+This is in accord with the observations of a number of workers in
+this laboratory—Lyman, Gilpin, Linn and others—who have worked on
+various sulphonfluoresceïns, and have found that in many cases four,
+six and even eight phenol residues condense with one molecule of the
+anhydrous acid. Lyman[22] especially describes a tetra hydroquinone
+sulphonfluoresceïn derived from orthosulphoparatoluic acid. No etherial
+salt was observed.
+
+[22] Am. Chem. Journ. XVI-525
+
+5. The Action of Resorcin upon the Symmetrical Chloride of
+Paranitroorthosulphobenzoic Acid.
+
+The reaction of resorcin with the chloride is a much cleaner one
+and proceeds more easily than in the case just described, leading
+apparently to an individual compound which is well characterized.
+
+During the reaction, which is complete at 125°, the mixture becomes
+almost perfectly solid, and when cool, it is quite brittle. It was
+reduced to a reddish powder in a mortar and dissolved in sodium
+hydroxide, there being no insoluble residue. By the addition of
+hydrochloric acid, the sulphonfluoresceïn was thrown down as a
+chocolate-brown precipitate, which was filtered off, washed to
+neutral reaction on a filter, and dried on paper. In this condition
+it is a light chocolate-brown powder. In dilute alkaline solution it
+possesses a slight fluorescence being pink by transmitted and yellow be
+reflected light, suggesting eosin in a general way. It is interesting
+to note that the sulphonfluoresceïn of orthosulphobenzoic acid
+possesses a fluorescence that can hardly be distinguished from ordinary
+fluoresceïn and that the introduction of a nitro group into the acid
+residue produces much of the same effect as do the four bromine atoms
+in eosin. In acid solution the color is reddish-orange.
+
+Analysis of the compound, prepared as above described, gave the
+following results.
+
+      I. 0.1745 gram gave 0.3339 gram of CO₂ and
+         0.059 gram H₂O.
+
+     II. 0.1467 gram gave 0.2820 gram CO₂ and
+         0.0432 gram H₂O.
+
+    III. 0.1732 gram gave 0.3345 gram CO₂ and
+         0.0571 gram H₂O.
+
+     IV. 0.2000 gram gave 0.1104 gram BaSO₄.
+
+      V. 0.1505 gram gave 0.0820 gram BaSO₄.
+
+                        OH ]
+                       /   ]
+                   C[C₆H₃  ]
+                  / \  \   ]
+                 /   O  OH ]2
+                /   /
+    Cal. for C₆H₃——SO₂
+                \
+                 NO₂
+                                      Found
+                           I      II     III     IV      V
+            C = 52.66    52.18   52.42   52.67    ——     ——
+            H = 3.46      3.76    3.27    3.66    ——     ——
+            S = 7.39        ——      ——      ——   7.57   7.48
+
+An effort to obtain the anhydride was unsuccessful. Some loss of weight
+was observed, but the compound underwent decomposition before this loss
+amounted to much.
+
+
+6. The Action of Pyrogallol upon the Symmetrical Chloride of
+Paranitroorthosulphobenzoic Acid.
+
+The product of this action dissolves readily in dilute sodium hydroxide
+without residue, producing a very deep purple-black color when
+concentrated, passing to grayish-violet as the solution is diluted. On
+adding hydrochloric acid, precipitation occurs, as in most of these
+reactions. On attempting to filter off this precipitate, it forms a
+sticky, black mass on the filter with which little can be done. It is
+best to evaporate to dryness before filtration and powder the residue.
+This powder can then be washed fairly clean from alkali salts and
+acid.
+
+Nothing to suggest the formation of an etherial salt was observed.
+
+Analysis of this product for sulphur showed that in this galleïn, as
+in the case of the hydroquinone phthaleïn more than two pyrogallol
+residues had entered the acid residue. The indications were that
+six had entered into one of the chloride. This also agrees with the
+observation of Lyman[23], who describes a hexapyrogallol galleïn of
+orthosulphoparatoluic acid.
+
+Probably a mixture of varying composition was obtained, and little
+importance was attached to the results save as they showed that no
+etherial salt is formed in the reaction.
+
+[23] Am. Ch. Journ. XVI-527.
+
+
+7. The Action of β-Naphthol upon the Symmetrical Chloride of
+Paranitroorthosulphobenzoic Acid.
+
+It was hoped that here, as in the case of the monohydroxy phenols an
+etherial salt would be obtained. It was found, however, that very
+little action occurred, save such as was indicated by the development
+of a bright carmine color in the melted mixture, until a temperature of
+about 160° was reached. At this point hydrochloric acid was evolved,
+but the chloride itself undergoes decomposition. Nothing definite could
+be isolated among the reaction products, save unchanged β-Naphthol.
+
+
+
+
+VIII. The Action of Aniline upon the Symmetrical Chloride of
+Paranitroorthosulphobenzoic Acid.
+
+
+As has been pointed out in the Introduction, it was in connection
+with the aniline derivatives of orthosulphobenzoic acid, that the
+isomerism of the chlorides was first noticed, two anilids being
+obtained. Accordingly, when Gray began his study of the chlorides
+of paranitroorthosulphobenzoic acid, his first effort was to obtain
+evidence of the existence of two anilids. These were not obtained,
+however, until after the chlorides themselves had been isolated, as
+their properties made their isolation and preparation a matter of
+difficulty.
+
+Some points still remained in doubt after Gray’s study, and a further
+investigation was thought to be desirable to clear these up.
+
+Some time was spent in an endeavor to obtain a method by which a good
+yield of fusible, or symmetrical, anilid could be obtained. The yield
+in all cases tried, is not a good one. The presence of the nitro group
+appears to complicate the reaction, leading to secondary reactions
+whose course could not be followed. Upon bringing aniline and the
+chloride together, a very vivid red color was always observed, and the
+same was true when it was necessary to employ alkali. The fact that
+such colors develop when nitro compounds are treated with alkali has
+been noticed in many instances and some progress has been made in the
+study of these compounds. Jackson and Ittner[24] have lately reviewed
+this subject.
+
+If a solution of the symmetrical chloride in ether is slowly added to a
+similar solution of aniline, no appreciable amount of heat is evolved.
+If the resulting solution is allowed to stand at ordinary temperatures,
+action proceeds very slowly, aniline hydrochloride being precipitated
+as the reaction proceeds. This can be filtered off from time to time
+and the rate of action so observed. In such a way it was found that
+five grams of chloride required about fifty hours time to react
+completely with an excess of aniline. Similar results were obtained
+with chloroform as the solvent. By boiling the solution for an hour or
+more the reaction is complete.
+
+[24] Am. Chem. Journ. XIX-199
+
+The method employed was to bring the chloride and an excess of
+aniline—somewhat more than four molecules—together in chloroform
+solution. The flask was then boiled for about an hour, when the
+chloroform was distilled off. During the boiling as well as the
+distillation more or less bumping occurs in consequence of the aniline
+hydrochloride which separates, and constant shaking of the flask is
+sometimes necessary. The residue which is in a thick, gummy condition
+in consequence of the presence of an excess of aniline, was digested
+with water acidulated with hydrochloric acid. The excess of aniline
+is thus removed, and the reaction product obtained as a reddish-brown
+solid substance. This was treated with dilute sodium hydroxide, all
+lumps being broken up with a stirring rod. The undissolved substance
+is largely anil, which was filtered off. The anilid was then regained
+by acidifying the alkaline solution, in which it was dissolved. It
+separates immediately as a curdy colorless precipitate, though it is
+frequently colored pink by impurity. It was found that this color could
+be removed, in case not much was present, by redissolving the anilid in
+alkali, and slowly pouring the solution into an excess of dilute acid.
+
+In all cases a considerable amount of anil was obtained, even when the
+substances were employed in the molecular ratios of 1:10. The reactions
+involved, so far as the formation of anilid and anil are concerned are,
+
+        COCl                    CO.NH.C₆H₅
+       /                       /
+    C₆H₃——SO₂Cl + 4C₆H₅NH₂ = C₆H₃——SO₂.NH.C₆H₅ + C₆H₅NH₃Cl
+       \                       \
+        NO₂                     NO₂
+
+                                  CO
+                                 /  \
+        COCl                    /    N.C₆H₅
+       /                       /    /
+    C₆H₃——SO₂Cl + 3C₆H₅NH₂ = C₆H₃——SO₂   +  2C₆H₅NH₃Cl
+       \                       \
+        NO₂                     NO₂
+
+On the whole the reaction seemed to be the most satisfactory in
+chloroform solution, the main objection being, that, owing to the
+simultaneous presence of chloroform, alkali, an a trace of aniline,
+phenyl isocyanide is always formed, and renders the work more or less
+unpleasant.
+
+A number of experiments were also made to see if the yield could
+be increased be employing a modification of the “Schotten-Baumann
+Reaction”[25] for the formation of anilids. For this purpose an etherial
+solution of the chloride was added to a like solution of aniline in
+which was suspended finely powdered anhydrous potassium carbonate. The
+proportions of the substances were those demanded by the equation
+
+        COCl                             CO.NH.C₆H₅
+       /                                /
+    C₆H₃——SO₂Cl + 2C₆H₅NH₂ + 2K₂Cl₃ = C₆H₃——SO₂NH.C₆H₅ + 2KCl + 2KHCO₃
+       \                                \
+        NO₂                              NO₂
+
+Very little anilid was, however obtained, but in its place a
+substance soluble in water, of acid reaction capable of forming salts
+and yielding several well characterized derivatives. I hope to
+investigate this reaction more fully at some future time.
+
+[25] Ber. XVII-2545; XXIII, 3430.
+
+       *       *       *       *       *
+
+The anilid is rather sparingly soluble in alcohol, from which it is
+deposited on cooling in very small needles. These melt, as stated by
+Gray, at 222°. It is also soluble in chloroform and glacial acetic
+acid, but does not form well defined crystals from any solvent. It
+dissolves in dilute alkali from which solution acids precipitate it
+unchanged.
+
+       *       *       *       *       *
+
+The anil is also soluble in alcohol, glacial acetic acid etc. It
+crystallizes in much better-formed crystals than does the anilid. These
+melt at 188°.
+
+On boiling the anil with aniline for a time, it is converted into the
+anilid
+
+          CO
+         /  \
+        /    N.C₆H₅              CO.NH.C₆H₅
+       /    /                   /
+    C₆H₃——SO₂   +   C₆H₅NH₂ = C₆H₃——SO₂NH.C₆H₅
+       \                        \
+        NO₂                      NO₂
+
+In none of these reactions was any infusible anilid observed.
+
+
+
+
+IX. The Action of Phosphorus Oxychloride upon the Fusible Anilid.
+
+
+Hunter[26] found that when either of the anilids of orthosulphobenzoic
+acid were treated with phosphorus oxychloride, or similar dehydrating
+agents, a molecule of water was abstracted with the formation of a new
+substance. A careful study of the compound led to the belief that it
+was a dianil, and that its formation and structure could be represented
+by the equation
+
+                            C=N.C₆H₅
+                           / \
+        CO.NH.C₆H₅        /   \
+       /                 /    .N.C₆H₅
+    C₆H₄            = C₆H₄    /         + H₂O.
+       \                 \  /
+        SO₂NH.C₆H₅        SO₂
+
+A corresponding study of the fusible anilid of
+paranitroorthosulphobenzoic acid was undertaken.
+
+The method employed in this study was as follows. A tubulated retort
+of convenient size was fused onto the inner tube of a small condenser.
+This was done to avoid connections, which are nearly always attacked by
+the oxychloride. Another satisfactory plan is to have the neck of the
+retort of the same size as the inner tube of the condenser. The ends
+are placed in contact, and the tubes bound in position by wrapping with
+asbestos paper. Over the joint so made, a tight rubber tube is drawn.
+
+[26] Am. Ch. Journ. XVIII-810.
+
+A convenient amount of phosphorus oxychloride (50 c.c.) was placed
+in the retort and the anilid (5 gr.) added through the tubulus. On
+boiling, with the condenser inverted, the anilid soon dissolved,
+with evolution of hydrochloric acid gas, and the solution became
+bright yellow in color, sometimes inclining to orange. The boiling was
+continued as long as hydrochloric acid was given off. The oxychloride
+was then distilled off under diminished pressure, care being taken to
+shake the retort constantly during the distillation as violent bumping
+is almost sure to occur especially towards the end of the operation.
+The product remaining, spattered over the walls of the retort, was a
+greenish yellow solid.
+
+Water was then added, and the whole allowed to stand for an hour or
+so to thoroughly dissolve the phosphoric acid formed in the reaction.
+
+In case the anilid is not perfectly dry, a much more energetic reaction
+occurs, and on distilling off the oxychloride, the product remains as a
+dark, gummy mass. This should be spread out on the sides of the retort
+while still liquid. On cooling and adding water, this gum gradually
+disappears, and in its place is found the yellow solid product just
+described. The gum appears to be a solution of this substance in
+phosphoric acid.
+
+After the substance is filtered off and dried, it can be crystallized
+from acetone, benzene, glacial acetic acid or alcohol. From these
+solvents it crystallizes in small yellow needles resembling quinone in
+appearance.
+
+The crystals obtained form acetone are rather larger than those from
+the other solvents, and are more nearly orange in color, apparently
+because of their greater compactness. When glacial acetic acid is used,
+care must be taken to avoid any unnecessary heating, as continued
+heating produces a change that will presently be described. The
+substance melts at 208°.
+
+Analysis of the substance resulted as follows:
+
+      I. 0.3822 gram gave 0.8334 gram CO₂ and 0.1272 gram H₂O.
+
+     II. 0.2645 gram gave 0.5812 gram CO₂ and 0.0910 gram H₂O.
+
+    III. 0.2023 gram gave 0.1283 gram BaSO₄.
+
+     IV. 0.2061 gram gave 0.1280 gram BaSO₄.
+
+      V. 0.1853 gram gave 16.73 C.C.N (Standard).
+
+                    C=N.C₆H₅
+                   / \
+                  /   .N.C₆H₅
+                 /   /
+    Cal. for C₆H₃——SO₂
+                 \
+                  NO₂
+                                         Found.
+                            I      II      III     IV       V
+          C = 60.11       59.47   59.93     ——      ——      ——
+          H =  3.44        3.69    3.82     ——      ——      ——
+          S =  8.45         ——      ——     8.70    8.52     ——
+          N = 11.08         ——      ——      ——      ——    11.35
+
+For analyses I &amp; II I am indebted to Mr. Nakaseko, who kindly made them
+for me.
+
+
+
+
+X. The Action of Reagents upon the Dianil of
+Paranitroorthosulphobenzoic Acid.
+
+
+1. The Action of Hydrochloric Acid on the Dianil
+
+When the dianil is boiled for some time with concentrated hydrochloric
+acid, the yellow color of the substance disappears, and the dianil is
+converted into a colorless substance without, however, passing into
+solution. The substance so obtained was filtered off, and crystallized
+from alcohol. It crystallized in small colorless needles, which melted
+at 183°, and possessed all the properties of the anil, which, in fact,
+it proved to be. The reaction was therefore
+
+           C=N.C₆H₅                    CO
+          / \                         /  \
+         /   N.C₆H₅                  /    N.C₆H₅
+        /   /                       /    /
+    C₆H₃——SO₂      + HCl + H₂O = C₆H₃——SO₂      + C₆H₅NH₃Cl
+        \                           \
+         NO₂                         NO₂
+
+This reaction also explains the fact that some anil was always obtained
+in making the dianil from the anilid. Hydrochloric acid is formed
+in the reaction, and in turn acts on the dianil in the sense of the
+equation just given.
+
+
+2. The Action of Alcoholic Potash on the Dianil.
+
+On boiling the dianil with alcoholic potash for a time, the solution
+turned red, and nothing but tarry products were obtained. In this
+respect the dianil differs from the dianil of orthosulphobenzoic acid,
+which under similar conditions, is transformed into infusible anilid.
+This observation is, however, in keeping with the fact that the nitro
+derivative, is in general much less stable in the presence of alkali.
+
+
+3. The Action of Glacial Acetic Acid on the Dianil.
+
+When the dianil is boiled with glacial acetic acid for some time, the
+color of the solution changes to a much lighter shade of yellow, or
+becomes colorless. On evaporating the solution to small volume, and
+allowing it to cool, a colorless substance separates. This is infusible
+anilid. It could not be obtained in crystals from any solvent, but
+always separated in flakes. It does not melt or undergo change at 340°.
+
+Like the fusible anilid it dissolves in dilute alkali, but on
+acidifying the solution it does not immediately reappear. After
+standing for some time, however, it gradually separates in perfectly
+pure form. In this particular my observation differs from that of
+Gray,[27] who states that this anilid is decomposed by solution in
+alkali.
+
+[27] Inaug. Diss. J. H. Unis. 1895.
+
+A specimen that had been repeatedly precipitated gave the following
+results on analysis.
+
+      I. 0.1607 gram gave 13.88 C.C.N. (standard).
+
+     II. 0.2195 gram gave 0.1285 gram BaSO₄.
+
+    III. 0.1357 gram gave 0.0807 gram BaSO₄.
+
+                   C[NH.C₆H₅]₂
+                  /  \
+                 /    O
+                /    /
+    Cal. for C₆H₃——SO₂
+                \
+                 NO₂
+                                    Found.
+                              I.     II.     III.
+
+          N = 10.58         10.85     ——      ——
+          S =  8.06           ——     8.00    8.16
+
+By this series of transformations it is possible to pass from one
+anilid to the other, the steps being:
+
+          CO.NH.C₆H₅         C=N.C₆H₅            C[NH.C₆H₅]₂
+         /                  / \                / \
+        /                  /   N.C₆H₅         /   O
+       /                  /   /              /   /
+    C₆H₃——SO₂NH.C₆H₅ ➡ C₆H₃——SO₂      ➡ C₆H₃——SO₂
+       \                  \                  \
+         NO₂               NO₂                NO₂
+
+This is of special interest as affording a means of passing from a
+derivative of one of the chlorides, to a substance derived from the
+other, by steps that can be clearly followed.
+
+
+
+
+Conclusions.
+
+
+In the course of this investigation several facts have been established.
+
+1. By the methods described, the symmetrical chloride of
+paranitroorthosulphobenzoic acid can be obtained in fine crystalline
+form, perfectly free from its isomer, with an average yield of forty
+percent.
+
+2. By treatment of the chloride with benzene and aluminium chloride,
+only one chlorine atom can be replaced by a phenyl group.
+
+3. The barium salt of paranitroorthobenzoyl benzenesulphonic acid, when
+perfectly pure, crystallizes constantly with seven molecules of water
+of crystallization.
+
+4. With alcohols, the symmetrical chloride yields directly the acid
+etherial salt of paranitroorthosulphobenzoic acid, no evidence
+having been obtained of an intermediate chloro-etherial salt. The
+unsymmetrical chloride on the other hand yields the intermediate
+product.
+
+5. With phenols, two series of derivatives are obtained.
+
+    (1) With monohydroxy phenols, both etherial salts and
+        sulphonphthaleïns are formed, the former predominating.
+
+    (2) With polyhydroxy phenols no etherial salts were obtained,
+        but compounds of the unsymmetrical type, usually containing
+        more than two phenol residues.
+
+6. With aniline an anil and an anilid of symmetrical constitution are
+formed.
+
+7. With phosphorus oxychloride, the anilid, by loss of water, forms a
+dianil.
+
+8. This dianil undergoes transformation with
+
+    (1) Glacial acetic acid, forming an anilid of unsymmetrical
+        constitution.
+
+    (2) Hydrochloric acid forming the anil.
+
+    (3) Alcoholic potash, with the formation of colored decomposition
+        products.
+
+
+
+
+Biographical.
+
+
+The author of the foregoing dissertation was born at Wilkinsburg, Pa.,
+Jan. 29., 1870. Owing to prolonged sickness in childhood his education,
+prior to entering college, was much interrupted, and was largely
+confined to instruction received at home.
+
+In the fall of 1887 he entered Wooster University (Ohio), from which
+institution he received the degree of Bachelor of Arts in 1891. The two
+following years were spent as a teacher of Sciences in the College of
+Emporia (Kansas). In 1893 he entered the Johns Hopkins University where
+he has since been a student of chemistry, with physics and mathematics
+as subordinate studies.
+
+In 1895 he was appointed University Scholar in Chemistry. During 1895-6
+he served as lecture assistant to Prof. Remsen and Dr. Renouf in the
+undergraduate courses. In the spring of 1896 he was appointed Fellow
+for the present year.
+
+*** END OF THE PROJECT GUTENBERG EBOOK 67920 ***

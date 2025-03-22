@@ -1,0 +1,1271 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 66082 ***
+
+                          THE MYSTERIOUS BOX:
+                        Nuclear Science and Art
+
+
+                                   by
+                             Bernard Keisch
+
+
+
+
+                                Contents
+
+
+  The Mysterious Box                                                   2
+  How Old Is a Painting?                                              11
+  Who Was the Artist?                                                 24
+  Other New Tools for Art Authentication                              36
+  One Mystery Solved                                                  42
+  Reading List                                                        44
+
+                 United States Atomic Energy Commission
+                     Office of Information Services
+           Library of Congress Catalog Card Number: 70-606040
+                           1970; 1974 (rev.)
+
+
+The Author
+
+    [Illustration: Bernard Keisch]
+
+Dr. Bernard Keisch received his B.S. degree from Rensselaer Polytechnic
+Institute and his Ph.D. from Washington University. He is a Senior
+Fellow with the Division of Sponsored Research of Carnegie-Mellon
+University in Pittsburgh. He is presently engaged in a project that
+deals with the applications of nuclear technology to art identification.
+This is jointly sponsored by the U. S. Atomic Energy Commission and the
+National Gallery of Art. Previously he was a nuclear research chemist
+with the Phillips Petroleum Company and senior scientist at the Nuclear
+Science and Engineering Corporation. He has contributed articles on art
+authentication to a number of journals. For the AEC, in addition to this
+booklet, he has written _The Atomic Fingerprint: Neutron Activation
+Analysis_, _Secrets of the Past: Nuclear Energy Applications in Art and
+Archaeology_, and _Lost Worlds: Nuclear Science and Archaeology_.
+
+
+
+
+Nuclear energy is playing a vital role in the life of every man, woman,
+and child in the United States today. In the years ahead it will affect
+increasingly all the peoples of the earth. It is essential that all
+Americans gain an understanding of this vital force if they are to
+discharge thoughtfully their responsibilities as citizens and if they
+are to realize fully the myriad benefits that nuclear energy offers
+them.
+
+The United States Atomic Energy Commission provides this booklet to help
+you achieve such understanding.
+
+
+
+
+The Cover
+
+This painting, originally believed to be the work of the Dutch artist
+Frans Hals (1580-1666), is a fake. Measurements of the naturally
+radioactive isotopes, polonium-210 and radium-226, in lead white from
+the paint proved that it was no more than 50 years old.
+
+    [Illustration: _A Van Meegeren forgery of a Vermeer._]
+
+
+
+
+                           The Mysterious Box
+
+
+The New Jersey sun was high overhead and the day was hot. The three boys
+walking along a deserted stretch of beach didn’t mind because they were
+barefoot and in their swimsuits. Occasionally they would dash in and out
+of the surf to cool off.
+
+Suddenly Martin let out a yell as his toe hit something hard hidden in
+the sand at the water’s edge. A moment later Bill and Harley were
+helping Martin dig out a large wooden case. It was heavy, well built,
+tightly sealed, and had foreign words written on it.
+
+“Maybe it’s a pirate treasure chest,” said Martin, who was almost eight
+and had just read _Treasure Island_ for the first time the week before.
+
+“You’re crazy,” said Harley, who, nearly ten, was much older and wiser.
+
+Bill, going on twelve, thought aloud, “It must be something worthwhile;
+maybe we can sell it and buy those model rockets we wanted.”
+
+The three boys soon found that they couldn’t open the box and that it
+was too heavy to drag along the sand easily.
+
+“Martin,” said Bill, “get Dad while Harley and I stand guard.”
+
+Two hours later the box was at their house and everyone in the family
+was trying to read what was written on it. About all that was readable
+was a large “U” followed by what appeared to be two numbers. Some of the
+other marks looked like old German script and there was a date, 1945.
+
+“You know,” said Bill, “I bet that came from a World War II German
+submarine that our Coast Guard or Navy sank.”
+
+“Let’s open it up!” said Harley as Martin ran to get the screwdrivers.
+
+Inside they found a thoroughly waxed carton that they had to cut open.
+Everyone held their breath as their father lifted the top.
+
+“Nothing but a bunch of pictures,” said Martin who was still hoping for
+pirate treasure.
+
+“Paintings can be worth a lot of money,” said Dad, “thousands or even
+millions of dollars.”
+
+“Well then we’re rich!” yelled Harley and Bill together.
+
+“Not so fast,” said Dad. “First of all, we don’t know if the paintings
+are really valuable. Also, it looks like these might be part of the art
+treasures that the Nazis stole from the countries they conquered in
+World War II. Maybe someone was trying to get them by submarine to a
+neutral country, like Argentina, just before the end of the war, and the
+sub was sunk. If they are real and stolen, they’ll have to go back to
+their rightful owners. But cheer up, maybe there’s a reward.”
+
+“How do we collect it?” asked Bill. “If the Nazis grabbed them, aren’t
+they real for sure?”
+
+“Not necessarily,” Dad continued. “The Nazis were fooled sometimes by
+people who sold them fakes. There was one painting that Hitler’s
+sidekick, Göring, bought that was supposed to be a 17th century painting
+by Vermeer, a Dutch painter. Because Vermeer’s work is so valuable, it’s
+usually impossible to buy one for any amount of money.
+
+“Vermeer is regarded as a national hero by the Dutch. The matter was
+investigated and the painting traced to Han Van Meegeren, a modern Dutch
+painter who had only a fair talent. When Van Meegeren realized he might
+be charged with treason by the Dutch for selling a Vermeer to the Nazis,
+he confessed that he had painted it himself. He also confessed that he
+had painted other forgeries that fooled some of the experts and were
+sold for a lot of money.
+
+“Many people, however, thought Van Meegeren was only lying to save
+himself from the charge of treason, and the whole thing had to be
+decided by a committee of scientific art experts appointed by a court of
+law. Using the methods that were then available, the experts showed that
+Van Meegeren had done a remarkable job of forgery and they were
+convinced that he had been telling the truth about painting those
+pictures.
+
+“At the time, the important ways the experts used to examine a painting
+included studying the work with X rays, which could show another
+painting underneath, analyzing the pigments (or coloring materials) used
+in the paint, and examining the painting for certain signs of old age.
+
+    [Illustration: _Han Van Meegeren listens to the evidence at his
+    trial in Amsterdam. In the background is “The Blessing of Jacob”,
+    which was sold in 1942 as the work of Vermeer._]
+
+    [Illustration: _An authentic Pieter de Hooch work, “The Card
+    Players”, painted in the 17th century._]
+
+    [Illustration: _A forgery of a Pieter de Hooch picture painted in
+    the 20th century by Han Van Meegeren._]
+
+    [Illustration: _“Head of Christ” by Van Meegeren._]
+
+“Van Meegeren was well acquainted with these methods. He scraped the
+paint from old paintings that weren’t worth much just to get the canvas
+and tried to use pigments that Vermeer would have used. He knew that old
+paint was very, very hard and impossible to dissolve; so he cleverly
+mixed a chemical (phenolformaldehyde) into his paint, and this hardened
+into Bakelite when he heated the finished painting in an oven.
+
+“For some of the paintings, Van Meegeren became careless and the experts
+did find traces of a modern pigment (cobalt blue) in the paint. They
+also found the Bakelite. For one or more paintings, Van Meegeren did so
+well that, in spite of all this evidence, a few people still weren’t
+convinced that these paintings were painted by Van Meegeren and not by
+Vermeer.”
+
+Bill, who by this time was bursting with questions, interrupted, “You
+mean they still aren’t sure about some of those paintings after 25
+years? Aren’t there better ways of telling whether a painting is genuine
+or not? You’re a scientist. Can’t scientists like you do something about
+it now?”
+
+“Yes, recently a method was developed to settle just such a question.
+It’s based on measurements of natural radioactivity in one pigment that
+all artists used hundreds of years ago. And the method was applied to
+some of the Van Meegeren paintings including the best one of them all.”
+
+“How did it come out?” asked Martin.
+
+    [Illustration: _An X ray of part of the Van Meegeren forgery,
+    “Christ and His Disciples at Emmaus”. In the white circle are traces
+    of paint from the original painting that Van Meegeren scraped off to
+    obtain the old canvas. When the painting was believed to be a
+    genuine Vermeer, it was sold for about $300,000._]
+
+    [Illustration: The complete painting.]
+
+    [Illustration: _A Van Meegeren forgery of a Vermeer._]
+
+“How does it work?” asked Harley.
+
+“You mean paintings are radioactive?” exclaimed Bill.
+
+“Can we do it to the paintings we found?” asked all three together.
+
+
+
+
+                         How Old Is a Painting?
+
+
+“One question at a time. I’ll tell you how the method works and what it
+does if you’re really interested.”
+
+“We’re interested! We’re interested!” chorused the boys.
+
+“In the first place, this method works only in certain cases of
+suspected forgery. Over the last 50 or 100 years, a number of paintings
+have turned up that seemed, even to the best art experts, to be several
+hundred years old. Some of these were genuine, and some were painted by
+forgers who could not resist the high prices paid for works of art. The
+National Gallery of Art, in Washington, D. C., thinking that there might
+be a way of detecting these forgeries, gave its support to a group of
+scientists who developed a method for this purpose.
+
+“To understand how the method works, you need to know a little about how
+radioactive atoms disintegrate to form atoms of other elements. In this
+case we are interested in the natural radioactivity that occurs in
+certain rocks. As a matter of fact, in almost all rocks in the earth’s
+crust there is a certain small quantity of uranium.”
+
+“I thought uranium was rare,” interrupted Bill.
+
+“It is, but we’re talking about such small quantities that its difficult
+for scientists using the most sensitive equipment to detect it. The
+uranium in the rock decays to another radioactive element and that one
+decays to another, and another, and another, and so forth, in a series
+of elements that results in lead, which is not radioactive. In this
+series are two radioactive elements, radium and a radioactive isotope of
+lead, that help us to date paintings. To understand this, we must first
+understand how radioactive elements decay.
+
+“All radioactive elements have what is known as a ‘half-life’; that is,
+in a certain period of time, half of the element disintegrates to
+another form. In another equal period of time, half of what is left
+disintegrates, and then half again, and so on. In the case of the
+uranium, which starts the series I am describing, the half-life is over
+4,000,000,000 years. Because of its long half-life there is plenty of
+uranium around and will be for a long, long time. On the other hand,
+radium, which I mentioned a moment ago, has a half-life of only 1600
+years. In 1600 years, half of it would be gone, and in another 1600
+years half of that would be gone, and so on.
+
+“The radioactive lead that we’re interested in has a half-life of only
+22 years. This means that if you start with a small quantity of this
+radioactive isotope of lead, which is called lead-210,[1] then in only a
+few hundred years it would have disappeared. However, in rock, where
+there is uranium, the uranium keeps feeding the elements following it in
+the series, so that as fast as they decay they are reproduced by the
+element before them.”
+
+    [Illustration: _The Uranium Series. In this simplified diagram, the
+    double vertical arrows represent alpha radioactivity and the single
+    slanted arrows represent beta radioactivity. The times shown on the
+    arrows are the half-lives for each step._]
+
+  Uranium-238
+      ⇓^α   4½ billion years
+  Thorium-234
+      ↓^β   24 days
+  Protoactimum-234
+      ↓^β   1⅕ minutes
+  Uranium-234
+      ⇓^α   ¼ million years
+  Thorium-230
+      ⇓^α   80 thousand years
+  Radium-226
+      ⇓^α   1600 years
+  Radon-222
+      ⇓^α   3⅘ days
+  Polonium-218
+      ⇓^α   3 minutes
+  Lead-214
+      ↓^β   27 minutes
+  Bismuth-214
+      ↓^β   20 minutes
+  Polonium-214
+      ⇓^α   less than one second
+  Lead-210
+      ↓^β   22 years
+  Bismuth-210
+      ↓^β   5 days
+  Polonium-210
+      ⇓^α   138 days
+  Lead-206
+      (Not Radioactive)
+
+“I don’t quite understand how that works,” said Harley. “What do you
+mean ‘it keeps feeding it’?”
+
+“Well, think of a series of lakes connected by waterfalls. At the top,
+the highest lake has an enormous supply of water. Following the
+waterfall coming out of the lake you find a smaller lake and then maybe
+a medium-sized lake, and after another waterfall, a smaller lake, then a
+tiny lake, and so on.
+
+“As long as that big lake on top is full or nearly full, all the other
+lakes, whether they are small or medium-sized, will still be getting
+water as fast as it pours out. But if you cut off the supply of water
+from the upper lake to the next lake, then the smaller lakes will in
+time run dry. The same thing works with the radioactivity. In this
+series headed by uranium, as long as uranium is present all the other
+elements below it are kept supplied so that they don’t run out.”
+
+“I understand that,” said Bill, “but how do we use that to date a
+painting?”
+
+“One of the pigments used by artists for over 2000 years is known as
+lead white and it is made from lead metal. The lead metal in turn is
+extracted from a rock called lead ore, in a process called smelting. The
+radioactive lead, this lead-210 that I mentioned, behaves like ordinary
+lead metal and goes along with it.
+
+“The radium, which has a fairly long half-life, doesn’t follow the lead
+metal, but is removed with other waste products in a material called
+slag. Since the longer-lived ancestor of the lead-210 is removed, the
+supply of lead-210 is cut off. (Or we can say that one of the waterfalls
+is shut off.) The lead-210 will then decay with its 22-year half-life.”
+
+    [Illustration: _The radioactive series that starts with uranium is
+    like a series of lakes connected by waterfalls. As long as uranium,
+    the big one on top, has water in it, the others will be full and the
+    falls will keep flowing. But when the first waterfall is shut off,
+    the small lakes below it will run dry._]
+
+“I get it,” said Bill. “That means that when you take a sample of old
+lead white paint, there shouldn’t be any radioactive lead-210 left.”
+
+“That’s right. But that would only be true if you removed all the
+radium. Actually, in the smelting process it’s more usual to remove only
+90 or 95% of the radium. In that case, the lead-210 would decay only
+until the amount left would be equal to the small amount of radium that
+wasn’t removed. In effect, this would be like shutting off only part of
+the waterfall.”
+
+“So what do you find,” asked Harley, “if you measure the radioactivity
+in a sample of lead white paint?”
+
+“We find that if the paint is old, compared to the 22-year half-life of
+the lead, let’s say 100 years old or more, then the amount of
+radioactivity from the lead-210 in the sample of paint will be equal to
+the amount of radioactivity from the radium in the sample. But if the
+paint is modern, let’s say only 20 years old or so, then the amount of
+radioactivity from the lead-210 will be greater than the amount of
+radioactivity from the radium.”
+
+Martin, who had been quiet through all this explanation, finally spoke
+up. “Well, was it finally tried out? How did it work?”
+
+“Hundreds of samples were analyzed. These samples were taken from
+paintings of all ages, from some over 300 years old right up to others
+only a couple of years old. The old samples always showed equal amounts
+of radioactivity from lead-210 and radium while the modern ones always
+showed larger amounts of radioactivity from lead-210 than from radium.
+That meant that scientists had a way of definitely telling if a lead
+white paint was modern or not.
+
+“Eventually, the method was tried on a number of paintings believed to
+be by Van Meegeren. Sure enough, every one of them showed that the paint
+couldn’t possibly have been more than 30 or 40 years old and that Van
+Meegeren probably was telling the truth when he said that he had painted
+them. The paintings certainly were not genuine Vermeers from the 17th
+century.”
+
+“Okay, Dad,” said Martin, “can we use the method on any of the paintings
+we found? Are any of these paintings supposed to be old enough so that
+we can use this test?”
+
+“Not so fast. To find that out we have to do a lot of checking first.”
+
+“How do we go about it?” asked Bill.
+
+“Let’s see now. There are nine paintings in the box you found. The first
+thing we should do is take them down to a museum or gallery and let the
+art experts look at them. Since we have a few weeks of vacation time
+left, what do you say we take a trip down to Washington, D. C., and show
+them to some experts at the National Gallery of Art?”
+
+Over the next few weeks quite a few things happened to the boys and
+their paintings. Three of them were discarded right away because they
+were immediately recognized as being copies of no value. Two were
+relatively modern paintings with the signature Alfred Sisley; if
+genuine, they were less than 100 years old. The remaining four appeared
+to be very old paintings. Two of them seemed to correspond to paintings
+that disappeared during the Second World War. Photographs and X rays
+were taken and sent to the museum in Holland, which had owned the
+missing pictures, so that they could make a preliminary examination.
+
+    [Illustration: uncaptioned]
+
+  Radioactivity of Lead-210
+
+    Lead-210 decaying with a half-life of 22 years. When no radium is
+    present there is almost none left after 6 half-lives or 132 years.
+
+  Radioactivity of Radium-226
+
+    Over the same period of time, a small amount of radium decays very
+    little because its half-life is about 1600 years.
+
+  Radioactivity of Radium 226
+  Radioactivity of Lead-210
+
+    But when lead-210 decays in the presence of radium-226, the
+    radioactivity of the lead-210 only decreases until it is equal to
+    the radioactivity of the radium.
+
+That left two that could have been old but whose origins were unknown. A
+series of simple chemical tests were begun on these and the boys watched
+experts take very small samples of paint for examination under the
+microscope. After several months a list of the pigments present in the
+paintings was prepared. All the pigments found were typical of old
+paintings and the ordinary examinations and tests couldn’t prove whether
+the works were old or not. Finally, it was decided that the only way to
+tell if these paintings were truly old was to apply the test that Dad
+had described to the boys.
+
+The boys watched a painting restorer remove samples of nearly white
+paint right at the edge of the paintings. He worked carefully, using a
+very sharp scalpel and a stereo-binocular microscope, through which
+objects appeared to be sixty times larger than they really were. The
+sample of paint weighed approximately twenty-thousandths of a gram. The
+boys and their father took the samples to a radiochemical laboratory
+where they watched a radiochemist do the required analysis for lead-210
+and radium in the samples.
+
+First the chemist dissolved the paint in acetic acid. This removed the
+lead white from the oil and from the small amounts of other pigments in
+the paint. The solutions were then heated and stirred with a silver disc
+hanging in the liquid. After several hours the disc still looked clean,
+but the chemist said that a radioactive element, polonium-210, was now
+plated onto the silver. Polonium-210 is a member of the uranium series
+following the lead-210, and a measurement of its radioactivity would be
+an accurate measurement of the radioactivity of lead-210.
+
+The silver discs prepared from the two samples were each placed in an
+instrument called an alpha-particle spectrometer. This instrument is
+extremely sensitive and can measure the very small amounts of
+polonium-210 prepared from the tiny sample of paint that they started
+with.
+
+While the instruments were making the measurements, which took a couple
+of days, the chemist turned to the remaining solutions and began the
+analyses for radium.
+
+    [Illustration: _A painting being sampled under a stereo-binocular
+    microscope._]
+
+    [Illustration: _Lead white weighing twenty-thousandths of a gram (20
+    milligrams). This is the amount needed to measure lead-210 and
+    radium-226 to determine if the lead white is old._]
+
+In a series of chemical steps, he purified the solutions, removing the
+lead and other materials so that finally he had a small amount of
+solution that contained little else but the original radium and a very
+small amount of barium (an element that he deliberately added and one
+which is very similar to radium in its chemical properties). By adding
+dilute sulfuric acid, he prepared an insoluble material, barium sulfate,
+which was barely visible suspended in the solution.
+
+    [Illustration: _Polonium plating apparatus. A heated solution of
+    lead white in acetic acid is stirred with silver discs for 4 to 8
+    hours._]
+
+    [Illustration: _The disc above appears clean after removal, but on
+    its surface it retains a minute amount of polonium which can be
+    measured._]
+
+By forcing the solution through a special thin plastic filter having
+tiny holes, the particles of barium sulfate together with the radium
+that had been in the solution were caught on the surface of the filter.
+This was mounted on a solid disc so that it too could be placed in the
+alpha-particle spectrometer for the measurement of radioactivity from
+the radium.
+
+Two weeks later the results were ready. Dad, the boys, and one of the
+experts from the museum met with the chemist to discuss them. For one of
+the two paintings, the polonium-210 radioactivity was about ten times
+that of the radium activity. The boys were disappointed because this
+meant that the painting could not have been 300 or 400 years old as it
+first appeared to be.
+
+    [Illustration: _An alpha-particle spectrometer is used to measure
+    the radioactivity of the radium and polonium prepared from the lead
+    white._]
+
+    [Illustration: _A plastic disc on which is cemented a filter
+    containing a nearly invisible deposit of barium sulfate (BaSO₄) that
+    “carried” the radium._]
+
+But in the second painting the radioactivity from the polonium-210 and
+from the radium-226 were just about equal. That meant that this painting
+was at least 100 years old and, from its appearance, probably more. The
+boys were excited.
+
+“We have a really valuable painting!” said Martin.
+
+“Not so fast, boys,” cautioned Dad. “We don’t know who painted it and we
+don’t know exactly how old it is.”
+
+The Gallery’s expert was happy too. He believed that the second picture
+was a genuine Dutch painting from the 17th century. It was a landscape
+and the artist might have been Aelbert Cuyp.
+
+    [Illustration: _“The Maas at Dordrecht”, a genuine painting by
+    Aelbert Cuyp._]
+
+“What do we do now?” asked Harley. “How can we prove that the painting
+was painted in Holland in the 17th century by Cuyp?”
+
+“There is a method now being developed,” said Dad, “that could give us
+that kind of information.”
+
+“How does it work?” Martin asked.
+
+
+
+
+                          Who Was the Artist?
+
+
+“Do you know how criminals are caught by using fingerprints?” asked Dad.
+
+“Sure we do,” said Martin. “Each person has a set of fingerprints that
+is different from anyone else’s.”
+
+Harley spoke up. “Did the artist leave his fingerprints on the
+paintings?”
+
+“Probably not,” said Dad. “Besides, they would have been wiped off long
+ago. Also, who knows what each artist’s fingerprints were like?”
+
+“Then what do you mean?” asked Bill.
+
+“What I mean is, there is another kind of ‘fingerprint’ that scientists
+are just now learning to use in all kinds of identification problems.
+It’s not really a fingerprint, but it’s just as distinctive as a real
+fingerprint.
+
+“You see, in every material, no matter how pure you try to make it,
+there are always other substances contained in it in very, very small
+quantities, which are there only by chance. Usually the person making or
+using that material doesn’t even know they are there, and the quantities
+are so small they don’t do any harm. During the last several years,
+scientists have developed extremely sensitive methods of analysis, which
+have been applied to all kinds of problems.
+
+“One such method is called neutron activation analysis. In this method
+these small amounts of impurities can be detected in tiny samples of
+material. This is quite important because only very small samples can be
+taken from a precious painting without damaging it. Normally, a
+scientist or an art restorer takes samples that are no bigger than the
+head of a pin.”
+
+“How can you do anything with a sample that small?” asked Bill.
+
+    [Illustration: uncaptioned]
+
+“With neutron activation analysis you can do a great deal. To give you
+an example of how sensitive this method is, think of a bathtub
+containing 500 quarts of milk. Add 1 drop of an acid containing a speck
+of gold dissolved in it. After you mix the acid and milk thoroughly, you
+won’t be able to tell by looking at it that anything was added. But if
+you take a thimble full of liquid out of the bathtub, you can easily
+tell with neutron activation analysis that gold was added to the milk.
+
+“Scientists call low concentrations of accidental impurities ‘trace
+elements’, and the amounts that are present are measured in parts per
+million rather than percent. One part per million is one ten-thousandth
+of a percent.”
+
+Bill spoke up again. “So how does that make a fingerprint, Dad?”
+
+“It works this way. Suppose an artist used lead white in several
+paintings. Now if the lead white were absolutely pure it would contain
+only lead, carbon, oxygen, and hydrogen. But the lead white the artist
+used would also contain very small quantities of other elements, these
+trace elements that I spoke of. In that particular batch of lead white,
+certain trace elements will be present in a certain quantity. The kind
+and amount of the trace elements will be present in that exact pattern
+only in that batch of lead white.
+
+“Now suppose you analyze the lead white from several paintings that you
+know were painted by that particular artist, and you find that there is
+silver, mercury, antimony, tin, and barium in every one of the samples.
+Also, each of these elements is always present in a certain
+concentration. Suppose also, that you have a painting which looks like
+it was painted by that particular artist but you’re not quite sure.
+
+“Well, if you take a sample of lead white from that unknown painting and
+you find that the pattern of impurities is the same as in the paintings
+you knew were genuine, then the ‘fingerprints’ match. The chances of
+duplicating impurities of this kind by pure accident are extremely
+small, just about as small as the chances of finding two people with the
+same fingerprints. That’s why we call this a ‘fingerprint method’.”
+
+“That sounds like a good idea,” said Harley. “Who thought it up?”
+
+                      x = one part per million (ppm)
+  A known Rembrandt.
+
+                              x
+                              x
+      x           x           x
+      x           x           x           x
+      x           x           x           x
+      x           x           x           x                       x
+      x           x           x           x                       x
+      x           x           x           x           x           x
+    silver     chromium      zinc     manganese      iron       cobalt
+
+  Unknown painting A
+
+                                                                  x
+                                                                  x
+                                                      x           x
+                                                      x           x
+                                          x           x           x
+                  x                       x           x           x
+                  x                       x           x           x
+      x           x                       x           x           x
+      x           x           x           x           x           x
+    silver     chromium      zinc     manganese      iron       cobalt
+
+  Unknown painting B
+
+                                          x
+                                          x
+      x           x                       x
+      x           x                       x                       x
+      x           x                       x                       x
+      x           x           x           x                       x
+      x           x           x           x                       x
+      x           x           x           x           x           x
+    silver     chromium      zinc     manganese      iron       cobalt
+
+  Known forgery
+
+                                                                  x
+                                                                  x
+                                                      x           x
+                                                      x           x
+                                          x           x           x
+                  x                       x           x           x
+                  x                       x           x           x
+      x           x                       x           x           x
+      x           x           x           x           x           x
+    silver     chromium      zinc     manganese      iron       cobalt
+
+    _Match the patterns of these lead white “fingerprints”. Unknown
+    painting A is_ not _a Rembrandt; it_ is _by the same forger who
+    painted the known forgery at the bottom. Unknown painting B is
+    either by Rembrandt, one of his fellow citizens, or one of his
+    students using the same paint._
+
+“It was thought of many times by many people. But, it’s never been used
+for identifying paintings. In 1964 in the Netherlands, two scientists,
+named Houtman and Turkstra, analyzed about 40 different samples of lead
+white, 20 of which came from Dutch and Flemish paintings. The rest were
+samples of lead white not taken from paintings but obtained directly
+from the manufacturers. They analyzed these samples for different
+elements. These included silver, mercury, chromium, manganese, tin,
+antimony, and a couple of others.
+
+“They found that the concentrations of these elements in the lead white
+from all the old Dutch and Flemish paintings were very similar. And the
+trace element concentrations were quite different in the modern lead
+white samples analyzed in the same way. At the time, they presumed that
+it was because the lead white in the paintings was manufactured so long
+ago. They may have been right to a certain extent.
+
+“For example, they found that in all the old paintings there were from
+10 to 30 parts per million of silver in the lead white, while in the
+modern samples of this pigment there were generally less than 10 parts
+per million of silver. All of them had been painted before the 19th
+century, and all the samples of pure lead white were manufactured during
+the latter part of the 19th century or during the 20th century. They
+believed that the reason the silver concentration was lower in the more
+modern material was because during the 19th century, lead refiners were
+doing a better job of removing all the valuable silver from lead.
+
+    [Illustration: _Silver concentrations in lead white. The
+    concentrations generally decreased after the middle 1800s. Notice
+    also how the concentrations were very similar for all the older
+    paintings (before 1700) which were Dutch or Flemish._]
+
+“However, in 1967 in Germany, two men, named Lux and Braunstein,
+discovered that in some old paintings produced in Italy, lead white also
+contained low quantities of silver just like modern material. They
+believed that the higher concentrations of silver in lead white were
+typical of Dutch and Flemish painters while the lower concentrations
+were typical of Italian paintings of about the same age.
+
+“The whole case is still unsettled because not enough measurements have
+been made to show how reliable this method can be. That is, no one knows
+if samples of paint from several paintings by one artist would all have
+the same pattern of impurities in the same pigment. It may be that of
+the many pigments present in an artist’s paintings only a few will be
+suitable for use in this ‘fingerprinting’ method.”
+
+    [Illustration: _Quartz vials (right) containing samples are sealed
+    in the aluminum can on the left. They are then bombarded with
+    neutrons in a reactor like the one in the picture below._]
+
+“It sounds complicated,” said Bill.
+
+“It is, and it’s going to take years of work before the method is
+proven, if it is at all. It may turn out that you can’t tell one artist
+from another, but only groups of artists like 17th century Dutch
+painters or 19th century English painters.”
+
+“Tell us something about neutron activation analysis,” said Martin. “How
+do you measure such small amounts of impurities?”
+
+“The best way to tell you how this works is to show you. How would you
+boys like to visit a laboratory where neutron activation analysis is
+being done?”
+
+“Do you have to ask?” said Harley. “Of course we would!”
+
+A few weeks later it was all arranged. At a laboratory close by a
+nuclear reactor, the boys watched a radiochemist place a few specks of
+material inside small quartz tubes that were then sealed. The tubes were
+put in an aluminum can and placed in the nuclear reactor. The can was
+fastened on the end of a long pole that was then submerged in a deep
+pool of water. At the bottom of the pool the boys could see a bright
+blue glow.
+
+    [Illustration: _This type of nuclear reactor is used for neutron
+    activation analysis._]
+
+“So that’s what a nuclear reactor looks like!” said Bill.
+
+“Yes,” said Dad. “Where you see the blue glow you can also see rows of
+fuel elements. Each one contains slugs of uranium encased in aluminum.
+This is one of a number of different types of reactors. But every
+nuclear reactor is arranged so that the uranium atoms divide (or
+fission) many, many times each second.
+
+“When this happens, heat is produced that is carried away by the water,
+and also many, many free neutrons are produced. Those samples, placed
+down next to the reactor in the bottom of the pool are being bombarded
+by the neutrons, and some of the elements in the samples absorb the
+neutrons and become radioactive.”
+
+After a while the samples were removed and carried back to the
+laboratory in a lead box. A short while later, the radiochemist opened
+the aluminum can, broke open the quartz capsules, and removed the
+samples for analysis. The boys watched the chemist mount each sample on
+a card and take it to a room where there was equipment for measuring
+radioactivity.
+
+    [Illustration: _Gamma-ray spectrometer. The sample to be measured is
+    placed on a stand over a gamma-ray detector. The pulse-height
+    analyzer is a device that sorts electrical impulses from the
+    detector according to the energy of the gamma rays causing the
+    impulses. The screen displays the gamma-ray spectrum and the
+    electric typewriter automatically types out the data collected when
+    the measurement is complete._]
+
+One by one the samples were placed inside a shield consisting of a big
+pile of lead bricks. When the heavy door was opened, the boys could see
+a metal can inside the shield, which housed a detector (called a
+lithium-drifted germanium detector) that measured the gamma rays emitted
+by the sample. As each sample was placed near the detector the chemist
+turned on a gamma-ray spectrometer to which the detector was connected.
+
+    A tiny sample of lead white {sample} is sealed in a quartz vial
+    {vial} which is bombarded with neutrons in a reactor.
+
+    [Illustration: uncaptioned]
+
+    Many of the atoms become radioactive, emitting gamma rays.
+
+    [Illustration: uncaptioned]
+
+    The sample is placed in a gamma-ray spectrometer and the gamma rays
+    are separated according to their energy.
+
+    [Illustration: uncaptioned]
+
+  Gamma-ray spectrum
+    Copper
+    Zinc
+    Antimony
+    Lead
+    Silver
+    Height
+    Antimony
+
+    The location (energy) of each peak indicates what is present and the
+    height indicates how much!
+
+    [Illustration: _A gamma-ray spectrum as it appears on the screen of
+    a pulse-height analyzer. The gamma-ray peaks are marked with the
+    name of the element whose radioactive isotope emits the gamma ray;
+    two for cobalt and zinc and one for cesium._]
+
+There, on what looked like a small television screen, flashes of light
+appeared that gradually formed a curve with many peaks and valleys.
+After a few minutes the spectrometer was stopped and an electric
+typewriter automatically typed out rows and columns of numbers.
+
+The chemist explained, “This curve, which you see on the screen, is a
+gamma-ray spectrum and tells us what elements are in the sample. The
+typed-out data give us an accurate measure of the shape of the curve on
+the screen. By measuring the gamma-rays’ energies we know what elements
+in the sample were made radioactive. The height of each gamma-ray peak
+tells us how much of that element is present in the sample.
+
+“That gives us the information we need to calculate the concentrations
+of the small quantities of materials in our samples. We can do this
+because at the same time I irradiated a set of standards. Standards are
+materials that are just like the samples except that they contain known
+amounts of the impurities I am trying to measure.”
+
+As the boys were leaving the laboratory, the chemist apologized for not
+having enough time to explain the activation analysis procedure more
+thoroughly, but he did give the boys a list of books to read on the
+subject of radioactivity and radioisotopes.[2] They thanked him for his
+help.
+
+During the ride home, they discussed the paintings that were still
+unproven.
+
+“It’s too bad that the method of activation analysis fingerprinting
+hasn’t been fully developed yet,” said Dad.
+
+“Yes,” said Bill. “Then we could prove whether or not that last old
+painting was really by Aelbert Cuyp as the expert from the gallery
+believed. But what about those paintings that we found in the box that
+were not so old?”
+
+“Well,” said Dad, “if the activation analysis method were workable, we
+might be able to prove if they were painted by Alfred Sisley. Meanwhile,
+until the method is really developed we don’t know if we can do it that
+way or not.”
+
+“So what do we do now?” asked Martin.
+
+“We’ll have to wait until scientists can thoroughly investigate this
+method and several others that they’re working on.”
+
+“Other methods!” exclaimed Bill. “What other methods?”
+
+    [Illustration: _“The Banks of the Oise”, a genuine painting by
+    Alfred Sisley._]
+
+
+
+
+                 Other New Tools for Art Authentication
+
+
+“There are several new tools that scientists are working on now,” said
+Dad. “These involve methods that have been developed by scientists for
+other purposes, but are now being explored for use in authenticating
+works of art.
+
+“For example, in Los Angeles, the county museum purchased an instrument
+known as a Spark Source Mass Spectrometer. Like activation analysis,
+this instrument will also measure small traces of impurities, but they
+have just set that up and it will take them years to explore the use of
+it for the type of problem we have been discussing.
+
+“X-ray diffraction is another method that has been around for quite
+awhile but hasn’t been used much for art identification until recently.
+With X-ray diffraction, samples of pigments can be identified by the
+pattern formed when X rays are bent by passing through the sample of
+pigment.”
+
+“How’s that?” asked Harley.
+
+“There are 3 or 4 different compounds with about the same chemical
+composition as lead white. Chemically, they are almost impossible to
+distinguish. But with X-ray diffraction, a chemist can easily tell them
+apart. The hope is that the type of lead white will indicate how it was
+manufactured. Until the middle of the 19th century, lead white was
+produced mainly by packing strips of lead in clay pots with a little
+vinegar in the bottom. The clay pots were stacked in a large building
+with layers of decaying organic matter on the floor. The building was
+sealed for several weeks during which time the lead corroded in the
+fumes and became covered with a white substance. The white substance,
+lead white, was scraped off, ground, and washed to make the pigment.
+
+“But, in the 19th century, when people began to learn more about
+chemistry, they looked for faster ways of making lead white and some of
+these methods produced a lead white of somewhat different composition.
+By using X-ray diffraction, chemists now hope that they can tell how the
+lead white was manufactured. This may provide another means of dating
+the lead white in a painting.”
+
+“Are there any other methods?” asked Harley.
+
+    [Illustration: _The stack process for making lead white. Rows of
+    clay pots containing lead and vinegar are packed to the ceiling of
+    the building, and fermenting tanbark on the floor produces carbon
+    dioxide and heat. The fumes of vinegar and the carbon dioxide
+    corrode the lead in 2 to 4 months, and the corrosion is lead
+    white._]
+
+“Yes, isotope mass spectrometry is one. All lead consists of 4 different
+isotopes or atoms of different weights. Three of these 4 are the end
+products of a radioactive decay chain. Depending upon the history of the
+rock formation in which the lead ore occurred, the relative amounts of
+the lead isotopes vary in a special way. In other words, if we know the
+different amounts of lead isotopes in the world’s lead ore deposits, and
+we have a sample of lead white from a painting, we can tell from which
+deposit the lead, which formed the lead white, came. If, for example, we
+find that the isotope pattern in a sample from a painting is the same as
+in lead ore from Australia, then the painting can’t be very old because
+lead white wasn’t produced from lead mined in Australia until about 100
+years ago.”
+
+    [Illustration: _X-ray diffraction patterns from three different lead
+    compounds that might occur in lead white. The middle one is the
+    ideal lead white produced for over 2000 years. While some of the
+    bottom compound may be found mixed with it, the compound shown at
+    the top is only a 20th-century invention._]
+
+  4PbCO₃ · 2PB(OH)₂ · PbO
+  2PbCO₃ · PB(OH)₂
+  PbCO₃
+
+“How do you measure lead isotopes?” asked Harley.
+
+“With an instrument called a mass spectrometer. This instrument is
+capable of separating the lead isotopes. First, the atoms of lead in the
+sample are electrically charged and ‘fired’ in a beam down the length of
+a tube between the poles of a strong magnet. There, the charged atoms
+(or ions) in the beam are deflected by different amounts according to
+how heavy they are. Thus the different isotopes are separated. This
+method is also still being studied and, although it shows great promise,
+it will be some time before it can solve problems of art identification.
+Also the study of the natural variation in isotopes of other elements,
+such as sulfur, is useful for identification of other pigments as well.
+
+    [Illustration: _Diagram of a simple mass spectrometer. The ionized
+    atoms of lead travel in a beam at the same speed. The heavier atoms
+    bend less than the lighter ones when the beam passes the magnet.
+    Thus two beams emerge instead of one. Actually there are four
+    isotopes of lead so there will be four beams._]
+
+    [Illustration: _“Agostina”, a genuine painting by Jean Baptiste
+    Camille Corot._]
+
+“Another new method that shows great promise has been developed, but
+this one is not applicable to the paintings that you boys found in the
+box.”
+
+“Why not?” asked Bill.
+
+“Since the Second World War, the art forgery business has been growing
+rapidly. For example, it has been said that of the 2000 pictures that
+Corot, a 19th century Frenchman, is known to have painted, more than
+5000 of them are in the United States. This may be only a humorous
+exaggeration, but a large number of forgeries have been produced in the
+last several years. These are usually supposed to be paintings that are
+less than 100 years old. Present-day forgers like to forge paintings
+that aren’t very old because it’s easier to get away with. Now this new
+method, which will detect such recent forgeries, is based upon the
+presence of carbon-14, a radioactive isotope of carbon, in our
+atmosphere and in all things that grow on our planet.
+
+“Ordinarily, carbon-14 is produced only by cosmic rays, and its
+concentrations in the atmosphere and in growing things would remain at a
+constant level. But since the middle of the 1950s the testing of nuclear
+weapons has increased the amount of radioactive carbon in our atmosphere
+by quite a bit. Many artist’s materials, such as linseed oil, canvas,
+paper, and so on, come from plants or animals, and so will contain the
+same concentrations of carbon-14 as the atmosphere up to the time that
+the plant or animal dies.
+
+“Therefore, linseed oil (from the flax plant), for example, produced
+during the last few years will have a much greater concentration of
+carbon-14 in it than linseed oil produced more than 20 years ago.
+Scientists at Carnegie-Mellon University have shown that this method
+will work. It is only a matter of making the measurements on the small
+samples available from presumably valuable paintings.”
+
+    [Illustration: _The changing concentrations of carbon-14 in our
+    atmosphere. High levels of carbon-14 in linseed oil and other
+    painting materials will indicate that a work of art is only a few
+    years old._]
+
+  Carbon-14 radioactivity
+    Older materials contain less as the carbon-14 decays away.
+    In this period, decrease is due to the burning of large quantities
+          of coal and oil as industry grew. This diluted the newly
+          formed carbon-14.
+    Increases due to testing of atomic weapons in the atmosphere.
+  Carbon-14 produced by cosmic rays only
+    Neutron → Nitrogen → Carbon-14 + proton
+    Carried down by rain in carbon dioxide
+
+“There are also a number of other methods being studied including the
+use of Messbauer Effect Spectroscopy to study pigments that contain
+iron, thermoluminescent dating of pottery and terra-cotta statuary,
+X-ray fluorescence analysis as a general tool, and neutron
+autoradiography as a means of studying the technique of artists. You can
+read all about them if you wish.”[3]
+
+“It sounds like forgers are going to have a tough time in the future,”
+said Harley.
+
+“That’s right. It may even turn out that producing forgeries to pass all
+these new tests will be so difficult and expensive that forgers will
+stop trying.”
+
+
+
+
+                           One Mystery Solved
+
+
+A year later an important letter arrived at the boys’ house. Dad opened
+it, read it quickly, and said, “Good news, boys! This letter is from the
+Dutch government. Remember those two paintings that we thought might
+have been stolen from a Dutch museum?”
+
+“Yes,” said Bill.
+
+“Well, it seems that after a year of studying them, the Dutch have
+decided that they really are the paintings that were stolen.”
+
+“That is good news,” said Harley. “At least we know that two of the
+paintings we found are genuine.”
+
+“What are they going to do with them?” asked Martin.
+
+“Of course, they have to go back to their original owners. But this
+letter says that the Dutch government wants us to come to Holland as
+their guests as a reward for finding those paintings.”
+
+    [Illustration: _These two paintings “The Lacemaker” and “The Smiling
+    Girl” were thought to have been by Vermeer. A series of tests,
+    including some of those described in this booklet, showed that the
+    paintings are fairly old. However, some of the materials used are
+    not typical of Vermeer, and the pictures are now thought to have
+    been painted by a follower of the artist._]
+
+“That’s great!” said Bill. “Looks like we’re getting something out of
+finding that box after all.”
+
+“Yes,” said Dad. “And don’t forget the other unidentified paintings may
+also be genuine. We’ve proved that one is a fake, the experts believe
+that three of the others are copies, and then there are the two that
+might be Sisleys and are only waiting for a method to prove it. And we
+have one more that science managed to prove was really old. I’m sure
+that in a few years methods will be developed to tell us exactly who
+painted it.
+
+“And now let’s make arrangements for our trip to Holland.”
+
+
+
+
+                              Reading List
+
+
+_About Atomic Power for People_, Edward and Ruth S. Radlauer, Childrens
+      Press, Chicago, Illinois 60607, 1960, 47 pp., $2.50. Grades 5-9.
+
+_All About the Atom_, Ira M. Freeman, Random House, Inc., New York
+      10022, 1955, 146 pp., $2.50. Grades 4-6.
+
+_Atoms at Your Service_, Henry A. Dunlap and Hans N. Tuch, Harper and
+      Row, Publishers, New York 10016, 1957, 167 pp., $4.00. Grades 7-9.
+
+_Carbon-14 and Other Science Methods that Date the Past_, Lynn and Gray
+      Poole, McGraw-Hill Book Company, New York 10036, 1961, 160 pp.,
+      $3.95. Grades 9-12.
+
+_Experiments with Atomics_ (revised edition), Nelson F. Beeler and
+      Franklyn M. Branley, Crowell Collier and Macmillan, Inc., New York
+      10022, 1965, 160 pp., $3.50. Grades 5-8.
+
+_The Fabulous Isotopes: What They Are and What They Do_, Robin McKown,
+      Holiday House, Inc., New York 10022, 1962, 189 pp., $4.50. Grades
+      7-10.
+
+_Inside the Atom_ (revised edition), Isaac Asimov, Abelard-Schuman,
+      Ltd., New York 10019, 1966, 197 pp., $4.00. Grades 7-10.
+
+_Introducing the Atom_, Roslyn Leeds, Harper and Row, Publishers, New
+      York 10016, 1967, 224 pp., $3.95. Grades 7-9.
+
+_Our Friend the Atom_, Heinz Haber, Golden Press, Inc., New York 10022,
+      1957, 165 pp., $4.95 (out of print but available through
+      libraries); $0.35 (paperback) from Dell Publishing Company, Inc.,
+      New York 10017. Grades 7-9.
+
+_Radioisotopes_, John H. Woodburn, J. B. Lippincott Company,
+      Philadelphia, Pennsylvania 19105, 1962, 128 pp., $3.50. Grades
+      7-10.
+
+_The Story of Atomic Energy_, Laura Fermi, Random House, Inc., New York
+      10022, 1961, 184 pp., $1.95. Grades 7-11.
+
+_The Useful Atom_, William R. Anderson and Vernon Pizer, The World
+      Publishing Company, New York 10022, 1966, 185 pp., $5.75. Grades
+      7-12.
+
+_Working with Atoms_, Otto R. Frisch, Basic Books, Inc., Publishers, New
+      York 10016, 1965, 96 pp., $3.50. Grades 9-12.
+
+
+Footnotes
+
+
+[1]It is called this because 210 is the total number of protons and
+    neutrons in its nucleus.
+
+[2]See the reading list on page 44.
+
+[3]See _Secrets of the Past: Nuclear Science and Archaeology_, which is
+    listed on the inside back cover of this booklet.
+
+
+PHOTO CREDITS
+
+Cover courtesy Groninger Museum voor stad en Lande
+
+    Page
+
+      5      Yale Joel, _Life_ magazine, copyright © Time, Inc.
+      6      Her Majesty the Queen, copyright © reserved
+    7 & 8    Ullstein Bilderdienst
+     10      Rijksmuseum, Amsterdam
+     23      National Gallery of Art, Washington, D. C., Andrew Mellon
+             Collection
+   35 & 40   National Gallery of Art, Washington, D. C., Chester Dale
+             Collection
+     43      National Gallery of Art, Washington, D. C., Andrew Mellon
+             Collection
+
+                      ★ U.S. GOVERNMENT PRINTING OFFICE: 1974—747-556/15
+
+
+The U. S. Atomic Energy Commission publishes this series of information
+booklets for the general public. The booklets are listed below by
+subject category.
+
+If you would like to have copies of these booklets, please write to the
+following address for a booklet price list:
+
+  USAEC—Technical Information Center
+  P. O. Box 62
+  Oak Ridge, Tennessee 37830
+
+School and public libraries may obtain a complete set of the booklets
+without charge. These requests must be made on school or library
+stationery.
+
+ Chemistry
+
+ IB-303      The Atomic Fingerprint: Neutron Activation Analysis
+ IB-301      The Chemistry of the Noble Gases
+ IB-302      Cryogenics: The Uncommon Cold
+ IB-304      Nuclear Clocks
+ IB-306      Radioisotopes in Industry
+ IB-307      Rare Earths: The Fraternal Fifteen
+ IB-308      Synthetic Transuranium Elements
+
+ Biology
+
+ IB-101      Animals in Atomic Research
+ IB-102      Atoms in Agriculture
+ IB-105      The Genetic Effects of Radiation
+ IB-110      Preserving Food with Atomic Energy
+ IB-106      Radioisotopes and Life Processes
+ IB-107      Radioisotopes in Medicine
+ IB-109      Your Body and Radiation
+
+ The Environment
+
+ IB-201      The Atom and the Ocean
+ IB-202      Atoms, Nature, and Man
+ IB-414      Nature’s Invisible Rays
+
+ General Interest
+
+ IB-009      Atomic Energy and Your World
+ IB-010      Atomic Pioneers—Book 1: From Ancient Greece to the 19th
+             Century
+ IB-011      Atomic Pioneers—Book 2: From the Mid-19th to the Early
+             20th Century
+ IB-012      Atomic Pioneers—Book 3: From the Late 19th to the Mid-20th
+             Century
+ IB-002      A Bibliography of Basic Books on Atomic Energy
+ IB-004      Computers
+ IB-008      Electricity and Man
+ IB-005      Index to AEC Information Booklets
+ IB-310      Lost Worlds: Nuclear Science and Archeology
+ IB-309      The Mysterious Box: Science and Art
+ IB-006      Nuclear Terms: A Glossary
+ IB-013      Secrets of the Past: Nuclear Energy Applications in Art
+             and Archaeology
+ IB-017      Teleoperators: Man’s Machine Partners
+ IB-014,     Worlds Within Worlds: The Story of Nuclear Energy Volumes
+ 015, & 016  1, 2, and 3
+
+ Physics
+
+ IB-401      Accelerators
+ IB-402      Atomic Particle Detection
+ IB-403      Controlled Nuclear Fusion
+ IB-404      Direct Conversion of Energy
+ IB-410      The Electron
+ IB-405      The Elusive Neutrino
+ IB-416      Inner Space: The Structure of the Atom
+ IB-406      Lasers
+ IB-407      Microstructure of Matter
+ IB-415      The Mystery of Matter
+ IB-411      Power from Radioisotopes
+ IB-413      Spectroscopy
+ IB-412      Space Radiation
+
+ Nuclear Reactors
+
+ IB-501      Atomic Fuel
+ IB-502      Atomic Power Safety
+ IB-513      Breeder Reactors
+ IB-503      The First Reactor
+ IB-505      Nuclear Power Plants
+ IB-507      Nuclear Reactors
+ IB-510      Nuclear Reactors for Space Power
+ IB-508      Radioactive Wastes
+ IB-511      Sources of Nuclear Fuel
+ IB-512      Thorium and the Third Fuel
+
+    [Illustration: AEC logo]
+
+                     U. S. ATOMIC ENERGY COMMISSION
+                     Office of Information Services
+
+
+
+
+                          Transcriber’s Notes
+
+
+—Silently corrected a few typos.
+
+—Retained publication information from the printed edition: this eBook
+  is public-domain in the country of publication.
+
+—In the text versions only, text in italics is delimited by
+  _underscores_.
+
+*** END OF THE PROJECT GUTENBERG EBOOK 66082 ***

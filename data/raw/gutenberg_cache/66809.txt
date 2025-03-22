@@ -1,0 +1,1520 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 66809 ***
+
+[Transcriber's Note:
+
+Typographical errors (such as "COMAT" appearing for "COMBAT" in
+the title) and punctuation inconsistencies have been retained.
+The goal has been to provide a historically accurate representation of
+the original 1944 publication.]
+
+
+
+
+RESTRICTED
+
+NOTES ON THE USE OF OXYGEN EQUIPMENT
+IN THE B-17, B-24, & B-29 FOR COMAT CREWS
+
+*  *  *  *  *  *  *  *  *  *  *  *  *  *
+
+THIS PUBLICATION MAY BE USED BY PERSONNEL RENDERING SERVICE TO THE
+UNITED STATES OR ITS ALLIES
+
+Paragraph 5.d. of Army Regulation 380-5 relative to the handling of
+"restricted" printed matter is quoted below.
+
+    "d. Dissemination of restricted matter.--The information contained
+    in restricted documents and the essential characteristics of
+    restricted material may be given to any person known to be in the
+    service of the United States and to persons of undoubted loyalty and
+    discretion who are cooperating in Government work, but will not be
+    communicated to the public or to the press except by authorized
+    military public relations agencies."
+
+RESTRICTED
+
+
+
+
+FOREWORD
+
+These notes were originally intended as a source of general reference
+concerning OXYGEN EQUIPMENT AND ITS USE by members of crews of the B-17
+and B-24 heavy bomber. With the advent of the B-29 as a combat bomber,
+the section on THE B-29 AT HIGH ALTITUDE (Page  ) was added to supply
+certain specialized information concerning this ship. Every B-29 crew
+member should be familiar with the INTRODUCTION and the section on THE
+DEMAND OXYGEN SYSTEM as well as this specialized information. The
+subject matter is presented from a PRACTICAL point of view, based upon
+actual experiences encountered on altitude missions. Detailed
+information on oxygen equipment may be found in the following TECHNICAL
+ORDERS.
+
+  03-50-1  Use of Oxygen and Oxygen Equipment.
+  03-50A-5  Type A-12 Demand Oxygen Regulator (Pioneer).
+  03-50A-8  Type A-12 Demand Oxygen Regulator (Airco).
+  03-50B-1  Type A-10 Revised Oxygen Mask.
+  03-50B-6  Type A-14 Demand Oxygen Mask.
+  03-50C-3  Low Pressure Oxygen Cylinders.
+  03-50D-1  Oxygen Pressure Signal Assembly.
+  03-50D-2  Oxygen Flow Indicator Type A-1.
+  03-50D-4  Oxygen Flow Indicator Type A-3.
+  03-50D-5  Oxygen Pressure Gage Type K-1.
+
+
+
+
+INDEX
+
+  Auto-Mix  17
+  Ceiling, effect of oxygen on  3
+  Dangers with oxygen  50
+  Demand oxygen system  7
+  Demand type masks  8
+  Duration of oxygen supply
+    B-17  38
+    B-24  44
+    Method of computing  40
+  Emergency valve  19
+  Explosive Decompression   61
+  Flow indicator  32
+  Hazards of oxygen-lack  1
+  Leaks in oxygen lines  49
+  Leaks in regulator  11
+  Mask, Demand
+    Fitting to face  9
+    Technic, at altitude  13
+    Testing for leaks  10
+  Mask-Regulator connection  16
+  Night Vision  2
+  Oxygen cylinders  37
+  Oxygen deficiency at altitude  3
+  Oxygen installation, Servicing of  47
+  Oxygen discipline  4
+  Oxygen systems
+    B-17  36
+    B-24  43
+    B-29  57
+  Oxygen systems, diagrams of
+    B-17  38
+    B-24  47A
+    B-29  60
+  Oxygen equipment, check of  34
+  Portable oxygen equipment  20
+  Precautions with demand system  34
+  Passing out at altitude  51
+  Pressure Cabins, B-29  56
+  Regulator, Demand
+    A-12  17
+    A-13  20
+  Regulator hose clip  16
+  Revival of passout victim  51
+  Servicing oxygen installations  47
+  Signal assembly  32
+  Sniff-tester  11
+  Testing for mask leak  10
+  The B-29 at High Altitude  53
+  Walk-around bottle  20
+  Walk-around bottle
+    Uses of  20
+    Large, for engineer  25
+  When to use oxygen  1
+
+
+
+
+INTRODUCTION
+
+    As a member of a heavy bomber team, in combat you will be living and
+fighting in a world where man has no business--from three to six miles
+above the environment for which nature designed you.
+
+    Successful and effective operation of combat crews at altitudes in
+excess of 15,000 feet requires that EVERY crew member be familiar with
+altitude problems. You must be so thoroughly familiar with your oxygen
+equipment that you will use it PROPERLY without giving it a thought. The
+time to acquire this experience is during operational training--not
+after you have pulled several boners in combat.
+
+    Through long hours of tiring training you have developed superior
+judgment, ability to make decisions quickly, and efficiently in firing
+and in other duties. Most of your training has been confined to
+relatively low altitudes in a relatively "normal" environment. Now you
+are going to continue this training "upstairs". To maintain the
+superiority and efficiency you possess OXYGEN MUST BE USED above 10,000
+feet. Above 18,000 feet oxygen must be used to maintain consciousness
+and life itself.
+
+WHEN SHOULD FLYERS USE OXYGEN?
+
+   (1) When wounded, especially with injuries accompanied by
+       hemorrhage or shock.
+
+   (2) Above 10,000 feet on day missions, both in training and combat.
+
+   (3) From ground up on all night missions.
+        (a) To prevent night blindness.
+        (b) Night vision impaired early and to a marked degree at
+            comparatively low altitude.
+
+HAZARD OF OXYGEN-LACK
+
+   (1) At 12,000 to 15,000 feet (several hours): fatigue, drowsiness,
+       headache.
+
+   (2) At 15,000 to 18,000 feet (½ to 1 hour):
+         False sense of well being
+         Overconfidence
+         Narrowing of field of attention
+         Faulty reasoning
+         Poor judgement
+         Loss of self-criticism
+         Clumsy
+         Blurring and double vision
+         Decreased hearing
+         Poor memory
+         May pass out
+
+   (3) Above 18,000 feet:
+         Symptoms come on faster
+         Loss of muscle control
+         Loss of awareness of lapse of time
+         Loss of judgment and self-criticism
+         Loss of memory and ability to think
+         Loss of vision and hearing
+         Purposeless movements, repeated over and over
+         Emotional outbursts--hysteria, crying, laughing, anger
+         Loss of consciousness eventually:
+             at 26,000 feet 4 to 6 minutes
+             at 28,000 feet 2 to 4 minutes
+             at 30,000 feet 1 to 2 minutes
+             at 38,000 feet 30 seconds or less
+         The above varies with different individuals.
+
+   (4) Loss of night vision.
+         Night vision is reduced to one-half at 12,000 feet without
+         oxygen. Breathing oxygen restores it to normal.
+
+   (5) Breathing oxygen raises your ceiling.
+
+        ALTITUDE   %OXYGEN            EQUIVALENT
+          FEET     BREATHED           LEVEL (feet)
+        18,000        60                ground
+        26,000        85                ground
+        30,000        100               ground
+        33,000        100                8,000
+        38,000        100               12,000
+        44,000        100               22,000
+
+
+
+
+REASONS FOR OXYGEN DEFICIENCY AT ALTITUDE
+
+   (1) Inadequate supply for the mission. The low pressure oxygen system
+       in the B-17 and B-24 is fully charged to a capacity of 450 pounds
+       per square inch. This supply should last 7 to 9 hours, depending
+       on activity of the crew members (Auto-Mix "ON").
+
+   (2) Oxygen supply exhausted by leaks in oxygen lines or cylinders.
+
+   (3) Flyer getting insufficient oxygen:
+
+       (a) Attempts to do excessively hard work.
+
+       (b) Mask leak: Improper fit; frozen exhaust valve; holes in mask
+           or hose; growth of stubby beard.
+
+       (c) Leak around gasket between mask-regulator connection.
+
+       (d) Loose connections where supply hose connects to regulator.
+
+       (e) Freezing of moist oxygen at extremely low temperature.
+
+       (f) Obstruction of openings in regulator.
+
+       (g) Hole in rubber diaphragm in regulator.
+
+   (4) Breathing too deeply may produce a partial vacuum inside mask
+       causing air to leak in from bottom or sides. BREATHE NATURALLY.
+
+    5  Don't expect to get oxygen from an empty walk-around bottle.
+       If not fully charged, the bottle may last only a minute or two.
+
+   (6) Improper use of walk-around equipment.
+
+
+
+
+OXYGEN DISCIPLINE
+
+    It is mandatory that every member of a heavy combat crew be highly
+trained in oxygen discipline. It is urged that oxygen "drill" be
+practiced by ALL crew members for at least 15 minutes on routine
+training flights before altitude missions are ever undertaken. Practice
+using and re-filling the walk-around bottle at various stations.
+Practice changing masks (page 12) and become expert at using oxygen from
+emergency sources (page 27). Practice reviving some crewmate who has
+supposedly passed out from oxygen lack. Practice going to your escape
+hatch on a walk-around bottle with parachute in place. Practice all
+emergencies that may arise some day in combat and when they arise they
+won't be emergencies.
+
+    The following responsibilities will fall upon every member of a
+combat crew. The airplane commander should satisfy himself that the
+following points are observed or provided for:
+
+ (1) Fitting of the crew with masks, (page 9). Periodical check of
+     masks and mask fit.
+
+ (2) All crew members are familiar with hazards of oxygen-lack at
+     altitude. (page 1).
+
+ (3) See that all crew members are drilled in "precautions with the
+     demand system." (page 19).
+
+ (4) Be sure that ALL crew members realize the danger of mixing oil and
+     oxygen. (page 50).
+
+ (5) Be able to compute oxygen duration in different systems on ship
+    (pages 39 & 46).
+
+ (6) PRE-FLIGHT CHECK OF OXYGEN EQUIPMENT.
+
+    (a) Pressure in different systems.
+
+    (b) Be able to charge oxygen system if necessary. (page 47).
+
+    (c) Check regulators for proper setting (auto-mix), properly
+        working diaphragm, hose-regulator connection, emergency
+        valve OFF.
+
+    (d) Check EACH station for possible oxygen deficiency at altitude,
+        (page 3).
+
+    (e) Check portable oxygen equipment, regulator diaphragm, and
+        oxygen supply in bottles, see that regulators are working
+        properly.
+
+    (f) Check all recharger hose valves for sluggish or sticking valves
+        (page 20).
+
+ (7) Know how to re-distribute crew members to stations where oxygen
+     is available if part of supply is lost. (pages 41 & 45).
+
+ (8) Someone to be able to find and repair a leak in oxygen lines.
+     (page 49).
+
+ (9) Frequently check condition of crew members during flight. See
+     that one crew member checks on a fellow crewmate when
+     practicable. Check every 10-15 minutes above 20,000 feet.
+     Co-Pilot can help in this regard.
+
+(10) All crew members understand principles of reviving a crew member
+     unconscious from oxygen lack. (page 51).
+
+(11) Report to crew chief and personal equipment officer _on landing_
+     any and all faulty oxygen equipment. Make sure repairs to such
+     equipment have been made before next flight.
+
+
+
+
+THE DEMAND OXYGEN SYSTEM
+
+    The "demand" oxygen system in your ship insures a fully adequate
+oxygen supply except under the most extreme conditions. It was developed
+to supply you, AUTOMATICALLY, as much oxygen as you need when you need
+it--at all altitudes and under all conditions.
+
+The DEMAND OXYGEN SYSTEM consists of the following:
+
+  (1) Demand type mask.
+
+  (2) Mask to regulator tubing.
+
+  (3) Demand type regulator (A-12).
+
+  (4) Portable recharging hose (for filling walk-around bottles
+
+  (5) Portable equipment:
+      (a) A-4 Cylinder with A-13 demand regulator.
+      (b) D-2 cylinder with A-13 regulator.
+
+  (6) A panel containing:
+      a flow indicator
+      an oxygen pressure gauge
+
+  (7) Cylinders containing breathing oxygen.
+
+
+
+
+DEMAND TYPE MASKS
+
+Styles: A-10A and A-14
+
+    The A-10 mask is obsolete.
+
+    The A-10 revised mask is obsoete.
+
+    The A-14 mask is standard issue for staging and combat areas, and
+operational or replacement training schools.
+
+    The A-10-A mask is used in training where sufficient A-14 masks
+are not available.
+
+    Both the A-10-A and the A-14 masks are suspended from the summer
+and winter flying helmets.
+
+    NOTE: It is important that AERIAL GUNNERS obtain a properly fitting
+mask, fit to both summer and winter helmets at the first station
+available. Because of the extreme cold to which gunners are subjected
+under combat conditions, you MUST learn to remove and replace the mask
+quickly and accurately WEARING HEAVY GLOVES. It is not easy to
+manipulate a mask or unjam a .50 cal. gun with numb fingers in heavy
+flying gloves. PRACTICE these things on every training flight with
+gloves ON.
+
+FITTING THE MASK TO THE FACE -- There are two considerations in
+obtaining a proper fit:
+  (1) An _AIR-TIGHT SEAL_ of mask to face.
+  (2) Comfort of fit without undue pressure.
+
+    The A-10-A and A-14 masks come in three sizes. Roughly, 60% of
+flyers will require the STANDARD (medium) size mask, 30% the LARGE mask,
+and the remaining 10% the SMALLER sizes. General instructions concerning
+fitting are.
+
+(1) Suspension points on both summer and winter helmets must be
+determined INDIVIDUALLY on each flyer. This is a job for your squadron
+personal equipment officer or the group aviation physiologist or his
+trained assistant.
+
+(2) It is important that the mask be suspended _high_ on the face,
+sealing to the boney portion of the nose and cheek bones and NOT
+the soft tissues. Otherwise you'll get a leak or a "clothespin on
+the nose" effect from pressure of the nose wire.
+
+NOTE:
+
+    (a) Be sure the regulator hose clip or the clip on the walk-around
+    bottle is clipped high enough on your clothing to remove all
+    tension from mask hose--otherwise the mask will be pulled down
+    on the face and will leak outside air.
+
+    (b) Above 25,000 feet with the temperature 20 degrees and lower, the
+    tissues of the face contract and the rubber mask loses its
+    pliability. Under these conditions, the mask tends to fall away
+    from the face and it becomes necessary to SHORTEN THE UPPER
+    SUSPENSION STRAPS. On returning to warmer altitudes, these must
+    be loosened again to avoid discomfort from a too tightly fitting
+    mask. (Applies chiefly to gunners).
+
+(3) Excessive beard stubble will hold the mask away from the face and
+cause leak around the jaws.
+
+(4) See page 35 for care of mask.
+
+(5) TESTING FOR LEAKS -- Holding the thumb over the end of the mask tube
+(rapid disconnect) and inhaling GENTLY should cause the mask to collapse
+on the face. The most common place for a leak is alongside the bridge of
+the nose. The actual site of leak is determined by putting finger-point
+pressure beside the nose and over the cheek bones, one point at a time.
+The nose wire is then re-adjusted to cause pressure at this point. Be
+sure the mask is high enough on the face and on the bridge of the nose.
+If the seal is still below the boney portion of the nose try the next
+largest size mask.
+
+(6) "SNIFF-TESTER" -- An effective "sniff-tester" for detecting small
+leaks can be obtained as follows: Obtain one of the commercial nasal
+inhalers - Benzedrine, Vick's, Penetro (or metal tube of comparable
+size). Cut off the end ordinarily inserted into the nose flush with the
+barrel of the container, and remove contents. Fit barrel with an
+airtight cork stopper. Straighten a paper clip or take a piece of wire
+of similar gage, cut to 2½ inch length, and drive one end firmly into
+lower side of cork stopper. Fashion other end of wire into a 1/4 inch
+fish hook bend. Make a ball of cotton or tightly wrapped gauze, ½ inch
+in diameter, and attach to bent end of wire. Soak the cotton or gauze,
+in oil of peppermint or oil of cloves (obtained from squadron dentist or
+flight surgeon) and fit cork stopper, carrying the "sniff-tester"
+tightly into metal container. To "sniff-test", remove the stopper and
+hold the cotton plug on both sides of the nose at the top of the mask
+(eyes closed). Inhale gently with the mask hose blocked. A leak is
+present if the contents of the "sniff-tester" is detected. Rough as this
+test seems, it is very sensitive.
+
+NOTE: The "sniff-tester" is also effective in testing the DEMAND
+REGULATOR for leaks. Put on mask. Fit snugly to face. Plug into
+regulator hose. Turn Auto-Mix (Air) Lever OFF. Hold sniff-tester close
+to regulator diaphragm and breathe normally several times. If the
+contents of the sniff-tester" are detected, the regulator has a leak.
+
+TWO TYPES OF "SNIFF-TESTERS"
+
+(A) Cotton pledget soaked with oil of peppermint.
+
+(B) Benzedrine inhaler containing blotter soaked with oil of peppermint.
+
+[Illustration: Fig. 1]
+
+REMOVING MASK AT ALTITUDE -- There are many reasons why your oxygen mask
+will be removed above 20,000 feet. This has been responsible for
+countless "accidents" in heavy bomber crews IN advanced training and in
+combat. LEARN THE PROPER TECHNIC NOW, wearing heavy gloves. You can take
+your oxygen mask off at 30,000 feet and be as safe as you are on the
+ground, PROVIDING YOU HOLD YOUR BREATH and don't breathe the "thin"
+outside air. The following are a few of the reasons why you will remove
+your mask at high altitude. DON'T REMOVE YOUR GLOVES, for freezing
+occurs almost instantaneously and painlessly at temperatures of 30 below
+and lower.
+
+(1) To wipe moisture from inside the mask at regular intervals -- for
+comfort and to prevent ice formation around exhaust valve.
+
+  NOTE: A puddle of condensed moisture lying over the flutter
+  valve will render it useless. You will be warned of this; when
+  you breathe out, the air from your mask comes out the top of the
+  mask, fogging your goggles.
+
+(2) To blow your nose. To help clear your ears on descent by holding
+nose and blowing (if necessary). To vomit if you get sick.
+
+(3) To take nourishment and hot drinks on missions.
+
+(4) To change masks.
+
+TECHNIC -- NEVER breathe when mask is off face or is loosened from
+helmet. PRACTICE THIS with a mirror: (See Fig. 2, 3 & 4)
+
+(1) Hold mask to face firmly with left hand.
+
+(2) Disengage mask clip from helmet with right hand.
+
+(3) Holding mask snugly in position with left hand, take 3 or 4 deep
+breaths of oxygen.
+
+(4) Remove mask with left hand, HOLDING BREATH. The right hand is free
+to service mask, to blow nose or to administer food or drink. Hold mask
+in left hand.
+
+(5) When you have to breathe, reapply mask to face making sure it is
+held snugly along sides of nose with index and middle finger of left
+hand, one on each side. of nose (hold mask in palm of hand with index
+and middle finger making a V, one on each side of the nose piece).
+
+(6) Take 4 or 5 deep breaths from the mask and repeat #4. This procedure
+may be kept up indefinitely with complete safety, providing you DON'T
+BREATHE OUTSIDE AIR.
+
+[Illustration: Fig. 2 MASK TECHNIC (1)]
+
+[Illustration: Fig. 3 MASK TECHNIC (2 & 3)]
+
+[Illustration: Fig. 4 MASK TECHNIC (4)]
+
+
+
+
+MASK TO REGULATOR CONNECTION (RAPID DISCONNECT)
+
+IS THE RUBBER GASKET IN PLACE? Without the gasket an air-tight seal at
+this joint is impossible. Dangerous oxygen-lack will result above 24,000
+feet. With a leak at this altitude serious mental and physical
+inefficiency will develop, even though you may not pass out. Above
+28,000 feet you will quickly become punch drunk, and the pass-out will
+soon follow.
+
+USE THE CLIP ON THE REGULATOR TUBING--It is there to remove tension on
+this connection which could (1) cause serious mask leak by pulling the
+mask down on the face, or (2) cause mask tubing to become disconnected.
+In combat these things would fail to attract your attention. Without
+warning you are first slap-happy and then drop unconscious.
+
+THE RAPID DISCONNECT REQUIRES CONSTANT ATTENTION whether you are plugged
+into a fixed station or into a walk-around bottle. A pull of at least 12
+pounds should be required to separate the male and female connection of
+the rapid disconnect. The security of the connection can be increased by
+spreading the groups at the tip of the male connection. (See diagram,
+pre-flight check, page 39).
+
+CONNECTION OF HOSE TO REGULATOR IS NOT A SWIVEL JOINT--Above 24,000 feet
+the collar must be turned up tightly to prevent a dangerous leak of air.
+
+Make sure that the regulator hose is wired securely to the goose neck on
+the regulator.
+
+
+
+
+THE DEMAND (A-12) REGULATOR
+
+    In principle the demand regulator is a diaphragm-operated flow valve
+which is opened by the user's inspiration and closes automatically when
+the suction ceases. This gives you as much oxygen as you ask for. All
+you do is breathe. A short breath draws a short squirt of oxygen, while
+deep, rapid breathing brings forth large shots in rapid succession.
+
+    The regulator can be set to conserve oxygen, or to give you 100%
+oxygen, regardless of the altitude you are flying. This is governed by
+the position of the "Auto-Mix" (AIR) lever.
+
+    AUTO-MIX (AIR) "ON" (or NORMAL OXYGEN) is the position for routine
+use. This saves oxygen.
+
+(1) Gives a mixture of air and oxygen:
+
+    10,000 feet -- approx. 30% oxygen
+    18,000 feet -- approx. 65% oxygen
+    26,000 feet -- approx. 85% oxygen
+    30,000 feet -- approx. 100% oxygen
+
+    Under the above conditions, so far as oxygen is concerned, you are
+    at ground level.
+
+(2) Use oxygen from ground level on night missions to prevent night
+    blindness.
+
+(3) Increased altitude increases oxygen supply AUTOMATICALLY.
+
+(4) Percentage of oxygen delivered keeps you at ground level efficiency.
+
+(5) Ships oxygen supply, charged to 450 pounds lasts 10 men from 7 to 9
+hours. (20,000 to 30,000 feet).
+
+AUTO-MIX (AIR) "OFF (or 100% oxygen) -- used when ordered by first
+pilot, and on special occasions.
+
+(1) Gives 100% oxygen, on demand, regardless of altitude.
+
+(2) Used on special occasions:
+
+    (a) To casualties suffering from:
+        1. Loss of blood.
+        2. Shock.
+        3. Passing out from oxygen lack (revived).
+
+    (b) Regulator not giving enough oxygen in "ON" position (blue
+        finger nails-beginning to feel pleased with yourself).
+
+    (c) To avoid gas poisoning if you land in a gassed area without gas
+        masks.
+
+    (d) To flush nitrogen gas from body fluids when going above 30,000
+        feet, helping to prevent bends.
+
+(3) Ship's oxygen supply, charged to 450 pounds, lasts 6 hours or less.
+
+THE "EMERGENCY" VALVE IS DANGEROUS -- it should be used with extreme
+caution. A whole system can be depleted of oxygen in an hour or less if
+the "emergency" is opened only a quarter of a turn. Emergency "ON"
+changes regulator into a constant flow system and wastes precious
+oxygen. Use only to revive an unconscious crew member or to check line
+to make sure it is clear. Always make sure that "Emergency" is TIGHTLY
+TURNED OFF before ship leaves the ground.
+
+NOTE:
+    Don't be confused by the difference in appearance of demand
+regulators manufactured by various companies (see Fig. 9). THEY ALL
+WORK THE SAME.
+
+
+
+
+PORTABLE OXYGEN EQUIPMENT
+
+    A PORTABLE RECHARGER HOSE is available at every station in the ship.
+Every crew member should know their location so well that they can be
+located immediately, even on the darkest night. In addition, there is a
+long recharger hose for filling the ball turret oxygen cylinder.
+(B-17-F).
+
+    When drawing oxygen through a portable recharger the refiller valve
+must engage the filler nozzle TIGHTLY, otherwise oxygen leaks around the
+connection and is lost. The oxygen supply of an entire system has been
+wasted in this manner.
+
+    FREEZING or STICKING of refiller valve is not uncommon at extremely
+low temperatures. Always check this after refilling your walk-around. A
+stuck valve will quickly deplete the entire supply of oxygen in that
+system. If the valve is stuck plug in a walk-around bottle and leave it
+there.
+
+    USES OF THE WALK-AROUND BOTTLE -- (1) As an ACCESSORY REGULATOR --
+the A-13 regulator on the walk-around bottle is a demand type regulator
+without the "auto-mix" feature. It gives 100% oxygen on inspiration
+regardless of the altitude. By connecting the walk-around bottle FIRMLY
+into the portable recharger valve, one has an extra source of oxygen at
+that particular station. As long as the oxygen gauge at the station
+registers oxygen pressure the user is assured a supply of pure oxygen
+... his supply is coming directly from the system. Remember this when
+reviving a passed out crew mate in the waist in the vicinity of the ball
+turret--the long recharger hose used to charge the oxygen bottle on the
+ball turret can be plugged directly into a walk-around bottle attached
+to the unconscious crew member's mask.
+
+    If other long recharger hoses can be obtained from Tech Supply they
+will be extremely handy attached at the pilots station, in the bomb bay
+and to the recharger outlet at the right waist gunner's station. This
+would permit the engineer, who in flight is continuously filling his
+walk-around bottle, considerable liberty. He could cover most of the
+ship, staked out on a long recharger hose connected to his walk-around
+bottle. It would also provide a readily accessible source of oxygen to
+revive crew members who pick such out-of-the-way places to pass out as:
+the bomb bay cat-walk, the bomb bay doors, under the flight deck, or in
+some remote part of the waist.
+
+    One or two extension portable recharger hoses shown in photograph
+page 22 should be standard equipment in heavy bombers.
+
+[Illustration: Fig. 5 EXTENSION RECHARGER HOSE]
+
+(2) SOURCE OF OXYGEN FOR BAIL-OUT -- Above 20,000 feet, breathing of
+oxygen is necessary to reach your particular escape hatch. After this
+spot is gained you won't need oxygen ... unless you start fiddling with
+the rip-cord too soon. Go to your exit on the walk-around bottle, fill
+your lungs deeply five or six times from the bottle, HOLD YOUR BREATH,
+and take the dive. Continue to hold your breath during the descent as
+long as possible. By the time your lungs are bursting for air you'll be
+from 8 to 10,000 feet nearer the ground and won't need extra oxygen.
+Leave the mask on--it will protect your face. If the skies are filled
+with enemy planes it may be wise to continue the free fall. By now you
+can start breathing without danger of serious oxygen-lack. Any dimming
+of mental acuity would be of such short duration that you'd have plenty
+of time to pull the ripcord.
+
+PRACTICE GOING TO YOUR ESCAPE HATCH ON A WALK-AROUND BOTTLE DURING
+OPERATIONAL TRAINING -- PRACTICE ON JUST HOW YOU WOULD CLEAR THE SHIP --
+GO THROUGH ALL OF THE ROUTINE EXCEPT THE BAILOUT and that might not be
+time wasted, at least just once before the time comes when you might
+have to!
+
+    Above 30,000 feet you wouldn't want to open your 'chute even if you
+had plenty of oxygen. You'd freeze a hand or foot or both if you did.
+Under these conditions you'd free fall, holding your breath, as long as
+possible. Then, after three or four breaths of "thin" air, pull the rip
+cord. Your altitude should be in the vicinity of 10,000 to 12,000 feet
+below that when you abandoned ship, and the degree of oxygen-lack
+encountered here wouldn't be of dangerous consequence. You'll avoid
+freezing, and perhaps the gunfire of enemy interceptors.
+
+(3) TO MOVE ABOUT THE SHIP For this the walk-around bottle is very
+useful ... and very tricky! The trouble is that the thing is good only
+as long as it gives oxygen. It will rarely, if ever, be fully charged so
+forget that 8 to 12 minute stuff. You can't fill your bottle any fuller
+than the pressure in the line you'll be drawing from. And the only time
+that will be fully charged is when the ship is on the ground, freshly
+charged with oxygen, ready for the take-off. When you need the
+walk-around bottle, three or four hours will have passed ... and the
+pressure in your filling line will be some fraction of the full charge.
+As a rule you'll do well to get the bottle half charged. And you're
+going to be moving about at altitude and needing 3 to 5 times as much
+oxygen as if you were sitting quietly in a corner. So plan on the
+walk-around supply lasting 1½ to 2 minutes ... then you won't be caught
+short Refill the bottle frequently. Refill it every time you pass a
+portable recharger hose ... and there's one at every station. Failure
+to do this has caused more pass-outs in second and third phase training
+than any other single cause ... unless you include carelessness. And
+careless people don't last long in the kind of work you're specializing
+in! There's a check-valve on the walk-around bottle, so you won't lose
+anything if you plug into a system that reads less than the gauge on the
+bottle.
+
+NOTE TO ENGINEERS: Because of its limited supply, the standard
+walk-around bottle is next to useless for many of your jobs which must
+be done in flight on a walk-around bottle. The ENGINEER NEEDS A LARGER
+WALK-AROUND BOTTLE. One, having a supply 5 TIMES AS GREAT as the
+standard portable cylinder, can be obtained as follows:
+
+    Obtain a D-2 oxygen cylinder (stock No. 5500-344020 - class 03K)
+from Air Corps Supply. Remove the A-13 regulator assembly from a
+standard walk-around bottle. Remove the spud from one end of the D-2
+cylinder and screw the A-13 regulator in tightly. Fill to 400 p.s.i. and
+leave overnight to determine if pressure is maintained or lost due to a
+leak. (A drop of 25 to 50 pounds will occur in the absence of a leak due
+to cooling of the oxygen which warmed up when the cylinder was charged).
+
+[Illustration: Fig. 6 D-2 WALK-AROUND BOTTLE]
+
+    For leaks here or elsewhere in an oxygen system use the following
+anti-sieze and sealing compound on the pipe threads: Pioneer Antisieze
+No. 2., Class 96B, Stock no. 7500-050800. Never use a sealing compound
+which contains oil.
+
+    A satisfactory bag with shoulder strap for carrying the walk-around
+bottle when in use can be made from heavy twill or canvas by the
+parachute department.
+
+
+
+
+EMERGENCY OXYGEN EQUIPMENT
+
+    In addition to your ship's regular oxygen supply, you will take
+emergency oxygen rations along on combat missions. If practical you will
+also have several extra masks on board. Know where they are stored.
+
+(1) Both of the low pressure walk-around bottles should be kept as full
+as possible-- you never know when you may need them. If full, the small
+walk-around bottle is good for only a few minutes, the large for 30 to
+45 minutes, depending on your activity.
+
+(2) High pressure equipment.
+
+a. A-2 bottle with bag-mask. (Fig. 7)
+
+     In some theaters each combat crewman is issued this equipment. The
+   high pressure bottle is fully charged to 1800 and will last
+   approximately 45 minutes to one hour. It is used with the continuous
+   flow mask.
+
+[Illustration: Fig. 7 A-2 OXYGEN BOTTLE WITH BAG MASK]
+
+
+b. Bail-out bottle. (Fig. 8)
+
+      This small high pressure cylinder is a "last resort" source of
+    emergency oxygen. It contains approximately 12 minutes supply. The
+    old style bottle (H-1) is equipped with a pipe stem which is held
+    between the teeth. A newer bail-out bottle (H-2) has a bayonet
+    connection so it can be used with an A-14 mask with bail-out adapter
+    (see fig. 8).
+
+[Illustration: Fig. 8 BAIL OUT BOTTLES]
+
+
+
+
+PRESSURE GAGE
+
+    Your oxygen pressure gage registers from 450 pounds to zero. WATCH
+YOUR PRESSURE GAGE! Except under extreme emergency, don't run the
+pressure down under 50 pounds .... if you do there's danger of moisture
+getting into your refiller line. Then the next time you go to high
+altitude you'll have trouble with freezing in the oxygen line.
+
+
+
+
+FLOW INDICATOR
+
+    Either the bouncing ball or blinking eye will be at each station,
+depending on the vintage of your ship. Only older ships will be equipped
+with the bouncing ball which is no longer manufactured. These indicators
+do not tell HOW MUCH oxygen you are getting ... they merely indicate
+that some oxygen is flowing through the system when you take a breath.
+They may be working O.K. even though your oxygen supply is inadequate.
+The COLOR OF YOUR FINGER NAILS is a better guide to the amount of oxygen
+you are getting, providing your hands are warm. If they become bluish
+above 20,000 feet check mask and connections for leak. Naturally, you
+won't remove your gloves to look at your finger nails if the temperature
+is 20 or 30 degrees below zero. If no leak is found, switch the
+"Auto-Mix" to the OFF position and note if things improve. INFORM YOUR
+PILOT IF AUTO MIX IF LEFT "OFF" and your mission is a long one.
+
+[Illustration: Fig. 9]
+
+[Illustration:
+  PRE-FLIGHT CHECK
+  1--MASK. fit and check washer
+  2--CONNECTION. 12 lb. pull; adjust prongs to fit snugly
+  3--HOSE CLAMP
+  4--REGULATOR. diaphragm; knurled nut tight
+     auto-mix on; smooth motion; emergency off
+  5--PRESSURE within 50 lbs. of initial pressure; within 25 lbs
+     of other gauges.
+]
+
+IN THE AIR:
+
+(1) Check for leak by blockage and gently inhalation each time mask is
+removed and replaced.
+
+(2) Check oxygen flow indicator at regular intervals. Also, CHECK COLOR
+OF NAILS AT REGULAR INTERVALS -- if blue above 20,000 feet turn Auto-Mix
+to "OFF" position.
+
+(3) Check oxygen pressure gauge frequently.
+
+(4) If temperature is below freezing, manipulate mask to free it of ice
+at regular intervals. Wiping moisture from mask periodically will
+prevent freezing of mask.
+
+(5) Open EMERGENCY flow only when absolutely necessary ... notify pilot.
+
+(6) Over 28,000 feet switch Auto-Mix to "Off" position ... turn back to
+"ON" position below this altitude.
+
+(7) Re-fill walk-around bottle frequently when you are using it at
+altitude.
+
+(8) Avoid unnecessary exercise above 20,000 feet ... take your time!
+
+(9) Observe your fellow crew member at frequent intervals above 20,000
+feet. You can recognize before he can if he's in trouble.
+
+ON RETURN TO FIELD
+
+(1) Wipe mask dry. It should be thoroughly cleansed with soap and water
+(inside) after 10 to 14 hours use. Be sure that exhaust flutter valve is
+kept clean.
+
+(2) Inspect mask for leaks or cracks in face-piece.
+
+(3) Change strap adjustment only to take up natural stretch slack.
+
+(4) Lend your mask only in extreme emergency.
+
+(5) Protect your mask from hot sun, moisture, and rough treatment.
+
+(6) Report all defective oxygen equipment to ground crew and to personal
+equipment officer immediately on landing. See that it has been repaired
+or replaced before another altitude mission.
+
+
+
+
+OXYGEN SYSTEMS IN THE B-17
+
+    The Army Air Forces use the low pressure system (maximum charge 450
+pounds per square inch) in preference to the high pressure system (1800
+pounds per square inch) for these reasons:
+
+        (1) Cylinders do not explode when hit.
+
+        (2) Do not "rocket" from moorings when hit.
+
+        (3) Less chance for fire or flash burns.
+
+    A diagrammatic sketch of the FOUR different oxygen systems is shown
+on page 38. EVERY crew member should thoroughly familiarize himself with
+the location of each regulator and each portable recharger hose.
+
+    The four systems, arranged two on a side, offer great advantages in
+combat over a single system. It is possible to redistribute crew members
+whose system has been shot out and stay in formation. Everyone must know
+these alternate positions. (page 41 for B-17, page 45 for B-24).
+
+
+
+
+OXYGEN CYLINDERS
+
+NOTE: Based on combat experiences, continuous changes are being made in
+the oxygen systems and oxygen supply in heavy bombers. The following
+considerations apply only to the type of ship specified. Newer models
+and ships modified at staging areas may be different both in arrangement
+and number of oxygen cylinders. KNOW the oxygen supply for YOUR STATION
+IN YOUR SHIP.
+
+    Two types are found in the B-17. EIGHTEEN G-1 cylinders contain the
+main supply which is distributed through the four systems. All are
+filled through a single recharging line.
+
+    The G-1 cylinder has a volume of 2100 cubic inches and contains 30
+cubic feet of oxygen when charged to a pressure of 450 pounds per square
+inch. In combat the cylinders are charged to 450 pounds or better (all
+cylinders have been tested to withstand 700 pounds pressure). Each
+cylinder is check-valved so that one of a bank of cylinders may be shot
+out with loss of no oxygen from the remaining intact cylinders. Between
+20,000 and 30,000 feet, one G-1 cylinder charged to 450 pounds will last
+one man approximately 5 hours (Auto-Mix "on").
+
+TURRETS:
+
+    The turrets on the earlier models (B-17F) are supplied with F-l type
+cylinders having a capacity of approximately 14 cubic feet when fully
+charged to 450 pounds. Under these conditions a fully charged bottle
+lasts one man approximately 2 hours. (Note: these bottles are recharged
+from the ship's supply during flight, so it will not be possible to
+fully charge them after several hours of flight on oxygen. They will be
+no fuller than the pressure in the system from which they are
+charged--front left system for top turret; rear left system for ball
+turret).
+
+[Illustration: Fig. 10 OXYGEN SYSTEMS B-17G]
+
+    B-17G models are modified so that the turrets are supplied oxygen
+directly through a flexible hose -- the top turret from the front left
+system -- the ball turret from the rear right system. The same changes
+may be found in the ball turret of the B-24.
+
+
+
+
+COMPUTING OXYGEN DURATION
+
+    Several members of the crew must be able to calculate the duration
+of the oxygen supply. The following simple procedure will permit a
+fairly accurate estimate of each systems duration. The figures are based
+on altitudes between 20,000 and 30,000 feet where the majority of your
+combat flying will take place.
+
+G-1 CYLINDERS -- full charge 450 pounds -- each cylinder equals 5 man
+hours.
+
+FORMULA: 5 (man hours) x number of intact cylinders x actual
+         pressure/400 divided by number of men using oxygen from
+         system = DURATION in hours.
+
+Examples:
+
+  FRONT LEFT SYSTEM - 5 cylinders -- full charge to 450 pounds = 25
+  man hours.
+
+    3 intact cylinders (2 shot out), pressure 200 pounds, pilot and
+    navigator on system.
+
+    5 x 3 x 200/400 x 1/2 = 3 plus hours.
+
+    For 3 men:
+
+    5 x 3 x 200/400 x 1/3 = 2 plus hours.
+
+  FRONT RIGHT SYSTEM: 4 cylinders - full charge to 450 pounds = 20 man
+  hours.
+
+  Example:
+
+    4 cylinders, pressure 160 pounds, bombardier, co-pilot, and
+    engineer on system.
+
+    5 x 4 x l60/400 x 1/3 = 2½ plus hours
+
+  LEFT REAR SYSTEM: 6 cylinders - full charge to 450 pounds 30 man
+  hours.
+
+  Example:
+
+    6 cylinders, pressure 200 pounds, radio operator ball turret
+    gunner, left waist gunner and tail gunner on system.
+
+    5 x 6 x 200/400 x 1/4 = 3⅔ hours
+
+  RIGHT REAR SYSTEM: 3 cylinders - full charge to 450 pounds 15 man
+  hours.
+
+  Example:
+
+    3 cylinders, pressure 300 pounds, two men on system.
+
+    5 x 3 x 300/400 x 1/2 = 5 plus hours
+
+    Left rear system out - RO, ARO, AE and two AG's on right rear
+    system.
+
+    5 x 3 x 300/400 x 1/5 = 2 hours.
+
+  F-1 CYLINDER -- ball turret -- full charge to 400 pounds 2 plus hours
+
+    2 (man hours) x 120/400 = 0.5 plus hours (30 plus min)
+
+
+
+
+ALTERNATIVE POSITIONS IN EMERGENCY (B-17G)
+
+Left front system out:
+
+    Navigator on walk-around bottle plugged into Bombardier's recharger
+    hose. Pilot uses Engineer's regulator hose from right front system.
+
+Right front system out:
+
+    Bombardier on walk-around bottle plugged into Navigator's recharger
+    hose. Engineer same on Pilot's recharger hose. Copilot on top turret
+    regulator hose (hose too short in later models).
+
+Left rear system out:
+
+    RO on one regulator from across aisle.
+
+    ARO on regulator right radio compartment.
+
+    AE on walk-around bottle on recharger hose, right radio compartment.
+
+    AG on waist regulator, right.
+
+    AG on tail regulator, right.
+
+Right rear system out:
+
+    RO regular position.
+
+    ARO on bomb bay regulator.
+
+    AE on walk-around bottle plugged to ball turret recharger hose.
+
+    AG on waist regulator, left.
+
+    AG on tail regulator, left.
+
+
+
+
+OXYGEN SYSTEM IN THE B-24
+
+    Like the B-17, the B-24 is equipped with a low pressure oxygen
+system. Location of the cylinders and distribution of the lines,
+however, is entirely different. The oxygen system varies somewhat in
+the different model ships and in individual ships. In the B-24 D
+(beginning with Serial No. 42-40218) to the B-24 H, however, the system
+is essentially as described below. Some of the minor variations will be
+noted, including changes to the supply for the nose positions in late T
+models. FAMILIARIZE YOURSELF WITH THE OXYGEN SYSTEM IN YOUR OWN SHIP.
+
+OXYGEN CYLINDERS:
+
+    There are 22 type G-1 cylinders arranged in eight systems (see
+diagram on page 47B). Sixteen cylinders are banked above the bomb-bay.
+The remaining six are buried in the floor of the rear fuselage
+compartment. There are also two smaller (type D2) cylinders attached to
+the chair of the top-turret gunner. These are not connected to the main
+system but must be charged from a portable recharger line. The main
+system is charged from a single filler valve located in the left side of
+the bomb bay. Each G-1 cylinder, when charged to 450 pounds per square
+inch, contains 30 cubic feet of oxygen, and will last one man
+approximately 5 hours between 20,000 and 30,000 feet (Auto-Mix "on").
+
+DISTRIBUTION SYSTEMS:
+
+    The systems differ radically from those of the B-17. In models up
+through H to early J each individual draws from at least two or three
+cylinders. With the exception of the nose positions there is a maximum
+of two men on the same system. As shown in the diagramatic sketch (page
+47B), the pilot, co-pilot, side gunners, and tail gunner each have their
+own individual system of at least two G-1 bottles.
+
+    In the G, H and early J series the three regulators in the nose are
+supplied by a single system containing only three oxygen cylinders.
+(diagram page 47B). This is inadequate. The later J models have a
+modified system to the nose wherein the bomb bay - radio operator system
+is Tee'd into the supply to the nose positions. This brings to a total of
+six oxygen cylinders for the five stations. (diagram page 47A). Since
+the regulators at the radio operator and bomb bay stations are not used
+continuously during combat missions, this modification to the nose
+positions is adequate. Further, the connections in the lines leading to
+the nose are such that the nose positions are supplied individually as
+well as collectively so that loss of the supply to one system does not
+necessarily deplete the other systems. KNOW THE OXYGEN SYSTEM IN YOUR
+SHIP.
+
+    The bottom turret and camera tunnel regulators are supplied by the
+same system containing three cylinders.
+
+ALTERNATIVE POSITIONS IN EMERGENCY:
+
+    In case of loss of the entire oxygen supply of any one system, the
+affected crew member may move to any other convenient regulator in the
+ship with these exceptions:
+
+  (1) The nose gunner may not move to the navigator-bombardier regulator
+      if the entire system is out.
+
+  (2) The radio operator may not move to the bomb-bay regulator if the
+      entire system is out.
+
+  (3) The bottom turret gunner may not move to the camera tunnel
+      regulator.
+
+This is true because every station, with these three exceptions, has its
+own individual oxygen supply. The use of the walk-around bottle is the
+same as that described for the B-17. (Page 20).
+
+DURATION OF OXYGEN SUPPLY:
+
+    With the present system in the B-24, each man has approximately 9
+hours oxygen supply at 30,000 feet with the Auto-Mix on. However, it
+occasionally becomes necessary in emergencies to calculate the residual
+oxygen supply. This can be done by the simple formula given on page 24:
+
+    5 (man hours) x no. of intact
+    cylinders x actual pressure/400
+    divided by no. of men using the system.
+
+    Application of this formula is much simpler in the B-24, since
+usually only one, and at the most two, men are using a single system.
+
+VARIATIONS:
+
+    The exact location of the demand regulators in a ship is variable,
+depending upon the model, place of installation, etc. It is extremely
+important that you familiarize yourself with the location of the
+regulators in your ship, so that you can move from one to the other in
+darkness, in case of emergency. Many of the B-24 H models have two extra
+regulators: one in the nose, and one in the tail. There is also
+variation in the location of the portable recharging hose for the
+top-turret bottles. This is located in the right side of the ship in
+most earlier models, but in the left side in later models.
+Fundamentally, however, the system in all ships commencing with No.
+42-40218, is as described above. It is up to you to familiarize yourself
+with any minor differences in your ship.
+
+[Illustration: Fig. 11 OXYGEN SYSTEM B-24J MODIFIED]
+
+[Illustration: Fig. 12 OXYGEN SYSTEM B-24D to H]
+
+
+
+
+SERVICING THE OXYGEN INSTALLATION IN THE B-17, B-24 and B-29
+
+CAUTION: Always have a reducing valve between high pressure supply
+cylinders and ship's oxygen system.
+
+1.  Attach recharger hoses to cylinders of both turrets in B-17 or B-24.
+
+2.  Open valves on both commercial, high pressure cylinders on recharger
+    cart.
+
+3.  Turn in reducing valve on recharging cart to 100 pounds in the low
+    pressure gage.
+
+4.  Insert nipple of hose from recharger cart into filler valve of plane
+    just inside nose escape hatch (B-17) or left side of fuselage (B-24
+    and B-29).
+
+5.  Fully open valve at end of hose and wait until oxygen stops flowing.
+
+6.  Turn up reducing valve on cart to 200 pounds and allow oxygen to
+    flow until it ceases. Turn up recharger valve to 300 pounds and
+    again wait for ship's containers and supply pressure to equalize.
+    Turn up recharger valve to 450 pounds and wait until oxygen flow
+    ceases entirely.
+
+7.  Check pressure gauges in ship to make sure that all register in the
+    neighborhood of 425 pounds.
+
+8.  Turn off hose valve and remove nipple from filler valve.
+
+9.  Replace cover of filler valve.
+
+10. Disconnect filler hoses from turret tanks.
+
+NOTE: Purifier cartridge should be changed after discharge of every 1.6
+      cylinders of oxygen. (T.O. 19-1-2) If this is not observed the
+      oxygen will contain moisture and freezing in oxygen system will
+      occur at high altitude.
+
+    After the oxygen in the tanks has had time to cool down, pressure
+should be in the neighborhood of 400 pounds.
+
+    The same procedure must be employed even if one or more of the
+systems is already fully charged since there is no way of equalizing
+pressure among the different manifolds. Do not attempt to use any system
+in which the pressure is less than 50 to 75 pounds per square inch.
+Under these conditions the oxygen flow is very weak. More dangerous is
+the possibility of moisture getting into the oxygen line through the
+main recharger valve. This will result in freezing in the line or one of
+the regulators on the next trip to high altitude.
+
+
+
+
+LEAKS IN OXYGEN LINE
+
+    Leaks in oxygen lines and be detected by painting oxygen tubing with
+a paintbrush and solution of soap suds--soap bubbles appear at the site
+of leak.
+
+    Connection of oxygen tubing to nipples, elbows, tees, and regulators
+are made air-tight by applying an anti-sieze, sealing compound to the
+pipe threads (see note, page 27). DON'T use anything containing OIL.
+
+    A good way to check entire oxygen system for a leak is to have
+systems charged to 450 pounds the night before take-off. If the pressure
+is less than 400 pounds the next morning a leak is present.
+
+    NOTE:
+
+    A 50 pound drop in pressure can be anticipated due to cooling off
+    of oxygen after the system is charged.
+
+
+
+
+GENERAL RULES FOR SAFE HANDLING OF OXYGEN
+
+DON'T use oil with oxygen.
+    The reaction when these two substances come in contact is more
+violent than igniting dynamite. Keep oil or grease away from oxygen
+cylinders, cylinder valves, and other equipment. Clean hands of oil or
+grease before using oxygen apparatus.
+
+DON'T wear greasy clothes, gloves, etc., when working with oxygen.
+Oxygen will cause substances with merely a trace of oil or grease
+thereon to burn with great intensity.
+
+DON'T use inflammable substances near oxygen. Oxygen itself will not
+burn but will greatly accelerate combustion.
+
+
+
+
+PASSING OUT AT ALTITUDE
+
+    There are two ways to use oxygen equipment at altitude -- a right
+and wrong. Don't be a fish out of water when you fly above 18,000 feet.
+Learn how to use oxygen the right way NOW - then you won't have to
+re-learn the hard way after an unpleasant experience or two.
+
+    A few points on reviving a fellow crew member who has passed out due
+to oxygen lack--an opportunity that may well be yours some day!
+
+(1) KEEP CALM -- Just because a man passes out from oxygen lack is no
+    sign that he's at death's door. TAKE YOUR TIME. Remember you're
+    going to need OXYGEN yourself for the job at hand. If you don't
+    heed this, there'll be TWO to revive instead of only one.
+
+(2) PLAN how you're going to revive the victim--then proceed with the
+    least possible exertion to yourself.
+
+(3) DON'T attempt to drag or carry the victim to a supply of oxygen.
+    If he's not near a regulator hose, take portable oxygen TO him. Take
+    plenty -- 3 or 5 bottles -- some for him, plenty for you. If he's
+    near a regulator hose you're in luck. Connect his mask and NOW use
+    the "Emergency." Ordinarily you'll almost blow him right back onto
+    his feet.
+
+(4) GET ASSISTANCE. Have someone keep an eye on you, and supply you
+    with refilled walk-around bottles if needed.
+
+(5) Connect the victim to a walk-around bottle. Ordinarily he'll come
+    to in a matter of seconds. But watch him. He'll be punch drunk and
+    confused as to what's going on.
+
+(6) After he's emptied one bottle, give him another. Then put him on a
+    third and assist him ON HIS OWN POWER to a regulator. Turn the
+    Auto-Mix "OFF" and let him breathe pure oxygen for 5 or 10 minutes.
+    Ordinarily he'll be able to return to his regular duties.
+
+(7) If the victim has been out for a number of minutes he may present
+    more of a problem. Breathing becomes shallow -- and the demand
+    system gives just what is asked of it -- a weak inspiration brings a
+    small squirt of oxygen. So, you'll have to help him with artificial
+    respiration, learn it -- your flight surgeon will show you how.
+
+Caution: Above 20,000 feet, get assistance to give artificial
+respiration. It will be strenuous work -- a job for several men, not
+one. Take turns of one to three minutes each.
+
+
+
+
+THE B-29 AT HIGH ALTITUDE
+
+[Illustration]
+
+    The B-29 is designed to permit you to fly at high altitude without
+the usual disadvantages of extreme cold, diminished pressure, and
+decreased oxygen. This is done by the use of pressurized, heated
+compartments. A highly efficient oxygen system is also incorporated in
+the ship for use when the cabins are unpressurized.
+
+[Illustration: Fig. 13]
+
+
+
+
+PRESSURE CABINS
+
+    There are three pressure compartments in your ship: Forword, Aft,
+and Tail. (See Fig. 13). The forward and aft cabins are connected by a
+communicating tunnel running over the bomb-bay; the tail compartment is
+isolated when pressurized.
+
+OPERATION: The cabins are pressurized from the superchargers of the two
+inboard engines. Your flight engineer controls the air-flow from these
+superchargers, permitting the cabin Pressure Regulators to automatically
+regulate the air pressure within the cabin. From ground level to 8,000
+ft the cabins are not pressurized. When the cabins are under pressure,
+your cabin altitude will remain at 8,000 ft, while the ship is flying at
+any altitude up to 30,000 ft. When your ship gets about 30,000 ft, the
+cabin pressure will rise proportionately so that it reaches about 12,000
+ft when the ship is at 40,000 ft. (See Fig. 14 for this pressure
+relation). Cabin temperature is controlled by thermostat.
+
+[Illustration: Fig. 14]
+
+EMERGENCY PRESSURE RELEASE. Since all emergency doors open in, cabin
+pressure must be released in all emergencies. This is done by a valve
+controlled by cable from:
+
+  1. Pilot's seat
+
+  2. Behind R.H. side gunner
+
+WHEN DO YOU NEED OXYGEN IN A B-29?
+
+    As long as the cabin altitude is below 10,000 ft you're O.K. without
+oxygen.
+
+    YOU MUST USE OXYGEN when the CABIN ALTITUDE goes ABOVE 10,000 feet.
+
+This may occur:
+
+  1. When you are flying unpressurized.
+
+  2. If you fly above 35,000 feet.
+
+  3. Following explosive decompression (Blown blister).
+
+  4. In all emergencies above 10,000 feet (Your Pressure must be
+     released so emergency exits can be used).
+
+
+
+
+OXYGEN SYSTEM
+
+GENERAL:
+
+    Your oxygen system is a low pressure demand system with 14 oxygen
+stations corresponding to the various crew positions. The system
+utilizes the same type of equipment described for the Heavy Bombers:
+
+  1. A-14 Demand Mask (See Pg. 8-16).
+
+  2. A-12 Demand Regulator (See Pg. 17-19).
+
+  3. Pressure Indicator (Pg. 31).
+
+  4. Flow Indicator (Pg. 31).
+
+  5. Eighteen Type G-1 low pressure cylinders (Pg.37).
+
+DISTRIBUTION:
+
+    In the earlier B-29's, the oxygen cylinders were located in the
+center wing section. At present, however, the cylinders are distributed
+through the aft-portion of the ship. Regardless of the location of
+cylinders, distribution is essentially the same. This distribution is
+highly efficient. The entire loss of the O₂ supply to several crew
+positions has been practically eliminated by the following principle.
+
+  1. EACH OF THE FOURTEEN OXYGEN STATIONS IS SUPPLIED FROM TWO WIDELY
+     SEPARATED DISTRIBUTION LINES DRAWING FROM AT LEAST TWO CYLINDERS
+     EACH. LOSS OF ONE LINE OR ITS ASSOCIATED CYLINDERS STILL LEAVES
+     EACH STATION WITH AN ALTERNATE SOURCE OF OXYGEN.
+
+  2. The entire system is self-equalizing by use of cross feeds and
+     automatic check valves. If part of the system is shot out, all
+     functioning stations will have equal access to the remaining
+     supply.
+
+    Brief study of the diagram of the oxygen supply to a typical B-29
+station (Fig. 15) will demonstrate the safety factors of this dual
+source supply.
+
+    Exact location of every oxygen cylinder and supply line may be found
+in the late tech orders.
+
+PORTABLE EQUIPMENT
+
+Two types of walk-around bottles are furnished in the B-29:
+
+  1. SEVEN D-2 TYPE WALK-AROUNDS (See Pg. 25, 26). ONE AT EACH OF
+     FOLLOWING POSITIONS: PILOT, CO-PILOT, ENGINEER, NAVIGATOR, UPPER
+     AND RIGHT GUNNERS AND RADAR OPERATOR.
+
+  2. A-4 WALK-AROUND (See Pg. 24) One at each remaining station.
+
+SERVICING:
+
+    See Page 47 for servicing instructions. The filler valve is located
+    on the left side of the fuselage.
+
+[Illustration: Fig. 15]
+
+
+
+
+EXPLOSIVE DECOMPRESSION
+
+   With the use of pressurized compartments there is a possibility of
+explosive decompression. This is most likely to occur if a blister is
+blown either due to gunfire or a defective blister. Due to the excess
+capacity of the superchargers, small cabin holes will not cause
+explosive decompression. If explosive decompression occurred at 30,000
+ft, the pressure altitude of the cabins would change from 8,000 ft to
+30,000 ft in less than one second. What would happen in such a case?
+
+PHYSICAL EFFECTS:
+
+    The human body is affected very little by explosive decompression.
+IF YOU GET OXYGEN YOU WILL SUFFER NO HARMFUL EFFECT. You may feel a
+little distension of the belly or a little rush of air from the lungs,
+but this is generally slight and of no consequence. Your ears should
+clear automatically since you are going up, not down. The only dangers
+of explosive decompression are as follows:
+
+DANGERS:
+
+  1. Tunnel -- During an explosive decompression a high velocity wind
+     passes through the tunnel sufficiently strong to blow a man out the
+     exits, and cause serious injury. The newer ships will have tunnel
+     doors with small port hole openings; this will eliminate this
+     danger. In ships not equipped in this fashion, NOBODY SHOULD ENTER
+     THE TUNNEL WHEN THE SHIP IS PRESSURIZED.
+
+  2. Blister -- ALWAYS FASTEN YOUR SAFTY BELT at the blister when the
+     ship is pressurized. Otherwise you may be blown out of the ship
+     by an explosive decompression. Also be certain that your mask is
+     secured to your helmet, or it will be blown from the ship.
+
+WHAT TO DO?
+
+    The important thing in explosive decompression is to get oxygen
+rapidly. To get oxygen rapidly you MUST at all times:
+
+  1. Wear your helmet with the mask attached-let the mask hang from the
+     helmet. Otherwise you may lose your mask and helmet.
+
+  2. Keep the regulator hose clipped to your clothing and your mask
+     plugged in.
+
+    In case of explosive decompression, adjust your mask to the face and
+fasten the hook on your helmet. You will then be O.K.
+
+[Illustration: Fig. 16]
+
+
+
+
+HIGH ALTITUDE BAIL-OUT
+
+    If you must bail out above 20,000 feet, use the FREEFALL TECHNIQUE
+described on page 23 except that you have an additional oxygen source
+for bail out. Use the H-2 cylinder connected to your A-14 mask (Fig. 16)
+as an oxygen supply DURING FREE FALL. Just before jumping, pull the rip
+cord release on your H-2 cylinder. DO NOT OPEN YOUR CHUTE AT HIGH
+ALTITUDE.
+
+
+
+
+--REPRODUCED BY--
+
+Reproduction Dept.
+
+Army Air Field
+
+Lincoln, Nebr.
+
+10-18-44 20 M
+
+
+
+[Transcriber's Notes:
+  1. Original printed title
+       NOTES ON THE USE OF OXYGEN EQUIPMENT
+       IN THE B-17, B-24, & B-29 FOR COMAT CREWS
+     was corrected to
+       NOTES ON THE USE OF OXYGEN EQUIPMENT
+       IN THE B-17, B-24, & B-29 FOR COMBAT CREWS
+  2. In the text, phrases that were underlined for emphasis in the
+     original are shown in this file with underscores surrounding
+     the emphasized text, _like this_.
+]
+
+*** END OF THE PROJECT GUTENBERG EBOOK 66809 ***

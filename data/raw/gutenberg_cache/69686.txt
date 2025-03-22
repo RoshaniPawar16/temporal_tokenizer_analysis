@@ -1,0 +1,2154 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 69686 ***
+
+TRANSCRIBER’S NOTE
+
+Obvious errors and omissions in punctuation have been fixed.
+
+
+
+
+  TYAS’ LEGAL HAND-BOOKS.
+
+
+  The Hand-Book
+  OF THE
+  LAW OF LEGACIES;
+
+  CONTAINING
+
+  A STATEMENT OF THE NATURE OF LEGACIES,
+  AND THE
+  ACCIDENTS TO WHICH THEY ARE SUBJECT;
+
+  TOGETHER WITH
+
+  THE RIGHTS OF LEGATEES,
+  AND
+  THE CAUSES AND MANNER OF THE ADEMPTION, CUMULATION,
+  AND ABATEMENT OF THEIR BEQUESTS.
+
+  “Jam progressu futura.”
+
+  LONDON:
+  ROBERT TYAS, 8, PATERNOSTER ROW.
+
+  AND SOLD BY
+  R. HASTINGS, 13, CAREY STREET, LINCOLN’S INN.
+
+  MDCCCXLI.
+
+
+
+
+  LONDON:
+  CLARKE, PRINTERS, SILVER STREET,
+  FALCON SQUARE.
+
+
+
+
+PREFACE.
+
+
+The utility of a little work of this kind is so obvious, that it needs
+no other setting forth than that given in the introductory observations
+with which it opens. It professes only to be a cautious guide, to make
+men acquainted with their rights, and not a professional assistant to
+obtain them; for it has ever been the author’s opinion, that there
+would be less litigation and distrust if there were more knowledge,
+and more probity if there were more intelligence. A difference rightly
+explained is half settled, and a mind enlightened is a mind directed
+as well as sustained; and if the few following pages should make any
+of the community better informed as to their claims and position, with
+respect to their deceased relatives, he feels that he will have saved
+them, and those with whom they have to do, not a little trouble, and
+perhaps unpleasantry; and that he has contributed to the good-will as
+well as the information of his readers.
+
+
+
+
+CONTENTS.
+
+
+                                                    PAGE
+
+  CHAPTER I.                                           1
+
+    Introduction.--Legacies and Legatees               1
+
+    Legacies and Legatees                              3
+
+
+  CHAPTER II.                                          9
+
+    The Assets                                         9
+
+    Real Assets                                       10
+
+    Personal Assets                                   15
+
+    Legal Assets of Choses in Action                  21
+
+    Equitable Assets                                  23
+
+    Contingent and Dependent Assets                   27
+
+
+  CHAPTER III.                                        35
+
+    Marshalling of the Assets                         35
+
+
+  CHAPTER IV.                                         43
+
+    Legacies.--General, Specific, Lapsed, Vested,
+        Demonstrative                                 43
+
+    General Legacies                                  44
+
+    Specific Legacies                                 45
+
+    The Vesting of Legacies                           52
+
+    The Lapsing of Legacies                           54
+
+    Demonstrative Legacies                            56
+
+
+  CHAPTER V.                                          58
+
+    Assent to Legacies                                58
+
+    Assent of the Executor                            58
+
+    Nature of the Assent                              61
+
+    Absolute and Conditional Assent                   63
+
+
+  CHAPTER VI.                                         67
+
+    Payment of Legacies                               67
+
+    The Legatees                                      68
+
+    To whom Legacies should be paid                   73
+
+    Duty upon Legacies                                80
+
+    Interest on Legacies                              82
+
+
+  CHAPTER VII.                                        85
+
+    The Ademption, Cumulation, and Abatement
+        of Legacies                                   85
+
+    The Ademption of Legacies                         86
+
+    Cumulation of Legacies                            89
+
+    Legacies in Satisfaction of Debt                  90
+
+    Abatement and Refunding of Legacies               92
+
+
+  CHAPTER VIII.                                       94
+
+    Legacies to Executors, and Legatees’ Remedies
+        against them                                  94
+
+    Legatees’ Remedy against the Executor             96
+
+    Rates of Duty payable on Legacies, Annuities &c.  97
+
+
+
+
+THE
+
+LAW OF LEGACIES.
+
+
+
+
+CHAPTER I.
+
+INTRODUCTION.--LEGACIES AND LEGATEES.
+
+
+When it is known that the gross sum upon which the several rates of
+legacy-duty are paid in this country amounts to more than £40,000,000
+per annum, and that, during the last thirty years, more than
+£1,000,000,000 of money have been consigned from the hands of those
+who held it to those of their friends and successors, some notion will
+be obtained of the immense number of individuals who are intimately
+concerned in the subject of this little treatise. The solemn fact by
+which the laws respecting legacies are brought into operation, is of
+all things most calculated to dim the perception, and to blind the
+judgment. Nor is the heart less ready to mislead at such times than
+the intellect to fail; for in the distress arising from the loss of
+some dear friend or near relative, we are apt,--at least those are who
+are not callously selfish or morally debased--to think more of the
+bereavement we have sustained than of the interests and duties which
+the circumstance has called into action. Consciously unable to exercise
+our usual acuteness on such occasions, we submit to the guidance of
+some agent who has either been appointed by the deceased, or approved
+of by ourselves, for the distribution of his property; and we blindly
+rely upon his judgment and principles, when, perhaps, the one is not
+always sound, nor the other immaculate. The use of the faculties, with
+their usual business shrewdness, which duty and interest alike requires
+us to exhibit, too often looks like a cold-hearted forgetfulness of
+the kindness we have experienced, and the affection which we have
+enjoyed in the sense of newly acquired property, an advantage, which,
+to the man of right feeling, is, at that time of all others, the least
+desirable or valued. Or it may be that excessive grief so blunts the
+powers, that they are indeed incompetent to their usual task; and
+those whose interest it is our bounden duty to protect, even if we
+disregarded our own, may be injured through an incapacity to recollect
+what we know, or to make that useful which we recollect. In supplying
+the omissions of memory, or the want of right knowledge, we hope this
+little book will prove a useful as well as a sound and opportune guide.
+
+
+LEGACIES AND LEGATEES.
+
+A legacy is the gift of something by the written will of one who is
+deceased, conveyed through the instrumentality of the individual
+appointed by the testator to distribute his property after death.
+
+To reception of property by this means the law of the land offers some
+exceptions. Among these are traitors, who, through their crime, have
+lost every civil right; and by a statute of Charles I., and another of
+George I., persons omitting to take the oaths required, and otherwise
+qualify themselves for offices, are placed under the same disability.
+Those who deny the Trinity, or assert a plurality of Gods, or deny
+the truth of the Christian religion, or the Divine authority of the
+Scriptures, are by the 9 and 10 William III., c. 32, made incapable of
+receiving a legacy. Artizans, also, who go out of the realm to teach
+or follow their trades abroad, and who shall not return within six
+months after due notice given to them, are by the 5 Geo. III., c. 27,
+made subject to the same disqualification; and by the 25 Geo. II., c.
+6, all legacies given by will or codicil to those who witness such
+will or codicil, are declared void; and the sentence is confirmed by
+the 1 Vic., c. 26, s. 15, whether the legacy be of real or personal
+estate. Legacies to priests and chapels to perform masses for the
+repose of the souls of the deceased, are void, as being appropriated
+to superstitious uses, and therefore forbidden as well by Edward VI.,
+c. 14, as, from being against the constitutional intention of the law;
+but the professors of the Roman Catholic religion having by the 2 and 3
+William IV., being placed on the same footing as other dissenters, in
+respect to their schools, places for religious worship, education, and
+charitable purposes, legacies to Roman Catholic schools, and for the
+object of promoting the Roman Catholic religion, are held heritable.
+
+The legacy of a husband to his wife is valid; although, in consequence
+of the law considering them as one person during life, he cannot make
+any covenant with her. Yet the existence of such a relation does not
+abrogate his power to endow her by bequest, because the bequest cannot
+take place till after his death, by which circumstance the relationship
+is determined. Care, however, must be taken to express the individual
+properly, and by name; as the intimation that a legacy of a husband to
+his wife, without mentioning her name, will only apply to the wife he
+has at the time of making the will; and in the event of her death, and
+his subsequent marriage with another person, that wife will not enjoy
+the advantage of the intention, but the legacy will lapse.
+
+An infant, if alive, though yet unborn, may be a legatee; for it was
+decided in the case of _Defflis_ v. _Goldschmidt_, that a bequest of
+£2000 to each of the children of the testator’s sister, which were
+either then born, or should thereafter be born, included all the
+children born after his death; and an inquiry was directed as to the
+proper sum to be set apart for the legacies of children not at the
+time in existence. It was also further decided in the case of _Trower_
+v. _Butts_, that a bequest to the children of the nephew of the
+testatrix, which should be born during her life time, should include
+the child of which the wife of the nephew was pregnant at time of her
+death, although the child was not absolutely born until some months
+afterwards.
+
+A mistake in the Christian name of a legatee will not invalidate a
+bequest, when the individual who is intended can be ascertained; as
+where an individual left a legacy to the son of another, although he
+gave a wrong name, yet no doubt of the identity of the party intended
+existed. In another instance, also, where a certain amount was left to
+“each of the three children” of an individual, and it turned out that
+there were four children instead of three, the court allowed the fourth
+to come in also as a legatee of equal amount with the other three,
+under the impression that the word _three_ was written in mistake,
+instead of _four_. The bequest of an unmarried man to “his children,”
+took effect, with respect to his illegitimate children, as the children
+had by common repute been considered as his offspring. Such, however,
+would not have been the case had any doubt as to the parties existed;
+for in the case, _Earl_ v. _Wilson_, it was determined that the words
+“to such child or children, if more than one, as A. may happen to be
+_enciente_ of by me,” would not apply to a natural child, of which
+she was at that time pregnant. There is, however, but little doubt,
+that had the testator acknowledged the child which she then carried,
+to be his before witnesses, it would have enjoyed the bequest. Where
+children are stated, legitimate children are supposed to be intended;
+unless it is impossible, through the celibacy of the testator, that he
+could have any legitimate children. But in the case of a female, where
+she had children of both kinds, and the bequest was stated to be to the
+children of R. M., deceased, and she left two, one legitimate, and the
+other otherwise, but reputed and allowed to be her child, and known to
+be so by the testator, the illegitimate child took its legacy with the
+other.
+
+Great-grandchildren may inherit as grandchildren, unless a decidedly
+contrary intention appear in the will; and in several cases it has
+been decided, that the term _relations_, or _family_, in a will, means
+next of kin. A pecuniary legacy to the heir of a testator is construed
+to imply the heir-at-law, and not the next of kin, unless the sense
+of the passage in the will was influenced by the context to mean
+something else. The words, _personal representatives_, mean executors
+and administrators, unless some accompanying expression point out a
+different tendency. _Next of kin_ was decided to be construed in its
+legal import for some time, but the decision was overruled, and now it
+means _nearest of kin_; and a bequest by a party in India, “to his
+nearest surviving relations in his native country of Ireland,” was held
+to apply to brothers and sisters living in Ireland or elsewhere. The
+bequest of a year’s wages to each of the testator’s servants, over and
+above what was due to them at his decease, was construed, in _Booth_
+v. _Dean_, to apply only to those servants who were hired by the year,
+and not to all the servants who might be generally employed about his
+establishment.
+
+With the exception of those constitutionally and legally distinguished
+as above, and of those whose rights are invalidated by any moral slain,
+or obscurity in the language of the testator, all persons who can prove
+their identity with the party specified in a testators’s will, may be
+legatees.
+
+
+
+
+CHAPTER II.
+
+THE ASSETS.
+
+
+As it is of very little use for a man to find himself legatee of an
+estate, out of which there is nothing to pay his bequest, so also
+is it an equal evil if notwithstanding the existence of property to
+constitute an estate the assets, or the produce of that property be
+either uncollected or wasted, so that the legatees derive no benefit
+from them. One of the first things, therefore to be considered, is,
+whether there be any assets; and next, whether the executor has
+collected them for distribution. From the various nature of property
+arising out of the complex state of society, and the different periods
+and the different circumstances at which, and out of which that state
+of society and its customs arose, the legislators of the country in
+their care to secure the safe possession and the right appropriation
+of property, have endowed it with peculiar privileges, and made it
+subject to certain contingences according to its kind. Hence it is that
+the heir-at-law takes the whole of a property in fee tail, or entailed
+freehold, as it is called in popular language, to the exclusion of
+every one else; hence it is on the other hand, that by the custom of
+_gavel kind_ which prevails in the county of Kent, all the children
+of a proprietor are considered as heirs-at-law and inherit in equal
+proportions; hence it is that copyholds are subject to different
+rules to freeholds; and hence it is, also, that the several portions
+of a man’s property, after his death, are often liable to different
+contingencies, and have obtained the different denominations of assets.
+These have been usually distinguished by the several terms of _real,
+personal legal, and equitable_, assets. They may be more broadly
+divided into assets, derived from real property, and those arising
+from personalty; the real and equitable being chiefly dependant on
+the former, and the legal, and personal from the latter of these two
+species of property.
+
+
+REAL ASSETS.
+
+Though real assets more often partake of an equitable character, that
+is, are subject to distribution according to the custom of a court of
+equity, yet, there are also real assets which are of a legal nature
+or subject to the rules of the common law. Until within a few years,
+real estate could not be touched for the satisfaction of debts of
+common specialty or simple contract; but that system is now obviated,
+and funds which have descended to the heir in _fee simple_, that
+is unentailed freeholds, and even an advowson so descended, may be
+appropriated to the benefit of specialty creditors. An estate _pur
+autre vie_, or an estate held upon the life of another, when there is
+no special occupant, goes, according to the statute of frauds, and if
+does not it descend to the heir through occupancy, will fall to the
+executor and be assets in his hands for the satisfaction of claims, and
+by the 14 Geo. II., c. 20 will be appropriated like any other chattel
+interest. An estate _pur autre vie_ in incorporeal hereditaments--as a
+rent, for instance, granted by one person to another, during the life
+of a third party, and the grantor of which dies during the life-time of
+the person who holds the property--goes to the executor.
+
+“A., tenant for three lives to him and his heirs, assigned over his
+whole estate in the premises by lease and release to B., and his heirs,
+reserving rent to A., his executors, administrators, and assigns, with
+a proviso that on non-payment, A., and his heirs might re-enter, and B.
+covenanted to pay the rent to A., his executors and administrators; the
+rent was held payable to A.’s executors and not to his heir, on the
+ground that there was no reversion to the assignor, and the rent was
+expressly reserved to the executor.” So that in the case of the heir
+having entered, he would have been only trustee for the executor.
+
+If a testator be a lessee, his executor will take the fish, rabbits,
+deer, and pigeons, as accessory chattels partaking of the nature of
+their principals, the land, the warren, the park, and the dove house.
+If an executor succeeds to a lease of land for years, the assets are
+comprised in the clear profits; but a reversion of a term forms assets,
+according to its utmost value. And if he renew the lease, that will
+form assets as well as the old lease. Should an executor be possessed
+of a term in right of his office, and he purchase the reversion of the
+freehold, he is accountable for the assets of the term, although it be
+extinguished; and so also if the executor of the lessee, surrender the
+lease, it shall be considered as assets, notwithstanding the term is
+extinguished. A person held a term in right of his wife as executrix,
+and he purchased the reversion; the term was extinct so far as she was
+concerned, but it was considered with respect to a stranger, that is,
+any other person, as assets in her hands. But where an individual, on
+the marriage of his son, settled a lease for years, on him for life,
+and on his wife, and then on the issue of the marriage; and the son
+covenanted to renew the lease, and to assign it on the same trust; and
+he renewed the lease in his own name, but made no assignment to the
+trustees and died; the lease was held to be bound by the agreement on
+the marriage, and that it was not assets, nor liable to his debts,
+nor of course to his legacies. Neither is a lease for years granted
+on condition of being void on non payment of rent, which occurs, and
+the lessee afterwards dies. As little so is a term in the hands of the
+executor of a _cestui que trust_.
+
+A term for years held by a testator, cannot be relinquished by his
+executor, when he has assets, unless he relinquishes the office
+altogether; but he is bound to continue tenant as long as the term
+continues, or as long as his funds hold out, if they will not continue
+the whole term.
+
+A leasehold in Ireland is considered as personalty in the property of
+an English testator dying in England. A lease granted to A. and his
+executors, and accordingly to the executors after the death of A.,
+becomes assets. If a lessor also, covenant to renew a lease at request
+of the lessee, who, however, dies within the term without making the
+request, but it is made by his executors, the lessor is bound to renew
+for the legal rights of the deceased survivor to his representatives,
+whom the law presumes to be another self, and therefore implied
+although not named.
+
+The grant of the next presentation to an advowson during the life of
+the grantee does not convey the presentation to his executors if he die
+before the church becomes vacant, for it is equal to a lapsed legacy.
+
+If rent be reserved on a lease for years, and the rent be in arrear
+at the time of the lessor’s death, it is assets in the hands of the
+executor. Trees felled during his life on land held by a lessee,
+without impeachment of waste, are assets to his executor after his
+death; but unless they are severed during the term, they belong to the
+lessor as owner of the freehold.
+
+The executor does not come into any corporeal hereditaments, as leases
+for years of houses or lands, until he is in actual possession,
+and they cannot therefore until then be esteemed as assets: the
+dispossession of incorporeal hereditaments, such as leases of tithes,
+is constructive, and ensues immediately on taking office; for it is
+evident that in these there can be no personal entry, and as soon
+therefore as tithes are set out, however remote the goods may be, he is
+in legal possession of them; but if the lease be of a rectory, where
+there are glebe lands as well as tithes, it would seem that he is not
+in possession of the tithes till he enter upon the lands, which being a
+corporeal hereditament, gives an opportunity of actual entry.
+
+
+PERSONAL ASSETS.
+
+Personal assets are either moveables not attached to the land or their
+produce, and derive their appellation from being either attached to
+the person of the owner, or from being capable of being moved about
+with him. They are either animate as living creatures, or inanimate,
+as vegetables, and include all the vast variety of property which
+necessity or luxury has called into existence. Properly speaking they
+are not assets until converted into money for the payment of debts or
+legacies, though they may certainly constitute the subject of specific
+legacies. As however they either form subjects of bequest, as they
+are, or the means by which it is to be produced, we will follow the
+arrangement into which they naturally fall.
+
+Animate _chattels_, as before they are converted into assets they are
+properly called, are divided into _domitæ_ and _feræ naturæ_, or such
+as are tame or reclaimed, and such as are wild; the former admitting
+of an absolute, the latter of only a qualified ownership--the former
+embracing all kinds of farming stock and poultry, the latter all those
+which, unsubdued to confinement, still enjoy their natural liberty,
+and therefore cannot pass to representatives. Such also are fish in
+any natural stream or reservoir of water; but fish in a tank, as well
+as creatures in confinement, are capable of sale, and therefore of
+transfer: and this is the case also with all the young, the weak, or
+the lame, of all those wild creatures which, either from feebleness
+or any other cause, cannot assume their natural liberty. Under this
+specification come also all hounds, greyhounds, and spaniels, and all
+the accessaries of falconry or the chase, as well as every thing kept
+either for curiosity or from whim. An executor is also entitled to
+appropriate as assets deer in a park, hares or rabbits in an enclosed
+warren, doves in a dovecot, pheasants or partridges in a mew, fish in
+a private pond, and bees in a hive of the testator, where lessee for
+years of the premises to which they respectively belong, so long as
+they continue in a state of subjugation, and no longer; for as soon as
+they obtain their natural freedom, they pass into the class of _feræ
+naturæ_, and are beyond the reach of his domain.
+
+Vegetable chattels which may be appropriated as assets are the fruit of
+a tree or plant when separated from the body of the thing that bears
+it; or the tree or plant itself when severed from the ground, as grass
+that is cut, and trees which are felled, or branches which are lopped.
+Of the same character also are all those vegetable productions which
+are produced by the exertion and skill of the owner or occupier, and
+which are technically called emblements; extending to roots planted
+or other artificial profit, and including corn, growing crops, hops,
+saffron, hemp, flax, clover, saintfoin, and, in short, every other
+yearly production in which art and industry combine with nature. The
+executor has also been held entitled to hops though growing on ancient
+roots, as cultivation was necessary to produce them. Manure, in a heap,
+also, before it is spread on the land, is personalty; but afterwards
+it becomes attached to the soil, and is consequently indirectly the
+property of the owner of the soil.
+
+The inanimate chattels, which constitute personalty, are furniture,
+merchandize, money, (including stock in the funds, shares in public
+companies, and property of similar kind) pictures, clothing and jewels,
+and, in fact, every thing that can be moved from place to place. The
+presentation to a living, if the living be occupied at the time of the
+testator’s death, is, as has been stated, property of a real nature,
+and of course goes to the heir; but if it be open or unoccupied, it
+forms a personal chattel, and becomes assets in the hands of the
+executor. Copyrights and patents are also considered as personal
+chattels.
+
+All these things become assets in the hands of the executor, in
+whatever part of the world they may be, at the moment of the testator’s
+death. But in order to their becoming so, it is necessary that the
+testator must have professed an absolute property in them; and
+therefore it is, that, if he, having been the obligee of a bond, has
+assigned that bond with a covenant not to revoke, it does not become
+part of his assets. Nor are goods bailed, as it is called, or delivered
+for a particular purpose to a carrier, or to an innkeeper, to secure
+in his inn; nor goods pledged, until the time of redemption shall have
+passed. Neither are the goods of an outlaw assets at the time of his
+death, for his executor has no right to touch them.
+
+Chattels, however, whether real or personal, may be held in joint
+tenancy as well as in common; so if a lease be granted, or a house be
+given to more than one person absolutely, they are joint tenants of it,
+and unless the jointure be severed, it shall be the exclusive property
+of the survivor. But if the jointure of interest be severed by one
+of the parties disposing of his share to another, that other person
+becomes, with the previous owner or owners, a _tenant in common_,
+instead of a _joint tenant_; and the principal of survivorship does
+not hold, but the chattel, or the portion of it which belonged to
+the testator, whatever it may be, falls to the executor, and becomes
+assets. Thus, money left to two parties to be divided between them,
+occasions a tenancy in common, because it can be divided without
+injury to either; but not so with a horse or a house, for that could
+not be severed without destruction to it, and a consequent defeat of
+the testator’s will. But on the argument of convenience and justice,
+and for sake of encouraging husbandry and commerce, the goods of
+a warehouse or a shop, or the stock of a farm, although occupied
+jointly, will, in the absence of any express contract to the contrary,
+be considered as property in common; and on the death of any part
+owner of such property, his share would fall to his executors, to
+meet the claims of legatees, according to the will. So also, on that
+principle of personalty which the law invariably recognises, and
+that distinction which it invariably observes between the rights and
+actions of individuals, and the attachment and nature of property,
+the executor of a testator who has been joined in any action for the
+recovery of property, cannot take his place in the action and carry it
+on, however indolent or negligent the survivor in the action may be in
+endeavouring to bring it to a fortunate conclusion; but he has a right
+of action against him for the injury sustained by the property through
+his negligence, and also to oblige him to account when the action
+has terminated. In such a matter a court of equity will in general
+interfere.
+
+Occasionally it happens that chattels real are changed into chattels
+personal, and thus become available for the payment of legacies; and
+chattels personal are sometimes changed into chattels real; and
+thus the legatees are deprived of the amount for the liquidation of
+their claims. The former instance occurs when a debt has become due
+to an executor by statute, recognisance, or judgment, and he has in
+consequence taken the _lands_ of the debtor in execution; for here
+the original property in the debt, which was money, and consequently
+personalty, has been converted into realty, to which the heirs’ claim
+supersedes that of the legatees. Chattels real, on the other hand, are
+converted into personalty by the redemption of a mortgaged estate.
+Had the mortgage which the testator held become foreclosed through
+the negligence or inability of the mortgagor, the property would
+have continued _real_ as it was at the time of his death, but by the
+payment of the debt, the estate again becomes money, and consequently
+a personal asset to meet the legacies, or any other claims upon the
+testator’s estate.
+
+
+LEGAL ASSETS OF CHOSES IN ACTION.
+
+It is neither an improbable nor unfrequent occurrence, that, at the
+time of a testator’s death, much of his property is outstanding, which,
+if got in, would satisfy all the claims of the legatees, while, if
+it were neglected, they would lose half their bequests; and it is
+therefore necessary to consider the executor’s interest in what are
+called _choses in action_, as well those where the right of action
+accrued during the life time of the testator, as after his death.
+
+Firstly, then, the executor is entitled to every debt that was due to
+the testator, whether they be debts due on judgment, statute, record,
+recognizance, or bond, or on special or simple contracts, rents, or
+covenants, under seal or promise, all of which constitute assets for
+the purposes of the will. He is also entitled, by the 4 Ed. III.,
+c. 7, to damages for trespass committed during the testator’s life
+time, or for the conversion of the same, or for trespass with cattle
+in his close, or for cutting and carrying away his growing corn, or
+for a debt incurred by the not setting out of tithes, to an action of
+prevention against the disturbance of his patronage; as, when a living
+has been void at the death of the testator, and another has presumed
+to appropriate this chattel, then become personal, to his own use, by
+presenting to the living, or to an action of ejectment against him whom
+he has presented. An executor is also entitled to damages for breach
+of a covenant to do a personal thing, provided the breach occurred in
+the testator’s life time; and this, notwithstanding the covenant has
+reference to realty, as felling, stubbing up, lopping or topping timber
+trees; for the damages are of the nature of personalty, though that
+on account of which they were recovered is real. Equally, also, and
+on the same grounds, can he sue for the loss of interest occasioned
+by non-payments on deposit-money, for the expense of investigating
+a title, where the vendor omits to make out a good title within the
+stipulated time, and the vendee dies. The executor of an assignee may
+also recover on a bail bond. In fact, in all those rights which accrued
+to the vendee before his death, and the proceeds of which are all of
+a personal nature, does the executor equally enter; and he is bound
+to the legatees to recover, if possible, whenever policy or necessity
+dictate the attempt.
+
+
+EQUITABLE ASSETS.
+
+According to the usual legal phraseology, the difference between legal
+and equitable assets is this; “legal assets are such as constitute
+the fund for the payment of debts, according to their legal priority;
+whereas, equitable assets are those which can be reached only by the
+aid of a court of equity, and are subject to distribution on equitable
+principles, according to which, as equity favours equality, they are
+to be divided _pari passu_ among all the creditors.” This is a very
+important distinction, and of great consideration in the payment of
+debts, and it has accordingly been fully set out in the Hand-Book for
+the instruction of Executors and Administrators. There the difference
+is as to the _distribution_ of equitable assets, but here we have to
+regard their attainment. The difference between the different species
+of legacies will be shown hereafter, but in this place we may look upon
+them in one light, and consider that there is both sufficient to pay
+the debts and satisfy the legacies, if the assets are all got in, and
+properly distributed. With respect to the debts, the legal assets are
+applicable in a certain order, while the equitable assets are equally
+shared among the creditors. But with respect to the legacies, saving
+the instance first alluded to, of specific legacies which are to be
+noticed hereafter, the assets, whether legal or equitable, are all
+distributed equally, that is, in full, if sufficient to satisfy in
+full, or in proportionate equality, according to the amounts of the
+legacies, and the means to pay them. Our business, therefore, here is
+to show what the executor is entitled to, and what he ought to obtain
+in order that the legatees may not suffer from his negligence.
+
+The executor enters, then, fully into the equitable title of the
+testator, in respect of personal property, and this whether it accrues
+before or after his death. Thus, if an individual shall have contracted
+to deliver certain goods to the testator on a certain day, and the
+day does not arrive till after his death, and they are delivered to
+his executor, they will constitute assets in his hands, and should
+the individual who has covenanted to deliver them fail in his duty,
+the damages that shall be recovered in consequence will be equally
+available to the creditors or legatees. So, also, if any party has
+covenanted to grant a lease of certain land by a particular day, and
+the testator dies before the day, the executor is entitled to the
+lease, or to compensation in the way of damages in lieu of the lease.
+To such an extent, indeed, does this run, that in the case of _Husband_
+v. _Pollard_, where a father held a lease of the church, renewable
+every seven years, and he assigned it to his son in trust for himself
+for life, remainder in trust for the son, himself, his executors,
+administrators, and assigns, and the father covenanted to renew the
+lease every seven years as long as he should live; and the son died;
+and the father failed to renew the lease within the seven years; and
+the executor of the son filed a bill to compel him to renew; it was
+decided that he ought to do so, and he was compelled accordingly; and
+this lease became assets in the hands of the executors at the father’s
+death.
+
+If a defendant in execution at the testator’s suit escape after the
+testator’s death, the executor shall recover damages for the escape,
+they will form assets; so also are goods replevied after the death
+of a testator. If a testator die possessed of a term for years in an
+advowson, the term rests in the executors, and, in the event of their
+being disturbed, any damages they may recover in consequence will be
+equally available, as also any other property recovered by a suit
+in equity. But when a cause of action accrued before the testator’s
+death, neither cause nor damages are to be considered assets until
+the proceeds are, by execution or otherwise, reduced into possession.
+Neither is the balance of an account stated with the executor to be so
+considered until paid. If, however, they be recovered and released by
+the executor, he will still be responsible for them, for the release is
+tantamount to an acknowledgment of receipt.
+
+Should the cause of action accrue after the testator’s death, both the
+action and the damages become assets immediately, unless the breach of
+engagement affect the realty, in which case they belong to the heir.
+At the death of a joint merchant, all his interest in his _choses in
+action_, or things coming, though not yet come, to hand, through legal
+or equitable suit, and whether, therefore, they be legal or equitable
+assets, devolve, according to the amount of the testator’s interest in
+them, to the executor.
+
+
+CONTINGENT AND DEPENDENT ASSETS.
+
+Besides all these means by which property may be realised by an
+executor to pay the claims of the legatees, there are yet other more
+remote and uncertain sources from which he may in the course of time
+come into the possession of assets, which may enhance their interests.
+These consist in the peculiar conditions annexed to certain properties;
+properties again which may come to the testator’s estate in consequence
+of his being entitled to them as remainder man or contingent devisee,
+as his outliving some other individual, or happening to fulfil an
+engagement which that other has failed to perform. Or he may have
+been unconsciously entitled, as residuary legatee, to property, the
+surplusage of which has not been discovered, or recovered till after
+his death. Or property may have come to him through increase of some
+fund, or by assignment under some deed or covenant, or by limitation
+and selection.
+
+An executor may become entitled to property in his official capacity
+by condition, as if the testator shall have granted a lease, or other
+chattel, to a certain person, on condition of his paying a sum of
+money, or doing some specific act, and it is discovered after the
+death of the testator that that person has failed in his part of
+the agreement, the chattels will then be assets in the hands of the
+executor. Or where the agreement is that the testator or his executors
+shall pay a certain sum, to avoid the grant, and the sum is paid. Or
+the testator may have pledged plate or a jewel, and the executor redeem
+it at the time and place appointed, before the day of redemption has
+passed. If he has redeemed with his own money, and, in consequence of
+the want of funds of the testator’s property, the chattel is obliged to
+be sold to pay the executor’s disbursements, and if it sell to more
+than they amount to, then the surplus above that amount will be assets
+in his hands, for the benefit of the creditors and legatees, or both.
+
+Chattels may also accrue to an executor by remainder or increase, which
+never came into the testator’s personal possession, as if a lease be
+granted to a person for life, with remainder to his executors for a
+certain period, the remainder will be assets in their hands. Likewise
+where a lease is bequeathed by will to a person for life, and on his
+death to another, and that other dies before the first, although
+he never had any personal right in it, yet it will devolve to his
+executors, and be assets. So, also, a remainder in a term for years,
+though it never rested in the testator’s possession, and, though it
+continue a remainder, shall go to the executor and be converted for
+what it will obtain. Such, also, is the case with the young of cattle
+or the wool of sheep, produced after the testator’s death, as also the
+profits on lands devised over and above the rent, if he enter upon
+them, and the testator has been a lessee for years. Such, also, is
+the property in a trade in which the deceased has been a partner, and
+in the articles of partnership of which a covenant has been made,
+that his survivors should take his share. Or a testator may direct
+his executors to carry on his trade, appointing either the whole or a
+portion of his assets for its conduct, and then the proceeds will form
+assets.
+
+An executor may also come into the possession of assets as a
+representative assignee, for if the testator shall have died an
+assignee, his executor will take his place, and use the assets which
+he derives, belonging to the testator, for the purposes of his will.
+So if a legacy is bequeathed to a person and his assigns, and that
+person die before its receipt, his executors will be entitled to take
+it as his natural assignee. Such is the case also if a person be bound
+to abide by the award of two arbitrators, and they award that he shall
+pay to another person, or his assigns, a certain sum of money before a
+day mentioned for that purpose, and that other person die before the
+day, his executor or assignee is entitled to the money. This principle
+however does not hold where any specific assignee is appointed, for
+then that assignee, and not the executor of the party named, will take;
+but where no specific assignee is named, the executor becomes the
+assignee.
+
+Limitation also often becomes a source whence an executor derives
+assets. Thus in the case of _Pinbury_ v. _Elkin_, where a testator
+directed that in case his wife should die without issue by him, his
+brother after her decease, should have eighty pounds; and, after
+testator’s death, the brother died in the life time of the widow,
+and she afterwards died without leaving issue, it was held that the
+possibility devolved to the executors of the brother, although he
+died before the contingency happened, and the legacy went accordingly
+with interest from the widow’s death. It was also held in the case of
+_Chamey_ v. _Graydon_, that where legacies were bequeathed to children,
+to be transferred to them at their respective ages of twenty-one
+years, or days of marriage, and that any of them should die, or marry
+without consent, his or her share should go to others at their age
+of twenty-one years, Lord Chancellor Hardwick decreed that a share
+accruing by the forfeiture of a child’s marrying without consent
+vested in another child who attained twenty-one, but died before such
+forfeiture, so as to entitle the personal representatives of such
+deceased child to an equal share with other deceased children.
+
+Where a person who has a legacy bequeathed to him out of a personal
+estate, and which legacy is to be paid when he is of the age of
+twenty-one years, and he dies before that time, his executors are
+entitled to the legacy at the moment of his death, if it is intended to
+carry interest, but if it is not to carry interest, then on the day on
+which he would have been twenty-one. But if the legacy is to be paid
+to the person to whom it is bequeathed at his age of twenty-one, or
+if he shall attain the age of twenty-one, and he die before that time
+the legacy will lapse. But if the interest is given before the time of
+payment, that is held to _vest_ the legacy; and his executors would
+consequently be entitled to the amount as assets.
+
+With respect to the interest arising out of land, however, the rules
+are totally different; for whatever the nature of the legacies to
+which the land is to be appropriated, whether for a child or a
+stranger, and with, or without interest, the charges on land, payable
+on a future day, are not to be raised where the party dies, before
+the day of payment, except where the time of payment is postponed on
+account of the fund and not of the person. In the case of _Watkins_
+v. _Cheek_, where a legacy was charged upon real estate, to vest
+immediately on the testator’s death; and to be paid to the legatee on
+attaining twenty-one, the interest being applied in the mean time for
+maintenance, and the legatee died before attaining that age; it was
+held that the express direction, that the legacy should vest on the
+death of the testator prevented its sinking; and the representative of
+the legatee was consequently entitled to the legacy. Where lands are
+devised for the payment of portions, and any of the children entitled
+die before the lands are sold, the representatives of that child will
+be entitled to the money. In the case where a legacy is charged both
+upon the real and personal estate, and the executor claims out of the
+latter, he will succeed according to the rule of the spiritual court,
+where the claim is determinable, though the infant legatee should die
+before the time of payment, but the legacy will sink as far as it is
+charged upon the land.
+
+Election is also a means by which an executor may claim, as in the
+instance where a testator was entitled to take his choice out of
+several chattels, and he has failed to choose; but if nothing passes to
+the grantee before his election, it should be made in his life time.
+Should the election determine the manner or degree in which the thing
+shall be taken, the executor may take it as well as the grantee, for
+then there is an immediate interest; as, for instance, if a lease be
+granted to a person for ten or twenty years, as he shall choose, the
+executor may elect.
+
+We have thus at some little length endeavoured to make it as clear as
+possible what are the sources from whence the assets of a testator are
+to be derived. We will now proceed to see how they are to be disposed
+of when obtained, and ascertain what is technically called, the
+“Marshalling of the assets.”
+
+
+
+
+CHAPTER III.
+
+MARSHALLING OF THE ASSETS.
+
+
+It was enacted by the 47 Geo. III., c. 74, that the property of any
+trader who died possessed of, or entitled to, any real estate or
+interest in real property which would be assets for the payment of any
+debts due on specialty, in which the heir was bound, should be equally
+applicable through the administration of a court of equity, for _all_
+the just debts of such trader, whether debts due on simple contract,
+or otherwise; thus remedying one of the most unjust mischiefs which
+ever disgraced the jurisprudence of any country. For, before, a man
+would die possessed of immense landed estates, and owe immense sums
+as debts upon simple contract, one hundreth part of which, perhaps,
+would scarcely be liquidated before the day of doom, in consequence of
+his leaving but a small personal property to pay them, while his real
+property could not be touched for the purpose.
+
+That statute, however, only applied to those persons who were traders
+at the time of their decease, and not to those who left off business
+before they died; and it was repealed by 1 Will. IV., c. 47, but
+re-enacted by the same act, in order to remedy the frauds for which
+no previous provision had been made. By this act it was decreed, that
+“all wills and testamentary limitations, dispositions or appointments
+of real estates, whereof any person shall be seized in fee simple, in
+possession, reversion or remainder, or have power to dispose of by
+will, shall be deemed fraudulent and void as against creditors, by
+bond, covenant, or other specialty binding his heir,” and right of
+action is given the creditors against the heir or devisee. A further
+improvement was made by the 3 and 4 Will. IV., c. 104, by which all
+landed estates of freehold, custom, or copyhold, are made liable for
+the payment of simple contract as well as specialty debts, as much as
+they had previously been for the debts in which the heir was bound; but
+still the creditors in specialty in which the heir is bound, are to
+be paid in full before the creditors by simple contract, or the other
+specialty creditors, are paid any part of their claims. By the 5 Geo.
+II., c. 7, all the real property in the British plantations in America,
+is made subject to debts as if it were only personal.
+
+Lands may be devised to be sold for the payment of debts only to which
+it will be alone restricted; or if there is sufficient to satisfy all
+claims, it may be sold for the payment of legacies only, and not debts,
+in which case no debts can be paid out of the funds it produces. But
+in the first place, the personal assets of the testator shall in every
+instance be applied in the discharge of his debts or general legacies,
+unless by manifest intention they are exempted, as a plain declaration,
+or an inference so necessary, as to be tantamount to a declaration. A
+devise of the real estate, therefore, subject to the payment of debts,
+will not exempt the personal estate, at least only in appearance;
+for if even the testator direct the real estate to be sold to pay
+the debts, the personal estate will, by the rule of law, be taken to
+exonerate the rule, unless the whole of the personal estate be left in
+specific legacies. It is indeed directed, by the decisions in several
+cases, to be thus applied, even though the personal debt should be
+secured by mortgage, and whether or not there be a bond or covenant for
+repayment. By the same rule, lands which have descended will exonerate
+lands which have been devised; and both unencumbered and mortgaged
+lands which are devised, though even specifically and expressly after
+the payment of _all_ debts, will be used to throw off the mortgage,
+for in every such instance the debt is considered as only a personal
+debt of the testator, and, consequently a merely collateral charge upon
+the real estate.
+
+Where, however, the charge is chiefly on the real estate, and the
+charge on the personal is only collateral, a different rule prevails.
+As, for instance, where a real estate has been bought subject to a
+mortgage, for then the real estate which bears the burden, and not the
+collateral personal estate of the purchaser, shall be used to discharge
+the debt, unless it evidently appears that he intended that effect; but
+a mere covenant for making the debt secure would not absolve the real
+estate from its liability.
+
+In the application of real assets, when the personal estate is
+exhausted or exempt, the order to be observed is, firstly, “the real
+estate expressly devised for the purpose shall be applied; secondly, to
+the extent of the specialty debts the real estate descended; thirdly,
+the real estate specifically devised, subject to a general charge of
+debts.”
+
+It is necessary also, in order to understand the right position of
+legatees, to state, that where a creditor has more than one fund to
+resort to for the satisfaction of his claims and, another has only
+one, and he who has more than one chooses that fund on which he who has
+only one has a claim, that the creditor who has only one shall be able
+to come upon the other on which he had previously no lien; so that if
+a special creditor be satisfied out of the personal assets when they
+are only sufficient to satisfy the simple contract debts, the simple
+contract creditor shall have a claim against the real assets when the
+personal assets are exhausted. The same marshalling of assets may take
+place in favour of legatees, and against assets descended they have the
+same equity; as, for instance, when a simple contract creditor, who
+is prior in his claim to a general legatee, shall have been satisfied
+out of the personal assets, when they ought to have been left for the
+satisfaction of inferior claims, the general legatee shall stand in
+his place as to the real assets; so when the legacies are charged by
+the will on the real estate, and the legacies given in the codicil
+are not, the former shall resort to the real assets when there is an
+insufficiency of the personal assets to pay the whole. In the same
+manner, should a specialty creditor choose that his claim shall be
+satisfied from the assets in the hands of the heir, the heir shall be
+entitled to a recompense out of the personal estate.
+
+But the principles of these rules do not extend so far as to enable one
+claimant to overrule the rights of another, and a pecuniary legatee
+will not, consequently, stand in the place of a specialty creditor
+in his right against any lands specifically devised, though he will
+against those which have descended in an ordinary manner. Where,
+however, a mortgagee has exhausted the personal assets, instead of
+taking the estate over which he held his particular power, the legatee
+will come upon the mortgaged premises for the satisfaction of his
+claim, for the personal assets ought not to be so appropriated, to the
+defeating of any legacy, either specific or pecuniary. Where, also, a
+specialty creditor shall have exhausted the personalty, the legatee
+will have a claim upon the real estate before a residuary devisee. Yet
+in the case of _Handley_ v. _Roberts_, where the testator had left
+three leasehold estates, one of which was mortgaged, and the residuary
+personalty, which was the fund he appropriated to the payment of the
+debt, was exhausted without fully satisfying the claim, the other two
+leaseholds were held exempt from any share of the burden, and the
+legatee of the mortgaged estate took it with its weight as it was. None
+of these rules subject any portion of an estate to claims to which it
+was not liable before, but only go to the extent of securing the rights
+of every claimant with equal fairness.
+
+Where a testator dies possessed of both copyhold and freehold property,
+and he charges all his _real_ estate with the payment of his debts,
+both species of property will be equally subject to the impost, if he
+shall have surrendered the copyhold to the use of his will, but if not,
+the freehold must be exhausted before the copyhold can be applied.
+
+If a legatee be entitled to a legacy at some future day, out of the
+mixed fund of real and personal estate, and he die before that day
+arrive, the legacy will become vested and transmissible if it be made
+payable out of the personalty, but will sink on the death of the
+legatee if it be charged on the real estate. The wife will stand in
+the place of specialty creditors, for her paraphernalia, against real
+assets descended, but whether or not against such as are devised is not
+yet finally determined, unless such real assets shall have been stated
+specifically, to assist the personalty in the liquidation of debts.
+
+As respects bequests for charitable objects, a court of equity will
+not marshall the assets so as to give effect out of the personalty,
+notwithstanding that they are void as regards land. Under a devise of
+real and personal estate in trust to pay debts and legacies, some of
+which were void by statute as (charges for charitable objects upon real
+and leasehold estates), and there proving a deficiency of assets, the
+other legatees were preferred to the heir.
+
+
+
+
+CHAPTER IV.
+
+LEGACIES--GENERAL, SPECIFIC, LAPSED, VESTED, DEMONSTRATIVE.
+
+
+Legacies are gifts of the property of a deceased person to his
+surviving friends or relatives, expressed in the deed or will by
+which his disposable property is governed after death. They are
+styled _general_ when a certain amount of property is bequeathed to a
+particular person, without any certain fund being appropriated for its
+payment. They are _specific_ when the particular things are named, as
+well as the particular persons to whom those things are bequeathed.
+Legacies _lapse_, or are lost to the party or his representatives, or
+friends, when some particular condition is annexed to the bequest,
+which condition has not, or cannot be, either through negligence or
+impossibility, complied with. They are, on the contrary, _vested_, or
+made the property _de jure_ of the party to whom they are left, when,
+through his own act or without it, certain conditions, which were
+predicated by the terms of the will, have been fulfilled; although the
+legatee may not come into possession of his rights for years perhaps
+after the death of the testator. Farther, legacies are _demonstrative_
+when it is evident that, under a certain set of circumstances, certain
+persons are intended to inherit certain portions of property, and those
+certain circumstances arise by which the demonstrative legatees acquire
+their rights. These several terms will be clearer when they are farther
+explained and illustrated by examples, to which we will immediately
+proceed.
+
+
+GENERAL LEGACIES.
+
+General legacies are such as are specified in a mere statement of
+quantity; as, A leaves to B £500, to be paid out of his personal
+estate, without specifying any particular portion of property out of
+which the sum is to be paid. Nor does it matter whether it be of money
+or stock; and where the testator has not the stock stated in his will,
+but has the wherewithal to purchase it at his death, the executor is
+bound to procure so much stock for the legatee. But if the terms of the
+will be specific, as “so much stock, _standing in his name_,” and he
+has no stock whatever, the legacy would share the fate of a specific
+legacy, and fail. The purpose, however, to which a general legacy is
+directed to be applied, will not alter its nature, however specific
+the object may be. Personal annuities, given by will, are also general
+legacies.
+
+Legacies may be specific in one sense and pecuniary in another--being
+specific when they are given out of a particular fund, and not out of
+the estate at large; and pecuniary, as consisting only of definite sums
+of money, and not amounting to the gift of the fund itself, or any
+portion of it.
+
+In the case of the _Attorney General_ v. _Parkin_, Lord Camden
+recognized the distinction between a legacy of a certain sum due from
+a particular person, and a legacy of such debt generally; considering
+the former as a legacy of quantity, while the latter he deemed to be
+specific.
+
+
+SPECIFIC LEGACIES.
+
+Specific legacies are of two kinds; the first of which includes such
+chattels as are so described as to identify them from all others of any
+other kind, or of the same kind, as, “I give the silver candlesticks,
+left me by my late uncle, to such a person.” Here the meaning cannot be
+misunderstood, and the legatee can take the particular candlesticks in
+question, and none others; and, consequently, should it have happened
+that the candlesticks in question have either been lost or parted with
+by the testator during his life-time, or cannot be found after his
+death, the person to whom the bequest is made will lose his legacy. The
+second kind implies a particular chattel, as expressed in the will,
+but without distinguishing it from any other chattel of the same kind.
+Thus, the words, “I hereby give and bequeath a diamond ring to my
+nephew, J.,” would give to J. a diamond ring, even though the testator
+had not one in his possession at the time of his death, and he would
+obtain his legacy in full, even though those of the general legatees
+should abate of half their value in consequence of claims against the
+property of their benefactor. The gift, however, of a sum of money
+for the purchase of a specific legacy becomes a general legacy, and
+therefore liable to abatement.
+
+Generally speaking, there is an indisposition in the courts to construe
+the terms of a will into a bequest of a specific legacy, but if the
+expression clearly indicate an intention to separate any particular
+thing from the general property, they will always readily allow the
+specificness of the legacy; and, hence, under some circumstances, even
+pecuniary legacies become specific. Thus, in the case of _Lawson_ v.
+_Stitch_, a legacy was stated as consisting of, or conveying a certain
+sum of money, in a bag or chest, and the whole of that money became a
+specific legacy. Thus, also, in _Hinton_ v. _Pinke_, a sum of money was
+left, which, at the death of the testator, was in the hands of a third
+party, and was stated in the will to be so, that money was esteemed a
+specific legacy. So, also, was a rent charge upon a lease; for it was
+evident that only one rent charge, or one lease, could be understood.
+In like manner, the bequest of a bond, and the amount of the testator’s
+stock, in a particular fund, as well as a legacy out of the profits of
+a farm, which the testator directed to be carried on, as was decided in
+the case of _Mayott_ v. _Mayott_, the principle being fully developed,
+in the action of _All Souls’ College_ against _Coddington_. Specific
+legacies may also be carved out of a specific chattel, as is partly
+shown in the case of _Hinton_ v. _Pinke_, just cited; as, where the
+testator gives only _part_ of a debt, instead of the whole, which is
+owing to him, at the time of his death, by a third party.
+
+Yet, in order to insure the descent of a specific legacy, which is
+always _ceteris paribus_, more valuable than a general one, it is
+requisite that the testator should not nullify by any other expressions
+in his will the terms of a specific legacy; as was decided in the case
+of _Parrot_ v. _Worsfield_ where a testator, reciting that he had
+£1500 in the 5 per cents., gave it to one party, and then gave all
+other stock that he might be possessed of at his death to another,
+and, in consequence of the manner in which it was put, the latter of
+these two legacies was made subject to his debts, in preference to the
+former, when, in fact, there is little doubt but that the testator
+intended that both should in that respect stand on an equal footing.
+Much of the same kind of mischief arose in the case of _Willox_ v.
+_Rhodes_, where the testator gave a number of legacies, and added:--“I
+guarantee my estates at D. for the payment of the above legacies;”
+while, in an after part of his will, he gave many other legacies,
+it was held, that if the estates at D. should prove insufficient to
+satisfy the claims of the first class of legatees, the legacies were
+not specific, and the whole of the personal estate was proportionably
+liable for them. But, in the case of _Sayer_ v. _Sayer_, where the
+testator devised the whole of his personal estate, at a particular
+place, to his wife, the bequest was held to be as specific as if he had
+enumerated every particular of the property there.
+
+In some instances mistakes have arisen, in consequence of the
+misapprehension of particular terms by the parties who use them; and
+not a little care is often required to come at the precise meaning of
+a bequest. Thus, in a general sense, the word _money_ only implies
+either the coin of the realm, or the legal tender for it, bank notes;
+or else such equivalent as the state may have given in lieu of money,
+or that which is used to express the money lent to the state, and for
+the security of which, the faith of the state is pledged, or the public
+stocks; and, therefore, promissory notes, or bills of exchange, and
+other similar _choses in action_ are not included in the meaning of the
+phrase, yet, in some instances, they will be construed as meaning such.
+This was shown in the case of _Read_ v. _Stewart_, where the testatrix
+had bequeathed a cabinet, and all that it contained, “except money,”
+and part of the contents was a promissory note of value, and of a date
+payable anterior to her will, and, of course, to her death, it was held
+that the terms of the bequest did not pass the note.
+
+Yet a liberal construction is put upon the terms of a bequest, and an
+evident mistake will be rectified, as in the case of _Penticost_ v.
+_Ley_, where the testatrix made a bequest of £1,000, long annuities,
+standing in her name, or in trust for her, while, in fact, she
+had no long annuities whatever, but had really £1,000 in the 3 per
+cents. reduced, it was held, that this, and this only, could be the
+sum to which she alluded, and it was accordingly appropriated to
+the legatee. Still, it must be a mistake respecting which there can
+be no apprehension, or the legacy will fail; as in _Humphreys_ v.
+_Humphreys_, where the testator was indebted on a mortgage, which he
+had paid off previously to his death, out of a fund of £5,000, which
+he had in the 3 per cents., neglecting to alter a provision in his
+will, by which he had left the whole of his stock in these 3 per cents.
+(which he specified as _being about_ £5,000), except £500, which he
+left to another party, devising at the same time other specific parts
+of his property to be sold, and the produce to be applied in discharge
+of the mortgage; the circumstance of his having himself applied this
+fund to the discharge of the mortgage was held to have redeemed the
+legacy altogether, and the legatees could obtain no remedy against
+those other parts of the general estate which were directed to be
+applied to the redemption of this mortgage. This, however, was contrary
+to the general rule of equity, and it may be presumed that it would
+have been set aside on review. Lord Bathurst, it is true, held the same
+principle, at least to a certain extent, in the case of _Carteret_ v.
+_Carteret_, where the testator gave to one of his connections “one
+thousand four hundred pounds, for which he had sold his estate that
+day,”--which sum he received, and paid into his bankers, but drew
+eleven hundred of it out the same day, leaving the other three hundred
+there still; his lordship decided it to be a legacy of quantity, and
+therefore general, and subject to the diminution occasioned by the
+draft of the testator; but Lord Thurlow disallowed the distinction
+set up by Lord Bathurst, and decided that a legacy of “the principal
+of A.’s bond for three thousand five hundred pounds,” was a specific
+legacy, although the sum was named.
+
+Thus, the principle appears to be evolved, that a legacy, in order to
+be specific, and saved from any general abatement suffered by other
+legacies, must be stated precisely as a certain thing or fund, or a
+particular portion of a certain thing or fund, so that it may be whole
+in itself, though possibly a part, but a plainly indicated part, of
+something particularly described in the will.
+
+
+THE VESTING OF LEGACIES.
+
+A legacy is said to _vest_ when the party to whom it is bequeathed is
+not able to claim it at the seasonable time for the payment of general
+legacies, either through absence, or any other cause; or when it is
+directed by the testator that it shall be paid at some future period,
+and nothing occurs before the arrival of that period to prevent the
+legatee’s right. Thus, a legacy left to be paid to a certain party a
+certain number of years after the death of the testator, without the
+annexation of any condition, such as, “if the legatee shall so long
+live,” would vest the legacy; and if the legatee did not survive the
+period named, his heirs or representatives would come into his right;
+or should it be even said that the legacy is to be _payable_ to the
+legatee at a certain age, it is still vested, though he should never
+attain that age. But if it be said in the will that the bequest is to
+be paid _when_, or _as soon as_, the legatee shall attain a certain
+age, and he dies before the age specified, the legacy does not vest,
+but goes to those who may be stated in the will as the parties to
+receive it, in the event of the first legatee failing to survive, or
+into the general distribution directed by law. The distinction was
+originally instituted by the code of Justinian, and adopted by the
+English courts, not so much on account of its intrinsic equity, as from
+its prevalence in the spiritual courts, in order, that when the court
+of chancery acquired a concurrent jurisdiction with those courts in the
+adjudication of legacies, the claimant might obtain the same measure of
+justice from whatever court he might apply for redress.
+
+This rule, however, respecting the vesting of legacies applies
+only to legacies of personal property transmissible to the legatee
+as _personalty_; for the contrary holds, if the legacy be either
+charged upon real estate, or upon personalty to be laid out in real
+estate, and it would then be included under the next head, and would
+lapse. The reason of this is, because in devises affecting lands
+the ecclesiastical courts have no concurrent jurisdiction, and the
+distinction created by the circumstances of the future, does not extend
+to them. Yet, should the legacy be of personalty, and it be expressly
+stated that it is to carry interest, it will vest, and be transmissible
+to the legatee, or his representatives, notwithstanding that the words
+of positive conveyance, “payable,” or “to be paid,” are omitted, for
+the payment of interest is an adjudication of the principal.
+
+
+THE LAPSING OF LEGACIES.
+
+A legacy is said to _lapse_, or slip from, or be lost to the legatee,
+where, through his own fault, or through an impossibility over which
+he has no control, he fails to fulfil that condition of the will on
+which he is expressly to take the bequest. Thus, if a legacy be left to
+a person which is directed not to be paid unless he attains a certain
+age, and he dies before that age, though the death be no fault of his
+own, his representatives will be divested of all the right which they
+would otherwise have acquired.
+
+One peculiar instance of this was shown in the facts elicited in the
+case of _Tulk_ v. _Houlditch_, in which it appeared that the testator
+left a legacy to a person, concerning whom there was every probability
+that he was not alive, but yet no certainty could be obtained. In
+order, however, to insure the identity of the party, the bequest had a
+condition annexed to it, that the legatee should return to England, and
+personally claim of the executrix, or within the church porch of the
+parish, within seven years, otherwise the legacy was to lapse, and fall
+into the general residue. It afterwards appeared that the legatee was
+really alive at the time the bequest was made to him, but he failed to
+return, and, in fact, died abroad within the seven years. Lord Eldon,
+accordingly, held that the legacy had lapsed, for though the legatee
+was living he had not fulfilled the directions of the will, and he
+thereby lost his right to the bequest.
+
+The general rule respecting the lapsing of legacies is, that if a
+legatee die before the testator, the legacy shall become a portion of
+the general residuary estate, nor will a statement that the bequest
+is made to the legatee, his executors, administrators or assigns, or
+to him and his heirs, prevent the lapse; nor will even the expressed
+desire of the testator, that the bequest shall not fail if the legatee
+shall die before him, exclude the next of kin. But a slight alteration
+of the terms of the will may prevent the failure, as in the case of the
+death of A. before the testator, other persons are named to take; for
+instance, A.’s legal representatives, or the heir under his will, or to
+A., B., C., “or to their heirs,” or to A., “and failing him by decease
+before me, to his heirs,” the legacy, on A.’s so dying, shall vest in
+such nominees.
+
+It is decreed by 1 Vict. c. 26, s. 29, “that in any devise or bequest
+of real or personal estate, the words ‘die without born issue,’ or
+‘have no issue,’ or any other words which may import either a want or
+failure of issue of any person in his life-time, or at the time of his
+death, or an indefinite failure of issue, shall be construed to mean a
+want or failure of issue in the life-time, or at the time of the death
+of such person, and not an indefinite failure of his issue, unless a
+contrary intention shall appear by the will.”
+
+We may conclude with the observation, that where a legacy is clearly
+left to any particular person, the court will require very clear
+evidences of the failure of the performance of conditions, before it
+will allow a lapse to the loss of the representatives of the legatee;
+and, that just in proportion to the clearness of the bequest, is the
+danger of the lapse.
+
+
+DEMONSTRATIVE LEGACIES.
+
+It sometimes, though rarely, occurs, that the party who is to inherit a
+bequest can only be ascertained by inference, instead of from the clear
+declaration of the will; and the legatees so ascertained, are termed
+_demonstrative_ legatees. Such are often found in distant, or unknown,
+or unrecognized relatives or friends of the deceased.
+
+
+
+
+CHAPTER V.
+
+ASSENT TO LEGACIES.
+
+
+It is the peculiar attribute of the office of an executor, that he
+stands as the medium of communication between the dead and the living.
+Responsible in his conscience to the former for the fulfilment of his
+desires, responsible to the latter by the law for the satisfaction
+of their rights. In him the right of property vests previous to its
+distribution, and this during the exercise of his duty, almost as fully
+and effectively as if the goods he has to apportion were his own. The
+legatees under a will, whether their bequests be general or specific,
+acquire only an anticipatory benefit until the time arrives for the
+complete conveyance of their legacies, either according to the terms of
+the will or the rule of the law. Until then the deputy of the testator
+holds complete possession, and none can touch an iota of the chattels
+without his permission. Consequently, the
+
+
+ASSENT OF THE EXECUTOR
+
+to the payment of a legacy is necessary before a legatee can touch the
+property left to him; and if any of those who are benefitted under a
+will take possession of his legacy without that assent, the executor
+may maintain an action of trespass against him.
+
+This is highly requisite; for a misapprehension of his duty, or a
+negligence in the performance of it, might subject an executor to
+serious loss. For instance, according to the law of England, a man’s
+property is, in the first instance, after his death, to be applied
+in the payment of his debts in their regular order--debts due to
+the crown, debts of record, judgments, bonded and simple contract
+debts--and if the effects prove insufficient, or if they are only
+barely sufficient, to satisfy these, the legatees are all excluded
+from any benefit under the will. And should he have paid any legacy
+before the satisfaction of any debt, and it afterwards turn out that
+the funds were not ample enough to pay both, he must either recover the
+amount paid to the legatee, or satisfy the debt out of his own private
+resources.
+
+Should, however, the assets prove large enough to pay all the debts,
+but insufficient to satisfy all the legacies, the legatees, and the
+claims of all the general legatees, will abate in proportion; and if
+he either pay, or suffer any one else to appropriate to themselves, a
+legacy in full, while the rest were obliged to take only a quarter of
+their bequests, they would have the right of compelling the executor
+to refund to them the several amounts which they had lost by the undue
+payment of one. As a protection, therefore, to the executor, his assent
+to a legacy is necessary--not that he can unjustly withhold that assent
+where the means are sufficient, or even proportionably sufficient--his
+assent to a legacy is necessary before that legacy will vest or be
+assured to the party to whom it is left. But this assent once given,
+is evidence that the assets are sufficient, and an admission on his
+part that the fund is competent to discharge the legacy; and should
+he afterwards refuse to pay it, on the ground that it was not so, the
+legatee may compel the payment out of his own private estate.
+
+Without this assent, however, whatever may be inchoate rights of
+the legatee, he has no vested rights; and even in the instance of a
+specific legacy, though it be of a chattel real, as an estate, or of
+a chattel personal, as a horse or piece of furniture, in the care or
+custody of the legatee; and though the funds be sufficient to satisfy
+all the claims, the executor, unless he has given his assent, may
+maintain an action against the legatee for possession against his
+will. Nor can the legatee take possession of his bequest without the
+executor’s assent, even though the will of the testator should give
+authority for that express purpose. Reason good is there that such
+should be the case; for if the will of a testator could have the effect
+of appointing his property without the assent of his executor, he
+might appoint every sixpence of it to specific legatees, and defraud
+every one of his creditors of their claims. Notwithstanding the extent
+of his power, however, the executor cannot divest the legatee of his
+inchoate right, or anticipatory property; and should he die before the
+distribution of the effects, his representatives would take his share.
+Yet for the vesting of the legacy, or the delivery of the bequest, the
+assent of the executor is necessary; and what that assent consists in
+we will now proceed to show.
+
+
+NATURE OF THE ASSENT.
+
+The law has prescribed no particular form in which this assent shall be
+given, and a very slight intimation is held sufficient. Not only may
+the executor authorize the legatee to take possession of the bequest
+in direct terms, but indirect expressions, or relative acts, will have
+the same effect--anything, indeed, from which an intended permission
+can be construed. Thus, if the executor congratulate the legatee on his
+legacy, or if a specific legacy be left to any one, and the executor
+request him to keep or dispose of it, or if he in any way refer a third
+party to the legatee as proprietor of his legacy, or if he himself
+treat him, or treat with him as the proprietor. As for instance, where
+an executor requested the lease of an estate left under a will which
+he had to administer from a legatee, and accepted the lease which was
+granted in accordance with his request, it was held that he allowed the
+granter to be the proprietor of the estate which he had granted. An
+assent to an estate in remainder is an assent to the present estate,
+for a remainder can only be a continuation of an estate, and therefore
+a part of it. Whenever property, however, is so divided, that it has
+acquired two qualities, as is the case of land under a term for years,
+where there is the real property, and the chattel real arising out of
+it--the land and the rent--an assent to the legacy of one quality is
+no assent to the legacy of the other, and therefore, an assent to the
+legacy of the rent is no assent to the legacy of the land; but on the
+principle that the greater comprises the less, assent to the legacy of
+the land will carry assent to the legacy of the rent.
+
+
+ABSOLUTE AND CONDITIONAL ASSENT.
+
+The nature of _absolute_ assent is self-evident. It is an assent
+given to a legacy, without reference to any contingent or dependent
+circumstance, and when once given cannot be retracted, and the legacy
+to which it pertains can be affected by nothing but the subsequent
+discovery of debts, which may cause an abatement of its amount. How
+that acts will be shown hereafter.
+
+_Conditional_ assent is assent with a reservation, or with an
+obligation upon the claim of the legatee; so that if the contingency
+shall occur to which the reservation shall refer, the legacy shall
+not vest; or if the obligation be not completed it shall lapse. In
+either case, the condition must be precedent to the assent, or it is
+no condition at all, and the executor can never afterwards impose it;
+or, in other words, the assent is absolute. Thus, if a testator leave
+a leasehold estate to one of his friends, but at the time of his death
+there happen to be arrearages of rent, without payment of which the
+property would revert to the lessor, and the executor assent to the
+legacy, on condition that the arrearages be paid by the legatee. Should
+the latter pay these arrears, he becomes entitled to the bequest; if
+not, the legacy would lapse, for there is no assent. This is necessary;
+for if the executor were to give an absolute assent to the legacy, he
+would be obliged either to pay the arrears out of the general estate
+to the loss of the other legatees, or out of his own pocket by their
+compulsion. If, however, the executor be imprudent enough to assent
+to the legacy on condition of something being done subsequent to its
+reception by the legatee, as, for instance, with the proviso that he
+shall pay the executor a certain sum annually, this in no way affects
+the assent, and the legatee would take whether he performed his
+condition or not. In the case of failure the executor could not divest
+him, but must seek his remedy as he might.
+
+The peculiar position of a fund out of which a legacy is to be
+paid, though it may be required by the will that it should be given
+absolutely, may make it necessary for the executor to impose a
+condition, and he has a right to do so; and he may withhold the legacy
+if that condition be not complied with, that is, provided it be
+reasonable. But if he once part with the legacy, he at the same time
+divests himself of the power of imposing stipulations, and he will have
+no right afterwards to make that conditional, which by the terms of the
+will was made absolute.
+
+It should be observed that the executor’s assent to a legacy has
+reference to the state of the fund at the time of the testator’s death,
+and if through circumstances any alteration should take place in the
+state of the fund before the payment of the legacy, he has no right
+to mould his conduct and direct his assent upon that alteration, but
+he must pass the legacy as he found it, and the legatee will have the
+right either to accept it with its clogs, or abandon it altogether; and
+whatever advantage accrues to his inchoate property after the death of
+the testator, and before his actual acquisition of the legacy, to that
+the legatee is fully entitled.
+
+When once assent has been given to a legacy, the executor can never
+afterwards retract; and notwithstanding a subsequent retraction, a
+legatee of a _specific_ bequest has a right to his legacy, and has a
+lien on the assets, and may follow them for that specific part; and
+should the executor refuse to pay it, he may recover it by action
+at law. An assent to a void legacy, however, is void; and should an
+executor by mistake give such assent, the legatee acquires no right
+thereby.
+
+Assent may be given before the probate is obtained; for an executor’s
+authority arises at the moment of the testator’s death; but if he has
+not attained the age of twenty-one years, he is incapable, by the Act
+of 38 Geo. III., c. 87, of exercising the functions of his office, and
+his assent before that time is consequently void.
+
+
+
+
+CHAPTER VI.
+
+PAYMENT OF LEGACIES.
+
+
+With respect to the _time of paying legacies_, it may be observed that
+whilst, on the one hand, the assent of an executor is necessary to the
+title of a legacy, the law has taken care that he shall not be hurried
+into the performance of his important duty, and be led into errors
+without due deliberation, and has provided therefore that he shall
+not be compelled to pay the bequests of his testator before a year
+has expired from the period of his death. This custom is adopted from
+the civil law, and it is conceived that during this time he will have
+opportunity of fully informing himself as to the state of the property
+and its competency to pay all the calls which either the will of the
+deceased has imposed in the shape of legacies, or which have arisen
+from his proceedings in the shape of debts. An executor, therefore, who
+after the satisfaction of all these leading calls, shall pay over the
+remainder of the estate, if any, to the residuary legatee, cannot plead
+that he has _fully_ and rightly parted with all the property, in reply
+to his testator’s liability on a covenant which is only made apparent
+after that time and within twelve months of his decease. Against the
+legatees, indeed, who have obtained too much, and before the time, he
+has a remedy; for it was decided in the case of _Livesey_ v. _Livesey_,
+that where an executor had by mistake made payment of an annuity before
+the legatee was entitled to receive it, he was entitled to retain the
+amount of the payments he had made out of the future payments. And if
+a legacy be paid in instalments, and through inadvertence the executor
+pay a larger amount in the first instalment than he ought to have
+done, he may either retain it altogether out of the next, or deduct it
+equally from each of the subsequent instalments.
+
+
+THE LEGATEES.
+
+If a testator leave a legacy to an individual “and to the heir of his
+body,” or to a female, “and to be secured to her and to the heirs of
+her body,” or to one “and to her issue,” they are _absolute_ legacies,
+the sole and entire property of the party to whom they are left, and
+those parties are entitled to receive them. Such is the case also where
+a legacy is left to a female, “when and if she should attain the age
+of twenty-one, to her sole and separate use; and in case of her death,
+having children, her share to go her children,” and to her personally,
+or to any deputy or attorney, as the law phrases it, properly
+authorized to receive it, must the legacy be paid. But if a legacy be
+only generally expressed as to be given to a certain individual, and
+“to her heirs or children,” the legatee only takes a _life interest_.
+
+Where legacies are left to each of a certain number of relatives,
+_or_ to their respective child or children, and should any of them
+die without a child, the share reverting to the residuary legatee,
+the relatives so named who survived the testator will each take their
+share absolutely; for the law cannot contemplate so distant an event
+as the possibility of the legatees having no children all their lives,
+and therefore passes the property of the bequest to them in full, and
+thereby destroys any reversionary right of the residuary legatee.
+
+When a legacy is left to an infant, or person under twenty-one years of
+age, payable on his attaining that age, and he die before the time, his
+representative, although he will inherit the property, cannot claim it
+until the period arrives when the party through whom he claims would
+have received it. But if the will states that the legacy is to carry
+interest, the representative can claim it immediately on the death of
+his principal. Should a legacy be made payable out of _land_, at some
+future time, although it should carry interest in the meantime, it was
+decided in _Gowler_ v. _Standerwick_, that if the legatee should die
+before the time arrives, the fund should not be raised until that time,
+securing, nevertheless, a personal fund for a future or contingent
+legatee. When, however, it was stated by the will that certain legacies
+should be paid on the land, _but expressed neither_ time nor _manner_
+in which the money should be raised, nor did it appear that the estate
+was a reversion, which was in fact the case, it was held that the
+estate should be disposed of in order to raise the legacies, and that
+they should be paid with interest from the time of the testator’s
+death, and not from the period when the estate would accrue.
+
+Should the will express that a legatee is to take on attaining the age
+of twenty-one, and in the event of his dying before twenty-one, then
+that it is to go to another, that other person will take the legacy
+immediately on the death of the first-named legatee, if he should
+die before twenty-one, because he does not claim through the first
+party, but, in consequence of a direct right which became his on the
+death of that party. But in the case of _Moore_ v. _Godfrey_, where
+legacies were given to three co-heiresses, to be paid to them on their
+respective marriages, and in case of the death of any of them before
+marriage, her or their share to go to the survivor or survivors, and
+one of the sisters did die unmarried, it was held, that the portion
+of the deceased did not accrue to her sisters, any more than their
+original shares, until the period of their marriage, according to the
+terms of the original devise.
+
+Where stock is left to trustees to pay the dividends from time to time
+to a married woman for her separate use, the bequest is an unlimited
+one, and passes the capital as well as its interest, and she may
+appoint or direct its disposal at her death. And where a certain sum
+had been left to trustees, in trust, to pay the dividends to a party,
+until an exchange of certain lands should be made between him and
+another party, the capital then to be equally divided between them, and
+the latter died before the time for making the exchange expired, the
+former party obtained the whole of the legacy.
+
+If a legatee is to receive an estate, including residuary legateeship,
+on condition of paying the debts of the deceased, and he take the
+estate, he is liable for the whole of the debts, though they may exceed
+the value of the estate tenfold.
+
+Conditions may be annexed to legacies, which in some cases become
+substantive parts of title, but are in others void and useless. Thus,
+when a legacy was bequeathed, on condition that the legatee “should
+change the course of life he had too long followed, and give up low
+company, frequenting public houses, &c.,” it was held that it was a
+condition that ought to be complied with, and the court directed an
+inquiry to ascertain whether it had been before it would direct the
+payment of the legacy. But when, on the contrary, a legacy was left to
+a married woman, on condition that she lived apart from her husband,
+the legacy was awarded notwithstanding the breach of the conditions,
+because it was deemed contrary to good morals and Christian duty. When
+a condition was annexed that the legatee should take, provided he did
+not marry without the consent of the executor, expressed in writing,
+and he did marry with the consent of such executor, but expressed
+verbally and not in writing, it was held that he was entitled to the
+legacy; and the consent of a co-executor, who had not acted, was not
+considered requisite.
+
+A legacy was given on condition that the legatee intimated to the
+executor his willingness to forgive certain debts, and he filed a bill
+in Chancery to recover his claims, it was decided that he had forfeited
+the legacy. In a case where a testator authorized his executors, at
+any time before a certain person attained the age of twenty-six, to
+raise £600 by sale of stock, and apply the same towards his advancement
+in life, or for any purposes for his benefit, as the executors might
+think proper, and at the age of twenty-six he made an absolute gift of
+the £600 to that person, the executors declined to act, and the court
+refused to give any portion of it, until it could ascertain whether the
+legatee’s position was such that he would suffer detriment unless the
+whole, or a portion, were paid.
+
+
+TO WHOM LEGACIES SHOULD BE PAID.
+
+No small care is required on the part of executors to pay legacies
+into the hands of those who are entitled to receive them; for it has
+not unfrequently happened, that an honest man has been reduced to
+ruin by the obligation to pay money over again out of his own pocket,
+in consequence of mistakes, in regard to those who were entitled to
+receive portions of the estate of his testator. Nor has it been a very
+unfrequent circumstance, that legatees have been deprived of their
+just, and perhaps necessary rights, in consequence of their inability
+to recover from an executor that which he had wrongly paid to other
+persons.
+
+Many of these misfortunes have occurred from the misapplication of
+legacies to infants; and the general rule is now established, that
+an executor has no right to pay a legacy to the father of an infant,
+or person under age, or to any other relative of his, without the
+sanction of a court of equity. Even in the case of an adult child, such
+payment must be made with the consent of the child, and confirmed by
+his ratification at an after period. For cases have occurred, where,
+with the most honest intentions, an executor has paid a legacy to the
+father of an infant, and has been obliged to pay it over again to the
+legatee himself on coming of age; and although several of these cases
+have been attended with gross hardship to the executors, yet the custom
+is attended with such serious danger to the interests of infants, that
+the court would never consent to sanction the practice. Nor will it do
+so, even though the testator on his death-bed desire it, as was shown
+in the case of _Dagby_ v. _Tolferry_, where the points were extreme. An
+executor will, however, be justified in paying a portion of a legacy
+left to an infant, to the infant himself, or to his guardian, if it
+should appear that the money is absolutely needed for necessaries for
+such infant. But should a legacy to an infant be too inconsiderable
+to apply for the authority of the Court of Chancery, the executor
+would be justified, too, in paying it into the hands of the infant,
+or its father; but he is not generally warranted in so doing. And if
+the father institute a suit in a spiritual court, in order to have his
+infant’s legacy paid into his hands, a prohibition against it may be
+readily obtained by the executor.
+
+Where the circumstances are difficult, and the executor knows not how
+to act, he may shelter himself under the directions of the statute
+36 Geo. III., c. 52, s. 2, by which it is enacted, that “where by
+reason of the infancy, or absence beyond the seas, of any legatee,
+the executor cannot pay a legacy chargeable with duty by virtue of
+that act; that is to say, given by any will or testamentary instrument
+of any person who shall die after the passing of that act, it shall
+be lawful for him to pay such legacy, after deducting the duty
+chargeable thereon, into the Bank of England, with the privity of
+the Accountant-general of the Court of Chancery, to be placed to the
+account of the legatee, for payment of which the Accountant-general
+shall give his certificate, on production of the certificate of the
+Commissioners of Stamps, that the duty thereon hath been fully paid;
+and such payment into the Bank shall be a sufficient discharge for such
+legacy, which, when paid, shall be laid out by the Accountant-general
+in the purchase of 3 per cent consolidated annuities, which, with the
+dividends thereon, shall be transferred or paid to the person entitled
+thereto, or otherwise applied for his benefit, on application to the
+Court of Chancery, by petition or motion, in a summary way.” But, as in
+all other cases, the executor is not bound to pay the legacy into the
+Bank until the end of a year from the testator’s death.
+
+When personal property is bequeathed for life to one party, with a
+direction that it shall go to another after his death, the property
+is retained by the executor, who must invest it in the 3 per cent.
+consols, until the death of the first legatee, when it must be handed
+to him. But this rule does not hold where a testator dies abroad,
+having made his will out of this country, unless the first inheritors
+come here, in which case the person in remainder has a right to have it
+invested.
+
+If an executor obtain a power to divide a sum of money committed to his
+charge, at his discretion, a court of equity will interfere to control
+his division, if it be unreasonable; as, where a testator left £1,100
+to be divided between his two daughters (one of whom was by a former
+marriage), at the discretion of their mother, and she gave £1,000
+to her own child, and only £100 to the other, her distribution was
+overruled, and an equal division was made. The misbehaviour, however,
+of any of the children, will form a sufficient plea for unequal
+division.
+
+In a case where a testator had left a sum of money to a certain person,
+but left it to the discretion of the executors out at interest, if they
+should think such a disposition more to his advantage, with orders
+to pay him the dividends, and directing the principal to be divided
+amongst his children at his death, or at the legatee’s discretion in
+default of children, and one of the executors died, and the other
+renounced the trust, it was held that the legacy was absolute to the
+legatee, and it was accordingly paid to him.
+
+Another instance of unexpected contingency occurred in the case of
+_Birch_ v. _Wade_, where the testator willed that one-third of his
+principal estate and effects should be left entirely at the disposal of
+his wife, if she should think proper, among his relations, after the
+death of his sisters; she died without making any disposition, and it
+was held a trust for her next of kin at the time of her death.
+
+A legacy left to a married woman must be paid to her husband; and even
+where she was living separated from her husband, without maintenance,
+and the executor paid her a legacy and took her receipt for it, he
+was compelled, on suit from the husband, to pay it over again with
+interest. Nor is the rule altered in a case of divorce, _a mensâ et
+thoro_; for there the husband alone can release it. But the executor
+may decline to pay it to him, if it amounts to £200, unless he has
+made, or will make, a sufficient provision for his wife. And if a woman
+who is, or has been, married, becomes entitled to a legacy, the court
+will require a positive affidavit that it has not been in any way
+settled, before it will decree payment to her personally.
+
+Money bequeathed to a charity established out of England, must be paid
+to the persons named by the testator to receive it.
+
+Legacies left to a bankrupt become the property of his assignees,
+unless his certificate be signed, and even then, unless it has been
+allowed by the Lord Chancellor; and they must, therefore, under such
+circumstances, be paid to his assignees.
+
+As the law now stands, all legacies are subject to the debts of
+the testator, unless there be sufficient assets to pay both debts
+and legacies; and in the event, therefore, of the estate proving
+insufficient for the debts, after some or all of the legacies are
+paid, the executor can compel the legatees to refund altogether, or in
+proportion to the deficiency.
+
+Under the will of a person residing abroad, or in the colonies,
+legacies are payable in the currency of the country where the testator
+resided at the time the will was made. Nor does it affect the case
+that he has effects in this country as well as there, unless he shall
+have separated the funds by his will, and charged the legacies on his
+English property. When some legacies are described as _sterling_, and
+others not so, they must be paid accordingly, and in compliance with
+such description. So also, if a testator bequeath a legacy, either of
+a single sum of money, or of an annuity charged on lands which are in
+another country, the full amount shall be paid according to English
+count, and without any deductions for the expenses of remittance.
+
+
+DUTY UPON LEGACIES.
+
+The executor is responsible for the duties upon all legacies, and must
+pay them. He, therefore, pays every legacy specified in the will, short
+of the amount which he has to deduct for duty; and on its payment he is
+bound to take a property stamp receipt, according to the value of the
+legacy and the relationship of the legatee to the testator.
+
+A bond debt forgiven by will is a legacy, and therefore liable to duty.
+Duty was charged upon a legacy of £50 a-year, to be laid out in bread
+and divided among the poor of the parish, although some of them only
+received about two shillings a-year each. But a residue to be divided,
+in which the several recipients did not receive more than £15 each,
+was not chargeable, though had any of the legatees been entitled to
+more than £20, their share would have been.
+
+Where a legacy is directed to be paid “without deductions” or “free
+of expense,” the executors must pay the amount in full, and discharge
+the duty from some other fund. Such, also, will hold with regard to
+annuities as well as sole legacies. An expression, also, of “clear of
+all outgoings and taxes,” with respect to an annuity, will carry the
+same privilege.
+
+If by the will a legacy be given free of duty, and by the codicil that
+legacy is revoked, and a larger one given by way of increase, it is
+equally free from duty as the original legacy. But if an annuity be
+left in the body of the will, free from all stamps and taxes, with a
+gift over, which is revoked by the codicil, and a small annuity left,
+without the gift over, it is held to be altogether a new legacy, and
+not entitled to exemption from duty.
+
+Where a testator died in India, where his executors also lived, and
+where all his property was situate, it was held that a legacy remitted
+to a legatee in England was free from duty. When, however, part of such
+a testator’s property was found in England, and a legatee instituted
+a suit to have his legacy paid out of that portion of the assets, it
+was liable to the duty. Property belonging to a foreigner, though it be
+in this country and given to English legatees, is not liable to duty.
+But American, Austrian, French, and Russian stock, if the property of a
+person domiciled in this country, is liable to legacy duty. Yet probate
+duty is not payable upon property situated in a foreign country, though
+brought into this, and administered by an English executor.
+
+In general it may be observed, that where an executor has inadvertently
+paid a legacy without deducting the duty, he can compel the legatee to
+refund, and in one instance, when an annuity had been paid for four
+years without deducting the duty, until the executor had assigned the
+whole of his interest, he was deemed to be only the surety of the
+legatee, and could compel him to return accordingly.
+
+
+INTEREST ON LEGACIES.
+
+A distinction formerly prevailed as to the quantum of interest
+payable on legacies charged on lands, and such as were chargeable on
+personal property, for it was deemed but fair that as land never
+produces a profit equal to the interest on money, so the interest
+on a legacy charged on such property, should be one per cent. lower
+than that charged on personalty. But the distinction is now set
+aside, and whether legacies are charged on realty or personal estate,
+the established practice is to allow only _four per cent._ where no
+other rate of interest is specified by the will. This custom prevails
+upon all legacies administered in England whether derived from home,
+colonial, or foreign property.
+
+When interest is payable upon a legacy, can alone be learned from
+the will itself. Not that interest will only be paid when the will
+expressly states that it should be, for the greater number of cases are
+those in which interest has been paid from inference of the testator’s
+intention as derived from the construction of his expressions. But
+these are so various, that any attempt to specify the principles
+on which the construction for interest is based would be futile; a
+careful attention to the wording of the will generally enables any
+one of ordinary understanding to ascertain when he may be entitled to
+interest, when that effect is not plainly expressed. The ordinary rule
+is, that wherever a legacy is made payable out of a fund bringing
+interest at the death of a testator, as a mortgage or money in the
+funds, the legatee is entitled to the interest his share of that fund
+produces, until his legacy is paid; and wherever the bequest is made
+upon property not bringing interest, as when a sum is left to a party
+to be raised out of houses or land to be sold, the legatee is not
+entitled to any such benefit.
+
+
+
+
+CHAPTER VII.
+
+THE ADEMPTION, CUMULATION, AND ABATEMENT OF LEGACIES.
+
+
+No care is too great to give a precise expression to a testator’s
+will, and difficulties enough often arise after every care has been
+taken to avoid misconstruction, and therefore there cannot be too much
+care spent in endeavouring to ascertain, as well as to express, the
+meaning of a testament. But there are frequently other circumstances
+which supervene to alter, enlarge, or altogether obviate the intentions
+of a testator for the benefit of his relatives, without possibly any
+cognizance on his part. In some instances, the legacies which he
+intended to give are, either by his own voluntary or inadvertent act,
+or by the influence of circumstances, altogether taken away and lost
+to the parties whom he nominates legatees; and this is called the
+_ademption_ of legacies. In other cases, the amounts of the legacies
+specified become, through the effect of other circumstances, increased,
+and this is called the _cumulation_ of legacies. In others, again the
+amounts, instead of being increased or destroyed, are decreased; and
+this is called the _abatement_ of legacies.
+
+
+THE ADEMPTION OF LEGACIES.
+
+This ademption may be either express or implied; for the testator may
+not only in express terms revoke a legacy which he had previously
+given, but his intention to do so may be indicated by particular acts.
+Thus, where a father gives to one of his children, a daughter, a legacy
+of a certain amount, and afterwards gives her that amount, or a larger
+one, as a marriage portion; or if a son, gives him the same amount or
+a larger one, to establish him in business, or to be of benefit to
+him for life in any other important way,--in both these cases, the
+legacies are considered to be adeemed or lost to the parties. But this
+ademption will not be implied, if the bequest is to come out of the
+residue, nor if the provision given by the father in his life-time is
+loaded with any contingency; as repayment, or the performance of any
+particular covenant, as a consideration for the provision for them;
+it is in a manner bought by the recipient, and it would be unjust to
+deprive him or her of a free gift, as a legacy is always construed to
+be by such a purchase. Neither is the legacy lost if the converse of
+this be the case; that is, if the legacy itself, and not the provision,
+be loaded with a limitation or contingency; for then it is evident
+that the legacy and the provision are not identical, which they must
+evidently be for the former to be lost. Nor is it adeemed if the
+testator be a stranger, or the uncle of the legatee, or if the latter
+be an illegitimate child, unless the father shall openly have assumed
+the office and performed the duties of a parent to it. The principle of
+_identity_ appears to be the governing rule; for as the law does not
+allow the other legatees to be defrauded by a sum being paid to a party
+under a will, which had been previously paid by the act of the testator
+himself, so it must have clear evidence that the testator intended the
+gift to supersede the legacy, before it will suffer the legatee to
+be deprived of his right, simply because he appears to have enjoyed
+more favour at the hands of the testator than was at first supposed.
+Ademption, therefore, may always be resisted by evidence.
+
+But a legacy is evidently adeemed when there is a decided impossibility
+of paying it; as when the whole of the testator’s assets have been
+swallowed up by his debts, which always precede legacies in their
+right. When the object itself is lost which is made the subject of
+a legacy, the latter is of course adeemed, as when a man leaves a
+particular estate as a specific legacy without stating its value,
+and he disposes of that estate before his death. Or if he leave the
+furniture of a particular house, and he leave that house, and sell
+the furniture before his death. But the removal of the whole of the
+furniture to another house would be only an implied ademption, and
+might be resisted by evidence of the testator’s intention to give that
+particular furniture, wherever it might be, to the legatee. The bequest
+of a debt to a debtor, of which debt the testator compels payment after
+making his will, would be an ademption of the legacy; but the voluntary
+payment of the debt before the death of the testator, would not, in all
+probability, deprive the legatee of the amount which he had paid; the
+ademption would then depend there, as it does, indeed, in all cases,
+upon the intention of the testator, where circumstances do not offer an
+insuperable bar to the fulfilment, such as we have stated above. The
+object, therefore, should be to get that intention ascertained.
+
+
+THE CUMULATION OF LEGACIES.
+
+Cumulation, like ademption, very often depends upon the intention
+of the testator, for it may be his desire to increase a legacy, or
+he may, through inadvertence, state it twice over. For instance,
+where a specific thing, as an estate, a horse, or a house, is stated
+twice over, there is clearly no cumulation. When a like quantity is
+bequeathed to the same legatee twice in the same instrument--as the
+will, or stated in the will, and repeated in the codicil, unless the
+word, “another,” or something equivalent to it, be annexed. So, also, a
+subsequent statement of a certain sum, as an unconditional legacy, when
+it had been previously stated as a conditional one, is no cumulation.
+When, however, two unequal quantities are stated for the same legatee,
+though they be in the same instrument, they are two legacies, and not
+one. Such is the case, also, when two equal sums are given by different
+instruments; and when both legacies are expressed as being given for
+the same cause, they are not cumulative; it is too apparently an
+inadvertence. But when two different reasons are assigned they are two
+legacies; or when the legacies are of different natures, though of the
+same amount, as one a sum of money, and the other an annuity, or two
+annuities of similar amount, but differently paid, as one half-yearly,
+and the other quarterly, or similarly paid, but out of different
+estates, as one out of real, and the other out of personal, estate.
+
+Extrinsic circumstances will also cumulate legacies, though stated
+of the same amount; as, when after the date of the will, but before
+the date of the codicil, the testator has received an increase of
+fortune, for it is then evident that he intended to dispose of the
+accession. Indeed other, very slight, circumstances are often admitted
+as evidences of cumulation.
+
+
+LEGACIES IN SATISFACTION OF DEBT.
+
+Sometimes it happens that legacies, instead of being purely such, are
+mere satisfactions of debt; and on this point, as on the two preceding,
+the intention of the testator is the guide of judgment. In general, the
+legacy of a debtor to his creditor, when the bequest is equal in amount
+to the debt, or greater, is considered as a payment of the obligation.
+But many circumstances may occur to obviate this construction, as if
+the legacy be left conditionally; for a man has no right to take an
+uncertain advantage as a recompense for a certain claim. Nor when the
+advantage is postponed whilst the claim is present; as when the legacy
+is to be paid at a future period, while the debt is due immediately on
+the death of the testator, though the postponement be for ever so short
+a period. Nor unless the legacy be in every way equal in advantage
+to the debt. Nor when an express injunction is laid on the executor
+for the payment of debts. Nor if the debt be contracted after the
+date of the will, for then the satisfaction of it by the legacy could
+not have been contemplated. Nor when the amount of the debt is open
+and uncertain, as when there has been a running account between the
+testator and legatee, which is unclosed at the death of the former, for
+then he could not positively know of the debt.
+
+In this instance, however, as in others, the law is favourable in its
+construction of kindly intentions, and parol evidence is accordingly
+admissible to refute the construction unfavourable to the legatee’s
+interests. But, just as well as considerate, it decrees that a legacy
+shall be considered as satisfaction of a debt in all cases where there
+is a deficiency of assets.
+
+On the contrary part, in order to secure the interests of both parties,
+it is held that a legacy left to a debtor is to be considered as a
+complete or partial satisfaction of his claim, for he is conceived to
+have goods in hand for the payment of so much of the amount of his
+debt. Through the influence of the same principle, money or goods
+delivered or lent to a legatee, are considered as a _pro tanto_ payment
+of his claim. Should the debt itself be bequeathed, it is a pure
+legacy, if there are sufficient assets to satisfy all the other debts;
+but if not, then this debt is considered as part of the assets, and the
+legatee would share the benefit in proportion.
+
+
+ABATEMENT AND REFUNDING OF LEGACIES.
+
+In the event of there not being sufficient assets to satisfy the
+debts of the testator, all the legacies under his will are subject
+to abatement or reduction to pay the creditors; but in the event of
+there being sufficient to satisfy the debts and specific legacies,
+by adeeming the several legacies, they are adeemed or abated in
+proportion; and should the executor have paid certain of the legacies,
+or even all of them, and afterwards find debts which he was bound to
+satisfy, he can compel the legatees to refund in proportion to the
+amount of their bequests, until the claims are all paid. It is usual
+to take an agreement to refund if necessary; but whether this is done
+or not, the power of the executor remains as long as the claims of the
+creditors can be enforced.
+
+
+
+
+CHAPTER VIII.
+
+LEGACIES TO EXECUTORS,--AND LEGATEES’ REMEDIES AGAINST THEM.
+
+
+If a legacy be left to the executor, and he take possession of it
+generally, he will hold it under his official capacity; and his union
+of the double character of executor and legatee makes no difference,
+and his legacy is subject to all the caution and consequences which are
+required and wait upon other legacies--the same cumulation, abatement,
+and ademption. He only has a right to secure himself first of the
+several legatees. Assent is as necessary to his legacy as to others;
+and it may be given either expressly or by implication; and he is
+subject to the same liability and conditions. But yet he is entitled to
+the full distinction between the character of executor and legatee; and
+if he enter upon an estate as the former, it does not inculpate him in
+liabilities until he shall have assumed them as the latter.
+
+If a testator appoint his debtor to be his executor, the appointment
+formally releases and destroys the debt, unless the executor renounces
+the trust; and he is safe against all but creditors of the estate, for
+the bequest of a debt to an executor is always considered as a specific
+bequest.
+
+Should, however, this bequest be contradicted, as regards the legatees,
+by the express terms of the will, or by strong inference, as where the
+testator leaves a legacy, and directs it expressly to be paid out of
+the debt due to him by the executor. In like manner, also, if he leave
+the executor a legacy, it is evident that it is not to be cumulated
+by the debt also. So, where a testator bequeathed large legacies, as
+well as the residue of his estate, to his executors, one of whom was
+indebted to him to the amount of £3,000, under bond, it was held that
+the whole of the remainder, as it stood, should be equally divided
+between them; that is, he that was not indebted became a creditor, to a
+certain amount above him who had hitherto been a debtor to the estate.
+
+An executor has a still further right, when he is not named as
+expressly an executor in trust, and there is no appointment of the
+residue of the estate, after all the debts and legacies are satisfied,
+he, in right of his office, becomes residuary legatee; but, if either,
+by inference, expression, or legacy, he is debarred from that
+advantage, he becomes tenant in trust for the next of kin, and among
+these he must divide the amount of the testator’s property.
+
+
+LEGATEES’ REMEDY AGAINST THE EXECUTOR.
+
+Though an executor hold no personal property in the estate of his
+testator, he is responsible for the right care and custody of the
+property under his charge, while for whatever mischief may arise from
+the misapplication and injury of it before distribution, without any
+fault of his wilfully committed, he can shelter himself under the
+estate. All costs, consequently, which are incurred in following the
+testator’s instruction, or in the right appropriation of the estate,
+are to be paid out of that estate. But for all wilful negligence, or
+improper conduct, he is answerable to the legatees, both at common law
+and in equity, and is liable to pay the cost out of his own estate.
+
+Appended is the list of duties payable upon legacies, and the amount of
+which the executor is entitled to deduct before he pays the amount of
+each legacy.
+
+  +--------------------------------------------------------------------+
+  |                                                                    |
+  |    Rates of Duty, payable on Legacies, Annuities, Residues, &c.,   |
+  |  of the Amount or Value of £20 and upwards, by Stat. 55 Geo. III.  |
+  |                              cap. 184.                             |
+  |                                                                    |
+  +=========================+========================+=================+
+  | The Description of the | Out of Personal Estate | Out of Real or   |
+  | Legatee, Residuary     | only, if the Deceased  | Personal Estate, |
+  | Legatee, or next of    | died any time _before_ | if the Deceased  |
+  | Kin, _must be in the   | or upon the 5th April, | died _after_ the |
+  | following Words of     | 1805.                  | 5th April, 1805. |
+  | the Act_.              |                        |                  |
+  +------------------------+------------------------+------------------+
+  | To Children of the   } |                        |                  |
+  | Deceased, and their  } |                        |   £1. per Cent.  |
+  | Descendants, or to   } |                        |                  |
+  | the Father or Mother } |    (no Legacy Duty)    |   £3.    do.     |
+  | or any Lineal        } |                        |                  |
+  | Ancestor of the      } |                        |                  |
+  | Deceased             } |                        |                  |
+  |                        |                        |                  |
+  | To Brothers and      } |                        |                  |
+  | Sisters of the       } |  £2. 10_s._ per Cent.  |   £5.    do.     |
+  | Deceased, and their  } |                        |                  |
+  | Descendants          } |                        |                  |
+  |                        |                        |                  |
+  | To Brothers and      } |                        |                  |
+  | Sisters of the       } |                        |   £5.    do.     |
+  | Father or Mother of  } |  £4. --        do.     |                  |
+  | the Deceased, and    } |                        |                  |
+  | their Descendants    } |                        |                  |
+  |                        |                        |                  |
+  | To Brothers and      } |                        |                  |
+  | Sisters of a Grand-  } |                        |                  |
+  | father or Grandmother} |  £5. --        do.     |   £6.    do.     |
+  | of the Deceased,     } |                        |                  |
+  | and their Descendants} |                        |                  |
+  |                        |                        |                  |
+  | To any Person in any } |                        |                  |
+  | other Degree of Col- } |                        |                  |
+  | lateral Consanguin-  } |  £8. --        do.     |  £10.    do.     |
+  | ity, or to Strangers } |                        |                  |
+  | in Blood to the      } |                        |                  |
+  | Deceased             } |                        |                  |
+  |                                                                    |
+  | Where any Legatee _shall take Two_ or more distinct Legacies or    |
+  | Benefits under any Will or Testamentary Instrument, which shall    |
+  | together be of the Amount or Value of £20. each shall be charged   |
+  | with Duty, although each or either may be separately under that    |
+  | Amount or Value.                                                   |
+  |                                                                    |
+  | --> OBSERVE.--_The Duty on Annuities is payable by four Annual     |
+  | Instalments in the first four years from the commencement of the   |
+  | Annuity, and a penalty will be incurred if each of the succeeding  |
+  | Instalments of Duty be not paid in due time._                      |
+  |                                                                    |
+  | _Should the Annuitant die before the four years have expired, the  |
+  | date of his or her death must be communicated in writing to the    |
+  | _Comptroller of the Legacy Duties._                                |
+  |                                                                    |
+  |                        The Husband or Wife of the Deceased is not  |
+  |                            chargeable with Duty.                   |
+  +====================================================================+
+  |                                                                    |
+  |                             PENALTIES.                             |
+  |                                                                    |
+  | The Receipt must be dated on the Day of signing, and the Duty paid |
+  | _within 21 Day after_, under a Penalty of £10 per Cent. on the     |
+  | amount of the _Duty_; and if the Duty be not paid within _Three    |
+  | Months_ from the Date of the Receipt, a Penalty will be incurred   |
+  | of £10 per Cent. on the _amount or value of the Legacy_:--and the  |
+  | Commissioners of Stamps cannot, _under any circumstances_, Stamp   |
+  | a Receipt on which the Duty shall not be paid within the time      |
+  | limited, unless the Penalty be also paid.                          |
+  |                                                                    |
+  | NOTE.--Rents, Interests, or Dividends of Legacies, down to the     |
+  |        Date of the Receipt, must be added to the Legacy, and Duty  |
+  |        paid thereon.                                               |
+  |                                                                    |
+  +--------------------------------------------------------------------+
+
+
+  LONDON:
+  CLARKE, PRINTERS, SILVER STREET, FALCON SQUARE.
+
+*** END OF THE PROJECT GUTENBERG EBOOK 69686 ***

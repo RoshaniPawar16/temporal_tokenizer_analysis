@@ -1,0 +1,1561 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 68006 ***
+
+                                Recoil
+
+                          By George O. Smith
+
+                         Illustrated by Orban
+
+           [Transcriber's Note: This etext was produced from
+              Astounding Science-Fiction, November 1943.
+         Extensive research did not uncover any evidence that
+         the U.S. copyright on this publication was renewed.]
+
+
+Walter Franks sat in the director's office; his feet on the director's
+desk. He was smoking one of the director's cigarettes. He was drinking
+the director's liquor, filched shamelessly from the director's private
+filing cabinet where it reposed in the drawer marked "S." Drawer "B"
+would have given beer, but Walt preferred Scotch.
+
+He leaned forward and tossed the director's cigarette into the
+director's wastebasket and then he pressed the button on the desk and
+looked up.
+
+But it was not the director's secretary who entered. It was his own,
+but that did not disturb Franks. He knew that the director's secretary
+was off on Mars enjoying a honeymoon with the director.
+
+Jeanne entered and smiled. "Must you call me in here to witness you
+wasting the company's time?" she asked in mock anger.
+
+"Now look, Jeanne, this is what Channing does."
+
+"No dice. You can't behave as Don Channing behaves. The reason is my
+husband."
+
+"I didn't call to have you sit on my lap. I want to know if the mail is
+in."
+
+"I thought so," she said. "And so I brought it in with me. Anything
+more?"
+
+"Not until you get a divorce," laughed Franks.
+
+"You should live so long," she said with a smile. She stuck her tongue
+out at him.
+
+Walt thumbed his way through the mail, making notations on some, and
+setting others aside for closer reading. He came to one and tossed it
+across the desk at Jeanne. She took the message and read:
+
+    Dear Acting Director:
+
+    Having a wonderful honeymoon; glad you aren't here!
+
+    Don and Arden.
+
+"Wonderful stuff, love," smiled Franks.
+
+"It is," agreed Jeanne. A dreamy look came into her eyes.
+
+"Scram, Jeanne. There are times when you can't work worth a darn.
+Usually when you're thinking of that husband of yours. What's he got
+that I haven't?"
+
+"Me," said Jeanne slyly. She arose and started for the door. "Oh," she
+said, "I almost forgot. Warren phoned up and said that the turret is
+ready for a try-out."
+
+"Fine," said Walt. "Swell." He unfolded himself from the chair with
+alacrity and almost beat the girl to the door.
+
+"My," she laughed, "you can move after all."
+
+"Sure," he grinned. "Now I have something for which to live."
+
+"I hope it's worth it. You've sunk a lot of change into that bug-house."
+
+"I know, but we can stand it. After all, since Don took over this
+affair, Interplanetary Communications is an up and running business.
+We're out of the Government subsidy class now, and are making money. If
+this works, we'll make more. It's worth a gamble."
+
+"What are you trying to build?" asked Jeanne.
+
+"Why, since this business of contacting ships-at-space has become so
+universally liked, we have a tough time keeping ships in the mobile
+beam. That's because they are always ducking out of the way of loose
+meteorites and stuff, and that screws up their course. We can't see
+'em, and must take their position on the basis of their expected
+course. We never know whether we hit 'em until they land.
+
+"Now I've been trying to devise a space gun that will blast meteors
+directly instead of avoiding them by coupling the meteor detector to
+the autopilot."
+
+"Gonna shoot 'em out of existence?"
+
+"Not exactly. Popping at them with any kind of a rifle would be like
+trying to hit a flying bird with a spitball. Look, Jeanne, top speed
+on the run from Mars to Terra at major opposition is up among the
+thousands of miles per second at the turnover. A meteor itself may
+be blatting along at fifty miles per second. Now a rifle, shooting
+a projectile at a few thousand feet per second would be useless.
+You'd have the meteor in your lap and out of the other side while
+the projectile is making up its mind to move forward and relieve the
+pressure that is building up behind it due to the exploding powder.
+
+"I've designed an electron gun. It is a superpowered, oversized edition
+of the kind they used to use in kinescope tubes, oscilloscope tubes,
+and electron microscopes. Since the dingbat is to be used in space,
+we can leave the works of the gun open and project a healthy stream
+of electrons at the offending object without their being slowed and
+dispersed by an impending atmosphere."
+
+"But that sounds like shooting battleships with a toy gun."
+
+"Not so fast on the objections, gal," said Franks. "I've seen a simple
+oscilloscope tube with a hole in the business end. It was burned right
+through a quarter inch of glass because the fellows were taking pix and
+had the intensity turned up high. The sweep circuit blew a fuse and the
+beam stopped on one spot. That was enough to puncture the screen."
+
+"I see. That was just a small affair?"
+
+"A nine-inch tube. The electron gun in a nine-inch kinescope tube is
+only about four inches long and three quarters of an inch in diameter.
+Mine, out there in the turret, is six feet in diameter and thirty feet
+long. I can fire out quite a bundle of electrons from a tube of that
+size."
+
+"It sounds as though you mean business."
+
+"I do. This is the right place to do research of that kind. Out here on
+Venus Equilateral, we're in a natural medium for an electron gun, and
+we've the power requirements to run it. I can't think of any place in
+the System that offers better chances."
+
+"When are you going to try it out?"
+
+"As soon as a meteor comes over the pike, as long as Warren says we're
+ready."
+
+Jeanne shook her head. "I wish Channing were here. Things are wild
+enough when you are both working on something screwball, but I could
+get scared something fierce at the thought of either one of you working
+without the other."
+
+"Why?"
+
+"You two sort of act as balance wheels to one another's craziness. Oh,
+don't take that word to heart. Everybody on the Relay Station thinks
+the world of you two, myself included. _Craziness_ in this case means a
+sort of friendly description of the way your brains work. Both of you
+dash off on tangents now and then, and when either one of you get off
+the beam, the other one seems to swing the weight required to bring the
+lost one back to the fold."
+
+"That's a real mess of mixed metaphors, Jeanne. But I am going to
+surprise Don hairless when he gets back here and finds that I've done
+what people claimed couldn't be done. I'm going to be the bird whose
+bust sits in the Hall of Fame in between Edison, Einstein, Alexander
+Graham Bell, S. F. B. Morse, and--"
+
+"Old Man River, Jack Frost, and Little Boy Blue," laughed Jeanne. "I
+hope it's not a bust, Walt."
+
+"You mean I should have a whole statue?"
+
+"I mean, I hope your dream is not a bust!"
+
+       *       *       *       *       *
+
+Jeanne left, with Walt right behind her. Franks did not remain at the
+desk, however, but made his way from the office level to the outer skin
+of the Relay Station by way of a not-often-used stairway that permitted
+him to drop to the outer skin. Above his head were the first levels of
+apartmental cubicles occupied by the personnel of Venus Equilateral.
+Out here, Walt had but a scant thickness of steel between him and the
+void of space.
+
+His pathway was strewn with pipe, cable, and storage tanks. He passed
+a long-forgotten project and paused to reminisce over the days when
+a meteor shower had caused them some concern by puncturing the skin
+twice. The installation of a sponge elastomer under compression in
+this space had been stopped when a brilliant astrophysicist proved to
+Channing--then a supervisor in the operations laboratory--that the
+chances of being dangerously punctured were practically nil, and that
+the actual puncturing had done nothing but make people uncomfortably
+leery.
+
+Then Franks came to a room built from outer skin to inner skin and
+about fifty feet in diameter. He unlocked the door with a key on his
+watch chain, and entered. Jim Warren was waiting for him.
+
+"Hi, ordnance expert. We're ready as soon as they are."
+
+"How's she working?"
+
+"I should know? We've been squirting ropes of electrons out to blank
+space for hours. She gets rid of them all right. But have we done any
+good? I dunno."
+
+"Not a meteor in sight, I suppose."
+
+"The detector hasn't blinked once. But when she does, your electron gun
+will follow the darned thing until it gets a half thousand miles out of
+sight, or will pick it up a thousand miles before it gets here."
+
+"That sounds fine. It's a good thing that we don't have to swivel that
+mess of tube around a whole arc in actual use. It would take too long.
+But we'll put one in each upper quadrant of a spaceship and devise it
+so that its working arc will be small enough to make it work. Time
+enough to find that out after we know if it works."
+
+"That's something that I've been wondering about," said Warren. "Why
+didn't we build a small one out here and evacuate the skin for a few
+hundred feet? We could set up a few chunks of iron and squirt electrons
+at 'em."
+
+"And have the folks upstairs screaming? Nope. I've a hunch that when
+this beam hits something hard, it will create quite a ruckus. It would
+be fine to have a hunk blown right out of the skin, wouldn't it?"
+
+"Guess you're right," admitted Warren.
+
+The meteor alarm flashed, and a bell dinged once.
+
+"Here's our chance," snapped Walt. "We've about fifteen seconds to work
+on this one."
+
+He looked out of a tiny window, and saw that the big tube had lined up
+with the tiny model that was a monitor for the big tube. He sighted
+through the model, which in itself was a high-powered telescope, and he
+saw the jagged meteor rushing forward at an angle to the Station. It
+would miss by miles, but it would offer a good target.
+
+"Cathode's hot," said Warren.
+
+Walt Franks grasped the power switch and thrust it down part way.
+Meters leaped up their scales and from somewhere there came the
+protesting whine of tortured generators. Through the window, nothing
+very spectacular was happening. The cathode glowed slightly brighter
+due to the passage of current through its metal and out of the coated
+surface. But the electrostatic stresses that filled the gaps between
+the accelerator and focusing anodes was no more visible than the
+electricity that runs a toy motor. Its appearance had not changed a
+bit, but from the meters, Walt Franks knew that megawatts of electronic
+power, in the shape of high-velocity electrons, was being poured from
+the cathode; accelerated by the ring anodes; and focused to a narrow
+beam by the focusing anodes. And from the end of the framework that
+supported these anodes, a cylinder of high-velocity electrons poured
+forth, twelve inches in diameter.
+
+Through the telescope, the meteor did not seem to be disturbed. It
+exploded not, neither did it melt. It came on inexorably, and if the
+inanimate nickel and iron of a meteor can be said to have such, it came
+on saucily and in utter disregard for the consequences.
+
+Frantically, Walt cranked the power up higher and higher, and the
+lights all over the Station dimmed as the cathode gun drained the
+resources of the Station.
+
+Still no effect.
+
+Then in desperation, Walt slammed the power lever down to the bottom
+notch. The girders strained in the tube from the terrific electrostatic
+stresses, and for a second, Walt was not certain that the meteor was
+not finally feeling the effects of the electron bombardment.
+
+He was not to be sure, for the experiment came to a sudden stop.
+
+An insulator arced where it led the high-voltage lines that fed the
+anodes through the wall. Immediately it flashed over, and the room
+filled to the brim with the pungent odor of burning insulation. A
+medium-voltage anode shorted to one of the high-voltage anodes, and
+the stress increased in the tube. It broke from its moorings, this
+low-voltage anode, and it plunged backward, down the tube toward the
+cathode. It hit, and it was enough to jar the whole tube backward on
+its gimbals.
+
+The shock warped the mounting of the tube, and it flexed slightly, but
+sufficiently to bring the farthermost and highest voltage anode into
+the electron stream. It glowed redly, and the secondary emission raved
+back through the series of electrodes, heating them and creating more
+warpage.
+
+Then the pyrotechnic stopped. Great circuit breakers crashed open up in
+the power room hundreds of feet above them, high in the Station.
+
+Walt Franks looked out through the window at the tangled mess that
+had been a finely machined piece of equipment. He saw the men looking
+quizzically at him as he turned away from the window, and with a smile
+that cost him an effort, he said: "All right, so Marconi didn't get WLW
+on his first try, either. Come on, fellows, and we'll clean up this
+mess."
+
+With the utter disregard that inanimate objects show toward the inner
+feelings of the human being, the meteor alarm blinked again and the
+bell rang. The pilot tube swiveled quickly to one side, lining up
+with the spot in the celestial globe of the meteor detector. Out in
+the turret that housed the big tube, motors strived against welded
+commutators and the big tube tried to follow.
+
+Walt looked at the pointing tube and said: "All right! Go ahead and
+point!"
+
+       *       *       *       *       *
+
+Don Channing smiled at Arden. "Mrs. Channing," he said, "must you
+persist in keeping me from my first love?"
+
+Arden smiled winningly. "Naturally. That's what I'm here for. I intend
+to replace your first love entirely and completely."
+
+"Yeah," drawled Don, "and what would we live on?"
+
+"I'll permit you to attend to your so-called first love during eight
+hours every day, providing that you remember to think of me every
+half-hour."
+
+"That's fine. But you really aren't fair about it. We were on Terra
+for two weeks. I was just getting interested in a program outlined by
+one of the boys that works for Interplanet, and what happened? You
+hauled me off to Mars. We stayed for a week at the Terraland Hotel at
+Canalopsis and the first time that Keg Johnson came to see us with an
+idea and a sheaf of papers, you rushed me off to Lincoln Head. Now I'm
+scared to death that some guy will try to open a blueprint here; at
+which I'll be rushed off to the Palanortis Country until someone finds
+us there. Then it'll be the Solar Observatory on Mercury or the Big
+Glass on Luna."
+
+Arden soothed Don's feelings by sitting on his lap and snuggling.
+"Dear," she said in a voice that positively dripped, "we're on a
+honeymoon, remember?"
+
+Don stood up, dumping Arden to the floor. "Yeah," he said, "but this is
+the highest velocity honeymoon that I ever took!"
+
+"And it's the first one I was ever on where the bridegroom took more
+time admiring beam installations than he took to whisper sweet nothings
+to his gal. What has a beam transmitter got that I haven't got?"
+
+"One: Its actions can be predicted. Two: It can be controlled. Three:
+It never says anything original, but only repeats what it has been
+told. Four: It can be turned off."
+
+Arden caught Don on the point of the chin with a pillow and effectively
+smothered him. She followed her slight advantage with a frontal attack
+that carried him backward across the bed, where she landed on top
+viciously and proceeded to lambaste him with the other pillow.
+
+It was proceeding according to plan, this private, good-natured war,
+until a knock on the door caused a break in operations. Channing
+struggled out from beneath Arden and went to the door trying to comb
+his hair by running spread fingers through it. He went with a sense
+of failure caused by Arden's quiet laugh and the statement that he
+resembled a bantam rooster.
+
+       *       *       *       *       *
+
+The man at the door apologized, and then said: "I'm Doug Thomas of the
+_Triworld News_."
+
+"Come in," said Don, "and see if you can find a place to sit."
+
+"Thanks."
+
+"I didn't know that _Triworld News_ was interested in the wedded life
+of the Channings. Why doesn't _Triworld_ wait until we find out about
+it ourselves?"
+
+"_Triworld_ does not care to pry into the private life of the newly wed
+Channing family," laughed Doug. "We, and the rest of the System do not
+give a damn whether Mrs. Channing calls you Bunny-bit or Sugar-pie--"
+
+"Sweetums," corrected Arden with a gleam in her eye.
+
+"--we've got something big to handle. I can't get a thing out of the
+gang at Canalopsis, they're all too busy worrying."
+
+"And so you came here? What do you expect to get out of us? We're not
+connected in any way with Canalopsis."
+
+"I know," said Doug, "but you do know space. Look, Channing, the _Solar
+Queen_ has been missing since yesterday morning!"
+
+Don whistled.
+
+"See what I mean? What I want to know is this: What is your opinion on
+the matter? You've lived in space for years, on the Relay Station, and
+you've had experience beyond anybody I can reach."
+
+"Missing since yesterday morning," mused Channing. "That means trouble."
+
+"That's what I thought. Now if you were running the spaceport at
+Canalopsis, what would your own private opinion be?"
+
+"I don't know whether I should speak for publication," said Don.
+
+"It won't be official. I'll corroborate anything you say before it is
+printed, and so on. But I want an unofficial opinion, too. If you
+want this withheld, say so, but I still want a technical deduction to
+base my investigation on. I don't understand the ramifications and the
+implications of a missing ship. It is enough to make Keg Johnson's hair
+turn gray overnight, though, and I'd like to know what is so bad before
+I start to turn stones."
+
+"Well, keep it off the record until Canalopsis gives you the go-ahead.
+I can give you an opinion, but I don't want to sound official."
+
+"O.K. Do you suppose she was hit by a meteor shower?"
+
+"Doubt it like the devil. Meteor detectors are many and interconnected
+on a spaceship, as well as being alarmed and fused to the nth degree.
+Any trouble with them will bring a horde of ringing bells all through
+the ship which would bring the personnel a-running. They just don't go
+wrong for no reason at all."
+
+"Suppose that so many meteors came from all directions that the factors
+presented to the autopilot--"
+
+"No dice. The possibility of a concentration of meteors from all
+directions all about to pass through a certain spot in space is
+like betting on two Sundays in a row. Meteors don't just run in all
+directions, they have a general drift. And the meteor detecting
+equipment would have been able to pick up the centroid of any group of
+meteors soon enough to lift the ship around it. Why, there hasn't been
+a ship hit by a meteor in ten years."
+
+"But--"
+
+"And if it had been," continued Channing, "the chances are more than
+likely that the ship wouldn't have been hit badly enough to make it
+impossible to steer, or for the crew to shoot out message tubes which
+would have landed on Canalopsis."
+
+"Suppose that the ship ducked a big shower and it went so far out of
+course that they missed Mars?"
+
+"That's out, too," laughed Channing.
+
+"Why?"
+
+"A standard ship of space is capable of hitting it up at about 4-G all
+the way from Terra to Mars at major opposition and end up with enough
+power and spare cathodes to continue on to Venus in quadrature. Now the
+velocity of the planets in their orbits is a stinking matter of miles
+per second, while the top speed of a ship in even the shortest passage
+runs up into four figures per second. You'd be surprised at what
+velocity you can attain at 1-G for ten hours."
+
+"Yes?"
+
+"It runs to slightly less than two hundred and fifty miles per second,
+during which you've covered only four million miles. In the shortest
+average run from Venus to Terra at conjunction, a skimpy twenty-five
+million miles, your time of travel is a matter of twenty-five hours
+add, running at the standard 2-G. Your velocity at turnover--or the
+halfway point where the ship stops going up from Terra and starts to
+go down to Venus--is a cool five hundred miles per second. So under no
+condition would the ship miss its objective badly enough to cause its
+complete loss. Why, this business is run so quickly that were it not
+for the saving in time and money that amounts to a small percentage
+at the end of each flight, the pilot could head for his planet and
+approach the planet asymptotically."
+
+"You know what you're doing, don't you?" asked the reporter.
+
+"I think so."
+
+"You're forcing my mind into accepting something that has never
+happened before, and something that has no basis for its--"
+
+"You mean piracy? I wonder. We've all read tales about the Jolly Roger
+being painted on the side of a sleek ship of space while the pirate,
+who at heart is a fine fellow though uninhibited, hails down the
+cruiser carrying radium. He swipes the stuff and kisses all the women
+whilst menacing the men with a gun hand full of searing, coruscating,
+violently lethal ray pistol. But that sounds fine in stories. The trick
+is tougher than it sounds, Thomas. You've got to catch your rabbit
+first."
+
+"Meaning?"
+
+"Meaning that finding a ship in space to prey upon is somewhat less
+difficult than juggling ten billiard balls whilst riding a horse
+blind-folded. Suppose you were to turn pirate. This is what would
+happen:
+
+"You'd get the course of the treasure ship from the spaceport, fine and
+good, by resorting to spies and such. You'd lie in wait out there in
+the blackness of space, fixing your position by the stars and hoping
+that your error in fix was less than a couple of thousand miles. It's
+more likely to be a hundred thousand miles, though. The time comes.
+You look to your musket, sharpen your sword, and see to the priming of
+your Derringers that are thrust into the red sash at your waist. You
+are right on the course, due to your brilliant though lawless navigator
+who was tossed out of astrogator's school for filching the teacher's
+whiskey. Then the treasure ship zoops past at a healthy hundred miles
+per second and you decide that since she is hitting it up at 2-G, you'd
+have to start from scratch at a heck of a lot better to catch her
+within the next couple of light years.
+
+"So you give up, join the Congregational Church and pass the collection
+plate every Sunday."
+
+"But suppose you took the course as laid and applied the same
+acceleration? Suppose you followed on the heels of your quarry until
+you were both in space? You could do it then, couldn't you?"
+
+"Gosh," said Channing, "I never thought of that. That's the only way
+a guy could pirate a ship--unless he planted his men aboard and they
+mutinied."
+
+"Then it might be pirates?"
+
+"It might be," admitted Channing. "It'd have to occur near beginning
+or end, of course, though. I can't think of anything safer than being
+shot at out of a gun of any kind while both crates are hitting it up at
+a couple of hundred miles per second and at a distance of a few miles
+apart. It would be all right if you were both running free, but at 2-G
+acceleration, you'd have to do quite a bit of ballistic gymnastics to
+score a hit."
+
+"Or run in front of your quarry and sow a bouquet of mines."
+
+"Except that the meteor detector would show the position of the pirate
+craft in the celestial globe and the interconnecting circuits would
+cause the treasure ship to veer off at a sharp angle. Shucks, Doug,
+this thing has got too many angles to it. I can't begin to run it off
+either way. No matter how difficult it may sound, there are still ways
+and means to do it. The one thing that stands out like a sore thumb
+is the fact that the _Solar Queen_ has turned up missing. Since no
+inanimate agency could cause failure, piracy is the answer."
+
+"You're sure of that?"
+
+"Not positive. There are things that might cause the ship to founder.
+But what they are depend upon too many coincidences. It's like hitting
+a royal flush on the deal, or filling a full house from two pair."
+
+"Well, thanks, Channing. I'm heading back to Canalopsis right now. Want
+to come along?"
+
+Channing looked at Arden, who was coming from the dressing room
+carrying her coat and he nodded. "The gal says yes," he grinned. "Annoy
+her until I find my shoes, will you?"
+
+Arden wrinkled her nose at Don. "I'll like that," she said to Doug.
+
+The trip from Lincoln Head to Canalopsis was a fast one. Doug Thomas
+drove the little flier through the thin air of Mars at a breakneck
+speed and covered the twelve hundred miles in just shy of two hours. At
+the spaceport, Channing found that he was not denied the entrance as
+the reporter had been. He was ushered into the office of Keg Johnson in
+record time, and the manager of the Canalopsis Spaceport greeted Don
+with a worried expression on his face.
+
+"Still gone," he said cryptically. "Like the job of locating her?"
+
+Don shook his head with a sympathetic smile. "Like trying to find a
+grain of sand on a beach--a specified grain, I mean. Wouldn't know how
+to go about it."
+
+Keg nodded. "I thought as much. That leaves her out of the picture.
+Well, up to now space travel has been about as safe as spending the
+evening in your easy-chair. Hello, Arden, how's married life?"
+
+"Can't tell yet," she said with a twinkle. "I've got to find out
+whether I can break him of a dozen bad habits before I'll commit
+myself."
+
+"I wish you luck, Arden, although from that statement, it's Don that
+needs the luck."
+
+"We came to see if there was anything we could do about the _Solar
+Queen_," offered Channing.
+
+"What can anybody do?" asked Keg with spread hands. "About all we can
+do is to put it down in our remembrances and turn to tomorrow. Life
+goes on, you know," said Keg in a resigned tone, "and either we keep
+up or we begin to live in the past. Are you going to stay here for a
+day or two?"
+
+"Was thinking about it," said Don.
+
+"Well, suppose you register at the Terraland and meet me back here for
+lunch. If anything occurs, I'll shoot you a quickie." Keg looked at his
+watch and whistled. "Lordy," he said ruefully. "I didn't know how late
+it was. Look, kids, I'll run you downtown myself, and we'll all have
+lunch at the Terraland. How's that?"
+
+"Sounds better," admitted Channing. "My appetite, you know."
+
+"I know," laughed Arden. "Come on, meat-eater, and we'll peel a calf."
+
+It was during lunch that a messenger raced into the dining room and
+handed Keg a letter. Keg read, and then swore roundly. He tossed the
+letter across the table to Don and Arden.
+
+    To the Operators of all Spacelines:
+
+    It has come to my attention that your ships require protection.
+    The absence of the _Solar Queen_ is proof enough that your
+    efforts are insufficient to insure the arrival of a spaceship
+    at its destination.
+
+    I am capable of offering protection at the reasonable rate of one
+    dollar solarian for every gross ton, with the return of ten dollars
+    solarian if any ship fails to come through safely. I think that you
+    may find it necessary to subscribe to my insurance, since without
+    my protection I cannot be responsible for failures.
+
+    ALLISON (HELLION) MURDOCH.
+
+"Why the dirty racketeer," stormed Arden. "Who is he, anyway?"
+
+"Hellion Murdoch is a man of considerable ability as a surgeon and a
+theoretical physicist," explained Don. "He was sentenced to the gas
+chamber ten years ago for trying some of his theories out on human
+beings without their consent. He escaped with the aid of fifteen or
+twenty of his cohorts who had stolen the _Hippocrates_ right out of the
+private spaceport of the Solarian Medical Research Institute."
+
+"And they headed for the unknown," offered Keg. "Wonder where they've
+been for the last ten years."
+
+"I'll bet a hat that they've been in the Melapalan Jungle, using the
+machine shop of the _Hippocrates_ to fashion guns. That machine shop
+was a dilly, if I remember correctly."
+
+"It was. The whole ship was just made to be as self-sustaining as it
+could be. They used to run all over the System in it, you know, chasing
+bugs. But look, Don, if I were you, I'd begin worrying about Venus
+Equilateral. That's where he'll hit next."
+
+"You're right. But what are you going to do?"
+
+"Something that will drive him right out to the Relay Station," said
+Keg in a sorrowful tone. "Sorry, Don, but when I put an end to all
+space shipping for a period of six weeks, Hellion Murdoch will be
+sitting in your lap."
+
+"He sure will," said Channing nervously. "Arden, are you willing to run
+a gantlet?"
+
+"Sure," she answered quickly. "Are you sure that there will be danger?"
+
+"Not too sure, or I wouldn't take you with me. Unless Murdoch has
+managed to build himself a couple of extra ships, we've got a chance in
+three that he'll be near one of the other two big spaceports. So we'll
+slide out of here unannounced and at a peculiar time of day. We'll load
+up with gravanol and take it all the way to the Station at 6-G."
+
+"He may have two or three ships," said Keg. "A man could cover all
+the standard space shipping in three, and he might not have too bad a
+time with two, especially if he were only out looking for those which
+weren't paid for. But, look, I wouldn't check out of the Terraland if
+I were you. Keep this under cover. Your heap is all ready to take sky
+from Canalopsis Spaceport and you can leave directly."
+
+"Hold off on your announcement as long as possible," Don asked Keg.
+
+Johnson smiled and nodded. "I'll give you time to get there anyway. But
+I've no control over what will be done at Northern Landing or Mojave.
+They may kick over the traces."
+
+"Arden, we're moving again," laughed Don. "Keg, ship us our duds as
+soon as this affair is cleared up." Channing scribbled a message on the
+back of Murdoch's letter. "Shoot this off to Walt Franks, will you? I
+won't wait for an answer, that'll take about fifty minutes, and by
+that time I'll have been in space for twenty."
+
+       *       *       *       *       *
+
+They paused long enough to stop at the nurse's office at the spaceport
+for a heavy shot of gravanol and a thorough bracing with wide adhesive
+tape. Then they made their way to the storage space of the spaceport
+where they entered their small ship. Channing was about to send the
+power lever home when the figure of Keg Johnson waved him to stop.
+
+Keg ran up to the space lock and handed in a paper.
+
+"You're it," he said. "Good luck, Channings."
+
+It was another message from Hellion Murdoch. It said, bluntly:
+
+    To Donald Channing,
+    Director of Communications:
+
+    Considerable difficulty has been experienced in transmitting
+    messages to the interested parties. I desire a free hand in
+    telling all who care, the particulars of my insurance.
+
+    Since your Relay Station is in a position to control all
+    communications between the worlds, I am offering you the option
+    of either surrendering the Station to me, or of fighting me for
+    its possession. I am confident that you will see the intelligent
+    course; an unarmed station in space is no match for a fully armed
+    and excellently manned cruiser.
+
+    Your answer will be expected in five days.
+
+    ALLISON (HELLION) MURDOCH.
+
+Channing snarled and thrust the power lever down to the last notch. The
+little ship leaped upward under 5-1/2-G, and was gone from sight in
+less than a minute.
+
+Arden shook her head. "What was that message you sent to Franks?" she
+asked.
+
+"I told him that there was a wild-eyed pirate on the loose, and that he
+might make a stab at the Station. We are coming in as soon as we can
+get there and to be on the lookout for us on the landing communications
+radio, and also for anything untoward in the nature of space vessels."
+
+"Then this is not exactly a shock," said Arden, waving the message from
+Murdoch.
+
+"Not exactly," said Channing dryly. "Now look, Arden, you go to sleep.
+This'll take hours and hours, and gabbing about it will only lay you
+out cold."
+
+"I feel fine," objected Arden.
+
+"I know, but that's the gravanol, not you. The tape will keep you
+intact, and the gravanol will keep you awake without pain or nausea.
+But you can't get something for nothing, Arden, and when that gravanol
+wears off, you'll spend ten times as long with one tenth of the trouble
+you might have had. So make it easy for yourself now and later you'll
+be glad that you aren't worse."
+
+The sky blackened, and Channing knew that they were free in space. Give
+them another fifteen minutes and the devil himself couldn't find them.
+With no flight plan scheduled and no course posted, they might as well
+have been in the seventeenth dimension. As they emerged from the thin
+atmosphere, there was a fleeting flash of fire from several miles to
+the East, but Channing did not pay particular attention to it. Arden
+looked through a telescope, and said that she thought that she saw a
+spaceship circling, but that she could not be sure.
+
+Whatever it was, nothing came of it.
+
+       *       *       *       *       *
+
+The trip out to the Station was a monotonous series of uneventful
+hours, proceeding along one after the other. They dozed and slept most
+of the time, eating sparingly and doing nothing that was not absolutely
+necessary.
+
+Turnabout was accomplished and then the deceleration began, equally
+long and equally monotonous. It was equally inactive. Channing tried
+to plan, but it failed because he could not plan without talking and
+discussing the affair with his men; too much depended upon their
+co-operation. He fell into a morose, futile feeling that made itself
+evident in grousing; Arden tried to jolly him, but Don's usually
+bubbling spirit was doused too deep. Also, Arden herself was none too
+happy, and she failed to convince herself, which is necessary before
+one can convince anyone else of anything.
+
+Then they sighted the Station, and Channing's ill spirit left. A man of
+action, what he hated most was the no-action business of just sitting
+in a little capsule of steel waiting for the Relay Station to come up
+out of the sky below. Once it was sighted, Channing could foresee
+action, and his grousing stopped.
+
+They zipped past the Station at a distance of ten miles, and Channing
+opened the radio.
+
+"Walt Franks! Wake up, you slumberhead."
+
+The answer came inside of a half minute. "Hello, Don. Who's asleep?"
+
+"Where are you? In Joe's?"
+
+"Joe has declared a drought for the duration," said Franks with a
+laugh. "He thinks we can't think on Scotch."
+
+"We can't. Have you seen the boys?"
+
+"Murdoch's crew? Sure, they're circling at about five miles, running
+around in the plane of the ecliptic. Keep running on the colure and the
+chances are that you won't even see 'em. But, Don, they can hear us!"
+
+"How about the landing stage at the South end?"
+
+"There are two of them running around the Station at different heights
+from South to North. The third is circling in a four-mile circle on a
+plane five miles South of the Station. We've picked up a few HE shells,
+and I guess that, if you try to make a landing there, you'll be shot to
+bits. That devil is using the meteor detector for a gun pointer."
+
+"Walt, remember the range finder?"
+
+"Y'mean the one we used to find the _Empress_?"
+
+"Uh-huh. Rig it without the adjustable mirror. Get me? D'you know what
+I want to do?"
+
+"Yop. All we have to do is to clear away some of the saw grass again.
+Not too much, though, because it hasn't been too long since we cut it
+before. I get you all right."
+
+"Fine. How soon?"
+
+"I'm in the beam control dome North. I've got a portable mike, and I
+walk over to the adjustable mirror and begin to tinker with the moving
+screws. _Ouch!_ I've skun me a knuckle. Now look, Don, I'm going inside
+and crack the passage end. I've broadcast throughout the Station that
+this is to be cracked, and the men are swarming all over the axis of
+the Station doing just that. Come a-running!"
+
+       *       *       *       *       *
+
+Channing circled the little ship high to the North and came down
+toward the axis of the Station. He accelerated fiercely for a portion
+of the time, and then made a slam-bang turnabout that caused some of
+the plates to complain. A pilot light on the instrument panel gleamed,
+indicating that some of the plates were strained and that the ship was
+leaking air. Another light lit, indicating that the automatic pressure
+control was functioning, and that the pressure was maintained, though
+it might not be too long.
+
+Then in deceleration, Channing fought the ship on to a die-straight
+line with the open door at the North end. He fixed the long, long
+passageway in the center of his sights, and prayed.
+
+The ship hit the opening squarely, and only then did their terrific
+speed become apparent. Past bulkhead after bulkhead they drove, and a
+thin scream came to their ears as the atmosphere down in the bowels of
+the Station was compressed by the tiny ship's passage.
+
+Doors slammed behind the ship as it passed, and air locks were opened,
+permitting the Station's center to fill to its normal pressure once
+more.
+
+Then the rocketing ship slowed. Channing saw a flash of green and knew
+that the Martial saw grass was halfway down the three-mile length of
+the Station. He zipped past storeroom and rooms filled with machinery,
+and then the ship scraped lightly against one of the bulkheads.
+
+It caromed from this bulkhead against the next, hitting it in a
+quartering slice. From side to side the ship bounced, crushing the
+bulkheads and tearing great slices from the flanks of the ship.
+
+It slowed, and came to rest against a large room full of packing cases,
+and was immediately swarmed over by the men from the Relay Station.
+
+They found Channing partly conscious. His nose was bleeding, but
+otherwise he seemed all right. Arden was completely out, though a quick
+check by the Station's medical staff assured Don that she would be all
+right as soon as they gave her a work-out. He was leaving the center
+of the Station when Franks came puffing up the stairway from the next
+lowest level.
+
+"Gosh," he said. "It's a real job trying to guess where you stopped.
+I've been hitting every hundred feet and asking. Well, that was one for
+the book."
+
+"Yeah," groaned Don. "Come along, Walt. I want a shower. You can give
+the résumé of the activities whilst I'm showering and trying to soak
+this adhesive off. Arden, lucky girl, will be unconscious when the doc
+rips it off, but I never liked the way they remove tape."
+
+"There isn't much to tell," said Franks. "But what there is, I'll tell
+you."
+
+Channing was finishing the shower when Walt mentioned that it was too
+bad that they hadn't started his electron gun a few weeks sooner.
+
+Don shut off the water, fumbled for a towel, and said: "What?"
+
+Franks repeated.
+
+Again Channing said: "What? Are you nuts?"
+
+"No. I've been tinkering with an idea of mine. If we had another month
+to work on it, I think we might be able to clip Murdoch's ears."
+
+"Just what are you using in this super weapon, chum?"
+
+Franks explained.
+
+"Mind if I put in an oar?" asked Channing.
+
+"Not at all. So far we might be able to fry a smelt at twenty feet, or
+we could cook us a steak. But I haven't been able to do a thing yet. We
+had it working once, and I think we heated a meteor somewhat, but the
+whole thing went blooey before we finished the test. I've spent the
+last week and a half fixing the thing up again, and would have tried it
+out on the next meteor, but your message brought a halt to everything
+but cleaning up the mess and making ready just in case we might think
+of something practical."
+
+"I'll put in my first oar by seeing the gadget. Wait 'til I find my
+pants, and I'll go right along."
+
+       *       *       *       *       *
+
+Don inspected the installation and whistled. "Not half bad, sonny. Not
+half bad."
+
+"Except that we haven't been able to make it work."
+
+"Well, for one thing, you've been running on the wrong track. You need
+more power."
+
+"Sure," grinned Walt. "More power, he says. I don't see how we can cram
+any more soup into this can. She'll melt."
+
+"Walt, what happens in a big gun?"
+
+"Powder burns; expanding products of combustion push--"
+
+"Functionally, what are you trying to accomplish? Take it on the basis
+of a solid shot, like they used to use back in the sailing ship days."
+
+"Well," said Walt thoughtfully, "I'd say they were trying to heave
+something large enough to do damage."
+
+"Precisely. Qualifying that statement a little, you might say that the
+projectile transmits the energy of the powder charge to its objective."
+
+"Right," agreed Walt.
+
+"And it is possible to transmit that energy mechanically. I think
+if we reason this idea out in analogy, we might be able to do it
+electrically. First, there is the method. There is nothing wrong with
+your idea, functionally. Electron guns are as old as radio. They--"
+
+The door opened and Arden entered. "Hi, fellows," she said. "What's
+cooking?"
+
+"Hi, Arden. Like marriage?"
+
+"How long do people have to be married before people stop asking that
+darned fool question?" asked Arden.
+
+"O.K., how about your question?"
+
+"I meant that. I ran into Warren who told me that the brains were down
+here tinkering on something that was either a brilliant idea or an
+equally brilliant flop--he didn't know which. What goes?"
+
+"Walt has turned Buck Rogers and is now about to invent a ray gun."
+
+"No!"
+
+"Yes!"
+
+"Here's where we open a psychopathic ward," said Arden sadly. "So far,
+Venus Equilateral is the only community that hasn't had a village
+idiot. But no longer are we unique. Seriously, Walt?"
+
+"Sure enough," said Channing. "He's got an idea here that may work with
+a little tinkering."
+
+"Brother Edison, we salute you," said Arden. "How does it work?"
+
+"Poorly. Punk. Lousy."
+
+"Well, sound recording has come a long way from the tinfoil cylinder
+that scratches out: 'Mary had a little lamb!' And transportation has
+come along swell from the days of sliding sledges. You may have the
+nucleus of an idea, Walt. But I meant its operation instead of its
+efficiency."
+
+"We have an electron gun of super size," explained Walt. "The cathode
+is a big affair six feet in diameter and capable of emitting a
+veritable storm of electrons. We accelerate them by means of properly
+spaced anodes of the proper voltage level, and we focus them into a
+nice bundle by means of electrostatic lenses--"
+
+"Whoa, Tillie. You're talking like the Venerable Buck himself. Say that
+in language, please."
+
+"Well, we work at swords' points whenever we try to accelerate
+electrons to high speeds and focus them at the same time," said Walt.
+"A voltage gradient will cause electrons to change their course like
+a lens, and with the usual trouble with inanimate things, it works
+the wrong way. In order to accelerate the electrons emitted from
+the cathode, they are subjected to the attraction of an anode which
+is operating at a high positive potential. The electrons leave the
+cathode, and as they are attracted by the positive anode, they begin to
+move.
+
+"Now it is common to speak of the velocity of an electron by stating
+the quantity of volts that the electron has fallen through. The higher
+the voltage difference between cathode and anode, the faster the
+electron will go.
+
+"But the stream of electrons will be diverged if it falls through a
+field of increasing positive potential. In order to bring the stream
+to a focus, we must follow the first anode with another anode of a
+potential less than the first anode but still higher than the cathode.
+That bollixes up the works. It focuses the stream and slows it at the
+same time. So we follow this anode with another high positive electrode
+and speed them up again, and then focus them and so on until we get the
+required velocity. These anodes are shaped like rings so that their
+electrostatic effect will exist in the center of them; the beam passes
+through this center."
+
+"In other words the ring-shaped electrodes are electrostatic lenses?"
+
+"Nope. It is the space between them. The lens is either convex or
+concave depending upon whether the voltage gradient is from positive to
+less positive or if it is positive to more positive, respectively. In
+an electrostatic lens for electrons, the thing is not like a glass lens
+for light. Whether your lens is diverging or converging depends upon
+which way your electron stream is running through it. With light, a
+convex lens will converge the light no matter which direction the light
+is coming from."
+
+"Uh-huh. I see in a sort of vague manner. Now, fellows, go on from
+there. What's necessary to make this dingbat tick?"
+
+"I want to think out loud," said Channing.
+
+"That's nothing unusual," said Arden. "Can't we get into Joe's? You
+can't think without a tablecloth, either."
+
+       *       *       *       *       *
+
+"What I'm thinking is this, Walt. You've been trying to squirt
+electrons like a fireman runs a hose. Walt, how long do you suppose
+a sixteen-inch rifle would last if the explosives were constantly
+replaced and the fire burned constantly?"
+
+"Not long," admitted Walt.
+
+"A gun is an overloaded machine," said Don. "Even a little one. The
+life of a gun barrel is measured in seconds; totaling up the time of
+transit of all the rounds from new barrel to worn gun gives a figure
+expressed in seconds. Your electron gun, Walt, whether it be fish,
+flesh, or fowl, must be overloaded for an instant."
+
+"Is overload a necessary requirement?" asked Arden. "It seems to me
+that you might be able to bore a sixteen-inch gun for a twenty-two.
+What now, little man?"
+
+"By the time we get something big enough to do more than knock paint
+off, we'll have something bigger than a twenty-two," grinned Channing.
+"I was speaking in terms of available strength versus required punch.
+In the way that a girder will hold tremendous overloads for brief
+instants, a gun is extremely overloaded for milliseconds. We'll have a
+problem--"
+
+"O.K., aside from that, have you figured out why I haven't been able
+to do more than warm anything larger than a house brick?"
+
+"Sure," laughed Channing. "What happens in a multigrid radio tube when
+the suppressor grid is hanging free?"
+
+"Charges up and blocks the electron stream ... hey! That's it!"
+
+"What?" asked Arden.
+
+"Sure," said Walt. "We fire off a batch of electrons, and the first
+contingent that arrives charges the affair so that the rest of the beam
+sort of wriggles out of line."
+
+"Your meteor is going to take on a charge of phenomenal negative value,
+and the rest of your beam is going to be deflected away, just as your
+electron lenses deflect the original beam," said Channing. "And now
+another thing, old turnip. You're squirting out a lot of electrons.
+That's much amperage. Your voltage--velocity--is nothing to rave about.
+Watts is what you want, to corn a phrase."
+
+"_Phew_," said Walt. "Corn, he says. Go on, prodigy, and make with the
+explanations. I agree, we should have more voltage and less quantity.
+But we're running the stuff at plenty of voltage now. Nothing short
+of a Van Der Graf generator would work--and while we've got one up on
+the forty-ninth level, we couldn't run a supply line down here without
+reaming a fifty-foot hole through the Station, and then I don't know
+how we'd get that kind of voltage down here without ... that kind of
+stuff staggers the imagination. You can't juggle a hundred million
+volts on a wire. She'd squirt off in all directions."
+
+"Another thing, whilst I hold it in my mind," said Channing
+thoughtfully. "You go flinging electrons off the Station in basketful
+after basketful, and the next bird that drops a ship on the landing
+stage is going to spot-weld himself right to the South end of Venus
+Equilateral. It wouldn't be long before the Station would find itself
+being pulled into Sol because of the electrostatic stress--if we didn't
+run out of electrons first!"
+
+"I hardly think that we'd run out--but we might have a tough time
+flinging them away after a bit. Could be that we should blow out a fist
+full of positrons at the same time?"
+
+"Might make up a concentric beam and wave the positive ions at the
+target," said Channing. "Might help."
+
+"But this space-charge effect. How do we get around that?"
+
+"Same way we make the electron gun work. Fire it off at a devilish
+voltage. Run your electron velocity up near the speed of light; the
+electrons at that speed will acquire considerable mass, in accordance
+with Lorenz's equation which shows that as the velocity of a mass
+reaches the speed of light, its mass becomes infinite. With a healthy
+mass built up by near-light velocities, the electrons will not be as
+easy to deflect. Then, too, we can do the damage we want before the
+charge can be built up that will deflect the stream. We ram 'em with
+a bundle of electrons moving so fast that the charging effect can not
+work; before the space charge can build up to the level required for
+self-nullification of our beam, the damage is done."
+
+"And all we need is a couple of trillion volts. Two times ten to the
+twelfth power. _Grrr._"
+
+"I can see that you'll need a tablecloth," said Arden. "You birds can
+think better over at Joe's. Come along and feed the missus, Don."
+
+Channing surveyed the instrument again, and then said: "Might as well,
+Walt. The inner man must be fed, and we can wrangle at the same time.
+Argument assists the digestion--and vice versa."
+
+       *       *       *       *       *
+
+"Now," said Channing, as the dishes were pushed aside, clearing a space
+on the table. "What are we going to do?"
+
+"That's what I've been worrying about," said Walt. "Let's list the
+things that make our gun ineffective."
+
+"That's easy. It can't dish out enough. It's too dependent upon
+mobility. It's fundamentally inefficient because it runs out of
+ammunition too quick, by which I mean that it is a sort of gun with
+antiseptic bullets. It cures its own damage."
+
+"Prevents," said Arden.
+
+"All right, it acts as its own shield, electrostatically."
+
+"About this mobility," said Walt, "I do not quite agree with that."
+
+"You can't whirl a hunk of tube the size and weight of a good-sized
+telescope around fast enough to shoot holes in a racing spaceship,"
+said Channing. "Especially one which is trying to dodge. We've got to
+rely upon something that can do the trick better. Your tube did all
+right following a meteor that runs in a course that can be predicted,
+because you can set up your meteor spotter to correct for the
+mechanical lag. But in a spaceship that is trying to duck your shot,
+you'll need something that works with the speed of light. And, since
+we're going to be forced into something heavy and hard-hitting, its
+inertia will be even more so."
+
+"Heavy and hard-hitting means exactly what?"
+
+"Cyclotron or betatron. One of those dingusses that whirls electrons
+around like a stone on a string until the string breaks and sends the
+stone out at a terrific speed. We need a velocity that sounds like a
+congressional figure."
+
+"We've got a cyclotron."
+
+"Yeah," drawled Channing. "A wheezy old heap that cries out in anguish
+every time the magnets are charged. I doubt that we could move the
+thing without it falling apart. The betatron is the ticket."
+
+"But the cyclotron gives out with a lot more soup."
+
+"If I had to increase the output of either one, I could do it a lot
+quicker with the betatron," said Channing. "In a cyclotron, the
+revolution of the electrons in their acceleration period is controlled
+by an oscillator, the voltage output of which is impressed on the D
+chambers. In order to speed up the electron stream, you'd have to do
+two things. One: Build a new oscillator that will dish out more power.
+Two: Increase the strength of the magnets.
+
+"But in the betatron, the thing is run differently. The magnet is built
+for A. C. and the electron gun runs off the same. As your current
+starts up from zero, the electron gun squirts a bouquet of electrons
+into a chamber built like a pair of pie plates set rim to rim. The
+magnet's field begins to build up at the same time, and the resulting
+increase in field strength accelerates the electrons and at the same
+time, its increasing field keeps the little devils running in the same
+orbit. Shoot it with two-hundred-cycle current, and in the half cycle
+your electrons are made to run around the center a few million times.
+That builds up a terrific velocity--measured in six figures, believe
+it or not. Then the current begins to level off at the top of the sine
+wave, and the magnet loses its increasing phase. The electrons, still
+in acceleration, begin to whirl outward. The current levels off for
+sure and begins to slide down--and the electrons roll off at a tangent
+to their course. This stream can be collected and used. In fact, we
+have a two-hundred-cycle beam of electrons at a couple of billion
+volts. That, brother, ain't hay!"
+
+"Is that enough?"
+
+"Nope."
+
+"Then how do you hope to increase this velocity? If it is easier to run
+this up than it would be the cyclotron, how do we go about it?"
+
+Channing smiled and began to draw diagrams on the tablecloth. Joe
+looked over with a worried frown, and then shrugged his shoulders.
+Diagrams or not, this was an emergency--and besides, he thought, I need
+another lesson in high-powered gadgetry.
+
+       *       *       *       *       *
+
+"The nice thing about this betatron," said Channing, "is the fact that
+it can and does run both ends on the same supply. The current and
+voltage phases are correct so that we do not require two supplies which
+operate in a carefully balanced condition. The cyclotron is one of the
+other kinds; though the one supply is strictly D.C., the strength
+of the field must be controlled separately from the supply to the
+oscillator that runs the D plates. You're sitting on a fence, juggling
+knobs and stuff all the time you are bombarding with a cyc.
+
+"Now let us inspect the supply of the betatron. It is sinusoidal.
+There is the catch. There is the thing that makes it possible.
+That single fact makes it easy to step the power up to terrific
+quantities. Since the thing is fixed by nature so that the input is
+proportional--electron gun initial velocity versus magnetic field
+strength, if we increase the input voltage, the output voltage goes up
+without having to resort to manipulistic gymnastics on the part of the
+operator."
+
+"Go on, Professor Maxwell."
+
+"Don't make fun of a great man's name," said Arden. "If it wasn't for
+Clerk Maxwell, we'd still be yelling out of the window at one another
+instead of squirting radio beams all over the Solar System."
+
+"Then make him quit calling me Tom Swift."
+
+"Go on, Don, Walt and I will finish this argument after we finish
+Hellion Murdoch."
+
+"May I?" asked Channing with a smile. He did not mind the interruption;
+he was used to it in the first place and he had been busy with his
+pencil in the second place. "Now look, Walt, what happens when you
+smack a charged condenser across an inductance?"
+
+"You generate a damped cycle of the amplitude of the charge on the
+condenser, and of frequency equal to the L, C, constants of the
+condenser and inductance. The amplitude decays according to the factor
+Q, following the equation for decrement--"
+
+"Never mind, I've got it here on my whiteboard," smiled Channing,
+pointing to the tablecloth. "You are right. And the purity of the wave?"
+
+"Sinusoidal ... hey! That's it!" Walt jumped to his feet and went to
+the telephone.
+
+"What's 'it'?" asked Arden.
+
+"The betatron we have runs off of a five-hundred-volt supply," chuckled
+Channing. "We can crank that up ten to one without running into any
+difficulty at all. Five-hundred-volt insulation is peanuts, and the
+stuff they put on wires nowadays is always good for ten times that
+just because it wouldn't be economical to try to thin the insulation
+down so that it only protects five hundred. I'll bet a hat that he
+would crank the input up to fifty thousand volts without too much
+sputtering--though I wouldn't know where to lay my lunch hooks on
+a fifty-thousand-volt condenser of any appreciable capacity. Well,
+stepping up the rig ten to one will dish us out just shy of a couple of
+thousand million volts, which, as brother Franks says, is not hay!"
+
+       *       *       *       *       *
+
+Walt returned after a minute and said: "Warren's measuring the
+inductance of the betatron magnet. He'll calculate the value of C
+required to tune the thing to the right frequency and start to achieve
+that capacity by mazing up whatever high-voltage condensers we have
+on the Station. Now, Don, let's calculate how we're going to make the
+thing mobile."
+
+"That's a horse of a different color. We'll have to use electromagnetic
+deflection. From the constants of the electron stream out of our
+souped-up Suzy, we'll have to compute the necessary field to deflect
+such a beam. That'll be terrific, because the electrons are hitting it
+up at a velocity approaching that of light--maybe a hundred and seventy
+thousand miles per--and their mass will be something fierce. That again
+will help to murder Murdoch; increasing mass will help to keep the
+electrons from being deflected, since it takes more to turn a heavy
+mass--et cetera, see Newton's laws of inertia for complete statement.
+Have 'em jerk the D plates out of the cyc and bring the magnet frame
+down here--to the turret, I mean--and set 'em up on the vertical. We'll
+use that to run the beam up and down, we can't possibly get one hundred
+and eighty degree deflection, of course, but we can run the deflection
+over considerable range. It should be enough to catch a spaceship that
+is circling the Station. For the horizontal deflection, what have we
+got?"
+
+"Nothing. But the cyc magnet is a double pole affair. We could break
+the frame at the D plates and set one winding sidewise to the other and
+use half on each direction."
+
+"Sure. Have one of Warren's gang fit the busted pole pieces up with
+a return-magnetic frame so that the field will be complete. He can
+weld some girders on and around in an hour. That gives us complete
+deflection properties left and right; up and down. We should be able to
+cover a ninety-degree cone from your turret."
+
+"That'll cover all of Murdoch's ships," said Walt.
+
+"Too bad we haven't got some U_{235} to use. I'd like to plate up one
+of his ships with some positive ions of U_{235} and then change the
+beam to slow neutrons. That might deter him from his life of crime."
+
+"Variations, he wants," said Arden. "You're going to impale one ship on
+a beam of electrons, one ship on a beam of U_{235} ions; and what will
+you have on the third?"
+
+"I'll think of something," said Channing. "A couple of pounds of
+U_{235} should make things hum, though."
+
+"More like making them disappear," said Franks. "_Swoosh!_ No ship.
+Just an incandescent mass falling into the Sun. I'm glad we haven't
+got U_{235} in any quantity out here. We catch a few slow neutrons now
+and then, and I wouldn't be able to sleep nights. The things just sort
+of wander right through the Station as though it weren't here at all;
+they stop just long enough to register on the counter upstairs and then
+they're gone."
+
+"Well, to work, people. We've got a job to do in the next three and a
+half days."
+
+       *       *       *       *       *
+
+Those days were filled with activity. Hauling the heavy parts down to
+the turret was no small job, but it was accomplished after a lot of
+hard work and quite a bit of tinkering with a cutting torch. The parts
+were installed in the outer skin, and the crew with the torch went back
+over their trail and replaced the gaping holes they left in the walls
+and floors of Venus Equilateral. The engineering department went to
+work, and for some hours the place was silent save for the clash of
+pencil on paper and the scratching of scalps. The most popular book in
+the Station became a volume on nuclear physics, and the second most
+popular book was a table of integrals. The stenographic force went
+to work combing the library for information pertaining to electronic
+velocities, and a junior engineer was placed in as buffer between
+the eager stenographers and the harried engineering department. This
+was necessary because the stenographers got to the point where they'd
+send anything at all that said either "electrons" or "velocity," and
+one of the engineers read halfway through a text on atomic structure
+before he realized that he had been sold a bill of goods. Wire went by
+the mile down to the turret, and men proceeded to blow out half of the
+meters in the Station with the high-powered beam. Luckily, the thing
+was completely nonspectacular, or Murdoch might have gained an inkling
+of their activities. The working crew manipulated constants and made
+haywire circuits, and finally announced that the beam would deflect--if
+the calculations were correct.
+
+"They'd better be," said Channing. He was weary. His eyes were puffed
+from lack of sleep, and he hadn't had his clothing off in three days.
+
+"They are," said Franks. He was in no better shape than Don.
+
+"They'd better be right," said Channing ominously. "We're asking for a
+kick in the teeth. The first bundle of stuff that leaves our gun will
+energize Murdoch's meteor spotter by shear electrostatic force. His
+gun mounts, which you tell me are coupled to the meteor detector for
+aiming, will swivel to cover the turret out here. Then he'll let us
+have it right in the betatron. If we don't get him first, he'll get us
+second."
+
+"Don," said Walt in a worried voice, "How are we going to replace the
+charge on the Station? Like the bird who was tossing baseballs out of
+the train--he quit when he ran out of them. Our gun will quit cold when
+we run out of electrons--or when the positive charge gets so high that
+the betatron can't overcome the electrostatic attraction."
+
+"Venus Equilateral is a free grid," smiled Channing. "As soon as we
+shoot off electrons, Old Sol becomes a hot cathode and our Station
+collects 'em until the charge is equalized again."
+
+"And what happens to the bird who is holding on to something when we
+make off with a billion volts? Does he scrape himself off the opposite
+wall in a week or so--after he comes to--or can we use him for freezing
+ice cubes? Seems to me that it might be a little bit fatal."
+
+"Didn't think of that," said Channing. "There's one thing, their
+personal charge doesn't add up to a large quantity of electricity. If
+we insulate 'em and put 'em in their spacesuits, they'll be all right
+as long as they don't try to grab anything. They'll be on the up and
+down for a bit, but the resistance of the spacesuit is high enough
+to keep 'em from draining all their electrons out at once. I recall
+the experiments with early Van Der Graf generators at a few million
+volts--the operator used to sit in the charged sphere because it was
+one place where he couldn't be hit by man-made lightning. It'll be
+rough, but it won't kill us. Spacesuits, and have 'em sit in plastic
+chairs the feet of which are insulated from the floor by china dinner
+plates. This plastic wall covering that we have in the apartments is a
+blessing. If it were all bare steel, every room would be a miniature
+hell. Issue general instructions to that effect. We've been having
+emergency drills for a long time, now's the time to use the grand
+collection of elastomer spacesuits. Tell 'em we give 'em an hour to get
+ready."
+
+       *       *       *       *       *
+
+Hellion Murdoch's voice came over the radio at exactly the second of
+the expiration of his limit. He called Channing and said:
+
+"What is your answer, Dr. Channing?"
+
+Don squinted down the pilot tube of the meteor spotter and saw the
+_Hippocrates_ passing. It was gone before he spoke, but the second ship
+came along, and the pilot tube leaped into line with it. Don checked
+meters on the crude panel before him, and then pressed the plastic
+handle of a long lever.
+
+There was the crash of a heavy-duty oil switch.
+
+That was all.
+
+Crackles of electricity flashed back and forth through the Station, and
+the smell of ozone arose. Electric light filaments leaned over crazily,
+trying to touch the inner walls of the glass. Panes of glass ran blue
+for an instant, and the nap of the carpets throughout the Station
+stood bolt upright. Hair stood on end, touched the plastic helmet
+dome, discharged, fell to the scalp, raised again and discharged, fell
+once more, and then repeated this raising and falling, again and again
+and again. Electric clocks ran crazily, and every bit of electronic
+equipment on the Station began to act in an unpredictable manner.
+
+Then things settled down again as the solar emission charged the
+Station to equilibrium.
+
+Aboard the ship, it was another story. The celestial globe of the
+meteor spotter blazed once in a blinding light and then went completely
+out of control. It danced with pin points of light, and the coupler
+that was used to direct the guns went crazy. Turrets tried to swivel,
+but the charge raised hob with the electronic controls, and the guns
+raised once and then fell, inert. One of them belched flame and fire,
+and the shell went wild. The carefully balanced potentials in the
+driver tubes was upset, and the ship lost headway. The heavy ion stream
+from the driving cathode bent and spread, touching the dynodes in
+the tube. The resulting current brought them to a red heat, and they
+melted down and floated through the evacuated tube in round droplets.
+Instruments went wild, and gave every possible answer, and the ship
+became a bedlam of ringing bells and flashing danger lights.
+
+But the crew was in no shape to appreciate the display. From
+metal parts in the ship there appeared coronas that reached for
+the unprotected men, and seared their flesh. And since their
+gravity-apparent was gone, they floated freely through the air, and
+came in contact with highly charged walls, ceiling, and floor; to say
+nothing of the standard metal furniture.
+
+It was a sorry bunch of pirates that found themselves in a
+ship-without-motive-power that was beginning to leave their circular
+course on a tangent that would let them drop into the Sun.
+
+"That's my answer, Murdoch!" snapped Channing. "Watch your second ship!"
+
+"You young devil," shouted Murdoch, "what did you do?"
+
+"You never thought that it would be an electronics engineer that made
+the first energy gun, did you, Murdoch? I'm now going to take a shot at
+No. 3!"
+
+No. 3's turrets swiveled around and from the guns flashes of fire came
+streaming. Channing punched his lever savegely, and once again the
+Station was tortured by the effects of its own offensive.
+
+Ship No. 3 suffered the same fate as No. 2.
+
+Then, seconds later, armor-piercing shells began to hit Venus
+Equilateral. They hit, and because of the terrific charge, they began
+to arc at the noses. The terrible current passed through the fuses,
+and the shells exploded on contact instead of boring inside before
+detonation. Metal was bent and burned, but only a few tiny holes
+resulted. As the charge on the Station approached equilibrium once
+more, men ran with torches to seal these holes.
+
+"Murdoch," said Channing, "I want you!"
+
+"Come and get me."
+
+"Land--or die!" snapped Channing in a vicious tone. "I'm no
+humanitarian, Murdoch. You'd be better off dead!"
+
+"Never," said Hellion Murdoch.
+
+Channing punched the lever for the third time, but as he did, Murdoch's
+ship leaped forward under several G. The magnets could not change in
+field soon enough to compensate for this change in direction, and the
+charge failed to connect as a bull's-eye. It did expend some of its
+energy on the tail of the ship. Not enough to cripple the vessel, but
+the _Hippocrates_ took on a charge of enough value to make things hard
+on the crew.
+
+Metal sparked, and instruments went mad. Meters wound their needles
+against the end pegs. The celestial globe glinted in a riot of color
+and then went completely dead. Gun servers dropped their projectiles as
+they became too heavily charged to handle, and they rolled across the
+turret floors, creating panic in the gun crews. The pilot fought the
+controls, but the charge on his driver tubes was sufficient to make his
+helm completely unpredictable. The panel sparked at him and seared his
+hands, spoiling his nervous control and making him heavy-handed.
+
+"Murdoch," cried Channing in a hearty voice, "that was a miss! Want a
+hit?"
+
+Murdoch's radio was completely dead. His ship was yawing from side to
+side as the static charges raced through the driver tubes. The pilot
+gained control after a fashion, and decided that he had taken enough.
+He circled the Station warily and began to make a shaky landing at the
+South end.
+
+Channing saw him coming, and with a glint in his eye, he pressed the
+lever for the fourth and last time.
+
+Murdoch's ship touched the landing stage just after the charge had been
+driven out into space. The heavy negative charge on the _Hippocrates_
+met the heavy positive charge on Venus Equilateral. The ship touched,
+and from that contact, there arose a cloud of incandescent gas. The
+entire charge left the ship at once, and through that single contact.
+When the cloud dissipated, the contact was a crude but efficient welded
+joint that was gleaming white-hot.
+
+Channing said to Walt: "That's going to be messy."
+
+Inside of the _Hippocrates_, men were still frozen to their handholds.
+It was messy, and cleaning up the _Hippocrates_ was a job not relished
+by those who did it.
+
+But cleaning up Venus Equilateral was no small matter either.
+
+       *       *       *       *       *
+
+Weeks went by before the snarled-up instruments were repaired. Weeks
+in which the captured _Hippocrates_ was repaired, too, and used to
+transport material and special supplies from Terra, and Venus, and
+Mars. Weeks in which the service from planet to planet was interrupted
+and erratic.
+
+Then one day, service was restored, and life settled down to a
+reasonable level. It was after this time that Walt and Channing found
+time to spend an idle hour together. Walt raised his glass and said:
+"Here's to electrons!"
+
+"Yeah," grinned Channing. "Here's to electrons. Y'know, Walt, I was a
+little afraid that space might become a sort of wild West show, with
+the ships bristling with space guns and betatrons and stuff like that.
+In which case you'd have been a stinking benefactor. But if the recoil
+is as bad as the output--and Newton said that it must be--I can't see
+ships cluttering up their insides with stuff that'll screw up their
+instruments and driver tubes. But the thing that amuses me about the
+whole thing is the total failure you produced."
+
+"Failure?" asked Walt. "What failed?"
+
+"Don't you know? Have you forgotten? Do you realize that spaceships are
+still ducking around meteors instead of blasting them out of the way
+with the Franks Electron Gun? Or did you lose sight of the fact that
+this dingbat started out in life as a meteor-sweeper?"
+
+Walt glared over the rim of his glass, but he had nothing to say.
+
+
+                               THE END.
+
+*** END OF THE PROJECT GUTENBERG EBOOK 68006 ***

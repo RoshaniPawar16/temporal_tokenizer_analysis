@@ -1,0 +1,3747 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 69672 ***
+
+                         Transcriber's Notes
+
+ 1. Cover-page modified by the transcriber.
+
+ 2. Typographical errors and hyphenation inconsistencies were silently
+    corrected.
+
+ 3. The text version is coded for italics and other mark-ups i.e.,
+    (a) Italics/Underline are indicated thus _italic_;
+    (b) Bold are indicated thus =Bold=;
+    (c) Smallcaps thus +Caps+; and
+    (d) Images are indicated as [Illustration: (with narration...)]
+
+                  *       *       *       *       *
+
+
+
+
+                        _THE SUMMERS READERS_
+
+                               MANUAL
+                      FIRST LESSONS IN READING
+
+                                 BY
+                            MAUD SUMMERS
+
+                [Illustration: Copyright-company-logo]
+
+                    FRANK D. BEATTYS AND COMPANY
+                              NEW YORK
+
+
+
+
+                         Copyright, 1908, by
+                    +FRANK D. BEATTYS AND COMPANY
+                              NEW YORK+
+
+
+                         THE DE VINNE PRESS
+
+
+
+
+                              CONTENTS.
+
+
+ Chapter                                                          Page
+
+                              +PART I.+
+
+ LEARNING TO READ                                                    3
+
+     1. The Fundamental Principles in Learning to Read.
+
+     2. Elements of Reading:
+
+         (a) The Thought Element.
+
+         (b) The Symbol Element.
+
+         (c) The Phonic Element.
+
+     3. Methods of Teaching Reading.
+
+     4. Summary.
+
+
+                             +PART II.+
+
+ FIRST HALF YEAR: FIRST STEP                                        21
+
+     1. Ear Training Exercises.
+
+     2. Preliminary Blackboard Lessons.
+
+
+                             +PART III.+
+
+ FIRST HALF YEAR: SECOND STEP                                       49
+
+     1. Blackboard Lessons and Primer.
+
+     2. Phonic Lessons:
+
+         (a) The Consonant Sounds.
+
+         (b) Phonograms derived from Words used
+         in the Primer.
+
+         (c) Word Drill.
+
+
+                             +PART IV.+
+
+ SECOND HALF YEAR: THIRD STEP                                       75
+
+     1. Reading from the First Reader.
+
+     2. Phonic Lessons:
+
+         (a) The Vowel Sounds.
+
+         (b) Equivalent Vowel Sounds.
+
+         (c) Word Drill.
+
+
+                              +PART V.+
+
+ THIRD HALF YEAR: FOURTH STEP                                       99
+
+     1. Reading from the Second Reader.
+
+     2. Phonic Lessons:
+
+         (a) Initial and Final Syllables taught as
+         Phonograms.
+
+         (b) Word Drill.
+
+     3. Later Work.
+
+                  *       *       *       *       *
+
+ CONSONANT SOUNDS                                                   112
+
+ VOWEL SOUNDS                                                       113
+
+
+
+
+                              PREFACE.
+
+
+The Summers series of Readers consists of a Primer, a First Reader,
+and a Second Reader, closely articulated for the purpose of teaching
+beginners to read, and a Manual of Instruction intended to give
+teachers a full knowledge of the elements involved in the process
+of learning to read, and definite, practical guidance for daily
+classroom work.
+
+The whole purpose and essence of reading is the communication of
+ideas. It is the thought--the impression--rather than the form--the
+expression--which gives value to what is read. With this fact in mind
+the subject-matter has been chosen with special reference to primal
+social activities in history and contemporaneous society significant
+of the race development, as the securing of food, shelter, and
+clothing. But this subject-matter must touch the child personally if
+it is to be of value in learning to read. It must appear for him in
+the form of action, rhythm, stories, observation, plays and games, if
+the symbols of reading are to be fraught with meaning for him. What
+is of interest to the child, and what is of value to society, have
+both been kept in mind in selecting and arranging the literature of
+childhood used in this series of readers.
+
+This Manual of Instruction provides for three half years of work.
+Foreign children, or those of slower development, will require a
+longer time. In that event, the lessons in the Manual will suggest
+the _order_, not the time.
+
+In learning to read, two lines of work are to be developed at
+separate periods each day. Reading lessons and Phonic lessons in
+orderly sequence are given in the Manual of Instruction.
+
+Helpful suggestions for this series of readers have come from many
+sources. The author wishes to acknowledge especial indebtedness to
+Edgar Dubs Shimer, Ph.D., District Superintendent, New York City, for
+valuable criticism; to Grant Karr, Ph.D., Teacher of the Principles
+of Education and Director of Observation in the Training School for
+Teachers, New York City, for suggestions concerning the statement
+of the unity of language; to Miss Alice H. Damon, A.B., Supervising
+Principal of the Primary Department, State Normal School, Potsdam,
+N. Y., for assistance in preparing the Manual of Instruction;
+and to Miss Caroline A. Yale, Ph.D., Principal of Clarke School,
+Northampton, Mass., for the use of the chart of consonant sounds.
+
+
+
+
+                              +PART I.+
+
+                          LEARNING TO READ.
+
+
+    1. The Fundamental Principles in Learning to Read.
+    2. Elements of Reading:
+              (a) The Thought Element.
+              (b) The Symbol Element.
+              (c) The Phonic Element.
+    3. Methods of Teaching Reading.
+    4. Summary.
+
+
+                                 1.
+
+                     THE FUNDAMENTAL PRINCIPLES
+                        IN LEARNING TO READ.
+
+
+=Language Defined.= Language is the conventional means by which man
+communicates his thoughts. It is a complex unity composed of thought
+and symbol, spoken or written. Because it is the means by which
+different minds are identified in thought, it becomes an essential
+factor in social organization.
+
+=Symbolism.= In a wider sense all means of social communication,
+material and pictorial expressions, as well as spoken and written
+words, may be called language. Thought, through symbol, to thought,
+is the whole social process of language, spoken and written, for
+every meaning has a symbol and every symbol has a meaning.
+
+=The Problem in Learning to Read.= The problem in teaching reading
+is to bring the symbol and its meaning into vital unity in the mind
+of the learner. Hence it is necessary that the teacher distinguish
+clearly between these elements. When the thought and the symbol have
+become so united that each is essential to the other, the problem of
+learning to read has been solved.
+
+=Fundamental Principles.= There are three chief fundamental
+principles involved in the process of learning to read, namely:
+
+ _First. Images._ The thought aspect of language depends upon clear
+ and vivid images. This is so important that unless children have
+ such images they cannot master the symbols which represent them. One
+ purpose of nature study, handicraft, and art is to give children
+ these images.
+
+ _Second. Wholes to Parts._ In acquiring knowledge the mind moves from
+ the vague whole to the parts and then back again to the clarified
+ whole. An understanding of the parts gives a fuller meaning to the
+ whole. The mind analyzes in order to reach a better synthesis. When
+ we wish to make known to a child a coat, for instance, we do not show
+ him separately the sleeves, the lapels, the pockets, the buttons. We
+ hold up the whole garment and say, "Here is a coat." It is necessary
+ to do the same in teaching reading. Give the child first an image of
+ the whole situation which he is to think himself into, and then come
+ to the details to make the whole clear.
+
+ _Third. Self-Activity._ The child is an active, creative agent,
+ vitally concerned in adjusting himself to his physical and spiritual
+ environment. Self-activity manifests itself in some external form,
+ which in language is the symbol of the self-active thought. Success
+ in teaching reading depends upon the amount of self-active response
+ the symbol awakens in the thought of the child.
+
+These three fundamental principles, namely, clear and vivid images,
+whole situations, and self-activity in the form of response and
+interest on the part of the child, should be kept in the foreground
+in teaching reading.
+
+
+                                 2.
+
+                    ELEMENTS IN LEARNING TO READ.
+
+
+Since language is composed of thought, symbol, and sound, the main
+elements to be considered in learning to read are the thought, the
+symbol, and the phonic elements.
+
+
+                        THE THOUGHT ELEMENT.
+
+=The Purpose of the Thought Element.= The problem of elementary
+reading is to establish a permanent association between the written
+or the printed symbols and the thoughts which they represent. The
+thought is all-important; it is the vitalizing element in learning to
+read. In learning to talk the child associates the meaning with the
+spoken symbol; in learning to read he associates a thought content
+with a sight symbol. The strength of the association depends in each
+case upon the worth the thought has for the child; hence the great
+necessity of giving especial attention to the thought element in
+learning to read.
+
+=Action Sentences.= A sentence is the unit of language and the
+life-giving factor in the process of learning to read. It is
+important, therefore, that in the beginning the child should form
+the habit of grasping sentences. In the first reading lessons it is
+necessary to find subjects which interest the child and furnish clear
+mental pictures. Children are interested in actions. They like to
+move and will read for the purpose of performing an action. Action
+sentences appeal to all children, because that which a child does
+makes a deep impression and involves large self-activity.
+
+=Nursery Rhymes.= Children are so influenced by rhythm that it is
+impossible to train them aright without giving due consideration
+to this form of expression. There are many interesting complete
+rhymes and poems that are valuable for reading lessons. In content
+the poetry of childhood should contain familiar images, tinged with
+enough of mystery to give that subtle mingling of sense and nonsense
+which stirs the imagination of the child and also relates him to the
+actual world in which he lives. The Mother Goose melodies fulfil
+these conditions, but it is the rhythm far more than the thought that
+attracts the child. Have the children learn the rhymes by ear and
+recite them with no thought other than that they are to be enjoyed.
+Incidentally, they will afford valuable exercise in pronunciation,
+articulation, and tone modulation, if the teacher is careful
+about these matters, for children are great imitators. Later the
+children will read these rhymes and poems with great pleasure, thus
+associating a valuable thought content with its printed symbol in a
+way that will make the association abiding.
+
+=Stories.= Children express in action, and ultimately in character,
+the influences which they receive from stories. Therefore, stories
+containing true and good ideals should be selected. Children
+appreciate and love what appeals to the best and the highest in
+them. Nursery rhymes, fables, fairy lore, and classic myth should
+be used. They have nourished the race, and will also feed the soul
+life of the individual child. The outer form varies with the age and
+the country, but the inner meaning is of the spirit and will outlast
+the centuries. Every teacher should, therefore, carefully cultivate
+the art of story-telling. It is far better to present a story orally
+than to read it from a book. If it is told, the teacher can adapt it
+to the needs of her classes, and by the magnetism of voice, eye, and
+personality awaken an abiding love for good literature. At a later
+period the child will enjoy reading these same stories in the reading
+books of the first and second grades.
+
+=Observation Lessons.= Observation and description should precede
+reading in the early lessons. The teacher may write on the blackboard
+simple sentences based upon these observations and descriptions.
+Anything in the environment of the home or the school which interests
+the child should be utilized. Encourage the children to observe their
+household pets and to tell the other children about them. Whatever
+the child makes in the time devoted to handicraft, or observes in
+the nature lessons, or plays in the recreation period may be used as
+material for reading lessons. Color is so intimately connected with
+the emotional life that its value and importance should be recognized.
+
+
+                         THE SYMBOL ELEMENT.
+
+=Use.= All thought which rises to the plane of self-consciousness
+is communicated by means of a material, a pictorial, or a lingual
+symbol. The thought element and the symbol element are two sides of
+the same thing, namely, language. They form the _impression_ and
+_expression_ of language, and hence of social communication and
+identity.
+
+=Kinds of Symbols.= There are two kinds of symbols which must be
+mastered in learning to read, namely, the vocal and the graphic,
+appealing respectively to the ear and to the eye. These symbols are
+made by the voice and the hand, and are recognized by the ear and the
+eye. They must always be regarded in the light of that which they
+represent in connection with elementary reading, whether used in
+receiving or expressing thought. This thought must be kept clearly
+in mind in silent and oral reading, in word repetition, and in word
+drill. It will aid also in the spelling and the phonic work of the
+children.
+
+                          THE PHONIC ELEMENT.
+
+=Definition.= The phonic element deals with articulate sounds and the
+letters or the symbols which represent them. Here, as elsewhere in
+learning to read, the unity between meaning and symbol--impression
+and expression--must be kept clearly in mind. The spoken symbol
+implies training in pronunciation, enunciation, articulation,
+inflection, and all that makes for clear understanding and agreeable
+oral expression of thought. Ear and voice, eye and hand, are tools
+which must be trained to work with automatic perfection as the means
+in communicating thought.
+
+=Purpose.= The purpose of the phonic lesson is the association of a
+sound with its written or printed symbol, so that the child will be
+able to get and to express the sound when the symbol is presented to
+him. The sight symbol and the sound symbol should be so thoroughly
+associated that immediately upon the presentation of either one of
+them the other will appear in consciousness.
+
+=Ear and Voice Training.= It is of the utmost importance that
+children be given a broad experience with sound in the way of ear
+and voice training exercises for a few weeks before the formal study
+of phonics is begun. These exercises may be carried on in connection
+with the thought development in learning to read and in the music
+work. In the nature work the children should be trained to listen to
+bird note, insect hum, and other sounds of nature. Story-telling is
+most helpful in this ear training. It should begin in the first grade
+and continue through the entire elementary school period. The reading
+of poems aloud should be a regular part of the school program, not
+only to stimulate the imagination, but also to give the enjoyment
+that comes from the cadence of rhythmic language and to train the
+ear to make fine discriminations. Ear training and voice culture are
+so intimately related that it is impossible to cultivate one without
+cultivating the other, for they sustain to each other the vital
+relation of impression and expression.
+
+=Phonic Facts.= The question of the exact number of elementary
+sounds in the English language is still unsettled. This Manual is
+based on the belief that there are forty-five elementary sounds in
+the English language, twenty vowel sounds and twenty-five consonant
+sounds. The difficulty in mastering the phonic element in learning
+to read English is greatly increased because some of the elementary
+sounds are represented by two letters, as _th_ in _thin_, _ea_ in
+_head_; and some sounds are represented by two or more symbols,
+as _e_ in _her_, _u_ in _turn_, and _i_ in _firm_. It is neither
+necessary nor desirable that little children should learn all the
+equivalent symbols; nor is it considered wise to give to children all
+of the forty-five elementary sounds. Forty is the number taught in
+the phonic lessons of this Manual. Use has determined the order of
+presentation.
+
+ 1. _Vowel Sounds._ The vowels are always pure sound. They express
+ the emotions and are the rhythmic, musical element which gives
+ language its beauty. There are many equivalent spellings for the
+ twenty elementary vowel sounds in the English language. Those most
+ frequently used are found on page 113; the others will be learned
+ unconsciously as the child develops. See page 113 for a scientific
+ arrangement of the vowel sounds.
+
+ 2. _Consonant Sounds._ The consonants limit and define sound. Of the
+ twenty-five elementary consonant sounds, ten have no vocal quality
+ whatever. They are commonly known as breath sounds--_f, h, k, p,
+ s, t, ch, sh, th, wh_. With the exception of _h_, every one of
+ these breath sounds has its corresponding vocal sound:
+
+                    f     vocalized becomes v
+
+                    p         "         "   b
+
+                    t         "         "   d
+
+                    th (thin) "         "   th (then)
+
+                    wh        "         "   w
+
+                    k         "         "   g
+
+                    s         "         "   z
+
+                    ch        "         "   j
+
+                    sh        "         "   zh
+
+See p. 112 for a scientific arrangement of the consonant sounds.
+
+ 3. _Phonograms_. In all the phonic lessons used in this Manual a
+ _phonogram is the symbol of a sound group_, usually composed of
+ a single vowel sound combined with a single consonant sound. For
+ example, _ing_ in _s-ing_ is a phonogram, but in _see-ing_ it is a
+ syllable.
+
+=Diacritical Marks.= Useless phonograms are a burden rather than a
+help; therefore the child should learn only those which he actually
+uses. For this reason it is not advisable to use diacritical marks
+during the earlier stages of learning to read. They make the symbol
+complex and cumbersome, and at the same time their need and great
+value do not become apparent until the child begins to use the
+dictionary, say, in the fourth school year. In the earlier stages
+of learning to read, symbols acquire meaning by being constantly
+associated with their respective sounds and thoughts. Habits of
+pronunciation are formed by always attaching the same sound values
+to letters and groups of letters. When a child forms an image of a
+word burdened with diacritical marks, he must later form an image
+of the word without these. When children are taught to look for
+diacritical marks their imaging power is centered upon the markings
+of the words instead of the thoughts for which these words stand;
+hence it takes longer to get the thought, and as a consequence they
+are apt to be slow readers. Rapid readers are usually thoughtful
+readers, because they have the power to grasp quickly a large number
+of words and to interpret them in mental pictures.
+
+=Phonic Drill.= Phonic drill and reading are distinct processes and
+should be taught at different periods of the day during the first
+two years of school. The purpose of the elementary reading lesson is
+to associate permanently the thought and the symbols which represent
+it, so that the thought can be gained from the written or printed
+language. The purpose of the elementary phonic lesson is to associate
+permanently sounds and the characters which represent them, so that
+new words can be readily recognized. Both processes are necessary
+in teaching reading, but phonic lessons should be relegated to a
+subsidiary place so that they may not become an impediment to the
+main purpose.
+
+=Phonic Method.= In the phonic method sight words are analyzed
+into their elements, which are then combined in new relations to
+form new words. These new combinations of familiar elements in new
+relations are recognized again and again, until the association
+grows permanent, and so new words are acquired. Consonant sounds are
+recognized as initial, final, and medial. Next the phonogram element
+is analyzed into its vowel and consonant sounds. By means of familiar
+symbols the child has the power to pronounce new words. A knowledge
+of individual symbols is the foundation upon which the sight
+recognition of words rests; hence the necessity of rapid and varied
+drills.
+
+The method suggested in this Manual for phonic lessons is as follows:
+
+ 1. Separate sight words into their consonant sounds and phonograms.
+
+ 2. Separate phonograms into their consonant and vowel sounds.
+
+ 3. Associate these sound elements with their symbols.
+
+ 4. Combine the sound elements to form new words (Phonic Synthesis).
+
+ 5. Teach initial and final syllables as phonograms.
+
+
+                                 3.
+
+                    METHODS OF TEACHING READING.
+
+Methods of learning to read are the result of bringing the different
+thought, symbol, and phonic elements into combination and active
+co-operation. The process is organic and all these features must be
+kept in mind. There are two kinds of reading, silent and oral.
+
+=Silent Reading.= Silent reading is the personal, individual way of
+getting thought from the printed page. The teacher must lead the
+pupil to see that the sentences have meaning. From the very first the
+teacher should never lose sight of this fundamental principle and
+should train the child into the habit of interpreting the printed
+page into mental pictures. A good method of conducting the reading
+lesson is the following:
+
+Let each child read the entire lesson silently to get the thought
+(whole to parts). When the child does not recognize a word and
+cannot get it from the context or the sound elements, tell him what
+it is, in as simple a way as he would be told about a new object in
+the home. When he has finished reading the child may show that he
+is ready to give the thought. The teacher requests a pupil to give
+in his own language what he has just read. It will then be seen
+how vivid his images are of what he has read and how fully it has
+appealed to him. At the same time, his expressing it in his own words
+will exercise his self-activity. It is not wise in the beginning to
+correct imperfect language to any great extent, for the reason that
+the child's attention is liable to be diverted from the main thought
+to some detail of the medium of expression. This is disastrous and
+will tend to make him unnatural in both his thinking and feeling. It
+destroys his appreciation for the whole, blurs his images, and takes
+away the chief motive for reading.
+
+In learning to read the child begins with the image of some story,
+which he particularizes and clarifies by the thoughts in the
+sentences and the ideas in the words. He masters the word elements in
+this way, as a unity of meaning and symbol, which gives significance
+to the sentence and to the story as a whole. Thus the power of
+getting thought from the printed page develops.
+
+=Oral Reading.= Oral reading is the process of interpreting thought
+from the printed page and imparting it to another by means of
+the voice. Silent reading should always precede oral reading, so
+that the child may get the thought before he attempts to give it.
+Silent reading is the power to translate the words into thoughts or
+emotions. Oral reading goes a step further and gives these thoughts
+and emotions audible expression and awakens them in another. Silent
+reading is a necessity; oral reading is an accomplishment. Oral
+reading is another way of telling a story. It implies the ability
+to awaken one's thoughts in another's mind. It lacks the freedom of
+expression usual in story-telling, for it demands power to interpret
+and transmit thought almost simultaneously.
+
+There are many ways of conducting an oral reading lesson. Two methods
+are given for illustration:
+
+                                 _A_
+
+    1. The development of new words.
+    2. The silent reading of the complete story.
+    3. Oral reproduction of the complete story.
+    4. Oral reading of the complete story.
+
+                                 _B_
+
+    1. The development of new words.
+    2. Silent reading of paragraphs.
+    3. Oral reproduction of paragraphs.
+    4. Oral reading of paragraphs, then of the whole.
+
+These methods differ only in the breadth and scope of the image of
+the whole that the child is to think through at one time.
+
+Freedom of expression usually accompanies the reading of interesting
+thought. The child will usually use natural, clear tones in reading,
+as he does in talking, if he understands what he reads. Many children
+read poorly because they neither understand nor feel any meaning in
+the words. Both gesture and language will be spontaneous if prompted
+by right thinking and right feeling. The dramatic presentation of a
+story, however crude, becomes a great aid.
+
+=Word Repetition.= Many repetitions of words, phrases, and sentences
+are necessary in mastering the symbol. It is quite possible to have
+a repetition of words with an ever-changing variety in valuable
+thought. This variety holds the interest of the children and at
+the same time accustoms the eye to the repeated symbol. The symbol
+elements in the action sentences, observation lessons, nursery
+rhymes, and stories must be repeated many times, but, to preserve
+interest in them and to increase their meaning, the greatest care
+must be taken in the selection and the presentation of the thought
+element. If the teacher of elementary reading can master this part of
+her work, her success is well-nigh assured.
+
+
+                              SPELLING.
+
+=Notion and Purpose.= Spelling is a finer analysis of the process of
+learning to read and hence involves all the elements of learning to
+read. The problem in learning to spell is to associate permanently
+the smallest symbols of the word, the letters, oral and written,
+with their appropriate meanings. In oral spelling the impression is
+received through the ear; the expression is by means of the voice.
+In written spelling the impression is received through the eye; the
+expression is by means of the hand. Because written spelling occupies
+a much larger place in life through the need of communicating ideas
+by means of writing, it should receive more attention in language
+teaching than oral spelling. The training of the eye and the hand
+is, therefore, more important in learning to spell than the training
+of the ear and the voice, although oral spelling sometimes helps by
+bringing in the auditory and the vocal memory to assist the visual
+and the manual. In the beginning children should learn to spell by
+_writing_, not as a drill in penmanship, but for the purpose of
+calling attention to the form of the word.
+
+=Elements.= Spelling is a complex and difficult art and requires (a)
+training in elementary sounds and their symbols, or phonic drill;
+(b) training of eye and hand in forming the letters of a word, or
+written spelling; (c) training of ear and voice in naming the letters
+of a word, or oral spelling. Sound, form, and name of letters must be
+inseparably associated, so that they will become necessary elements
+in the vital combination of symbol and meaning in the word.
+
+=Method.= In the method pursued the teacher writes _Sing._, for
+instance, upon the blackboard, with capital letter and period to
+indicate that it is the expression of a complete thought. The teacher
+then erases the word and requests the children to write it. Review
+this word at the next lesson and add a new one. Next the teacher
+writes _I can sing. Can you sing?_, and similar sentences, upon the
+blackboard, and proceeds in the same manner. As the work progresses
+the children should image a new sentence at each lesson, and in
+addition should be able to write from dictation several review
+sentences. In the early lessons the children should write at the
+blackboard, or use unruled paper and soft lead pencils with dull
+points. A clear image of the symbol will aid the child in writing it.
+This makes it essential that the teacher write a legible hand.
+
+=Word Drill.= Drill upon the words learned is necessary to mechanize
+ear, voice, eye, and hand in the reading process so that the child
+may be left free to attend to the subject-matter. Have the children
+pronounce, write, and spell the unfamiliar words found in the reading
+lesson. Insist upon exact pronunciation and a natural, pleasing
+modulation of the voice. Later the children should use these same
+words in spoken and written sentences. After children have learned
+the names of the letters, both oral and written spelling should be
+used, since they are correlative processes. Oral spelling often
+deepens the impression and makes the image more permanent.
+
+
+                            THE ALPHABET.
+
+The alphabet should be taught in serial order, because of its use in
+reading card catalogs, dictionaries, etc. The alphabet characters
+have been learned in the phonic drill by associating the sounds
+with the letters as the children require them to master words, but
+not consecutively. The A B C's, however, in their old-fashioned
+significance, should be a part of the child's knowledge when he
+enters the second grade.
+
+
+                              SUMMARY.
+
+In the process of learning to read, certain elements are brought
+together and associated in vital organic unity in accordance with
+broad general principles. These the teacher must keep constantly
+in mind if she is to succeed. Reading, like all language, is a
+combination of thought and symbol. The thought gives the meaning
+and is the _reason_ for reading, while the symbol is only the tool
+and instrument of the thought. Care must be taken to see (a) that
+the child forms clear images of what he is reading; and (b) that he
+obeys the fundamental law of mind of proceeding from wholes to parts.
+By holding these principles in full view and giving the thought
+element the leading place, the symbol and phonic elements will fall
+into their proper place in accomplishing the purpose of elementary
+reading, namely, the association of the symbol and its meaning in a
+vital unity.
+
+
+
+
+                             +PART II.+
+
+                          FIRST HALF YEAR:
+                             FIRST STEP.
+
+
+Two lines of work are to be developed at separate periods each day.
+
+    1. Ear Training Exercises.
+    2. Preliminary Blackboard Lessons.
+
+
+                       EAR TRAINING EXERCISES.
+
+=Directions.= 1. The purpose of ear training is to familiarize the
+child with the elementary sounds in the language, so that he may have
+accurate sound images before associating them with the corresponding
+symbols.
+
+2. Give the sounds of the letters, not the names. Teach the
+letter-names later in the Phonic Lessons. Give the sounds softly but
+distinctly. A loud, harsh voice makes purity of sound impossible.
+
+3. Cultivate the attentive ear in children. Teach them to hear, and
+then to image, the song of the birds, the patter of the rain, the
+sound of the wind, the hum of the bee, the puff of the locomotive and
+other familiar sounds.
+
+4. The rhymes and poems are suggestive, not final. The teacher may
+choose others if they better meet her need. Those selected from song
+literature have a tone quality that will interest children and prove
+helpful in training the ear. Read the poems aloud in a well modulated
+voice, with clear articulation, that the children may become
+sensitive to the beauty of the human voice.
+
+5. Ear training should precede the formal study of phonics for a few
+weeks. The exact time required cannot be arbitrarily named, because
+it depends not only upon the ability of the class but also upon the
+teaching power of the one in charge. From six to eight weeks, with
+daily periods ten or fifteen minutes in length, will accomplish good
+results.
+
+                                 I.
+
+Consonant sounds are taught by phonic analysis of words, and not
+by any artificial device. Ear training exercises are helpful as a
+preparation for this work. Let the first sounding be done _by the
+teacher_ and have the children perform the actions as she slightly
+separates the sound elements. In this way the ear soon becomes
+accustomed to the formation of words from their phonic elements.
+_Ex.:_
+
+    John may r-un.
+    Mary may j-ump.
+    You may h-op, Frank.
+
+                  *       *       *       *       *
+
+    Mary may bring me a b-ook.
+    John may put the b-ook on the t-able.
+    William, please bring the fl-ag.
+    Frank may wave the fl-ag.
+
+_Caution._ There should be no abruptness about such an exercise.
+The slight separation and the gentle prolonging are sufficient to
+keep the children listening and interested. Avoid giving to separate
+consonants, sounds which they do not possess.
+
+                                 II.
+
+=Slow Pronunciation of Names.= Children are interested in their own
+names; if they pronounce these slowly they will begin to distinguish
+sounds. The teacher first pronounces her own name as the children
+watch, making prominent the initial sound. She then calls upon
+different children to pronounce their names. _Ex.:_ A child named
+Mary says: "My name is M-ary," emphasizing the sound "M." Another
+says, "My name is R-obert," emphasizing the sound "R," etc.
+
+                                III.
+
+=Singing Games.= The old-fashioned singing games, such as "Here We Go
+Round the Mulberry Bush," "London Bridge," "Looby Loo," etc., will
+delight the children and are excellent exercises for ear training.
+(See _Folk Songs and Games_ by Marie Ruef Hofer.)
+
+                                 IV.
+
+=Phonic Game.= _What is it?_ A child acts as leader and stands in the
+front of the room. The children in their seats question him until the
+supply of rhymes is exhausted. _Ex.:_
+
+    Leader: I'm thinking of something that rhymes with _top_.
+        Child: Is it chop?
+        Leader: It is not chop.
+        Child: Is it hop?
+        Leader: It is hop.
+
+_Object_. Grouping of words with like phonograms and final consonants.
+
+                                 V.
+
+=Phonic Game.= _Guess._ Ask a child to leave the room. Children
+in their seats choose a word. When the child returns he either acts
+out the word he has in mind or describes it. _Ex.:_
+
+                              _Action._
+
+We are thinking of something that rhymes with _bat_.
+
+        Is it this? (Child guessing puts on a hat.)
+        No. It is not hat.
+        Is it this? (Child guessing pats his head.)
+        No. It is not pat.
+        Is it this? (Child guessing says _Meow_.)
+        Yes. It is cat.
+                  Is it a pretty color?
+                  It is not red.
+                  Is it something we sleep in?
+                  It is not bed.
+                  Is it a boy's name?
+                  Yes. It is Ned.
+
+                                 VI.
+
+=Phonic Game.= _Hide and Seek._ Teacher gives the first rhyme.
+She then calls upon a child to give a rhyme using the same initial
+letter. This child then calls upon another child. Continue in this
+way until the rhymes are exhausted. _Ex.:_
+
+                  I am in _run_.
+                  I am not in _Sun_.
+
+                  I am in _rug_.
+                  I am not in _bug_.
+
+                  I am in _rose_.
+                  I am not in _nose_.
+
+_Object_--Grouping of words with like initial consonants.
+
+_Caution_--Be careful to articulate the initial and final consonants
+distinctly.
+
+
+                     A LIST OF RHYMES AND POEMS.
+
+The teacher may read the following rhymes and poems to the
+children in connection with the Ear Training Exercises.
+
+ +THE MELODIES OF MOTHER GOOSE.+
+
+     Three Little Kittens.
+     Hey, Diddle, Diddle.
+     Baa, Baa, Black Sheep.
+     Peter Piper.
+     One, Two, Buckle My Shoe.
+     I Saw a Ship a-sailing.
+
+ +SONG LITERATURE FROM THE+ _Modern Music Primer_.
+
+     The Fireman             Frederick Manley.
+     The Journey's End          "       "
+     The Humming Bird           "       "
+     The Reason Why             "       "
+     The Woodpecker             "       "
+
+ +SONG LITERATURE FROM+ _Small Songs for Small Singers_.
+
+     Mr. Duck and Mr. Turkey            W. H. Neidlinger.
+     Tiddledy-winks and Tiddledy-wee      "        "
+     Tick-Tock                            "        "
+
+ "The Drum," by Eugene Field.
+         _Book: "Poems of Childhood."_
+
+ "Who Stole the Bird's Nest?" by Lydia Maria Child.
+         _Book: "Child Life," (Selections) John G. Whittier (Ed.)._
+
+ "Robert of Lincoln," by William Cullen Bryant.
+         _Book: Whittier's "Child Life."_
+
+ "The Clucking Hen," from _"Aunt Effie's Rhymes."_
+          _Book: Whittier's "Child Life."_
+
+
+                   PRELIMINARY BLACKBOARD LESSONS.
+
+                     (Time, about eight weeks.)
+
+=Directions.=1. This Manual contains thirty Preliminary Blackboard
+Lessons. The purpose is to associate thought and symbol. These
+preliminary lessons anticipate the first twenty-nine pages in the
+Primer but do not exactly reproduce the text. By means of the
+blackboard work the pupil accumulates a small initial vocabulary
+which enables him to read the lessons in the Primer with no fear or
+uncertainty of the text.
+
+2. There is no exact limit to the number of Preliminary Blackboard
+Lessons that should be taught. Those given in the Manual indicate the
+order of development, not the time. American children will master
+the lessons given in from six to eight weeks. Foreign children will
+require a little more time, since they must learn to associate
+thought with both the spoken and the written symbol. When children
+read lessons written on the blackboard with ease, put the Primer in
+their hands.
+
+
+                                 I.
+
+The teacher writes the action sentence _Run._ on the blackboard in a
+clear, distinct hand. The initial capital and the period at the end
+are consistently used, so that from the beginning the children are
+accustomed to them. After writing the word the teacher expresses the
+action by running. If her dignity will not permit her to do this,
+she may bring in a child from the second or third grade and ask him
+to perform whatever action is indicated by the word written upon the
+board. The word is not spoken at this time; the child discovers
+the meaning from the action. The whole purpose of the teacher is
+to associate the thought expressed by the action with its written
+symbol. Let this word remain on the board; write it in a larger
+hand near the place where the word was first written. Again let the
+teacher or child perform the act. Select another board; write the
+word in a smaller hand. Again express the thought in action. The
+class will watch this with deep interest. Some member of the class
+will soon associate the written word with the action, and will stand
+upon the first round of the ladder leading to the interpretation of
+thought from written symbols.
+
+The reason for writing the word in a larger and a smaller hand, and
+especially in different places on the blackboard, is to prevent
+local association. Then, too, the change of place will intensify the
+child's interest and attention.
+
+Make the reading lesson short and repeat it at intervals during the
+day. If fifteen minutes is the time set apart for reading, divide
+this into three five-minute periods. The lesson period should be
+lengthened as the work advances.
+
+               II.               III.                 IV.
+
+On each succeeding day, and in the same manner, teach
+
+                                 Hop.
+                                 Jump.
+                                 Sing.
+
+Teach one word a day and review those previously taught. Write the
+words on the blackboard a number of times arranged irregularly, and
+have frequent short drills upon them.
+
+These four verbs, _Run_, _Hop_, _Jump_, and _Sing_, have been found
+by practical experience to be very good ones for the beginning
+lessons. They will occur again and again in the later stories about
+animals and pets. They are also used in the stories about the plays
+and games which children delight to reproduce in the reading lesson.
+
+                                 V.
+
+                               REVIEW.
+
+Three methods of presenting a reading lesson are suggested:
+
+                                 _A_
+
+    1. The teacher writes an action word on the blackboard.
+
+    2. The teacher asks a child to perform the action.
+
+    3. The child looks at the blackboard and reads the word.
+(This is the beginning of oral reading.)
+
+                                 _B_
+
+    1. The teacher asks a child to perform any action he
+    chooses.
+
+    2. The teacher asks another child to tell what the first one
+    did.
+
+    3. The teacher writes the action word on the blackboard.
+
+                                 _C_
+
+    1. One child tells another what action to perform.
+
+    2. The child performs the action.
+
+    3. The teacher writes the word on the blackboard.
+
+Many devices will suggest themselves to the progressive teacher
+if she clearly understands that the purpose of the lesson is to
+associate the thought with its written or printed symbol. If the
+child, after observing a word written on the blackboard, expresses
+the thought in action, he shows that he has read it.
+
+                                 VI.
+
+                               _and._
+
+The teacher writes sentences like the following on the blackboard:
+
+                        Run and jump.
+                        Jump and run.
+                        Run and hop.
+                        Hop and run.
+                        Run and jump and hop.
+                        Jump and hop and run.
+
+Endless combinations may be made with these words, giving constant
+change of thought while repeating the words. It is quite possible in
+this way to have word repetition with variety of thought.
+
+Each time a sentence is written on the blackboard the process is as
+follows:
+
+    First:  Observe the words. (Silent reading.)
+    Second: Express the thought in action.
+    Third:  Pronounce the words. (Oral reading.)
+
+Some children grasp the sentence form as unconsciously as they do
+the word form. If they fail to do so, teach the use of the capital
+letter.
+
+Vary the lesson by introducing the names of children in the class,
+thus:
+
+                        Run and jump, Mary.
+                        John, hop and jump.
+
+                                VII.
+
+                              _I can._
+
+The phrase _I can_ is next introduced. Write upon the blackboard the
+sentence _I can run_. Read it to the children. Have a child perform
+the action and then read the sentence aloud. Proceed in this way with
+other action sentences. Group the sentences in various ways and have
+frequent reviews.
+
+                        I can sing.
+                        I can hop.
+                        I can run and jump.
+                        I can jump and hop.
+                        I can hop, and run, and jump.
+
+The reading process consists of three steps:
+
+    First: Silent reading.
+    Second: The thought expressed in action.
+    Third: Oral reading.
+
+After teaching the sentence as a whole, it should be analyzed into
+words. For instance, ask a child to pass to the blackboard and point
+to _I can_ as many times as he finds it written. Point to _run_, etc.
+This may be varied by asking a child to underscore or erase the words
+that are alike.
+
+                                VIII.
+
+                              _Rover_.
+
+Household pets, anything and everything that is familiar to a child
+and in which he is interested, will serve as material for reading
+lessons. Rover is a universal name for a dog and hence is arbitrarily
+used for illustrative purposes in these lessons. If Dash happens to
+be a better name known to the child, use that. Sentences like the
+following will suggest themselves:
+
+                        Rover can run.
+                        Rover can jump.
+                        Rover can run and jump.
+                        I can hop.
+                        Rover and I can run.
+
+                                 IX.
+
+                              _Kitty_.
+
+Kittens are a never failing source of interest to children. At
+a suggestion from the teacher the children themselves will give
+sentences like the following:
+
+                        Kitty can jump.
+                        Kitty can run.
+                        Kitty and I can run.
+                        Kitty and I can jump.
+                        Kitty and Rover can run and jump.
+
+The teacher writes these sentences upon the blackboard as they are
+given to her by the different children. She then calls upon other
+children to read them. A child may pretend that she is Kitty and
+dramatize the action. This dramatic instinct is universal in children
+and should be recognized throughout the school life.
+
+                                 X.
+
+                               _You._
+
+The question form is easily learned and should be introduced in the
+early lessons. Combine familiar words in new relations:
+
+                        Can you run?
+                        Can you sing?
+                        You can jump.
+                        Can Kitty hop?
+                        Can you hop and sing?
+
+                 XI. XII. XIII. XIV. XV. XVI. XVII.
+
+Write upon the blackboard in a vertical row several _I see_
+sentences. Have the children read them. Erase _I see_ in each
+sentence, leaving _Rover_, _Kitty_, _you_. Again, place several _I
+see_ sentences upon the blackboard. Erase _Rover_, _Kitty_, _you_,
+leaving _I see_, _I see_, _I see_. Erase _I_, leaving the single word
+_see_.
+
+Continue in this way with the phrases _I can see_, _I have_, _I
+like_, _I love_.
+
+Children are interested in home life, therefore introduce the words
+_father_, _mother_, _brother_, _sister_, _baby_ in the early lessons.
+
+Teach the articles _a_, _an_, _the_ in connection with their nouns in
+order to secure natural expression.
+
+Review these words in new sentences which combine familiar words in
+new relations. _Ex.:_
+
+                  XI.                        XII.
+
+               _I see._                  _I can see._
+
+            I see Rover.            I can see Rover jump.
+            I see Kitty.            I can see Kitty run.
+            I see you.              I can see you run and jump.
+
+                 XIII.                       XIV.
+
+              _The bird._               _I have; a dog._
+
+            Can you see the bird?   I have a bird.
+            The bird can hop.       I have a dog.
+            The bird can sing.      I have a kitty.
+            The bird can jump.      Have you a bird?
+            Can the bird jump?      Have you a kitty?
+                                    Have you a dog?
+
+                 XV.                     XVI.    XVII.
+
+            _I like; to._        _I love; mother; father; baby_
+
+
+            I like Rover.               I love Mother.
+            I like Kitty.               I love Father.
+            I like to sing.             I love you.
+            I like to run.              Mother loves Baby.
+            I like to see the bird hop. Baby loves Kitty.
+            I like to see a dog jump.   I love Mother and Father.
+            I like to see Rover run.
+
+                               XVIII.
+
+Children are interested in their own names, hence they will quickly
+learn to associate the spoken name with its written symbol. Write
+upon the blackboard the sentence, _Catch the ball_, ----. (Teacher,
+supply the name of a child in the room.) Erase the name and replace
+it with a different one. Continue in this way with other names. _Ex.:_
+
+                        Catch the ball, John.
+                        ----, catch the ball.
+                        Roll the ball, ----.
+                        Mary, roll the ball to ----.
+                        ----, run to ----.
+                        ----, hop to ----.
+
+                                XIX.
+
+From this time on it will add to the interest if the sentences are so
+connected that they tell a story. The following method has been found
+helpful:
+
+Suppose a bird has been observed. The children have something to say
+and this serves as material for a reading lesson. First one child and
+then another expresses his thought about the bird. The teacher writes
+the easiest of these sentences upon the blackboard, the result being
+somewhat as follows:
+
+                        I see a bird.
+                        It is a blue bird.
+                        The blue bird can sing.
+                        The blue bird can hop.
+
+The teacher asks the children to read silently the entire story. As
+soon as each child is ready he may rise and turn his back to the
+blackboard. He then gives the thought in his own language. _Ex.:_
+
+                        I see a blue bird.
+                        The blue bird can sing and hop.
+
+Call upon different children to express the thought, and accept any
+condensation of language which shows this power. The purpose in
+asking the child to interpret the whole story in his own language is
+to show that he has the _thought_.
+
+The children are now ready to analyze the story into sentences. A
+good device is to cover the story with a curtain provided for the
+purpose. Raise the curtain and ask the children to observe, let us
+say, the third sentence. Cover this and ask a child to give the exact
+language. _Ex.:_
+
+                        The blue bird can sing.
+
+If he cannot do so, raise the curtain again and let him observe.
+Continue in this way with the other sentences, showing them to the
+children in an irregular order. The purpose of this is to show that
+the children not only have the thought as a whole, but that they know
+the words in each sentence.
+
+By this method children are trained to read groups of words at a
+glance. They observe the sentence as a whole, image it as a whole,
+and read it as a whole. Comprehension of the thought leads to freedom
+of expression. In consequence, pupils will not be heard pronouncing
+disconnected words in unnatural, artificial tones.
+
+The development of the lesson is as follows:
+
+    First: Children observe and express.
+
+    Second: The teacher writes this expression on the blackboard.
+    When a story of three or four sentences is complete
+    the order of interpretation is as follows:
+
+    First: Children observe and image. (Silent reading.)
+
+    Second: Each child in turn expresses the whole thought.
+
+    Third: The children read each sentence. (Oral reading.)
+
+Color appeals to all children. Frequent use of it should be made
+in describing birds, flowers, and animals in the first reading lessons.
+The following are suggestive lessons containing such words as _big_,
+_little_, _pretty_, and adjectives of color.
+
+                        _pretty; my; white._
+
+                     I have a pretty kitty.
+                     My kitty is white.
+                     Kitty can run and jump.
+                     I like my pretty white kitty.
+
+
+                        _big; little; black._
+
+                     Rover is a big, black dog.
+                     I love a little, white kitty.
+                     Rover likes my little kitty.
+                     Rover and Kitty run and jump.
+
+Vary the work at this point by teaching the word are and putting some
+of the stories in the second person. Children will enjoy reading or
+talking to an imaginary Rover or Kitty. _Ex.:_
+
+                     I see you, Rover.
+                     You are my big, black dog.
+                     You can run and jump.
+                     I like you, Rover.
+
+                                 XX.
+
+                              SUMMARY.
+
+           Run.     I can      Rover      big        and
+           Jump.    I see      Kitty      little     to
+           Hop.     I have     bird       pretty     my
+           Sing.    I like     a dog      blue       the
+                    I love     mother     white
+                    catch      father     black
+                    are        ball
+
+With this limited vocabulary the teacher is able to formulate many
+sentences.
+
+                                XXI.
+
+Write upon the blackboard descriptions given by the children of
+grandma, father, mother, baby, or other members of the family. This
+will train them to observe closely and to image clearly. (Proceed as
+in Lesson XIX.)
+
+                        I have a baby brother.
+                        He has brown eyes.
+                        He can laugh.
+                        He can walk.
+                        His name is Robert.
+
+If necessary, let several development lessons precede the story in
+order to emphasize certain aspects of thought or particular words.
+
+                                 1.
+
+                        My name is Helen.
+                        My name is Mary.
+                        My name is John. Etc.
+
+                                 2.
+
+                        Baby brother can laugh.
+                        Baby brother can cry.
+                        Baby brother can walk.
+                        Baby brother can pat-a-cake. Etc.
+
+                                XXII.
+
+Let each child describe his own home. Write one of these descriptions
+on the blackboard, somewhat as follows:
+
+                        We live in a house.
+                        It is a white house.
+                        It is made of wood.
+                        It has a yard.
+
+                               XXIII.
+
+In the language lesson show pictures of the home life of children of
+other lands. Have the children observe, image, and describe these
+pictures. Later, write a description of one of the pictures on the
+blackboard as a reading lesson.
+
+                                 1.
+
+                    This is a little Indian boy.
+                    He lives in a wigwam.
+                    It is made of skins.
+                    It is by the blue sea-water.
+
+                                 2.
+
+                    This is a little Eskimo girl.
+                    She lives in the North.
+                    It is very cold.
+                    Her house is made of snow and ice.
+
+Whenever it is necessary, precede the story with one or more
+development lessons.
+
+                                XXIV.
+
+Select a little girl with bright dress and attractive coloring to
+stand before the class. Ask the children to observe, and then to
+close their eyes and image the child. Tell the little girl to step
+into the dressing room or behind a screen and have the children
+describe her. Express from the image, not from the object. The
+teacher writes the description on the blackboard, somewhat as follows:
+
+                                 1.
+
+                       Mary is a little girl.
+                       She has blue eyes.
+                       She has brown hair.
+                       She has a blue dress.
+
+                                 2.
+
+Omit the observation and write upon the blackboard a description of a
+boy or a girl in the room. Supply a name and have one of the children
+locate the boy or girl. _Ex.:_
+
+                       I see a boy.
+                       He has black eyes.
+                       He has black hair.
+                       He has a red tie.
+                       Name the boy,----.
+
+                                XXV.
+
+Nature lessons, handicraft lessons, playthings, games, and everything
+which appeals to the interest of the children may be used as material
+for the reading lessons. _Ex.:_
+
+                       This is John's kite.
+                       It is a big kite.
+                       It is a red kite.
+                       John made the kite.
+                       He can fly his kite.
+
+                                XXVI.
+
+Let the girls having something brown about them impersonate brown
+birds. _Ex.:_ Brown eyes; brown ribbons; brown dresses. Have them
+read the sentences silently and then perform the action. By a gentle
+movement of the arms the birds are represented as flying.
+
+                    Play you are brown birds, girls.
+                    Fly, pretty brown birds.
+                    Sing, pretty brown birds.
+
+Let the boys having something black about them impersonate
+blackbirds. _Ex.:_ Black shoes; black clothing; black eyes.
+
+                    Play you are blackbirds, boys.
+                    Hop, little blackbirds.
+                    Fly, little blackbirds.
+
+Adapt the following lesson to suit the conditions by changing either
+the name or the color. _Ex.:_ If there is a little girl in the room
+with a red ribbon whose name is not _Mary_, substitute the real name.
+
+                    Play you are a redbird, Mary.
+                    You have a red ribbon.
+                    You may sing, pretty redbird.
+
+                               XXVII.
+
+Experience proves that a rapid and easy way for children to learn to
+read is by means of nursery rhymes and simple poems. The method of
+presenting a rhyme is as follows:
+
+Have the children learn the rhyme by ear and repeat it aloud. Write
+the rhyme _Two Little Blackbirds_, on the board. (See Primer, page
+23. In order that recognition may take place when the same rhymes
+are seen in print, carefully copy the arrangement of the text as
+found in the Primer.) Draw a pointer slowly under each line as the
+children repeat the rhyme. Do this several times until they begin to
+associate the spoken symbol with the written symbol. Children will
+soon recognize the elements most prominent.
+
+After teaching the rhyme as a whole, analyze it into parts. Write
+lines, phrases, and words in different places on the blackboard. Have
+the children observe, image, and find these in the rhyme. _Ex.:_ _Two
+little blackbirds_; _upon a hill_; _one was named_; _fly away_; _come
+again_.
+
+Ask a child to find all the words that are alike. _Ex.:_ _Jack_;
+_Jill_; _named_; _fly_; _come_; _again_; etc. Ask another child to
+find and name all the words he knows. Let volunteers find lines,
+phrases, and words called for by other children who see them. In
+some such way as this every symbol can be brought to the child's
+consciousness.
+
+When the children are familiar with the words comprising the rhyme
+they are ready to read sentences and stories using these same words
+in new relations. Keep the rhyme on the blackboard for reference.
+When in doubt about a word let the child find it himself by repeating
+the rhyme until he reads that word.
+
+                  *       *       *       *       *
+
+A summary of the steps involved:
+
+    1. Memorize the rhyme in order to acquire the thought.
+
+    2. Associate this thought with the written symbols.
+
+    3. Separate the rhyme into sentences, phrases, and words.
+
+    4. Combine these parts in new wholes; that is, in new sentences
+    and stories.
+
+One essential principle in learning to read is that the thought shall
+be familiar and interesting. The purpose of the elementary reading
+lesson is to associate old thought with a new symbol.
+
+This same rhyme may be modified and used as a game. Select two
+children with blue ribbons, dresses, suits, or neckties, to
+impersonate bluebirds. Substitute their names and write the rhyme on
+the board as follows:
+
+                    Two little bluebirds
+                    Sat upon a hill,
+                    One was named Helen,
+                    The other named Mary.
+
+                    Fly away, Helen,
+                    Fly away, Mary.
+                    Come again, Helen.
+                    Come again, Mary.
+
+Have the two bluebirds read the words from the blackboard, run to a
+corner of the room, and stoop down to dramatize the words "sat upon a
+hill." At the words "fly away" the little birds run around the room
+with outstretched arms to imitate the flying motion. At the words
+"come again" they should return to their original position. This
+exercise gives repetition of words with variety of thought.
+
+                               XXVIII.
+
+                    Rock-a-by, baby,
+                      In the tree-top.
+                    When the wind blows
+                      The cradle will rock.
+                    When the bough breaks
+                      The cradle will fall,
+                    Down will come baby,
+                      Cradle and all.
+
+Memorize the rhyme. Children like to express thought in action,
+therefore when memorizing the rhyme let them hold imaginary babies in
+their arms and gently rock them to the rhythm of the words.
+
+Write the rhyme on the blackboard. Write the lines, phrases, and
+words elsewhere on the blackboard. Let the children observe these and
+find them in the rhyme. _Rock-a-by_; _In the tree-top_; _When the
+wind blows_; _When the bough breaks_; etc.
+
+Find the words that are alike, _baby_; _cradle_; _when_; _the_;
+_will_; etc.
+
+
+Action Sentences Based on the Rhyme.
+
+Write upon the blackboard the sentence, _Bring me the doll_. Have the
+children read it silently. Ask a child to perform the action, and
+then read the sentence aloud. Continue in this way with other action
+sentences.
+
+                    Play rock-a-by, baby.
+                    Make a cradle.
+                    Rock the cradle.
+                    Sing to the baby.
+                    Sing rock-a-by, baby.
+
+A real doll and cradle may be used and the following sentences
+be expressed in action:
+
+                    Bring me the doll.
+                    Bring me the cradle.
+                    Put the doll in the cradle.
+                    Rock the cradle.
+                    Sing to the doll.
+                    Sing rock-a-by, baby.
+
+Teach _bring_, _put_, _make_, and other new verbs as sight words and
+use them in preliminary development lessons. _Ex.:_
+
+                    Bring me the ball.
+                    Bring me the bell. Etc.
+
+                  *       *       *       *       *
+
+                    Put the ball on the table.
+                    Put the bell on the table. Etc.
+
+_Kindergarten Finger Play_ furnishes excellent _action_ upon which
+to base the use of the word _make_. _Ex.:_
+
+                    Make baby's ball.
+                    Make baby's cradle.
+                    Make baby's hammer. Etc.
+
+                                XXIX.
+
+=See-Saw.= (Primer, page 24.) Children like to recite to appropriate
+action. Rhythmic movement may be taught with the "See-Saw" rhyme as
+follows: While repeating the first two lines sink to a squatting
+position and rise again two times. While repeating the second line
+bend alternately to the right and left three times. Repeat these
+motions with the third and fourth lines.
+
+                                XXX.
+
+=The Transition from Script to Print.= It is impossible to give a
+fixed rule stating the time when the child should pass from the
+blackboard script to the book. This varies with the age and ability
+of the pupils. The observant teacher knows when to place printed
+material in the hands of the child by the readiness and ease with
+which he reads from the blackboard. It will be necessary to write the
+first lessons in the Primer on the blackboard for the children to
+observe the resemblance between that which is written upon the board
+and that which is printed in the book. Every primary teacher should
+_write a clear, legible hand_.
+
+                  *       *       *       *       *
+
++NOTE+:--"_The Old Woman and Her Pig_," "_The House that Jack
+Built_," or other nursery rhymes involving much repetition of
+language, will be found helpful for supplementary blackboard lessons.
+
+
+
+
+                             +Part III.+
+
+                           FIRST HALF YEAR:
+                             SECOND STEP.
+
+
+1. Blackboard Lessons and Primer.
+
+2. Phonic Lessons:
+
+    (a) The Consonant Sounds.
+
+    (b) Phonograms derived from Words used
+    in the Primer.
+
+    (c) Word Drill.
+
+
+
+                    BLACKBOARD LESSONS AND PRIMER.
+
+                     (Time, about twelve weeks.)
+
+=Directions.= 1. There are seventeen rhymes and simple poems in the
+Primer. The vocabulary is based on the words found in these rhymes
+and poems. Have the children memorize each rhyme. Write it upon the
+blackboard and teach the elements as in previous exercises. (See page
+43, Part II, Lesson XXVII.)
+
+2. Continue the blackboard lessons along with the reading of the
+Primer. If necessary, precede a lesson in the book with one or more
+development lessons on the blackboard. (See page 39, Part II, Lesson
+XXI.)
+
+3. The enjoyment of poetry must be recognized as a legitimate part
+of the child's development. To meet this need a Supplementary List
+of Poems is given to be read in connection with the Primer lessons.
+Wherever possible the poems have been chosen from books of selected
+poems, because these are usually more accessible.
+
+=Reading from the Primer.= Page 31, Paragraph 1. Ask a child to read
+the words spoken by Robin Redbreast; ask another child to read the
+words spoken by Pussy Cat; ask a third child to read the descriptive
+portions of the lesson.
+
+Paragraph 2. Have the children read the sentences silently and
+observe the picture on the opposite page. Answer the directions aloud.
+
+Proceed in the same way with paragraph 2, on page 32.
+
+Page 43. While reciting the second part of each stanza have the
+children imitate the action named. This may also be played as a
+"Singing Game." (See _Songs, Games and Rhymes_ by Eudora Lucas
+Hailmann.)
+
+Page 45. Paragraph 1--Read the questions silently and answer them
+aloud. Proceed in the same way with similar lessons throughout the
+Primer.
+
+Paragraph 2. Observation Game: Place a nut or some other object in
+a box. Let the children observe this for an instant only. Use for a
+blackboard lesson as follows:
+
+  1. Teacher, write question upon the blackboard.
+  2. Children, read the question silently.
+  3. Children, answer the question aloud.
+
+The following is a suggestive method for the reading lesson on Page
+45, paragraph 2. Ask two children to read the lesson as a dialogue.
+_Ex.:_
+
+  First Child: "Is it a red ball?"
+  Second Child: "No. It is not a red ball." Etc.
+
+Page 48. Rhythmic movement may accompany this lesson. Have four
+children cross right hands to form a windmill. Turn in time while
+repeating the rhyme _Blow, Wind! Blow!_ Another windmill motion may
+be taught as follows:
+
+Two children stand back to back. Extend the arms and move them
+alternately up and down with a gentle fanning motion. Have the
+children in their seats recite the rhyme _Blow, Wind! Blow!_
+
+Page 62. Tap rhythmically with the finger tips upon the desk in
+imitation of the rain while reciting the poem, _Rain_.
+
+Page 72. Ask several children to pass around the room. Ask a little
+boy to lift his cap as he passes by his friends and to greet them by
+saying, "How do you do, Mary?" Ask a little girl to _bow_ to a friend
+as she passes by and to say, "How do you do,----?" (See game "Going
+Walking" in _Popular Folk Games and Dances_ by Marie Ruef Hofer.) Use
+the words, "Good morning," if this form of greeting is preferred.
+Explain to the children that the name is added as a mark of courtesy.
+
+Page 80. The blackboard lessons may be extended by adding other
+animals. _Ex.:_
+
+  1. With a "Moo! Moo!" here, etc.----cows.
+  2. With a "Quack! Quack!" here, etc.----ducks.
+  3. With a "Bow-wow!" here, etc.----dogs.
+
+                           LIST OF POEMS.
+
+The teacher may read the following poems to the children in
+connection with the reading lessons in the Primer as indicated by the
+pages.
+
+ 11   "Twenty Froggies," by George Cooper.
+               _Book: "Pinafore Palace," (Selections) Wiggin &
+               Smith (Eds.)._
+
+ 26   "When Little Baby Bye-bye Goes." (Author unknown.)
+               _Book: "Pinafore Palace."_
+
+ 33   "The Secret." (Author unknown.)
+               _Book: "Songs of the Tree-Top and Meadow," (Selections)
+               McMurry & Cook (Eds.)._
+
+ 49   "The Wind," by Robert Louis Stevenson.
+               _Book: "A Child's Garden of Verses."_
+
+ 57   "Alice's Supper," by Laura E. Richards.
+               _Book: "St. Nicholas, Vol. V."_
+
+ 59   "Twinkle, Twinkle, Little Star." (Author unknown.)
+               _Book: "Songs of the Tree-Top and Meadow."_
+
+ 63   "Who Likes the Rain?" by Clara Doty Bates.
+               _Book: "Pinafore Palace."_
+
+ 65   "The Elf and the Dormouse," by Oliver Herford.
+               _Book: "The Posy Ring," (Selections) Wiggin &
+               Smith (Eds.)._
+
+ 66   "Thank You, Pretty Cow," by Jane Taylor.
+               _Book: "The Posy Ring."_
+
+ 71   "Little Gustava," by Celia Thaxter.
+               _Book: "Poems for Children."_
+
+ 103  "Little Jack Frost." (Author unknown.)
+               _Book: "Pinafore Palace."_
+
+ 104  "The Snow-Bird's Song," by F. C. Woodworth.
+               _Book: "Pinafore Palace."_
+
+ 107  "Bye, Baby, Night is Come," by Mary Mapes Dodge.
+               _Book: "Rhymes and Jingles."_
+
+
+                           PHONIC LESSONS.
+
+                     (Time, about twelve weeks.)
+
+=Directions.= 1. There are twenty-five elementary consonant sounds.
+The purpose of the phonic lessons is to associate these consonant
+sounds with the letters representing them, and to become accustomed
+to the use of phonograms based upon words in the Primer. Word
+recognition should become automatic. See page 112 for a scientific
+arrangement of the consonant sounds.
+
+2. All of the blackboard work should be written, not printed. The
+child reproduces by a more or less unconscious imitation the written
+forms which he sees upon the blackboard.
+
+3. The lessons indicate the order; the time will vary with the
+ability of the children and must be determined by the teacher.
+
+                                 I.
+
+                               _r un_.
+
+Begin with the word _run_. This is a part of the child's vocabulary,
+having been learned in the early reading lessons. Appeal is made
+first to the ear, then to the eye. The teacher conducts the lesson as
+follows:
+
+The Ear.
+
+    1. Pronounce _run_ easily and naturally.
+
+    2. Give the sounds separately, thus: _r-un_.
+
+    3. Again pronounce the word. Call upon the children collectively
+       and individually to do the same.
+
+The Eye.
+
+    1. Write the word _run_ on the blackboard.
+
+    2. Cover the _un_ and have the _r_ sounded.
+
+    3. Cover the _r_ and have the _un_ sounded.
+
+    4. Uncover the whole word and ask the children to put the
+       two sounds together to make the word, _run_.
+
+If the children cannot do this the teacher may do it for them, making
+the sound _r_ prominent. The ability to blend one sound with another
+should not be a difficult phase of the work. The teacher's attitude
+toward blending is the influence which makes it hard or easy for the
+child.
+
+To associate the sound _r_ with its written symbol the following
+method is suggested:
+
+The teacher writes _r_ upon the blackboard, giving the sound, not the
+name. She then calls upon the children collectively and individually
+to give the sound.
+
+                  *       *       *       *       *
+
+_Teacher_: Close your eyes, children. Can you see how _r_ looks?
+(Give the sound, not the name.) Watch me make it again.
+
+Teacher writes _r_ slowly several times, then erases the work.
+Children observe, image, and then write _r_ upon the blackboard or
+upon paper. If a mistake is made have the child erase, again observe
+the teacher as she makes the letter, then write it a second time.
+
+                                 II.
+
+                                _f._
+
+Teach the word _fun_ in the same manner that _run_ was taught in
+Lesson I. Write on the blackboard:
+
+                               _r un_
+                               _f un_
+
+Cover first one part and then the other, sounding each element.
+
+Write _f_, _r_, _un_, on the blackboard a number of times, arranged
+irregularly. Review daily, adding new consonants and phonograms as
+they are taught.
+
+                                III.
+
+                              _s ing._
+
+1. Separate both the spoken and the written word _sing_ into the
+phonic elements:
+
+    (a) _s_ consonant sound.
+
+    (b) _ing_ phonogram or sound group.
+
+2. Associate each sound element with its written symbol.
+
+3. Combine the consonants _r_, _f_, _s_, and the phonograms _un_,
+_ing_, to form new words:
+
+                   r un    s ing    r ing    s un
+                   s un    r ing    r un     s ing
+
+                                 IV.
+
+=Phonic Drill.= Phonic Drill upon words from the Primer will each day
+follow two lines:
+
+    I. A list of words to be separated into sounds (Phonic Analysis).
+
+   II. A list of familiar sounds to be combined in new relations to
+       form words (Phonic Synthesis).
+
+Phonic Drill upon phonograms and the consonant sounds may be
+given in two ways:
+
+    1. Combine different consonant sounds with the same phonogram.
+
+    2. Combine different phonograms with the same consonant
+       sound.
+
+For convenience the first is called a _Phonic Series_; the second is
+called a _Word List_.
+
+=Phonic Series.= Combine _f_, _r_, _s_, with _at_ to form this phonic
+series. Review the _un_ series of words.
+
+Develop the blend as follows:
+
+(a) Write _at_ on the blackboard and pronounce it. (The children will
+recognize the word, having seen it many times in the reading lessons.)
+
+(b) Select a consonant, _r_ for example, and write it in front of
+_at_.
+
+(c) Combine the two elements into a whole word without making more of
+a separation than is necessary to explain the blending of the sounds.
+
+Prefix _f_ and _s_ in the same way.
+
+Write the _at_ and the _un_ series on the blackboard.
+
+                            r at    r un
+                            f at    f un
+                            s at    s un
+
+Children pronounce the words. Cover first one part and then the
+other, sounding each element. Review daily, adding new sound elements
+as they are taught. As soon as possible refrain from assisting the
+children by covering the parts.
+
+
+=Word List.= Write upon the blackboard in a vertical row the words
+beginning with _r_, from the Primer, pages 5-26. _Ex.:_ _Rover_,
+_roll_, _rock_. Have the children pronounce them. Then erase _over_,
+_oll_, _ock_, leaving only _r_, and let children make the sound.
+Continue with words beginning with _f_ and _s_ in the same way.
+
+Again, write several words on the blackboard containing the phonogram
+_at_. Erase _f_, _s_, _r_, leaving only _at_.
+
+Continue in the same way with the _un_ series and the _ing_ series.
+
+                  *       *       *       *       *
+
+Word List No. I.
+
+                       s ing    r at     f un
+                       s at     r ing    f at
+                       s un     r un
+
+Retain this list on the blackboard for daily drill, rearranging the
+order from time to time and adding new words as they are taught. The
+lists for word drill are not final. Let use be the guide in deciding
+the number of words to be taught. The analysis of these words into
+their sound elements will determine the number of phonograms to
+be taught. Proper drill upon both the phonic series and the word
+lists leads to sight recognition of words, by means of their sound
+elements. This is the purpose of phonic work.
+
+=Phonic Cards.= All drill work should train the mind to observe
+accurately, to image vividly, and to express quickly. In every
+exercise aim to secure, first, clear images; second, rapid work. It
+interferes with normal growth and development to reverse this order.
+To accomplish these ends, prepare a set of phonic cards each one
+representing a separate sound or phonogram, and use for rapid sight
+work after the board work has been given. Cut cards to a uniform size
+of eight by six inches, out of heavy paper, and write with India ink
+and a camel's hair brush. Stand in front of the class and call upon
+the children in order. If the child cannot give the sound instantly,
+call upon another. Children will work rapidly if they are trained to
+do so. Review frequently and as the need arises prepare new cards. It
+is quite possible to have repetition with a constant variety of new
+material.
+
+                                 V.
+
+                               _h op._
+
+1. Write _hop_ on the blackboard and teach the sound elements
+_h_ and _op_.
+
+2. Associate each sound with its symbol.
+
+3. Identify the sound _h_ in the sight words _have_, _has_, _here_,
+_hill_. (Proceed as in Lesson IV.)
+
+4. Add _hop_ to Word List No. 1, and review daily, for a few
+moments, at the close of each lesson.
+
+                                 VI.
+
+                                _j._
+
+1. Separate the sight words _Jack_, _Jill_, _jump_, into their sound
+elements.
+
+    (a) If any of the children in the class have names beginning
+    with _J_ add these to the list, as: John, Julia, Jones.
+
+    (b) Use capital letters for proper names, small letters for
+    common ones. Meet each need by teaching that for which
+    there is a demand.
+
+2. Associate the sound _j_ with the letter.
+
+3. Combine _ill_, _ack_, _ump_, with the known consonant sounds to
+form the phonic series:
+
+                       _ill_    _ack_    _ump_
+
+                       r ill    J ack    j ump
+                       f ill    s ack    h ump
+                       s ill    h ack
+                       J ill    r ack
+                       h ill
+
+                                VII.
+
+                                _m._
+
+1. Write _may_ on the blackboard and teach the sound elements
+_m_ and _ay_.
+
+2. Associate each sound with its symbol.
+
+3. Identify _m_ in the sight words _Mary_, _my_, _me_, _mother_.
+
+4. Combine _ay_ with familiar consonant sounds to form the phonic
+series:
+
+                                h ay
+                                s ay
+                                j ay
+                                r ay
+
+5. Combine the sound _m_ with the phonograms _ill_, _op_, _at_,
+previously taught. Add these to Word List No. 1 for review.
+
+                                VIII.
+
+                        _p_, initial; final.
+
+1. Initial _p_--the first sound heard in _pussy_, _play_, _pretty_.
+
+2. Final _p_--the last sound heard in _hop_, _up_, _jump_, _sleep_.
+
+3. Associate the sound _p_ with the letter.
+
+4. Combine _p_ with familiar phonograms to form the words _pat_,
+_pack_, _pill_, _pop_, _pump_, _pay_.
+
+5. Add these words to Word List No. 1 and drill daily. Cultivate
+rapid sight recognition of the sound elements.
+
+                                 IX.
+
+                         _in, am, an, and._
+
+It is assumed that the children know these phonograms, having learned
+them as sight words in the reading lessons. If they fail to recognize
+them, use _in_, _am_, _an_, _and_, in sentences and teach them again
+as sight words.
+
+Blend familiar consonant sounds with these phonograms to form the new
+phonic series.
+
+                    _in_    _am_    _an_    _and_
+
+                    f in    S am    m an    h and
+                    s in    h am    f an    s and
+                    p in    j am    r an      and
+
+                                 X.
+
+                              SUMMARY.
+
+Consonants:
+
+            _r_, _f_, _s_, _h_, _j_, _m_, _p_.
+
+Phonograms:
+
+            _at_, _ack_, _am_, _an_, _and_, _ay_,
+            _ing_, _ill_, _in_,
+            _op_,
+            _un_, _ump_.
+
+Phonic Series.
+
+        _at_     _ack_     _am_     _an_     _and_     _ay_
+
+        h at     p ack     j am     m an     h and     j ay
+        m at     r ack     h am     r an     s and     h ay
+        f at     J ack     S am     f an       and     s ay
+        s at     h ack              p an               p ay
+        r at     s ack
+
+
+        _ing_     _ill_     _in_     _op_     _un_    _ump_
+
+        r ing     m ill     f in     m op     s un    j ump
+        s ing     h ill     s in     h op     f un    h ump
+                  f ill     p in     p op     r un    p ump
+                  t ill
+                  s ill
+
+Word List No. II.
+
+        rack    sand    ham     hand    mop     pop     Jack
+        ran     say     hill    hop     mill    pan     Jill
+        ray     Sam     hack    may     pill    pack    jump
+        fill    sack    hat     man     pat     pin     jay
+        fin     sin     hay     mat     pay     pump    jam
+
++NOTE.+--
+
+    (a) As soon as the children can read the words arranged in
+    a series, take them irregularly. When they have power quickly
+    to perceive and blend the sound elements, refrain from covering
+    the parts. The goal is instant sight recognition.
+
+    (b) Secure individual recitations. Concert work has its
+    place, but the object is individual power.
+
+    (c) Note the words over which the children hesitate and
+    make these the basis of the next arrangement.
+
+    (d) Frequently rearrange the phonic list. The object is not
+    to memorize the words, but to give the children the power to
+    read them by their sound elements.
+
+    (e) Add the names of children in the class to the word lists
+    and analyze these into their sound elements.
+
+                                 XI.
+
+                             Final _s_.
+
+Add _s_ to all the words in Word Lists Nos. I and II, where its use
+will form a word.
+
+Write the simple form of the word on the blackboard and have it
+pronounced. Write it again with the _s_ added, and have it pronounced
+a second time. _Ex.:_
+
+                        sing          sing s
+                        ring          ring s
+                        run            run s
+                        tree          tree s
+                         see           see s
+
+It will be found helpful to have a card seven by nine inches, with
+an _s_ written upon it. Hold this beside the words in the phonic
+lists and have both the simple and the _s_ forms pronounced. Train
+the children to observe quickly and to be mentally alert.
+
+                                XII.
+
+                    _t_, initial; final; medial.
+
+ 1. Initial _t_--the first sound heard in _top_, _tell_.
+
+ 2. Final _t_--the last sound heard in _it_, _at_.
+
+ 3. Medial _t_--in _Kitty_, _pretty_, _little_.
+
+ 4. Associate the sound _t_ with the letter.
+
+ 5. Identify _t_ in the following sight words from the Primer, pages
+ 9-39: _to_, _town_, _tick-tock_, _tune_, _nest_, _not_, _nut_, _cat_.
+
+ 6. Combine familiar consonant sounds with _it, ot_, to form the
+ phonic series:
+
+                            _it_      _ot_
+
+                            s it      h ot
+                            h it      p ot
+                            p it      t ot
+
+ 7. Review the _at_ series, making prominent the sound _t_ final.
+
+                                XIII.
+
+                     _k_, _ck_, initial; final.
+
+ 1. _K_ in _kitty_, _kite_, _keep_, _shook_, _look_, _bake_, _Kate_.
+ 2. _ck_ in _tick-tock_, _cluck_, _Jack_, _black_, _clock_, _rock_.
+ 3. Phonograms: _ick_, _ock_.
+ 4. Phonic Series:
+
+                        _ick_          _ock_
+
+                        p ick          r ock
+                        t ick          t ock
+                        s ick          d ock
+                        D ick          s ock
+                        h ick ory
+                        d ick ory
+
+ 5. Add _king_, _kill_, also words in the phonic series to Word List
+ No. II, and review daily.
+
+                                XIV.
+
+                    _l_, initial; final; medial.
+
+ 1. Initial _l_ in _like_, _look_.
+ 2. Final _l_ in _ball_, _hill_.
+ 3. Associate the sound _l_ with the letter.
+ 4. Identify sound _l_ in the following sight words from the Primer:
+ _like_, _little_, _ball_, _all_, _fall_, _doll_, _hill_, _Jill_,
+ _will_, _mill_, _roll_, _yellow_.
+ 5. Include the names of children in the room. _Ex.:_ _Lucy_, _Nellie_,
+ _Lilly_, _Paul_.
+ 6. Phonogram: _all_.
+ 7. Phonic Series:
+
+                                _all_
+
+                                f all
+                                h all
+                                t all
+
+ 8. Review the _ill_ series, making prominent final _l_.
+
+                                 XV.
+
+                    _n_, initial; final; medial.
+
+ 1. Analyze _not_ into the sound elements _n_, _ot_.
+ 2. Identify the sound _n_ in the sight words _no_, _nut_, _nest_,
+ _name_, _an_, _can_, _ran_, _in_, _on_, _run_, _hen_.
+ 3. Include names of children in the room: Ned, John, Anna,
+ Nan.
+ 4. Analyze _hen_ into the sound elements _h_, _en_.
+ 5. Phonogram: _en_.
+ 6. Phonic Series:
+
+                                _en_
+
+                                m en
+                                p en
+                                h en
+                                t en
+
+ 7. Review the _an_, _in_, _un_ series, making prominent final _n_.
+
+                                XVI.
+
+                        _d_, initial; final.
+
+ 1. Identify sound _d_ in the sight words _dog_, _do_, _doll_, _down_,
+ _dear_, _red_, _send_.
+ 2. Separate _red_ into the sound elements _r_, _ed_.
+ 3. Add _d_ to the phonogram _en_ taught in Lesson XV.
+ 4. Phonograms: _ed_, _end_.
+ 5. Phonic Series:
+
+                             _ed_    _end_
+
+                             f ed    s end
+                             r ed    m end
+                             N ed    l end
+                             l ed    t end
+
+ 6. Word List: Add these words to Word List No. II. Arrange
+ irregularly and review daily.
+
+                                XVII.
+
+                       _pl_; _fr_; _tr_; _ee_.
+
+Blended consonants _pl_, _fr_, _tr_. (Blended consonants are made as
+nearly as possible with one impulse of the voice.)
+
+ 1. Identify the sounds _pl_, _fr_, _tr_, _ee_ in the words:
+
+                     plant    tree    frog    see
+                     play     try     from    three
+
+ 2. Combine _ee_ with final _p_, _d_, _m_, _n_, to form phonograms.
+
+ 3. Phonic Series:
+
+                       _eep_    _eed_    _eem_; _een_
+
+                       p eep    s eed    s eem
+                       d eep    f eed    s een
+                       k eep    d eed    k een
+
+
+                               XVIII.
+
+                               _ing._
+
+Write the simple form of the word upon the blackboard and have
+it pronounced. Write it again with the syllable _ing_ added, and
+have it pronounced a second time. _Ex.:_
+
+              sing     sing ing     go          go ing
+              jump     jump ing     catch    catch ing
+              ring     ring ing     play      play ing
+              fly       fly ing     rock      rock ing
+              see       see ing     blow      blow ing
+              do         do ing     sleep    sleep ing
+
+                                XIX.
+
+                        Apostrophe _s_ (_'s_)
+
+Teach the apostrophe ('_s_) by adding it to the names of children in
+the room. Place upon the blackboard a group of sentences which the
+children have given orally. _Ex.:_
+
+            This is Mary's sister.   I see Jill's pail.
+            This is John's ball.     I see Jack's kite.
+            This is Helen's hat.     I see baby's kitten.
+
+Let the children read the sentences. As the children watch, erase
+_This is_, _I see_, _I have_, etc., leaving the possessive form. Add
+these words to Word List No. II. Rearrange the order and drill daily.
+
+                                 XX.
+
+                              SUMMARY.
+
+ 1. Consonants: _r_, _f_, _s_, _h_, _j_, _m_, _p_, _t_, _k_, _ck_,
+                _l_, _n_, _d_.
+ 2. Blended consonants: _pl_, _fr_, _tr_.
+ 3. Final _s_, apostrophe _s_, _ing_ (syllable).
+ 4. Phonograms: _at_, _ack_, _am_, _an_, _and_, _ay_, _all_.
+                _en_, _ed_, _end_, _ee_, _eep_, _eed_, _eem_, _een_.
+                _ing_, _ill_, _in_, _it_, _ick_.
+                _op_, _ot_, _ock_.
+                _un_, _ump_.
+
+ 5. Word List No. III.
+
+    tack   rock     lot       popping    Mary's    not       Fred's
+    tan    rocks    lock      plot       fall      Nat's     tray
+    tall   rocking  rings     play       falling   Nan's     track
+    ten    red      ringing   plays      fed       day       tree
+    tick   Jill's   Sam's     playing    feed      deep      trees
+    tock   land     sings     saying     fit       deed      sit
+    top    lay      singing   mumps      peep      Dick's    seeing
+    keep   lend     pack      mend       peeping   dock      sick
+    king   Jack's   pot       men        pumping   dickory   seed
+    kitten John's   free      need       nun       frog      seen
+
+                                XXI.
+
+                          _b_; _bl_; _br_.
+
+ 1. _b_ in _boy_, _big_, _bird_, _baby_, _ball_, _by_, _be_, _back_,
+    _but_, _baa_, _bake_, _bow_.
+ 2. _bl_ in _blue_, _black_, _blows_.
+ 3. _br_ in _breaks_, _brown_, _breast_, _bread_, _broom_, _umbrellas_.
+ 4. Phonogram: _ake_.
+ 5. Phonic Series:
+
+                                _ake_
+
+                                m ake
+                                r ake
+                                l ake
+                                b ake
+
+ 6. Combine _b_, _br_, _bl_ with familiar phonograms to make the word
+ list _bun_, _bat_, _band_, _bin_, _ball_, _bee_, _bring_, _blot_,
+ _bump_, _block_.
+
+                                XXII.
+
+                             _g_; _gr_.
+
+ 1. _g_ in _go_, _girl_, _egg_, _pig_, _gave_, _get_, _good_.
+ 2. _gr_ in _green_, _grass_, _grow_, _grunt_, _grandma_, _grandpa_,
+    _grind_.
+ 3. Phonograms: _ig_, _og_.
+ 4. Phonic Series:
+
+                            _ig_     _og_
+
+                            f ig     f og
+                            j ig     j og
+                            d ig     l og
+                            b ig     d og
+                            p ig    fr og
+                                     b og
+
++NOTE.+--
+
+ In pronouncing the vocal consonants _b_, _d_, _g_, the voice
+ should be placed _well forward_. The vibrations for _b_ are _in the
+ lips_; for _d_ in the _point of the tongue_; for _g_ in the _back of
+ the tongue_.
+
+                               XXIII.
+
+                          _y_ (consonant).
+
+ Consonant _y_ is always initial.
+ _y_ in _you_, _your_, _yes_, _yellow_.
+
++NOTE.+--
+
+ _y_ (vowel) is given in the Manual, Part IV, page 88.
+
+                                XXIV.
+
+                                _w._
+
+ 1. _w_ the wind sound; it resembles _oo_ in _boot_.
+ 2. _w_ in _we_, _way_, _wind_, _will_, _went_, _waves_, _wash_,
+    _window_, _water_, _wool_, _weave_, _west_.
+ 3. Phonogram: _est_.
+ 4. Phonic Series:
+
+                                w est
+                                r est
+                                b est
+                                n est
+
+ 5. Word List:
+
+               wing     win     weep     wick     will
+               will     wall    way      wig      wills
+
+                                XXV.
+
+                                _wh._
+
+ 1. _wh_ the blowing sound.
+    _w_ is vocal, while _wh_ is breath.
+ 2. _wh_ in _what_, _when_, _wheat_, _where_, _why_, _white_.
+ 3. Phonogram: _ite_.
+ 4. Phonic Series: _white_, _kite_, _bite_.
+
+                                XXVI.
+
+                            _th_ (vocal).
+
+The soft sound of _th_ is vocal; the hard sound is breath.
+
+_th_ (soft) in _that_, _this_, _there_, _they_, _them_.
+
++NOTE.+--
+
+ It is not wise to teach two sounds for one symbol in the
+ early lessons. Vocal _th_ is taught first because it is the one more
+ frequently used in the Primer. See _th_ (breath) Part V, page 112.
+
+                               XXVII.
+
+               _ch_, initial and final; _tch_, final.
+
+ 1. _ch_ in _church_, _chick_, _chicken_, _chop_, _churn_, _rich_,
+    _such_, _much_.
+ 2. _tch_ in _catch_, _match_, _hatch_.
+
+                               XXVIII.
+
+                        _sh_, initial; final.
+
+ 1. _sh_ in _she_, _ship_, _sheep_, _shook_, _wish_, _push_.
+ 2. Phonograms: _ook_, _ush_.
+ 3. Phonic Series:
+
+                          _ook_       _ush_
+
+                          b ook       m ush
+                          t ook      br ush
+                          l ook       h ush
+                         br ook       r ush
+                          h ook
+                          sh ook
+
+
+                                XXIX.
+
+                               REVIEW.
+
+ 1. Consonants: _r_, _f_, _s_, _h_, _j_, _m_, _p_, _t_.
+                _k-ck_, _l_, _n_, _d_, _b_, _g_.
+                _y_, _w_, _wh_, _th (soft)_, _ch_, _sh_.
+
+ 2. Blended consonants: _pl_, _fr_, _tr_, _bl_, _br_, _gr_, _tch_.
+
+ 3. Phonograms: _at_, _ack_, _am_, _an_, _and_, _ay_, _all_, _ake_.
+                _en_, _ed_, _end_, _ee_, _eep_, _eed_, _eem_, _een_,
+                _est_.
+                _ing_, _ill_, _in_, _it_, _ick_, _ig_, _ite_.
+                _op_, _ot_, _ock_, _og_, _ook_.
+                _un_, _ump_, _ush_.
+
+ 4. Word List No. IV.
+
+        bat      bite      wee       brick      than       shook
+        back     book      weep      bring      then       shed
+        band     bump      weed      brook      thing      sheep
+        ball     bumping   wing      brush      thrush     shop
+        bake     best      will      brushing   hatch      shot
+        bed      gay       win       grand      match      blot
+        bend     got       wick      gray       latch      black
+        bill     gun       wig       greed      patch      bleed
+        bit      way       Will's    green      catch      block
+        big      wake      west      that       shake      when
+
+
+
+
+                              Part IV.
+
+                         SECOND HALF YEAR:
+                             THIRD STEP.
+
+
+                1. Reading from the First Reader.
+
+                2. Phonic Lessons:
+
+                   (a) The Vowel Sounds.
+                   (b) Equivalent Vowel Sounds.
+                   (c) Word Drill.
+
+
+                   READING FROM THE FIRST READER.
+
+                    (Time, about twenty weeks.)
+
+=Directions=. 1. In the Primer, the First Reader, and the Second
+Reader, the words of the vocabulary are arranged in the order in
+which they first occur, and are grouped by pages in a word list
+placed in the back of the book. Since teachers usually write
+unfamiliar words upon the blackboard and develop them in a word drill
+preceding the reading lesson, it has not been thought necessary to
+place the new words at the beginning of each lesson. (See Spelling,
+page 17. Also Word Drill, page 19.)
+
+2. If necessary precede a lesson in the First Reader with a
+development lesson on the blackboard. (See page 39, Part II, Lesson
+XXI.)
+
+3. A Supplementary List of Poems is given to be read in connection
+with the lessons in the First Reader. Do not ask children to retell
+the poems read aloud. To develop an appreciation of poetry is the
+object. Children who have been accustomed to hearing poetry will read
+and enjoy the poems in their readers as much as the stories. The
+teacher's attitude toward poetry is the suggestion that influences.
+
+
+                          THE FIRST READER.
+
+Page 7. Memorize the poem. Write it upon the blackboard and
+teach the elements as in the Primer lessons based upon Nursery
+Rhymes. (See page 43, Part II, Lesson XXVII.)
+
+Page 10. Teach as indicated above.
+
+Page 11. _Something to Tell._ Have the children read the questions
+silently, and then answer them aloud.
+
+Page 12. This lesson was suggested by reading George Cooper's
+poem, _Come, Little Leaves_.
+
+Page 96. This lesson was suggested by reading Frederick Manley's
+poem, _The Journey's End_, in the _Modern Music Primer_.
+
+Page 102. This lesson was suggested by reading Frederick Manley's
+poem, _The Woodpecker_, in the _Modern Music Primer_.
+
+                           LIST OF POEMS.
+
+The teacher may read the following poems to the children in
+connection with the reading lessons in the First Reader as indicated
+by the pages.
+
+ 12 "Come, Little Leaves," by George Cooper.
+          _Book: "Pinafore Palace," (Selections) Wiggin & Smith (Eds.)._
+
+ 20 "The Little Doves." (Author unknown.)
+          _Book: "Pinafore Palace."_
+
+ 34 "The Crow's Children," by Phoebe Cary.
+          _Book: "Ballads for Little Folks."_
+
+ 44 "How the Leaves Came Down," by Susan T. Coolidge.
+          _Book: "Songs of the Tree-Top and Meadow," (Selections)
+          McMurry and Cook (Eds.)._
+
+ 54 "My Bed is a Boat," by Robert Louis Stevenson.
+          _Book: "A Child's Garden of Verses."_
+
+ 63 "The Water Mill." Aunt Effie's Rhymes.
+          _Book: "Child Life," (Selections) John G. Whittier (Ed.)._
+
+ 63 "The Johnny Cake." (Author unknown.)
+          _Book_: Whittier's "_Child Life."_
+
+ 78 "O Lady Moon," by Christina G. Rossetti.
+          _Book: "Sing-Song."_
+
+ 80 "An Old-Fashioned Rhyme," by Emilie Poulsson.
+          _Book: "In the Child's World."_
+
+ 94 "A Diamond or a Coal," by Christina G. Rossetti.
+          _Book: "Sing-Song."_
+
+ 102 "One, Two, Three," by Henry C. Bunner.
+          _Book: "The Posy Ring," (Selections) Wiggin & Smith (Eds.)._
+
+ 109 "The Sweet Red Rose," by Mary Mapes Dodge.
+          _Book: "Songs of the Tree-Top and Meadow."_
+
+ 115 "Nursery Song," by Mrs. Carter.
+          _Book: "Songs of the Tree-Top and Meadow."_
+
+ 118 "The Cow-Boy's Song," by Anna M. Wells.
+          _Book: "The Posy Ring."_
+
+ 128 "The Seed," by Kate L. Brown.
+          _Book: "Songs of the Tree-Top and Meadow."_
+
+ 137 "To a Honey Bee," by Alice Cary.
+          _Book: "Ballads for Little Folks."_
+
+ 139 "Over in the Meadow," by Olive A. Wadsworth.
+          _Book: Whittier's "Child Life."_
+
+ 149 "What Robin Told," by George Cooper.
+          _Book: "Songs of the Tree-Top and Meadow."_
+
+ 152 "A. Apple Pie," by Edward Lear.
+          _Book: "Pinafore Palace."_
+
+                           PHONIC LESSONS.
+
+                     (Time, about twenty weeks.)
+
+=Directions.= 1. In Phonic Lessons, First Half Year, Second Step, the
+child learned the consonant sounds and some of the common phonograms.
+In the second half year phonograms are analyzed for the purpose of
+recognizing the vowel sounds as elements. There are twenty elementary
+vowel sounds. The purpose of the phonic lessons is to associate
+these vowels with the symbols representing them. See page 113 for a
+scientific arrangement of the vowel sounds.
+
+                                 I.
+
+                            _a_ (short).
+
+ 1. Separate _at_ into the sound elements _a_ and _t_. (Give the
+ sound, not the name.)
+
+ 2. Associate the sound with the letter.
+
+ 3. Combine _a_ (short) with the consonants _n_, _m_, _t_, _p_, _d_,
+ to form the phonograms _an_, _am_, _at_, _ap_, _ad_.
+
+ 4. Analyze short words containing the sound of _a_ (short) into
+ phonic elements. (A knowledge of the elementary sounds is the
+ foundation upon which rests the power to recognize new words.)
+
+                fan      jam      mat      sad      tap
+               f a n    j a m    m a t    s a d    t a p
+
+ 5. Analyze the following words, making prominent _a_ (short):
+ _rat_, _Sam_, _pat_, _had_, _sat_, _thank_, _sang_, _ash_, _splash_.
+
+                                 II.
+
+                             _a_ (long).
+
+Final _e_ causes the preceding vowel to take its _name_ instead
+of its _sound_. Do not teach the rule, but its application. No
+diacritical marks are necessary to indicate the short and long vowel
+sounds. (Children quickly discover that the final _e_ changes the
+preceding vowel from the sound to the name. This is true of almost
+all words. When there is a phonetic exception it should be taught as
+a sight word.)
+
+ 1. Write _at_ on the blackboard and have it pronounced. Write _ate_
+ beside it and have it pronounced. (The teacher may do this first
+ and have the children learn the force of _e_ by observation and
+ imitation.) _Ex.:_ _at ate_.
+
+ 2. Combine different consonants and phonograms to illustrate
+ this principle.
+
+                      at      ate      an      ane
+                    f at    f ate    p an    p ane
+
+              am      ame      ap      ape      ad     ade
+            S am    s ame    t ap    t ape    m ad   m ade
+
+ There are a few exceptions to this rule. _Ex.:_ _have_. Teach this
+ word to the child just as the name of any new sight word is told
+ him.
+
+ 3. Analyze the following words, making prominent _a_ (long): _came_,
+ _name_, _take_, _same_, _taste_, _bake_, _cake_, _wake_, _spade_.
+
+                                III.
+
+                         _ay_ = _a_ (long).
+
+ 1. _ay_ is an equivalent symbol for _a_ (long).
+
+ 2. Analyze the following words: _hay_, _jay_, _say_, _stay_, _may_,
+ _way_, _day_, _lay_, _gray_, _play_.
+
+                                 IV.
+
+                         _ai_ = _a_ (long).
+
+ 1. _ai_ is an equivalent symbol for _a_ (long).
+
+ 2. Combine _ai_ with consonants to form the phonograms _ail, ain,
+ ait, aid_.
+
+ 3. Word List for analysis:
+
+ hail chain    train
+ pail pain     stain
+ tail rain     wait
+ fail raining  waited
+ sail gain     waiting
+ mail paid     afraid
+
+                                 V.
+
+                       _c_ (hard); _cr_; _cl_.
+
+_c_ (hard) and _k_ have the same sound. It is interesting to note
+that _c_ is oftener found to begin words and _k_ to end them.
+
+ 1. _c_ in _can_, _come_, _cat_, _cow_, _corn_, _coo_, _cold_.
+
+ 2. _cr_ in _cradle_, _cream_.
+
+ 3. _cl_ in _clip-clap_, _climbs_, _clock_, _cluck_.
+
+ 4. Phonograms: _ow_, _own_, _old_.
+
+ 5. Phonic Series:
+
+                     c ow         t own     t old
+                     b ow         br own    g old
+                     h ow         d own     f old
+                     b ow-w ow    fr own    h old
+
+ 6. Word List:
+
+                 camp     came  cling  clay      crook
+                 camping  can   cluck  clump     crop
+                 call     cake  clock  creep     crash
+                 calls    cook  click  creeping  crush
+                 called   cow   clam   crack     crown
+                 cat      cot   clap   cradle    cream
+
+                                  VI.
+
+                             _e_ (short).
+
+ 1. Separate _red_ into the sound elements _r_ and _ed_.
+
+ 2. Separate _ed_ into the sound elements _e_ and _d_. (Give sound,
+ not name.)
+
+ The teacher should pronounce it first, and let the children
+ learn by imitation. Be careful to give the correct vowel sound.
+
+ 3. Combine _e_ (short) with consonants to form the phonograms
+ _en_, _em_, _et_, _ell_, _eg_, _elf_, _elt_, _esh_.
+
+ 4. Word List:
+
+         pet      yet       leg        fell     sled
+         set      met       bell       Nell's   bed
+         wet      let       sell       when     red
+         net      hem       tell       then     melt
+         self     them      shell      den      end
+         shelf    peg       selling    men      ends
+         get      beg       telling    hens     threshers
+         getting  begging   well       ten      bench
+
+                                VII.
+
+                           _e_ (long); ee.
+
+Final _e_ takes its name when it is the only vowel in the word.
+_Ex.:_ _he_, _she_, _we_, _me_, _be_.
+
+The sound of _ee_ is the same as the name of _e_. It is not necessary
+to connect double letters artificially with a bar or mark of any
+kind. Children soon learn that one sound is used for both letters.
+
+Combine _ee_ with the consonants used both as initials and finals to
+build words.
+
+ Phonic Series:
+
+                   _eet_     _eel_    _eed_     _eep_
+
+                   b eet     h eel    f eed     p eep
+                   f eet     f eel    s eed     k eep
+                  sl eet     p eel    w eed    sh eep
+                 str eet    st eel    d eed     w eep
+                  sh eet    wh eel    n eed     d eep
+
+ Word List.
+
+            feed     sleeping   deed      keep       teeth
+            need     beef       seed      peeping    he
+            seem     speed      deep      keeping    she
+            seems    meet       seen      tree       we
+            peep     see        sheep     three      me
+            sleep    bee        weep      cheese     be
+
+                                VIII.
+
+                         _ea_ = _e_ (long).
+
+ 1. _ea_ is an equivalent symbol for _e_ (long).
+
+ 2. Combine _ea_ with consonants to form the phonograms _eal_, _ean_,
+ _eam_, _ear_, _eap_, _eat_, _eave_.
+
+ 3. Word List:
+
+            meal   reap      lean       weave     teacher
+            seal   read      leap       leave     tear
+            bean   lead      leaping    stream    dear
+            seat   eager     heat       please    near
+            meat   reaping   heater     teach     hear
+            neat   reaper    wheat      each      hearing
+
+                                 IX.
+
+                         _ed_ = _d_ (final).
+
+_ed_ = _d_ when added to a word ending in a _vocal_ consonant.
+
+_ed_ = _t_ when added to a word ending in a _breath_ consonant.
+
+Write the simple form of the word on the blackboard, and have
+it pronounced. Write it again with the _ed_ added, and have it pronounced
+a second time. Do not teach it as a separate sound. Call
+attention to the difference in form and the corresponding difference
+in sound.
+
+              _ed_ = _t_                _ed_ = _d_
+
+          dress    dressed            play     played
+          pass     passed             cover    covered
+          dance    danced             live     lived
+          wish     wished             call     called
+          drop     dropped            roll     rolled
+
+                               REVIEW.
+
+          rain     rains              raining    rained
+          jump     jumps              jumping    jumped
+          tap      taps               tapping    tapped
+          walk     walks              walking    walked
+          look     looks              looking    looked
+          pick     picks              picking    picked
+
+                                 X.
+
+                                _x._
+
+ 1. _x_ = _ks_ as in _milks_. _x_ is not one of the simple elementary
+ sounds.
+
+ 2. _x_ in _ax_, _fox_, _six_, _next_, _Foxy_, _Loxy_, _wax_.
+
+                                 XI.
+
+                            _i_ (short).
+
+ 1. Separate _it_ into the sound elements _i_ and _t_. (Give sound, not
+ name.)
+
+ 2. Combine _i_ (short) with consonants to form the phonograms _in_,
+ _im_, _ip_, _id_, _ib_, _it_, _ig_, _ill_, _iss_, _ish_, _ick_.
+
+ 3. Word List:
+
+          him      tip-top     dim        fin        with
+          lip      sit         lid        wish       kiss
+          hid      sitting     ill        dish       miss
+          bit      whip        chill      wished     brick
+          pin      ship        rill       silver     click
+          pinned   dipping     rip        picked     till
+          sick     dipped      rim        mittens    mitten
+          thick    did         spilled    kittens    written
+          pick     dinner      rib        big        pig
+
+
+Give a short drill each day at the close of the lesson upon the
+phonic list.
+
+                                XII.
+
+                             _i_ (long).
+
+ 1. Teach _i_ (long) in the same manner in which _a_ (long) was
+ taught. (See page 81, paragraph II.)
+
+ 2. Combine different consonants and phonograms to illustrate this
+ principle.
+
+           it      ite      ip      ipe      id      ide
+         b it    b ite    r ip    r ipe    r id    r ide
+
+              in      ine               im      ime
+            p in    p ine             d im    d ime
+
+ 3. Word List:
+
+            ice      mite     white     line    wise
+            mice     chime    ripe      lime    wiser
+            nice     chide    ride      fire    spring
+            side     shine    rides     wire    hive
+            beside   wide     riding    rise    five
+            mine     wipe     dime      ripe    pine
+
+                                XIII.
+
+                    _y_, vowel (short and long).
+
+ 1. _y_ (short) has almost always the sound of _i_ (short). It is the
+ last sound heard in _Mary_, _baby_, _pretty_, _frosty_, _lady_.
+
+ _y_ (long) is the same as _i_ (long). It is the last sound heard in
+ _my_, _fly_, _sky_, _by_, _dry_, _try_, _cry_.
+
+ 2. Word List:
+
+        happy                  nicely            Hickory Dickory
+        sandy                  carry             empty
+        fairy                  flying            Blacky
+        Henny Penny            crying            Browny
+        Foxy Loxy              myself            Whitey
+        Ducky Lucky            goodby            sky
+        Turkey Lurkey          drying            frosty
+
+                                XIV.
+
+                               _igh._
+
+ 1. _igh_ is an equivalent symbol for _i_ (long).
+
+ 2. _igh_ in _high_, _higher_, _flight_, _thigh_, _night_, _fight_,
+ _sight_, _bright_, _light_, _right_, _might_, _lightning_.
+
+                                 XV.
+
+                    _v_, initial; final; medial.
+
+ 1. _v_ in _violet_, _very_, _visit_, _love_, _weave_, _voice_, _every_.
+
+ 2. Phonogram: _ave_.
+
+ 3. Word List: gave, cave, pave, wave.
+
+                                XVI.
+
+                            _o_ (short).
+
+ 1. Separate _on_ into the elements _o_ (short) and _n_.
+
+ 2. Combine _o_ (short) with the final consonants _n_, _m_, _p_, _t_,
+ _b_, _d_, _ss_, _g_, to form phonograms, and with initial consonants
+ to form words.
+
+                           ot      ob      op
+                         c ot    r ob    h op
+
+ 3. Word List: (Let the children find other words in the Reader.)
+
+        top                 pop                softer
+        stop                Tom                longer
+        not                 lost               knock
+        spot                frost              knocker
+        locked              frosty             knocking
+        off                 from               knocked
+        rock                stronger           moss
+        flock               logs               toss
+        hopping             lost               chop
+        pot                 soft               chopping
+
+                                XVII.
+
+                             _o_ (long).
+
+ 1. Teach _o_ (long) in the same manner in which _a_ (long) was
+ taught. (See page 81, paragraph II.)
+
+ 2. Combine different consonants and phonograms to illustrate
+ this principle:
+
+               hop     rob     not     mop
+              hope    robe    note    mope
+
+ 3. Word List:
+
+        old                 rode               bone
+        hole                rose               stove
+        hope                mole               smoke
+        those               home               alone
+        chose               hoe                spoke
+        note                rope               broke
+        nose                more               those
+        toe                 core               shore
+        pole                sore               chore
+
+                               XVIII.
+
+                         _o_ (final); _oa_.
+
+ 1. -_o_, _oa_ are equivalent symbols for _o_ (long).
+
+ 2. _o_ in _go_, _so_, _no_.
+
+ 3. Combine _oa_ with consonants, initial and final, to form
+ phonograms and words: _t_, _d_, _m_, _n_, _ch_, _k_, _r_, _l_, _f_.
+
+ 4. _oa_ in _boat_, _load_, _loam_, _loaf_, _moan_, _coat_, _oak_,
+ _oats_, _roaming_, _coal_, _toad_, _road_, _loads_, _loan_, _roar_,
+ _oar_, _boards_.
+
+                                XIX.
+
+                                _z_.
+
+_z_ in _buzz_, _fuzz_, _fuzzy_, _lazy_, _dizzy_, _zish_, _size_,
+_sized_, _buzzing_, _buzzed_.
+
+                                 XX.
+
+                            _u_ (short).
+
+ 1. Separate _up_ into the elements _u_ (short) and _p_.
+
+ 2. Combine _i_ (short) with consonants to form the phonograms
+ _ut_, _ud_, _ub_, _um_, _un_, _urr_, _uff_, _uss_, _uzz_.
+
+ 3. Word List:
+
+        tub      fuss       cutting     shut         crust
+        cup      buzz       buds        shutting     bump
+        hug      fuzzy      syrup       shutter      bumping
+        bug      push       supper      dug          pumped
+        purr     pushed     hum         hundred      puff
+        fur      pushing    humming     stuff        puffed
+        dug      cut
+
+                                XXI.
+
+                             _u_ (long).
+
+ 1. Teach _u_ (long) in the same manner that _a_ (long) was taught.
+
+ 2. Combine different consonants and phonograms to illustrate this
+ principle:
+
+     tub      cub        plum        us        cut
+     tube     cube       plume       use       cute
+
+ 3. Phonic List: _cure_, _pure_, _mute_, _amuse_, _use_, _used_,
+ _tune_, _tube_.
+
+                                XXII.
+
+                         _ew_ = _u_ (long).
+
+ 1. _ew_ is an equivalent symbol for _u_ (long).
+
+ 2. _ew_ in _new_, _blew_, _few_, _view_, _dew_.
+
+                               XXIII.
+
+                         _ur_ = _er_, _ir_.
+
+ _r_ following _u_, _e_, _i_, usually gives the sound heard in _fur_,
+ _her_, _sir_.
+
+ Word List:
+
+                    _ur_        _er_        _ir_
+
+                    fur         her         sir
+                    burn        term        bird
+                    curl        verse       girl
+                    nurse       berth       first
+                    church      dinner      third
+                    hurt        supper      skirt
+
+                                XXIV.
+
+                    _er_; _ers_ (as a syllable).
+
+Write the simple form on the blackboard, and have it pronounced.
+Write it again with _er_ added, and have it pronounced. Write it
+again with _ers_ added, and have it pronounced.
+
+                    farm        farm er     farm ers
+                    mill        mill er     mill ers
+                    bake         bak er      bak ers
+                    mine         min er      min ers
+
+Identify _er_ in
+
+                 other         father          butter
+                 mother        sister          water
+                 brother       flower          pitter-patter
+
+                                XXV.
+
+                      _ng_ (the ringing sound).
+
+ 1. _ng_ is one of the elementary sounds.
+
+ 2. Combine _ng_ with the vowels _a_, _e_, _i_, _o_, _u_, to form the
+ phonograms _ang_, _eng_, _ing_, _ong_, _ung_.
+
+ 3. Word List:
+
+            sing     wing      ding     along     length
+            king     spring    dong     rang      strength
+            sung     lungs     song     sang      rung
+            sling    sting     long     hang      strung
+            swing    string    gong     bang      stung
+
+                                XXVI.
+
+                            _qu_ = _kwh_.
+
+_q_ is not one of the elementary sounds.
+
+_qu_ in _quack_, _queer_, _queen_, _quite_, _quail_, _squeeze_, _squash_.
+
+                               XXVII.
+
+                     _oo_ (short); _oo_ (long).
+
+ 1. _oo_ (short) as in _cook_.
+
+ Word List:
+
+                    book                    took
+                    good                    hook
+                    look                    brook
+                    wood                    cook
+                    foot                    cooking
+
+ 2. _oo_ (long) as in _coo_.
+
+ Word List:
+
+                  moon     stoop     broom     root
+                  room     moo       bloom     too
+                  fool     cool      goose     tool
+                  poor     loom      stool     soon
+                  spool    noon      roof      spoon
+
+                               XXVIII.
+
+                         _aw_ = _all_, _or_.
+
+ 1. _aw_ in _caw_, _draw_, _saw_, _claw_, _paw_, _straw_.
+
+ 2. _all_ in _ball_, _hall_, _wall_, _fall_.
+
+ 3. _or_ in _corn_, _horn_, _morn_, _morning_, _torn_.
+
+                                XXIX.
+
+                          _a_ (r), Italian.
+
+_ar_ in    arm      star    car      card     hard
+           harm     barn    mark     sharp    starch
+           park     yard    start    far      spark
+           bark     march   jar      ark      lark
+
+                                XXX.
+
+                            _ow_ = _ou_.
+
+ 1. _ow_ and _ou_ are equivalent symbols for the same sound.
+
+ 2. _ou_ at the beginning or in the middle of a word becomes _ow_
+ final.
+
+ 3. _ou_ in     our       sour       cloud       found
+                mouse     out        ground      round
+                around    loud       aloud       spout
+                house     sound      about       flour
+
+ 4. _ow_ in     cow       how        now         bow
+                owl       down       drown       brown
+                crown     clown      crowd       growl
+
+                                 XXXI.
+
+                             _oy_ = _oi_.
+
+ 1. _oy_ and _oi_ are equivalent symbols for the same sound.
+
+ 2. _oi_ at the beginning or in the middle of a word becomes _oy_
+ final.
+
+ 3. _oi_ in     oil       boil       coin        join
+                joint     point      voice       toil
+                spoil     noise      soil        broil
+
+ 4. _oy_ in     _boy_, _toy_, _joy_, _Roy_, _Troy_, _ahoy_.
+
+                                XXXII.
+
+                       _j_; _ge_; _dge_ (final).
+
+ 1. _-ge_, _dge_, are equivalent symbols for _j_.
+
+ 2. _-ge_  in  _age_, _hinge_, _cage_, _page_, _sponge_, _fringe_.
+
+ 3. _-dge_ in  _edge_, _bridge_, _judge_, _Madge_.
+
+                               XXXIII.
+
+                              SUMMARY.
+
+=Phonic Lessons.= Third Step contains:
+
+ 1. 17 vowel sounds:
+
+             a, e, i, o, u (short)
+             a, e, i, o, u (long)
+             oo (short), oo (long), a (r), (Italian)
+             aw, ow, oy, ur.
+
+ 2. Nine of these sounds have fifteen common equivalent symbols,
+ making a total of thirty-two vowel symbols. (See Table of Vowel
+ Sounds, page 113.)
+
+The three vowel sounds heard in _ask_, _air_, and _ore_ may be
+omitted. Teach as sight words those used in the Summers
+Readers; or if preferred, give a series drill.
+
+Two of these sounds have equivalent spellings.
+
+        _air_ in _chair_, _care_, _wear_.
+        _ore_ as in _more_, _four_, _floor_, _torn_.
+
+The sound _ask_ has the simple spelling _a_. In this Manual _a_
+is the symbol for _a_ (short) as in _at_ unless changed by some
+modifier as _final_, _r_, or another vowel. _Ex.:_ _at_, _aw_, _oa_,
+_ea_. _Ex.:_ The following list gives the most common of these words:
+
+                                 I.
+
+                       _air_    _are_    _ear_
+
+                       chair    care     bear
+                       fair     bare     tear
+                       hair     dare     wear
+                       pair     fare     pear
+                       stair    scare
+
+                                 II.
+
+              _ore_    _oor_    _orn_    _oar_    _our_
+
+              bore     door     torn     roar     four
+              core     floor    worn     soar     pour
+              more              thorn
+              shore             born
+              store
+
+                                III.
+
+                      _ask_    _ast_    _ance_
+
+                       task     fast     dance
+                       mask     last     lance
+                       basket   mast     chance
+
+
+
+
+
+                               PART V.
+
+                          THIRD HALF YEAR:
+                            FOURTH STEP.
+
+
+ 1. Reading from the Second Reader.
+
+ 2. Phonic Lessons:
+
+         (a) Initial and final syllables taught as
+         phonograms.
+
+         (b) Word Drill.
+
+ 3. Later Work.
+
+
+                    INITIAL AND FINAL SYLLABLES.
+
+                     (Time, about twenty weeks.)
+
+=Directions.= 1. In the third half-year initial and final syllables
+are taught as phonograms. This enables the child to read words
+requiring an understanding of syllabication.
+
+2. The familiar consonant and vowel sounds previously learned are
+constantly reviewed in the word lists given for phonic drill. These
+are based largely upon the words used in the Primer, the First
+Reader, and the Second Reader. The list may be increased by using, in
+connection with familiar words, the prefixes and suffixes given in
+the following lessons.
+
+3. New sight words which the child may meet in any reader should be
+told him.
+
+                                 I.
+
+                          _y_        _ies_
+                        par ty      par ties
+                       coun try    coun tries
+                        sto ry      sto ries
+                        car ry      car ries
+                        cher ry     cher ries
+                        ber ry      ber ries
+                        fai ry      fai ries
+                        brow ny     brow nies
+                        pen ny      pen nies
+                        pup py      pup pies
+
+                                 II.
+
+                  _ly_                        _ful_
+        near   ly        ug ly        play ful    won der ful
+        nice   ly       sad ly       thank ful      truth ful
+        mere   ly       hol ly     beau ti ful       barn ful
+        friend ly    mer ri ly        help ful      field ful
+        quick  ly    hap pi ly         use ful       hand ful
+
+                                III.
+
+                          _ure_       _age_
+
+                        pict ure     vil lage
+                        mixt ure     mes sage
+                        fig ure     cab bage
+                        past ure     man  age
+                        rapt ure    pack  age
+                       creat ure     cot tage
+
+                                 IV.
+
+                _le_                _ous_        _tion_
+
+           cas tle     gen tle    won drous     ques tion
+           cat tle      un cle     fa  mous       mo tion
+           nee dle    bram ble    joy   ous      sta tion
+          trem ble    shut tle    gor geous       ac tion
+          wres tle    trea dle                va ca  tion
+                        ap ple
+
+                                 V.
+
+               _in_                _en_      _il_, _el_
+
+               in side        chick en         an vil
+               in vite          sev en        pen cil
+               in deed         soft en       trav  el
+               in ven tion    sweet en        cam  el
+               In di an         wak en       quar rel
+           rob in                   en joy
+       Mon da min
+
+                                 VI.
+
+                           _ed_         _est_
+
+                         end ed     near  est
+                       faint ed      old  est
+                       plant ed    young  est
+                        lift ed      har vest
+                        fold ed       mo lest
+                        mend ed     sick  est
+                        card ed     dark  est
+
+                                VII.
+
+                _a_         _be_  _de_      _re_  _pre_
+
+                 a side      be come         re cess
+                 a sleep     be came         re ceive
+                 a wake      be fore         re ply
+                 a long      be gan          re ply ing
+                 a fraid     be gin ning    pre pare
+                 a live      be long        pre tend
+                 a cross     be side        pre tend ing
+                 a go        be hind
+                 a gainst    de lay
+                 a gain      de lay ing
+                 a round     de light
+                             de light ful
+
+                                VIII.
+
+               _dis mis_       _ex_             _pro_
+
+               dis turb      ex plain         pro nounce
+               mis take      ex plain ing     pro long
+               mis tak en    ex pect
+                             ex pect ed
+                             ex cuse
+                             ex press
+                             ex am ple
+                             ex treme ly
+
+                                 IX.
+
+              _ap_           _ad_            _af_
+
+               ap pear        ad mit          af fec tion
+               ap pear ing    ad mit ting     af ter
+                              ad mit ted
+                              ad mit tance
+                              ad dress
+                              ad di tion
+
+                                 X.
+
+                     _at_               _an ab_
+
+                      at tic             an i mal
+                      at tract       wom an
+                      at tend            ab sent
+                      at ten tion
+
+                                 XI.
+
+          _ness_                        _less_       _some_
+
+      cold ness       weak ness        end less         some times
+       ill ness       sick ness       help less         some thing
+      lame ness    wil der ness       home less    lone some
+      like ness       fear less    moth er less    hand some
+      near ness     friend less    fath er less     win some
+
+                                XII.
+
+          _ob_              _or_                  _ph = f_
+
+           ob tain      par lor                    Phil ip
+           ob tains     mir ror               el e phant
+           ob tained         or gan     pho to gra ph
+           ob tain ing       or chard            s phere
+
+                                XIII.
+
+                              SUMMARY.
+
+                 y     ies     ly      ful      ure
+                 age   le      ous     tion     in
+                 en    il      el      ed       est
+                 a     be      de      re       pre
+                 dis   mis     ex      ap       ad
+                 af    at      an      ab       ob
+                 ness  less    some    or       ph = f
+
+
+                    SUPPLEMENTARY LIST OF POEMS.
+
+The teacher may read the following poems to the children in
+connection with the reading lessons in the Second Reader.
+
+                             SEPTEMBER.
+
+"September," by Helen Hunt Jackson. _Book: Jackson's Poems._
+"Hiawatha's Childhood," by Henry W. Longfellow. _Book: Longfellow's
+ Poems._
+
+    Lines beginning: "By the shores of Gitchee Gumee" to
+    "called them 'Hiawatha's Brother's.'"
+
+Selections from Hiawatha's Fasting.
+
+    The first day of his fasting.
+
+    The fourth day of his fasting, lines beginning: "To-morrow
+    is the last day of your fasting."
+
+    The seventh day of his fasting, lines beginning: "Day by
+    day did Hiawatha."
+
+"The Little Elf," by John Kendrick Bangs.
+
+        _Book: "The Posy Ring," (Selections) Wiggin &
+        Smith (Eds.)._
+
+                              OCTOBER.
+
+"The Mountain and the Squirrel," by Ralph Waldo Emerson.
+
+        _Book: Emerson's Poems._
+
+"Robin Redbreast," by William Allingham.
+
+        _Book: "The Posy Ring."_
+
+"Lullaby of the Iroquois," by E. Pauline Johnson.
+
+        _Book: "Songs of the Tree-Top and Meadow," (Selections)
+        McMurry and Cook (Eds.)._
+
+"Hiawatha's Sailing," by Henry W. Longfellow.
+
+        _Book: Longfellow's Poems._
+
+                              NOVEMBER.
+
+"The Story of a Seed," from _The Youth's Companion._
+
+        _Book: "Songs of the Tree-Top and Meadow."_
+
+"Little Red Riding Hood," by John G. Whittier.
+
+        _Book: Whittier's Poems._
+
+"Selections from the Barefoot Boy," by John G. Whittier.
+
+        _Book: Whittier's Poems._
+
+"The Boy and the Sheep," by Ann Taylor.
+
+        _Book: "The Posy Ring."_
+
+                              DECEMBER.
+
+"Little Fir Trees," by Evaleen Stein.
+
+        _Book: "St. Nicholas."_
+
+"Why do Bells for Christmas Ring?" by Eugene Field.
+
+        _Book: "Lullaby Land."_
+
+"The Sugar-Plum Tree," by Eugene Field.
+
+        _Book: "Lullaby Land."_
+
+"A Visit from St. Nicholas," by Clement C. Moore.
+
+        _Book: "Child Life," (Selections) John G. Whittier
+        (Ed.)._
+
+                              JANUARY.
+
+"What the Wood Fire Said to the Little Boy," by Frank L. Stanton.
+
+        _Book: "Songs of the Tree-Top and Meadow."_
+
+"The Snow," from _The Youth's Companion._
+
+        _Book: "Songs of the Tree-Top and Meadow."_
+
+"The Frost," by Hannah F. Gould.
+
+        _Book: "The Posy Ring."_
+
+"Talking in Their Sleep," by Edith M. Thomas.
+
+        _Book: "Songs of the Tree-Top and Meadow."_
+
+                              FEBRUARY.
+
+"The Village Blacksmith," by Henry W. Longfellow.
+
+        _Book: Longfellow's Poems._
+
+"From My Arm Chair," by Henry W. Longfellow.
+
+        _Book: Longfellow's Poems._
+
+"The Children's Hour," by Henry W. Longfellow.
+
+        _Book: Longfellow's Poems._
+
+"Time to Rise"; "Bed in Summer," by Robert Louis Stevenson.
+
+        _Book: "A Child's Garden of Verses."_
+
+                               MARCH.
+
+"The Windmill," by Henry W. Longfellow.
+
+        _Book: Longfellow's Poems._
+
+"The Wind," by Robert Louis Stevenson.
+
+        _Book: "A Child's Garden of Verses."_
+
+"My Shadow," by Robert Louis Stevenson.
+
+        _Book: "A Child's Garden of Verses."_
+
+"The Lost Doll," by Charles Kingsley.
+
+        _Book: "The Posy Ring."_
+
+                               APRIL.
+
+"The Brown Thrush," by Lucy Larcom.
+
+        _Book: "Childhood Songs."_
+
+"Wild Geese," by Celia Thaxter.
+
+        _Book: "Poems for Children."_
+
+"The Song of the Lilies," by Lucy Wheelock.
+
+        _Book: "Songs of the Tree-Top and Meadow."_
+
+"What is Pink?" by Christina G. Rossetti.
+
+        _Book: "Sing-Song."_
+
+                                MAY.
+
+"Baby Seed Song," by E. Nesbit.
+
+        _Book: "The Posy Ring."_
+
+"Calling the Violet," by Lucy Larcom.
+
+        _Book: "Childhood Songs."_
+
+"The Bluebird," by Emily Huntington Miller.
+
+        _Book: "The Posy Ring."_
+
+"Spring," by Celia Thaxter.
+
+        _Book: "Poems for Children."_
+
+                                JUNE.
+
+"Mabel on Midsummer Day," by Mary Howitt.
+
+"The Fairies of the Caldron-Low," by Mary Howitt.
+
+"The Fairy Folk," by Robert Bird.
+
+        _Book: "The Posy Ring."_
+
+"Seven Times One," by Jean Bigelow.
+
+        _Book: "The Posy Ring."_
+
+                                JULY.
+
+"Flag Song," by Mrs. Coonley-Ward.
+
+        _Book: "Wilson's History Reader."_
+
+"Independence Bell." (Author unknown.)
+
+        _Book: "Williams's Choice Literature, Book II."_
+
+"The Flag Goes By," from _The Youth's Companion._
+
+        _Book: "Songs of the Tree-Top and Meadow."_
+
+"The Star-Spangled Banner," by Francis Scott Key.
+
+        _Book: "Williams's Choice Literature, Book II."_
+
+                               AUGUST.
+
+"The Song of the Crickets," by Emily Huntington Miller.
+
+        _Book: "Songs of the Tree-Top and Meadow."_
+
+"The Spider and the Fly," by Mary Howitt.
+
+        _Book: "Songs of the Tree-Top and Meadow."_
+
+"Wynken, Blynken and Nod," by Eugene Field.
+
+        _Book: "Lullaby Land."_
+
+"Old Gaelic Lullaby." (Author unknown.)
+
+        _Book: "The Posy Ring."_
+
+                             LATER WORK.
+
+After the third half year any series of readers may be used. The
+literature of childhood, carefully selected and edited, should form
+the subject-matter of these reading books.
+
+Phonic lessons based as far as possible upon the words found in the
+readers should be practised daily during the first three years. This
+later work does not differ from that of the preceding phonic lessons.
+
+
+
+
+                          CONSONANT SOUNDS.
+
+
+               +BREATH SOUNDS.+       +VOCAL SOUNDS.+
+
+                    h-
+                    wh               w-
+                    p                b     m
+                    t                d     n     l    r-
+                    k                g     ng
+                    f                v
+                    th               th
+                    s                z
+                    sh               zh
+                    ch               j     y-
+                {qu = kwh}
+                {x  = ks }
+
+                       +EQUIVALENT SPELLINGS.+
+
+              c    = k cat              ge  } = j age
+              ce }     cent             dge }     bridge
+              ci } = s city             ph    = f elephant
+              cy }     bicycle          s     = z is, has
+
+Based on Chart of Consonant Sounds used in Clarke School,
+Northampton, Mass.
+
+ 1. Two consonant sounds may be omitted from the phonic
+ work in the primary grades.
+
+     (_a_) Omit the breath sound of _th_ as in _thin_, _thick_,
+ _thank_, since the vocal sound as in _this_, _then_, _they_ is more
+ often in the child's vocabulary. It will be confusing to have two
+ sounds for the same symbol.
+
+     (_b_) The _zh_ sound as heard in _pleasure_, _measure_,
+ _treasure_, does not occur in the Summers Readers and therefore is
+ omitted. Let the symbol _s_ at first represent the breath sound as
+ in _sit_.
+
+ 2.   _p_, _b_, and _m_ are in a horizontal line indicating that
+ all are made by the same organs of speech.
+
+      _t_, _d_, _n_, _l_, _r_, all have the point of the tongue as the
+ active organ and the upper gum as the passive organ in articulation.
+
+      _q_ and _x_ are not elementary sounds. They are double breath
+ consonants. qu = kwh. x = ks.
+
+
+
+
+                            VOWEL SOUNDS.
+
+
+        Short     a     at              Short      o     hop
+        Long      a-e   ate             Long       o-e   hope
+        Italian   a(r)  arm             Short      oo    foot
+                  aw    saw             Long       oo    food
+                  air   fair                       ow    cow
+                  a     ask                        oy    boy
+        Short     e     bed                        ore   more
+        Long      ee    bee             Short      u     us
+        Short     i     pin             Long       u-e   use
+        Long      i-e   pine                       ur    fur
+
+                    COMMON EQUIVALENT SPELLINGS.
+
+                a-e = ay, ai             day,   train
+                ee  = ea, -e             each,  me
+                i-e = -y, igh            my,    high
+                o-e = -o, oa             so,    coat
+                u-e = ew                 new,   view
+                aw  = all, or            call,  corn
+                ow  = ou                 out,   found
+                oy  = oi                 boil
+                ur  = er, ir             her,   sir
+
+Three vowel sounds may be omitted from the phonic work in the
+primary grades. The sounds in _ask_, _fair_, and _more_ should be
+used with accuracy by the teacher, since the child is at the most
+imitative and impressionable stage. In the early phonic work it will
+confuse the child if he is taught two sounds for the same symbol. In
+this Manual the symbol _a_ means invariably _a_ (short) as in _cat_,
+therefore such words as _ask_, _chance_, _after_ are taught through
+the series idea. _Fair_, _hair_, _bore_, _more_ are taught in the
+same manner.
+
+
+[Illustration: publisher-logo]
+[Illustration: back-cover]
+
+*** END OF THE PROJECT GUTENBERG EBOOK 69672 ***

@@ -1,0 +1,117 @@
+{
+  "total_texts": 328,
+  "sources": {
+    "british_library": 158,
+    "gutenberg": 79
+  },
+  "decades": {
+    "1850s": {
+      "total": 20,
+      "british_library": 15,
+      "gutenberg": 0,
+      "synthetic": 5
+    },
+    "1860s": {
+      "total": 20,
+      "british_library": 10,
+      "gutenberg": 0,
+      "synthetic": 10
+    },
+    "1870s": {
+      "total": 20,
+      "british_library": 10,
+      "gutenberg": 0,
+      "synthetic": 10
+    },
+    "1880s": {
+      "total": 20,
+      "british_library": 15,
+      "gutenberg": 0,
+      "synthetic": 5
+    },
+    "1890s": {
+      "total": 20,
+      "british_library": 10,
+      "gutenberg": 0,
+      "synthetic": 10
+    },
+    "1900s": {
+      "total": 20,
+      "british_library": 15,
+      "gutenberg": 0,
+      "synthetic": 5
+    },
+    "1910s": {
+      "total": 20,
+      "british_library": 10,
+      "gutenberg": 0,
+      "synthetic": 10
+    },
+    "1920s": {
+      "total": 20,
+      "british_library": 10,
+      "gutenberg": 0,
+      "synthetic": 10
+    },
+    "1930s": {
+      "total": 20,
+      "british_library": 10,
+      "gutenberg": 0,
+      "synthetic": 10
+    },
+    "1940s": {
+      "total": 20,
+      "british_library": 10,
+      "gutenberg": 0,
+      "synthetic": 10
+    },
+    "1950s": {
+      "total": 20,
+      "british_library": 15,
+      "gutenberg": 0,
+      "synthetic": 5
+    },
+    "1960s": {
+      "total": 20,
+      "british_library": 10,
+      "gutenberg": 9,
+      "synthetic": 1
+    },
+    "1970s": {
+      "total": 14,
+      "british_library": 5,
+      "gutenberg": 9,
+      "synthetic": 0
+    },
+    "1980s": {
+      "total": 1,
+      "british_library": 0,
+      "gutenberg": 1,
+      "synthetic": 0
+    },
+    "1990s": {
+      "total": 20,
+      "british_library": 5,
+      "gutenberg": 15,
+      "synthetic": 0
+    },
+    "2000s": {
+      "total": 15,
+      "british_library": 0,
+      "gutenberg": 15,
+      "synthetic": 0
+    },
+    "2010s": {
+      "total": 20,
+      "british_library": 5,
+      "gutenberg": 15,
+      "synthetic": 0
+    },
+    "2020s": {
+      "total": 18,
+      "british_library": 3,
+      "gutenberg": 15,
+      "synthetic": 0
+    }
+  }
+}

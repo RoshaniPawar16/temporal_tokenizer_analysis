@@ -1,0 +1,119 @@
+[
+  {
+    "record_id": "placeholder_1850s",
+    "title": "Placeholder text for 1850s",
+    "date": "1850-1859",
+    "text": "Sample historical text from the 1850s period.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8,
+    "place": "London"
+  },
+  {
+    "record_id": "placeholder_1860s",
+    "title": "Placeholder text for 1860s",
+    "date": "1860-1869",
+    "text": "Sample historical text from the 1860s period.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8,
+    "place": "London"
+  },
+  {
+    "record_id": "placeholder_1870s",
+    "title": "Placeholder text for 1870s",
+    "date": "1870-1879",
+    "text": "Sample historical text from the 1870s period.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8,
+    "place": "London"
+  },
+  {
+    "record_id": "placeholder_1880s",
+    "title": "Placeholder text for 1880s",
+    "date": "1880-1889",
+    "text": "Sample historical text from the 1880s period.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8,
+    "place": "London"
+  },
+  {
+    "record_id": "placeholder_1890s",
+    "title": "Placeholder text for 1890s",
+    "date": "1890-1899",
+    "text": "Sample historical text from the 1890s period.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8,
+    "place": "London"
+  },
+  {
+    "record_id": "placeholder_1950s",
+    "title": "Placeholder text for 1950s",
+    "date": "1950-1959",
+    "text": "Sample historical text from the 1950s period.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8,
+    "place": "London"
+  },
+  {
+    "record_id": "placeholder_1960s",
+    "title": "Placeholder text for 1960s",
+    "date": "1960-1969",
+    "text": "Sample historical text from the 1960s period.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8,
+    "place": "London"
+  },
+  {
+    "record_id": "placeholder_1970s",
+    "title": "Placeholder text for 1970s",
+    "date": "1970-1979",
+    "text": "Sample historical text from the 1970s period.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8,
+    "place": "London"
+  },
+  {
+    "record_id": "placeholder_1980s",
+    "title": "Placeholder text for 1980s",
+    "date": "1980-1989",
+    "text": "Sample historical text from the 1980s period.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8,
+    "place": "London"
+  },
+  {
+    "record_id": "placeholder_1990s",
+    "title": "Placeholder text for 1990s",
+    "date": "1990-1999",
+    "text": "Sample historical text from the 1990s period.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8,
+    "place": "London"
+  },
+  {
+    "record_id": "placeholder_2000s",
+    "title": "Placeholder text for 2000s",
+    "date": "2000-2009",
+    "text": "Sample historical text from the 2000s period.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8,
+    "place": "London"
+  },
+  {
+    "record_id": "placeholder_2010s",
+    "title": "Placeholder text for 2010s",
+    "date": "2010-2019",
+    "text": "Sample historical text from the 2010s period.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8,
+    "place": "London"
+  },
+  {
+    "record_id": "placeholder_2020s",
+    "title": "Placeholder text for 2020s",
+    "date": "2020-2029",
+    "text": "Sample historical text from the 2020s period.",
+    "language_1": "English",
+    "mean_wc_ocr": 0.8,
+    "place": "London"
+  }
+]

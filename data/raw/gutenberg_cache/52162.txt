@@ -1,0 +1,799 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 52162 ***
+
+Transcriber's Note:
+
+  Underscores "_" before and after a word or phrase indicate _italics_
+    in the original text.
+  Equal signs "=" before and after a word or phrase indicate =bold=
+    in the original text.
+  Small capitals have been converted to SOLID capitals.
+  Illustrations have been moved so they do not break up paragraphs.
+  Typographical errors have been silently corrected but other variations
+    in spelling and punctuation remain unaltered.
+  Footnotes are all journal references, so they have been moved to the
+    end of the text.
+  In the original text, the volume number for the journals was double
+    underlined for emphasis. In this book this has been replaced with
+    the use of italics.
+
+
+
+
+                  On the Existence of Active Oxygen.
+
+                                Thesis
+                    presented for the attainment of
+                  the degree of Doctor of Philosophy
+                   at the Johns Hopkins University.
+
+                                  by
+                           Edward H. Keiser.
+
+
+                              Baltimore,
+                                 1884
+
+
+
+
+On the Existence of Active Oxygen.
+
+
+That a gaseous element can exist in an allotropic condition was first
+clearly shown by a careful study of the properties of ozone. Although
+discovered by Schönbein in 1840, chemists were for a long time unable
+to determine its true nature, and it was not until seven years later
+that Marignac[1] succeeded in proving that it was oxygen in an
+allotropic condition. Marignac’s work was confirmed by De la Rive, and
+subsequently the elaborate researches of Andrews and Tait, and Soret,
+as well as those of von Bato and Claus have established beyond all
+question that ozone is an allotropic modification of oxygen, and that
+its density is one and a half times that of ordinary oxygen.
+
+The possibility of the existence of allotropic modifications of oxygen
+having been thus established it is not surprising that attempts should
+have been made to find other forms in which this element might occur.
+As early as 1855 Houzeau[2] stated that when barium superoxide was
+decomposed with concentrated sulphuric acid, at low temperatures, a
+colorless gas was evolved which oxidized metals and ammonia. It had a
+penetrating odor and possessed the power of bleaching litmus paper,
+and liberated iodine from potassium iodide. By heating the gas to a
+temperature of 75°C it was completely converted into ordinary oxygen.
+He calls the gas _nascent_ oxygen and further states that it is
+probable that whenever oxygen is set free from any of its compounds at
+low temperatures it is in the nascent or _active_ state.
+
+Clausius[3] at one time supposed that free atoms of oxygen might exist
+in an uncombined state, and his hypothesis on the nature of ozone
+was that this substance consisted of a mixture of molecules and free
+atoms of oxygen. In a later paper[4], however, he abandoned this view
+and regarded ozone as consisting of one or more atoms of oxygen feebly
+united, (lose verbunden) with molecules of ordinary oxygen.
+
+The idea that a third form of oxygen existed also obtained support from
+the fact that certain organic substances when exposed to the light in
+the presence of oxygen or air, acquire oxidizing properties. In 1850
+Schönbein[5] stated that ether turpentine, and oil of lemons if allowed
+to stand in diffused light in contact with the air acquires the
+power of decomposing potassium iodide, and decolorizing indigo. In a
+subsequent paper[6] he shows that methyl and ethyl alcohols, tartaric
+and citric acids and even sulphuretted and arsenuretted hydrogen
+in the presence of sun light can decolorize indigo. These studies
+led Schönbein to publish a theory on the different modifications of
+oxygen. In this paper[7] he states that besides ordinary oxygen there
+are two other conditions in which it may exist one of these is ozone,
+or positively electrified oxygen, the other _antozone_ or negatively
+electrified oxygen. The union of ozone and antozone gives ordinary
+oxygen. He also stated that antozone was formed by the action of light
+on turpentine and air, and subsequently in 1862[8] he claimed that
+antozone was identical with the gas obtained when barium superoxide
+is treated with acids. Meissner[9] also supported the views of
+Schönbein and claimed that antozone was formed in two ways:--1st, By
+treating barium dioxide with concentrated sulphuric acid, 2nd, By the
+electrification of oxygen; being produced simultaneously with the ozone.
+
+These statements remained unquestioned for a number of years and are
+found in the text books of the period, (for example Graham-Otto, and
+Gorup-Besauez) but in 1870 Engler and Nasse[10] undertook a thorough
+investigation to determine whether antozone existed. By treating
+barium dioxide with strong sulphuric acid they find a gas to be given
+off which is a mixture of ozone and hydrogen dioxide, and they also
+show that the stronger the acid the greater the quantity of ozone
+produced. Secondly, Meissner had stated that by the electrification of
+oxygen ozone and antozone were formed. The evidence of the existence
+of antozone being this; when the ozonized oxygen was passed through a
+solution of potassium iodide to destroy the ozone, the residual gas
+gave white fumes when brought into contact with water, and after a time
+hydrogen dioxide could be detected in the water. Schönbein and Meissner
+held that the ozone having been destroyed by the potassium iodide
+the antozone passed on and oxidized the water to hydrogen dioxide.
+Now Engler and Nasse show that when ozone is decomposed by easily
+oxidisable substances in the presence of water hydrogen dioxide also is
+formed, and it was the vapor of this compound which had been regarded
+as antozone. It is known that ozone cannot oxidize water, but that it
+is to a slight extent oxidized when other oxidisable substances are
+present is not surprising, as other phenomena of a similar kind are
+known. Thus when nitric acid acts on an alloy of silver with gold or
+platinum, containing a certain proportion of silver, some of the gold
+or platinum are dissolved although by themselves they are insoluble.
+When ammonia burns some of the nitrogen as well as the hydrogen is
+oxidized. Engler and Nasse therefore conclude that there is no basis
+for the assumption of a third form of oxygen having the properties
+attributed to antozone.
+
+Berthelot[11] and Houzeau[12] conclude from their investigations that
+the oxidizing properties which turpentine and other organic compounds
+acquire under certain conditions is due to the formation of unstable
+oxygenated compounds which readily decompose giving up oxygen.
+
+Fudakowski[13] has described experiments showing that benzene can become
+active, i.e. acquire oxidizing properties, but states that he is unable
+to explain the phenomenon. Loew[14], however, believes active turpentine
+to contain atomic oxygen or antozone in solution.
+
+After Engler and Nasse had demonstrated the nonexistence of antozone
+all discussion on the subject ceased for a number of years, and it
+was not until 1878 that Hoppe-Seyler[15] again opened the question. In
+studying the processes of putrefaction he observed that free hydrogen
+is given off in those cases in which oxygen is not present, and that
+whenever oxygen has access to decaying liquids, not only is all the
+hydrogen oxidized but energetic oxidation processes are observed as
+well. The simplest explanation of this seemed to be that the nascent
+hydrogen has the power of splitting up the oxygen molecule, uniting
+with one atom and setting the other free, and these free atoms he
+imagined brought about the strong oxidations which take place in
+decaying bodies.
+
+To test this hypothesis he made experiments with palladium hydrogen.
+Graham has described the energetic reducing power of this compound but
+that it can also cause oxidations Hoppe-Seyler showed by bringing some
+strips of palladium charged with hydrogen into a solution of indigo
+in the presence of air. The solution soon became yellow and after a
+time the indigo was completely destroyed. If palladium hydrogen be
+brought into a neutral solution of potassium iodide and starch, the
+liquid becomes blue in a few minutes, after which the starch is slowly
+destroyed. In a similar way benzene was oxidized to phenol. “These
+experiments and others of a similar nature,” he asserts, “admit of no
+explanation other than that the active hydrogen renders the oxygen
+active, and since the former unites with oxygen we cannot well conceive
+of the process without supposing that the hydrogen in uniting with one
+atom of the molecule O_{2} sets the remaining atom free, thus making it
+active.” “Just as the hydrogen atom cannot exist in a free state so the
+active oxygen, if no oxidizable material is present, unites with water
+to form hydrogen dioxide, or with inactive oxygen to form ozone.”
+
+This theory has been taken up and developed by Baumann, who in 1881
+published a paper[16] entitled “Contribution to the knowledge of Active
+Oxygen.” The paper begins with the statement that besides ordinary
+inactive oxygen and ozone there is a third modification known as
+active or nascent oxygen. He states that this active oxygen cannot
+be isolated, and its formation can only be recognized by its action
+on other bodies. “Active oxygen (O) is the most powerful oxidizing
+substance known and can unite with inactive oxygen (O_{2}) to form
+ozone (O_{3}). The production of ozone is always preceded by the
+formation of active oxygen,” but he states “active oxygen can be formed
+under conditions when no ozone can be formed, this is the case when
+easily oxidized substances are in contact with the active oxygen in
+such a way that the latter is completely consumed in oxidizing those
+substances.” “Thus, for instance, ozone is formed when oxygen is
+rendered active by the slow combustion of moist phosphorus in air,
+but no ozone is formed if the atmosphere surrounding the phosphorus
+contains the vapor of alcohol, ether and similar substances.” The
+fallacy of this reasoning becomes apparent on referring to the work of
+Müller[17] on the luminosity of phosphorus who shows that substances
+which prevent the luminosity also prevent its oxidation and if the
+phosphorus is not oxidized we have no reason for assuming the formation
+of active oxygen.
+
+He then compares active oxygen with the antozone of Schönbein and says
+that several of the properties of antozone can be ascribed to active
+oxygen above all that property of antozone of oxidizing water to
+hydrogen dioxide. The only difference between the two being that active
+oxygen has but a momentary existence while antozone was supposed to be
+capable of isolation.
+
+Baumann then describes results obtained by himself which enable us to
+clearly distinguish between active oxygen and ozone. Starting from
+the observation of Remsen[18] and Southworth that carbon monoxide, at
+ordinary temperatures, is not oxidized by ozone, he suspected that
+active oxygen would readily effect its oxidation. Palladium hydrogen
+was therefore sealed up in a capacious glass tube with a few cubic
+centimeters of clear lime water and a mixture of carbon monoxide and
+oxygen free from carbon dioxide. At first the lime water remained
+clear, but after several hours a cloudiness in the lime water became
+visible and after several days a precipitate of calcium carbonate
+settled to the bottom of the tube. He then repeated the experiment in a
+modified form. From a gasometer, containing a mixture of three volumes
+of oxygen and one of carbon monoxide free from carbon dioxide a slow
+current of gas was passed, first into a wash bottle containing a clear
+solution of baryta water, then into a tube containing palladium
+hydrogen. Then the gases were again passed through a wash bottle
+containing baryta water. After the current had been passing for four
+hours, the first baryta water was still perfectly clear, but the
+second showed a distinct cloudiness of barium carbonate, which slowly
+increased in the course of twelve hours. The baryta water in the first
+wash bottle remained clear even to the end of the experiment.
+
+The different behavior of ozone and active oxygen was then shown by the
+following experiment:--“A slow current of air free from carbon dioxide
+was passed into a flask containing moist phosphorus, from there into a
+second flask where the ozonized air came in contact with a somewhat
+slower current, consisting of a mixture of three volumes of oxygen to
+one of carbon monoxide, carefully purified from carbon dioxide. From
+the second flask the gases were passed through a clear solution of
+baryta water.” “After all carbon dioxide had been removed from the
+apparatus the baryta water remained perfectly clear (völlig klar) after
+the gases had passed through for six hours.” “But, on the other hand,
+if the mixture of carbon monoxide and oxygen was passed into the first
+flask, containing the moist phosphorus and in which according to our
+theory active oxygen must occur, then the result is quite different,
+the baryta water becomes cloudy in a short time and in the course
+of an hour there is formed an _abundant precipitate_ (‘reichlicher
+Niederschlag’) of barium carbonate.”
+
+From these results he concludes that active oxygen may be detected
+by its power of oxidizing carbon monoxide, and states that this fact
+enables us to decide whether in oxidations effected by ozone there
+occur free atoms of oxygen.
+
+Closely related to these experiments of Baumann are those of Professor
+Remsen[19] on the transformation of ozone into oxygen by heat. Now if
+atoms of oxygen can exist in the free state, it is difficult to see why
+transformation some of the oxygen atoms should not be in the free
+condition, and the statements of Baumann being true, if carbon
+monoxide is also present this should be oxidized. To test the question
+a gasometer was filled with carbon monoxide made from potassium
+ferrocyanide and sulphuric acid. Before entering the gasometer the
+gas was purified by passing through four wash bottles containing
+concentrated sodium hydroxide. Another gasometer was filled with pure
+oxygen. The ozone was produced by the silent electric discharge in a
+Wright’s tube connected with a Stoltz electrical machine. In detail the
+experiments were conducted as follows:--
+
+A slow current of oxygen from the gasometer was passed through three
+woulfe bottles containing a concentrated solution of caustic soda and
+then into the ozonizer, the ozonized oxygen was then passed into a U
+tube, rubber joints between the ozonizer and U tube were found to be
+rapidly perforated and were replaced by a device of this kind:--
+
+[Illustration]
+
+A, the tube from the ozonizer was introduced several inches into B,
+the tube leading to the U tube, and the joint C was closed by a cement
+composed of beeswax and paraffin. The carbon monoxide was passed
+through wash bottles containing caustic soda and finally through baryta
+water. The two gases were then brought together in a U tube placed
+in an air bath. After leaving the U tube the gases passed through
+perfectly clear lime water. Under these conditions the current of the
+gases was continued for an hour, and no precipitate was formed in the
+lime water.
+
+“Separate experiments were made for the purpose of determining how
+readily the ozone was destroyed, and it was found that, even when the
+thermometer in the U tube indicated a temperature considerably below
+that stated as the decomposition temperature of ozone, and when highly
+ozonized oxygen was certainly entering the U tube, no ozone passed out,
+whether carbon monoxide was present or not in the tube at the same
+time.” The experiment as thus described was repeated several times,
+but always with the same result. “One modification of the experiment
+should also be mentioned in this connection. In order to get as good
+ozone as possible the ionizer was filled with oxygen and the current
+of gas stopper, the silent discharge was allowed to continue for a
+few minutes, then the gas was slowly passed into the heated U tube
+containing carbon monoxide. This interrupted current of oxygen was
+continued for about an hour but no oxidation of carbon monoxide to
+dioxide could be detected.” The conclusion that must necessarily be
+drawn from the result is that if carbon monoxide is a test for active
+oxygen, then when ozone is decomposed by heat there is no nascent or
+active oxygen formed.
+
+The negative result obtained in the preceding investigation, naturally
+called in question the accuracy of Baumann’s statements in regard to
+the formation of active oxygen by the slow oxidation of phosphorus,
+and of palladium hydrogen in the presence of oxygen and water. The two
+experiments upon which he had based his conclusion have been described
+on pages 16 and 18. The first of these was that palladium hydrogen
+in the presence of oxygen and water effected the oxidation of carbon
+monoxide, the second, that when carbon monoxide was brought in contact
+with moist phosphorus and air oxidation was observed.
+
+In regard to the first of these experiments Traube[20] has carefully
+investigated what takes place when palladium hydrogen is allowed to
+remain in contact with water and oxygen. Hoppe-Seyler had noticed
+that under these conditions small quantities of hydrogen dioxide were
+formed, but he attributed this to the union of the active oxygen
+with the water. Traube, on the other hand, finds that in the formation
+of hydrogen dioxide under these circumstances there is nothing formed
+which has oxidizing properties, not even indigo sulphuric acid is
+oxidized. He shows by direct experiments that nascent hydrogen can not
+by its action on oxygen produce active oxygen or ozone. He finds the
+action of palladium hydrogen to be analogous to that of zinc and other
+metals, which when allowed to oxidize slowly in contact with air and
+water give rise to the formation of hydrogen dioxide. The process is to
+be regarded rather as a reduction of molecules of oxygen than as an
+oxidation of water. Traube represents the action by the following
+equations:--
+
+  +--------------------+--------+      OH
+  |                  OH|H      O|     /
+  |   Zn               |        | = Zn    + H_{2}O_{2}
+  |   Zn      +      OH|H   +  O|     \
+  +--------------------+--------+      OH
+
+  +--------------------+----------+
+  |  Pd_{2}H         OH|H         |
+  |            +       |  + O_{2} | = 4 Pd + 2 H_{2}O + H_{2}O_{2}
+  |  Pd_{2}H         OH|H         |
+  +--------------------+----------+
+
+He proves by direct experiments that no active oxygen is formed
+during this process, and points out that the oxidations observed by
+Hoppe-Seyler and Baumann must have been brought about by the hydrogen
+dioxide. But this would not account for the oxidation of carbon
+monoxide, for it has been previously shown by Remsen[21] that hydrogen
+dioxide cannot oxidize carbon monoxide, not even when it is heated
+to its point of decomposition. Traube[22] therefore repeats Baumann’s
+experiment, he finds that palladium hydrogen in the presence of water
+and oxygen does oxidize carbon monoxide; but as he had shown that
+no active oxygen was formed during the process, and as the hydrogen
+dioxide could not cause the oxidation, he concluded that the palladium
+itself must play an important role in the reaction. By further
+experiments he soon became convinced that there are two stages in the
+process. 1st the palladium hydrogen acting on water and oxygen forms
+hydrogen dioxide, 2nd the hydrogen dioxide in the presence of palladium
+oxidizes the carbon monoxide. Traube[23] introduced into a glass flask
+containing carbon monoxide a dilute solution of hydrogen dioxide and
+a small piece of palladium foil, previously ignited, the action was
+allowed to continue for 22 hours after which the CO was replaced by
+air free from carbon dioxide. After leaving the flask the gas passed
+through a solution of barium hydroxide; an abundant precipitate was
+formed, showing that in this case the quantity of carbon dioxide formed
+was greater than in the first experiment, in which he used palladium
+hydrogen, water, oxygen and carbon monoxide.
+
+Traube’s conclusion is as follows:--
+
+“The carbon dioxide obtained in Baumann’s experiments is not formed
+during the oxidation of the hydrogen of the palladium hydrogen, (there
+being formed by this action merely hydrogen dioxide and palladium free
+from hydrogen) but by the combined action of these last two substances
+on carbon monoxide.” “Therefore, the proof is given that the act of
+slow combustion (Autoxidation) has not in itself the power of making
+oxygen active.”
+
+The conclusion reached by Traube was tested by Professor Remsen and
+myself in the following way: A current of carbon monoxide was passed
+through several wash bottles containing solutions of caustic soda,
+then through a wash bottle containing clear baryta water, then into a
+flask containing a solution of hydrogen dioxide, containing a slight
+excess of hydrochloric acid. The flask also contained a small piece
+of palladium foil free from hydrogen. After leaving the flask the gas
+passed through a solution of baryta water, which was protected from the
+air by a U tube containing solid KOH. It was only necessary to pass the
+carbon monoxide through for a very short time to obtain an abundant
+precipitate of barium carbonate. We also noticed that under these
+conditions the palladium foil was dissolved.
+
+From these experiments it is clear that the oxidation phenomena which
+Hoppe-Seyler and Baumann attributed to active oxygen are really due to
+the combined action of palladium and hydrogen dioxide, and to suppose
+that atomic oxygen exists in the free state at any time during the
+process is entirely gratuitous.
+
+It remained to test the second of Baumann’s statements; namely that
+carbon monoxide in the presence of moist phosphorus and air is oxidized
+to carbon dioxide by the active oxygen formed by the slow combustion
+of the phosphorus. Leeds[24] also has on record an experiment on this
+subject, in which he claims that under these conditions oxidation takes
+place. In taking up the subject, therefore, Prof. Remsen[25] and myself
+have taken the greatest care to avoid all sources of error. We tried
+the effects of passing air alone freed from carbon dioxide over moist
+phosphorus and then into clear baryta water, Baumann[26] states that
+this can be done, and the baryta water remains perfectly clear, even if
+the current of air is passed for six hours. We obtained a precipitate
+immediately. Thinking this might be caused by the white vapors which
+are formed during the process, we passed the gas after its exit from
+the vessel containing the phosphorus through a layer of previously
+ignited asbestos. The layer of asbestos was between two and three feet
+in length and the air after having traversed it no longer contained
+any white fumes. From the asbestos tube the air passed into a solution
+of clear baryta water. A precipitate was formed at once and increased
+in quantity the longer the current continued. “It was tested for
+phosphoric acid and phosphorus in general but not a trace could
+be detected. The current of air over the phosphorus was continued
+for several days in order to obtain enough of the precipitate for
+examination and analysis. It proved to be nothing but barium carbonate.”
+
+“The carbon dioxide must have come from one of two sources, either
+from some carbonaceous substance contained in our phosphorus, or as
+the result of the action of ozone on the cork stoppers used to make
+connections. The use of rubber was avoided as far as possible, and
+every precaution was taken as in the earlier experiments on the carbon
+monoxide and ozone. It did not appear improbable therefore that the
+difficulty arose from the use of impure phosphorus. Phosphorus was,
+therefore, obtained from as many different sources as possible, and
+with each of these the above described experiment was repeated, using
+the same apparatus. In every case the precipitate of barium carbonate
+was obtained and as far as could be estimated in about the same
+quantity. Attempts were then made to purify the phosphorus. One
+specimen was placed in hot water under the receiver of an air pump and
+the air exhausted, for the purpose of recovering any gases which might
+be contained in the phosphorus. Other specimens were distilled in an
+atmosphere of pure hydrogen and the vapor condensed in cold water. No
+matter what process of purification had been adopted the phosphorus
+acted in the same way afterwards as before.”
+
+“We then constructed an apparatus in which the gases could at no point
+come in contact with cork stoppers or rubber joints. This consisted of
+a flask of from three to four litres capacity, provided with a doubly
+perforated cork stopper. Through this there passed one glass tube
+reaching to the bottom of the flask, and another reaching only half
+way. Outside the flask the shorter tube was connected with the wash
+bottles used to purify the air from carbon dioxide, while the longer
+tube was bent twice at right angles, and passed through the stopper of
+a U tube about 8 in. high. In the flask there were placed two or three
+sticks of phosphorus, each three or four inches long, and enough
+distilled water to somewhat more than fill the neck when the flask was
+inverted. The U tubes were filled with moistened asbestos which had
+been previously ignited. There was then added some mercury, so that
+when the tubes were inverted in which position the entire apparatus
+was placed when in use the mercury covered the corks with a layer from
+three quarters to an inch in thickness.
+
+The last U tube was connected with the vessel containing the baryta
+water by means of a mercury joint. The baryta water was protected from
+the action of the air by placing before it a small U tube containing
+solid potassium hydroxide, this was in connection with an aspirator.
+Before connecting the bulbs containing the baryta water, air free from
+carbon dioxide was drawn through the apparatus. On now connecting the
+baryta water bulbs no precipitate was formed. About one third of the
+air in the flask was replaced by pure carbon monoxide, the mixture was
+allowed to remain several hours in contact with the moist phosphorus
+and then drawn through the baryta water bulbs. No precipitate was
+formed. This experiment was frequently repeated with the same result.”
+
+“In some cases the air & carbon monoxide were drawn together slowly for
+several hours over the phosphorus, but this made no difference in the
+result.”
+
+Having found, therefore, no evidence of the oxidation of carbon
+monoxide, we have no right to assume that when phosphorus oxidizes
+slowly in the presence of water and air that there is formed an active
+condition of oxygen distinct from ozone.
+
+To this paper both Baumann[27] and Leeds[28] replied. The former
+recognizing the necessity of avoiding all connections of rubber or
+organic matter, describes a new form of apparatus, in which the joints
+are all made of ground glass. With this new apparatus he finds that
+he can pass air over phosphorus at the rate of from two to three
+bubbles per second, then through 10 cubic centimetres of water, and
+finally into baryta water, and claims that only a slight turbidity of
+phosphate and phosphite of barium is formed in the course of several
+days! This statement to us is incomprehensible and as will be evident
+from what follow, unless Baumann had phosphorus absolutely free from
+carbon (of which he makes no mention and which as far as we know it is
+impossible to obtain) he has described an impossibility. On introducing
+100 cubic centimetres of carbon monoxide into the air every two hours
+he soon obtained a distinct cloudiness which constantly increased,
+until in 10 hours the inlet tube in the baryta water became stopped up
+and the experiment was discontinued. He then determined the percentage
+of oxidation; his results are as follows--
+
+700 cubic centimetres of carbon monoxide mixed with enough air to
+require 15 hours to pass through the apparatus gave 366 milligrams
+CO_{2} or 2.6% of oxidation. In another experiment a mixture consisting
+of thirty litre of air and 2.45 litres of carbon monoxide, requiring 12
+hours in passing the phosphorus, gave 466 milligrams of CO_{2}, or 1.3%
+of the original quantity of monoxide was oxidized.
+
+Baumann, in the arrangement of his apparatus, has taken no precautions
+to prevent the air from coming in contact with organic connections
+before it is introduced into the flask containing the phosphorus. Now
+Karsten[29] has shown that air alone when it comes in contact with the
+organic matter of corks and connectors forms carbon dioxide; it is,
+therefore, highly probable that in the course of from 12 to 15 hours a
+portion of his precipitate was due to this cause. The reminder came, as
+will appear presently, from carbon contained in the phosphorus.
+
+Leeds conducted his experiment as follows:--A ten litre flask provided
+with a glass stopper, was filled with a mixture of equal parts of
+carbon monoxide and air, and allowed to stand in contact with moist
+phosphorus for six days. The glass stopper was then removed and
+replaced by a cork; and the mouth of the vessel being placed under
+mercury, the gases were displaced and passed through baryta water. A
+precipitate containing 15.5 mg of carbon dioxide was obtained. It is
+evident that in the course of six days, in a tightly closed vessel, the
+oxygen of the air must have been completely used up so that the mixed
+gases were necessarily under diminished pressure. Then in taking
+out the glass stopper for the purpose of introducing the cork, no
+precautions were taken to prevent the access of ordinary air, and a
+considerable volume of the air of the laboratory must have entered;
+enough, certainly, to account for some of the precipitate he obtained.
+The rest of the carbon dioxide must have come as in Baumann’s
+experiment from the oxidation of carbon contained in the phosphorus.
+
+That ordinary commercial sticks of phosphorus contain carbon was shown
+by us in the following way[30]:--Air was passed from a gasometer into a
+hard glass tube containing copper oxide heated to redness, represented
+by K in the drawing. Then through a series of wash bottles A, B, C, so
+constructed that the connecting tubes were fitted into each other by
+means of ground glass joints. A and B contained a concentrated solution
+of caustic soda, C a solution of baryta water. The air then passed into
+an ordinary bell jar, having a capacity of about a litre and a quarter.
+This was held in position on mercury contained in a crystallizing dish.
+The inlet tube was bent downward into a small dish containing the
+phosphorus, represented by H in the figure. The gas after leaving the
+bell jar passed through two wash bottles D and E, similar to A, B, C. D
+contained 30-40 c.c. of ordinary distilled water. E contained a clear
+solution of baryta water, and was connected with a tube containing
+solid caustic potash to protect it from the air. The outlet tube from
+the wash bottle C is bent so as to pass beneath the edge of the bell
+jar, then up into the closed space above the mercury, and then down
+towards the phosphorus. A long funnel tube J served to introduce or
+remove water from the dish containing the phosphorus. The air therefore
+after having entered the tube K came at no point in contact with
+organic matter, and yet we found that after all ordinary air had been
+displaced by purified air, and clear baryta water introduced into
+the wash bottle E, a precipitate was found. Ten litres of air were
+sufficient to cause a distinct turbidity, while 20 to 30 gave a
+precipitate. As there is no possible source of error it follows
+that the carbon dioxide must have come from the oxidation of carbon
+contained in the phosphorus.
+
+[Illustration]
+
+That carbon should be present in phosphorus is not surprising
+considering its method of manufacture. Whether the carbon existing in
+the phosphorus is in chemical combination or not we are unable to say.
+The specimens of phosphorus used by us were perfectly homogenous. There
+was no evidence of the presence of particles in them, and the solution
+in carbon bisulphide was perfectly clear, and on standing nothing
+whatever was deposited. Even distilled phosphorus acted in the same
+way, showing that this also contained carbon.
+
+A simple way to show the presence of carbon in any sample of phosphorus
+is to burn a small piece of the latter in a small porcelain dish,
+floating in water under a bell jar fitted with a glass stop cock. After
+the combustion is over the vessel is allowed to stand some time until
+the white fumes have entirely disappeared. The gas is then passed
+through water and finally into baryta water where a precipitate is
+invariably formed. The air in the bell jar must of course be free from
+carbon dioxide. As the bell jar is only lifted far enough to permit the
+introduction of the dish with the phosphorus, and this operation is
+performed instantaneously, the amount of carbon dioxide thus introduced
+can only be infinitesimal.
+
+We now made some experiments with the object of determining whether
+changes in the amount of phosphorus exposed in the bell jar F of our
+ozonizing apparatus had any effect upon the amount of barium carbonate
+formed in the wash bottle E. We found that the amount of precipitate is
+plainly influenced by the rate of passage of the gases, the temperature
+and the amount of phosphorus exposed, but that if the temperature is
+between 20 and 25°C, the rate of passage of the air about two or three
+bubbles per second, and the amount of phosphorus exposed from 20 to 30
+grams a slight precipitate is always formed by 10 litres of air, and
+that 25 to 30 litres give a decided precipitate.
+
+Having therefore demonstrated the presence of carbon in all the
+specimens of phosphorus at our disposal, and knowing that purified air
+alone when passed over phosphorus would give a precipitate when
+passed into baryta water, we next determined whether if carbon
+monoxide being present in the air passing over the phosphorus,
+and all other conditions the same, the amount of precipitate is
+increased. For this purpose parallel experiments under as nearly
+the same conditions as possible were made one with air alone, the
+other with air and carbon monoxide. In the first experiment about
+25 litres of air were passed through the apparatus, the conditions
+being carefully noted. The wash bottle containing the precipitate
+was removed at the end of the operation, instantly stoppered and set
+aside for comparison.
+
+The water was then removed from the wash bottle D and replaced by fresh
+distilled water, a new bottle attached in the place of E and after
+passing about a litre of pure air through the apparatus, the necessary
+quantity of baryta water filtered rapidly through a plaited filter into
+the wash bottle.
+
+Now the experiment was repeated, with the difference that during the
+passage of twenty-five litres of air, a very slow current of carefully
+purified carbon monoxide (made from pure sulphuric and formic acids)
+was passed through three wash bottles, like those used for the air, and
+containing the same substances, and then into the bell jar containing
+phosphorus and air. The rate of the current was so regulated that
+during the time of the experiment, which varied in different cases
+from three to eight hours, three litres of carbon monoxide were used.
+The same slow formation of a precipitate was noticed when the carbon
+monoxide was used as in the case of air alone. At the end of the
+operation we were unable to distinguish any difference between the
+amounts of the small precipitates formed. They did not appear to be
+as great as that found by Baumann, they were too small to permit of
+accurate filtering and weighing, if we consider the nature of the
+liquid in which they were present.
+
+The only conclusion which we can draw is, as is stated in the first
+paper on this subject, that carbon monoxide is not oxidized by air in
+the presence of moist phosphorus.
+
+That in our first experiments we did not obtain evidence of the
+presence of carbonic of phosphorus is due to the fact that we worked
+with small volumes of the gases. In those cases in which relatively
+large volumes were used the slight cloudiness produced was disregarded
+as the same result was obtained with air alone.
+
+Having, therefore, been unable to obtain any evidence of the
+oxidation of carbon monoxide when phosphorus undergoes slow
+combustion in the presence of air and water, the second and last
+of Baumann’s arguments for the existence of active oxygen becomes
+untenable. Whether oxygen ever does occur in the so called active
+condition still remains to be shown.
+
+That the nascent state of an element should be due to the momentary
+existence of free atoms is entirely hypothetical. Tommasi[31] has
+shown that the properties of nascent hydrogen vary according to the
+method by which it is formed. He regards nascent hydrogen as ordinary
+molecular hydrogen plus varying quantities of heat, and he shows that
+as the heat of the reaction varies so the activity of the hydrogen
+varies. The same is undoubtedly true of oxygen, for it is known that
+oxygen evolved by some reactions is more powerful than by others.
+That we shall ever be able to show that this heat in some cases is
+sufficient to dissociate the molecules of oxygen seems improbable.
+
+Baumann[32] has recently published another paper, but has failed to
+contribute either new facts or ideas on the subject.
+
+
+Estimation of Carbon in Phosphorus.
+
+Having found carbon present in all varieties that we examined,
+we naturally attempted its quantitative determination. Our first
+experiments did not prove successful. Chromic acid was tried,
+but this gave unsatisfactory results for the reason that it was
+impossible to control the action and at the same time secure complete
+oxidation of the phosphorus. With concentrated solutions the action
+is liable to become violent unless the temperature is kept low.
+
+We also arranged an apparatus similar to that used in making
+phosphorus pentoxide on the small scale. The combustion took place
+in a bell jar filled with pure air, and after being thoroughly
+washed the gases were passed through baryta water. The operation was
+imperfect owing to the formation of red phosphorus, and to incomplete
+oxidation.
+
+Finally we succeeded in obtaining satisfactory results by using
+nitric acid of 1.2 sp gr. The phosphorus was oxidized in a retort
+of 500 c.c. capacity. The retort was inclined so that any liquid
+condensing in the neck would run back. A glass tube fitted to the
+neck of the retort by means of gypsum served to convey the evolved
+gases into a wash bottle containing pure water. The latter was
+connected with a combustion tube containing in one end a layer of
+metallic copper about six inches in length, this served to decompose
+the oxides of nitrogen. The remainder of the tube was filled with
+copper oxide, which served to oxidize any carbon compound, which
+might be formed by the oxidation of the phosphorus, to carbon
+dioxide. After leaving the combustion tube the gases passed, first
+through a wash bottle containing water, then into one containing
+clear barium hydroxide, which was protected from the action of the
+air. All joints which were not of ground glass were made by means
+of gypsum. The operation was conducted as follows:--After 200 to
+300 cubic centimetres of nitric acid (sp gr 1.2) and the weighted
+quantity of phosphorus had been introduced into the retort, a slow
+current of air free from carbon dioxide was drawn through the
+apparatus. The tubulus of the retort was then closed by means of a
+glass stopper, the combustion tube containing the metallic copper and
+copper oxide heated to a red heat, and a solution of baryta water
+rapidly filtered into the last wash bottle. The retort was then
+heated gently, after a time a regular evolution of gas takes place,
+and a precipitate gradually forms in the baryta water. At the end
+of the operation, air free from carbon dioxide is again drawn
+through the apparatus to remove all of the oxidation products.
+The precipitate is allowed to settle, the clear liquid is rapidly
+decanted through a filter. The precipitate is then washed, and
+quickly brought upon the filter paper. The filtering is done by means
+of a pump and is very rapid. The precipitate is then dissolved in
+dilute hydrochloric acid and the solution heated to boiling and the
+barium precipitated by sulphuric acid in the usual way. From the
+weight of barium sulphate obtained, the quantity of carbon in the
+phosphorus is readily calculated.
+
+In some instances the experiment was varied by using a large quantity
+of phosphorus and allowing the action to continue for two or three
+hours, then weighing the phosphorus which remained unacted upon. In
+two instances the carbon dioxide was weighed directly by replacing
+the wash bottle containing the baryta water by weighed potash bulbs.
+
+The following are the results obtained
+
+      I.  6.2272 grams Phosphorus gave .0300 gr
+          BaSO_{4} = .0057 grm CO_{2} = .0016 gr C = _.026%C._
+
+     II. 7.9545 grm Phosphorus gave .0324 gr CO_{2}
+         = .0088 gr Carbon = _.111% Carbon_
+
+    III. 8.8041 grm Phosphorus gave .0134 gr CO_{2}
+         = .00365 gr Carbon = _.042% Carbon_
+
+     IV. 9.0650 grm Phosphorus gave .0540 BaSO_{4}
+         = .0101 grm CO_{2} = .00278 gr C = _.031% C._
+
+      V. 16.4633 grm Phosphorus gave .1303 gr
+         BaSO_{4} = .0246 gr CO_{2} = .0067 C = _.041% C._
+
+     VI. 11 grams Phosphorus gave .0929 grams
+         BaSO_{4} = .0175 gr CO_{2} = .00478 C = _.043% C._
+
+
+    Footnotes:
+
+[1] Annales de Chim. et de Phys. _14_-252
+
+[2] Poggendorf. Ann. _95_-484 Journ. f. prakt. Chemie. _65_-499
+
+[3] Pogg. Ann. _103_-644
+
+[4] Pogg. Ann. _120_-250
+
+[5] Journ. f. prakt Chem. _52_-135
+
+[6] Journ f. prakt. Chem. _53_-65
+
+[7] Journ f. prakt. Chem. _77_-129
+
+[8] Journ f. prakt. Chemie _86_-65
+
+[9] Untersuchungen über Sauerstoff. Hanover 1863
+
+[10] Liebig’s Annalen _154_-215.
+
+[11] Annales de Chim. et de Physiologie _3_-58
+
+[12] Compt. Rendus _50_-829
+
+[13] Berichte der Deutschen Chem. Gesellschft. _6_-108
+
+[14] Zeitschrift f. Chemie (1870) _6_-611
+
+[15] Zeitschrift f. Physiol. Chemie _2_-22
+
+[16] Zeitschrft. Physiol Chem. _5_--244
+
+[17] Berichte der Deutsch. Chem. Gesell. _3_-84
+
+[18] Berichte der Deutsch. Chem. Gesell. _8_-1415
+
+[19] American Chemical Journal _4_-50
+
+[20] Berichte d. Deutsch. Chem. Gesell. _15_-2421
+
+[21] Berichte der Deutsch. Chem. Gesell. _15_-222
+     American Chem. Journ. _4_-53
+
+[22] Berichte der Deutsch. Chem. Gesell. _16_-123
+
+[23] Berichte der Deutsch. Chem. Gesell. _16_-126
+
+[24] Journal Am. Chem. Soc. _1_-232
+
+[25] American Chem. Journal _4_-454
+
+[26] Zeitsch. f. phys. Chem. _5_-250
+
+[27] Berichte der Deutsch. Chem. Gesell. _16_-2146
+
+[28] Chemical News _48_-25
+
+[29] Poggendorff’s Annalen _115_-348.
+
+[30] American Chemical Journal _5_-426.
+
+[31] Bulletin Soc. Chim. _38_-148
+
+[32] Berichte d. Deutsch. Chem. Gesell. _7_-283
+
+
+
+
+
+End of the Project Gutenberg EBook of On the Existence of Active Oxygen, by 
+Edward H. Keiser
+
+*** END OF THE PROJECT GUTENBERG EBOOK 52162 ***

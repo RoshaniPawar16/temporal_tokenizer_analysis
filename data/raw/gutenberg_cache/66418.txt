@@ -1,0 +1,1782 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 66418 ***
+
+[Illustration:
+
+CHAMBERS’S JOURNAL
+
+OF
+
+POPULAR
+
+LITERATURE, SCIENCE, AND ART
+
+Fifth Series
+
+ESTABLISHED BY WILLIAM AND ROBERT CHAMBERS, 1832
+
+CONDUCTED BY R. CHAMBERS (SECUNDUS)
+
+NO. 40.—VOL. I.      SATURDAY, OCTOBER 4, 1884.      PRICE 1½_d._]
+
+
+
+
+THE FUTURE OF ELECTRICITY AND GAS.
+
+
+More than eighty years ago, Davy first produced and exhibited the
+arc-light to an admiring and dazzled audience at the Royal Institution;
+and forty years later, at the same place, Faraday, by means of his
+memorable experiments in electro-dynamics, laid down the laws on which
+the modern dynamo-electric machine is founded. Though known at the
+beginning of the century, the electric light remained little more than
+a scientific curiosity until within the last ten years, during which
+period the dynamo-electric machine has been brought to its present
+perfection, and electric lighting on a large and economical scale thus
+rendered possible. The first practical incandescent lamps were produced
+only seven years ago, though the idea of lighting by incandescence
+dates back some forty years or more; but all attempts to manufacture an
+efficient lamp were rendered futile by the impossibility of obtaining a
+perfect vacuum. The year 1881 will long be remembered as that in which
+electric lighting by incandescence was first shown to be possible and
+practicable.
+
+The future history of the world will doubtless be founded more or less
+on the history of scientific progress. No branch of science at present
+rivals in interest that of electricity, and at no time in the history
+of the world has any branch of science made so great or so rapid
+progress as electrical science during the past five years.
+
+And now it may be asked, where are the evidences of this wonderful
+progress, at least in that branch of electricity which is the subject
+of the present paper? Quite recently, the wonders of the electric light
+were in the mouths of every one; while at present, little or nothing
+is heard about it except in professional quarters. Is the electric
+light a failure, and are all the hopes that have been placed on it to
+end in nothing? Assuredly not. The explanation of the present lull in
+electric lighting is not far to seek; it is due almost solely and
+entirely to speculation. The reins, so to say, had been taken from the
+hands of engineers and men of science; the stock-jobbers had mounted
+the chariot, and the mad gallop that followed has ended in ruin and
+collapse. Many will remember the electric-light mania several years
+ago, and the panic that took place among those holding gas shares.
+The public knew little or nothing about electricity, and consequently
+nothing was too startling or too ridiculous to be believed. Then came a
+time of wild excitement and reckless speculation, inevitably followed
+by a time of depression and ruination. Commercial enterprise was
+brought to a stand-still; real investors lost all confidence; capital
+was diverted elsewhere; the innocent suffered, and are still suffering;
+and the electric light suffered all the blame. The government was
+forced to step in for the protection of the public; and the result of
+their legislation is the Electric Lighting Act, which authorises the
+Board of Trade to grant licenses to Companies and local authorities
+to supply electricity under certain conditions. These conditions have
+reference chiefly to the limits of compulsory and permissive supply,
+the securing of a regular and efficient supply, the safety of the
+public, the limitation of prices to be charged, and regulations as to
+inspection and inquiry.
+
+That the electric light has not proved a failure may be gleaned from a
+rough survey of what has been done during the past two years, in spite
+of unmerited depression and depreciation. In this country, permanent
+installations have been established at several theatres in London and
+the provinces; the Royal Courts of Justice, the Houses of Parliament,
+Buckingham Palace, Windsor Castle, the Bank of England, and other
+well-known buildings; while numerous railway stations, hotels, clubs,
+factories, and private mansions throughout the country, have also
+adopted the new light either entirely or in part. In addition to this,
+over forty steamships have been fitted with the electric light during
+the past year; and the Holborn Viaduct, with its shops and buildings,
+has been lighted without interruption for the past two years. On the
+continent, in addition to a large number of factories, private houses,
+and public buildings, numerous theatres at Paris, Munich, Stuttgart,
+Brunn, Vienna, Berlin, Prague, and Milan have been electrically
+lighted. In New York, an installation of ten thousand lights has been
+successfully running for the last year or two. Any one wishing to
+see the electric light to advantage and its suitability to interior
+decoration, should visit the Holborn Restaurant. This building, with
+its finely decorated rooms, its architectural beauties, and ornamental
+designs in the renaissance style, when viewed by the electric light, is
+without doubt one of the chief sights of London.
+
+The electric light in the form of the well-known powerful and dazzling
+arc-light is the favourite illuminant for lighting harbours, railway
+stations, docks, public works, and other large spaces. But it is to
+the incandescent lamp that one must look par excellence for the ‘light
+of the future.’ It has been satisfactorily established that lighting
+by incandescence is as cheap as lighting by gas, provided that it be
+carried out on an extensive scale.
+
+Very contradictory statements have from time to time been published
+as to the relative cost of lighting by electricity and gas; and a few
+remarks on the subject, without entering into detailed figures, will
+explain much of this discrepancy. These remarks will refer to electric
+lighting by incandescence.
+
+In the first place, the lighting may be effected in one of three
+ways—(1) by primary batteries; (2) by dynamo-machines; or (3) by a
+combination of dynamo-machines and secondary batteries. The expense of
+working with primary batteries is altogether prohibitory, except in the
+case of very small installations; while secondary batteries have not
+yet been made a practical success; so that the second method mentioned
+above is the only one at present in the field. In the second place, a
+distinction must be made between isolated installations and a general
+system of lighting from central stations. Up to the present time,
+nearly all the lighting by electricity has been effected by isolated
+installations. If every man requiring one hundred or even several
+hundred lights were to set up his own gas-works and supply himself from
+them, the cost of lighting by gas would be enormously increased. Hence
+it is manifestly unfair to compare the cost of electric light obtained
+from isolated installations with gas obtained from gas-works supplying
+many thousands of lights; yet this is being constantly done. Central
+stations supplying at least, say, ten thousand lights, and gas-works on
+an equal scale, must be compared in order to arrive at a true estimate
+of the relative cost of electricity and gas. Several such extended
+installations are now being erected in London and elsewhere. With
+improved generating apparatus, and above all, with improved lamps, it
+is confidently anticipated that the electric light will eventually be
+cheaper than gas. Even if dearer than gas, it will be largely used for
+lighting dwelling-houses, theatres, concert-halls, museums, libraries,
+churches, shops, show-rooms, factories, and ships; while perhaps gas
+may long hold its own as the poor man’s friend, since it affords him
+warmth as well as light.
+
+The incandescent light is entirely free from the products of combustion
+which heat and vitiate the air; it enables us to see pictures and
+flowers as by daylight; it supports plants instead of poisoning them,
+and enables many industries to be carried on by night as well as by
+day. Add to this an almost perfect immunity from danger of fire and
+no fear of explosion. When it is realised that a gas flame gives
+out seventeen times as much heat as an incandescent lamp of equal
+light-giving power, and that an ordinary gas flame vitiates the air
+as much as the breathing of ten persons, some idea may be formed of
+the advantage of the electric light from a sanitary point of view. To
+this may be added absence of injury to books, walls, and ceilings.
+Visitors to the Savoy Theatre in London will doubtless have seen the
+adaptability of this light for places of public amusement, and it
+is now possible to sit out a play in a cool and pleasant atmosphere
+without incurring a severe headache. To theatrical managers the light
+offers in addition unusual facilities for producing spectacular
+effects, such as the employment of green, red, and white lamps to
+represent night, morning, and daylight. The freedom from weariness
+and lassitude after spending an evening in an electrically lighted
+apartment must be experienced in order to be appreciated. The electric
+light very readily adapts itself to the interior fittings and
+decorations of houses and public buildings, and it can be placed in
+positions where gas could not be used on account of the danger of fire.
+The old lines of gas-fittings should be avoided as far as possible, and
+the lights placed singly where required, and not ‘bunched’ together.
+For the lighting of mines, electricity must stand unrivalled, though
+little has as yet been done in this direction. Its speedy adoption
+either voluntarily or by Act of Parliament, with the employment of lime
+cartridges instead of blasting by gunpowder, will in the future render
+explosions in mines almost an impossibility. In some cases, gas may yet
+for some time compete with the electric light both in brilliancy and
+economy; for the electric light has spurred on the gas Companies to the
+improved lighting of many of our public streets and places.
+
+With the general introduction of electricity for the purpose of
+lighting comes the introduction of electricity for the production of
+power; for the same current entering by the same conductors can be
+used for the production of light or of power, or of both. The same
+plant at the central stations will supply power by day and light by
+night, with evident economy. Electricity will thus be used for driving
+sewing-machines, grinding, mixing, brushing, cleaning, and many other
+domestic purposes. In many trades requiring the application of power
+for driving light machinery for short periods, electricity will be of
+the greatest value, and artisans will have an ever ready source of
+power at their command in their own homes.
+
+Is electricity to supersede gas altogether? By no means, for gas is
+destined to play a more important part in the future than it has done
+in the past. Following close upon the revolution in the production of
+light comes a revolution in the production of heat for purposes of
+warming and cooking, and for the production of power. Gas in the future
+will be largely used not necessarily as an illuminant, but as a fuel
+and a power producer. When gas is burned in an ordinary gas flame,
+ninety-five per cent. of the gas is consumed in producing heat, and
+the remaining five per cent. only in producing light. Gas is far more
+efficient than raw coal as a heating agent; and it is also far cheaper
+to turn coal into gas and use the gas in a gas-engine, than to burn the
+coal directly under the boiler of a steam-engine; for gas-engines are
+far more economical than steam-engines. Bearing these facts in mind,
+it cannot but be seen that the time is not far distant when, both by
+rich and poor, gas will be used as the cheapest, most cleanly, and
+most convenient means for heating and cooking, and raw coal need not
+enter our houses; also that gas-engines must sooner or later supersede
+steam-engines, and gas thus be used for driving the machine that
+produces the electricity. In the case of towns distant not more than,
+say, fifty miles from a coal-field, the gas-works could with advantage
+be placed at the colliery, the gas being conveyed to its destination
+in pipes. Thus, coal need no longer be seen, except at the colliery
+and the gas-works. With the substitution of gas for coal, as a fuel,
+will end the present abominable and wasteful production of smoke. When
+smoke, ‘blacks,’ and noxious gases are thus done away with, life in
+our most populous towns may become a real pleasure. Trees, grass, and
+flowers will flourish, and architecture be seen in all its beauty.
+Personal comfort will be greatly enhanced by the absence of smuts,
+‘pea-soup’ fogs, and noxious fumes; and monuments, public buildings,
+and pictures saved from premature destruction.
+
+The present method of open fires is dirty, troublesome, wasteful,
+and extravagant. With the introduction of gas as a heating agent,
+there will be no more carting about of coals and ashes, and no more
+troublesome lighting of fires with wood, paper, and matches. No more
+coal-scuttles, no more smoky chimneys, no more chimney-sweeps! On
+the other hand, the old open coal-fire is cheerful, ‘pokable,’ and
+conducive to ventilation; while the Englishman loves to stand in front
+of it and toast himself. All this, however, may still be secured in
+the gas stoves of the future, as any one could easily have satisfied
+himself at the recent Smoke Abatement Exhibition in London. The gas
+stove of the future must be an open radiating stove, and not a closed
+stove, which warms the air by conduction and convection chiefly, and
+renders the air of a room dry and uncomfortable.
+
+It has frequently been pointed out that our coal-fields are not
+inexhaustible; but they doubtless contain a sufficient supply for
+hundreds of years to come. Long before the supply is likely to run
+short, other sources of nature will be largely drawn upon. These are
+the winds, waterfalls, tides, and the motion of the waves. The two
+former have to some extent been utilised; but little or nothing has
+been done or attempted with the latter. Before these can be to any
+extent made use of, means must be devised for storing energy in the
+form of electricity, a problem which is now being vigorously attacked,
+but as yet without much practical success. That electricity has a great
+future before it cannot for a moment be doubted.
+
+
+
+
+BY MEAD AND STREAM.
+
+BY CHARLES GIBBON.
+
+
+CHAPTER L.—A CROW TO PLUCK.
+
+The two men stared at each other—Mr Hadleigh with an expression of
+stern inquiry; Caleb with a sullen audacity which failed to conceal
+the confusion and disappointment he felt. But he made no attempt to
+apologise, to explain, or to retreat.
+
+After a brief inspection of the man, Mr Hadleigh was reassured: this
+was no common burglar he had to deal with, and no immediate violence
+was to be feared.
+
+‘My good man,’ he said calmly, ‘you have wasted your time and labour if
+you expected to find money or plate here. That safe, which you see is
+open, contains my cheque-books; but they are worthless to you without
+my signature. As for what plate and jewels there may be to reward your
+adventure, they are in different parts of the house, and before you
+can leave this room to seek them you must murder me. And before you do
+that, I shall sound this alarm.’
+
+As he spoke he took up a green cord which lay beside his desk. The cord
+communicated with a bell in the butler’s room, which if rung at that
+time of night would certainly have aroused the household.
+
+‘I didn’t come here to rob; I didn’t expect to find _you_ in this room,
+and I don’t mean to hurt you.’
+
+Gruff and surly as Caleb’s manner was, Hadleigh, even in that moment of
+peril, did him justice.
+
+‘I believe you, Kersey,’ he said quietly; ‘and to prove it, I shall
+sit down and listen to what explanation you have to give. Something
+very unusual there must be to have caused you to act as you have done.
+I told you at the end of the harvest that if I could serve you at any
+time, I should be pleased to do so. Is that why you have come?’
+
+‘No,’ was the sulky answer.
+
+Although tortured by passion, Caleb was not only sensible of
+the confidence which Mr Hadleigh showed him under such peculiar
+circumstances, but felt his self-respect raised by it, and was wishful
+to make matters clear. The thing somehow stuck in his throat, for he
+who had broken into the house at midnight had to tell this man of his
+son’s guilt—as he believed—and of Pansy’s shame.
+
+‘Then what did bring you here and in such an outrageous fashion?’
+
+‘I thought to find your son Mr Coutts here. I’ve been waiting for
+him nigh on six hours. When he came, he wouldn’t tell me the truth,
+wouldn’t wait to speak to me, and I am determined that he shall—not
+only speak to me this night, but speak true. I thought I heard him
+hollering to me from that window. I didn’t want to make a row if it
+could be helped, so I got a ladder and came in, meaning to ask him to
+do things straight and quiet. That’s all.’
+
+As Coutts’s room was above the library, Mr Hadleigh comprehended the
+mistake Caleb had made, and was satisfied that no intention of robbery
+had brought him there. His own intense preoccupation had prevented him
+from observing any disturbance.
+
+‘What is it you wish him to speak truth about?’ he inquired.
+
+‘I’d rather speak to himself,’ was the gloomy response.
+
+‘You are aware that breaking into the house in this way might be an
+awkward thing for you if brought before a magistrate. But since the
+matter is important enough to induce you to run the risk you have done
+to-night, you had better take me into your confidence. I have no doubt
+of being able to assist you.’
+
+‘Well, then,’ said Caleb, after another minute of hesitation, and the
+blood tingling in his honest cheeks on her account, ‘I want to know
+what he has done with Pansy Culver.’
+
+‘What can he have to do with the girl?’
+
+‘More than I care to think—more, maybe, than you would care to learn.
+He has wiled her away from home and won’t tell me where she is.’
+
+‘There must be some stupid mistake here, Kersey. Mr Coutts Hadleigh is
+too careful of his reputation to perpetrate such a monstrous act. On
+what grounds do you accuse him?’
+
+Bluntly and speaking with less difficulty now that the ice was broken,
+Caleb gave his reasons for believing Coutts guilty—what he had observed
+at their chance meetings, and particularly her rejection of himself
+after she had led him to think that she favoured him. Mr Hadleigh
+allowed him to tell his story to the end without interruption. He could
+see that the man was blinded by jealousy and rage, was unconsciously
+exaggerating trifles, and distorting them into proofs of his foregone
+conclusion.
+
+‘It is fortunate that accident has made me the first hearer of this
+accusation,’ he said calmly, when Caleb stopped. ‘I had little doubt
+from the first that you were labouring under a delusion: I am now
+convinced of it. I will undertake to convince you of it in the morning,
+if you will be advised and remain quiet to-night.’
+
+‘I won’t wait till morning—I’ll have it out of him now. Where is he?’
+
+‘Stay where you are, sir!’ said Mr Hadleigh authoritatively, as Caleb
+made a movement towards the door. ‘If you have no care for yourself,
+you must have some for the girl. A brawl between you and my son on her
+account would disgrace her for ever.’
+
+Caleb halted as if his feet were suddenly clamped to the floor. For
+the first time, he saw the danger with which his impetuous conduct
+threatened the being he wished to save.
+
+‘What am I to do, then?’ he asked with more humility in his manner than
+he had yet displayed.
+
+‘What I have told you. Wait as patiently as you can till the morning.
+Be here at eight o’clock, and I promise to have everything explained to
+your satisfaction without causing the girl annoyance.’
+
+‘It’s kind of you to think of that, sir.’
+
+‘Show your gratitude by doing what I tell you. Go back the way you
+came; if you mounted by a ladder, return it to its proper place; and
+when you come in the morning bring Culver with you.’
+
+‘I can’t speak to him about it until I know she is safe.’
+
+‘There is no need. You have only got to say he is wanted here. It
+is better you should take the message than one of the servants. The
+less gossip we have the more likely the girl is to escape scandal.
+Good-night.’
+
+‘Good-night, and ... thank you kindly.’
+
+The Agitator had never imagined that there would come a day when he
+should be compelled to speak such words of gratitude to the owner of
+Ringsford. He obeyed his commands slowly but faithfully: all sense of
+humiliation was stifled by the knowledge that whatever might be the
+upshot of the meeting in the morning, the advice given him was sound,
+and that in adopting it, he was rendering the best service to Pansy.
+
+Mr Hadleigh knew that he had conquered the man, and did not think it
+necessary even to look at him as he parted the heavy hangings and
+stepped out on to the balcony. A few minutes after the window had
+closed, however, he bolted it. That operation had been forgotten by
+himself during the evening, and had not been performed by the servant,
+who had instructions on no account to enter the library unless the bell
+rang.
+
+Resuming his seat at the desk, Mr Hadleigh completed the task in which
+he had been so unpleasantly interrupted. He sealed the two envelopes,
+and placed them in the drawer of the safe, which he locked.
+
+‘I have done with these things now,’ was his mental observation, and
+yet he lingered over the words, as if reluctant to pledge himself that
+he should not again look at those records of a sad life. With more
+firmness he said presently: ‘I shall not look at them again.’
+
+He drew a curtain aside and looked out. The moon was shining dimly
+through a haze; the white space before him looked like ghostland,
+and it was peopled for him by ghosts of blunders in the past and of
+hopes disappointed or relinquished as unattainable. If we could live
+our lives over again! What use?—unless we could start with the bitter
+experience which inspires the wish. Then how steadily we might steer
+through the shoals of folly, passion, and falsehood.
+
+In that still ghostland on which he was gazing, there rose a new
+phantom offering comfort.
+
+‘I will find my happiness in fostering theirs,’ he said, as he turned
+from the window, and with hands clasped behind him, head bowed, began
+to walk up and down the room.
+
+Here happened one of those trifles which make and mar existence. He was
+tripped by a hassock and fell: in falling, his temple struck the corner
+of the table, and he lay insensible. About the same time there was a
+strange sound outside like the distant boom of a heavy sea rushing upon
+a shingly beach: it was the wind forcing its way through the snow-laden
+trees of the Forest.
+
+       *       *       *       *       *
+
+Caleb Kersey had reached the village, his hand was on the latch of
+his lodging, when looking backward, he saw a red glare in the hazy
+atmosphere. The terrible word ‘Fire!’ rose to his lips, and his
+landlord—Dr Joy’s successful pupil in the science of economy—heard him.
+The alarm spread through the village with mysterious rapidity, and
+whether moved by a desire to render assistance, or mere curiosity and
+a craving for any unusual excitement which might break the monotony of
+their lives, groups of men, women, and boys were soon tramping through
+the snow in the direction of the blaze. The little engine of the
+village volunteer fire brigade was dragged from its shed, and with a
+shout the lads started to the rescue.
+
+There had been much rick-burning during the past few months, and it was
+at first supposed that this was another outrage or accident of the same
+kind. But the wonder grew, and the pace was quickened when it became
+known, from messengers who were riding in search of assistance, that it
+was Ringsford Manor-house which was on fire.
+
+Already there were people at the scene of disaster, and as the broad
+flames shot out from windows and roofs, there were murmurs of wonder
+such as one hears at a display of fireworks. The murmurs, however, were
+those of terror. The luminous glare cast a blood-red shade over the
+white ground; the snow quickly dissolved, and was trampled into a black
+puddle by the feet of the gathering crowd.
+
+The fire had got complete possession of the building before it had been
+discovered. Still, gangs of men were passing buckets of water from
+the wells, which others heaved on the burning mass; whilst Coutts was
+vainly exerting himself with an ‘extincteur.’
+
+Eager questions passed from mouth to mouth as to the servants and
+family. All were safe except one—the master of the house, and it was
+feared he had perished.
+
+Four men bearing a ladder came running from the direction of the
+stables. The ladder was placed against the portico, which protected it
+somewhat from the fire. Three of the men drew back from the scorching
+heat; the fourth, whose form reflected by the light was like that of
+a giant, dipped a big handkerchief in a bucket of water and fastened
+it over his mouth. That done he ascended the ladder and reached the
+balcony. He tried to open the nearest window, but it was fast, and a
+slight murmur of dismay rose amongst those who watched the rescuer.
+Placing his shoulder against the casement, he with one vigorous heave
+burst it open and disappeared.
+
+Suspense lengthened ten minutes into an hour. The man came out carrying
+another in his arms, and all knew that the other was Mr Hadleigh. The
+rescuer reached the ladder: instead of descending step by step, he
+twined his legs round it and slid down, sailor fashion, supporting his
+burden with the right arm and steadying himself with the left.
+
+It was one of those feats of combined daring, courage, strength, and
+agility which always win the heart of a crowd, and he was greeted with
+as hearty a cheer as if he had saved the life of their best friend,
+instead of one who was at ordinary times no favourite. Nevertheless,
+there were not wanting expressions of sympathy when the report went
+round that Mr Hadleigh was dangerously burned, and unconscious.
+
+The young ladies and some of the female domestics had taken refuge in
+the gardener’s cottage, and thither Mr Hadleigh was conveyed, whilst
+messengers were despatched for Dr Guy and Dr Joy.
+
+By this time the engines from Kingshope and Dunthorpe were at work. The
+fire had raged within the house for some time before the roof fell; now
+it came down with a great crash, and the melting snow aided the engines
+in checking the extension of the flames to the right wing; but it was
+long doubtful whether or not that portion could be saved. To this
+object all efforts were now directed, and there were constant relays of
+willing hands to work the pumps. By daylight the blackened walls of the
+main building remained standing, with a smouldering heap inside. Thanks
+to a thick wall between it and the right wing, the latter had sustained
+relatively little damage.
+
+The first question asked by the county police was how had the fire
+arisen. No one could guess, until Coutts Hadleigh said briefly:
+
+‘I believe it was that ruffian, Caleb Kersey.’
+
+He stated his reasons for the surmise, and Caleb was arrested that day
+on suspicion.
+
+
+
+
+VÆ VICTIS!
+
+
+What Brennus shouted on the banks of the Allia, and the Romans made
+into a proverb after him, history has re-echoed ever since in deeds as
+well as in words. ‘Woe to the conquered!’ is traced in letters of blood
+on the sable lining of the golden shield, of which the legend in front,
+written in lines of light, is ‘Hail to the victor!’ ‘Væ victis!’ is the
+discordant echo of ‘Io triumphe!’ Woe to the conquered has been the
+experience of all who have fought either for a principle or a cause; a
+strip of land to add to the imperial territory, or for the integrity
+and freedom of the country and for dear life itself. Strike and spare
+not; kill all, even to the babes and sucklings, the aged men and the
+young women; tread under foot those who are prostrate; leave to perish
+by the wayside those who have fallen out from the ranks—væ victis! woe
+to the conquered, and death to the weak; but hail to the victor, and
+increase of power to the strong! So goes the world; so has it ever
+gone in the moral life as well as in the physical; the struggle for
+existence being as true of thoughts as it is of races.
+
+We must remember the heroic past, when haply times are a little hard
+to ourselves, and we are bound to suffer in the comparatively mild way
+of modern days. We have to fight our fight, whatever it may be, as
+the heroes of old fought theirs, till our cause conquers, or we are
+convinced that we are on the wrong—not the weaker—side. But till then,
+we have to endure private loss that humanity may have greater gain; and
+to remember that conscience is better than victory, and that truth has
+ever been buffeted before she has been crowned.
+
+The world has this cruel cry for others beside the pioneers and martyrs
+of a cause. If nothing succeeds like success, so nothing is so fatal as
+failure; and væ victis! is in truth the sentence recorded against those
+whose fortunes fail, whose card-houses tumble to pieces, and whose
+flapping wings of ambition prove themselves to have waxen attachments,
+which melt in the using and land the poor highflyer in the mud. That
+fatal settling-day on ’Change: that bad debt made through the bank, and
+added to indefinitely, on the theory of possible redemption if enough
+time were allowed and enough rope paid out: that terrible spell of
+ill-health which prevented the completion of the book, the painting of
+the picture, the execution of the order: that failure, that fiasco—and
+væ victis as the commentary!
+
+Væ victis! to the unhappy—to those vanquished by pain and cast down by
+sorrow. Only a very few compassionate souls care to give their time and
+strength to the miserable who sit in darkness ever unlifted, and with
+ashes never shaken off their bowed and melancholy heads. We naturally
+like the light better than the dark; and perfumed pomade, beneath
+rosebuds and fine feathered caps, is a more pleasant thing than ashes
+taken out of the grate and scattered over our hair. We get tired of
+enduring sorrow. At first, we are keenly sympathetic; but as time goes
+on, we wonder why the wound does not heal. Our own sympathetic pain has
+passed long ago; why cannot that of their real hurt? They are always so
+sad! They take no pleasure in the last fashion, the newest gossip, that
+good story which is going the round of society, or that smart saying of
+the ill-natured wit, whose epigram rips the skin from the flesh of his
+victim as neatly as if it were a rapier. They are always so dull, these
+poor creatures—it is really impossible to go and see them! Væ victis!
+They are conquered by grief, by loss, by pain; and they must suffer, as
+all those who are overcome have to learn how.
+
+Væ victis! to the outspoken who cannot back their words by that kind
+of substantial evidence which passes by the name of legal proof. Thus
+they are in the power of those against whom they sought to warn the
+unwary and enlighten the blind. If they cannot so back their words
+with legal proof, they are conquered, and have to suffer the fate
+of the conquered—in the law-courts this time, as a change from the
+battlefield; and with such punishment as belongs to the law of libel
+to inflict. All the same it was maybe no libel, no falsehood, but the
+absolute truth that they said; but all the same, too, truth which is
+only a moral certainty and not a substantive fact to be demonstrated by
+undeniable evidence, is not to be said without danger, and væ victis!
+to those who cannot substantiate it. By which we are taught the lesson
+of that silence which is golden; and, in private things, the wisdom of
+not interfering in the affairs of others. As the Italian proverb has
+it: ‘A fool knows his own affairs better than a wise man knows those of
+others;’ and again another: ‘He knows much who, knowing nothing, knows
+how to keep silent.’ A great deal of trouble is made for ourselves
+by this interference in the affairs of others. But it is difficult
+not thus to interfere, when we see all awry, things which we think a
+few honest words would put straight. But we must look out for signal
+discomfiture, unless we can hold the reins we seek to clutch, and make
+those with whom we have intermeddled see according to our lights and
+act according to our judgment. If their will is stronger than ours,
+it is væ victis! to us in good sooth!—with the not over-pleasant
+reflection, that we have pulled that pot of boiling water over
+ourselves, and in not letting comparative well alone, have stirred it
+into active ill.
+
+Væ victis! to the unsuccessful aspirant, whether it be for honours, a
+pass, a post, or for love. No one really pities him. He who droops on
+the way and falls short in his stride is passed by, and the triumphant
+reach the goal amid the plaudits of the crowd. Who cares to console a
+failure? to reconstruct a ruined cloud-tower? to follow after a fading
+rainbow? Væ victis! and let the pale illusions of a dead hope lie
+where they have fallen! The poor fellow was rejected, was he? Well,
+he really ought to have been more sure of success before he made the
+effort! Perhaps he was led on, as you say; but even so, this does not
+excuse him, nor in any way affect the principle of quasi-certainty
+before the attempt. When you hazard a great stake, you ought at least
+to know how to throw the dice, and to be sure that you have counted
+your cards. It is no use rushing darkly into enterprises for which one
+has not the material; and to offer one’s self for a place, whether of
+love or honour, without having taken pains to measure one’s strength
+against those forces which oppose, is to be more rash than brave, and
+more foolish than energetic. To be sure, no one can have who does not
+try. That is true for itself. But it none the more softens the verdict
+of the world for him who has failed, nor deadens the echo of the cry
+raised against him. If we do not try, we cannot get; but woe to those
+who try—and fail!
+
+Væ victis! also to the stupid, to the poor, to all born conquered by
+fate even before they have begun to strive with fortune—who are thrust
+into the battle unlearned and heavily weighted or ever the lists are
+set. Who pities the dunce? Who cares to realise all the days and hours
+of hopeless endeavour to get those facts, that task, rooted in the
+sluggish brain? Is it his fault, poor dunce, that the atoms are slow
+to move? the nervous fluid insufficient to stir? the blood too thick
+to run or too poor to animate? He does his best; but as a schoolboy he
+gets flogged, as well as over-tasked; as a man he gets distanced, and
+perhaps ruined, unless he has the luck of hereditary bread with butter
+superadded. But what is not his fault, is nevertheless accounted to him
+for blame; and because he is a dunce, he has recorded against him the
+sentence of disfavour.
+
+What else, too, have the poor?—not the very poor, whose want of
+bread of their own baking forces the oven-doors of the rich—but the
+comparatively poor—those who have enough whereby to live, but nothing
+left for enjoyment—who have the necessaries, but not the comforts, nor
+the graces, nor the pleasures of life? No one pities them, though they
+suffer in their own way quite as much as those ragged brethren who go
+cold and hungry for want of clothing and food. These others have to
+offer a brave front to the world, and to make a little seem a mickle,
+and not enough a full measure. It is done only at the cost of the
+night’s sleep and the day’s peace—at the cost of this thing pinched and
+that pared, and the deft interlacing of two gaping ends. No one pities
+all this, because no one realises it; and it may be, as has been known
+too sorrowfully before now, that those who have almost more than they
+can do to live decently are blamed for parsimony because they do not
+live luxuriously.
+
+Perhaps no people deserve more sympathy than those poor gentry whose
+means fall below the standard of their original condition, and thus
+fail the present needs and degrade the future position of the family.
+Gentlefolks born and bred, with the niceness of feeling and delicacy
+of taste included in that term, they are forced to abandon all the
+embroideries of class refinement, and to see their children grow up
+with manners below their own mark, and with an education of less beauty
+if of as substantial value. They cannot give them the ‘advantages’
+which count for so much. The girls do not learn music from the best
+masters, and their painting lessons leave much to be desired. The boys
+have to associate with lads of lower breeding, who teach them rude
+ways and vulgar expressions, so that all the influence of home goes
+to undo what that of the school has done. Neither boys nor girls can
+learn to ride, to hunt, to shoot, like their cousins—the rich branch
+of this unequally developed family tree; they cannot be taken to the
+seaside if they fail in health; and, when they are ill, they cannot be
+nursed so sedulously as if mamma had nothing else to do, and a nurse
+with brains and experience could undertake the rest. They are heavily
+handicapped all through, and set to play blindfold with Fortune, who
+holds loaded dice and marked cards. From the first, væ victis! has been
+recorded against them; and unless they have exceptional power, on which
+we cannot always count, they are foredoomed to comparative failure, and
+to that painful process of winnowing whereby the conquered fall through
+the meshes into the abyss, and only the victors remain safe on the
+surface.
+
+So it is: Væ victis all through! Nothing succeeds like success, and
+nothing is so fatal as failure. The law is inexorable, and tears
+cannot dissolve the links of brass and iron which Fate has forged. The
+survival of the fittest is only a form of væ victis!—the destruction
+of the weak, and woe to the conquered! But—and herein lies the balm
+to the sore—it depends greatly on ourselves whether we will be the
+conqueror or the conquered; whether we will make ourselves strong by
+endeavour, resolution, self-control, and the cultivation of our reason
+and common-sense, or let ourselves go to ruin by self-indulgence,
+weakness of will, unreasonable desires, and the gratification of tastes
+which we cannot rightfully indulge, and of impulses which, even if
+good, are unworkable and disastrous. If we resolutely determine that it
+shall be _Io triumphe!_ with us, for the most part we come to our goal;
+and at the worst we can always mitigate our failure.
+
+
+
+
+ONE WOMAN’S HISTORY.
+
+_A NOVELETTE._
+
+BY T. W. SPEIGHT.
+
+
+CHAPTER I.
+
+‘You are a rank heretic, Mac, neither more nor less,’ remarked the
+vicar, ‘to say that you don’t care for our lovely Lake scenery.’
+
+‘But listen, my dear friend,’ protested the doctor; ‘I never said
+anything of the kind. What I did remark was, that your English Lake
+scenery was not to be compared to our Scotch scenery. It’s pretty—very
+pretty, but when you have said that, you have said all. If you want
+grandeur, if you want sublimity, you must go’——
+
+‘To Switzerland and see Mont Blanc,’ broke in Miss Gaisford as she
+looked up for a moment from her writing.
+
+The doctor shook his head. ‘I have reason to believe that the Swiss
+scenery has been very much overrated. And then, just consider the
+expense! I’m told that the innkeepers there are rogues—every man-jack
+of them. No—no. I’ve been half over the world in my time, and all I can
+say is, that old Scotia’s mountains and lochs are quite good enough for
+me.’
+
+The scene was the lawn of the _Palatine Hotel_, overlooking a lovely
+stretch of Windermere, with the purple-buttressed hills that guard the
+head of the lake for an imposing background. The time was about four
+o’clock on a sunny afternoon. Of the three people who had engaged in
+the conversation just recorded, one was Dr M‘Murdo, an army surgeon,
+the greater part of whose life had been spent abroad. He had just
+retired from the service on a small fortune left him by a relative, but
+had not yet quite made up his mind where to settle for the remainder
+of his days. He and the vicar had been great friends when young men,
+but had not met for a number of years till to-day, the doctor having
+arrived at the _Palatine_ a few hours ago on a visit to his friend, who
+in his turn was spending a portion of his holiday with other friends at
+the hotel.
+
+Dr M‘Murdo was well on towards his fiftieth year. His hair and beard
+were already grizzled, while his once fair complexion was deeply tanned
+by many years of torrid sunshine. He was a tall, lean, high-dried man,
+somewhat formal and old-fashioned in his attire, with an expression of
+mingled shrewdness and good-humour.
+
+His friend, the Rev. Septimus Gaisford, was about the same age as
+himself, and had been the vicar of a small country parish in the
+Midlands for nearly a quarter of a century. He belonged to the homely,
+unobtrusive type of country parson of which, even in these days of
+unrest and innovation, specimens happily are still to be found. He
+looked after the needs of his poorer parishioners both spiritual
+and temporal, and left the well-to-do pretty much to themselves. He
+abounded in good works in a quiet unostentatious way, while his Sunday
+discourses were as homely as himself and such as could always be
+‘understanded of the people.’ Like his friend the doctor, he had never
+ventured on the perilous sea of matrimony.
+
+But the vicar was not without a worthy coadjutor and companion in his
+parochial labours. His sister, Miss Gaisford, who was ten years younger
+than himself, not only managed his small household, but looked after
+such portion of his parish duties as can often be performed better by
+a woman than a man, while it was even whispered that she occasionally
+wrote his sermons for him. So that, all things considered, it was no
+wonder the Rev. Septimus had more than once been heard to remark that
+‘Pen’—short for Penelope, if you please—was far more useful to him than
+any curate he had ever had. For the rest, Miss Pen was a bright-eyed,
+vivacious little body, not in the least inclined to be sanctimonious,
+but fond of a joke and a laugh, yet with an innate fund of sympathy
+about her which by some attraction of its own seemed to draw all who
+were in trouble or difficulty to her side.
+
+On this sunny afternoon, the doctor and the vicar were seated one at
+each end of a rustic bench in the shade of a leafy elm. The former
+had his thumb in the pages of a medical review, to which, however,
+he was paying but scant attention; while the latter was mending
+his fishing-tackle, for our worthy parson was a genuine brother of
+the angle. At a small rustic table a little distance away sat Miss
+Gaisford, busy with her writing, but not so busy as to preclude her
+from taking an interest in any topic which the others might introduce.
+
+Presently she looked up, and as if in answer to the doctor’s last
+remark, she said: ‘I am quite aware that we poor mortals who have the
+misfortune to live south of the Tweed are very badly off as regards
+many things. Still, we do now and then manage to produce an article
+which even you cool-blooded Northerners can’t help admiring, and would
+find it difficult to excel.’
+
+‘The application, my dear madam, the application. To what particular
+article do you refer?’
+
+‘At present I refer to Madame De Vigne, the charming widow to whom you
+paid such very marked attentions at luncheon.’
+
+‘Ah-ha. I noticed something of that myself,’ chuckled the vicar.
+
+‘Everybody noticed it,’ said Miss Pen emphatically.
+
+Dr Mac rubbed the end of his long nose with his review and laughed
+uneasily. ‘Ha, ha! Very good—very good indeed.’
+
+‘Come now, Mac, you can’t say that you didn’t cast sheep’s-eyes at
+her,’ put in the vicar blandly.
+
+‘Let the pawky Scot deny it if he dare,’ said Miss Pen with a shake of
+her little fat curls.
+
+‘Very good, my dear friends; if you choose to make yourselves pleasant
+at my expense, you are welcome to do so. That I admire Madame De Vigne,
+I am quite willing to admit. From what little I have seen of her,
+she seems to me a very agreeable person, and if we could trace back
+her ancestry, I have no doubt we should find her to be of Scottish
+extraction.’
+
+‘Oh, come, Mac, give us poor Southerners credit for something.’
+
+‘Well, I don’t mind admitting to you, who are one of my oldest friends,
+and to Miss Penelope, that I am getting tired of a bachelor’s life.
+I want a home and I want a wife. I have a little money judiciously
+invested—and—and I thought, in fact—that—that’——
+
+‘Don’t be bashful, Mac,’ chimed in the vicar softly.
+
+‘You thought, in fact, that the charming widow would make you a
+charming companion for life,’ put in Miss Pen briskly.
+
+‘Perhaps ay, and perhaps no,’ responded the doctor quietly.
+
+‘All I can say is, that you may think yourself a particularly lucky
+fellow if you succeed in winning her,’ remarked the vicar.
+
+‘Well, well; I know that both of you are friends of Madame De Vigne,
+and that she and her sister are parishioners of yours. What I should
+like you to do is to tell me all you know about her, and then leave me
+to consider what my future course ought to be.’
+
+‘All that we know about Madame De Vigne is very little,’ remarked the
+vicar.
+
+‘Very little indeed,’ assented his sister.
+
+‘Still, my dear’—to Miss Pen—‘I am not aware that we should be abusing
+any confidence in telling our friend all that there is to tell, so far
+as we know it?’
+
+‘There can be no possible harm in that. Besides, it will only be
+charitable to take pity on the poor man. And now, please not to
+interrupt me again for ten minutes at the least.’
+
+‘It is now nearly two years,’ began the vicar, ‘since Madame De Vigne
+and her sister, Miss Loraine, came down to Oaklands, bringing with them
+a letter of introduction from my London lawyer, a certain Mr Railton,
+whom I have known for a dozen years or more. How Madame De Vigne came
+to be known to Railton, or what he knew with regard to her and her
+antecedents, I had not the curiosity to ask at the time, and I have
+never since made it my business to inquire. It is sufficient to say
+that Madame De Vigne had seen advertised as being to let a certain
+furnished cottage which she thought would suit her requirements; hence
+her visit to Oaklands. The cottage did suit her. She became its tenant,
+and there she and her sister have lived ever since, shunning rather
+than courting such society as our neighbourhood affords, but visiting
+a good deal among the sick and poor. One day about six months ago,
+while I was out fishing I encountered a young fellow who was similarly
+engaged. We met again and again, striking up an acquaintance as brother
+Piscators have a knack of doing, till finally I invited him to dinner
+at the vicarage, on which occasion Penelope there took quite a fancy to
+the young man.’
+
+‘Of course I did,’ answered Miss Pen, looking up quickly. ‘Any one else
+placed as I was at the time would have taken a fancy to him. I was just
+in want of some one to sit for the hero of my next novel, and Archie
+came in very handy.’
+
+Dr M‘Murdo started. ‘But, my dear Miss Gaisford, you don’t mean to say
+that you make a practice of introducing portraits of your friends and
+acquaintances into the stories you write?’
+
+‘Don’t I though! I shall have your portrait jotted down in my note-book
+before you are many hours older. I have no doubt it will come in useful
+one of these days.’
+
+‘Good gracious! I hope you won’t paint me in very dark colours.’
+
+‘Not blacker than you deserve, you may rely upon it.’ Then to herself
+she said: ‘Where was I?—Yes—yes,’ and so went on with her writing.
+
+‘Well, that first visit of young Ridsdale to the vicarage was but the
+forerunner of several others,’ resumed the vicar as equably as though
+he had not been interrupted. ‘It was there that he met Madame De Vigne
+and her pretty sister, and with the latter he at once fell desperately
+in love.’
+
+‘And the young lady fell desperately in love with him?’
+
+‘That is exactly what came to pass. But I’m nearly sure the affair
+might have been nipped in the bud had not Penelope, with true feminine
+perversity and reckless disregard of consequences, encouraged the two
+young nincompoops in their folly.’
+
+‘What else could you expect me to do?’ asked Miss Pen, without looking
+up. ‘When I see a little romance of real life going on under my very
+nose, do you think I’m the one to try to put a stop to it? No, indeed.
+Besides, it supplied me with a lot of hints for love-making scenes; it
+was what the painters call “a study from the life.”’
+
+The vicar shrugged his shoulders, as much as to say: ‘You hear the
+kind of arguments I am compelled to listen to.’ Then he again took up
+the thread of his narrative. ‘It was not till after young Ridsdale had
+become engaged to Clarice Loraine that we discovered he was the son of
+Sir William Ridsdale, a wealthy baronet of ancient family. The next
+thing was to obtain the baronet’s consent to the engagement. It would
+appear that the family estates are not entailed, and, as a consequence,
+should Master Archie run counter to his father’s wishes, the latter
+can dispose of his property in any way he may think best. Well, the
+all-important missive was written and posted to Mentone, where the
+baronet was at that time residing. The answer was—well, what do you
+think it was?’
+
+‘A peremptory order by the first post to the young man to break off the
+engagement.’
+
+‘Nothing of the kind; but a visit one afternoon at the vicarage from
+a certain Colonel Woodruffe, who had come as plenipotentiary from the
+baronet. Sir William was an invalid, and could not travel, so he had
+deputed the colonel to act in his stead. The father had no doubt in
+his own mind that his son had fallen into the toils of an adventuress,
+and the colonel’s instructions were to break off the engagement at any
+cost, and take Master Archie back with him.’
+
+‘A sensible man that Sir William. And how did the affair end?’
+
+‘In a way that you would hardly guess. The gallant colonel, instead of
+carrying out his instructions, and breaking off the engagement between
+the young people, ended by falling in love himself with the fascinating
+widow and proposing marriage.’
+
+‘A change of front with a vengeance! And the answer?’
+
+‘A rejection.’
+
+‘Check for the colonel.’
+
+‘But, old bachelor though you are, Mac, I daresay you know quite enough
+of the sex to be aware that a woman’s No is not always final. At
+anyrate, the colonel, who is really a very fine fellow, is evidently
+a believer in that doctrine, seeing that five days ago on his way to
+Scotland he stopped here for an hour, had an interview with Madame De
+Vigne and renewed his offer.’
+
+‘And the answer to his second offer?’ queried the doctor eagerly.
+
+The vicar shook his head. ‘Pen, perhaps, can tell you more about that
+than I.’
+
+Miss Pen looked up quickly. ‘The answer is to be given him to-day.’
+
+‘To-day!’
+
+‘The colonel will call here this afternoon on his way back from
+Scotland, when Madame De Vigne has promised that he shall have her
+final decision—Yes or No.’
+
+‘So that, my dear Mac,’ said the vicar with a smile, ‘all things
+considered, your chance of winning the widow does not seem a very
+promising one.’
+
+‘Well, well,’ answered the doctor sturdily.
+
+‘If a better man than Sandy M‘Murdo wins the fair prize, why then
+I’ll—I’ll be his best-man at the wedding.’
+
+For a minute or two nothing was heard save the busy scratching of Miss
+Gaisford’s pen.
+
+‘How will this do, Septimus?’ she asked presently, and with that she
+began to read from her manuscript.
+
+‘“Her eyes of tenderest April blue glance up shyly into his dark
+volcanic orbs, in which there is a half-smothered fire that causes
+her heart to flutter like an imprisoned bird. A moment later, and her
+slender willowy form is swept up in a passionate embrace by those
+stalwart arms, and Love’s first burning kisses are showered on the
+sweet rosebud of her lips.”’
+
+‘Rather tropical, is it not, my dear?’ hinted the vicar mildly.
+
+‘Oh, there’s nothing namby-pamby about my readers, I assure you,’
+answered Miss Pen with a merry laugh. ‘They like their love-making
+warm—and plenty of it.’
+
+For ten minutes longer the busy scratching went on; then Miss Gaisford
+laid down her pen with a sigh of relief. ‘There—not another line
+to-day,’ she said. ‘Now that I have got my hero and my villain in the
+midst of a terrific encounter on the verge of a precipice, I can leave
+them there for a few hours in comfort.’
+
+‘That seems rather cruel to the pair of them,’ remarked Dr Mac.
+
+‘Oh, heroes and villains are used to that sort of treatment.—But I
+hope you will keep my little secret a secret still, doctor. If it
+were to reach the ears of any of the goody-goody people at home, that
+the parson’s sister writes foolish love-stories for young people,
+what hands would be uplifted in holy horror—what ejaculations over
+her backslidings would be whispered across half the tea-tables in the
+parish! Neither the squire’s wife nor Lady Pinchbeck would ever speak
+to me again, and what, oh! what would existence be worth under such
+terrible circumstances!’
+
+‘My dear madam, you may rest assured that your secret is perfectly safe
+with me.’
+
+‘It will be a bad day for the poor of my parish when Penelope gives up
+writing her love-stories,’ remarked the vicar, who was busy with his
+tackle book. ‘Every penny she earns goes to buy blankets, and coals,
+and such-like comforts for those who have no money to buy them for
+themselves.’
+
+‘My dear Septimus!’ exclaimed Miss Gaisford with a flaming face.
+
+‘My dear Pen!—Now that Mac has been taken into our confidence as
+regards one side of the question, it is only right that he should be
+made acquainted with the other.—But here come our two truants,’ added
+the vicar a moment later, as Mr Archie Ridsdale and Miss Clarice
+Loraine, looking somewhat conscious, emerged from one of the winding
+walks, and came towards the hotel, each of them laden with a quantity
+of wild-flowers, ferns and grasses.
+
+‘The lovers, eh,’ said Dr Mac, half to himself. ‘A very bonnie young
+lady—very bonnie indeed.’
+
+‘We were just thinking of sending the bellman round,’ said Miss Pen, as
+the truants came up. ‘Ting-ting-a-ling. Lost since early this morning,
+a pair of sweethearts. When last seen, he had his arm round the waist
+of she, and she had her head on the shoulder of he. Whoever will’——
+
+‘Stop, do!’ cried Miss Loraine, as she dropped her ferns and grasses on
+the table and stuffed her fingers into her ears.
+
+‘We have been botanising,’ observed Mr Ridsdale with the most innocent
+air imaginable.
+
+‘And a pretty lot of rubbish you seem to have brought back,’ remarked
+Miss Pen.
+
+‘Rubbish, indeed! And not one among them without a long and beautiful
+Latin name of its own.—Ask Archie.’
+
+The vicar rose, and addressing the doctor, said: ‘Allow me the pleasure
+of introducing you to Miss Loraine.—Clarice, my dear, this is Dr
+M‘Murdo, a very old friend of mine.’
+
+‘I had the pleasure of being introduced to your sister this morning,
+Miss Loraine, and now the pleasure is doubled,’ said the doctor with a
+touch of old-fashioned gallantry.
+
+‘I am happy to make the acquaintance of any friend of Mr Gaisford,’
+answered Clarice with a smile and a little blush.
+
+‘Mr Archibald Ridsdale—Dr M‘Murdo,’ said the vicar. The two men bowed.
+‘A capital fellow to know, so long as you are in good health, Archie,
+but a fellow to fight shy of the moment you begin to feel yourself out
+of sorts.’
+
+Suddenly a shrill whistle was heard. ‘Here comes the steamer,’
+exclaimed Miss Penelope. ‘I’m going by it as far as Bowness. Any one
+going my way?’
+
+‘I will walk with you as far as the landing-stage, and see you safely
+on board,’ answered her brother.
+
+‘That way will suit me as well as another,’ added Dr Mac.
+
+As the two men turned to go, Miss Pen drew Clarice aside. ‘Any news?’
+she whispered.
+
+‘None,’ whispered back the girl with a doleful shake of the head. ‘If
+Archie and I only knew the best or the worst! It is this suspense
+that’s so hard to bear.’
+
+‘It seems hard to bear at present, but it will be delightful to look
+back upon, by-and-by.’
+
+‘O Miss Penelope! how can that be?’
+
+‘Just now you are in the middle of the first volume of the romance
+of your life. Now, I should like to know how a romance can be worth
+anything without suspense, without mystery, without your being unable
+to guess what may happen from one hour to another.’
+
+‘Penelope, you will certainly miss the boat,’ called out her brother,
+who was already some distance away.
+
+‘We will talk more of this anon, my dear,’ said Miss Pen hurriedly.
+‘Meanwhile, don’t get downhearted; all will come right at the end of
+the third volume: it always does.’ And with a nod and a smile, the
+bright little woman tripped off after her brother and the doctor, and
+presently the trio were lost to view down the winding path that led to
+the landing-stage and the lake.
+
+
+
+
+POPULAR AMUSEMENTS IN GERMANY.
+
+
+When one thinks of the downright substantial way in which English
+people amuse themselves, with cricket, football, lawn-tennis, rowing,
+foot-racing, leaping, &c., all over the kingdom, it is strange to find
+so little of active sport of the kind among our muscular cousins of the
+Vaterland. To be sure there are boating clubs and athletic societies,
+and gymnasia in the schools and elsewhere; and soldiers are exercised
+in gymnastics, but there is too much of military stiffness about it.
+Amusements of a passive character find most favour. To ‘make’ a walk
+in a leisurely fashion, to drive in an open conveyance, or to sit down
+in a shady grove to listen to a band playing, is the most acceptable
+mode of enjoying relaxation. With beer at a penny-farthing a glass,
+and a tolerable cigar for a halfpenny, and a military or string band
+discoursing sweet music, the time passes pleasantly enough. It makes a
+great difference when you have not to pay very dearly for your whistle,
+and they certainly know how to get the most for their money in the land
+of the Teuton. Many houses of refreshment, even in towns, have gardens
+or courtyards thickly planted with trees, so that their branches meet
+overhead and form a pleasant and inviting shade. A large shed, too, is
+provided, open on the garden-side, in case of rain. Frequently, music
+is introduced, and on these occasions, an extra halfpenny is charged
+on the beer, to cover the expense of the entertainment. On Sundays and
+festivals, there is music, beer, wine, and tobacco everywhere. And yet
+these people know how to amuse themselves without going to excess.
+Sometimes a tipsy man is seen, but rarely till very late at night, and
+the occurrence is so infrequent, that, compared with the usages of our
+own country, it is quite remarkable.
+
+We have more than once asked the question: ‘Is it that the beer is
+weaker, or that the German heads are stronger than the English?’ and
+we have been told: ‘Perhaps it is a little of both.’ Perhaps, too,
+there is something in the fact that there is in some respects less
+class distinction in Germany, and the middle classes may be seen
+sipping their wine or coffee in the same place with their hard-working
+brethren. Perhaps the national and natural good opinion, self-respect,
+or self-esteem—call it what you will—of the German helps to keep him
+straight; and then he takes his creature-comforts in a staid, stolid,
+philosophic way. Noisy fellows there are, of course; but they do not
+squabble and fight, as a rule; the utmost they are guilty of being the
+national practice, even at midnight, of singing rollicking choruses,
+to the great disturbance of peace-loving, law-abiding, slumbering
+citizens. The fact that soldiers are permitted to wear their side-arms
+constantly, speaks volumes for the sobriety of the men as a class, and
+redounds to their credit.
+
+A _Turnfest_ or athletic festival, generally held on a Sunday, is a
+great affair, often the event of the year in a small provincial town.
+There is a wonderful display of flags everywhere; and in the afternoon,
+a procession of the competitors and visitors with bands and banners
+and every variety of costume, the medals, badges, and ribbons of
+former contests being worn with great ostentation. The most is made of
+everything; and shouting and singing and cheering, and dust and noise,
+seem to be the order of the day.
+
+Rowing-matches provoke immense enthusiasm, and a regatta is an affair
+that induces the keenest interest. A people with so much love for the
+wonderful and so much regard for themselves, cannot help throwing into
+such occasions an amount of enthusiasm and national pride as would do
+credit to the Oxford and Cambridge boatrace itself. The members of the
+Boat Club are the heroes of the hour, and their costumes the object of
+great admiration. Though not so peculiar as the French in this respect,
+our German neighbours are nevertheless great in their ‘get-up’ for
+every particular sort of occupation or sport that they engage in. If
+a man brings down only one snipe in a day, he looks tremendously cut
+out for business notwithstanding, and appears every inch of him a
+sportsman when going to or returning from the ‘hunt,’ as he calls it.
+
+The exercise of riding cannot be properly accomplished without a
+complete and appropriate rig-out, so that even when he is not actually
+on his horse, the equestrian gives to all the world the assurance of a
+man at home in the saddle. If spurs and jack-boots do not make a rider,
+they at anyrate look very much in earnest. Never did a be-uniformed
+people more thoroughly believe in the dignity of dress and the
+necessity for effect than the Germans.
+
+However we may smile at the eccentricities and oddities of the Germans,
+we must admit that they beat us in the provision of cheap music for the
+people, most of whom understand and appreciate it. Every school-teacher
+is bound to be a musician and to pass in music, so that the people have
+a chance of learning from childhood.
+
+If the Prince of Wales succeeds as well in popularising the study
+of music as his father did in popularising art, we may hope to see
+before long a great reformation in the morals of our own people; and
+the wandering German bands, composed of the worst players in their
+own country—where they would not presume to play in public—will no
+longer be tolerated in England, because the taste of the people will be
+educated above such wretched performances. Good music, then, everywhere
+is what is wanted to enable the lower classes to enjoy themselves
+rationally, and no better means of promoting the sobriety of a nation
+can be devised. The more the masses are leavened with a knowledge and
+love of music, the more indeed we imitate the Germans in this respect,
+the less necessity there will be for restrictive measures in the way
+of ‘local option,’ and the lighter and easier will be the work of
+temperance reformers. A great reform will have been effected. If music
+can charm savages and snakes, it can do much more for our toiling,
+amusement-lacking countrymen and countrywomen.
+
+The theatre is much patronised in Germany, the prices being cheap,
+the music good, and the performances fair. The play begins at seven,
+and ends about nine or half-past. Concerts, too, both instrumental
+and vocal, are frequent; every town has its Choral Society, and every
+district its Choral Union, so that there is never any lack of vocalists
+of both sexes for the performance of an oratorio or the celebration of
+any great occasion.
+
+Where a people is satisfied with simple pleasures, these can, of
+course, be provided at little cost. Children have their swings,
+climbing-poles, bowling alley, merry-go-rounds, horizontal bars,
+&c., in the public gardens; and when one sees groups of officers
+deeply interested in the game of dominoes, it does not cause so much
+surprise to witness a huge whirligig worked by horses or steam, where
+servant-maids and soldiers are driven round and round upon painted
+wooden horses to the enlivening strains of a barrel organ, aided by a
+cornet or two and the universal drum. This sort of affair is a great
+attraction to the masses, and being generally placed near a beerhouse,
+admiring friends sit round on benches with their beakers of frothy
+beer, their cigars or large pipes, waiting to take a turn on the
+machine after a time. Music everywhere seems to be the rule—there
+can never be too much of it to please the people. Wherever there is a
+company of soldiers marching along the road without a band at their
+head, they make up for the deficiency by singing popular melodies and
+martial songs, keeping time with their feet; and this always gives
+strangers a favourable impression of the hearty, happy, and even merry
+German soldier.
+
+A torchlight procession headed by a band of music is a favourite mode
+of making a demonstration on any particular festive occasion; and last,
+but not least, is the highly popular serenade. The Choral Societies of
+a town will unite—as was the case in Darmstadt on the night before the
+marriage of the granddaughter of Queen Victoria, the Princess Victoria
+of Hesse—to the number of three hundred men, and parade before the
+residence of the person they delight to honour, each member carrying a
+lighted Chinese lantern at the end of a stick. A selection of popular
+songs and glees suitable to the occasion is sung, and in many instances
+the melodies and words are peculiarly fitting. One might write a whole
+chapter about the amusements of the Carnival time, the masked balls
+and street displays; and although these affairs are somewhat stolid
+and quite decorous in character, they contain the elements of simple
+fun, innocent recreation, and hearty enjoyment. Here, again, music
+is an important factor, for it enters into everything, and forms the
+beginning and the ending of every variety of popular amusement.
+
+
+
+
+PRINTERS’ ERRORS.
+
+
+It must be, to say the least of it, annoying to the speaker or writer
+possessed of any degree of sensitiveness, when he finds his plainest
+statements, or it may be his most carefully prepared flights of fancy,
+turned into nonsense by the substitution or omission of a letter in the
+printing; and by some unhappy chance it often seems that the mistake is
+made in just such a manner and place as will do the most mischief. The
+unlucky poet who wrote,
+
+    See the pale martyr in his sheet of fire!
+
+must have been completely crushed when the line appeared as—
+
+    See the pale martyr in his shirt of fire!
+
+We can sympathise also with the poet who, writing of his love, asserted
+that he had ‘kissed her under the silent stars,’ and found the
+compositor made him state that he ‘kicked her under the cellar stairs.’
+True, it has been doubted if these two poets ever existed; but others,
+of less mythologic fame, have suffered as badly at the hands of the
+printer. Burns, in a cheap edition of his works, is made to say,
+
+    Oh, gin my love were yon red _nose_.
+
+A well-known temperance lecturer was indignant at finding the sentiment
+ascribed to him that ‘drunkenness was jolly,’ whereas he had declared
+that it was ‘folly.’
+
+For the explanation of many of these blunders it is necessary to bear
+in mind that in setting up the type the compositor has the various
+letters arranged in separate divisions of his case and selects them one
+by one as required. Habit enables him to do this with extreme speed
+and accuracy; but it will easily be seen that the presence of a wrong
+letter in a division or a dip into the wrong box may occasion one of
+these unhappy blemishes. In this manner we find oats rendered ‘cats;’
+songs, ‘tongs;’ poets, ‘posts;’ or as once happened in the report of
+a railway accident, ‘confusions of the limbs’ for ‘contusions of the
+limbs.’ And by the substitution of _n_ for _h_, a newspaper report was
+made to state that ‘the people rent the air with their ten thousand
+_snouts_.’
+
+The blame, however, does not always rest with the compositor. Incorrect
+spelling and slovenly writing have much to answer for, especially
+in the case of proper names and quotations from foreign languages.
+Boerhaave becomes ‘Boershave;’ and _Et tu, Brute!_ ‘Eh, the Brute!’
+Authors should remember that the proof-reader is fallible; he is
+not, as is sometimes expected, a ‘Universal Compendium’ of facts,
+people, places. If a passage reads clearly and grammatically, although
+conveying anything but the sense intended, it is not to be wondered
+at that the error is often undetected until too late. Much surprise
+was occasioned by Sir Archibald Alison, in his _History of Europe_,
+including amongst the persons present at the funeral of the Duke of
+Wellington the name of ‘Sir Peregrine Pickle.’ There can be little
+doubt that the author had made an unconscious slip, intending to name
+Sir Peregrine Acton. Sir Thomas Brassey having referred in a speech to
+the _Golden Treasury of Songs and Lyrics_, the compositor transformed
+the title into the ‘Golden Treasury of Soups and Cynics.’ A report
+in a Manchester paper of a recent dramatic performance mentioned the
+well-known farce of _No. 1 Round the Corner_ under the amusing and
+suggestive title of ‘_No One_ Round the Corner.’
+
+Mistakes in punctuation, such as the omission or misplacing of a
+comma, may cause serious alteration to the sense of a passage. The
+contract made for lighting the town of Liverpool by wick lamps, during
+the year 1819, was rendered void by the misplacing of a comma in the
+advertisements, thus: ‘The lamps at present are about four thousand
+and fifty, and have in general two spouts each, composed of not less
+than twenty threads of cotton.’ The contractors would have proceeded
+to furnish each lamp with the said twenty threads; but this being
+only half the usual quantity, the Commissioners discovered that the
+difference arose from the comma following, instead of preceding,
+the word ‘each.’ In the following instance, it was no doubt a
+bachelor-compositor who, in setting up the toast, ‘Woman, without her,
+man would be a savage!’ got the comma in the wrong place, and made the
+sentence read, ‘Woman, without her man, would be a savage!’
+
+All the above-mentioned errors may fairly be ascribed to carelessness
+and mischance. Others, however, are on record which have been committed
+knowingly and intentionally, and so can scarcely be classed as errors.
+They have been mostly connected with Biblical matters, and intended to
+further party interests. It is said that Field, a printer of the time
+of Charles I., was paid fifteen hundred pounds by the Independents to
+alter a single letter in the third verse of Acts VI., so as to make the
+word _we_ read ‘ye,’ and so give the right of appointing pastors to the
+people, and not to the apostles. The deplorable state of the press in
+Field’s time may be realised from the fact that Bishop Usher, on his
+way to preach at Paul’s Cross, asked at a stationer’s for a copy of the
+Bible; and on examining it, found, to his astonishment, that the text
+from which he was about to preach was not in the book! The well-known
+‘Vinegar Bible’ was published in 1717, and obtains its name from the
+Parable of the Vineyard being printed as the Parable of the _Vinegar_.
+One of the most wilful alterations of the text, and one which cost
+its perpetrator her life, was committed by the widow of a German
+printer. One night, while an edition of the Bible was being printed in
+her house, she took the opportunity of altering the word _Herr_ into
+‘Narr,’ making the verse read, ‘he shall be thy _fool_,’ instead of ‘he
+shall be thy _lord_.’
+
+The celebrated Bibles of Sixtus V. are eagerly sought for by
+collectors. Their sole fame is the multitude of errata which crowd
+their pages, notwithstanding that His Holiness Sixtus V. carefully
+superintended every sheet as it passed through the press, and finally
+prefixed to the first edition a bull forbidding any alteration in the
+text.
+
+A curious jumble appeared in a cabled critique of Mr Irving’s acting on
+one of his appearances in the States. Instead of saying that ‘the taste
+for Irving, like that for olives, must be cultivated,’ the critic was
+represented as giving utterance to the incomprehensible assertion that
+‘the toast for Irving, like the toast for olives, must be cut elevated.’
+
+A Glasgow divine, and one of Her Majesty’s chaplains in Scotland, was
+lately reported as saying that ‘personally he violated the Lord’s Day
+as much as any member of the Court.’ ‘Venerated’ was probably the word
+actually employed by the reverend gentleman.
+
+Similarly, in an edition of _Men of the Time_ published in 1856, the
+then Bishop of Oxford is thus described: ‘Oxford, Bishop of (Rt. Rev
+Samuel). A more kind-hearted and truly benevolent man does not exist.
+A sceptic as regards religious revelations, he is yet an out-and-out
+believer in spirit manifestations.’ This description really belonged
+to ‘Owen (Robert) of Lanark.’ The edition was soon suppressed, but
+not before the Bishop had possessed himself of a copy for his private
+library.
+
+Although both the chaplain and the bishop had reason to complain of
+their treatment, it must have been considerably more astonishing and
+mortifying for Herr Franz Liszt, who is still delighting his musical
+admirers with his productions, to find that in Haydn’s _Dictionary of
+Dates_ (1870) he is represented as dying in October 1868.
+
+The Queen’s Speech at the opening of a recent session of parliament
+was hurriedly published in a Scotch newspaper without being revised by
+the press-corrector, and Her Majesty, instead of saying that certain
+negotiations ‘will, I doubt not, lead to satisfactory results,’ was
+reported as saying, ‘will, I doubt, not lead to satisfactory results.’
+So much for the misplacing of a comma!
+
+With increased literature have come better systems of ‘reading’ and
+correcting, and greater accuracy has been attained. Such mistakes
+as above quoted are exceptional, and the morning newspaper may now
+be read week after week with but few misprints. A good example of
+accuracy in printing tables of figures—in which it is so difficult to
+avoid errors—may be seen in _Bradshaw’s Railway Guide_, every monthly
+part of which contains from seven to eight hundred thousand figures.
+Astronomical and mathematical tables require great care in printing,
+and very few are issued which can be relied upon as absolutely
+correct. Charles Babbage superintended the production of a set of
+trigonometrical tables in 1827 which perhaps stand unrivalled in this
+respect. They were prepared for the Ordnance Survey of England and
+Ireland, and a limited number of copies printed—it is said only thirty.
+They consist of tables of logarithms and log. sines, tangents, cosines
+and cotangents, _to every second_. Roughly speaking, they contain about
+six millions of figures. The proof-sheets were revised by several sets
+of readers, and were carefully examined and compared with other tables
+no less than seven times. From Mr Babbage’s preface, we learn that
+after the final stereotyping, seven errors were found in the logarithms
+and one in the differences. These being corrected, the stereotyped
+sheets were hung up in the Hall at Cambridge University, and a reward
+offered to any one who could find an inaccuracy. Since their first
+issue in 1827, no error has been discovered, and it may reasonably be
+concluded that they are absolutely correct.
+
+
+
+
+‘THE KING COUNTRY.’
+
+
+The recent visit of King Tawhiao to this country has awakened a deep
+and widespread interest in New Zealand and its inhabitants. The Maori
+king has been fêted and feasted far beyond his desires, and has paid
+the penalty of greatness. But he has suffered martyrdom in a good
+cause; and if he has not succeeded in bringing the wrongs of the
+Maoris home to the Pakehas, he has certainly aroused a very general
+curiosity as to the character and resources of the mysterious ‘King
+Country’ of which he is the titular chieftain. The publication of Mr
+J. H. Kerry-Nicholls’s volume of travels—entitled _The King Country,
+or Explorations in New Zealand_ (London: Sampson Low)—in this unknown
+region is, therefore, peculiarly well timed. Until within the last few
+years, ‘the King Country’—as a vast tract of the finest land in North
+Island is still known—was a _terra incognita_ to Europeans. Rivalries
+of race constituted a barrier more impassable than the _aukati_ line
+itself, which separates the Maori lands from the European portion of
+the colony, and is marked on the one side by the farms and homesteads
+of the settlers, and on the other by the huts of the natives. In its
+vast forests, over its precipitous mountains, along its trackless
+plains, the natives alone wandered. It was an _imperium in imperio_, a
+fastness in which aboriginal sovereignty sat enthroned, deaf to all
+the offers of civilisation.
+
+It was through this unknown country that Mr Kerry-Nicholls pushed
+his way in company only with an interpreter. With but three horses,
+which were ultimately reduced to two, he accomplished more than six
+hundred miles of travel, discovered many new streams, penetrated almost
+inaccessible regions of mountainous forest, found extensive plains,
+traced the sources of three of the principal rivers of the colony,
+examined the unknown shores of its largest lake, ascended one of its
+highest mountains, experienced degrees of temperature varying from
+eighty degrees in the shade to twelve degrees below freezing-point, and
+successfully traversed from south to north a territory with an area of
+ten thousand square miles, which had been, from the early history of
+the colony, rigorously closed to Europeans. It is scarcely necessary
+to add that the records of these wanderings constitute a singularly
+interesting volume of discovery and adventure, which can hardly fail
+to prove of some practical utility to the colony, and a welcome
+contribution to geographical science.
+
+‘The King Country’ comprises one of the finest tracts of land not
+only in New Zealand, but in some respects in the southern hemisphere.
+It is much more than merely picturesque, and in this respect alone
+it can compete with the finest scenery the world can produce. Its
+natural advantages are of the highest order. It is throughout well
+watered, and in parts exuberantly fertile; while even the mountains
+are richly clothed with forest trees and shrubs. The southern portion
+is drained by the Whanganui River, which is fed by many tributaries,
+flowing from the highest mountain-ranges in the central and southern
+divisions of the island; while the Mokau River and its affluents flow
+from the central region to the coast. In the north, the Waipa and
+numberless minor streams flow from the mountains into the Waikoto River
+itself, which has from time immemorial been renowned in Maori fable
+and romance. Again, more than a dozen streams flow into Lake Taupo,
+an immense reservoir, some twenty-four miles long by fourteen broad,
+which lies almost in the midst of the central tableland; while the
+Waikoto is the only effluent river. During the rainy season, the waters
+of this lake, having only this one outlet, rise rapidly; and with the
+continuance of heavy winds, its waves are lashed into fury, and break
+upon its shores with all the force of a raging sea.
+
+Geologically speaking, this district presents problems of surpassing
+interest. Here can be seen side by side the relics of the stupendous
+action of volcanic fires, and of the scarcely less potent force of
+the glacier. It is contended that the formation of North Island must
+be attributed to submarine volcanic eruptions, which, perhaps by slow
+degrees, perhaps rapidly, forced upwards the Taupo tableland. These
+fires bursting again through the plains, caused mountains to rise up
+in the form of serrated ridges and truncated cones, which poured out
+streams of lava and enormous deposits of pumice over the surrounding
+country. Probably the basin of the lake was once an active crater,
+from which the first vast pumice-plains flowed; while later, the
+mighty Ruapehu, and, when it became extinct, the still active
+Tongariro, became the outlet of the volcanic fire. That this element
+is still largely active in many parts of the country is shown by the
+geysers, solfataras, fumaroles, and hot springs which form one of the
+characteristic features of North Island. Thus the ‘lake country’—as
+the district round Lake Rorotua is commonly known—is ‘a region of
+eternal fire.’ The conditions of existence here are certainly novel.
+The natives bathe in such of the thermal springs as are of suitable
+temperature, at all times of the day, and in a very primitive fashion.
+In others, again, they cook their food and warm their houses by the
+same means.
+
+These natural phenomena occur in many other districts, such, for
+instance, as that round Lake Rotokawa, and the districts near the
+native settlement of Tokanu, on the south side of Lake Taupo; while on
+the northern slope of Tongariro are some of the largest and most active
+boiling springs in the country. Moreover, the mountains possess all
+the rock formations in which gold, coal, iron, and other minerals are
+found to exist. Thus, the Kaimanawa Mountains, which are situated in
+almost the centre of the island, and stretch across the great central
+tableland to an extent of eighty miles, offer a peculiarly rich field
+to the geologist. Mr Kerry-Nicholls reports the existence of abundant
+auriferous indications, and confidently expresses his opinion that here
+lies a probable Eldorado.
+
+It is not our purpose to do more than mention the adventurous
+journeyings recorded in this volume. Frustrated, owing to disputes
+between the natives and the colonial government, in an attempt to
+enter ‘the King Country’ from the north, the traveller successfully
+essayed to pass the southern boundary-line. By throwing himself upon
+the good-will of the natives, going fearlessly among them, respecting
+their customs, and following as nearly as possible their mode of life,
+and, in fact, for the time becoming a Maori, he succeeded at a time
+when many Europeans would not only have failed, but probably have paid
+the extreme penalty for their rashness. In one case, it is true, he
+only achieved his purpose by dint of exercising the greatest secrecy.
+Tongariro is _tapu_, or strictly sacred, in the eyes of the Maoris,
+and could only be ascended by a European without their knowledge.
+This is one of the most perfect volcanic cones in the world. But the
+resources of this rich district, from whatever point of view they may
+be considered, are still awaiting development. Its flora and fauna have
+still to be collected and classified. Its agricultural and industrial
+resources are still unknown; but we have evidence to show that these
+are worthy of attention.
+
+
+
+
+THE MOULMEIN ELEPHANTS.
+
+
+Some time ago there was a discussion in the learned journals regarding
+‘intellect in brutes;’ and I thought then, as I think now, that much
+of the controversy depended on the definition we assign to the word
+‘intellect.’ Some say that it is merely an exaltation of the natural
+instinct of the brute; others, that it is an exhibition of true
+reason. But then, what is instinct? Some arguers mystify their hearers,
+and exhibit their own ignorance of the subject by replying: ‘Instinct
+is only that in animals which we call reason in man.’ Well, this is
+not the place to argue the subject; but I shall exhibit certain facts,
+observed by myself, in the behaviour of the elephants employed in the
+Moulmein timber-yards, and leave my readers to judge whether they were
+due to instinct or reason.
+
+Anchored abreast of Aga Synd Abdul Hosein’s timber-yard, and within
+bare swinging distance of the shore, I had ample opportunities of
+minutely observing and recording the marvellous illustrations of the
+elephant’s intelligence. These animals are largely employed in the
+timber-yards, and their functions consist in helping to embark and
+disembark the huge teak-logs, or move them about the yard; in fact,
+without them work would be at a stand-still. What struck me at once
+was the wonderful combination of enormous power with the gentlest,
+most loving docility. Here were huge logs being moved about as if they
+were matches, and yet with the utmost regard to any one in the way. A
+case in point. We were landing one day at the Aga’s wharf, and found
+that the ebbing tide had left a thick layer of treacherous slime on
+the wooden slope, rendering it impossible for a lady to land. Seeing
+this, the manager called out to a mahout or driver, and in a moment his
+elephant pushed a log down the slope, just stopping short of the boat,
+and affording the lady a dry surface to step out upon. There must have
+been intellect in this act; for the great log was not pushed down at
+random on the wharf, nor into collision with the boat, but exactly at
+the right spot and into the right place.
+
+All elephant-work is performed either by the trunk or right foot
+in pushing; by trunk and tusks combined, as in carrying logs; or
+by the strength of the whole body in dragging. Dragging-elephants
+are furnished with a light wooden pack-saddle, on which the mahout
+sits sideways, and to which the traction-chain is attached. This is
+Y-shaped, the leg being greatly prolonged and ending in a hook. Let
+us watch the handling of this log—twenty feet long, by sixteen inches
+square—which has to be dragged across the yard. The chain is passed
+round it by an assistant and then firmly hooked; and now the elephant
+has to do the rest. His first action is to get his hind-legs well
+within the V of the chain, and then he starts, the log helplessly
+following. Arrived at its destination, the elephant disencumbers
+himself of the log by unhooking the chain with the finger of his trunk,
+and then pulling it from under the log, or pushing the latter to one
+side. Now, mark what was involved in this apparently simple operation,
+the sole guidance to which was either the voice of the mahout, a pat
+from his stick, or a tap from his heels. First, there was the getting
+inside the V. Why did the old fellow do that? He has learned from
+experience that if he did not, traction would be interfered with, and
+his legs rubbed by the chain. Was not his action, therefore, dictated
+by reason? Secondly, there was the unhooking of the chain, which
+instinct never could have prompted. Imitation was at work; the elephant
+had seen that the unhooking of the chain liberated the log, and had
+learned to follow the example; showing thereby the domination of reason.
+
+Here are some logs being adjusted on the wharf-slope. Note the ease
+with which the elephant pushes each into its place with, apparently,
+the slightest movement of trunk or foot. Mark this one, which, by a
+greater than necessary exercise of force, has become tilted up against
+its fellow. The elephant has noted it too, and half-kneeling, and
+getting his tusks under it, he pulls the log backwards a little, and it
+drops square with its fellow. What dictated that action? Mathematical
+order and precision belong to the bee, and are said to be instinctively
+implanted in that humble animal; but could there have been anything
+in this elephant’s antecedents to have prepared it for rearranging a
+dislocated log? Surely the impulse seized it at the moment, and must
+have been due to a sense of order or tidiness implying the presence of
+reason. Odd lengths of log, varying from four to six feet, are carried
+about the yard by elephants, a species of work which is distasteful
+to them, as exhibiting their awkward points. Indeed, they evidently
+feel degraded by it, for they set to work with an air of resignation
+quite foreign to their shifting or dragging feats. There they rejoice
+in their great strength, and are fond of exhibiting it. Here, little
+strength is needed; but the operations involve roughish treatment
+of the nose, and we know that all animals, including man, are very
+particular as to how their noses are handled.
+
+The elephant is proud of his strength, but sensitive with regard to
+his trunk, especially when that delicate organ is brought to bear upon
+any rough work; and as the securing of a log between the trunk and
+tusks necessitates a large amount of awkward movement, I noticed that
+the selected elephant approached the job with reluctance. Resigned
+to his fate, he half-kneels before the odious object, and gets the
+points of his tusks under it; then he wriggles it up the ivory tramway
+with his trunk, and secures it therewith _in situ_. His troubles now
+commence; for on rising to his feet, the hateful log, obeying the laws
+of gravity, at once tends to drop; and to obviate this, the poor brute
+has to raise his head on high. Thus constrained, he commences his march
+with slow stateliness, as if to make the best of a bad job, and not let
+the world at large know that he is virtually walking blindfold. And so
+he is; for the elevation of his head upsets the axis of his vision, and
+he has to walk more by touch than by sight.
+
+I have thus attempted to describe the main duties which elephants
+have to discharge in the timber-yards, and I have mentioned that they
+are guided by the voice, stick, or heels of the mahout. Watching them
+from shipboard, you are quite close enough to note every movement of
+the animal, but not sufficiently near to catch the signal, so that
+the elephantine actions seem purely automatic, and therefore the
+more astonishing. But when you are alongside the animal, and can see
+and hear the simple signals under which he works, you are equally
+astonished at the thorough manner in which he understands what he is
+expected to do, and the very little prompting he requires.
+
+On one occasion, I arranged with a mahout to bring up his elephant to
+where I was standing, that I might indicate the work to be done, the
+mahout to be absolutely silent. Standing by a six-foot log, I beckoned
+to the mahout, and up came the elephant. Arrived at the spot, and being
+without chains, he must have opined that dragging was not intended.
+There remained, then, pushing or carrying, the latter operation being
+the one which the sagacious creature saw was intended, for he proceeded
+at once with his awkward preparations for carrying it away. Throughout
+this test the mahout was absolutely silent, and, as far as I could see,
+quite passive. The result of it was that the elephant divined: what I,
+a stranger, wished it to do, and did it.
+
+On another occasion, I applied the test to a difficult object, an
+eighteen-inch cube of teak, which the dear old fellow at once arranged
+to carry off; but how to do it, he could not at first determine. As his
+tusks diverged more than eighteen inches, they were no support, and the
+many sharp corners of the cube sorely tried the delicate trunk. After
+some failures, he managed to seize the fragment by the centre, and then
+raise it up below the tusks against his lower lip. As he had virtually
+accomplished the task, I discontinued the experiment, expressing my
+satisfaction and delight to the manager, who somewhat damped my ardour
+by informing me that the mahout, while abstaining from use of voice or
+stick, might have conveyed his wishes to the elephant by pressure with
+his heels!
+
+But a moment’s reflection increased my admiration at the elephant’s
+intelligence, for, allowing that the mahout’s heels _had_ pressed his
+side, how could such pressure inform him that he was neither to drag
+nor push, but carry? Surely the mahout could not have possessed a code
+of pressure-signals with which he had indoctrinated the elephant in
+prospect of curious visitors. If he had, then it must have included
+voice and stick signalling as well, to either of which I might have
+resorted. No; I believe that the elephant acted independently of
+signals, and reasoned on what he had to do, by what was laid before him.
+
+Hitherto, we have seen the elephant in the yard; let us follow him
+into the mill, and there admire the triumph of reason over instinct.
+We all know how naturally timid and nervous the elephant is, and how
+susceptible to noise. Well, watch this noble old fellow solemnly
+dragging in a huge log to the sawmill. Onward he moves, undismayed
+by the horrid panting of the engine or the screeching of the saws.
+Instinct would have tempted him to turn tail and flee from the noisy
+turmoil; reason keeps him at his task, confident that amid the uproar
+and apparent confusion, perfect order and safety prevail. And so, with
+flapping ears and swaying trunk, he yields up his log to the grip of
+the remorseless saw, and goes off unconcerned to find a fresh victim.
+It was very pleasing to see that the Aga’s elephants were kindly
+treated and well cared for; the goading _ánkūs_ (iron hook; and prod)
+was nowhere to be seen. A daily as well as a rigidly observed weekly
+rest was secured to them; besides, their cleanliness is well looked
+after; and morning and evening they are taken into the river to be
+well scrubbed, the termination of each bath being a triple dive, which
+they enjoy immensely.
+
+On a second visit to Moulmein, I noticed another totally different
+illustration of confiding reason in the elephant. We were at anchor in
+the river in a strongly flowing tide, when a deeply sunk raft laden
+with green forage, two men, and two elephants, swept swiftly past. The
+elephants stood motionless and quite unconcerned, knowing that they
+were under secure pilotage, and quite safe as long as they remained
+quiet. If they had proved restless, the raft must have come to grief.
+
+
+
+
+GUM-ARABIC AND THE SOUDAN.
+
+
+According to the _Scientific American_, the gum-arabic supply appears
+to have been in a great measure cut off owing to the state of affairs
+in the Soudan. It says: ‘Gum-arabic comes almost exclusively from the
+Soudan, and owing to the operations of El Madhi, there have been no
+receipts of any consequence for a year past. In confectionery it makes
+about thirty per cent. of the best quality of gum-drops, marsh-mallow,
+and jujube paste. The annual supply from the Soudan has heretofore been
+from twenty to twenty-five thousand bags of four to six hundred pounds
+each, and there is usually a stock held in London about equal to one
+year’s receipts. This reserve is now about exhausted, and the gum has
+been steadily advancing in price from the ordinary figures of fourpence
+to fivepence per pound, until it now commands from one shilling and
+threepence to two shillings, according to quality.’
+
+
+
+
+ONE BY ONE.
+
+
+    Though from the boughs to which they’ve long been clinging,
+      The autumn leaves are dropping one by one,
+    Yet from their dust, new forms of beauty, springing,
+      Shall smile again in summer’s gentle sun.
+
+    Though one by one the pearly drops of morning,
+      From drooping flowers, on viewless pinions rise,
+    We’ll see them yet the gorgeous clouds adorning
+      With glowing arches of celestial dyes.
+
+    Though one by one the stars are fading slowly
+      That all night long kept vigil in the sky,
+    The distant mountain-peaks, like prophets holy,
+      Proclaim that morning’s light and song are nigh.
+
+    Though with slow step goes forth the sower weeping,
+      And on earth’s lap his precious treasure leaves,
+    Yet comes the harvest, with its joyous reaping,
+      When shall be gathered home the ripened sheaves.
+
+    Though one by one the friends we fondly cherish
+      Withdraw from ours, the cold and trembling hand,
+    And leave us sorrowful, they do not perish—
+      They yet shall greet us in a fairer land.
+
+    Yes; from all climes, where’er the faithful slumber
+      ’Neath scorching suns, or arctic snow and frost,
+    Stainless they’ll rise, in myriads without number;
+      All, all, shall meet—there shall not one be lost.
+
+            A. M‘L.
+
+       *       *       *       *       *
+
+Printed and Published by W. & R. CHAMBERS, 47 Paternoster Row, LONDON,
+and 339 High Street, EDINBURGH.
+
+       *       *       *       *       *
+
+_All Rights Reserved._
+
+*** END OF THE PROJECT GUTENBERG EBOOK 66418 ***

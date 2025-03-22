@@ -1,0 +1,1005 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 49036 ***
+
+                          Atoms in Agriculture
+
+
+
+
+                   The Understanding the Atom Series
+
+
+Nuclear energy is playing a vital role in the life of every man, woman,
+and child in the United States today. In the years ahead it will affect
+increasingly all the peoples of the earth. It is essential that all
+Americans gain an understanding of this vital force if they are to
+discharge thoughtfully their responsibilities as citizens and if they
+are to realize fully the myriad benefits that nuclear energy offers
+them.
+
+The United States Atomic Energy Commission provides this booklet to help
+you achieve such understanding.
+
+[Illustration: ]
+
+                                          Edward J. Brunenkant, Director
+                                       Division of Technical Information
+
+  UNITED STATES ATOMIC ENERGY COMMISSION
+
+  Dr. Glenn T. Seaborg, Chairman
+  James T. Ramey
+  Wilfrid E. Johnson
+  Dr. Theos J. Thompson
+  Dr. Clarence E. Larson
+
+
+
+
+                          Atoms in Agriculture
+
+
+by Thomas S. Osborne
+
+
+
+
+                                CONTENTS
+
+
+  RESEARCH IN THE UNITED STATES                                         1
+  HOW ARE RADIOISOTOPES USED IN RESEARCH?                               2
+      They May be Used as “Tracers”                                     2
+      How Effective Are Radioactive Tracers?                            3
+  PLANT NUTRITION AND METABOLISM                                        4
+      What Happens to Fertilizer in the Soil?                           4
+      Do Plants Absorb Through Roots Only?                              4
+      Where Should Fertilizer be Placed?                                5
+      Do Fertilizers Move Fast in Plants?                               5
+      What Else Do Radioisotopes Tell Us?                               5
+  PLANT DISEASES AND WEEDS                                              8
+      How Can We Combat Plant Diseases?                                 8
+      Why Do Chemicals Destroy Some Plants?                            10
+  ANIMAL NUTRITION AND METABOLISM                                      11
+      How Nutritious Are Various Feedstuffs?                           11
+      Can Lean Meat be Estimated “on the Hoof”?                        12
+      Does Thyroid Affect Milk—Egg Production?                         13
+      More Tracers in Animal Nutrition Research                        13
+  INSECTS                                                              15
+      Where and How Fast Do Insects Travel?                            15
+      How Far Do Insects Carry Pollen?                                 15
+      Are Predators Used to Destroy Insects?                           16
+      Can Tracers Measure Spray Residues?                              17
+  RADIOISOTOPES AS RADIATION SOURCES                                   17
+      Can Radiation Produce New Plants?                                18
+      Can Radiation Destroy Germs and Insects?                         19
+      How Does Radiation Affect Farm Animals?                          22
+      What Else Can Radiation Tell Us?                                 22
+  CONCLUSION                                                           23
+  SUGGESTED REFERENCES                                                 24
+
+
+                 United States Atomic Energy Commission
+                   Division of Technical Information
+           Library of Congress Catalog Card Number: 64-60274
+                            1962; 1963(Rev.)
+
+
+ABOUT THE AUTHOR
+
+Thomas S. Osborne is in charge of plant-breeding research being
+conducted by the University of Tennessee’s Agricultural Research
+Laboratory for the Atomic Energy Commission. He has been in this work
+since 1953.
+
+But Dr. Osborne is a teacher at heart. Hence when students wrote
+inquiring about the effects of radiation on seeds, he took great
+interest in replying. From these replies grew mimeographed literature
+suggesting experiments for students; then this and other booklets.
+
+Dr. Osborne received his undergraduate degree from Oklahoma State
+University and his doctorate from Washington State University.
+
+
+
+
+                          Atoms in Agriculture
+
+
+by Thomas S. Osborne,
+Associate Professor of Agronomy, University of Tennessee.
+
+  _To know what questions to put to Nature—that is 95 per cent of
+  scientific research._
+                                                              —Whitehead
+
+If man’s existence on the earth is compared to a calendar year, then he
+began farming in the very early morning of December 30 and began
+applying systematic knowledge to agriculture at 10:15 p.m. on December
+31.
+
+The first traces of man on the earth are dated at about one and
+three-quarter million years ago. Plant life then was very much like
+plant life today, but the animal population was quite different. Man
+became a producer of plants and animals instead of merely a gatherer and
+hunter about 8000 years ago. He has applied systematic study to
+cultivated plants and animals for only 300 years.
+
+
+
+
+                     Research in the United States
+
+
+Estimates of crop losses in the United States each year are
+approximately $5 billion to weeds, $4 billion to insects, and $3 billion
+to diseases. This total loss of $12 billion a year is about $22,500 a
+minute.
+
+In an effort to reduce these losses and to raise the standard of living,
+agricultural research has become more specialized and more complex. Over
+the years it has gradually changed from trial-and-error attempts to
+increase production to the actual study of basic questions. To study
+such intricate systems as the leaf of a plant or the liver of an animal,
+agricultural science has had to draw from every other science. The use
+of radioactive tracers and radiations in research looks especially
+promising to agriculture.
+
+In fact, agriculture has already begun to benefit from the applications
+of such research. Radioactive techniques have been used to study soils,
+plants, microbes, insects, farm animals, and new ways to use and
+preserve foodstuffs. Radioactive atoms are not used directly by farmers
+but are used in research directed by the U. S. Department of Agriculture
+and Atomic Energy Commission, by the agricultural experiment stations of
+the various states, and by numerous public and private research
+institutions. From such research come improved materials and methods
+which are used on the farm.
+
+In more highly developed countries agricultural research has brought a
+shift of emphasis from production to utilization. In the United States
+today, each farmer produces enough food for himself and 25 other people.
+Moreover, for every person who works on a farm, there are two or three
+other people who sell him goods and services or process and distribute
+the things he produces.
+
+In agriculture, as in all areas of research, the number of questions to
+be asked of Nature seems infinite. Future generations seeking to answer
+these questions will probably rely more on techniques using radioactive
+isotopes than on any other methods known today.
+
+
+
+
+                How Are Radioisotopes Used in Research?
+
+
+They May Be Used as “Tracers”
+
+Man’s attempts to describe the universe consist of finding answers to
+the questions he puts to Nature:
+
+  How deep is a well? Toss in a rock.
+  Where is the cat? Hang a bell on him.
+  How far does a wild duck fly? Put a marker on his leg.
+  Where are the fireflies? Just watch at dusk.
+  Is our satellite still up? Listen for the radio signal.
+
+Other questions arise in agricultural research:
+
+  How fast do roots grow? How deep? How soon does water get to them
+              after a rain?
+  When does a mouthful of hay reach a cow’s stomach?
+  How long until nutrients get into her blood? Her milk?
+  How far will pine pollen travel on the wind?
+  How deep does an earthworm burrow?
+
+To answer these questions, scientists need some kind of miniature genie,
+one who will shout at the proper moment, “I’m here!” When the root has
+reached the fertilizer or the water has reached the root; when the hay
+becomes transmuted to milk, or the earthworm arrives at a particular
+spot—then this invisible little servant who has made the trip could
+announce, “I’m here!”
+
+Such a helpful genie exists as the radioactive atom: he is invisibly
+small, obedient, transportable, digestible, immune to fire, flood, or
+famine, able to travel under his invisible cloak to the secret hiding
+places of Nature’s creatures and announce to waiting Geiger tubes, “I’m
+here!”
+
+The physically unstable radioactive atom behaves chemically exactly like
+its stable counterpart until the instant it emits its radiation and
+becomes stable. For example, radioactive phosphorus behaves,
+biologically and chemically, like stable phosphorus until it emits a
+beta particle and becomes stable sulfur. If the beta particle enters a
+gas-filled Geiger tube, it produces a tiny burst of electrical energy
+which is registered by the counter.
+
+Like fireflies which reveal themselves at dusk by flashes of light,
+radioisotopes announce their numbers and locations to sensitive Geiger
+tubes by flashes of invisible “light.”
+
+
+How Effective Are Radioactive Tracers?
+
+One way to see how valuable radioactive tracers are is to compare them
+to standard chemical techniques. A sensitive chemical test can perceive
+molecules as dilute as 10⁻⁷; that is, it can detect a molecule
+surrounded by 10 million molecules of another kind. A good radioactive
+tracer technique, by comparison, can distinguish concentrations of
+10⁻¹¹; that is, it can trace one in 100 _billion_.
+
+In other words by the chemical test you could find a person in
+metropolitan New York with a secret tattoo on the roof of his mouth. By
+the tracer method you could find this same person anywhere in the world,
+even if the world population were multiplied fiftyfold.
+
+In the chemical test you could distinguish the equivalent of one kernel
+of corn in one-tenth of a boxcar load; in the tracer, one kernel in 850
+boxcars.
+
+
+
+
+                     Plant Nutrition and Metabolism
+
+
+Most studies of plant nutrition and metabolism pertain to the following
+questions. What do plants need for their best growth? How do they take
+in the materials they need? What things are absorbed by roots and what
+things by foliage? How does the plant turn water and other simple
+compounds into carbohydrates and proteins?
+
+Specific problems that atomic energy has helped to solve are listed.
+
+
+What Happens to Fertilizer in the Soil?
+
+Early research indicated that only 10 to 12 per cent of phosphorus
+fertilizers was taken up by plants in the first year; the rest was
+“locked into” the soil or washed away. With radioactive phosphorus-32
+scientists found that as much as 50 to 70 per cent of the phosphorus in
+a plant came from the fertilizer during the first two or three weeks of
+growth.
+
+
+Do Plants Absorb Through Roots Only?
+
+Fertilizer applied to soil is largely wasted because it is either bound
+by soil particles or is washed out of the root zone. If chemical
+elements could go directly into leaves and bypass the wastefulness of
+soils, a tremendous saving would result.
+
+Botanists have learned in recent years that the foliage of plants can
+take in some nutrients much as roots can. With tracers they discovered
+that many nutrients are readily taken up by foliage, including bark of
+dormant trees, even at temperatures below freezing. As shown by isotopic
+tracers, elements such as phosphorus, nitrogen, and potassium move both
+up and down from the point of application at rates similar to those
+following root absorption. Urea (a nitrogen compound) is now used as a
+nutrient foliar spray for many fruit and vegetable crops in this
+country.
+
+
+Where Should Fertilizer Be Placed?
+
+Even before the use of tracers, agronomists realized the inefficiency of
+spreading fertilizer uniformly over a seed-bed. They know the fertilizer
+should be placed somewhere near the seed, but where? Above? Below?
+Beside? Below and beside? How far away? They had conducted some
+research, but the methods were slow and tedious.
+
+Using tracers, the researchers confirmed earlier findings that roots
+within two or three days reached fertilizer placed less than two inches
+directly below seeds, but the roots tended to congregate there. When the
+fertilizer was two inches below and two inches to the side, roots
+reached it within a week and a better root system developed. With three
+inches between seeds and fertilizer, the desired seedling “boost” was
+delayed three or four weeks. (See Fig. 1.)
+
+
+Do Fertilizers Move Fast in Plants?
+
+The movement of radioactive phosphorus from root to leaf was found to be
+remarkably fast, sometimes requiring less than twenty minutes. (See Fig.
+2.)
+
+
+What Else Do Radioisotopes Tell Us?
+
+Some plants take in chemicals that the plant probably cannot use: for
+example, the so-called locoweeds accumulate enormous amounts of
+selenium. With tracer techniques, we can see that the root uptake
+process has poor powers of discrimination.
+
+Fig. 1—Soil tests tell _how much_ of each fertilizer element is needed
+but not where to put it to give seedlings the much-needed “push.” With
+tracers it is found that:
+
+[Illustration: (A) Fertilizer mixed throughout the soil gives the least
+benefit to seedlings.]
+
+[Illustration: (B) If placed in a band below and beside the seeds, the
+fertilizer gives high uptake and good root distribution.]
+
+[Illustration: (C) If the fertilizer is placed directly beneath the
+seeds, highest uptake occurs but roots tend to “bunch”—a handicap to
+later growth.]
+
+Fig. 2—Radioactive plant nutrients injected in soil roots
+
+[Illustration: have not reached above ground parts in 5 minutes]
+
+[Illustration: but have, as indicated by Geiger counter, reached these
+parts in 20 minutes.]
+
+[Illustration: ]
+
+Tracer experiments reveal that roots cannot distinguish potassium
+(needed in large amounts) from other elements which are chemically
+similar but quite different in size. Once inside the plant, only
+potassium can be metabolized and similar but heavier elements (rubidium,
+cesium) are useless. This is like an absentminded builder who buys
+brick, boulders, and gravel indiscriminately for his wall and then finds
+he can use only part of his materials.
+
+The process called photosynthesis whereby green plants use energy from
+the sun to convert simple compounds from air and soil into complex,
+energy-rich substances has been termed the most important chemical
+reaction in the world. It is the basis for man’s entire food supply and,
+except for nuclear energy, all significant fuel as well. Tracer
+techniques have multiplied the research efforts on photosynthesis
+tremendously.
+
+When only chemical tests were available, food manufacturing in green
+leaves had to progress for hours before scientists could measure the
+products. But with tracers and other new techniques they have narrowed
+the experimental time to minutes and finally to seconds. Today they know
+that a green leaf has formed sugars more complex than fructose, “fruit
+sugar,” after exposure to light for only _one second_!
+
+When the incredible complexities of photosynthesis are finally
+unraveled, radioactive tracers, especially radioactive carbon-14, will
+have provided the significant clues.
+
+
+
+
+                        Plant Diseases and Weeds
+
+
+How Can We Combat Plant Diseases?
+
+At one time to stop epidemic spread of plant diseases was virtually
+impossible; farmers had to abandon fields and crops. Such catastrophes
+caused by microbes have changed the course of history. For example, the
+Irish famines of the 1840’s resulted from the potato blight and caused
+mass emigrations from Ireland.
+
+In this country today plant diseases result in losses estimated at $3
+billion a year. So far, the most economical means of reducing the
+ravages of plant diseases has been to breed resistant plant varieties.
+Although such a variety may cost $100,000 to develop, its cost is
+usually repaid within a year or two.
+
+But the victory is only temporary. Although plants are bred to resist
+the pathogen (fungus) of the moment, Nature is constantly changing the
+microbial population by mutation and hybridization. Within a few years
+virulent strains of fungi which can attack the “resistant” variety
+increase to such an extent that the new variety must be replaced.
+
+For crops that provide high per-acre income such as some vegetables and
+vine and tree fruits, chemical control of fungous diseases is
+economically possible; in fact, it is a real necessity. But such
+treatment is too costly for most field crops, unless some cheap seed
+treatment or fertilizer additive can be found.
+
+A general breakthrough in control of plant diseases is yet to come.
+Because of thousands of pathogenic species, with hundreds of strains, it
+does not seem possible that the following questions could be answered
+about each one. What is the life cycle of the microbe? What conditions
+of temperature and humidity encourage it to spread? What plant species
+does it attack? How does it enter? What chemical changes within the
+cells of the plant determine whether they resist or succumb to the
+invader? How long can germs remain potent? How far can they travel by
+wind or water? What combination of resistant varieties, cultural
+methods, and chemical treatment will control the disease?
+
+With tracers it is possible for the first time to measure chemical
+uptake in single spores and to follow chemicals through the plant.
+Perhaps the most enlightening information from such studies is that some
+fungicides are 10,000 times less effective per unit of “body weight”
+than are other chemicals used to destroy weeds and insects. Obviously
+the breakthrough in chemical control of plant diseases is yet to come.
+
+
+Why Do Chemicals Destroy Some Plants?
+
+Weeds cost this country an estimated $5 billion annually, which is more
+than the loss to either plant diseases or insects. Selective chemical
+weed killers such as “2, 4-D” have become so widely used that more than
+$135 million worth was sold in the United States in 1959. In proper
+concentration these compounds will destroy many unwanted plants without
+harming lawn grasses or crop plants.
+
+[Illustration: Fig. 3—Tagged weed-killing chemicals (A) are taken in and
+transported alike in grassy (B) and broad-leaved (C) plants, but only in
+the latter are killed.]
+
+As in many other instances, beneficial use of the chemicals has far
+outreached an understanding of how they work. The still scanty knowledge
+of the process has come almost entirely from tracer studies.
+
+All plants readily absorb selective weed killers (“herbicides”), which
+are not destroyed within the plants. Resistant plants show no effect of
+the chemicals, but sensitive plants suffer damage in actively growing
+roots and shoots. Sugar formation during photosynthesis is disrupted in
+these plants, and phosphorus movement is retarded. In order to predict
+what new classes of chemicals might be of value as herbicides, we must
+await the results of research using radioactive tracers.
+
+
+
+
+                    Animal Nutrition and Metabolism
+
+
+How Nutritious Are Various Feedstuffs?
+
+An endless phase of animal nutrition research deals with efficiency of
+rations, that is, the pounds gained by the animal per pound of feed
+consumed. The standard form of such research is to feed groups of
+animals on different rations for several weeks or months and determine
+average change in weight per pound of feed used.
+
+In recent years scientists have used chemical tests to compare the
+amount of calcium in the diet against the amount excreted. The apparent
+digestibility of such minerals has thus been computed for different
+rations. Yet one important source of error in these chemical tests
+plagued researchers.
+
+There is a “turnover” in nutrients fed to animals; elements in feed are
+absorbed into the animal’s body, retained for a time, and later
+excreted. For example, a cow actually loses more calcium (through milk
+and excreta) during the first six months of milk production than her
+normal ration contains. As long as the amount of recycling was unknown,
+scientists could not tell, for instance, how much calcium in alfalfa hay
+could be digested by simply measuring incoming and outgoing calcium.
+
+Formerly scientists could study the problem only by withholding all
+calcium from the diet. Under this unnatural condition all outgoing
+calcium came from the animal’s body.
+
+With radioactive calcium in a steer’s diet (or injected into the blood),
+scientists can quickly tell how much of the excreted calcium comes from
+the animal’s blood and organs under normal conditions. In a typical
+instance a ration thought to have 24 per cent digestible calcium,
+chemically determined, was found to have 38 per cent by the tracer
+technique.
+
+The tracer method shows that milk contains phosphorus, only 20 per cent
+of which may come from the feed and 80 per cent from the cow’s bones.
+With eggs, about 65 per cent of the phosphorus is provided by feed and
+35 per cent by the hen. Radioactive tracers permit measurement of such
+“biological pathways,” as the biochemist calls them.
+
+
+Can Lean Meat be Estimated “on the Hoof”?
+
+The proof of the ration, one might say, is in the cutting. That is, the
+worth of a particular feed was formerly unknown until the carcass had
+been cut and priced.
+
+Because of the time and expense, researchers in the past have merely
+tested groups of animals on a ration for a few weeks and then estimated
+the total gain by weighing and measuring. The main drawback to such a
+method is that it measures total growth only. In meat animals, knowing
+total growth is less important than knowing how much gain is in the more
+valuable lean meat, how much is in fat, and how much merely water.
+Techniques based on atomic energy have provided a new approach without
+adding radioactive contamination to the animal.
+
+Of the “background radiation” that has existed since the earth was
+formed, part comes from cosmic rays (from outer space) and part from
+radioactive materials in the earth itself. One of these naturally
+radioactive isotopes is radioactive potassium, which is present to a
+small but significant extent in food, in human bodies, and in
+construction materials.
+
+While some chemicals such as carbon, hydrogen, and oxygen go into almost
+every kind of substance in living things, potassium plays a special role
+in animals: it lodges almost exclusively, not in bone or fat or water,
+but in lean meat.
+
+Biological and medical researchers are now cooperating to build
+“whole-body” radiation counters. A human being or an animal is actually
+enclosed by these huge devices, some of which are so sensitive they
+measure nearly every ray that emerges from the body. These counters will
+help answer many questions, but here only their use to measure
+radiopotassium in meat animals is explained. The animal is fed a test
+ration containing no added radioactivity. At intervals of a week or
+more, the animal is weighed and is also tested for natural
+radioactivity. Weighing tells total gain, while radiopotassium counting
+shows how much gain is in the desired lean meat. This method is
+remarkably simple, and since no radioactivity is added to its diet, the
+animal can still be marketed.
+
+
+Does Thyroid Affect Milk—Egg Production?
+
+Recognition of the significance of the thyroid gland in animals, the
+association of iodine with the thyroid, and the availability of an
+excellent radioisotope of iodine have resulted in increased study of
+this important gland. Chemical tests had hinted at a link between the
+thyroid gland and the production of milk and eggs. Using radioactive
+iodine, scientists learned that thyroid activity increases with the
+onset of milk and egg formation. In hot weather, when yield of milk and
+eggs decreases, activity of the thyroid gland diminishes.
+
+It may be that a dairy breeder can soon select calves for potential milk
+production because of thyroid activity as measured by radioactive
+iodine. At present he must let the animals grow and produce milk for
+several years before he chooses those to use in herd improvement. (See
+Fig. 4.)
+
+
+More Tracers in Animal Nutrition Research
+
+Female hormones in microgram amounts[1] accelerate fattening of cattle
+and sheep. Before this method can be used on animals for human
+consumption, however, it must be determined that no possible human
+injury can result from any residue. With chemical tests the measurement
+of such tiny amounts was impossible. Even with radioactive carbon-14,
+doses of hormone 1000 times normal dosage were required before the
+hormones in the flesh were measurable.
+
+Fig. 4—Future high-producing milk cows may be selected as calves,
+because of the measured activity of their thyroid glands. A minute
+amount of iodine-131 is fed and within minutes has concentrated in the
+thyroid. High concentration means high thyroid activity, which in older
+animals means high milk production.
+
+      [Illustration: Iodine-131 fed ... concentrates in thyroid.]
+
+Recently an isotope of hydrogen (tritium or H³) was linked to hormones,
+and these were fed in normal amounts to cattle. Tests 90 days afterward
+showed less than one part per billion in the meat, a big step toward
+cheaper fattening of meat animals with hormones.
+
+The use of tranquilizers has been proposed for reducing the customary
+loss of weight in cattle being shipped to market. These chemicals, also,
+are used in such minute quantities that residues could not be detected
+except with radioactive tracers. Tritium can now be used by health
+officials to study the effects of tranquilizers.
+
+
+
+
+                                Insects
+
+
+Where and How Fast Do Insects Travel?
+
+Radioactive isotopes have been used to study insects, their life cycles,
+dispersion, mating and feeding habits, parasites, and predators. Several
+hundred such studies have been made on dozens of insect species.
+
+With radioactive tracers even the smallest insect becomes more easily
+followed. As one example, nearly half a million mosquito larvae were
+tagged with radioactive phosphorus in Canada. Some of the adults from
+these larvae were later found as far as seven miles away, but most were
+recovered within one-eighth mile.
+
+In a companion study grasshoppers were labeled with the same isotope.
+Their average rate of movement was only twenty-one feet per hour, and
+after seven days their position was based entirely on random motions
+plus prevailing winds. It seems that grasshoppers have no ability to
+move toward food.
+
+
+How Far Do Insects Carry Pollen?
+
+This question is of practical importance in knowing how far to separate
+seed-fields to maintain pure varieties of plants. In the past it was
+studied by the laborious method of growing a plant having a dominant
+“marker” gene for some visible trait surrounded by plants without the
+marker. Seeds from plants at various distances from the marked plant
+were grown the following year to see how far the genetically marked
+pollen had been carried. Since such plants are normally cross
+pollinated, it was difficult to obtain strains genetically pure for
+presence or absence of the marker gene. Also, considerable testing and
+bookkeeping were involved.
+
+With tracers the answer may be found in a few days. A plant is injected
+with radioactive phosphorus; after a few days its pollen is highly
+radioactive. Flowers at various distances from the tagged plant may be
+checked daily for radioactivity. In one study with alfalfa, radioactive
+pollen was carried as far as thirty feet by bees, but more than
+one-third was deposited on plants adjacent to the labeled one.
+
+
+Are Predators Used to Destroy Insects?
+
+With insect pests, as with plant diseases, biological control is more
+economical than artificial control. The use of insecticides too often
+results in destruction of helpful insects along with pests. Limited
+success has been achieved in breeding certain plants for resistance to
+insects.
+
+Two important uses of biological control in agriculture have been made
+in recent years: importing an insect from Australia to eradicate a weed
+in California and disseminating ladybird beetles to control certain
+scale insects.
+
+Fig. 5—Identifying predators that destroy unwanted insects.
+
+[Illustration: Aphids are made radioactive.]
+
+[Illustration: Larger insects found nearby are checked for
+radioactivity.]
+
+Bumblebee has not eaten radioactive aphids, but mantis has.
+
+Helpful parasites and predators must first be identified before they can
+be used. In the case of small or nocturnal insects, this can be
+exceedingly troublesome. Tagging the pests with radioisotopes in order
+to identify the predators which consume them is much simpler because the
+most efficient predators contain the most activity.
+
+With such techniques entomologists have studied insects and animals
+which prey on unwanted aphids, mosquitoes, blackflies, and roaches. Such
+experiments may lead to a deliberate increase of certain predators to
+control injurious insects.
+
+Radioactive labeling is also valuable in studying helpful insects. In
+one case the indolence of drone bees was indicated by finding that even
+with adequate syrup in their cage they still received identical syrup
+from worker bees in an adjoining cage!
+
+
+Can Tracers Measure Spray Residues?
+
+Any material used on plants or animals to kill insects or disease
+organisms must pass rigid inspection to be sure it does not accumulate
+in foodstuffs. This is particularly true of the “systemic” poisons,
+those which are fed to plants via leaves or roots and are carried
+internally to all parts of the plant. Such chemicals can be used widely
+with nonfood plants such as cotton to kill insects feeding on them.
+
+Combining radioactive labeling with other techniques has permitted the
+researchers to show that some compounds are soon broken down into
+harmless chemicals—a big step toward acceptance for their use on food
+plants.
+
+
+
+
+                   Radioisotopes as Radiation Sources
+
+
+Earlier in this booklet radioisotopes were compared to fireflies because
+they emit flashes of “light.” Isotopes serve research in another
+important way, other than as tracers.
+
+Suppose you collected all the fireflies within a 100-mile radius and put
+them into a glass jar. Instead of an occasional twinkle, you would now
+have a steady glow of light. Similarly immense numbers of radioactive
+atoms can be compressed into a small volume to produce steady, intense
+sources of radiation. Agricultural research has answered many questions
+with the use of such radiation sources.
+
+
+Can Radiation Produce New Plants?
+
+Perhaps no biological aspect of atomic energy has so caught the fancy of
+the public as the prospect of creating new plant varieties. There is
+something mysterious about pouring invisible energy into seeds or buds
+and watching for changes in the emerging leaves and flowers. There is
+also the challenge of the lottery in being unable to predict where,
+when, or in what form the alterations will appear.
+
+Although the claims of over-enthusiastic gardeners and seed dealers
+about astonishing new plants “created” by atomic radiation are doubted,
+clear proof exists even in the restrained scientific journals of
+hereditary changes caused by radiation.
+
+From more than 30 years of scientific study, certain conclusions have
+emerged. High-energy radiations can cause sudden hereditary changes
+(mutations) in any living thing: man, animal, microbe, or plant. Any
+feature of a plant subject to hereditary control—root, shoot, leaf,
+flower, or fruit—can be altered by radiation. Most of these changes are
+undesirable; they interfere with the normal state of biological affairs.
+A very small percentage of mutated organisms is improved in some way. So
+far changes cannot be controlled or predicted.
+
+To date fourteen new strains of crop plants improved by radiation have
+been put into production in various parts of the world. These varieties
+with their places and dates of release follow:
+
+  1. “Primex” white mustard, Sweden, 1950
+  2. “Chlorina Mutant” tobacco, Indonesia, about 1950
+  3. “Shafer’s Universal” bean, Germany, about 1950
+  4. “Regina II” summer oil rape, Sweden, 1953
+  5. “Weibull Stralart” fodder pea, Sweden, 1957
+  6. “Sanilac” navy bean, Michigan, 1957
+  7. “Pallas” barley, Sweden, 1958
+  8. “N. C. 4X” peanut, North Carolina, 1959
+  9. “Florad” oats, Florida, 1960
+  10. “Seaway” bean, Michigan, 1960
+  11. “Alamo-X” oats, Texas, 1961
+  12. “Gratiot” bean, Michigan, 1963
+  13. “Pennrad” barley, Pennsylvania, 1963
+  14. “Yukon-1” carnation, Connecticut, 1963
+
+In these instances no desirable changes appeared in the plant grown
+directly from treated seeds, but they appeared several generations
+later. In most cases hundreds of thousands of plants were examined
+before the desirable ones were found. The desired changes were almost
+always accompanied by undesirable ones, and years of cross-breeding and
+“purifying” were necessary to obtain usable varieties.
+
+The technique of radiation breeding can be used on any form of life
+where large numbers can be grown and discarded at little cost. The
+output of penicillin has been increased a thousandfold by repeated
+mutations caused in the microorganism producing this antibiotic. Several
+studies on radiation breeding of poultry have been started.
+
+An ingenious reverse twist of induced mutation is being applied in the
+field of plant diseases. While some scientists are irradiating seeds and
+plants in an effort to obtain disease-resistant mutations, others are
+irradiating the fungi which cause the diseases. They hope in this way to
+foresee the new strains of pathogenic microbes that will occur naturally
+in order to breed resistant plants before the new diseases appear.
+
+Some claims have been made that radiation can stimulate plant growth,
+germination, earlier maturity, and so on. Similar benefits are sometimes
+claimed for human health. These allegations are almost never proved in
+reputable laboratories. It seems likely that radiation is stimulating,
+in the words of one authority, “only in the sense that a pruning knife
+is stimulating.”
+
+
+Can Radiation Destroy Germs and Insects?
+
+Food technologists have studied ways of preserving food with radiation
+for more than ten years. Their findings indicate that complete
+sterilization of food with radiation requires doses so high (2 to 6
+million roentgens[2]) that cost is prohibitive at present, and the food
+often becomes distasteful. These amounts of energy completely destroy
+the microbes and enzymes which normally cause food to putrefy.
+
+If radiation is to be used in preserving food, it will probably be as a
+supplement to conventional methods of heating and freezing.
+“Pasteurizing” with radiation to destroy most (but not all) of the
+microbes in meat or fruit or vegetables is accomplished with less than
+five per cent of the dosage required for sterilizing. Such treatment
+does not alter flavor or texture appreciably and could be used to
+prolong the refrigerated “life” of many fresh foods. It is the
+responsibility of the Federal Food and Drug Administration to determine
+that no threat to human welfare could possibly result before approving
+the use of high-energy radiation to preserve foods.
+
+With agricultural products stored dry, such as grain, tobacco, and wool,
+the chief agents of damage are not microbes, but insects. The loss of
+stored field crops caused by insects is estimated at $200 million
+annually in the United States. Deinfesting such goods with radiation
+doses in the “pasteurizing” range promises to be practical and causes no
+apparent change in the product.
+
+Like many other foodstuffs, potatoes are often stored for months between
+harvest and use. Precaution must be taken to prevent their deterioration
+during storage not only from decay but also from sprouting.
+
+Cold storage inhibits sprouting but is costly and has another serious
+drawback. In the making of potato chips, tubers held at low temperature
+contain excess sugar and result in darkened chips. Storage at higher
+temperatures prevents conversion of starch to sugar but encourages
+sprouting.
+
+Atomic energy promises to resolve this dilemma. Given low doses of gamma
+rays (5000 to 10,000 roentgens), potatoes may be kept at room
+temperature for a year or more without sprouting. Similar doses inhibit
+sprouting of onions. The estimated cost of irradiating tubers and bulbs
+at such doses is as low as 14 cents per ton. No chemical changes have
+yet been found in irradiated potatoes that would make them unsafe for
+eating. In fact, health officials in Canada have recently approved the
+use of gamma rays on potato tubers that will be stored and later used
+for human food. Our own Food and Drug Administration has given similar
+approval for applying gamma rays to bacon and fast electrons to wheat
+(for killing insects).
+
+An ingenious application of atomic energy to agriculture concerns the
+screwworm fly, which inhabits large areas of southern United States,
+Mexico, and the Caribbean. The fly lays eggs in open wounds of
+livestock, including navels of newly born, and the burrowing maggots
+inevitably kill the animal. In the southeastern United States, damage
+from this insect amounted to $15 to $25 million annually.
+
+In the years 1958 and 1959 more than two billion screwworm flies were
+deliberately released from airplanes over the entire state of Florida
+and parts of Georgia and Alabama. This astonishing act was a major step
+in successful eradication of the pest from southeastern United States.
+
+The entomologists who conceived this remarkable scheme had the following
+information from basic studies: the insect produces a generation about
+every three weeks. In the pupal stage males can be sterilized by 2500
+roentgens of X or gamma rays, females by 5000 roentgens. The insect can
+be reared in large numbers. Sterile males are fully competitive with
+normal males for mates. And, of course, sterile eggs do not hatch. (It
+was helpful, though incidental, that females mate only once.)
+
+After initial tests on an island in the Caribbean, a large fly-producing
+plant was set up. Flies were grown to the pupal stage, irradiated with
+8000 roentgens of gamma rays, permitted to mature, and released from
+airplanes. With 50 million flies being released weekly over Florida,
+Georgia, and Alabama, the area was smothered with sterile flies, and the
+number of eggs that hatched (from the normal native flies) rapidly
+diminished to zero. The program was continued for 18 months, and in this
+time the insect was completely eliminated.
+
+Certain other insects are being considered for the sterility-eradication
+technique. Among them are the boll weevil, European corn borer,
+mosquito, and tsetse fly. Oriental scientists are using gamma rays
+instead of the conventional heating to kill silkworms inside cocoons.
+
+
+How Does Radiation Affect Farm Animals?
+
+At a few colleges of agriculture in this country, radiation effects on
+farm animals are being studied.
+
+Although it may not be flattering to be likened to a pig or a donkey,
+the fact remains that human beings are physiologically very similar to
+swine and burros. These animals are mammals with simple stomachs and
+have the same general size, shape, and placement of organs as do humans.
+Radiation studies with swine and burros, although slow and expensive,
+should give information more applicable to humans than the more rapid
+and inexpensive studies with small laboratory animals.
+
+
+What Else Can Radiation Tell Us?
+
+Two characteristics of soils besides fertility are vitally important and
+difficult to measure. These characteristics are moisture and density.
+Moisture must be determined frequently for efficient irrigation. Density
+controls the pore space available for water and oxygen; the possible
+damage to the soil from tillage and harvesting machines is revealed by
+before-and-after tests of density.
+
+Both soil moisture and density were formerly determined by laboratory
+methods, which had two drawbacks: the methods were laborious, and they
+tested soil in an unnatural state. Today a sort of double-barreled
+radiation method can be used to measure these two soil characteristics.
+
+Neutrons are readily scattered by water but not by soil; gamma rays are
+absorbed by both soil and water. In practice the experimenter drills two
+holes in the soil a few feet apart. Into one he puts a gamma-ray source;
+into the other, a radiation detector. The reading on his detector dial
+tells him the amount of gamma rays absorbed by both soil and water.
+Replacing the gamma-ray source with a neutron source, he obtains a
+reading on absorption by water only. The difference between the two
+readings is ascribed to the density, or degree of compaction, of that
+soil in its native state.
+
+
+
+
+                               Conclusion
+
+
+Radioactive tracers and radiation sources have become indispensable to
+all phases of agricultural research. They have helped answer questions
+that seemed unanswerable. But there will always be more questions to put
+to Nature. The physicists-philosophers of 1890 were confident that they
+had obtained all significant knowledge of the physical universe.
+Discoveries of the next twenty years revealed the immaturity of that
+conviction.
+
+The modern poet Archibald MacLeish has dramatized the meagerness of
+knowledge:[3]
+
+  I will tell you all we have learned ...
+    the lights in the sky are stars
+  We think they do not see
+    we think also
+  The trees do not know nor the leaves of the grasses hear us....
+
+Perhaps the most characteristic realization of the scientist today is
+that the universe is too complex to be fully described, that concepts
+must change repeatedly to absorb new findings, and that the recurring
+miracle of life is more majestic than any formula, any computer, or any
+rocket that man’s brain can devise.
+
+
+
+
+                          Suggested References
+
+
+_Applications of Radioisotopes and Radiation in the Life Sciences._
+  Hearings before the Subcommittee on Research, Development and
+  Radiation of the Joint Committee on Atomic Energy, Congress of the
+  United States, March 27-30, 1961. Superintendent of Documents, U. S.
+  Government Printing Office, Washington 25, D. C. 1961, 513 pages,
+  $1.50.
+
+_Experiments with Radiation on Seeds._ Thomas S. Osborne. U. S. Atomic
+  Energy Commission, Division of Technical Information Extension, Oak
+  Ridge, Tenn. No. 1, 11 pages; No. 2, 30 pages, free.
+
+_Oklahoma Conference—Radioisotopes in Agriculture._ (Proceedings of a
+  conference held at Oklahoma State University, April 2 and 3, 1959.)
+  TID-7578. Superintendent of Documents, U. S. Government Printing
+  Office, Washington 25, D. C. 1959, 287 pages, $2.00.
+
+_Radioactive Isotopes in Agriculture._ (Proceedings of a conference held
+  at Michigan State University, January 12-14, 1956.) TID-7512.
+  Superintendent of Documents, U. S. Government Printing Office,
+  Washington 25, D. C. 1956, 416 pages, $3.00.
+
+_Radioisotopes in Science and Industry._ U. S. Atomic Energy Commission.
+  Superintendent of Documents, U. S. Government Printing Office,
+  Washington 25, D. C. 1960, 176 pages, $1.25.
+
+_What Can You Expect from Atomic-Irradiated Seeds?_ James L. Brewbaker.
+  U. S. Atomic Energy Commission, Division of Technical Information
+  Extension, Oak Ridge, Tenn. Not dated, 8 pages, free.
+
+
+Motion Picture
+
+(Available for loan without charge from the Division of Public
+Information, U. S. Atomic Energy Commission, Washington 25, D. C.)
+
+_Harvest of an Atomic Age_, 20 minutes, 16mm, color and sound, 1963.
+
+
+
+
+                               Footnotes
+
+
+[1]A microgram bears the same relationship to a 1000-pound steer as a
+    penny does to $4½ billion.
+
+[2]The roentgen is a measure of ionizing radiation, as the foot-candle
+    is a measure of light. In simple terms the roentgen is that amount
+    of X or gamma radiation which produces one electrostatic unit (esu)
+    of electricity in one cubic centimeter (cc) of dry air at standard
+    conditions of temperature and pressure. This may sound like a
+    trivial amount of energy, but it amounts to more than two billion
+    ionizations in each cubic centimeter.
+
+[3]From “Epistle To Be Left in the Earth.”
+
+
+
+
+                          Transcriber’s Notes
+
+
+--Retained publication information from the printed edition: this eBook
+  is public-domain in the country of publication.
+
+--Where possible, UTF superscript and subscript numbers are used; some
+  e-reader fonts may not support these characters.
+
+--In the text version only, underlined or italicized text is delimited
+  by _underscores_.
+
+--In the text version only, superscript text is preceded by caret and
+  delimited by ^{brackets}.
+
+--In the text version only, subscripted text is preceded by underscore
+  and delimited by _{brackets}.
+
+--In the text version only, added a brief label to each illustration;
+  and for graphs, provided tabular summaries of the data where possible.
+
+
+
+
+
+
+
+End of Project Gutenberg's Atoms in Agriculture, by Thomas S. Osborne
+
+*** END OF THE PROJECT GUTENBERG EBOOK 49036 ***

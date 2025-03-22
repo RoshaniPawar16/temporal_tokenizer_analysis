@@ -1,0 +1,2657 @@
+﻿The Project Gutenberg EBook of Fresco Painting, by James Ward
+
+This eBook is for the use of anyone anywhere at no cost and with
+almost no restrictions whatsoever.  You may copy it, give it away or
+re-use it under the terms of the Project Gutenberg License included
+with this eBook or online at www.gutenberg.org/license
+
+
+Title: Fresco Painting
+
+Author: James Ward
+
+Release Date: October 24, 2018 [EBook #58159]
+
+Language: English
+
+Character set encoding: UTF-8
+
+*** START OF THIS PROJECT GUTENBERG EBOOK FRESCO PAINTING ***
+
+
+
+
+Produced by Chuck Greif, deaurider and the Online
+Distributed Proofreading Team at http://www.pgdp.net (This
+file was produced from images generously made available
+by The Internet Archive)
+
+
+
+
+
+
+
+
+                            FRESCO PAINTING
+
+                            [Illustration]
+
+
+
+
+                            FRESCO PAINTING
+
+                         ITS ART AND TECHNIQUE
+
+                  WITH SPECIAL REFERENCE TO THE BUONO
+                       AND SPIRIT FRESCO METHODS
+
+                                  BY
+
+                              JAMES WARD
+
+                               AUTHOR OF
+       “PRINCIPLES OF ORNAMENT,” “COLOUR HARMONY AND CONTRAST,”
+            “HISTORIC ORNAMENT,” “PROGRESSIVE DESIGN,” ETC.
+
+  _With Four Plates in Colour and Thirty-one Half-tone Illustrations
+                of Italian and other Fresco Paintings_
+
+                                LONDON
+                        CHAPMAN AND HALL, LTD.
+                                 1909
+
+                     RICHARD CLAY & SONS, LIMITED,
+                     BREAD STREET HILL, E.C., AND
+                           BUNGAY, SUFFOLK.
+
+
+
+
+PREFACE
+
+
+I have endeavoured in this treatise to place before students some
+practical hints in the methods and processes of fresco painting, which
+are the outcome of my experience in the practice of the “buon-fresco,”
+and the “spirit-fresco” systems of wall decoration. As to the
+stereochrome, or German “water-glass,” and its later variety, the Keims
+process of fresco painting, I do not pretend to have a definite
+knowledge, having no practical experience in painting in these methods,
+but, on seeing the condition of some frescos in England which have been
+executed in stereochromy, I should prefer to trust to the buon-fresco or
+to the spirit-fresco mediums when it is a question of the permanency of
+wall paintings.
+
+It is common enough to-day to hear and to read of the condemnation of
+fresco painting by critics, and even by some eminent artists, all of
+whom seem to echo each other in pointing out the failures in the
+examples executed on the walls of the Houses of Parliament and other
+places; and all agree, because of these failures, that fresco painting
+is impossible in this country, owing to the dampness of the climate.
+Our damp climate seems to have a deal to answer for, but it is hardly
+fair to blame it for the ignorance of some of our mid-Victorian artists
+as to the nature and behaviour of the materials used in fresco painting,
+and for their possibly limited knowledge of the chemistry of colours and
+the after action of caustic lime on the colours they used.
+
+I trust that the technical notes and observations on some of the Italian
+frescos may be of interest and of some value to students of decorative
+art.
+
+                                                       J. WARD.
+
+
+
+
+CONTENTS
+
+
+CHAPTER I
+
+                                                                    PAGE
+
+THE RELATIONSHIP OF MURAL PAINTING TO ARCHITECTURE                     1
+
+
+CHAPTER II
+
+MURAL DECORATION--SYSTEMS AND METHODS                                  8
+
+
+CHAPTER III
+
+FRESCO-BUONO PROCESS--COLOURS--PREPARATION OF THE
+WALL--METHOD OF EXECUTION                                             12
+
+
+CHAPTER IV
+
+PAINTING OF FLESH AND DRAPERIES--PERMANENCE OF
+BUON-FRESCO                                                           25
+
+
+CHAPTER V
+
+SPIRIT FRESCO PAINTING                                                31
+
+
+CHAPTER VI
+
+TECHNICAL NOTES ON THE COMPOSITION, COLOUR, AND
+PRESENT STATE OF SOME ITALIAN FRESCOS                                 39
+
+
+CHAPTER VII
+
+FRESCO PAINTINGS BY GOZZOLI AND PERUGINO                              51
+
+
+CHAPTER VIII
+
+THE WORK OF PINTURICCHIO AND GHIRLANDAJO                              56
+
+
+CHAPTER IX
+
+FRESCOS BY ANDREA DEL SARTO, LUINI, G. FERRARI,
+RAFFAELLE AND MICHAEL ANGELO                                          63
+
+INDEX                                                                 71
+
+
+
+
+LIST OF ILLUSTRATIONS
+
+
+PLATE                                                      _To face page_
+
+1. THE ARTS OF PEACE (colour). _Lord Leighton_             _Frontispiece_
+
+2. FRAGMENT OF ANCIENT FRESCO FROM TIRYNS                             10
+
+3. PORTION OF FRESCO BORDER (colour). _After
+   Sir E. J. Poynter, P.R.A._                                         20
+
+4. TRIAL PIECE OF BUON FRESCO. _G. F. Watts, R.A._                    23
+
+5. TRIAL PIECE OF BUON FRESCO. _G. F. Watts, R.A._                    25
+
+6. GROUP OF THREE FIGURES (colour). _G. F. Watts, R.A._               27
+
+7. ST. STEPHEN BEFORE HIS ACCUSERS, AND THE STONING
+OF ST. STEPHEN. _Sir E. J. Poynter, P.R.A._                           30
+
+8. DETAIL FROM THE ARTS OF WAR. _Lord Leighton_                       32
+
+9. DETAIL FROM THE ARTS OF WAR. _Lord Leighton_                       34
+
+10. DETAIL FROM THE ARTS OF PEACE. _Lord Leighton._                   37
+
+11. THE BIRTH OF THE VIRGIN. _Giotto_                                 39
+
+12. THE DEATH OF ST. FRANCIS. _Giotto_                                40
+
+13. ST. LOUIS, KING OF FRANCE. _Giotto_                               42
+
+14. THE MEETING OF SS. JOACHIM AND ANNA. _Giotto_                     43
+
+15. CHRIST APPEARING TO MARY MAGDALENE. _Fra Angelico_                44
+
+16. THE DEPOSITION IN THE SEPULCHRE. _Fra Angelico_                   46
+
+17. DETAIL OF THE CRUCIFIXION. _Fra Angelico_                         47
+
+18. THE TRIBUTE MONEY (colour). _Masaccio_                            49
+
+19. ANGELS, FROM THE PARADISE. _B. Gozzoli_                           51
+
+20. ANGELS, FROM THE PARADISE. _B. Gozzoli_                           53
+
+21. ST. BENEDICT. _Perugino_                                          54
+
+22. ST. JOHN. _Perugino_                                              55
+
+23. DETAIL FROM THE CHRIST’S CHARGE TO PETER. _Perugino_              56
+
+24. ST. CATHERINE DISPUTING BEFORE MAXIMIANUS. _Pinturicchio_         57
+
+25. DETAIL OF THE ST. CATHERINE FRESCO. _Pinturicchio_                58
+
+26. THE NATIVITY, SPELLO CATHEDRAL. _Pinturicchio_                    59
+
+27. FLORENTINE LADY. _Ghirlandajo_                                    60
+
+28. THE DEATH OF ST. FRANCIS. _Ghirlandajo_                           61
+
+29. FLORENTINE LADY. _Ghirlandajo_                                    62
+
+30. DETAIL FROM THE BIRTH OF THE VIRGIN. _Ghirlandajo_                63
+
+31. FRESCO OF AN INFANT ANGEL. _B. Luini_                             64
+
+32. THE VIRGIN AND CHILD. _B. Luini_                                  65
+
+33. ST. LUCY SENTENCED TO DEATH. _Jacopo d’Avanzo_                    66
+
+34. THE FIRE IN THE BORGO. _Raffaelle_                                68
+
+35. FIGURE OF ADAM, SISTINE CHAPEL. _Michael Angelo_                  69
+
+
+
+
+FRESCO PAINTING
+
+
+
+
+CHAPTER I
+
+THE RELATIONSHIP OF MURAL PAINTING TO ARCHITECTURE
+
+
+When considering the subject of mural painting, and indeed the progress
+and development of art generally, of the so-called “fine arts,” or of
+the lesser arts that minister to the uses and wants of everyday life, we
+cannot regard them as isolated creations of human activity apart from
+their legitimate connection with the laws and principles of good
+architecture. The progress, development, culmination, and decadence of
+architecture synchronize with the similar stages of painting and
+sculpture.
+
+In a noble building the special functions of the three sister arts are
+clearly defined; each supplies its own distinct qualities of expression
+to make up the general artistic unity. The severe lines and proportional
+rhythm of the architecture are enriched by sculpture, which in its turn
+is chastened and modified by the contiguous severity of the former,
+while painting adds the necessary colour finish to the bare spaces that
+are enclosed by the mouldings and constructional lines of the
+architecture, borrowing at the same time much of its dignity,
+restfulness of form, simplicity of composition, and whatever else that
+adds to its nobility and monumental fitness, from its close association
+with the architecture. Thus, while the three arts are each limited to
+their own special functions, they, at the same time, would appear to
+assimilate from each other what is lacking in themselves, and so
+contribute to the complete artistic harmony.
+
+Painting, as the most ornate of the three, owing to its greater power of
+expression and beauty of colour, must nevertheless be employed to
+_decorate_, in the true sense of the word, the plain spaces in a
+building, and in the largest and simplest manner, without any definite
+attempts to represent the true facts of nature, or at least it should be
+suggestive of such facts rather than descriptive of them.
+
+The arrangement and composition of line, restfulness of the masses of
+form, and the harmonic balance and purity of colour are among the
+primary essentials of mural painting, and all these indispensable
+requisites of this form of art are due to its contact with architecture.
+While bearing this in mind, we must not forget that painting has its
+special functions apart from those of architecture, which include a
+controlling power over form and colour, and the faculty of illustrating
+ideas, by means of the representation of a theme or an incident, a
+subject or a story.
+
+Now if the essentials of monumental painting, which we have named, and
+the special functions of the art of the painter are united in any scheme
+of mural decoration, the result would be an ideal work of decorative
+art, examples of which may be found in the frescos of Giotto, and in
+those of the majority of the Italian painters who followed him, down to
+the sublime creations of Michael Angelo.
+
+The older art of the Egyptian, Greek, Roman, Byzantine and Mediæval
+schools was, in each case, influenced by, and in perfect harmony with
+the architecture of the respective periods, and not less, but even more
+so, were the painting and sculpture of Italy from the middle of the
+thirteenth century till the end of the sixteenth century. The Byzantine
+and Romanesque mosaics which decorate the churches of Ravenna, Venice
+and Rome are dignified and sculpturesque in treatment, and from an
+ornamental point of view, admirably _fill_ the architectural spaces of
+both walls and vaulted ceilings. The artists of these ancient schools
+rightly treated the wall spaces as flat surfaces, the wall being
+strictly considered as such, and no attempt was made to treat the
+subject of the painting in pictorial perspective, or to give the wall
+the illusion of a window. The subject or incident, was also, for the
+most part, mystic in character, and elevated in a spiritual sense, so
+that the very soul of their art was expressed and symbolized; while
+what we may call the bodily part, either from a want of their power of
+expressing it or from a careless or studied neglect of this side of
+their art, was limited and incomplete. And even when, in later times,
+the science of art, as expressed in anatomy and perspective, was well
+understood, this traditional treatment of the design was followed out by
+the Italian artists, both in their mosaics and wall paintings, and was
+never lost sight of by the painters subsequent to Giotto, until the
+seventeenth century, when the general decadence of art had set in.
+
+The three absolute essentials of ancient and mediæval painting, which
+also characterized the best work of the Renaissance, appear to have been
+a striving after the symbolic expression of the spirit of the subject, a
+restfulness and dignity of form, and the beauty of colour. Whatever else
+we look for, we ought to find these three essentials in a successful
+work of monumental painting. In this kind of art, and indeed in all art,
+small things should be sacrificed to great, and the commonplace or
+matter-of-fact to the rendering or expression of the idea; in
+parentheses, it might be pointed out, that in a general sense the
+tendency of the art of the present day is towards a greater dexterity of
+handling closer representations of the facts of nature, but less
+sincerity of aim.
+
+The more important paintings of the fourteenth and fifteenth centuries
+were those which decorated the walls of the Italian churches and
+palaces, and the authors of these works were not only painters, but the
+majority of them were also architects, sculptors, and craftsmen in gold
+and silver work. Even those who confined their attention chiefly to
+painting, thoroughly understood the principles of architecture, and
+often designed and carried out architectural work, as witness Giotto,
+Ghirlandajo, Michael Angelo, Leonardo Da Vinci, and many others.
+
+If we now consider another aspect of art, where it is applied to objects
+of general utility, we shall find that the design and decoration of
+such, when rightly understood, are in each case subject to the laws that
+govern good architecture. Take, for instance, the form or shape of a
+common candlestick, a vase in pottery or in metal, a cabinet or a chair,
+and let us see how far we can apply the principles of architecture to
+their design and decoration. When designing such objects the first
+consideration is their utility, and the next is the material of which
+they are made. It is a common enough truism to say that the forms and
+proportions which may be suitable for objects made in a certain
+material, such as pottery or glass for example, should not be imitated
+in another, such as metal or woodwork. When the questions of utility and
+material have been settled, we can apply the laws and principles of
+architecture to guide us in the design and decoration of the given
+object. As to design, first, we should strive to obtain good proportion
+of the parts and divisions to each other, and to the whole. It will be
+found that correct proportion generally postulates the determination of
+beautiful outlines and shapes. We should also aim for the expression of
+contrasting elements of forms, such as curves with straight lines, sharp
+curves with others of less curvature, horizontal lines to counteract
+vertical tendencies, or mouldings and lines of varying widths arranged
+to fit in such positions that will give, or suggest, constructive
+strength; all of which are simply architectural principles, which, if
+applied to the design of common objects, would give them a definite
+claim to be considered as works of art.
+
+Very little decoration is required on any article or object which has
+been designed on correct architectural principles, beyond that already
+expressed by the lines or mouldings and space divisions. If, however,
+the nature or use of the object permits of the display, or adventitious
+aid of such, in order to heighten its beauty, by making it still more
+attractive and comely to the eye, then the laws and principles of
+architecture will again help us by indicating where the decoration may
+be placed, the right amount to use, the scale of such, and the order of
+its disposition. We learn, for instance, from architecture that we must
+not weaken the appearance of the constructive parts, such as the lines,
+or the mouldings, by any fretful ornamentation, but on the panels and
+plain spaces we may legitimately place our decoration, yet still
+restrained so far as not to interfere with the right uses of the object,
+and designed so as to harmonize, and in some instances contrast, with
+the lines and contour. Examples of artistic objects, designed on
+architectural principles, may be found in the Greek and Etruscan vases
+and Pompeian bronzes, and, on the other hand, if some examples may be
+mentioned where the laws of architecture do not find expression in their
+form or decoration, and where art is almost non-existing, we might
+safely point out the meretricious creations of the Chelsea and Dresden
+chinaware, and the gold and silversmiths’ work of the mid-Victorian
+period. This digression from our subject may be justified, on the
+grounds of showing how important the study of architecture is to the
+painter, the decorative artist, and to the designer in any branch of
+art.
+
+
+
+
+CHAPTER II
+
+MURAL DECORATION--SYSTEMS AND METHODS
+
+
+Various processes, systems, or methods have been employed in ancient and
+modern times in the colour decoration of walls and ceilings. Under this
+section of art is included all kinds of wall paintings, from the
+representation of the symbolic hieroglyphics, found in the Egyptian
+tombs, to the monumental paintings on the walls of public buildings,
+churches, and palaces. The decoration of wall surfaces in colour is one
+of the very oldest forms of art, and to a wall painting of any kind the
+term “fresco” has usually, but somewhat loosely, been applied. Strictly
+speaking, however, a veritable fresco painting is one that is executed
+on the fresh or wet lime plaster of the wall, and is not re-touched
+after the plaster has become dry. All other varieties of so-called
+“fresco” paintings can only be designated as wall paintings, and
+qualified according to their kind, such as “fresco-secco,” or “dry”
+fresco, a kind of fresco where the wall is prepared in the same way as
+in true fresco, and is then allowed to dry. Before the painting is
+commenced, the wall is well saturated with lime water, and the colours
+used are the same as those employed in fresco painting. It is not so
+permanent as work executed on the fresh, wet plaster. Some of the old
+writers frequently use the term “secco” when tempera painting is
+evidently meant. Painting in _tempera_ on the dry wall is a process in
+which the colours are tempered with a binding medium, such as glue size,
+gum, parchment size, or a size made from eggs beaten up with water; the
+Italian painters added the juice, or gum, of the fig tree, and sometimes
+vinegar to the egg size. Other methods are _encaustic_, or painting with
+wax as a medium, heat being afterwards applied to the wall to blend or
+to protect the colours; _spirit fresco_, in which the colours are ground
+in a wax medium and thinned with spirits of turpentine or oil of spike;
+_water-glass_, a German method of wall painting; Keim’s process, an
+improved variety of water-glass, and wall painting in oil colours.
+
+The only advantage that these varieties of wall painting seem to possess
+over the _buon_, or true fresco, process--and it may be considered as a
+questionable one--is, that as regards the number of the colours, the
+artist may use an almost unlimited or unrestricted palette, while in
+buon fresco his colours are limited to the very few which remain
+unchanged when subjected to the caustic action of the lime in the
+plaster. Tempera painting on walls has been so much mistaken for the
+fresco process that it is impossible to say when the latter was first
+practised, but according to the statements of Vitruvius and Pliny, the
+process was well understood by the Greeks and Romans. Perhaps one of the
+most interesting revelations in the history of the art has been brought
+about by the discovery of several fragments of wall and ceiling
+decorations, found recently by the late Dr. Schliemann during the
+excavations of the ancient cities and palaces of the pre-Hellenic Mycene
+and Tiryns, of primitive Greece. One of these fragments of fresco
+painting, which was found in a palace at Tiryns, consisted of a portion
+of a wall or ceiling, a stucco slab, composed of lime and sand plaster,
+on which is painted the representation of a spirited bull with the
+figure of a man vaulting over its back. This interesting piece of work
+must have been executed at least as early as 1500 B.C., as the city of
+Tiryns was a mass of ruins shortly after this date. Many other fragments
+of fresco paintings have also been found in the ruins of these ancient
+palaces, some of which were decorated with linear and geometric
+ornament, conventional flowers, and animal forms. Not only were the
+walls and ceilings decorated with frescos, but the floors of some of the
+apartments were treated in a similar manner. Still earlier examples of
+fresco painting have been found in prehistoric Thera, one of the Grecian
+isles, and others in the Minoan palace at Cnossus, in Crete, both of
+which may have been painted as early as the nineteenth century B.C., and
+certainly not later than the eighteenth.
+
+The wall paintings of the Egyptian tombs were
+
+[Illustration:
+
+[_To face p. 10_
+
+PLATE 2.--FRAGMENT OF ANCIENT FRESCO FROM TIRYNS]
+
+executed in tempera on a gesso or stucco white ground, the same method
+being followed in the decoration of the mummy cases and other objects.
+In some instances these tempera paintings of the Egyptians were
+varnished, which was not an advantage to their appearance, as the
+varnish darkened, and in a great measure destroyed, the beauty of the
+original colours.
+
+Some of the wall paintings found at Pompeii are said to have been
+executed in veritable fresco, since lime has been found in mixture with
+most of the colours used. On the other hand, this has been disputed, and
+some authorities classify them as tempera or secco paintings; but
+perhaps the truth of the matter is, that a certain amount of the first
+colouring was really executed on the wet lime plaster, and that, in some
+instances, certain colours, used in the finishing of the work, were
+applied afterwards in a tempera medium when the wall surface had become
+quite dry. This method of procedure, according to the statements of
+Vasari and Cennini, was not an uncommon practice with the Italian
+_frescanti_ of the fourteenth and fifteenth centuries.
+
+
+
+
+CHAPTER III
+
+FRESCO-BUONO PROCESS--COLOURS--PREPARATION OF THE WALL--METHOD OF
+EXECUTION
+
+
+Fresco-buono, or true fresco, is so called because the painting is
+executed “a fresco,” that is, directly on the fresh, or wet plaster,
+which forms the painting surface of the wall. This plaster, or mortar,
+is a mixture of lime and sand, and the colours used in the painting are
+such as will remain unchanged in hue when in contact or in mixture with
+the lime. When all necessary details relating to the method of procedure
+connected with the work are carefully carried out, true fresco paintings
+may be said to have a higher degree of permanence and durability than
+those executed by any other method or medium. The fine surface texture
+and luminous quality of buon fresco pre-eminently distinguishes it as
+the most beautiful colour finish for mural decoration.
+
+The great permanence of fresco paintings is due to the formation of
+carbonates, and sometimes silicates, of lime on the surface of the
+plaster, which takes place during the drying of the latter. The
+carbonic acid contained in the natural limestone is driven out of it by
+the process of burning in the kiln, and after the burnt lime has been
+slaked into lime “putty,” it has then become what is known as a hydrate
+of lime. As long as the plaster is wet on the wall the lime in the
+plaster exists in the state of a hydrate, and the applied colours of the
+painting become saturated with this form of lime; but during the process
+of drying, the lime on the surface, and to a slight depth below the
+surface of the plaster, rapidly absorbs carbonic acid gas from the
+atmosphere, and becomes a carbonate of lime, which is formed as a hard
+and crystalline skin, or surface covering, under which the colours are
+locked up, and so protected from any atmospheric influences. In addition
+to this carbonate surface a silicate of lime is sometimes formed,
+especially when in the painting some of the more earthy colours are used
+which may have silica in their composition. These thin coverings of
+carbonates and silicates of lime render fresco paintings impervious to
+wet or damp on the surface, so that they may be occasionally washed
+without injury; but bad air, such as sulphuretted hydrogen gases, or the
+sulphur products given off by gas and coal combustion, will in time
+convert the carbonate covering into a sulphate of lime, a substance
+which disintegrates and destroys, not only the colours, but the plaster
+surface also. This would suggest that in buildings which contain fresco
+paintings coal fires and gas should not be used for heating and
+lighting purposes, and also that the buildings should be properly
+ventilated.
+
+
+PREPARATION OF THE WALL IN BUON-FRESCO:
+
+The wall on which a work in buon-fresco is to be painted should be of
+good brick, or if a stone wall, it should be lined with brick on its
+inner face, or, better still, it should be what is known as a hollow
+brick wall--that is, one having an air-space between the outer and inner
+linings. The joints between the bricks should be scored out, so as to
+leave a key for the first coating of rough plaster; this should consist
+of old lime and coarse, gritty, well-washed river sand, mixed with
+ox-hair, or white asbestos cut into small bits, so as to bind the
+mixture more effectually. For this first coating of plaster the usual
+proportions are one part of lime and two parts of the gritty sand; it
+should be about three-quarters of an inch in thickness. This coating
+should have a roughened surface, made by scratching it with a
+coarse-toothed kind of wooden comb, and should be left for the best part
+of a year, so that it may thoroughly harden, before it receives the
+second, and last, coat of plaster, that on which the painting is to be
+executed, which is known as the _intonaco_. This plaster mixture must be
+prepared with great care, and more than sufficient to cover the whole
+wall space should be made before beginning the painting, so as to get
+the whole surface evenly tempered, and of the same mixture; for if
+different mixtures were made, and at different times, the lime and sand
+might vary in proportions, which would possibly affect the colours of
+the painting, and prevent them drying uniformly, as to tint or tone.
+
+The proportions of lime and sand for the intonaco is, one part of lime
+and three parts of fine and well-washed river sand. Pit sand must not be
+used, on account of the clay and earthy matter which it contains; nor
+sea sand, which of course contains a certain amount of salt that would
+attract damp and cause the lime to perish. The lime must be well slaked,
+and must be fairly old in the “putty” state, so that there may be no
+fear of its blistering and blowing off here and there in round flakes on
+the finished surface, which it will do if it is too new or not properly
+slaked, even six or eight months after the plaster has been spread on
+the wall.
+
+The method of preparing lime for fresco work is, first to select the
+best white variety which has been properly calcined. The lime is put
+into a large wooden trough with sufficient clean water to slake and
+dissolve it into a thin creamy consistency. The mixture is then strained
+through a fine sieve into a brick-lined pit, roofed over to keep out the
+wet and dust. A thick coating of clean river sand should be put over the
+lime when it has cooled down and thickened into a paste, and has become
+what is known as “lime putty.”
+
+There are many tales and legends concerning the extreme old age of lime
+putty before it has been used in the plaster of wall surfaces, or as a
+painting material in fresco.
+
+It has been stated that for some of the Italian frescos the lime used
+was eighty years old. As a matter of fact it is quite ripe for use about
+one year after it has been slaked. The lime used by Sir Edward J.
+Poynter in his fresco in St. Stephen’s Church at Dulwich was about two
+years old, and that used in the Houses of Parliament frescos was three
+years. The quality of the lime, however, is of more consequence than its
+age. The common grey lime used by the London builders should be avoided;
+the best English variety is the pure white limestone, which is quarried
+and burnt near Buxton in Derbyshire.
+
+Before describing the method of laying on the last plaster ground, or
+intonaco, a few words must be said about the preparation of the design
+or subject to be painted. A finished coloured drawing or painting of the
+design, to a smaller, or even to the same scale as the fresco painting,
+must be prepared, and the artist should endeavour to make an exact copy
+of this on the plaster surface, as there is no time to experiment in
+colour schemes, or to make alterations from the original coloured design
+in the short period that is at the disposal of the painter when he is at
+work on the wet plaster. If the colour sketch of the work is prepared on
+a small scale it will be also necessary that a cartoon in light and
+shade drawing should be made to the full scale of the fresco painting,
+before beginning to paint on the wall.
+
+As the colours, and everything else that may be required, must be in
+readiness, and close at hand before laying on the plaster ground and
+before commencing the painting, it will be as well to indicate here the
+proper colours which may be safely used on the lime plaster.
+
+Although the palette in buon-fresco painting is very simple and
+restricted as to the number of the colours which may be trusted to
+withstand the caustic action of the lime, at the same time a fairly rich
+and luminous colour scheme may be obtained, notwithstanding the limited
+range of the palette. The following list may be safely relied upon:--
+
+     WHITE. Lime white (_hydrate of lime_).
+
+     YELLOW. Raw sienna (_a ferruginous earth_).
+
+       “   . Cadmium yellow (_cadmium sulphide_).
+
+     RED. Vermilion (_sulphide of mercury_).
+
+       “   . Light red (_calcined Oxford ochre_).
+
+       “   . Indian red (_ferric peroxide_).
+
+     BLUE. Cobalt blue (_phosphate of cobalt and alumina_).
+
+     GREEN. Oxide of chromium (_anhydrous sesquioxide of chromium_).
+
+       “   . Emerald oxide of chromium (_hydrated oxide of chromium and
+              borax_).
+
+       “   . Cobalt green (_oxides of cobalt and zinc_).
+
+     ORANGE. Burnt sienna (_raw sienna calcined_).
+
+     BROWN. Raw umber (_oxides of iron, manganese, and clay_).
+
+       “   . Burnt umber (_raw umber calcined_).
+
+     BLACK. Ivory black (_charred bones_).
+
+There are other pigments that might be used, but are really not
+necessary, and some of them are doubtful as to their permanence. One
+colour, not in our list, is the genuine ultramarine, a splendid blue,
+and thoroughly permanent in buon-fresco, but its great price prohibits
+its use, except in very small quantities, or on small portions of the
+work. French, or factitious, ultramarine is also very permanent, and
+withstands the action of the lime, but at the same time it is a most
+harsh and disagreeable colour when used in lime or in any other kind of
+fresco; when used alone it destroys by its intensity of hue the proper
+values of other colours in the scheme; on the other hand, if any attempt
+is made to tone it down by mixing it with another pigment, or by glazing
+another colour over it, the result is cold and muddy in the extreme, so
+it is best left out of the list, as it is almost unmanageable in fresco.
+Vermilion is rendered durable in fresco by pouring lime-water over the
+powdered colour, and then draining this water off, without disturbing
+the colour. This washing is repeated four or five times, before the
+vermilion is ready for use. Permanent white, which is a barium sulphate,
+and tin white, or tin binoxide, may both be used in lime frescoes, but
+they are unnecessary, and not so good for the purpose as lime white.
+Lemon yellow, Naples yellow, aureolin, Venetian red, and terre-verte may
+be used with lime, but it all depends on the manufacture of these
+colours as to whether or not they may be used with safety. For example,
+the Naples yellow, Venetian red, and terre-verte pigments of to-day are
+quite different in their chemical constituents to the same named colours
+of the fourteenth and fifteenth centuries. Yellow ochre, though it has
+been used very much by the old Italian frescanti, is not to be depended
+upon when used in lime fresco in this country, as it consists of a
+mixture or combination of hydrate of iron and clay; it therefore
+attracts the damp that is nearly always present in our atmosphere. Of
+course, it can be safely used in very dry climates, but it may be
+mentioned that it has been one of the pigments which has largely
+perished in some of the frescos of the Houses of Parliament. Another
+objection to its use in fresco is, that the caustic nature of the lime
+is apt to change yellow ochre to a light red, an after effect which may
+not be altogether desirable. Raw sienna, however, more than takes the
+place of yellow ochre, and is one of the most useful colours in fresco
+painting. We should say that the three most permanent and beautiful
+colours for use on the lime plaster are raw sienna, burnt umber, and
+Indian red, and whether used in transparent washes or in solid tints, as
+when mixed with lime-white, or in the full strength of their hues, they
+always dry out luminous and brilliant. All the colours should be ground
+very finely in water, and kept in covered jars or wide-mouthed glass
+bottles. The lime-white should be strained through muslin and kept
+covered. A bone or ivory palette knife must be used, and the palette
+should be made of tinned metal, having a series of small circular wells
+to hold the various colours. Brushes are of the ordinary kind, hog-hair,
+and a few long sable riggers. Hog-hair brushes are best for use when
+they are of a flat shape, but of a roundish finish at the end, like an
+old or half-worn brush, so that when in use they will not disturb the
+surface of the wet plaster, which a new or square-ended brush is apt to
+do.
+
+When everything is in readiness to commence work, a portion of the rough
+wall surface should be thoroughly saturated with water, and the plaster
+ground, or intonaco, should be laid on with a wooden trowel, beginning
+at the top and at an angle of the wall, and large enough in area to
+constitute a day’s work, or, rather, as much as can be done in about
+five hours; for after that time it is not safe to work on the new
+plaster, as it then becomes too dry: if allowed to get in this condition
+the colours will not properly incorporate with the body of the plaster,
+for if any painting is done when the plaster is in a half-dry state the
+colours will not adhere permanently to the wall, but will scale off the
+surface, or may be brushed off loosely when dry. When any portion of the
+plaster ground becomes too dry to work upon.
+
+[Illustration]
+
+it must be cut right away and a new coating of plaster applied; it is of
+no avail to syringe it with water in order to keep it damp for painting
+on, as the water only weakens the nature of the lime in the plaster. The
+chemical action between the atmosphere and the lime, necessary for the
+firm locking up of the colours, will have taken place after four or five
+hours’ time, according to condition of the atmosphere; and this action
+will not repeat itself or be brought about by any application of water
+after the period named.
+
+When the day’s work is finished, any part of the surface not painted on
+must be cut away, and the plaster all around the edge must be under-cut,
+the cut sloping well inwards, so as to form a key for the new piece of
+plaster for the next day’s work. This coating of plaster should be
+rather more than half-an-inch in thickness, and should be finished to a
+level, but not too smooth, a surface, with the wooden trowel, or
+“float.” An iron trowel must not be used. After the plaster is laid on
+it should remain about ten minutes or so before painting, so as to allow
+it to set. It should then be coated with a tint, that would be a deep
+vellum colour when dry, made of a mixture of lime-white and a little raw
+sienna, about the thickness of cream; this will give a slightly smoother
+surface to the plaster and will act as a luminous ground for the
+subsequent colouring, besides acting a very important part as an
+under-coating on which the superimposed colours will “bear out” more
+effectively. The water used should be distilled or boiled, or rain water
+collected in clean vessels, as hard water generally contains a quantity
+of chalk, and for this reason it is not so powerful a solvent of the
+lime as soft or distilled water.
+
+The portion of the design selected for the day’s painting is traced from
+the cartoon, and is transferred to the soft plaster through the holes,
+which are pricked through the tracing paper, by means of pouncing with
+powdered charcoal contained in a muslin bag, or it may have the outline
+traced through with a sharp-pointed wooden stile; this will leave a
+slightly depressed line on the soft plaster, and is a cleaner method
+than the charcoal pounce, and on the whole the more preferable one.
+
+We have now arrived at the stage of the work when the painting may be
+proceeded with. It may be here mentioned that, in order to try the hues
+of the colours and various tints, an ordinary brick having a thick
+coating of plaster of Paris, that has been allowed to become thoroughly
+dry, should be at hand. If a touch from the brush, dipped in any tint,
+be put on this plastered brick it will dry immediately, and show at once
+the actual shade of colour that such a tint will be when, after some
+days, it has dried out on the plaster surface. It generally takes three
+or four days, according to the season of the year, or heat of the room,
+before the wall surface and the applied colours finally dry out, and
+all
+
+[Illustration:
+
+[_To face p. 23._
+
+PLATE 4.--TRIAL PIECE OF FRESCO PAINTING
+
+_G. F. Watts, R.A., Victoria and Albert Museum_]
+
+colours, more particularly the lighter tints and half-tones, dry
+eventually ever so much lighter than they appear when first laid on. It
+is only the very darkest tones, or pigments used in their full strength,
+those that have no lime mixed with them, that dry anything near the full
+strength of their wet state, and then there are exceptions to this; so
+it follows that in buon-fresco painting the artist must paint in a much
+darker key than the work is intended to appear when it has dried out.
+
+As regards the method of execution in painting it may be urged that the
+artist will work according to his own feeling or temperament: for
+example, some may decide to paint in thin transparent washes or
+glazings, as in water-colour painting; others may prefer to use the
+colours in a thick impasto method, as in oil painting. Either method may
+be adopted with success, but we should say that a judicious mixture of
+both methods, in the same work, will obtain the clearest and most
+luminous results, for, as a matter of technique, fresco lends itself
+admirably to either methods of painting. The general rule is to model
+the shades, half-tones and lights, broadly at first and in the order
+named, with brushes rather large than small, and then to finish off by
+strengthening the shadows with lesser touches, or by a series of
+delicately hatched lines, and brightening the lights in the same way,
+using for these purposes sable rigger brushes. The reason for this is
+that every touch tells, especially when using a sable brush; you cannot
+press or lean on your brush on the soft plaster without disturbing the
+underneath colours, and possibly destroying the surface of the plaster
+as well. It will be seen from this that the fresco painter must
+cultivate a light hand for his work; he cannot indulge, for instance, in
+that dexterity of handling that may be accomplished in oil or in, say,
+spirit-fresco painting, simply because of the danger of working up the
+soft and wet plaster ground: he must know what he has to do, and must do
+it frankly and at once; for, although to a certain extent the artist may
+be able to paint over parts and so correct occasional mistakes, it is
+not advisable to do so, as the corrections will more or less show when
+the work has dried out, by looking muddy, and consequently less luminous
+than they ought to be. The only alternative, when a correction is
+necessary, is to cut the piece out, and lay on a fresh plaster ground.
+All this shows how important it is to have a full-sized cartoon in light
+and shade, and also a colour scheme previously prepared, from which the
+fresco painting may be almost copied directly on to the wet plaster.
+
+[Illustration:
+
+[_To face p. 25._
+
+PLATE 5.--TRIAL PIECE OF FRESCO PAINTING
+
+_G. F. Watts, R.A., Victoria and Albert Museum_]
+
+
+
+
+CHAPTER IV
+
+PAINTING OF FLESH AND DRAPERIES--PERMANENCE OF BUON-FRESCO
+
+
+In beginning the painting of flesh and draperies on the wet plaster, or
+indeed in any other kind of wall painting, it is important to commence
+with a kind of modified outline. This, of course, applies also to any
+other prominent objects in the design or composition. It is therefore
+advisable that, before laying in the first masses of colours, the main
+features of the drawing should be outlined firmly with a sable brush,
+even if you modify or half-obliterate the outline when afterwards
+painting within it. Having outlined the portion selected for painting on
+the prepared light or cream-coloured ground, supposing it to be a head
+or other part of the human figure, a very good way to begin is to lay in
+the shadows first, using a soft or half-worn hog-hair brush, the shadow
+colour to be of a warm greenish tint, of a mixture of emerald oxide of
+chromium, raw sienna, and light red, used thinly to get transparency.
+Immediately after the shading, or modelling of the shadows, is
+accomplished a general flesh-coloured tint is made, of a medium tone,
+and is swiftly brushed over the parts where the lights and half-tones
+would be, taking care that it is worked very thinly or sparingly into
+the shadows. This flesh-coloured tint ought to have a very little
+quantity of lime-white to render it semi-opaque. As soon as this is done
+the carnations of the cheeks and lips and colours of the eyes should be
+painted in. Then on the top of the general flesh tint the colours of the
+forehead, cheeks, and neck should be worked in, according to the colour
+of the sketch, gradually brightening the lighter parts and strengthening
+the shadows as required. For this second painting of the flesh the shade
+colour, modified of course according to the complexion and position it
+is to occupy, may be made of a mixture of raw sienna, light red, burnt
+sienna, and a very little emerald oxide. The same colours, with
+vermilion and lime-white added, may be used for lights and half-tones,
+and the transition tones between lights and half-tones may be obtained
+by lightly dragging the lighter tints over the half-tones, which
+operation usually produces the natural greyness required in these parts.
+For the darker markings of the nostrils, lips, eyes, and eyebrows, or
+any dark accentuations of the flesh tints, burnt umber used alone or
+mixed with a little vermilion, or burnt sienna, may be employed. Black
+may also be used for the same purpose if mixed with burnt sienna or
+vermilion. At this stage the flesh-coloured
+
+[Illustration]
+
+parts may be left to dry in a little and get firmer before finally
+finishing these parts, when attention may now be directed to the
+painting of the hair, head-dress, or any small accessory. These portions
+of the work may be laid in at once with an almost flat tint of strong
+local colour, and the lights and shades modelled into it. On coming back
+to the flesh portions it may be found necessary to do a considerable
+amount of retouching; this can still be done near the end of the day’s
+work, as long as the touches are small and delicate, and provided there
+is no serious repainting attempted. As regards the general question of
+retouching a word of warning is necessary; and that is, it often happens
+that some touches which are intended to dry out lighter than the colour
+on which they are superimposed will appear actually darker than the
+underneath colour when they are freshly laid on; this generally happens
+when the colour which is being used contains some lime-white in its
+mixture, and it is owing to this capricious behaviour of opaque or
+semi-opaque tints that some artists have preferred to work almost
+entirely in transparent washes on the lime-white ground. It stands to
+reason, however, that the work will be more luminous and more permanent
+if the colours are all mixed in some degree with lime, and also there
+will be more complete incorporation or cohesion with the colours and the
+plaster ground.
+
+It may be mentioned that if a general tone of colour is to be given to
+any large surface, or if the same colour is to appear in different parts
+of the fresco, as in draperies, skies, buildings, etc., a few shades of
+the colours required should be mixed and preserved in closed jars for
+future use, as it is almost impossible to match shades of a colour with
+any degree of accuracy where lime is one of the ingredients of the
+mixture.
+
+The simplest way to paint drapery in fresco is to first outline the
+work, and also indicate the principal folds in outline, then prepare
+three shades of the general colour so that the darkest or shadow tint
+will not be so dark as the final darkest shade, nor the lightest so
+light as the finished lights are intended to be. Paint in the shades and
+shadows first, the middle tints or half-tones next, and always finish
+with painting the lights; each tint, of course, in the operation must be
+lightly or delicately modelled into its neighbouring tint. This will
+constitute the first painting, and when finished it should be allowed to
+remain for ten minutes, or more, to sink properly into the plaster. For
+the second painting a darker shade than the darkest used in the first is
+prepared, and the darkest accents and depths of the folds are delicately
+expressed; and with a still lighter tint than the lights of the first
+painting, used in a fairly thick consistency, and with a full brush, the
+higher lights of the drapery are then painted in. The piece of work
+ought now to present the appearance of a monochrome study in light and
+shade, but it may be necessary to indicate reflected lights in some
+portions of the shadows, and the lights may want a blush of some other
+colour to make the study a more truthful representation of drapery
+texture, or of the accidental lights, and also reflections from
+surrounding objects. These extra tints should be put in their proper
+places after the second painting is done; and care should be taken to
+mix them of a purer or brighter colour than they appear in the coloured
+sketch, so that, when they are glazed lightly over the work, the
+underpainting, which is of a different colour, will slightly show
+through and modify these bright glazings to the required tones. It may
+be necessary to glaze over more than once in order to get the desired
+effects, but that will not matter, provided that the glazing is done
+with a light hand, so that the underpainting is not disturbed.
+
+When painting foliage, flowers, fruit, ornament, or architecture, the
+same method of working will also apply, but the treatment of such
+objects would be simpler, and will be found less difficult, than the
+painting of drapery.
+
+We have gone somewhat into detail in giving this description as to the
+methods of painting in buon-fresco, but we have done so because we
+believe it to be the best and highest form of wall decoration, and we
+are convinced that if a dry wall is obtained, properly prepared, and
+none but the best and safest colours used, it is a perfectly possible
+medium for wall decoration, even in this climate of ours.
+
+As a proof of this we wish to mention that the fresco painted in this
+method, and with colours similar to what have been described as suitable
+for buon-fresco, by Sir Edward J. Poynter, P.R.A., in the chancel of St.
+Stephen’s Church at Dulwich, about thirty-five years ago, is at the
+present moment in a perfectly sound condition, and is almost as fresh
+looking and bright as when first painted. It is exposed to the effects
+of condensed vapour and moisture in the winter months, when the church
+is heated, and it is subjected to the fumes of the gas that lights the
+church, yet it shows no signs of deterioration; on the contrary, the
+surface looks, and feels to the touch, more like terra-cotta, or of the
+texture and firmness of biscuit porcelain, than anything else one can
+think of.
+
+When one hears of frescos perishing in this country, like some of those
+in the Houses of Parliament, we may be sure that the causes are not
+always due to the damp climate, nor altogether to sulphur gases, but
+either to a badly prepared wall surface, or, what is more than likely,
+the use of one or two doubtful colours, that in perishing will even
+loosen or destroy other sounder colours when juxtaposed to or mixed with
+them.
+
+[Illustration: _Photo. Bolas._]
+
+[_To face p. 30._
+
+PLATE 3.--ST. STEPHEN BEFORE HIS ACCUSERS, AND THE STONING OF ST.
+STEPHEN
+
+_Sir E. J. Poynter, Bart., P.R.A., Fresco in St. Stephen’s Church,
+Dulwich_]
+
+
+
+
+CHAPTER V
+
+SPIRIT FRESCO PAINTING
+
+
+The method of painting followed out in the spirit-fresco system, as far
+as the manipulation of the colours is concerned, is almost precisely the
+same as that of the lime or buon-fresco process, the exception being,
+that the over-paintings and retouchings may be executed at any time,
+weeks, months, or even years, after any previous painting of the same
+parts; but as the preparation of the wall is of course somewhat
+different, and the medium is altogether so, a short description of the
+method or system may be of interest to students.
+
+Spirit-fresco painting is a method or process invented by Mr. Gambier
+Parry of Gloucester, and which he adopted when painting his mural
+decorations in St. Andrew’s Chapel in Gloucester Cathedral, and in
+Highnam church. The process was adopted by the late Lord Leighton for
+the wall paintings of “The Arts of Peace,” and “War,” in the Victoria
+and Albert Museum, and, many years previous to the painting of these
+works, for the fresco painted by him in Lyndhurst church in the New
+Forest. Some of the frescos in the Manchester Town Hall, by Ford Madox
+Brown, are painted in this process, and some of the paintings by various
+modern artists which decorate the interior of the Royal Exchange are
+executed in the spirit-fresco medium on coarse canvas, and afterwards
+fastened to the wall.
+
+Although we cannot claim for spirit-fresco that peculiar quality of
+monumental dignity, nor the undoubted luminosity or power of reflecting
+light that is characteristic of buon-fresco paintings, still, if the
+entire system is carefully carried out, from the preparation of the wall
+down to the finished painting, the work should be as lasting and as
+permanent as any other kind of wall painting.
+
+For instance, the spirit-fresco executed by Lord Leighton in Lyndhurst
+church, forty-four years ago, had still retained its brilliancy of
+colour and was in a perfectly sound condition three years ago, when the
+writer last saw it. In the winter season water from the condensed
+moisture constantly runs down the surface of this fresco, but does not
+seem to injure it. No amount of damp or wet on the surface will injure
+spirit-fresco paintings, as the colours are practically locked up in
+wax, upon which water has little or no injurious effect, but if the wall
+is damp at the back, or water gets in by accident, the plaster ground
+behind becomes soft and friable, and the coloured surface is soon
+destroyed. Damp behind the surface is the greatest enemy to this kind of
+fresco,
+
+[Illustration:
+
+[_To face p. 32._
+
+PLATE 9.--DETAIL FROM THE ARTS OF WAR FRESCO
+
+_Lord Leighton, Victoria and Albert Museum_]
+
+and consequently the inner surface of an outside wall should not be
+chosen for an important work in this process.
+
+As the writer had the honour of assisting Lord Leighton in the execution
+of the “Arts of Peace” and “War” frescos in the Victoria and Albert
+Museum, and also prepared both walls before the paintings were executed,
+he is therefore enabled to give a brief description, as outlined below,
+of the whole method of procedure, both as to the preparation of the
+walls and the method of painting adopted, which will serve to explain
+the system of spirit-fresco painting.
+
+It may be mentioned that the walls were prepared in strict accordance
+with Mr. Gambier Parry’s method and directions. Mr. Parry inspected this
+part of the work, and declared that the whole preparation had been done
+to his satisfaction.
+
+First of all the rough brick surface of the wall had a coating of
+plaster, consisting of a mixture of lime and river sand, exactly of the
+same proportions, and laid on in the same thickness as that of the first
+plaster coating in buon-fresco. After this had remained for two years, a
+second coating, again similar in composition and in thickness to that
+used in the last-named process, was applied. This plaster coating was
+finished off with a rectangular wooden trowel, and, in the case of the
+wall on which the “Arts of War” fresco was painted, it was left with a
+fairly rough surface. The wall surface of the “Arts of Peace” fresco
+was, on the contrary, brought to a much smoother face, as it was the
+desire of Lord Leighton to have a smooth surface for the latter
+painting, for working on the rough surface of the former fresco was, as
+he remarked, “like painting on a gravel walk.”
+
+When the coating of plaster, which was rather more than half-an-inch in
+thickness, had remained for about eight months, in order that it might
+get thoroughly dry, the wall was saturated with two coats of the “wall
+wash,” this being made from the medium in which the spirit-fresco
+colours are ground, mixed with one and a half of its bulk of turpentine.
+The spirit-fresco medium is a mixture of pure white wax, gum elemi, oil
+of spike, and artists’ copal; the proportions of each are given at end
+of this chapter. After the second coating of the wall wash had dried in,
+a day being allowed for this, a coating made of dry white lead, and half
+its quantity of gilders’ whitening, thinned out with wall wash, was
+applied as thickly as it could be conveniently used. A little yellow
+ochre was added to this mixture in order to obtain a creamy white
+ground, which enables the artist to see by contrast the pure white
+lights that may be used in the painting, as the work proceeds.
+
+The “Arts of War” fresco ground was treated with one coating only of
+this last mixture, which accounted for its extremely rough texture,
+while the “Arts of Peace” wall surface had three coatings, as
+
+[Illustration:
+
+[_To face p. 34._
+
+PLATE 8.--DETAIL FROM THE ARTS OF WAR FRESCO
+
+_Lord Leighton, Victoria and Albert Museum_]
+
+the nature of the subject was thought to demand a smoother surface.
+
+The wall wash, preparation coats, and the colours used in the painting,
+being all mixed or diluted with the same medium, and the spike oil, used
+in the artist’s dipper, having the effect of opening up the ground
+coating, allows the colours to unite with, or melt into, the ground, the
+latter being extremely porous, so that when finished and dry the work
+forms a continuous body from the surface right into the plaster. In this
+continuity of body spirit-fresco resembles closely that of the
+buon-fresco.
+
+The process admits of repainting and retouching as often as may be
+necessary, though it is best, for the sake of gaining a desired luminous
+effect, to paint frankly with a full brush, laying on the colour in an
+impasto, and where depth of tone or transparency is desired these
+effects are best obtained by washing in thinly or glazing the shadows,
+using the colours and the spike oil medium, as in water-colour painting.
+The method of work is really, in the execution, a mixture of the
+techniques of oil and water-colour painting. One of its great advantages
+is the practically unlimited range of colours allowed on the palette,
+and another is that the artist can take up his work at any time, or
+stage, neither of which obtains in buon-fresco.
+
+It may be of interest to describe the method of carrying out the
+painting of the work in connection with the South Kensington frescos.
+The original designs were painted carefully in brown monochrome, in
+light and shade, and were enlarged as fine outlines on a canvas to the
+exact size of the wall space; from these enlargements tracings were made
+on tracing cloth, and these tracings were pricked through and pounced on
+to the wall with powdered charcoal, this impression being intensified by
+going over it with a lead pencil. A small coloured sketch in the case of
+each fresco was prepared in oil colour, which was fairly closely copied
+in the colouring of the larger work. For convenience, the monochrome
+cartoons in each case were photographed to full scale, in sections, and
+the light and shade was faithfully copied from these photographs, so
+that in the execution of the painting on the wall there should be no
+hesitation, nor any experimenting in colour.
+
+The first piece of work done on the wall was one of the largest and most
+prominent figures, and was painted as far as possible in direct and full
+colour. The nature of the medium, however, does not always lend itself
+to the finishing of the work straight off in one painting; this is the
+case especially in the flesh tints, or in any elaborate drapery
+modelling. The method usually adopted was to lay in the tints with a
+full brush and solid colour, carrying the modelling as far as possible
+in the first painting. Too much working over the same part is liable to
+bring up the wax, and to cause the work to dry unpleasantly glossy. When
+there is a danger of this occurring it is better to leave off and take
+up the part again after
+
+[Illustration:
+
+[_To face p. 37._
+
+PLATE 10.--DETAIL FROM THE ARTS OF PEACE
+
+_Lord Leighton, Victoria and Albert Museum_]
+
+allowing a day or so for drying. When any part required a second or
+third painting, which usually happens, it was found best to begin by
+moistening the whole of it over with a very thin transparent tint of the
+local colour, using plenty of spike oil; this has the effect of opening
+up the wall surface by causing a slight melting of the paint underneath.
+The painting was then carried to a completer stage of finish by
+reinforcing the higher lights and deeper shadows. The process lends
+itself to the accomplishment of almost any degree of finish by the use
+of subsequent washes of thin colour in the shadows. It is better, as a
+matter of technique, in any kind of fresco painting to always employ the
+brush strokes in the direction of the lines of the form, and not across
+it, as is often done in oil painting; one reason for this is that the
+work can be accomplished more directly and rapidly, and another is that
+the drawing of the forms is better expressed.
+
+It may be noticed that there is a marked difference in the technique of
+the painting of the two frescos in the museum. The “Arts of War,”
+painted first, is treated broadly, and the colour throughout used rather
+thickly, while in the “Arts of Peace” a thinner method of treatment in
+the use of the colour is apparent, and the modelling in the latter,
+especially in the heads and nudes, is carried to a higher degree of
+finish, without any loss of breadth, by means of small brush strokes, or
+“hatching.” This method of work is of special value in fresco painting,
+and was adopted to a very great extent by the Italian frescanti of the
+fifteenth and sixteenth centuries. Michael Angelo painted, or at least
+finished his frescos in the Sistine Chapel in hatched lines; Lord
+Leighton had satisfied himself on this point by a close examination of
+the Sistine frescos when he copied the figure of Adam from the “Creation
+of Man,” which is painted in one of the ceiling panels of the chapel.
+The broader method of treatment, as seen in the technique of the “Arts
+of War” fresco, is the more popular, but Lord Leighton preferred the
+technique of his later work, the “Arts of Peace.”
+
+The following are the constituents of the medium in which the spirit
+fresco-colours are ground, according to Gambier Parry:--
+
+             { Elemi resin (gum elemi) 2 ozs. } weight
+             { Pure white wax 4 ozs.          }
+Incorporated {
+by heat.     { Oil of spike lavender 8 ozs.   } liquid
+             { Finest preparation of artist’s } measure
+             { copal 20 ozs.                  }
+
+The colours in a dry powder are ground up in this medium, and put into
+tubes for use. Spike oil to be used freely in the dipper, when
+painting.
+
+[Illustration: _Photo. Alinari._]
+
+[_To face p. 39._
+
+PLATE 11.--THE BIRTH OF THE VIRGIN
+
+_Giotto, Cloister of Sta. Maria Novella, Florence_]
+
+
+
+
+CHAPTER VI
+
+TECHNICAL NOTES ON THE COMPOSITION, COLOUR, AND PRESENT STATE OF SOME
+ITALIAN FRESCOS
+
+
+During a visit to Italy in the summer of last year the writer made some
+notes on the composition, colour, technique, and present state of some
+of the Italian frescos, which he hopes may interest the reader.
+
+Among the frescos by Giotto (1276-1336) which still exist in Florence,
+perhaps the finest are those in the Bardi Chapel, in the Church of Santa
+Croce, where so many of the illustrious Florentines are laid at rest.
+
+                                    “ ... here repose
+    Angelo’s, Alfieri’s bones, and his,
+    The starry Galileo, with his woes;
+    Here Machiavelli’s earth returned to whence it rose.”
+
+The three small frescos on the walls of the cloisters of the Church of
+Santa Maria Novella are of great interest to students, as they were
+painted by Giotto when his artistic powers were in full maturity, and
+are among the best examples of the master.
+
+On the walls and ceiling of the Bardi Chapel, Giotto has painted a
+series of frescos illustrating scenes in the life and death of St.
+Francis of Assisi. On the right wall, beginning from the top, is the
+“Confirmation of the Rules of his Order by the Pope”; “St. Francis
+before the Sultan”; “Challenging the Magi to the Ordeal of Fire”; “St.
+Francis blessing Assisi”; and, his appearing to the Bishop of Assisi. On
+the left wall are the paintings, “St. Francis flees from his Father’s
+House,” and, his Death, where he is surrounded by his sorrowing
+confraternity. The latter fresco is the lowest one on the left, and is
+one of Giotto’s best compositions, though it is not much more than a
+coloured outline, and has been much repainted. It is the only painting
+of the series in this chapel which has been noticed by Vasari in his
+life of Giotto. The figures in this fresco are painted almost in
+grisaille, with the exception of the cloak of the kneeling figure of the
+podesta, which is a deep red. The sky, which has been repainted, is a
+dark blue, in the centre of which appears the figure of the saint in a
+halo, surrounded, or supported by four angels on clouds. The colouring
+of this portion is in beautiful golden tints, and is evidently the
+untouched work of Giotto’s hand. The background architecture is
+expressed in broken tints of a yellowish stone-colour. In spite of the
+repainting, the complete design and some of the original colouring and
+handling still remain. It is
+
+[Illustration: _Photo. Alinari._]
+
+[_To face p. 40._
+
+PLATE 12.--DEATH OF ST. FRANCIS
+
+_Giotto, Bardi Chapel, Sta. Croce, Florence_]
+
+one of the best of Giotto’s didactic works, apart from the excellence of
+its design. The saint, sketched calmly in death; the intense, yet
+dignified sorrow of some of his surrounding brethren; and the eager
+examination by others of the marks of the stigmata, are well expressed
+in the attitudes and faces of the central groups of figures, while both
+sides of the painting are occupied by observant and stately figures, who
+look on the central scene where all the action is represented. This
+symmetrical kind of composition, produced by placing the more quiescent
+and choragic figures at either side of the picture, and the chief actors
+in the centre, was a favourite design of Giotto’s, which he adopted in
+many of his great works--among others, for example, in “St. Francis
+fleeing from his Father’s House,” painted on the upper part of the left
+wall, and in the “Ordeal of Fire,” on the centre of the opposite wall.
+It may be pointed out that many Italian artists subsequent to Giotto
+have also adopted this arrangement in their decorative compositions.
+
+It is a moot question whether Giotto thought the illustration of the
+scene, or the story, or the correct balance and distribution of the
+units of his composition was the more important; in any case, however,
+he invariably told his story well, no one could tell it better, while at
+the same time his compositions are undoubtedly consistent with the
+principles of good decoration.
+
+In this chapel of the Bardi, on either side of the window, Giotto has
+painted life-size figures of St. Louis (King of France), St. Louis of
+Toulouse, St. Elizabeth of Hungary, and St. Claire. Each is standing
+under a painted niche of the Campanile-Gothic architecture. The “St.
+Louis of France” is the most interesting, and the finest figure of the
+series; and although considerably repainted, it has still much of
+Giotto’s work left untouched, especially in the head and hexagonal
+pointed crown. It is a most dignified and serious rendering of the
+saintly king, as he stands in a firm and easy pose, Osiris-like, with
+his kingly attributes of sceptre and whip of authority in either hand.
+
+The three small frescos by Giotto, painted on the walls of the
+cloisters, in the Church of Santa Maria Novella, at Florence. Two of
+these, the “Meeting of Joachim and Anna at the Golden Gate,” and the
+“Birth of the Virgin,” are on the recessed wall, on either side of the
+tomb of the Marchessa Strozzi-Ridolfi, and on the right of these two
+will be found the third, the “Presentation of the Virgin at the Temple.”
+These small frescos measure each about 4 feet in width, and are shaped
+like quarters of a circle. From the technical point of view, the
+“Meeting of Joachim and Anna” is the most interesting, as it has
+suffered least of the three from repainting, and there are some fine
+passages of beautiful, though faded colour, and of frank and decisive
+brushwork, which is decidedly characteristic of the hand of
+[Illustration: _Photo. Alinari._]
+
+[_To face p. 42._
+
+PLATE 13.--ST. LOUIS, KING OF FRANCE
+
+_Giotto, Bardi Chapel, Sta. Croce, Florence_]
+
+[Illustration: _Photo. Alinari._]
+
+[_To face p. 43._
+
+PLATE 14.--MEETING OF SS. JOACHIM AND ANNA AT THE GOLDEN GATE
+
+_Giotto, Cloisters of Sta. Maria Novella, Florence_]
+
+Giotto. Joachim is clothed in red drapery, the folds of which are very
+naturally arranged, and the technique of the painting of this garment
+reveals the swift and sure touch of the master. There is no hesitation
+in the execution of the brush-drawn folds, the colour is laid on thinly
+and transparently, so that the effect of the light ground is still
+apparent through the superimposed tints. Giotto painted his frescos, as
+far as one can make out, very thinly, and so aimed in getting a luminous
+and almost transparent effect, so we may safely come to the conclusion
+that when certain parts of his frescos look heavy and solid we may be
+sure that those parts have been repainted by some one else. St. Anna has
+blue drapery, and the figure next, on the left, has an orange cloak. The
+delightful little angel, repainted however, is of a yellow golden
+colour, and the sky has been repainted in a rather too dark blue colour;
+it is quite likely that the latter has been originally much lighter, and
+the angel deeper and warmer in tone. The architecture of the Golden Gate
+and the adjacent buildings, behind the figures, is painted in creamy
+white and pinkish tints. The two figures of the passing men with game
+are coloured in greys and pale reds, and afford good examples of the
+early Italian costume. The landscape of the background is very much
+faded to a neutral grey; it may have been clothed with flowers by
+Giotto, but the little tufts of vegetation which are now sprinkled over
+the hillside are evidently recent additions.
+
+If we wish to see some of the best works in fresco that have been
+executed by Beato Fra Angelico (1387-1455), we must visit his old
+monastery of St. Mark’s, now the Museum of St. Mark’s, in Florence, and
+the best of all are the series of the small frescos painted by him
+between 1436 and 1445, walls of the cells, formerly occupied by the
+monks of this old monastery. In fourteen of the cells will be found the
+small frescos, one in each cell, each measuring about six feet in
+height, by about four in width. The remaining cells contain frescos
+painted by Fra Angelico’s brother, Fra Benedetto, and the others by his
+pupils or assistants. The latter are very inferior in design and
+workmanship to those of the first-mentioned series.
+
+In the first cell on the left is painted the scene at the Sepulchre,
+where “Christ appears to the Magdalen,” the design and colour of which
+are extremely good. The robe on the figure of Christ is of a linen-white
+tone, with umberish shades; that of the Magdalen is of a yellowish pink
+colour; the hurdle fence which runs across the background of the picture
+is of a golden straw colour; trees, flowers and foliage are chiefly in
+tints of broken greens, and the rock work and entrance doorway to the
+tomb are in cool greys. In the fresco of the second cell, the
+“Deposition of Christ in the Sepulchre,” the composing lines of the
+draperies and of the rocks flow harmoniously into, and also out of each
+other, the figures are so arranged as to form a decorative
+
+[Illustration: _Photo. Alinari._]
+
+[_To face p. 44._
+
+PLATE 15.--CHRIST APPEARING TO MARY MAGDALENE
+
+_Fra Angelico, Monastery of St. Mark, Florence_]
+
+pattern-like effect, at the same time the intense fervour and piety of
+the subject is well expressed. The figure of the female saint at the
+feet of Christ has a red dress, the remainder of the lower figures have
+purple garments, and St. Dominic has the black and white dress of his
+order. The “Resurrection,” painted in the eighth cell, has a colour
+arrangement of pale purples, greens, white, and dark blue, which is very
+harmonious. The colouring of the fresco in the last or inner cell on the
+right, the “Adoration of the Magi,” though somewhat faded, is still very
+beautiful: the Virgin has a blue dress, and for the rest of the
+colouring, peach and plum, and golden tints prevail. The colour schemes
+of the frescos in the other cells, that have been painted by Fra
+Angelico, are similar to those of the first and second of the series,
+with the exception of the tenth, which has the entire background of the
+subject, the Presentation in the Temple, painted in a broken Venetian
+red colour, which can hardly have been the original colour.
+
+The execution or technique of these small frescos by Angelico is
+exceedingly firm and direct; they are frankly painted, without any
+apparent hesitation of touch--indeed, in these paintings the student
+will find a more masterly freedom in the workmanship than in the case of
+the laboured and miniature-like paintings of the more popular
+altar-pieces and easel pictures of this master. These remarks apply to
+those of the cell frescos, which are the authentic work of this master;
+and under this head would come more particularly the first, the third
+(the “Annunciation”), sixth (the “Transfiguration”), ninth (“Coronation
+of the Virgin”), and the “Adoration of the Magi,” on the wall of an
+inner cell.
+
+Two better-known works of Angelico are, the “Annunciation,” on the wall
+of the upper corridor, facing the staircase, and his larger work, the
+lunette of the “Crucifixion” in the chapter-house of this monastery. The
+fresco of the “Annunciation,” which has been considerably repainted, is
+very simple in composition, but very effective; and the colouring,
+though now dull and opaque, has still something reminiscent of
+Angelico’s colour arrangements. The Virgin’s dress is dark blue, with
+olive-green lining; the angel’s dress is a pinkish dove-colour; the
+grass, foliage, and flowers are in grey greens and white; architecture,
+a light stone-colour; and the paling behind is a warm grey.
+
+The great work of the “Crucifixion” in the chapter-house is in a fairly
+sound condition, but it has been much repainted. The colour treatment of
+the background is somewhat unusual, as it is marked out in three
+distinct and sharply divided bands of colour: the upper portion being of
+a dark purplish red (the original colour may have been a dark blue), the
+central horizontal band of a light vellum tint, and the lower, or ground
+colour, of a golden yellow. The painting of the figures in their present
+condition is
+
+[Illustration: _Photo. Alinari._]
+
+[_To face p. 46._
+
+PLATE 16.--THE DEPOSITION IN THE SEPULCHRE
+
+_Fra Angelico, Monastery of St. Mark_]
+
+[Illustration: _Photo. Alinari._]
+
+[_To face p. 47._
+
+PLATE 17.--DETAIL OF THE CRUCIFIXION
+
+_Fra Angelico, Monastery of St. Mark, Florence_]
+
+most careful in execution: those on the right half, the Dominican
+fathers and brothers, and other founders of religious orders, are in the
+dark grey, white, and brown dresses of their orders, the balance of
+colour on this side being obtained by the bright red of the Cardinal’s
+hat and of a book-cover, and the golden-coloured nimbi of the figures. A
+warmer scheme of colour is noticed on the left half of the painting,
+where golden tints, soft reds, grey greens, white, and grey complete an
+excellent harmony. The figure of Christ on the Cross is in very pale
+flesh tints, and has a white garment; the flesh tints of the thieves on
+either side being darker in tone. The general effect of the colouring is
+very pure and luminous.
+
+After Giotto, we may say, that the artist whose influence is most
+apparent in Italian art was the Florentine painter, Masaccio
+(1401-1428?). His most important works are the frescos he painted in the
+Brancacci Chapel of the Church of S. Maria del Carmine, at Florence. The
+instructor of Masaccio is supposed to have been Masolino da Panicale
+(1384-1435), who first painted some frescos in the above chapel, and
+who, according to Vasari, was commissioned to decorate the chapel with
+scenes from the history of St. Peter, some of which he had executed, but
+they are no longer in existence, unless we place to his credit the “Adam
+and Eve” fresco on the right wall, although some writers have ascribed
+this work to Filippino Lippi (1460-1505), the son of the painter
+Filippo Lippi, and a scholar of Botticelli.
+
+There are really very few works left by Masaccio, but those which still
+are in existence clearly prove that he was far in advance of any artist
+of his time in his complete mastery of the human figure, as shown by his
+searching and accurate draughtsmanship, his great knowledge of anatomy,
+and his facility in giving spirit, action, and vitality to his
+decorative compositions. His gifts in these directions place him at the
+head of the greatest artists of the early half of the fifteenth century.
+His achievements are all the more wonderful if we believe, as it is
+said, that he died at the early age of twenty-six, though some
+authorities state that he reached the age of forty-one years. The finest
+authentic work from his hand is the fresco of “The Tribute Money,” which
+he painted on the left wall of the Brancacci Chapel, and this work still
+remains as a monument to his great powers. This work is a picture which
+includes three scenes in its composition; namely, (1) The central group,
+where Christ rebukes St. Peter, around whom are the standing figures of
+the apostles, with varied expressions of indignation; the figure in the
+foreground, back view, in this group is that of the tax-collector, and
+the last figure of this central group, on the right, is a portrait of
+Masaccio. (2) The scene on the left, middle distance, represents St.
+Peter finding the money in the body of the fish, and (3) that on the
+
+[Illustration]
+
+right is St. Peter giving the money to the tax-collector. The figures
+are all admirably drawn, and painted with great breadth of treatment;
+that of the back view of the tax-collector is more especially a
+remarkable example of accurate drawing and of easy freedom in the pose
+and action. The same person, but in front view, represented in the right
+scene, has a similar freedom of pose and action, and there is an
+intensely gratified expression in his face as he receives the tribute
+money. The natural treatment of the hilly landscape of the background is
+also far in advance of the landscape-painting of Masaccio’s time.
+
+On the altar wall there is another fresco by this painter, though now in
+a very bad state; the subject is “St. Peter baptizing,” where, among
+other figures, is the celebrated nude figure of a benumbed and shivering
+youth, a figure so well drawn, and so correct in anatomy, that, as Lanzi
+says, “it has made an epoch in the history of art.”
+
+Another very fine and authentic work by Masaccio is the “Expulsion from
+Paradise,” painted on the left wall of the chapel, where Adam and Eve
+are represented as being driven from the gates of Eden by the angel with
+the flaming sword. The figures in this intensely dramatic composition
+have been borrowed, with little alteration, by Raffaelle, and used in
+one of the Loggia frescos, and he has also adapted some other figures
+from the paintings in this chapel for the cartoons, and in his frescos
+of the Stanze of the Vatican; and yet he, to whom so many others were
+indebted, was, as Vasari tells us, “little esteemed in life.” It was
+after his death that his real greatness was discovered; for do we not
+read that the great artists of Italy and other countries came to study
+the work of Masaccio in that veritable school of art, the Brancacci
+Chapel of the Carmelite Church, and it was only then that he was truly
+honoured? Filippino Lippi founded his style on the work of Masaccio, and
+Ghirlandajo, Verocchio, Leonardo, Perugino, Raffaelle, and Michael
+Angelo acknowledged his greatness and learned of him. This painter who
+was, like many other great men, so little esteemed in life, had, after
+his death, this epitaph written on him--
+
+    “I painted, and my picture was as life;
+     Spirit and movement to my forms I gave--
+     I gave them soul and being. He who taught
+     All others--Michael Angelo--I taught:
+     He deigned to learn of me....”
+
+[Illustration: _Photo. Brogi._]
+
+[_To face p. 51._
+
+PLATE 19.--ANGELS. DETAIL FROM THE PARADISE
+
+_Benozzo Gozzoli, Riccardi Palace, Florence_]
+
+
+
+
+CHAPTER VII
+
+FRESCO PAINTINGS BY GOZZOLI AND PERUGINO
+
+
+Benozzo Gozzoli (1420-97), the most celebrated pupil of Fra Angelico, is
+seen at his best in his great decorative frescos which adorn the four
+walls of a room in the Riccardi Palace in Florence. This room, which had
+formerly been the Chapel of the Medici, has its walls completely painted
+over with the processional subject, the “Journey of the Magi,” by
+Gozzoli, when he was about forty years old. It is one of the best, if
+not the best, preserved fresco paintings in Florence. The colouring is
+very rich and warm in glowing tones, as in the case of all Gozzoli’s
+work which has remained uninjured. The extremely rich effect is
+considerably heightened by the free use of gold on the embroideries of
+the principal figures, and on the horse-trappings. The work contains
+many portraits of the principal people of the time, among which are
+those of Cosimo de Medici, Lorenzo the Magnificent, and that of the
+artist himself. The kings, in sumptuous apparel, are represented on
+horseback, attended by lords, squires, retainers and servants, all
+travelling slowly and with much solemnity, through a beautiful country.
+A hunting party occupies the left wall, looking towards the window,
+where some leopards and hawks, used for hunting, are admirably drawn and
+painted. On the recessed wall surrounding the window the scene
+represented is Paradise, or the Garden of Heaven, in which many angels
+are in prayer, and others soaring in the clouds. The fine condition of
+these frescos presents a great contrast to the decayed and almost
+obliterated paintings executed by Gozzoli on the walls of the Campo
+Santa at Pisa. Very little, indeed, except slight traces, now remains of
+the latter paintings, but the cause of their decay is not far to seek.
+It is true that all the paintings on the walls of the Campo Santa have
+always been exposed to the open air, but the real cause of the
+disintegration of the Gozzoli paintings in this place is from their
+being painted in tempera, or fresco-secco, and not, as in the case of
+the Riccardi frescos, in veritable or buon-fresco. The Campo Santa
+frescos by Gozzoli represent scenes from the history of the Old
+Testament, from the time of Noah to the Queen of Sheba’s visit to King
+Solomon. They were painted between 1469 and 1485, when the artist was in
+the zenith of his powers, and from what remains of them we can easily
+imagine them to have been the finest of any works executed by this great
+nature-loving artist. An Italian artist who was engaged in repairing the
+more decayed
+
+[Illustration: _Photo. Brogi._]
+
+[_To face p. 53._
+
+PLATE 20.--ANGELS. DETAIL FROM THE PARADISE
+
+_Benozzo Gozzoli, Riccardi Palace, Florence_]
+
+portions of Gozzoli’s wall paintings in the Campo Santa, in the summer
+of 1908, informed the writer that nearly all the remaining colours on
+these paintings were in a powdery state on the surface of the wall, and
+could easily be dusted off. This rarely happens in the case of paintings
+which have been executed in buon or veritable fresco, and there is doubt
+that the chief cause of decay and of the faded appearance of many of the
+old Italian frescos is due to the fact that they were either executed in
+tempera, or in the fresco-secco method, or that they were begun in
+buon-fresco and finished afterwards with glazings and opaque touches of
+tempera colour. Many of Simon Memmi’s frescos in the Spanish Chapel, in
+the Church of Santa Maria Novella at Florence, were repainted or
+“restored” about one hundred years after his death, and Ruskin has
+stated that some of the restorer’s over-painting has since fallen away,
+revealing the very pure original work underneath.
+
+Pietro Vanucci, better known as Pietro Perugino (1446-1524), was one of
+the most important artists of the Umbrian school of painting, and was
+Raffaelle’s early instructor. He painted many frescos in Florence, where
+he lived and worked for about fourteen years, and where he acquired much
+of the Florentine manner of design and painting. One of his most
+important works in Florence is the great fresco of the “Crucifixion,”
+with saints standing around the foot of the cross, which he painted in
+three compartments on the wall of the chapter-house of the Church of St.
+Maria Maddalena de’ Pazzi, in the Via Colona. The design and pose of the
+figures in this fresco are very characteristic of Perugino’s manner,
+which may be seen in the upcast and wistful expression of the eyes, the
+pose of the heads, and devout attitudes of his standing figures. The
+illustrations of the two heads from this fresco, here given, are in the
+above respects very typical of Perugino’s work; they also admirably show
+his method of handling, as well as the brush-marks of the fresco. The
+light touches in the beard and hair of the male head are later
+reinforcements, but with this exception, the whole of the painting in
+these heads is quite likely to be the genuine work of Perugino. Another
+fresco in Florence, known as the “Cenacolo di Foligno,” is ascribed to
+Perugino; it is in the refectory of the old convent of St. Onofrio, in
+the Via Faenza.
+
+This artist painted some important frescos in the Sistine Chapel of the
+Vatican, at Rome, some of which are still in existence, namely, the
+“Baptism of Christ,” and the “Delivery of the Keys to St. Peter.” It is
+recorded that he had also painted a fresco on the wall at the back of
+the altar in this chapel, but that it was destroyed in order to make way
+for Michael Angelo’s “Last Judgment.” In those palmy days of great
+artistic activity it was evident that some difficulty was experienced in
+finding sufficient wall space on which the painters of
+
+[Illustration: _Photo. Alinari._]
+
+[_To face p. 54._
+
+PLATE 21.--ST. BENEDICT, FROM THE CRUCIFIXION
+
+_Perugino, Church of Sta. Maria Maddalena de’ Pazzi_]
+
+[Illustration: _Photo. Alinari._]
+
+[_To face p. 53._
+
+PLATE 22.--ST. JOHN, FROM THE CRUCIFIXION.
+
+_Perugino, Church of Sta. Maria Maddalena de’ Pazzi_]
+
+that time might execute their numerous commissions, when, as we see,
+masterpieces had to be destroyed to make room for still greater works.
+If we contrast those spacious days of art with those of our own time and
+in our own country, it affords us food for some reflection of a mournful
+kind to find there are acres of blank spaces on the walls of our
+churches and public buildings, and capable enough artists in our midst
+who might be employed to decorate these barren spaces, but nobody, or no
+Government, public-spirited enough to entrust modern artists with
+commissions to execute such works.
+
+
+
+
+CHAPTER VIII
+
+THE WORK OF PINTURICCHIO AND GHIRLANDAJO
+
+
+BERNARDINO PINTURICCHIO of Perugia (1454-1513) was an excellent painter
+in fresco, although Vasari, in his _Lives of the Painters_, has done
+scant justice to his great merits. In the face of much splendid work
+that has been done by Pinturicchio, the want of appreciation of his
+merits by Vasari is quite inexplicable. Any one who has seen, and
+carefully examined his frescos in the Borgia apartments of the Vatican
+must acknowledge him as one of the greatest decorative artists of his
+time, greater, for example because less conventional, than Perugino, his
+contemporary, with whom he sometimes collaborated, and who often got
+credit for work which was done by Pinturicchio. To compare his work with
+that of Perugino we should say that in the design and colouring of the
+former artist there is more life, more spontaneity, and much less
+mannerism than is seen in the work of Perugino. In design his wall
+decorations are characterized by great variety and plenitude of
+incident, and although he may appear at times to aim at the expression
+of too
+
+[Illustration: _Photo. Alinari._]
+
+[_To face p. 56._
+
+PLATE 23.--DETAIL FROM CHRIST’S CHARGE TO PETER
+
+_Perugino, Sistine Chapel_]
+
+[Illustration: _Photo. Anderson._]
+
+[_To face p. 57._
+
+PLATE 24.--ST. CATHERINE DISPUTING BEFORE THE EMPEROR MAXIMIANUS
+
+_Pinturicchio, Borgia Appartments, Vatican, Rome_]
+
+much individuality in the figures of his groups, the outcome perhaps of
+his great versatility, yet in a masterly way he invariably succeeds in
+uniting the various and contrasting elements of his work into one
+harmonious arrangement, the unity being largely assisted by the
+judicious disposition of his colour, which, generally speaking, is a
+harmony of azure and gold. Pinturicchio has been adversely criticised
+for his practice of giving undue prominence to some of the mouldings and
+other salient points of the painted architecture in his frescos, and the
+patterns of embroidery on the dresses of his figures, by modelling them
+in low relief and afterwards gilding them, the objection being that such
+a practice is not the function of painting; that may be, but surely an
+artist may be allowed to treat his subject in his own way, by using any
+means to produce the desired end he may have in view, especially if that
+end is to produce a beautiful work in harmony with its surroundings.
+Artistic heresies may be illogical enough, but it matters very little if
+the result is a production of beauty, for do we not often see that some
+dreadfully logical people only succeed in producing the ugliness of the
+commonplace however careful they may be in the due observance of
+artistic laws?
+
+In the vaulted ceiling panels and on the groined ribs of the vaults in
+the Borgia apartments there is a good deal of stucco relief modelling of
+ornament and animal forms by Giovanni da Udine and Perina del Vaga,
+this relief decoration being coloured and gilded, similar to the cameo
+reliefs in the loggia of the Vatican, which the two last-named artists
+had executed under Raffaelle’s direction; and as Pinturicchio’s frescos
+were in all probability painted before the date of the ceiling
+decorations, it is not at all unlikely that the relief work on the wall
+frescos underneath suggested in a great measure a similar enrichment of
+the vaulted ribs and ceilings. In any case the whole of the decorations
+on both walls and ceilings of the Borgia apartments are in singular
+harmony and unity, although the work has been done by different hands.
+
+Pinturicchio was employed by the Pope, Alexander VI, to decorate the
+Borgia apartments; accordingly, the frescos of the second, third, and
+fourth rooms were painted by him, with scenes from the life of Christ,
+the lives of the Saints, and with allegorical representations of the
+arts and sciences respectively. The most important and largest fresco
+has the subject of St. Catherine of Alexandria disputing before the
+Emperor Maximianus, in the background of which is a representation of
+the Arch of Constantine. This is painted on the back wall of the third
+room. The figure of St. Catherine is finely designed and painted, and is
+supposed to be a portrait of Lucretia Borgia. (See illustrations.) Among
+the best work of Pinturicchio are his frescos in the first chapel to the
+right in the Church of S. Maria Araceli, Rome, representing scenes from
+
+[Illustration: _Photo. Anderson._]
+
+[_To face p. 58._
+
+PLATE 25.--PORTRAIT OF LUCREZIA BORGIA. ST. CATHERINE DISPUTING BEFORE
+THE EMPEROR. DETAIL OF FRESCO
+
+_Pinturicchio, Borgia Appartments, Vatican_]
+
+[Illustration:
+
+[_To face p. 59_
+
+PLATE 26.--THE NATIVITY
+
+_Pinturicchio, Church of Sta. Maria del Popolo, Rome_]
+
+the life of St. Bernard of Siena, and on the vaulted roof is painted the
+four Evangelists, all of which are very vigorous and lifelike
+representations; the same may also be said of his frescos in the
+Baglioni Chapel in the Duomo at Spello. His two frescos in the Sistine
+Chapel, “Moses journeying to Egypt” and the “Baptism of Christ,” were
+formerly ascribed to Perugino.
+
+The Florentine artist, Domenico Ghirlandajo (1449-1498), was one of the
+most eminent fresco painters of his time. He was fond of introducing
+sumptuously dressed personages into his works, many of whom were
+representations of the people of his day. The powerful Tornabuoni family
+of Florence were his patrons, who commissioned him to paint many frescos
+in Florence and in Rome. He can claim the distinction of having Michael
+Angelo as one of his pupils.
+
+Some of his best existing works are those in the choir of the Church of
+Santa Maria Novella, and the Church of St. Trinita at Florence. In the
+Church of Santa Maria degli Innocenti, in the Foundling Hospital at
+Florence, is a well-preserved altar-piece, a tempera painting on panel
+by him, the “Adoration of the Magi,” which is dignified in its design,
+and the colouring is brilliant in reds and golden hues, these colours
+being very characteristic of his later works. In the background of this
+fine work is a beautiful landscape, and at the foot of the hill on the
+left is the scene representing the slaughter of the Innocents. The
+drapery of the kneeling king is masterly in the design of its folds, but
+the standing figure of the youthful king on the left is the most
+beautiful of the larger figures. In all the range of Italian art it
+would be difficult to match for beauty and for types of innocence the
+two little babes, or _innocenti_, who are kneeling at the bottom of the
+picture, adoring and adorable, as in every way they are. At the top,
+kneeling on clouds above the manger, are four lovely angels holding a
+scroll, on which is written, “Gloria in excelsis Deo.” Generally
+speaking, his frescos are remarkable for their high degree of careful
+finish, and nearly all of the spectators or accessory figures in his
+paintings are portraits of his patrons and contemporaries. His
+compositions are very simple and dignified, with a certain degree of
+solemn severity in the drawing of the principal figures. The latter
+characteristic is partly due to his practice of making many of his
+figures stately portraits, and partly to the long and straight folds of
+his draperies, which remind us of Masaccio’s work, and, in a lesser
+degree, that of Giotto. It is interesting to compose and note the
+similarity of design which is apparent in his fresco, the “Calling of
+SS. Peter and Andrew,” in the Sistine Chapel, with the “Tribute Money,”
+by Masaccio, in the Brancacci Chapel of the Carmelite Church at
+Florence; and also his celebrated work, the “Death of St. Francis,” in
+St. Trinita at Florence, with the same subject painted by Giotto
+
+[Illustration: _Photo. Alinari._]
+
+[_To face p. 60._
+
+PLATE 27.--FLORENTINE LADY. DETAIL OF FRESCO, BIRTH OF ST. JOHN
+
+_Ghirlandajo, Church of Sta. Maria Novella, Florence_]
+
+[Illustration:
+
+[To face p. 61.
+
+PLATE 28.--DEATH OF ST. FRANCIS
+
+_Ghirlandajo, Church of St. Trinita, Florence_]
+
+in the Bardi Chapel of Santa Croce. In the latter work we see piety and
+sentiment more strongly expressed by Giotto, while portraiture and light
+and shade are more in evidence in Ghirlandajo’s rendering of this
+subject, but the figure composition in both works is almost identical.
+
+The frescos by Ghirlandajo in the choir of the Church of Santa Maria
+Novella are among the most important of his works, and remain as fine
+examples of his skill as a great decorator. The subjects are from the
+life of the Virgin and John the Baptist, all of which are treated with
+great care and elaboration of rich detail, the utmost finish being not
+only accorded to the principal actors in the scenes, but also to the
+architectural backgrounds, with their panels and friezes of figures, the
+embroidered patterns on the dresses, and other decorative accessories,
+in fact all his beauties of style in design, execution, and colouring
+are admirably expressed in these characteristic works.
+
+In the Monastery of San Marco in Florence, in the smaller refectory, is
+an interesting fresco of the “Cenacolo,” or Last Supper, by Ghirlandajo.
+There is a little stiffness and formality in the composition of this
+work, but the heads of the principal figures are lifelike and well
+painted. The colouring is strong and rich, gold has been freely used in
+the nimbi and on the dresses of the figures, and in the background.
+Above the figures, in the background, is painted an abundance of
+cypress, orange trees, and flowers; while in the sky, hawks are
+pursuing wild duck. There is also a similar, but in some ways a much
+better, “Cenacolo” by Ghirlandajo in the refectory in the convent of the
+Church of the Ognissanti at Florence.
+
+[Illustration: _Photo. Alinari._]
+
+[_To face p. 62._
+
+PLATE 29.--FLORENTINE LADY. DETAIL OF FRESCO, BIRTH OF THE VIRGIN
+
+_Ghirlandajo, Church of Sta. Maria Novella, Florence_]
+
+[Illustration: _Photo. Alinari._]
+
+[_To face p. 63._
+
+PLATE 30.--DETAIL FROM FRESCO, BIRTH OF THE VIRGIN
+
+_Ghirlandajo, Church of Sta. Maria Novella, Florence_]
+
+
+
+
+CHAPTER IX
+
+FRESCOS BY ANDREA DEL SARTO, LUINI, G. FERRARI, RAFFAELLE AND MICHAEL
+ANGELO
+
+
+In the anterior court of the Church of the Santissima Annunziata, in
+Florence, there are five fairly well-preserved frescos by Andrea del
+Sarto (1488-1530). In the same court there are others painted by his
+pupils, and contemporary artists. The best of the five by Andrea is the
+“Death of St. Filippo,” where a young man is raised to life by the dead
+body of the saint. The colouring is very strong and luminous, and has
+the soft melting character of the various tones into each other, which
+distinguishes the work of this painter, more especially seen in his
+easel pictures. The next fresco in importance of this series is that
+which represents the miracles wrought by the robes of St. Filippo, where
+children are healed by touching his garments. The colouring of this
+painting is lively and fresh, and the effect of light and shade is a
+very important feature in the work. The backgrounds of these frescos,
+whether architectural or landscape, are at present exceedingly light in
+tone, which either means that these parts have faded or have been
+destroyed by cleaning. This causes the figures to look completely out of
+tone with the pale backgrounds.
+
+The Brera Palace at Milan contains a great number of small and extremely
+interesting frescos, that have been removed from various churches and
+suppressed convents in the city and neighbourhood, among which are some
+very good examples of Bernardino Luini’s work (1470-1530?). Luini was
+the most famous scholar of Leonardo da Vinci, and was so greatly
+influenced by the latter that many pictures had for a long time been
+ascribed to his master. He was a most prolific and industrious artist,
+both in fresco and in easel pictures, and as a rule his work is full of
+grace and charm. The female figures and children painted by Luini are
+always characterized by their easy natural poses, and have a refined
+delicacy and sweetness of expression. His colouring, always rich and
+warm in tone, is chiefly distinguished by its freshness and purity;
+these qualities are best seen in his smaller frescos, now in the Brera
+galleries. In the entrance corridor there is an example of his fresco
+work, brought from the Church of St. Maria di Brera, in Milan. The
+subject is the “Virgin and Child,” with an angel and two other figures,
+St. Abate, and St. Barbara, and a boy with a lute. The colour and
+drawing of this example are extremely good, though the general
+composition is lacking in
+
+[Illustration: _Photo. Alinari._]
+
+[_To face p. 64._
+
+PLATE 31.--FRESCO, INFANT ANGEL
+
+_Luini, Brera, Milan_]
+
+[Illustration: _Photo, Alinari_]
+
+[_To face p. 65._
+
+PLATE 32.--THE VIRGIN AND CHILD WITH ST. JOHN AND ST. MARTHA
+
+_Luini, Fresco in the Brera, Milan_]
+
+cohesion and unity. The “Burial of St. Catherine” is also in the Brera.
+It is a small fresco brought from the Convent della Pelucca, and is one
+of the more successful works of Luini. Three finely designed angels are
+carrying the body of St. Catherine, below which is the tomb. The robes
+of the saint are red in colour, while those of the angel on the right
+are purple; the middle, green; and the angel to the left has yellow
+drapery. The best work, however, by Luini in the Brera is the beautiful
+fresco, in the Sala XVI, of the “Virgin and Child” with St. Martha, St.
+John, and a nun. In this work the landscape background is remarkably
+fresh and pure in colour, and is painted in a very naturalistic manner,
+the treatment of the trees, and details of the landscape reminding one
+forcibly of a picture by Constable. There are some fine passages of
+luminous and harmonious colouring in the draperies, the faces of the
+figures have a tenderness and purity of expression, and the whole work
+is a convincing example of the master at his best. Being on a level with
+the eye, and in a good light, one is enabled to see in this fresco that
+Luini’s method of painting consisted in his first modelling the forms in
+a solid impasto, and afterwards finishing his work, like the majority of
+Italian fresco painters, by shading transparently in finely hatched
+lines.
+
+There are other examples of Luini’s fresco work in the Brera, consisting
+chiefly of heads and figures of boys. In the old Romanesque basilica
+church of St. Ambrogio at Milan, in the first chapel of the left aisle,
+is a fresco by him, the “Ecce Homo,” in a fairly good state of
+preservation, and in the sixth chapel of the right aisle is his work,
+the “Legend of St. George.” The Church of St. Maria della Grazie in the
+same city contains his fresco of the “Virgin Enthroned,” with saints
+around, the colour and composition of which are good, but an injurious
+dusty bloom has appeared on some portions of this fine work. Numerous
+examples of Luini’s fresco decorations may be seen in the Church of St.
+Maurizo (Monastero Maggiore), including the large “Crucifixion,” on the
+wall over the entrance to the choir. This great work contains nearly 140
+figures, many of which are of singular beauty. At Saronno, not far from
+Milan, in the Church of the Santuario there are also some very important
+frescos by Luini, representing scenes in the history of the Virgin, the
+best of which is a very fine “Adoration of the Magi.”
+
+Gaudenzio Ferrari (1484-1549) was another Milanese painter, though a
+native of Piedmont, but Milan and its neighbourhood was strictly
+speaking the centre of his labours. He was a follower of Leonardo da
+Vinci, although he had worked with Perugino, and later with Raffaelle.
+He painted numerous frescos in Milan, Saronno, and Varallo; most of them
+are characterized by life and animation of pose in the figures, and as a
+rule his works contain many figures of great merit and beauty,
+
+[Illustration:
+
+[_To face p. 66._
+
+PLATE 33.--ST. LUCY SENTENCED TO DEATH
+
+_Jacopo D’Avanzo, Church of St. Anthony, Padua_]
+
+showing fine qualities of freedom in the execution. But his work as a
+whole is unequal, owing to his tendency of allowing himself to be
+influenced by that of his contemporaries. The best of his frescos are
+those which are most Luinesque in style and character.
+
+In the side entrance of the right aisle, in the Church of St. Ambrogio,
+in Milan, Ferrari has painted the frescos, “Christ bearing the Cross,”
+and the “Three Marys”; the latter, though darkened much, is in a good
+state of preservation, and is now under glass. At Saronno, in the Church
+of the Santuario, he has decorated the cupola with an assemblage of
+angels and winged boys, some of which are designed with great spirit,
+and are beautifully painted. Later work by Ferrari is the fresco
+decoration of the fourth chapel in the right aisle of St. Maria delle
+Grazie (1542), where he painted the powerful compositions of the
+Passion, namely, the “Crucifixion,” the “Scourging of Christ,” and
+“Christ Crowned with Thorns.” The figures are life-size, and are
+characterized by much animation, strong colouring, and great freedom of
+execution.
+
+The works of Raffaelle and Michael Angelo in fresco painting which adorn
+the Stanze of the Vatican and the Sistine Chapel, respectively, have
+been so much described, and are so well known to students, that any
+criticism which might be offered here would amount to an unstinted
+appreciation of their labours. It goes without saying that it is a very
+serious thing for the sake of Italian Art that so much of the finest
+work of these masters has either gone very dark and dirty, or, what is
+worse, has in places almost perished by the disintegration of the
+colours. The large fresco of the “School of Athens,” in the Stanze of
+the Vatican, probably the best work in fresco from the hand of
+Raffaelle, is now quite different from what it must have been when first
+it was painted. The composition of the figures and some portions of the
+original colours still remain, but all else must be entirely changed.
+Even where the original colour is still on the wall, such parts are
+extremely blackened by age and dirt, but the architectural background,
+the central flight of steps, and the foreground around and between the
+figures are, on the contrary, much lighter in tone than they must have
+been originally, and consequently all the shade and shadows, which
+formerly connected the masses of the figure groups together, have
+disappeared. The present extreme lightness of tone which surrounds the
+dark figures, unduly emphasizes the latter, and gives an unsatisfactory
+and very spotty appearance to the general composition, which is at
+variance with the early engravings and copies of this fresco. It is
+quite likely that the present aspect of this great work is due to the
+fact that the cleaners and restorers engaged on it from time to time
+have employed their cleansing energy on the background more than on the
+figures, and have cleaned off the dirt,
+
+[Illustration: _Photo. Anderson._]
+
+[_To face p. 68._
+
+PLATE 34.--THE FIRE IN THE BORGO
+
+_Raffaelle, Stanza dell’ Incendio, Vatican, Rome_]
+
+[Illustration: _Photo. Braun, Clément et Cie._]
+
+[_To face p. 69._
+
+PLATE 35.--FIGURE OF ADAM, FROM THE CREATION OF MAN
+
+_Michael Angelo, Sistine Chapel, Vatican, Rome_]
+
+and paint as well, so leaving this portion in a clean-looking or light
+state; and if we bear in mind that the background work has in all
+probability been painted much more thinly, or with less impasto, than
+the figures, we can easily imagine that in the parts under notice there
+has always been less body of colour to be destroyed by the cleaners. It
+is also noticeable that where a blue or grey colour has been used in the
+draperies, the painting of such parts has badly perished, which suggests
+that either a vegetable or a copper-blue pigment has been used, instead
+of a cobalt or an ultramarine blue, or that these parts have been
+afterwards repainted in tempera. The other frescos in this room, the
+“Mount Parnassus,” and the “Prudence, Fortitude and Temperance,” are in
+a much better state than the “School of Athens.”
+
+Michael Angelo’s great work in fresco, on the ceiling of the Sistine
+Chapel, is still, fortunately, in a fairly good state, but the “Last
+Judgment,” on the altar wall, is very grimy, and in a much blackened
+state. One cannot help thinking that a good deal of the dirt could be
+removed from this work by a little judicious cleaning.
+
+
+THE END
+
+
+
+
+INDEX
+
+
+Andrea del Sarto, 63-64
+
+Architecture, 1
+
+Architecture, principles of, 6
+
+Arts of Peace fresco, 34
+
+Arts of War fresco, 33-34
+
+
+Bardi Chapel, Santa Croce, Florence, 39-40
+
+Benozzo Gozzoli, 51-53
+
+Borgia apartments, Vatican, 56-58
+
+Brancacci Chapel, Carmelite Church, 47-49
+
+Brera Palace, Milan, frescos at, 64-65
+
+Brown, Ford Madox, 32
+
+Brushes for fresco, 20
+
+Buon-fresco, 9
+
+
+Campo Santa, Pisa, 52
+
+Cartoons, 16, 17, 24, 56
+
+Cenacolo by Ghirlandajo, 61-62
+
+Cnossus, 10
+
+Colour sketches, 16, 36
+
+Colours for buon-fresco, 17-19
+
+
+Design in objects of general utility, 5
+
+Drapery painting, 28-29
+
+
+Egyptian tempera, 11
+
+Encaustic painting, 9
+
+
+Filippino Lippi, 47
+
+Flesh painting, 25-27
+
+Foundling Hospital, Florence, 59-60
+
+Fra Angelico, 44-46
+
+Fresco-buono, 12
+
+Fresco-secco, 8, 11
+
+Fresco, systems and methods, 8
+
+
+Gaudenzio Ferrari, 66-67
+
+Ghirlandajo, Domenico, 59-61
+
+Giotto, 39-43
+
+Giovanni da Udine, 57-58
+
+Gloucester Cathedral, 31
+
+
+Houses of Parliament frescos, 30
+
+
+Intonaco, 15
+
+
+Keim’s process, 9
+
+
+Last Judgment fresco, 68
+
+Leighton, Lord, 32-33
+
+Luini, Bernardino, 64-66
+
+Lyndhurst Church fresco, 32
+
+
+Masaccio, 47-49
+
+Masolino da Panicale, 47
+
+Method of execution in buon-fresco, 23
+
+Method of execution in spirit fresco, 36-37
+
+Michael Angelo, 38, 50, 54, 68
+
+Monastery of St. Mark frescos, 44-46, 61
+
+Monumental painting, essentials of, 4
+
+Mosaics, 3
+
+Mycene, 10
+
+
+Painting, 2
+
+Parry, Gambier, 53
+
+Perina del Vaga, 57-58
+
+Perugino, 53-55
+
+Pinturicchio, 56-58
+
+Pompeii, 11
+
+Poynter, Sir E. J., Bart., P.R.A., 16, 30
+
+
+Raffaelle, 49, 67, 69
+
+Retouching, 27
+
+Riccardi palace, 51
+
+Ruskin, 53
+
+
+Santa Maria della Grazie, Milan, 66-67
+
+Santa Maria Maddalena de Pazzi, 54
+
+Santa Maria Novella, Florence, 39, 61
+
+Santissima Annunziata, Church of the, 63
+
+St. Ambrogio, Milan, 66-67
+
+St. Catherine of Alexandria, 58
+
+St. Maurizo Church (Monastero Maggiore), 66
+
+St. Stephen’s, Dulwich, 71
+
+Saronno, Church of the Santuario, 66-67
+
+School of Athens fresco, 68
+
+Simon Memmi, 53
+
+Sistine Chapel, 38, 54, 59
+
+Spanish Chapel, 53
+
+Spirit fresco, 31
+
+Spirit fresco medium, 38
+
+Spirit fresco painting, 9
+
+
+Tempera painting, 9
+
+Test brick for colour, 22
+
+Thera, 10
+
+Tiryns, 10
+
+
+Undercoating, or ground tint, 21
+
+
+Vasari, 40, 50, 56
+
+Vatican, Loggia of the, 58
+
+Victoria and Albert Museum, 33
+
+
+Walls for fresco paintings, 14, 33
+
+Walls, preparation of, 14, 33-34
+
+Water-glass fresco, 9
+
+
+_Richard Clay & Sons, Limited, London and Bungay._
+
+
+
+
+
+End of the Project Gutenberg EBook of Fresco Painting, by James Ward
+
+*** END OF THIS PROJECT GUTENBERG EBOOK FRESCO PAINTING ***
+
+***** This file should be named 58159-0.txt or 58159-0.zip *****
+This and all associated files of various formats will be found in:
+        http://www.gutenberg.org/5/8/1/5/58159/
+
+Produced by Chuck Greif, deaurider and the Online
+Distributed Proofreading Team at http://www.pgdp.net (This
+file was produced from images generously made available
+by The Internet Archive)
+
+
+Updated editions will replace the previous one--the old editions
+will be renamed.
+
+Creating the works from public domain print editions means that no
+one owns a United States copyright in these works, so the Foundation
+(and you!) can copy and distribute it in the United States without
+permission and without paying copyright royalties.  Special rules,
+set forth in the General Terms of Use part of this license, apply to
+copying and distributing Project Gutenberg-tm electronic works to
+protect the PROJECT GUTENBERG-tm concept and trademark.  Project
+Gutenberg is a registered trademark, and may not be used if you
+charge for the eBooks, unless you receive specific permission.  If you
+do not charge anything for copies of this eBook, complying with the
+rules is very easy.  You may use this eBook for nearly any purpose
+such as creation of derivative works, reports, performances and
+research.  They may be modified and printed and given away--you may do
+practically ANYTHING with public domain eBooks.  Redistribution is
+subject to the trademark license, especially commercial
+redistribution.
+
+
+
+*** START: FULL LICENSE ***
+
+THE FULL PROJECT GUTENBERG LICENSE
+PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK
+
+To protect the Project Gutenberg-tm mission of promoting the free
+distribution of electronic works, by using or distributing this work
+(or any other work associated in any way with the phrase "Project
+Gutenberg"), you agree to comply with all the terms of the Full Project
+Gutenberg-tm License (available with this file or online at
+http://gutenberg.org/license).
+
+
+Section 1.  General Terms of Use and Redistributing Project Gutenberg-tm
+electronic works
+
+1.A.  By reading or using any part of this Project Gutenberg-tm
+electronic work, you indicate that you have read, understand, agree to
+and accept all the terms of this license and intellectual property
+(trademark/copyright) agreement.  If you do not agree to abide by all
+the terms of this agreement, you must cease using and return or destroy
+all copies of Project Gutenberg-tm electronic works in your possession.
+If you paid a fee for obtaining a copy of or access to a Project
+Gutenberg-tm electronic work and you do not agree to be bound by the
+terms of this agreement, you may obtain a refund from the person or
+entity to whom you paid the fee as set forth in paragraph 1.E.8.
+
+1.B.  "Project Gutenberg" is a registered trademark.  It may only be
+used on or associated in any way with an electronic work by people who
+agree to be bound by the terms of this agreement.  There are a few
+things that you can do with most Project Gutenberg-tm electronic works
+even without complying with the full terms of this agreement.  See
+paragraph 1.C below.  There are a lot of things you can do with Project
+Gutenberg-tm electronic works if you follow the terms of this agreement
+and help preserve free future access to Project Gutenberg-tm electronic
+works.  See paragraph 1.E below.
+
+1.C.  The Project Gutenberg Literary Archive Foundation ("the Foundation"
+or PGLAF), owns a compilation copyright in the collection of Project
+Gutenberg-tm electronic works.  Nearly all the individual works in the
+collection are in the public domain in the United States.  If an
+individual work is in the public domain in the United States and you are
+located in the United States, we do not claim a right to prevent you from
+copying, distributing, performing, displaying or creating derivative
+works based on the work as long as all references to Project Gutenberg
+are removed.  Of course, we hope that you will support the Project
+Gutenberg-tm mission of promoting free access to electronic works by
+freely sharing Project Gutenberg-tm works in compliance with the terms of
+this agreement for keeping the Project Gutenberg-tm name associated with
+the work.  You can easily comply with the terms of this agreement by
+keeping this work in the same format with its attached full Project
+Gutenberg-tm License when you share it without charge with others.
+
+1.D.  The copyright laws of the place where you are located also govern
+what you can do with this work.  Copyright laws in most countries are in
+a constant state of change.  If you are outside the United States, check
+the laws of your country in addition to the terms of this agreement
+before downloading, copying, displaying, performing, distributing or
+creating derivative works based on this work or any other Project
+Gutenberg-tm work.  The Foundation makes no representations concerning
+the copyright status of any work in any country outside the United
+States.
+
+1.E.  Unless you have removed all references to Project Gutenberg:
+
+1.E.1.  The following sentence, with active links to, or other immediate
+access to, the full Project Gutenberg-tm License must appear prominently
+whenever any copy of a Project Gutenberg-tm work (any work on which the
+phrase "Project Gutenberg" appears, or with which the phrase "Project
+Gutenberg" is associated) is accessed, displayed, performed, viewed,
+copied or distributed:
+
+This eBook is for the use of anyone anywhere at no cost and with
+almost no restrictions whatsoever.  You may copy it, give it away or
+re-use it under the terms of the Project Gutenberg License included
+with this eBook or online at www.gutenberg.org/license
+
+1.E.2.  If an individual Project Gutenberg-tm electronic work is derived
+from the public domain (does not contain a notice indicating that it is
+posted with permission of the copyright holder), the work can be copied
+and distributed to anyone in the United States without paying any fees
+or charges.  If you are redistributing or providing access to a work
+with the phrase "Project Gutenberg" associated with or appearing on the
+work, you must comply either with the requirements of paragraphs 1.E.1
+through 1.E.7 or obtain permission for the use of the work and the
+Project Gutenberg-tm trademark as set forth in paragraphs 1.E.8 or
+1.E.9.
+
+1.E.3.  If an individual Project Gutenberg-tm electronic work is posted
+with the permission of the copyright holder, your use and distribution
+must comply with both paragraphs 1.E.1 through 1.E.7 and any additional
+terms imposed by the copyright holder.  Additional terms will be linked
+to the Project Gutenberg-tm License for all works posted with the
+permission of the copyright holder found at the beginning of this work.
+
+1.E.4.  Do not unlink or detach or remove the full Project Gutenberg-tm
+License terms from this work, or any files containing a part of this
+work or any other work associated with Project Gutenberg-tm.
+
+1.E.5.  Do not copy, display, perform, distribute or redistribute this
+electronic work, or any part of this electronic work, without
+prominently displaying the sentence set forth in paragraph 1.E.1 with
+active links or immediate access to the full terms of the Project
+Gutenberg-tm License.
+
+1.E.6.  You may convert to and distribute this work in any binary,
+compressed, marked up, nonproprietary or proprietary form, including any
+word processing or hypertext form.  However, if you provide access to or
+distribute copies of a Project Gutenberg-tm work in a format other than
+"Plain Vanilla ASCII" or other format used in the official version
+posted on the official Project Gutenberg-tm web site (www.gutenberg.org),
+you must, at no additional cost, fee or expense to the user, provide a
+copy, a means of exporting a copy, or a means of obtaining a copy upon
+request, of the work in its original "Plain Vanilla ASCII" or other
+form.  Any alternate format must include the full Project Gutenberg-tm
+License as specified in paragraph 1.E.1.
+
+1.E.7.  Do not charge a fee for access to, viewing, displaying,
+performing, copying or distributing any Project Gutenberg-tm works
+unless you comply with paragraph 1.E.8 or 1.E.9.
+
+1.E.8.  You may charge a reasonable fee for copies of or providing
+access to or distributing Project Gutenberg-tm electronic works provided
+that
+
+- You pay a royalty fee of 20% of the gross profits you derive from
+     the use of Project Gutenberg-tm works calculated using the method
+     you already use to calculate your applicable taxes.  The fee is
+     owed to the owner of the Project Gutenberg-tm trademark, but he
+     has agreed to donate royalties under this paragraph to the
+     Project Gutenberg Literary Archive Foundation.  Royalty payments
+     must be paid within 60 days following each date on which you
+     prepare (or are legally required to prepare) your periodic tax
+     returns.  Royalty payments should be clearly marked as such and
+     sent to the Project Gutenberg Literary Archive Foundation at the
+     address specified in Section 4, "Information about donations to
+     the Project Gutenberg Literary Archive Foundation."
+
+- You provide a full refund of any money paid by a user who notifies
+     you in writing (or by e-mail) within 30 days of receipt that s/he
+     does not agree to the terms of the full Project Gutenberg-tm
+     License.  You must require such a user to return or
+     destroy all copies of the works possessed in a physical medium
+     and discontinue all use of and all access to other copies of
+     Project Gutenberg-tm works.
+
+- You provide, in accordance with paragraph 1.F.3, a full refund of any
+     money paid for a work or a replacement copy, if a defect in the
+     electronic work is discovered and reported to you within 90 days
+     of receipt of the work.
+
+- You comply with all other terms of this agreement for free
+     distribution of Project Gutenberg-tm works.
+
+1.E.9.  If you wish to charge a fee or distribute a Project Gutenberg-tm
+electronic work or group of works on different terms than are set
+forth in this agreement, you must obtain permission in writing from
+both the Project Gutenberg Literary Archive Foundation and Michael
+Hart, the owner of the Project Gutenberg-tm trademark.  Contact the
+Foundation as set forth in Section 3 below.
+
+1.F.
+
+1.F.1.  Project Gutenberg volunteers and employees expend considerable
+effort to identify, do copyright research on, transcribe and proofread
+public domain works in creating the Project Gutenberg-tm
+collection.  Despite these efforts, Project Gutenberg-tm electronic
+works, and the medium on which they may be stored, may contain
+"Defects," such as, but not limited to, incomplete, inaccurate or
+corrupt data, transcription errors, a copyright or other intellectual
+property infringement, a defective or damaged disk or other medium, a
+computer virus, or computer codes that damage or cannot be read by
+your equipment.
+
+1.F.2.  LIMITED WARRANTY, DISCLAIMER OF DAMAGES - Except for the "Right
+of Replacement or Refund" described in paragraph 1.F.3, the Project
+Gutenberg Literary Archive Foundation, the owner of the Project
+Gutenberg-tm trademark, and any other party distributing a Project
+Gutenberg-tm electronic work under this agreement, disclaim all
+liability to you for damages, costs and expenses, including legal
+fees.  YOU AGREE THAT YOU HAVE NO REMEDIES FOR NEGLIGENCE, STRICT
+LIABILITY, BREACH OF WARRANTY OR BREACH OF CONTRACT EXCEPT THOSE
+PROVIDED IN PARAGRAPH 1.F.3.  YOU AGREE THAT THE FOUNDATION, THE
+TRADEMARK OWNER, AND ANY DISTRIBUTOR UNDER THIS AGREEMENT WILL NOT BE
+LIABLE TO YOU FOR ACTUAL, DIRECT, INDIRECT, CONSEQUENTIAL, PUNITIVE OR
+INCIDENTAL DAMAGES EVEN IF YOU GIVE NOTICE OF THE POSSIBILITY OF SUCH
+DAMAGE.
+
+1.F.3.  LIMITED RIGHT OF REPLACEMENT OR REFUND - If you discover a
+defect in this electronic work within 90 days of receiving it, you can
+receive a refund of the money (if any) you paid for it by sending a
+written explanation to the person you received the work from.  If you
+received the work on a physical medium, you must return the medium with
+your written explanation.  The person or entity that provided you with
+the defective work may elect to provide a replacement copy in lieu of a
+refund.  If you received the work electronically, the person or entity
+providing it to you may choose to give you a second opportunity to
+receive the work electronically in lieu of a refund.  If the second copy
+is also defective, you may demand a refund in writing without further
+opportunities to fix the problem.
+
+1.F.4.  Except for the limited right of replacement or refund set forth
+in paragraph 1.F.3, this work is provided to you 'AS-IS' WITH NO OTHER
+WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PURPOSE.
+
+1.F.5.  Some states do not allow disclaimers of certain implied
+warranties or the exclusion or limitation of certain types of damages.
+If any disclaimer or limitation set forth in this agreement violates the
+law of the state applicable to this agreement, the agreement shall be
+interpreted to make the maximum disclaimer or limitation permitted by
+the applicable state law.  The invalidity or unenforceability of any
+provision of this agreement shall not void the remaining provisions.
+
+1.F.6.  INDEMNITY - You agree to indemnify and hold the Foundation, the
+trademark owner, any agent or employee of the Foundation, anyone
+providing copies of Project Gutenberg-tm electronic works in accordance
+with this agreement, and any volunteers associated with the production,
+promotion and distribution of Project Gutenberg-tm electronic works,
+harmless from all liability, costs and expenses, including legal fees,
+that arise directly or indirectly from any of the following which you do
+or cause to occur: (a) distribution of this or any Project Gutenberg-tm
+work, (b) alteration, modification, or additions or deletions to any
+Project Gutenberg-tm work, and (c) any Defect you cause.
+
+
+Section  2.  Information about the Mission of Project Gutenberg-tm
+
+Project Gutenberg-tm is synonymous with the free distribution of
+electronic works in formats readable by the widest variety of computers
+including obsolete, old, middle-aged and new computers.  It exists
+because of the efforts of hundreds of volunteers and donations from
+people in all walks of life.
+
+Volunteers and financial support to provide volunteers with the
+assistance they need, are critical to reaching Project Gutenberg-tm's
+goals and ensuring that the Project Gutenberg-tm collection will
+remain freely available for generations to come.  In 2001, the Project
+Gutenberg Literary Archive Foundation was created to provide a secure
+and permanent future for Project Gutenberg-tm and future generations.
+To learn more about the Project Gutenberg Literary Archive Foundation
+and how your efforts and donations can help, see Sections 3 and 4
+and the Foundation web page at http://www.pglaf.org.
+
+
+Section 3.  Information about the Project Gutenberg Literary Archive
+Foundation
+
+The Project Gutenberg Literary Archive Foundation is a non profit
+501(c)(3) educational corporation organized under the laws of the
+state of Mississippi and granted tax exempt status by the Internal
+Revenue Service.  The Foundation's EIN or federal tax identification
+number is 64-6221541.  Its 501(c)(3) letter is posted at
+http://pglaf.org/fundraising.  Contributions to the Project Gutenberg
+Literary Archive Foundation are tax deductible to the full extent
+permitted by U.S. federal laws and your state's laws.
+
+The Foundation's principal office is located at 4557 Melan Dr. S.
+Fairbanks, AK, 99712., but its volunteers and employees are scattered
+throughout numerous locations.  Its business office is located at
+809 North 1500 West, Salt Lake City, UT 84116, (801) 596-1887, email
+business@pglaf.org.  Email contact links and up to date contact
+information can be found at the Foundation's web site and official
+page at http://pglaf.org
+
+For additional contact information:
+     Dr. Gregory B. Newby
+     Chief Executive and Director
+     gbnewby@pglaf.org
+
+
+Section 4.  Information about Donations to the Project Gutenberg
+Literary Archive Foundation
+
+Project Gutenberg-tm depends upon and cannot survive without wide
+spread public support and donations to carry out its mission of
+increasing the number of public domain and licensed works that can be
+freely distributed in machine readable form accessible by the widest
+array of equipment including outdated equipment.  Many small donations
+($1 to $5,000) are particularly important to maintaining tax exempt
+status with the IRS.
+
+The Foundation is committed to complying with the laws regulating
+charities and charitable donations in all 50 states of the United
+States.  Compliance requirements are not uniform and it takes a
+considerable effort, much paperwork and many fees to meet and keep up
+with these requirements.  We do not solicit donations in locations
+where we have not received written confirmation of compliance.  To
+SEND DONATIONS or determine the status of compliance for any
+particular state visit http://pglaf.org
+
+While we cannot and do not solicit contributions from states where we
+have not met the solicitation requirements, we know of no prohibition
+against accepting unsolicited donations from donors in such states who
+approach us with offers to donate.
+
+International donations are gratefully accepted, but we cannot make
+any statements concerning tax treatment of donations received from
+outside the United States.  U.S. laws alone swamp our small staff.
+
+Please check the Project Gutenberg Web pages for current donation
+methods and addresses.  Donations are accepted in a number of other
+ways including checks, online payments and credit card donations.
+To donate, please visit: http://pglaf.org/donate
+
+
+Section 5.  General Information About Project Gutenberg-tm electronic
+works.
+
+Professor Michael S. Hart is the originator of the Project Gutenberg-tm
+concept of a library of electronic works that could be freely shared
+with anyone.  For thirty years, he produced and distributed Project
+Gutenberg-tm eBooks with only a loose network of volunteer support.
+
+
+Project Gutenberg-tm eBooks are often created from several printed
+editions, all of which are confirmed as Public Domain in the U.S.
+unless a copyright notice is included.  Thus, we do not necessarily
+keep eBooks in compliance with any particular paper edition.
+
+
+Most people start at our Web site which has the main PG search facility:
+
+     http://www.gutenberg.org
+
+This Web site includes information about Project Gutenberg-tm,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.

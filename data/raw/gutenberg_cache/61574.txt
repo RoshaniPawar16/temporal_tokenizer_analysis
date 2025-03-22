@@ -1,0 +1,1206 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 61574 ***
+
+Transcriber’s Notes:
+
+  Equal signs “=” before and after a word or phrase indicate =bold=
+    in the original text.
+  Small capitals have been converted to SOLID capitals.
+  Illustrations have been moved so they do not break up paragraphs.
+  Old or antiquated spellings have been preserved.
+  Typographical errors have been silently corrected.
+
+
+
+
+                   SELENIUM CELLS
+
+           THE CONSTRUCTION, CARE AND USE
+           OF SELENIUM CELLS WITH SPECIAL
+            REFERENCE TO THE FRITTS CELL
+
+                         BY
+                   THOS. W. BENSON
+
+
+                      NEW YORK
+       SPON & CHAMBERLAIN, 120 LIBERTY STREET
+                       LONDON
+    E. & F. N. SPON, LIMITED, 57 HAYMARKET, S. W.
+                        1919
+
+                   Copyright, 1919
+                 BY THOMAS W. BENSON
+
+                 VAIL-BALLOU COMPANY
+               BINGHAMTON AND NEW YORK
+
+                   APPRECIATIVELY
+                      DEDICATED
+                         TO
+                   J. A. STELTZER
+
+
+
+
+FOREWORD
+
+
+The lack of definite information relative to the construction of
+selenium cells has led the writer to put in this form the results of
+some of his experiments. The method described was originated by Mr. C.
+E. Fritts but the apparatus used was developed by the writer.
+
+Despite the fact that sensitive cells are very difficult to construct
+by the methods in vogue the use of apparatus described practically
+eliminates failures, the cells, almost without exception, being useful
+for one purpose or another.
+
+This is by no means the last word on the subject. Many improvements
+are possible and have been pointed out in the text. Should these
+instructions but serve to interest others in the fascinating study they
+will have served their purpose.
+
+                                         THOS. W. BENSON.
+
+    Philadelphia, Pa.
+
+
+
+
+CONTENTS
+
+
+                                                                 PAGE
+                               CHAPTER I
+    SELENIUM, THE ELEMENT                                           1
+        Discovery, Naming and Classification. Where Found
+        and Method of Extraction. Three Forms, Amorphous,
+        Vitreous and Metallic.
+
+                              CHAPTER II
+    CONSIDERATION OF CELL TYPES AND THEIR CHARACTERISTICS           5
+        Factors in Design. Bildwell Cell. Application of
+        Selenium and Annealing. Ruhmer Cell. Bell and
+        Taintor Cell. Mercadier Cell. Gripenberg Cell.
+        Theory of Operation.
+
+                              CHAPTER III
+    THE CONSTRUCTION OF FRITTS SELENIUM CELL                       20
+        Description of Hot Press. Accessories for Press.
+        Other Apparatus Required and Supplies. Preparing
+        Copper Plate. Applying Selenium. Treating in Hot
+        Press. Application of Gold Foil. Assembling Cell.
+
+                              CHAPTER IV
+    TESTING AND MATURING SELENIUM CELLS                            32
+        Two States. Testing and Maturing Set. Accessories
+        for Set. Construction of Rheostat Arm for Wheatstone
+        Bridge. Measurement of Cells by Bridge
+        Method. Tests for Light Sensitiveness. Proper
+        Voltage. Classification of Cells. Testing for
+        Polarization. Treating with A. C. Raising Resistance
+        of Cells. Testing for Current Generation. Reconstruction
+        of Useless Cells. Measurement of Cells by
+        Substitution Method. Sealing Cells.
+
+                               CHAPTER V
+    APPLICATIONS OF SELENIUM CELLS                                 51
+        Photometric Applications. Transmission of Speech
+        Over Beams of Light. Automatic Control of Light
+        Buoys and Isolated Lights. As Recorder of Sunlight.
+        Astronomical Applications. Talking Pictures.
+        The Phonoptican, How the Blind May Read by
+        Sound. Controlling Mechanisms at a Distance.
+        Electric Dog. Use in Cable Telegraphy. Burglar
+        Alarm. Selenium Batteries, Current Generators.
+        Telephonic Properties. Effect of Different Current
+        Sources on Sensitiveness of Cells.
+
+                              CHAPTER VI
+    THE CARE OF SELENIUM CELLS                                     62
+
+
+
+
+LIST OF ILLUSTRATIONS
+
+
+    FIG.                                                      PAGE
+     1. Bildwell Cell                                           7
+     2. Ruhmer Cell                                            10
+     3. Bell and Taintor Cell                                  12
+     4. Mercadier Cell                                         14
+     5. Gripenberg Cell                                        15
+     6. Fritts Cell                                            17
+     7. Hot Press with Cell in Place                           21
+     8. Details of Hot Press (elevation)                       22
+     8. Details of Hot Press (plan)                            22
+     9. Platen for Cell; and Template for Applying Selenium    24
+     10. Fiber Pieces for Enclosing Cell                       26
+     11. Mode of Assembling Cell                               30
+     12. Testing and Maturing Set                              33
+     13. Layout and Wiring Diagram of Testing Maturing Set     35
+     14. Connections for Buzzer and Induction Coil to Produce
+           Alternating Current                                 36
+     15. Connections for Interior of Rheostat Box              38
+     16. Circuit for Wheatstone Bridge Measurement             40
+     17. Circuit for substitution Method of Measurement        47
+     18. Showing Cell ready for Assembly with Four Complete
+           Cells in background                                 49
+
+
+
+
+CHAPTER I
+
+SELENIUM, THE ELEMENT
+
+
+Over a century ago, 1817 to be exact, the Swedish scientist Berzelius
+discovered a new element in the lead chambers used for the manufacture
+of sulphuric acid by roasting iron pyrites. Noting its resemblance
+to Tellurium, the name for which having been derived from the Greek
+for Earth, Tellus, he named the new element Selenium derived from
+the Greek for Moon, Selene. The ending ’um being used to indicate a
+metal according to the practice of naming newly discovered elements.
+Although believed to be a metal for many years, the chemical reaction
+of Selenium resembles that of sulphur to such a degree that it is now
+accepted to be a non-metal in its amorphous and vitreous forms. In its
+third or crystalline state it has many metallic characteristics and in
+this form termed metallic selenium. In the Periodic System it occupies
+the place between Tellurium and Sulphur.
+
+Designated by the symbol Se, selenium has been found in all parts of
+the globe in small quantities, chiefly in combination with copper, lead
+and silver forming selenides, in certain pyrites and occasionally in
+its pure state. It was found in meteoric iron by Warren in 1909.
+
+An idea of its wide distribution may be gained from the following table:
+
+     Mineral              Composition                        Location
+                  Sulphur Selenide in natural sulphur      Lispau Islands
+    Eucarite      Selenide of silver and copper            Chili
+    Crooksite     Selenide of silver, copper and thallium  Norway and
+                                                              Sweden
+    Clauthalite   Selenide of lead                         Germany
+    Lehrbachite   Selenide of lead, copper and mercury     Germany
+    Zorgite       Selenide of lead and copper              Germany
+
+The element is obtained commercially as a by-product from the
+manufacture of sulphuric acid, various methods of extracting it from
+the chamber mud being employed. The usual process is to heat the well
+washed chamber mud with potassium cyanide and nitrate to obtain an
+alkaline selenate. The element is then precipitated with hydrochloric
+acid or sulphur dioxide.
+
+=Selenium= exists in three well defined forms, Amorphous, Vitreous and
+Metallic.
+
+=Amorphous Selenium.= This form is obtained as a finely divided brick
+red precipitate when sulphur dioxide is passed thru selenic acid. It is
+soluble in sulphuric acid and slightly so in carbon disulphide. It has
+a Sp. Gr. of 4.26, with no definite melting point, softening gradually
+and running together between 80° and 100° C. In this state it is an
+insulator.
+
+=Vitreous Selenium.= When the amorphous selenium is heated to 217° C
+and rapidly cooled the vitreous form results. It is now a red vitreous
+mass, slightly less soluble in carbon bisulphide. When a thin film is
+held up to the light it shows blood red in color. Sp. Gr. 4.28, Atomic
+Weight 79.5. This form is practically an insulator having a resistance
+of 6 × 10⁹ ohms per Cu. Cent. at 75° C or about 3.8 × 10¹⁰ as great as
+that of copper. It can be electrified by friction. Vitreous selenium
+has no definite melting point being hard and brittle at 40° C and
+softening gradually as the temperature rises, becoming fluid at 210° C.
+
+=Metallic Selenium.= By cooling melted vitreous selenium to 210° C
+and holding it at that temperature for a short time the metallic
+form results. The element is now a black glossy opaque mass, a fair
+conductor of electricity but improving greatly under the influence of
+light. It melts between 217° and 220° C, Sp. Gr. 4.788, insoluble in
+carbon disulphide but will dissolve in sulphuric acid to form a green
+solution. It is the latter form that is used in the construction of
+selenium cells.
+
+When selenium is vaporized by heat it gives off dark brown fumes having
+an odor similar to rotting cabbage. These fumes are poisonous and care
+should be taken that they are not breathed to excess.
+
+
+
+
+CHAPTER II
+
+CONSIDERATION OF CELL TYPES AND THEIR CHARACTERISTICS
+
+
+=A selenium cell= consists essentially of two electrodes of brass or
+copper bridged by a thin layer of metallic selenium. When connected
+into a circuit with batteries and other apparatus the current flows
+from one electrode to the other thru this selenium bridge. Since the
+resistance of the selenium to an electric current depends upon the
+amount of light falling upon it the flow of current thru the cell will
+be controlled by the brilliancy of the illumination.
+
+=Metallic selenium= being opaque, the light penetrating but ¹/₅₀,₀₀₀th
+of an inch as calculated by Marx, it is necessary that the selenium
+layer be extremely thin in order that the light may affect an
+appreciable proportion of the total conducting area. This condition is
+never reached when the electrodes lie parallel to each other with the
+selenium between them. However by arranging the electrodes so that the
+current flows at right angles to the plane of the selenium surface we
+can cause all the current to flow thru the light affected area. This
+can only be accomplished by making use of a transparent conductor for
+one electrode.
+
+To realize the importance of the above factors a description of the
+various types of cells developed by the many investigators in this
+field will be of great assistance. The different workers made use of
+various arrangements of the electrodes but the cells fall into certain
+classes. These types have been named after the inventor or the one most
+prominent in the work on them.
+
+
+=The Bildwell cell= is possibly the best known type. It is made by
+winding two bare wires of copper, brass, german silver or platinum on
+a sheet of mica or slate. The wires are spaced about ¹/₃₂nd of an inch
+apart. The size of the wire is of little importance, the usual practice
+being to use #28 wire on a form measuring two by one inches. In Fig. 1
+is shown this type of construction using a mica form, the wires being
+fastened by passing them thru holes at the ends of the sheet.
+
+[Illustration: FIG. 1. BILDWELL CELL]
+
+The selenium is applied to the cell by melting it over the wires.
+The cell is laid on a mica covered copper plate supported over a
+bunsen burner. The temperature of the cell is raised to the point
+where a stick of selenium when touched to the cell melts. The entire
+surface of the cell is coated with the selenium in a very thin layer,
+smoothing out the lumps with a sheet of mica or a steel knife. To get
+a satisfactory coating the temperature must be regulated closely, if
+too low the selenium turns grey and the temperature must be increased
+to melt it, if too high the selenium collects in drops due to surface
+tension and is as difficult to spread as mercury. The proper state is a
+semi-fluid condition which it attains at 220° C when it can be easily
+manipulated.
+
+When a satisfactory surface has been obtained the cell is transferred
+to a copper plate to cool while the bunsen burner is turned down to
+give a temperature of 120° C. When cool the cell is replaced on the
+hot copper plate and allowed to heat up again. Shortly the whole
+surface will turn grey in color due to the selenium crystallizing. The
+temperature is now slowly increased till the selenium shows signs of
+melting, this will be indicated by the edges turning black. The bunsen
+burner is immediately withdrawn and the edges allowed to recrystallize.
+The burner is turned down a trifle and replaced under the hot plate.
+The cell is watched carefully for signs of melting and if none appear
+it is left so for three or four hours. If it melts again the burner
+should be further lowered, just sufficient to keep the cell a trifle
+below the melting point of the selenium. The cell is then allowed to
+cool by lowering the burner by small amounts extending over a period of
+an hour. This prolonged heating and slow cooling is known as annealing.
+
+After the above treatment the cell is complete save for mounting.
+The usual method is to mount the cell in a small wooden box fitted
+with a glass window to admit the light, leads being brought from the
+electrodes to two binding posts mounted on the box. This protects the
+cell from moisture and dust.
+
+It will be apparent that with the above method of construction it is
+impractical to get the extremely thin layer of selenium necessary if
+the light is to affect a relatively large proportion of the total
+area. This will be even more clear from an examination of the cross
+sectional view of this type of cell as shown in Fig. 1. Here we have a
+comparatively thick layer of selenium bridging the space between the
+wires. Of this layer only the thin surface film facing the light drops
+in resistance while the interior part is unaffected. This means that
+should the surface layer drop to even ¹/₅₀₀th of its dark resistance
+the total drop of the cell would be much less.
+
+
+=The Ruhmer cell= is similar in construction to the Bildwell, differing
+only in the form of support. A porcelain or glass tube is used to
+support the parallel wires as shown in Fig. 2. When porcelain is used
+the constructor can fasten the wires at the ends by slipping them into
+slots cut with a hack saw. With glass some other means are necessary to
+hold the wire while winding.
+
+[Illustration: FIG. 2. RUHMER CELL]
+
+The selenium is applied to the cell in the same manner as the Bildwell
+and then annealed. The method of mounting the cells as devised by
+Ruhmer is worthy of mention. The cell unit is enclosed in a glass tube
+and then the air exhausted. By attaching the leads to an incandescent
+lamp base a very convenient arrangement results. The cell is well
+protected from all external influences and is therefore more stable and
+reliable. This is perhaps the most important improvement in this type
+of cell.
+
+We have in the Ruhmer cell conditions almost identical to that in the
+Bildwell, namely a large area of conducting selenium that is beyond
+the range of the light and hence not affected thereby. This is offset
+to a certain extent by the large area exposed to the light as these
+cells can be employed with a parabolic reflector to cause the light
+to fall on all sides. This type of cell was employed by Ruhmer in his
+experiments with the Photophone. He succeeded in transmitting speech
+for a distance of four miles using a speaking arc at the transmitting
+station.
+
+
+The cell developed by Bell and Taintor in their experiments is rather
+novel in the arrangement of the electrodes. As shown in Fig. 3 the
+electrodes take the form of brass disks separated by thin mica disks
+supported by two brass rods, the whole being clamped together by nuts
+on the ends of the rods. The disks are one inch in diameter, eighteen
+or twenty being sufficient for a small cell. By drilling the holes
+in the disks of different sizes and assembling them as shown it is
+possible to have alternate disks connected to the same rod. After
+assembling and clamping the cell skeleton is chucked in a lathe and the
+surface turned smooth and polished.
+
+[Illustration: FIG. 3. BELL AND TAINTOR CELL]
+
+The selenium is applied by heating the form and melting it on, by
+rolling the cell back and forth over the hot plate it is possible to
+get an extremely thin film of selenium on the smooth surface offered by
+the cell. The coating is then annealed in the regular manner. This cell
+can well be mounted in a glass tube and the air exhausted.
+
+The advantage gained by this form of construction is the thin film of
+selenium obtainable due to there being no spaces between the electrodes
+into which the selenium can flow. A cross section of this type is given
+in the illustration. It will be seen that although the main defect of
+the cells mentioned previously has been reduced to some extent still it
+has not been removed entirely.
+
+
+=The Mercadier cell= is similar in many respects to the Bell but is
+easier of construction. Two strips of thin copper one half inch wide
+are wound into a spiral being separated from each other by strips of
+mica. One face of the flat spiral is filed flat and then polished. The
+selenium is melted onto the cell and then smoothed off with a strip of
+mica. The cell then being annealed as described previously.
+
+We have here a condition analogous to that in the Bell cell, the
+only advantage being ruggedness and simplicity against a loss in
+active surface area. For experimental purposes this cell is entirely
+satisfactory for if it does not prove sensitive the selenium coating
+can be filed off and another applied.
+
+[Illustration: FIG. 4. MERCADIER CELL]
+
+
+We come now to the consideration of cells wherein the current flows at
+right angles to the surface of the selenium. This implies the use of at
+least one electrode on the surface of the selenium. The Gripenberg cell
+has both electrodes on the surface. As shown in Fig. 5 the electrodes
+are made by depositing a thin film of gold on a glass plate and with a
+sharp tool removing narrow strips of it to form a grid, alternate bars
+of which are connected to the same terminal. The grid arrangement is
+shown in the detail illustration.
+
+[Illustration: CROSS SECTION OF ASSEMBLED CELL]
+
+[Illustration: FIG. 5. GRIPENBERG CELL]
+
+The selenium is not applied to the grid in the molten state. A thin
+plate of metallic selenium is obtained by melting the metal on a
+glass plate and then applying pressure with a cold glass plate. After
+annealing the selenium will be found to adhere closely to the hot plate
+in a thin film. The cell is then assembled by placing the plate with
+the gold grid in a frame having a portion of one side cut out to form
+a window. The plate with the selenium adhering is placed over the grid
+and forced into contact with same by means of a small screw.
+
+A study of the cross section of this cell shows that the current
+inflowing from one electrode to the other must pass the surface of the
+selenium. Since the gold film is semi-transparent the light passes
+thru it to affect the selenium and will have a maximum effect upon the
+resistance of the cell. This object is attained at the expense of loss
+of illumination since the gold film cuts off all but the green rays
+of light. The advantage just mentioned more than outweighs this loss.
+Could a transparent conductor be found this defect would be removed
+entirely.
+
+
+=The Fritts Cell= is little known except by name but is superior to the
+others both in simplicity of construction and correctness of design. In
+this case the selenium is melted directly on a copper plate that serves
+as one electrode. While soft, pressure is applied by a non-adherent
+plate to obtain the thin film necessary. The selenium enters into
+chemical combination with the copper and adheres firmly to it. After
+cooling the selenium film is covered with gold leaf to form the other
+electrode. The cell unit can be mounted between two strips of fibre as
+shown in Fig. 6, a sheet of very thin mica serving as a protection to
+the gold foil surface.
+
+[Illustration]
+
+[Illustration: CROSS SECTION OF ASSEMBLED CELL]
+
+[Illustration: FIG. 6. FRITTS CELL]
+
+We have here the ideal condition. All the current must flow thru the
+light affected area in passing from one electrode to the other. The
+light passes thru the semi-transparent gold foil to effect the change
+in resistance of the selenium film. The only disadvantage lies in
+the diminishing of the light strength by the gold film. Despite this
+however the Fritts cell has proved the most sensitive cell made having
+in one case a ratio of 337 to 1, that is, the resistance in the light
+is but ³/₁₀ths of one per cent of that in the dark.
+
+The six types of cells described cover all the types worthy of special
+mention and will enable one to select a cell for experimental purposes.
+In view of the fact that the Gripenberg and Fritts cells are superior
+in point of design the selection of the cell becomes a question of
+mechanical difficulties to be overcome. The construction of the grid in
+the Gripenberg type is rather difficult unless an engraving machine is
+obtainable whereas the Fritts cell requires very simple apparatus for
+its construction.
+
+A factor often overlooked in considering the design of selenium cells
+is the relation that light and electricity bear to each other. These
+are manifestations of the same force and their interaction can be taken
+advantage of in the Fritts cell due to it being possible to cause the
+current to flow in the same or opposite direction to that of the light
+vibrations. The importance of this will be covered in detail later.
+
+No mention has been made of just how the light affects the selenium to
+reduce its resistance. This is still a moot point, one theory being
+that the light being electromagnetic in nature causes the molecules of
+the selenium to cohere in a manner similar to that of the radio coherer
+used in the early days of radio telegraphy. However the conduction thru
+a selenium cell is similar to that in an electrolyte and differs from
+metallic conduction. Considering this the light may act to ionize the
+selenium in some manner and make possible the more rapid interchange of
+the ions from the opposite terminals. Although a thorough understanding
+of the action taking place may lead to the improvement of selenium
+cells it is not within the scope of the present work to consider the
+various phases of this part of the problem, confining itself as it does
+more to the practical production of the cells.
+
+
+
+
+CHAPTER III
+
+THE CONSTRUCTION OF FRITTS SELENIUM CELL
+
+
+The secret of the successful construction of the Fritts selenium cell
+lies entirely in the method of applying the selenium to the copper
+plate. The selenium is melted on the plate and pressure applied at the
+same time, due to the simultaneous action of heat, chemical affinity
+and pressure, crystallization takes place and makes prolonged annealing
+unnecessary. One side of the selenium layer enters into chemical
+combination with the copper plate forming a selenide while the other
+is uncombined resulting in a film that is polarized or has different
+electrical and physical conditions at front and back.
+
+To construct the cells use is made of what may be termed a hot press.
+This is simply a device for applying pressure to the selenium film
+while in a molten state. At Fig. 7 is given a photograph of the
+apparatus while Fig. 8 shows the various details of the press. The
+dimensions can be changed if desired but the press should be capable of
+exerting a pressure of 50 pounds on the bed.
+
+[Illustration: FIG. 7. HOT PRESS WITH CELL IN PLACE]
+
+[Illustration: FIG. 8. DETAILS OF HOT PLATE PRESS (ELEVATION)]
+
+[Illustration: FIG. 8. DETAILS OF HOT PLATE PRESS (PLAN)]
+
+A base of any convenient size, say, 16 x 8 inches, has fastened to one
+end a tripod or similar elevated support. A slab of slate 4 x 8 inches
+and ⅞th of an inch thick is drilled at the ends to take the bolts
+holding the pivot and guide posts shown.
+
+The posts are made from ³/₁₆th inch strap iron ¾ inch wide. The pivot
+post being made by giving the metal strip a quarter turn with a large
+wrench while holding one end of the strip in a vise. The guide post is
+formed by slotting the end of the bent strip to pass the lever.
+
+The lever is made from ¼ inch iron, ¾ inch wide and 20 inches long.
+One end is drilled to pass the bolt pivoting it to the pivot post. A
+saddle bent from ⅛ inch sheet iron is pivoted to the lever as shown so
+as to be directly over the center of the slate slab. The saddle serves
+to equalize the pressure at point of contact with the cell undergoing
+treatment and gives a direct vertical thrust.
+
+The weight used with the press is made by pouring lead into a round
+form 2¼ inches in diameter and 5 inches high. Any other weight of
+eight pounds can be used. A hook bent from a strip of brass or iron is
+inserted in the lead while in a molten state and serves to hang the
+weight on the lever.
+
+[Illustration: FIG. 9. PLATEN FOR CELL]
+
+[Illustration: FIG. 9. TEMPLATE FOR APPLYING SELENIUM]
+
+A bunsen burner is utilized to heat the slate slab. Some convenient
+means should be employed to control the height of the flame, either a
+valve mounted on the base or a screw clamp on the rubber hose supplying
+the gas.
+
+The cell while undergoing treatment rests on a small iron block, the
+details of which are given in Fig. 9. The block is 1½ inches square
+and ½ inch thick. A hole is drilled at one side to take the bulb of
+a chemical thermometer. This block serves two purposes, it allows of
+accurate determination of the cell temperature and simplifies the
+assembly of the cell for treatment. The thermometer should have a range
+up to 220° C.
+
+This completes the hot press proper. In addition will be required a 2
+or 4 oz. mortar and pestle to powder the selenium, a pair of tweezers,
+a small palette knife and a template for applying the selenium to the
+copper plate. The latter is made from a sheet of mica or thin cardboard
+with rectangular hole cut in the center as shown in Fig. 9. This sheet
+is glued to two small strips of wood or fibre. The template just fits
+over the copper plates and confines the selenium powder to the center
+of the plate.
+
+The supplies required are chemically pure selenium, specify
+electrolytic selenium for electrical purposes when ordering and the
+proper material will be supplied. It comes in the form of small
+black sticks and looks like sealing wax. A book of gold leaf as used
+by decorators is required for the front electrode of the cell. The
+patented form in which the foil is attached to a sheet of thin paper
+is the easiest to handle. The copper plates for the cell are cut from
+⅛ inch copper or brass 1½ inches long and 1 inch wide. These plates
+should be perfectly flat and the edges free from burrs. Some clear mica
+will be required for the front of the cell to protect it from dust and
+moisture.
+
+[Illustration: FIG. 10. FIBRE PIECES FOR ENCLOSING CELL]
+
+The fibre sheets to enclose the finished cell are shown in Fig. 10.
+These are cut to the dimensions shown from ⅛ inch fibre.
+
+The construction of a cell is accomplished in the following manner.
+The copper plate is first thoroughly cleaned with fine sandpaper and
+polished. Coat the plate with a suitable flux and heat in the bunsen
+flame, flowing solder over the plate to tin it. While the solder is
+still molten throw off as much of the solder as possible and quickly
+wipe the cell with a dry rag. This should result in a thin even film of
+solder.
+
+Grind the selenium up into a fine powder in the mortar and place in a
+well stoppered bottle to protect from dust and moisture.
+
+Lay the tinned copper plate on the table, tinned side up and place the
+template over it. With the palette knife place a small quantity of
+the selenium on the plate and smooth it out into an even layer ¹/₃₂
+of an inch thick. Remove the template carefully so as not to disturb
+the selenium and lay the plate on one end of the iron block having the
+thermometer well in it. Cover the selenium with a sheet of mica and lay
+another smooth block ¼ inch thick on top of the mica sheet. The whole
+is conveyed to the hot press and placed in the center of the slate
+slab, the lever being let down into place with the saddle centering
+over the cell.
+
+Place the thermometer in the well, hang the weight on the lever and
+light the bunsen burner, adjusting it so an even blue flame results
+without roaring.
+
+The temperature as indicated by the thermometer will rise slowly due
+to the bulk of the slate to be heated. At 150° C the selenium will
+soften and the lever settle slightly. Continue the heating till the
+temperature reaches 220° C and then remove the bunsen burner.
+
+The cell is allowed to remain in the press until the temperature has
+dropped to 60° C when the lever can be lifted and the cell taken out.
+The mica will come off without trouble leaving a thin even film of
+metallic selenium with a shiny grey surface adhering to the plate.
+
+Now go around the edges of the cell with a knife or small file and
+remove all selenium that may have flowed over the edges of the plate
+and brush the cell to remove all traces of dust and particles of
+selenium and copper. Lay the cell face up on a sheet of glass and flood
+the surface with alcohol with an eye dropper or pippette. Having cut
+a strip of gold foil 1 inch wide lay it on the cell and smooth out
+any creases with the fingers. Now go over the entire surface of the
+cell with the finger tips pressing rather hard on the paper backing
+on the foil. Continue this till the alcohol that seeped through the
+paper has evaporated. Then flood the back of the paper and repeat the
+pressing. When the second application of alcohol has dried the paper
+can be lifted from the cell without difficulty leaving the foil on the
+selenium. Should any of the foil adhere to the paper replace it and
+treat again with alcohol and pressure.
+
+The above applies to the patent foil. If the foil is loose it can be
+cut by placing a sheet between two sheets of paper. A camel hair brush
+is rubbed through the hair to electrify it and the foil picked up by
+touching the brush to it. The foil is laid on the cell wet with alcohol
+and smoothed out with the brush. On drying the foil will adhere to the
+selenium.
+
+When a good foil surface is obtained go carefully around the edge with
+a small knife and remove any foil that extends over the edge of the
+selenium film, otherwise direct contact might be made between the foil
+and copper plate, thus short circuiting the cell.
+
+Now take a strip of paper ⅛ inch wide and coat one side lightly with
+thick shellac. Wrap the paper around one end of the cell as shown in
+Fig. 11. A second sheet of paper is placed over the end of the cell
+and attached in the same manner. The paper prevents the copper plate
+coming in contact with the terminal leading to the gold foil as will be
+evident when the cell is to be assembled in the fibre strips.
+
+[Illustration: FIG. 11. MODE OF ASSEMBLING CELL]
+
+The method of completing the cell assembly is shown in Fig. 11. Take
+the sheet of fibre with the hole cut in it and place a ⁸/₃₂ bolt 1 inch
+long in one of the holes. A sheet of thin clear mica is laid on the
+fibre and short strip of tinfoil slipped over the bolt. A nut is then
+run on to clamp the tinfoil and make good contact. The tinfoil should
+be cut off even with the edge of the opening in the fibre. Another bolt
+is put into the other hole and a longer strip of tinfoil clamped to it
+also by means of a nut.
+
+Turn back the long strip of foil and lay the cell between the bolts
+with the paper wrapped end nearest the post with the short tinfoil
+strip. The paper will prevent contact between the plate and this post
+but make sure that the tinfoil strip makes contact with the gold foil.
+The long strip of foil is laid over the back of the plate and the other
+fibre strip dropped over the bolts. Nuts are then run on to clamp the
+whole together.
+
+The cell is now complete and should be tested as described in the
+following chapter before sealing the edges with sealing wax.
+
+
+
+
+CHAPTER IV
+
+TESTING AND MATURING SELENIUM CELLS
+
+
+=The Fritts Cell=, as mentioned by the inventor, when first made
+has one of two states or conditions. In one the resistance is very
+high, in the other very low, being but a few ohms or a fraction of an
+ohm. In the latter state it is insensitive and possesses no definite
+characteristic until matured. This maturing will come about gradually
+if the cell is used in experimenting but can be greatly hastened by the
+proper treatment. By subjecting them to an alternating or pulsating
+current the resistance can be increased rapidly.
+
+To facilitate the maturing and enable the resistance of the cell to be
+determined at various stages of the treatment the maturing and testing
+set shown in Fig. 12 can be made use of. The apparatus allows of the
+measurement of the cell by the Wheatstone bridge and substitution
+methods both with the cell lighted and dark and permits the application
+of alternating current as desired. It consists of a base on which
+is conveniently mounted a closed lamp box to light the cell when
+necessary and the various switches and binding posts arranged for quick
+manipulation of the circuit.
+
+[Illustration: FIG. 12. TESTING AND MATURING SET]
+
+The details of the device are given in Fig. 13. The base measuring 20
+by 12 inches has mounted at the rear center a wooden box containing a
+75 Watt, type C, Mazda lamp. Where lighting current cannot be obtained
+a 12 volt automobile headlight bulb may be used to illuminate the cell.
+The lamp in either case is connected to the switch mounted just to the
+left of the box.
+
+The front of the lamp housing has a hole measuring 1 by ¾ inches cut in
+it on a level with the lamp filament. Two clips cut from spring brass
+of the shape shown in the detail drawing are mounted on the front of
+the box in such a position that when the posts on the back of the cell
+are slipped into the holes in the ends of the strips the window of the
+cell will be opposite the opening in the lamp housing. Connection is
+made to the cell by means of these clips.
+
+[Illustration: FIG. 13. LAYOUT AND WIRING DIAGRAM OF TESTING AND
+MATURING SET]
+
+At the extreme left of the base a double pole fuse switch is mounted
+to control the alternating current to treat the cell. Instead of fuses
+two tubular incandescent lamps are screwed into the receptacles on the
+switch to limit the A. C. to a value that will not endanger the cell
+by overheating it. Should lighting current not be available use can be
+made of a buzzer and telephone induction coil connected to a dry cell
+as shown in Fig. 14 to furnish current for treating the cell.
+
+[Illustration: FIG. 14. CONNECTIONS FOR BUZZER AND INDUCTION COIL TO
+PRODUCE ALTERNATING CURRENT]
+
+A small two point battery switch and four double spring binding posts
+are also mounted on the base and wired as shown by the dotted lines.
+A fairly sensitive galvonometer is employed to indicate when the
+bridge is balance. A telephone receiver might be used for the purpose,
+opening and closing the circuit to cause clicking in the receiver,
+the bridge being balance when the noise is reduced to a minimum. The
+small center zero ammeters with the shunt removed make excellent
+galvonometers.
+
+Ratio arms and a rheostat box having a maximum resistance of 100,000
+ohms complete the apparatus necessary to make the tests on the cells.
+A laboratory set with this range is rather expensive and since our
+measurements need not be extremely accurate a good resistance box may
+be made from resistance units as used for motor starting and signal
+work. These units consist of an iron tube covered with asbestos on
+which is wrapped the resistance wire, the wire in turn being covered
+with a vitreous insulating material baked in place. These units can
+be purchased quite reasonable from any large electrical supply house
+in any resistance up to 150,000 ohms. For our purpose 15 units will
+be required, five, 200 ohm; five, 2000 ohm and five, 20,000 ohm; all
+tapped at the center, for the rheostat arm. For the ratio arms a
+single 1000 ohm unit tapped at the center is used. The rheostat arm
+units should be mounted in a box and heavy leads run to 12 single
+pole switches mounted on the top of the box. The method of wiring
+the resistances is shown in Fig. 15, the switches being marked so
+the resistance in the circuit can be quickly determined. With this
+arrangement any resistance from 100 to 111,000 ohms can be obtained in
+steps of 100 ohms by opening the proper switches.
+
+[Illustration: FIG. 15. CONNECTIONS FOR INTERIOR OF RHEOSTAT BOX]
+
+The ratio arms are made by bringing leads from the ends and center
+of the 1000 ohm unit. Ratios other than one to one are not advised,
+for the cells are so sensitive to external influences that one system
+of measurement must be adopted and adhered to if the cells are to be
+compared. With the one to one ratio half the current flows thru the
+cells when the bridge is balanced.
+
+The current for testing the cells can be obtained from a dozen three
+cell flashlight batteries. The battery should be connected to a
+multipoint switch so that any number of cells can be switched into the
+current as desired.
+
+To prepare the various instruments for testing the cells with the
+bridge circuit connect as shown in Fig. 16. The diagrammatic wiring
+is shown in the insert in the illustration. The positive or carbon of
+the battery is connected to post A. The source of alternating current
+whether from the lightning mains or an induction coil is connected to
+the double pole switch, current for the lamp in the enclosed box being
+supplied to it thru the single pole switch.
+
+[Illustration: FIG. 16. CIRCUIT FOR WHEATSTONE BRIDGE MEASUREMENT]
+
+To test the cell, open both knife switches and place switch S on
+the left hand point. Place the cell in the clips with the terminal
+connected to the gold leaf in the clip connected to binding post
+A. This makes the gold leaf the anode of the cell. Now close the
+battery switch applying about 6 volts to the bridge. Balance the
+bridge by adding or removing resistance in the rheostat arm until the
+galvonometer gives no deflection. The resistance of the cell in the
+dark is read direct from the markings on the open switches on the
+rheostat box.
+
+Now close the single pole knife switch lighting the cell and again
+balance the bridge. The latter reading will be the light resistance of
+the cell, gold anode.
+
+For convenience in recording the data a sheet of paper should be ruled
+into columns headed, date, voltage applied, resistance dark, resistance
+lighted (gold anode), resistance dark, resistance lighted (copper
+anode) and remarks. The cells should be numbered and the corresponding
+data sheet headed with the same number so that changes in the cell can
+readily be detected and improvements noted. A separate sheet should be
+provided for each cell.
+
+Now increase the voltage to 9 volts and take another set of readings
+with the cell both dark and lighted. The values obtained are recorded
+and the voltage increased further. The cell is tested with gradually
+increasing voltages till the maximum voltage possible without heating
+the cell has been applied. Heating of the cell can usually be noted by
+a faint crackling noise being given but it is advisable to feel the
+surface of the mica occasionally to detect any heating.
+
+It may be found on examining the data obtained that the resistance of
+the cell has varied with different voltages. We can classify the cells
+by calling a cell in which the resistance increases with an increasing
+voltage the A type, those in which the resistance falls off with an
+increase of voltage the B type and those in which changes of voltage
+cause little or no change of resistance the C type.
+
+Now reverse the cell in the clips making the copper plate the anode and
+repeat the above series of tests and record the values in the proper
+columns on the ruled sheet. It will be found in many cases that the
+reversal of the current thru the cell has increased the resistance. A
+cell showing this characteristic is polarized while one in which the
+reversal of the current does not alter the resistance to any great
+extent is non-polarized.
+
+The cell is now to be treated with alternating current for a period of
+five minutes by opening the battery switch, cutting the galvanometer
+out of the circuit and closing the double pole switch. Current will
+flow thru the ratio arms and the cell. Care should be taken that the
+current is not heavy enough to heat the cell excessively. If this
+occurs reduce the current by adding resistance till heating is not
+detected.
+
+The cell is again tested according to the directions already given
+both for its light and dark resistances with the current flowing in
+both directions thru the cell. If the difference between the dark and
+light resistance has increased it is safe to say that the cell will be
+sensitive to light and the treatment should be continued to develop
+this property. The quickest method of doing this is to select from the
+various readings the voltage that gives the greatest difference in the
+dark and light resistance. Use this voltage to make one test after each
+treatment with A. C. till the sensitiveness of the cell to light has
+reached a fair value. When the resistance in the dark is ten times as
+great as in the light the cell is suitable for experimental working and
+treatment can be discontinued.
+
+Should the cell have practically no resistance when first put in the
+testing set it is useless to go thru the entire series of tests till
+the resistance has been raised. Treat the cell with A. C. repeatedly
+till the resistance is brought up to a fair amount, at least 500 ohms,
+then make the tests outlined previously.
+
+Sometimes even prolonged treatment will fail to raise the resistance,
+in this case test the cell for polarization by reversing in the clips.
+If strongly polarized the cell may be a good generator, i.e., will
+give a current under the influence of light. To test this, connect the
+galvonometer to posts A and D of the set, put battery switch on left
+hand point and light the cell by closing the single pole knife switch.
+If the galvonometer gives a deflection it indicates that current is
+being generated in the cell. This cell should be reserved for use as
+a generator, this property being increased by short circuiting the
+terminals and exposing the cell to light periodically until it will
+generate a fair amount of current. The current generated by these cells
+is a true photo-electric current, no chemical action taking place, the
+light rays being converted directly into electricity by some unknown
+action of the cell. The current flows from the copper plate thru the
+external circuit back to the gold foil terminal.
+
+Should the cell after prolonged treatment with A.C., fail to increase
+in resistance or having increased in resistance and remain insensitive
+to light and not prove to be a current generator the cell must be
+classed as useless. It is seldom indeed that this occurs for a cell
+that shows even a slight change in resistance when lighted should be
+treated with A.C. from time to time and used in experiments and will
+eventually increase in sensitiveness sufficiently to be of value. When
+a cell proves intractable, the gold foil may be carefully removed by
+means of a stiff brush and the cell put back in the hot press to be
+reconstructed. Retreating with heat and pressure will often give a very
+sensitive cell.
+
+Even when the cells are being used for experimental work the
+maturing process will be going on. The point of maturity and maximum
+sensitiveness of any cell has been reached when the dark resistance of
+the cell remains constant over a period of time. The maturing seems to
+affect the cell by increasing the dark resistance, the light resistance
+remaining practically the same thruout. From this it will be seen that
+a cell with a very low resistance when first made may under proper
+treatment become extremely sensitive to light.
+
+As previously mentioned the testing set may be used for measuring the
+resistance of the cells by the substitution method. The apparatus is
+connected as shown in Fig. 17 when so used, a diagrammatic circuit
+being given in the insert. When the battery switch is on the left hand
+point the cell is in series with the battery and galvonometer. When
+the switch is moved to the right hand point the rheostat is in series
+with the battery and galvonometer. The method of measuring is to first
+determine the galvonometer deflection with the cell in the circuit and
+then by switching the rheostat into the circuit and adjusting it so
+the galvonometer gives the same deflection enabling the resistance of
+the cell to be read directly. The same series of tests should be gone
+through with this method as with the bridge circuit.
+
+[Illustration: FIG. 17. CIRCUIT FOR SUBSTITUTION METHOD OF MEASUREMENT]
+
+The substitution method has the advantage of indicating roughly
+the sensitiveness of the cell to light. With the cell darkened and
+the current flowing thru it the galvonometer will give a certain
+deflection, on lighting the cell the deflection will increase
+indicating a lowering of the resistance. The determination of cell
+sensitiveness is more rapid and this circuit can be employed when the
+cell has a low resistance at first and it is necessary to increase it
+before tests can be made. With the substitution method of measurement
+it is advisable to use a rather insensitive galvonometer or meter since
+the current at times may reach a value that would damage a delicate
+instrument. A tangent galvonometer with heavy windings will be found
+most suitable.
+
+To determine if a cell is sensitive enough to close a relay the
+substitution circuit may be used with a relay connected in place of the
+galvonometer. If the cell is suitable for the purpose the relay will
+close when the cell is lighted.
+
+[Illustration: FIG. 18. SHOWING CELL READY FOR ASSEMBLY WITH FOUR
+COMPLETED CELLS IN BACKGROUND]
+
+For practical purposes the sensitiveness of a cell to light and its
+current generating properties are the only ones of value but other
+properties of these cells will be mentioned later. These may be
+developed by proper treatment and the results of experiments along
+these lines can hardly be foreseen with any degree of accuracy at the
+present stage of the development of the cells.
+
+When satisfied that a cell is properly made and fairly sensitive it can
+be permanently sealed by pouring melted sealing wax around the edges
+and smoothing with a hot knife. A small sheet of paper should be pasted
+on the back of the cell with the more important characteristics marked
+thereon as well as the most suitable voltage. The terminal connected to
+the gold foil can be indicated by a positive (+) sign for convenience
+in properly connecting the cell into the circuit.
+
+
+
+
+CHAPTER V
+
+APPLICATIONS OF SELENIUM CELLS
+
+
+To go into a detailed description of the many applications of selenium
+cells is not possible in a work of the size of this. However a
+discussion of the manifold applications will point out in a marked
+manner the wonderful possibilities of a perfected selenium cell.
+
+The use of selenium cells for photometric purposes was suggested by
+Clark on the occasion of the first announcement of the light sensitive
+properties of selenium. It was hoped that the selenium cell would
+remove the color stumbling block in measuring the brilliancy of light
+but to date a successful photometer using selenium has not been
+produced. The proposed method was to connect a selenium cell in series
+with a galvonometer properly calibrated and to allow the light to be
+measured to fall on the selenium cell, its brilliancy in candle-power
+or foot candles to be read direct from the scale on the galvonometer.
+
+A cell of the Fritts type with a gold electrode would not be suitable
+for the purpose on account of it only passing the green rays but Fritts
+suggested that a number of cells be used, one with a silver foil
+electrode to pass blue rays and so on to include all the colors of the
+spectrum. Naturally the use of a perfectly transparent conductor on
+the surface of the cell would make it possible to use one cell for the
+entire range of color and with proper precautions a conducting liquid
+might solve the problem. This is worthy of attention and experiment.
+
+The application of selenium cells to the transmission of speech
+over a beam of light has received mention from time to time in the
+technical press principally in connection with the experiments of Bell
+and Taintor or Ruhmer. Ruhmer has succeeded in talking a distance of
+4½ miles using a speaking arc at the transmitting station. The arc
+was mounted in the focus of a parabolic mirror, the microphone being
+connected inductively to the arc circuit by means of an induction
+coil. The beam of light was picked up by a second parabolic mirror
+and focused on a selenium cell connected to a battery and telephone
+receiver. The voice waves impinging on the microphone will act to
+vary the intensity of the light beam sent out by the arc and in this
+manner affect the selenium cell at the receiving station which alters
+the strength of the current thru the receivers and thus reproduces the
+words.
+
+For experimental purposes a small incandescent lamp may be used at the
+transmitting station connected in series with a telephone transmitter
+and battery. The receiving end comprises a selenium cell with proper
+battery and sensitive telephone receiver. With a little care in
+adjustment the simple arrangement will transmit the voice across a
+darkened room without difficulty.
+
+Another application of selenium made by Ruhmer is the automatic control
+of light buoys. When such buoys are placed in out of the way places
+it has been necessary to leave the light burning day and night. To
+prevent the frequent recharging of the gas reservoir this method
+required, a selenium cell was arranged to turn the gas on and ignite
+it at nightfall and to extinguish it again in the morning. The cell
+is connected to a voltmeter the needle of which moves between two
+contacts. During the day the needle rests against one contact and the
+gas is turned off by an electromagnet. At nightfall as the resistance
+of the cell increases the needle falls back till it touches the other
+contact and operates an electrical mechanism for turning on the gas and
+igniting it.
+
+Similar applications only await the perfection of a reliable selenium
+cell in quantities. They could be used to automatically control street
+lights and lights on advertising signs located along railroads and
+similar routes of travel.
+
+On the other hand they could be employed in connection with a suitable
+recording instrument to register the intensity of the sunlight and thus
+serve as a valuable adjunct to the weather bureau.
+
+They have been used to a limited extent by Prof. Barnard of Lick
+Observatory in connection with astronomical work and by Minchin in an
+automatic detector of comets.
+
+The oft heralded successful transmission of photographs over a wire
+has yet to become an accomplished fact. Photos have been transmitted
+by Korn with a fair degree of success using selenium cells but such
+work awaits the perfect cell. Many other investigators have attempted
+to solve the problem and have proposed various methods, employing
+images thrown on ground glass screen or thru a photographic negative,
+a selenium cell or a bank of cells to be affected by the high and low
+lights of the picture. At the receiving end the current is used to
+control a light source by one of the many possible methods to reproduce
+the picture on sensitized paper. These inventions have been variously
+termed the Telescope, Telectroscope, Telephot, Telephotograph, etc.
+However with the exception of a very few they have not progressed
+beyond descriptive matter, drawings and the most preliminary
+experiments. One interested in the subject would do well to obtain
+copies of the various patents issued on the art thru a patent lawyer
+who will do this for a nominal sum.
+
+A scheme has been proposed to utilize the cells in connection with
+motion pictures to produce the so called talking pictures. This seems
+entirely feasible provided some form of telephonic relay is used to
+amplify the reproduced voice currents. The method suggested is to print
+the spoken words on the motion picture film alongside the pictures
+in parallel lines of black and white. To do this a beam of light is
+focused on the film while the picture is being taken, the light being
+controlled electrically by microphones concealed near the actors.
+The words spoken acting to vary the intensity of the light, which
+variations will be printed on the film.
+
+In reproducing the picture a light is arranged to pass thru the voice
+strip and fall on a selenium cell. In this manner the various shades
+of black and white imprinted on the film will cause variations in the
+resistance of the cell and loud talking telephones connected to the
+cell thru a telephonic relay will reproduce the words. This method has
+the decided advantage of absolute synchronism lacking in all mechanical
+devices ever developed for the purpose.
+
+In an attempt to enable the blind to read printed matter by sound Prof.
+F. C. Brown has devised what is termed a Phonoptican. In his device
+three or four tiny selenium cells are mounted in a row. The length of
+the row is equal to the height of the printed letters. Each cell is
+connected to a telephone receiver thru a separate interrupter. For
+convenience the telephone receiver used contains as many separate coils
+and diaphragms as there are cells used. It will be clear that when
+light falls on one of the cells a certain note will be heard in the
+receiver and after a little practice the cell affected can be instantly
+determined.
+
+The cells are mounted in a tiny box and moved over a brilliantly
+illuminated printed page. The cells will be illuminated and darkened
+by reflection from the printed letter and in a certain order for each
+individual letter. Since each cell gives a different sound in the
+telephone receiver each letter will have a different series of sounds.
+A sound alphabet is thus made that after a little practice will enable
+a blind person to read printed text.
+
+Hammond of Radio control fame has employed selenium cells for the
+purpose of controlling boats at a distance. His method consists in
+having a number of selenium cells, each being sensitive to a certain
+colored beam of light and responding to that color only. These cells
+are connected to separate relays that control the various functions
+required of the boat or torpedo. Thus by throwing a beam of light of
+a certain color on the cells any desired relay can be closed and the
+mechanism controlled at a distance.
+
+The so called Electric Dog constructed by B. F. Meissner, that follows
+a light carried by a person employs two selenium cells located behind
+condensing lenses with an opaque plate between them. The cells are
+mounted in a box fitted with wheels, driven by a motor and steered
+by an electromagnetic arrangement. The cells are connected to relays
+so that when light falls on either cell the motor will start and the
+device will turn towards the lighted side. This results in the box
+turning till the other cell receives an equal amount of light which
+closes the other relay and straightens out the steering mechanism to
+head the machine straight for the light. In this manner the “Dog”
+will follow a flashlight with unerring precision, keeping a straight
+course when both lenses are equally illuminated but when one receives
+more light than the other it will turn towards the lighted side. This
+illustrates one of the amusing applications to which selenium cells may
+be adopted.
+
+In cable telegraphy use is made of a siphon recorder or reflecting
+galvonometer. The latter causes a beam of light to swing to one side or
+the other according to whether a dot or dash is indicated. By mounting
+a selenium cell either side of the center of the swing and providing
+stops it has been possible to actuate relays and print the dots and
+dashes.
+
+The selenium cell is particularly adapted to burglar alarm work. By
+arranging a cell in places to be protected and connecting it to a
+battery and relay an alarm can be turned in should an intruder flash
+a light on the cell. This method has the advantage of not warning the
+intruder that an alarm has been given which is an assurance of his
+capture.
+
+The above covers in a brief form the more important applications of
+selenium cells in general, being possible with most types of cells that
+are sufficiently sensitive. However the Fritts cell possesses several
+interesting features aside from its resistance being altered by light.
+
+As previously mentioned some cells are capable of generating a current.
+To what extent this property can be developed is a matter of conjecture
+only. It cannot be denied that they would form an ideal source of
+current of small values. Compact, sealed, practically unbreakable and
+perfectly portable are but a few good features of such a battery. The
+cells are comparatively cheap to construct and once made require no
+further attention beyond reasonable care. If a number of cells were
+well developed they might prove valuable in utilizing Solar energy.
+For this purpose an arrangement would be necessary to protect them
+from heat, for instance an alum cell. It should be borne in mind that
+this is a direct transformation of light energy into electrical energy
+without chemical action of any kind, this is the forerunner of the
+inevitable Solar Generator.
+
+Another strange property of the cells is their ability to produce
+sounds when a pulsating current is passed thru them. Under certain
+conditions a telephonic current may cause them to reproduce speech when
+connected to a microphone and battery. Weak sounds are also produced
+when an interrupted beam of light is allowed to fall on a short
+circuited cell.
+
+It was also mentioned by Fritts that his cells change in sensitiveness
+with the kind of battery employed with them. They were found rather
+insensitive with bichromate of potash cells, sensitive with Leclanche
+cells and extremely sensitive when another current generating cell
+was employed as a source of current. This fact opens a wide field
+for experiment. Perhaps a certain type of battery will result in
+making the selenium cells extremely sensitive and staple. Conjecture
+on the subject is without bounds. Just what causes a cell to change
+in sensitiveness with different current sources? Is there some
+unrecognized force in one current that is not found in the other? The
+solving of these problems may not be work of the easiest or the soonest
+done but the accomplishment is worth the labor.
+
+
+
+
+CHAPTER VI
+
+THE CARE OF SELENIUM CELLS
+
+
+A selenium cell will give much better service and have a longer life
+if a little care is taken with it. These suggestions if followed will
+prevent to a great extent irreparable damage to the cells.
+
+Keep them cool. Do not allow them to become heated to any extent or the
+gold foil will combine with the selenium to form a gold selenide and
+destroy the sensitiveness of the cell. This condition will be indicated
+by dark brown splotches on the face of the cell.
+
+Use as small current values as possible to accomplish a desired result.
+This demands the use of high resistance relays. Resistances may be
+employed in the circuit to limit the current but a high resistant relay
+is the proper solution.
+
+Use the proper voltage as determined by the testing set.
+
+Do not expose light sensitive cells to bright light for excessively
+long periods of time. It fatigues the cell and causes it to become
+insensitive temporarily.
+
+When using generator cells do not pass a current from an outside source
+thru them while lighted. This destroys temporarily the generating
+powers of the cell.
+
+Keep the cells dry. If not of the sealed type keep them in a box having
+a few lumps of calcium chloride in the bottom to absorb moisture.
+
+When not in use they should be kept in a light tight box but should be
+exposed to light each day or so regardless of whether they are used or
+not. This aids maturing and retains the sensitiveness of the cells.
+
+Should their resistance drop to any great extent after continued use
+it can again be raised by treating with an alternating or pulsating
+current as described under treating and testing cells.
+
+THE END
+
+
+
+
+
+End of the Project Gutenberg EBook of Selenium Cells, by Thomas W. Benson
+
+*** END OF THE PROJECT GUTENBERG EBOOK 61574 ***

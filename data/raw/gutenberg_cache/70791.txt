@@ -1,0 +1,899 @@
+﻿The Project Gutenberg eBook of The highest aim of the physicist, by
+Henry A. Rowland
+
+This eBook is for the use of anyone anywhere in the United States and
+most other parts of the world at no cost and with almost no restrictions
+whatsoever. You may copy it, give it away or re-use it under the terms
+of the Project Gutenberg License included with this eBook or online at
+www.gutenberg.org. If you are not located in the United States, you
+will have to check the laws of the country where you are located before
+using this eBook.
+
+Title: The highest aim of the physicist
+
+Author: Henry A. Rowland
+
+Release Date: May 18, 2023 [eBook #70791]
+
+Language: English
+
+Produced by: Laura Natal Rodrigues (Images generously made available by
+             JSTOR Digital Library.)
+
+*** START OF THE PROJECT GUTENBERG EBOOK THE HIGHEST AIM OF THE
+PHYSICIST ***
+
+
+THE HIGHEST AIM OF THE PHYSICIST[1]
+
+
+
+
+PROFESSOR HENRY A. ROWLAND
+
+
+
+
+SCIENCE
+
+
+EDITORIAL COMMITTEE: S. NEWCOMB, Mathematics; R. S. WOODWARD, Mechanics;
+E. C. PICKERING, Astronomy; T. C. MENDENHALL, Physics; R. H. THURSTON,
+Engineering; IRA REMSEN, Chemistry; J. LE CONTE, Geology; W. M. DAVIS,
+Physiography; HENRY F. OSBORN, Paleontology; W. K. BROOKS, C. HART MERRIAM,
+Zoology; S. H. SCUDDER, Entomology; C. E. BESSEY, N. L. BRITTON, Botany;
+C. S. MINOT, Embryology, Histology; H. P. BOWDITCH, Physiology; J. S.
+BILLINGS, Hygiene; J. MCKEEN CATTELL, Psychology; J. W. POWELL,
+Anthropology.
+
+
+AMERICAN ASSOCIATION FOR THE ADVANCEMENT OF SCIENCE
+
+FRIDAY, DECEMBER 8, 1899
+
+
+
+
+
+GENTLEMEN AND FELLOW PHYSICISTS OF AMERICA: We meet to day on an
+occasion which marks an epoch in the history of physics in America; may
+the future show that it also marks an epoch in the history of the
+science which this Society is organized to cultivate! For we meet here
+in the interest of a science which above all sciences deals with the
+foundation of the Universe, with the constitution of matter from which
+everything in the Universe is made and with the ether of space by which
+alone the various portions of matter forming the Universe affect each
+other even at such distances as we may never expect to traverse,
+whatever the progress of our science in the future.
+
+We, who have devoted our lives to the solution of problems connected
+with physics, now meet together to help each other and to forward the
+interests of the subject which we love. A subject which appeals most
+strongly to the better instincts of our nature and the problems of which
+tax our minds to the limit of their capacity and suggest the grandest
+and noblest ideas of which they are capable.
+
+In a country where the doctrine of the equal rights of man has been
+distorted to mean the equality of man in other respects, we form a small
+and unique body of men, a new variety of the human race as one of our
+greatest scientists calls it, whose views of what constitutes the
+greatest achievement in life are very different from those around us. In
+this respect we form an aristocracy, not of wealth, not of pedigree, but
+of intellect and of ideals, holding him in the highest respect who adds
+the most to our knowledge or who strives after it as the highest good.
+
+Thus we meet together for mutual sympathy and the interchange of
+knowledge, and may we do so ever with appreciation of the benefits to
+ourselves and possibly to our science. Above all, let us cultivate the
+idea of the dignity of our pursuit so that this feeling may sustain us
+in the midst of a world which gives its highest praise, not to the
+investigation in the pure etherial physics which our Society is formed
+to cultivate, but to one who uses it for satisfying the physical rather
+than the intellectual needs of mankind. He who makes two blades of grass
+grow where one grew before is the benefactor of mankind; but he who
+obscurely worked to find the laws of such growth is the intellectual
+superior as well as the greater benefactor of the two.
+
+How stands our country, then, in this respect? My answer must still be,
+now, as it was fifteen years ago, that much of the intellect of the
+country is still wasted in the pursuit of so-called practical science
+which ministers to our physical needs and but little thought and money
+is given to the grander portion of the subject which appeals to our
+intellect alone. But your presence here gives evidence that such a
+condition is not to last forever.
+
+Even in the past we have a few names whom scientists throughout the
+world delight to honor. Franklin, who almost revolutionized the science
+of electricity by a few simple but profound experiments. Count Rumford,
+whose experiments almost demonstrated the nature of heat. Henry, who
+might have done much for the progress of physics had he published more
+fully the results of his investigations. Mayer, whose simple and
+ingenious experiments have been a source of pleasure and profit to many.
+This is the meager list of those whom death allows me to speak of and
+who have earned mention here by doing something for the progress of our
+science. And yet the record has been searched for more than a hundred
+years. How different had I started to record those who have made useful
+and beneficial inventions!
+
+But I know, when I look in the faces of those before me, where the eager
+intellect and high purpose sit enthroned on bodies possessing the vigor
+and strength of youth, that the writer of a hundred years hence can no
+longer throw such a reproach upon our country. Nor can we blame those
+who have gone before us. The progress of every science shows us the
+condition of its growth. Very few persons, if isolated in a
+semi-civilized land, have either the desire or the opportunity of
+pursuing the higher branches of science. Even if they should be able to
+do so, their influence on their science depends upon what they publish
+and make known to the world. A hermit philosopher we can imagine might
+make many useful discoveries. Yet, if he keeps them to himself, he can
+never claim to have benefited the world in any degree. His unpublished
+results are his private gain, but the world is no better off until he
+has made them known in language strong enough to call attention to them
+and to convince the world of their truth. Thus, to encourage the growth
+of any science, the best thing we can do is to meet together in its
+interest, to discuss its problems, to criticize each other's work and,
+best of all, to provide means by which the better portion of it may be
+made known to the world. Furthermore, let us encourage discrimination in
+our thoughts and work. Let us recognize the eras when great thoughts
+have been introduced into our subject and let us honor the great men who
+introduced and proved them correct. Let us forever reject such foolish
+ideas as the equality of mankind and carefully give the greater credit
+to the greater man. So, in choosing the subjects for our investigation,
+let us, if possible, work upon those subjects which will finally give us
+an advanced knowledge of some great subject. I am aware that we cannot
+always do this; our ideas will often flow in side channels; but, with
+the great problems of the Universe before us, we may sometime be able to
+do our share toward the greater end.
+
+What is matter; what is gravitation; what is ether and the radiation
+through it; what is electricity and magnetism; how are these connected
+together and what is their relation to heat? These are the greater
+problems of the universe. But many infinitely smaller problems we must
+attack and solve before we can even guess at the solution of the greater
+ones.
+
+In our attitude toward these greater problems how do we stand and what
+is the foundation of our knowledge?
+
+Newton and the great array of astronomers who have succeeded him have
+proved that, within planetary distances, matter attracts all others with
+a force varying inversely as the square of the distance. But what sort
+of proof have we of this law? It is derived from astronomical
+observations on the planetary orbits. It agrees very well within these
+immense spaces; but where is the evidence that the law holds for smaller
+distances? We measure the lunar distance and the size of the earth and
+compare the force at that distance with the force of gravitation on the
+earth's surface. But to do this we must compare the matter in the earth
+with that in the sun. This we can only do by _assuming_ the law to be
+proved. Again, in descending from the earth's gravitation to that of two
+small bodies, as in the Cavendish experiment, we _assume_ the law to
+hold and deduce the mass of the earth in terms of our unit of mass.
+Hence, when we say that the mass of the earth is 5½ times that of an
+equal volume of water we _assume_ the law of gravitation to be that of
+Newton. Thus a proof of the law from planetary down to terrestrial
+distances is physically impossible.
+
+Again, that portion of the law which says that gravitational attraction
+is proportional to the quantity of matter, which is the same as saying
+that the attraction of one body by another is not affected by the
+presence of a third, the feeble proof that we give by weighing bodies in
+a balance in different positions with respect to each other cannot be
+accepted on a larger scale. When we can tear the sun into two portions
+and prove that either of the two halves attracts half as much as the
+whole, then we shall have a proof worth mentioning.
+
+Then as to the relation of gravitation and time what can we say? Can we
+for a moment suppose that two bodies moving through space with great
+velocities have their gravitation unaltered? I think not. Neither can we
+accept Laplace's proof that the force of gravitation acts
+instantaneously through space, for we can readily imagine some
+compensating features unthought of by Laplace.
+
+How little we know then of this law which has been under observation for
+two hundred years!
+
+Then as to matter itself how have our views changed and how are they
+constantly changing. The round hard atom of Newton which God alone could
+break into pieces has become a molecule composed of many atoms, and each
+of these smaller atoms has become so elastic that after vibrating
+100,000 times its amplitude of vibration is scarcely diminished. It has
+become so complicated that it can vibrate with as many thousand notes.
+We cover the atom with patches of electricity here and there and make of
+it a system compared with which the planetary system, nay the universe
+itself, is simplicity. Nay more: some of us even claim the power, which
+Newton attributed to God alone, of breaking the atom into smaller pieces
+whose size is left to the imagination. Where, then, is that person who
+ignorantly sneers at the study of matter as a material and gross study?
+Where, again, is that man with gifts so God-like and mind so elevated
+that he can attack and solve its problem?
+
+To all matter we attribute two properties, gravitation and inertia.
+Without these two matter cannot exist. The greatest of the natural laws
+states that the power of gravitational attraction is proportional to the
+mass of the body. This law of Newton, almost neglected in the thoughts
+of physicists, undoubtedly has vast import of the very deepest meaning.
+Shall it mean that all matter is finally constructed of uniform and
+similar primordial atoms or can we find some other explanation?
+
+That the molecules of matter are not round, we know from the facts of
+crystallography and the action of matter in rotating the plane of
+polarization of light.
+
+That portions of the molecules and even of the atoms are electrically
+charged, we know from electrolysis, the action of gases in a vacuum tube
+and from the Zeeman effect.
+
+That some of them act like little magnets, we know from the magnetic
+action of iron, nickel and cobalt.
+
+That they are elastic, the spectrum shows, and that the vibrating
+portion carries the electrified charge with it is shown by the Zeeman
+effect.
+
+Here, then, we have made quite a start in our problem: but how far are
+we from the complete solution? How can we imagine the material of which
+ordinary or primordial atoms are made, dealing as we do only with
+aggregation of atoms alone? Forever beyond our sight, vibrating an
+almost infinite number of times in a second, moving hither and yon with
+restless energy at all temperatures beyond the absolute zero of
+temperature, it is certainly a wonderful feat of human reason and
+imagination that we know as much as we do at present. Encouraged by
+these results, let us not linger too long in their contemplation but
+press forward to the new discoveries which await us in the future.
+
+Then as to electricity, the subtile spirit of the amber, the demon who
+reached out his gluttonous arms to draw in the light bodies within his
+reach, the fluid which could run through metals with the greatest ease
+but could be stopped by a frail piece of glass! Where is it now?
+Vanished, thrown on the waste heap of our discarded theories to be
+replaced by a far nobler and exalted one of action in the ether of
+space.
+
+And so we are brought to consider that other great entity--the ether:
+filling all space without limit, we imagine the ether to be the only
+means by which two portions of matter distant from each other can have
+any mutual action. By its means we imagine every atom in the universe to
+be bound to every other atom by the force of gravitation and often by
+the force of magnetic and electric action, and we conceive that it alone
+conveys the vibratory motion of each atom or molecule out into space to
+be ever lost in endless radiation, passing out into infinite space or
+absorbed by some other atoms which happen to be in its path. By it all
+electromagnetic energy is conveyed from the feeble attraction of the
+rubbed amber through the many thousand horse-power conveyed by the
+electric wires from Niagara to the mighty rush of energy always flowing
+from the Sun in a flood of radiation. Actions feeble and actions mighty
+from intermolecular distances through interplanetary and interstellar
+distances until we reach the mighty distances which bound the
+Universe--all have their being in this wondrous ether.
+
+And yet, however wonderful it may be, its laws are far more simple than
+those of matter. Every wave in it, whatever its length or intensity,
+proceeds onwards in it according to well known laws, all with the same
+speed, unaltered in direction from its source in electrified matter, to
+the confines of the Universe unimpaired in energy unless it is disturbed
+by the presence of matter. However the waves may cross each other, each
+proceeds by itself without interference with the others.
+
+So with regard to gravitation, we have no evidence that the presence of
+a third body affects the mutual attraction of two other bodies, or that
+the presence of a third quantity of electricity affects the mutual
+attraction of two other quantities. The same for magnetism.
+
+For this reason the laws of gravitation and of electric and magnetic
+action including radiation are the simplest of all laws when we confine
+them to a so-called vacuum, but become more and more complicated when we
+treat of them in space containing matter.
+
+Subject the ether to immense electrostatic, magnetic or gravitational
+forces and we find absolutely no signs of its breaking down or even of
+change of properties. Set it into vibration by means of an intensely hot
+body like the sun and it conveys many thousand horse-power for each
+square foot of surface as quietly and with apparently unchanged laws as
+if it were conveying the energy of a tallow dip.
+
+Again, subject a millimeter of ether to the stress of many thousand, nay
+even a million, volts and yet we see no signs of breaking down.
+
+Hence the properties of the ether are of ideal simplicity and lead to
+the simplest of natural laws. All forces which act at a distance, always
+obey the law of the inverse square of the distance, and we have also the
+attraction of any number of parts placed near each other equal to the
+arithmetical sum of the attractions when those parts are separated. So
+also the simpler law of etherial waves which has been mentioned above.
+
+At the present time, through the labors of Maxwell supplemented by those
+of Hertz and others, we have arrived at the great generalization that
+all wave disturbances in the ether are electromagnetic in their nature.
+We know of little or no etherial disturbance which can be set up by the
+motion of matter alone: the matter must be electrified in order to have
+sufficient hold on the ether to communicate its motion to the ether. The
+Zeeman effect even shows this to be the case where molecules are
+concerned and when the period of vibration is immensely great. Indeed
+the experiment on the magnetic action of electric convection shows the
+same thing. By electrifying a disc in motion it appears as if the disc
+holds fast to the ether and drags it with it, thus setting up the
+peculiar etherial motion known as magnetism.
+
+Have we not another case of a similar nature when a huge gravitational
+mass like that of the earth revolves on its axis? Has not matter a
+feeble hold on the ether sufficient to produce the earth's magnetism?
+
+But the experiment of Lodge to detect such an action apparently showed
+that it must be very feeble. Might not his experiment have succeeded had
+he used an electrical revolving disc?
+
+To detect something dependent on the relative motion of the ether and
+matter has been and is the great desire of physicists. But we always
+find that, with one possible exception, there is always some
+compensating feature which renders our efforts useless. This one
+experiment is the aberration of light, but even here Stokes has shown
+that it may be explained in either of two ways: first, that the earth
+moves through the ether of space without disturbing it, and second, if
+it carries the ether with it by a kind of motion called irrotational.
+Even here, however, the amount of action probably depends upon
+_relative_ motion of the luminous source to the recipient telescope.
+
+So the principle of Döppler depends also on this relative motion and is
+independent of the ether.
+
+The result of the experiments of Foucault on the passage of light
+through moving water can no longer be interpreted as due to the partial
+movement of the ether with the moving water, an inference due to
+imperfect theory alone. The experiment of Lodge, who attempted to set
+the ether in motion by a rapidly rotating disc, showed no such result.
+
+The experiment of Michelson to detect the etherial wind, although
+carried to the extreme of accuracy, also failed to detect any relative
+motion of the matter and the ether.
+
+But matter with an electrical charge holds fast to the ether and moves
+it in the manner required for magnetic action.
+
+When electrified bodies move together through space or with reference to
+each other we can only follow their mutual actions through very slow and
+uniform velocities. When they move with velocities comparable with that
+of light, equal to it or even beyond it, we calculate their mutual
+actions or action on the ether only by the light of our imagination
+unguided by experiment. The conclusions of J. J. Thomson, Heaviside and
+Hertz are all results of the imagination and they all rest upon
+assumptions more or less reasonable but always assumptions. A
+mathematical investigation always obeys the law of the conservation of
+knowledge: we never get out more from it than we put in. The knowledge
+may be changed in form, it may be clearer and more exactly stated, but
+the total amount of the knowledge of nature given out by the
+investigation is the same as we started with. Hence we can never predict
+the result in the case of velocities beyond our reach, and such
+calculations as the velocity of the cathode rays from their
+electromagnetic action has a great element of uncertainty which we
+should do well to remember.
+
+Indeed, when it comes to exact knowledge, the limits are far more
+circumscribed.
+
+How is it, then, that we hear physicists and others constantly stating
+what will happen beyond these limits? Take velocities, for instance,
+such as that of a material body moving with the velocity of light. There
+is no known process by which such a velocity can be obtained even though
+the body fell from an infinite distance upon the largest aggregation of
+matter in the Universe. If we electrify it, as in the cathode rays, its
+properties are so changed that the matter properties are completely
+masked by the electromagnetic.
+
+It is a common error which young physicists are apt to fall into to
+obtain a law, a curve or a mathematical expression for given
+experimental limits and then to apply it to points outside those limits.
+This is sometimes called extrapolation. Such a process, unless carefully
+guarded, ceases to be a reasoning process and becomes one of pure
+imagination specially liable to error when the distance is too great.
+
+But it is not my purpose to enter into detail. What I have given
+suffices to show how little we know of the profounder questions involved
+in our subject.
+
+It is a curious fact that, having minds tending to the infinite, with
+imaginations unlimited by time and space, the limits of our exact
+knowledge are very small indeed. In time we are limited by a few hundred
+or possibly thousand years: indeed the limit in our science is far less
+than the smaller of these periods. In space we have exact knowledge
+limited to portions of our earth's surface and a mile or so below the
+surface, together with what little we can learn from looking through
+powerful telescopes into the space beyond. In temperature our knowledge
+extends from near the absolute zero to that of the sun but exact
+knowledge is far more limited. In pressures we go from the Crookes
+vacuum still containing myriads of flying atoms to pressures limited by
+the strength of steel but still very minute compared with the pressures
+at the center of the earth and sun, where the hardest steel would flow
+like the most limpid water. In velocities we are limited to a few miles
+per second. In forces to possibly 100 tons to the square inch. In
+mechanical rotations to a few hundred times per second.
+
+All the facts which we have considered, the liability to error in
+whatever direction we go, the infirmity of our minds in their reasoning
+power, the fallibility of witnesses and experimenters, lead the
+scientist to be specially sceptical with reference to any statement made
+to him or any so-called knowledge which may be brought to his attention.
+The facts and theories of our science are so much more certain than
+those of history, of the testimony of ordinary people on which the facts
+of ordinary history or of legal evidence rest, or of the value of
+medicines to which we trust when we are ill, indeed to the whole fabric
+of supposed truth by which an ordinary person guides his belief and the
+actions of his life, that it may seem ominous and strange if what I have
+said of the imperfections of the knowledge of physics is correct. How
+shall we regulate our minds with respect to it: there is only one way
+that I know of and that is to avoid the discontinuity of the ordinary,
+indeed the so-called cultivated legal mind. There is no such thing as
+absolute truth and absolute falsehood. The scientific mind should never
+recognize the perfect truth or the perfect falsehood of any supposed
+theory or observation. It should carefully weigh the chances of truth
+and error and grade each in its proper position along the line joining
+absolute truth and absolute error.
+
+The ordinary crude mind has only two compartments, one for truth and one
+for error; indeed the contents of the two compartments are sadly mixed
+in most cases: the ideal scientific mind, however, has an infinite
+number. Each theory or law is in its proper compartment indicating the
+probability of its truth. As a new fact arrives the scientist changes it
+from one compartment to another so as, if possible, to always keep it in
+its proper relation to truth and error. Thus the fluid nature of
+electricity was once in a compartment near the truth. Faraday's and
+Maxwell's researches have now caused us to move it to a compartment
+nearly up to that of absolute error.
+
+So the law of gravitation within planetary distances is far toward
+absolute truth, but may still need amending before it is advanced
+farther in that direction.
+
+The ideal scientific mind, therefore, must always be held in a state of
+balance which the slightest new evidence may change in one direction or
+another. It is in a constant state of skepticism, knowing full well that
+nothing is certain. It is above all an agnostic with respect to all
+facts and theories of science as well as to all other so-called beliefs
+and theories.
+
+Yet it would be folly to reason from this that we need not guide our
+life according to the approach to knowledge that we possess. Nature is
+inexorable; it punishes the child who unknowingly steps off a precipice
+quite as severely as the grown scientist who steps over, with full
+knowledge of all the laws of falling bodies and the chances of their
+being correct. Both fall to the bottom and in their fall obey the
+gravitational laws of inorganic matter, slightly modified by the
+muscular contortions of the falling object but not in any degree changed
+by the previous belief of the person. Natural laws there probably are,
+rigid and unchanging ones at that. Understand them and they are
+beneficent: we can use them for our purposes and make them the slaves of
+our desires. Misunderstand them and they are monsters who may grind us
+to powder or crush us in the dust. Nothing is asked of us as to our
+belief: they act unswervingly and we must understand them or suffer the
+consequences. Our only course, then, is to act according to the chances
+of our knowing the right laws. If we act correctly, right; if we act
+incorrectly, we suffer. If we are ignorant we die. What greater fool,
+then, than he who states that belief is of no consequence provided it is
+sincere.
+
+An only child, a beloved wife, lies on a bed of illness. The physician
+says that the disease is mortal; a minute plant called a microbe has
+obtained entrance into the body and is growing at the expense of its
+tissues, forming deadly poisons in the blood or destroying some vital
+organ. The physician looks on without being able to do anything. Daily
+he comes and notes the failing strength of his patient and daily the
+patient goes downward until he rests in his grave. But why has the
+physician allowed this? Can we doubt that there is a remedy which shall
+kill the microbe or neutralize its poison? Why, then, has he not used
+it? He is employed to cure but has failed. His bill we cheerfully pay
+because he has done his best and given a chance of cure. The answer is
+ignorance. The remedy is yet unknown. The physician is waiting for
+others to discover it or perhaps is experimenting in a crude and
+unscientific manner to find it. Is not the inference correct, then, that
+the world has been paying the wrong class of men? Would not this
+ignorance have been dispelled had the proper money been used in the past
+to dispel it? Such deaths some people consider an act of God. What
+blasphemy to attribute to God that which is due to our own and our
+ancestors' selfishness in not founding institutions for medical research
+in sufficient number and with sufficient means to discover the truth.
+Such deaths are murder. Thus the present generation suffers for the sins
+of the past and we die because our ancestors dissipated their wealth in
+armies and navies, in the foolish pomp and circumstance of society, and
+neglected to provide us with a knowledge of natural laws. In this sense
+they were the murderers and robbers of future generations of unborn
+millions and have made the world a charnel house and place of mourning
+where peace and happiness might have been. Only their ignorance of what
+they were doing can be their excuse, but this excuse puts them in the
+class of boors and savages who act according to selfish desire and not
+to reason and to the calls of duty. Let the present generation take
+warning that this reproach be not cast on it, for it cannot plead
+ignorance in this respect.
+
+This illustration from the department of medicine I have given because
+it appeals to all. But all the sciences are linked together and must
+advance in concert. The human body is a chemical and physical problem,
+and these sciences must advance before we can conquer disease.
+
+But the true lover of physics needs no such spur to his actions. The
+cure of disease is a very important object and nothing can be nobler
+than a life devoted to its cure.
+
+The aims of the physicist, however, are in part purely intellectual; he
+strives to understand the Universe on account of the intellectual
+pleasure derived from the pursuit, but he is upheld in it by the
+knowledge that the study of nature's secrets is the ordained method by
+which the greatest good and happiness shall finally come to the human
+race.
+
+Where, then, are the greatest laboratories of research in this city, in
+this country, nay, in the world? We see a few miserable structures here
+and there occupied by a few starving professors who are nobly striving
+to do the best with the feeble means at their disposal. But where in the
+world is the institute of pure research in any department of science
+with an income of $100,000,000 par year. Where can the discoverer in
+pure science earn more than the wages of a day laborer or cook? But
+$100,000,000 per year is but the price of an army or a navy designed to
+kill other people. Just think of it, that one per cent, of this sum
+seems to most people too great to save our children and descendants from
+misery and even death!
+
+But the twentieth century is near--may we not hope for better things
+before its end? May we not hope to influence the public in this
+direction?
+
+Let us go forward, then, with confidence in the dignity of our pursuit.
+Let us hold our heads high with a pure conscience while we seek the
+truth, and may the American Physical Society do its share now and in
+generations yet to come in trying to unravel the great problem of the
+constitution and laws of the Universe.
+
+
+
+
+                             HENRY A. ROWLAND.
+
+
+[Footnote 1: Address delivered to the Physical Society of America by the
+President, at its meeting in New York, October 28, 1899.]
+
+*** END OF THE PROJECT GUTENBERG EBOOK THE HIGHEST AIM OF THE
+PHYSICIST ***
+
+Updated editions will replace the previous one--the old editions will
+be renamed.
+
+Creating the works from print editions not protected by U.S. copyright
+law means that no one owns a United States copyright in these works,
+so the Foundation (and you!) can copy and distribute it in the
+United States without permission and without paying copyright
+royalties. Special rules, set forth in the General Terms of Use part
+of this license, apply to copying and distributing Project
+Gutenberg™ electronic works to protect the PROJECT GUTENBERG™
+concept and trademark. Project Gutenberg is a registered trademark,
+and may not be used if you charge for an eBook, except by following
+the terms of the trademark license, including paying royalties for use
+of the Project Gutenberg trademark. If you do not charge anything for
+copies of this eBook, complying with the trademark license is very
+easy. You may use this eBook for nearly any purpose such as creation
+of derivative works, reports, performances and research. Project
+Gutenberg eBooks may be modified and printed and given away--you may
+do practically ANYTHING in the United States with eBooks not protected
+by U.S. copyright law. Redistribution is subject to the trademark
+license, especially commercial redistribution.
+
+START: FULL LICENSE
+
+THE FULL PROJECT GUTENBERG LICENSE
+PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK
+
+To protect the Project Gutenberg™ mission of promoting the free
+distribution of electronic works, by using or distributing this work
+(or any other work associated in any way with the phrase “Project
+Gutenberg”), you agree to comply with all the terms of the Full
+Project Gutenberg™ License available with this file or online at
+www.gutenberg.org/license.
+
+Section 1. General Terms of Use and Redistributing Project
+Gutenberg™ electronic works
+
+1.A. By reading or using any part of this Project Gutenberg™
+electronic work, you indicate that you have read, understand, agree to
+and accept all the terms of this license and intellectual property
+(trademark/copyright) agreement. If you do not agree to abide by all
+the terms of this agreement, you must cease using and return or
+destroy all copies of Project Gutenberg™ electronic works in your
+possession. If you paid a fee for obtaining a copy of or access to a
+Project Gutenberg™ electronic work and you do not agree to be bound
+by the terms of this agreement, you may obtain a refund from the
+person or entity to whom you paid the fee as set forth in paragraph
+1.E.8.
+
+1.B. “Project Gutenberg” is a registered trademark. It may only be
+used on or associated in any way with an electronic work by people who
+agree to be bound by the terms of this agreement. There are a few
+things that you can do with most Project Gutenberg™ electronic works
+even without complying with the full terms of this agreement. See
+paragraph 1.C below. There are a lot of things you can do with Project
+Gutenberg™ electronic works if you follow the terms of this
+agreement and help preserve free future access to Project Gutenberg™
+electronic works. See paragraph 1.E below.
+
+1.C. The Project Gutenberg Literary Archive Foundation (“the
+Foundation” or PGLAF), owns a compilation copyright in the collection
+of Project Gutenberg™ electronic works. Nearly all the individual
+works in the collection are in the public domain in the United
+States. If an individual work is unprotected by copyright law in the
+United States and you are located in the United States, we do not
+claim a right to prevent you from copying, distributing, performing,
+displaying or creating derivative works based on the work as long as
+all references to Project Gutenberg are removed. Of course, we hope
+that you will support the Project Gutenberg™ mission of promoting
+free access to electronic works by freely sharing Project Gutenberg™
+works in compliance with the terms of this agreement for keeping the
+Project Gutenberg™ name associated with the work. You can easily
+comply with the terms of this agreement by keeping this work in the
+same format with its attached full Project Gutenberg™ License when
+you share it without charge with others.
+
+1.D. The copyright laws of the place where you are located also govern
+what you can do with this work. Copyright laws in most countries are
+in a constant state of change. If you are outside the United States,
+check the laws of your country in addition to the terms of this
+agreement before downloading, copying, displaying, performing,
+distributing or creating derivative works based on this work or any
+other Project Gutenberg™ work. The Foundation makes no
+representations concerning the copyright status of any work in any
+country other than the United States.
+
+1.E. Unless you have removed all references to Project Gutenberg:
+
+1.E.1. The following sentence, with active links to, or other
+immediate access to, the full Project Gutenberg™ License must appear
+prominently whenever any copy of a Project Gutenberg™ work (any work
+on which the phrase “Project Gutenberg” appears, or with which the
+phrase “Project Gutenberg” is associated) is accessed, displayed,
+performed, viewed, copied or distributed:
+
+  This eBook is for the use of anyone anywhere in the United States and
+  most other parts of the world at no cost and with almost no
+  restrictions whatsoever. You may copy it, give it away or re-use it
+  under the terms of the Project Gutenberg License included with this
+  eBook or online at www.gutenberg.org. If you are not located in the
+  United States, you will have to check the laws of the country where
+  you are located before using this eBook.
+
+1.E.2. If an individual Project Gutenberg™ electronic work is
+derived from texts not protected by U.S. copyright law (does not
+contain a notice indicating that it is posted with permission of the
+copyright holder), the work can be copied and distributed to anyone in
+the United States without paying any fees or charges. If you are
+redistributing or providing access to a work with the phrase “Project
+Gutenberg” associated with or appearing on the work, you must comply
+either with the requirements of paragraphs 1.E.1 through 1.E.7 or
+obtain permission for the use of the work and the Project Gutenberg™
+trademark as set forth in paragraphs 1.E.8 or 1.E.9.
+
+1.E.3. If an individual Project Gutenberg™ electronic work is posted
+with the permission of the copyright holder, your use and distribution
+must comply with both paragraphs 1.E.1 through 1.E.7 and any
+additional terms imposed by the copyright holder. Additional terms
+will be linked to the Project Gutenberg™ License for all works
+posted with the permission of the copyright holder found at the
+beginning of this work.
+
+1.E.4. Do not unlink or detach or remove the full Project Gutenberg™
+License terms from this work, or any files containing a part of this
+work or any other work associated with Project Gutenberg™.
+
+1.E.5. Do not copy, display, perform, distribute or redistribute this
+electronic work, or any part of this electronic work, without
+prominently displaying the sentence set forth in paragraph 1.E.1 with
+active links or immediate access to the full terms of the Project
+Gutenberg™ License.
+
+1.E.6. You may convert to and distribute this work in any binary,
+compressed, marked up, nonproprietary or proprietary form, including
+any word processing or hypertext form. However, if you provide access
+to or distribute copies of a Project Gutenberg™ work in a format
+other than “Plain Vanilla ASCII” or other format used in the official
+version posted on the official Project Gutenberg™ website
+(www.gutenberg.org), you must, at no additional cost, fee or expense
+to the user, provide a copy, a means of exporting a copy, or a means
+of obtaining a copy upon request, of the work in its original “Plain
+Vanilla ASCII” or other form. Any alternate format must include the
+full Project Gutenberg™ License as specified in paragraph 1.E.1.
+
+1.E.7. Do not charge a fee for access to, viewing, displaying,
+performing, copying or distributing any Project Gutenberg™ works
+unless you comply with paragraph 1.E.8 or 1.E.9.
+
+1.E.8. You may charge a reasonable fee for copies of or providing
+access to or distributing Project Gutenberg™ electronic works
+provided that:
+
+• You pay a royalty fee of 20% of the gross profits you derive from
+  the use of Project Gutenberg™ works calculated using the method
+  you already use to calculate your applicable taxes. The fee is owed
+  to the owner of the Project Gutenberg™ trademark, but he has
+  agreed to donate royalties under this paragraph to the Project
+  Gutenberg Literary Archive Foundation. Royalty payments must be paid
+  within 60 days following each date on which you prepare (or are
+  legally required to prepare) your periodic tax returns. Royalty
+  payments should be clearly marked as such and sent to the Project
+  Gutenberg Literary Archive Foundation at the address specified in
+  Section 4, “Information about donations to the Project Gutenberg
+  Literary Archive Foundation.”
+
+• You provide a full refund of any money paid by a user who notifies
+  you in writing (or by e-mail) within 30 days of receipt that s/he
+  does not agree to the terms of the full Project Gutenberg™
+  License. You must require such a user to return or destroy all
+  copies of the works possessed in a physical medium and discontinue
+  all use of and all access to other copies of Project Gutenberg™
+  works.
+
+• You provide, in accordance with paragraph 1.F.3, a full refund of
+  any money paid for a work or a replacement copy, if a defect in the
+  electronic work is discovered and reported to you within 90 days of
+  receipt of the work.
+
+• You comply with all other terms of this agreement for free
+  distribution of Project Gutenberg™ works.
+
+1.E.9. If you wish to charge a fee or distribute a Project
+Gutenberg™ electronic work or group of works on different terms than
+are set forth in this agreement, you must obtain permission in writing
+from the Project Gutenberg Literary Archive Foundation, the manager of
+the Project Gutenberg™ trademark. Contact the Foundation as set
+forth in Section 3 below.
+
+1.F.
+
+1.F.1. Project Gutenberg volunteers and employees expend considerable
+effort to identify, do copyright research on, transcribe and proofread
+works not protected by U.S. copyright law in creating the Project
+Gutenberg™ collection. Despite these efforts, Project Gutenberg™
+electronic works, and the medium on which they may be stored, may
+contain “Defects,” such as, but not limited to, incomplete, inaccurate
+or corrupt data, transcription errors, a copyright or other
+intellectual property infringement, a defective or damaged disk or
+other medium, a computer virus, or computer codes that damage or
+cannot be read by your equipment.
+
+1.F.2. LIMITED WARRANTY, DISCLAIMER OF DAMAGES - Except for the “Right
+of Replacement or Refund” described in paragraph 1.F.3, the Project
+Gutenberg Literary Archive Foundation, the owner of the Project
+Gutenberg™ trademark, and any other party distributing a Project
+Gutenberg™ electronic work under this agreement, disclaim all
+liability to you for damages, costs and expenses, including legal
+fees. YOU AGREE THAT YOU HAVE NO REMEDIES FOR NEGLIGENCE, STRICT
+LIABILITY, BREACH OF WARRANTY OR BREACH OF CONTRACT EXCEPT THOSE
+PROVIDED IN PARAGRAPH 1.F.3. YOU AGREE THAT THE FOUNDATION, THE
+TRADEMARK OWNER, AND ANY DISTRIBUTOR UNDER THIS AGREEMENT WILL NOT BE
+LIABLE TO YOU FOR ACTUAL, DIRECT, INDIRECT, CONSEQUENTIAL, PUNITIVE OR
+INCIDENTAL DAMAGES EVEN IF YOU GIVE NOTICE OF THE POSSIBILITY OF SUCH
+DAMAGE.
+
+1.F.3. LIMITED RIGHT OF REPLACEMENT OR REFUND - If you discover a
+defect in this electronic work within 90 days of receiving it, you can
+receive a refund of the money (if any) you paid for it by sending a
+written explanation to the person you received the work from. If you
+received the work on a physical medium, you must return the medium
+with your written explanation. The person or entity that provided you
+with the defective work may elect to provide a replacement copy in
+lieu of a refund. If you received the work electronically, the person
+or entity providing it to you may choose to give you a second
+opportunity to receive the work electronically in lieu of a refund. If
+the second copy is also defective, you may demand a refund in writing
+without further opportunities to fix the problem.
+
+1.F.4. Except for the limited right of replacement or refund set forth
+in paragraph 1.F.3, this work is provided to you “AS-IS”, WITH NO
+OTHER WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PURPOSE.
+
+1.F.5. Some states do not allow disclaimers of certain implied
+warranties or the exclusion or limitation of certain types of
+damages. If any disclaimer or limitation set forth in this agreement
+violates the law of the state applicable to this agreement, the
+agreement shall be interpreted to make the maximum disclaimer or
+limitation permitted by the applicable state law. The invalidity or
+unenforceability of any provision of this agreement shall not void the
+remaining provisions.
+
+1.F.6. INDEMNITY - You agree to indemnify and hold the Foundation, the
+trademark owner, any agent or employee of the Foundation, anyone
+providing copies of Project Gutenberg™ electronic works in
+accordance with this agreement, and any volunteers associated with the
+production, promotion and distribution of Project Gutenberg™
+electronic works, harmless from all liability, costs and expenses,
+including legal fees, that arise directly or indirectly from any of
+the following which you do or cause to occur: (a) distribution of this
+or any Project Gutenberg™ work, (b) alteration, modification, or
+additions or deletions to any Project Gutenberg™ work, and (c) any
+Defect you cause.
+
+Section 2. Information about the Mission of Project Gutenberg™
+
+Project Gutenberg™ is synonymous with the free distribution of
+electronic works in formats readable by the widest variety of
+computers including obsolete, old, middle-aged and new computers. It
+exists because of the efforts of hundreds of volunteers and donations
+from people in all walks of life.
+
+Volunteers and financial support to provide volunteers with the
+assistance they need are critical to reaching Project Gutenberg™'s
+goals and ensuring that the Project Gutenberg™ collection will
+remain freely available for generations to come. In 2001, the Project
+Gutenberg Literary Archive Foundation was created to provide a secure
+and permanent future for Project Gutenberg™ and future
+generations. To learn more about the Project Gutenberg Literary
+Archive Foundation and how your efforts and donations can help, see
+Sections 3 and 4 and the Foundation information page at
+www.gutenberg.org
+
+Section 3. Information about the Project Gutenberg Literary
+Archive Foundation
+
+The Project Gutenberg Literary Archive Foundation is a non-profit
+501(c)(3) educational corporation organized under the laws of the
+state of Mississippi and granted tax exempt status by the Internal
+Revenue Service. The Foundation's EIN or federal tax identification
+number is 64-6221541. Contributions to the Project Gutenberg Literary
+Archive Foundation are tax deductible to the full extent permitted by
+U.S. federal laws and your state's laws.
+
+The Foundation's business office is located at 809 North 1500 West,
+Salt Lake City, UT 84116, (801) 596-1887. Email contact links and up
+to date contact information can be found at the Foundation's website
+and official page at www.gutenberg.org/contact
+
+Section 4. Information about Donations to the Project Gutenberg
+Literary Archive Foundation
+
+Project Gutenberg™ depends upon and cannot survive without
+widespread public support and donations to carry out its mission of
+increasing the number of public domain and licensed works that can be
+freely distributed in machine-readable form accessible by the widest
+array of equipment including outdated equipment. Many small donations
+($1 to $5,000) are particularly important to maintaining tax exempt
+status with the IRS.
+
+The Foundation is committed to complying with the laws regulating
+charities and charitable donations in all 50 states of the United
+States. Compliance requirements are not uniform and it takes a
+considerable effort, much paperwork and many fees to meet and keep up
+with these requirements. We do not solicit donations in locations
+where we have not received written confirmation of compliance. To SEND
+DONATIONS or determine the status of compliance for any particular
+state visit www.gutenberg.org/donate
+
+While we cannot and do not solicit contributions from states where we
+have not met the solicitation requirements, we know of no prohibition
+against accepting unsolicited donations from donors in such states who
+approach us with offers to donate.
+
+International donations are gratefully accepted, but we cannot make
+any statements concerning tax treatment of donations received from
+outside the United States. U.S. laws alone swamp our small staff.
+
+Please check the Project Gutenberg web pages for current donation
+methods and addresses. Donations are accepted in a number of other
+ways including checks, online payments and credit card donations. To
+donate, please visit: www.gutenberg.org/donate
+
+Section 5. General Information About Project Gutenberg™ electronic works
+
+Professor Michael S. Hart was the originator of the Project
+Gutenberg™ concept of a library of electronic works that could be
+freely shared with anyone. For forty years, he produced and
+distributed Project Gutenberg™ eBooks with only a loose network of
+volunteer support.
+
+Project Gutenberg™ eBooks are often created from several printed
+editions, all of which are confirmed as not protected by copyright in
+the U.S. unless a copyright notice is included. Thus, we do not
+necessarily keep eBooks in compliance with any particular paper
+edition.
+
+Most people start at our website which has the main PG search
+facility: www.gutenberg.org
+
+This website includes information about Project Gutenberg™,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.

@@ -1,0 +1,990 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 54146 ***
+
+  A FEW SUGGESTIONS TO
+
+  McGRAW-HILL AUTHORS
+
+
+
+
+  A FEW SUGGESTIONS TO
+
+  McGRAW-HILL AUTHORS
+
+
+  DETAILS OF MANUSCRIPT PREPARATION,
+  TYPOGRAPHY, PROOF-READING AND
+  OTHER MATTERS INVOLVED IN
+  THE PRODUCTION OF
+  MANUSCRIPTS AND
+  BOOKS
+
+
+
+
+  MCGRAW-HILL BOOK COMPANY, INC.
+  NEW YORK: 370 SEVENTH AVENUE
+  LONDON: 6 & 8 BOUVERIE ST., E. C. 4
+  1922
+
+
+
+
+  COPYRIGHT, 1922, BY THE
+  MCGRAW-HILL BOOK COMPANY, INC.
+
+
+
+
+INTRODUCTION
+
+
+The McGraw-Hill Book Company was formed on July 1, 1909, by a
+consolidation of the book departments of the McGraw Publishing
+Company and the Hill Publishing Company, then separate publishers of
+engineering journals and books. For over twenty years, prior to
+the formation of the McGraw-Hill Book Company, the several journals
+controlled by Mr. McGraw and Mr. Hill (now published by the
+McGraw-Hill Company, Inc., a separate organization) had been producing
+books in their special fields; but the publication of technical books
+had not been brought to the high standard of technical journals.
+
+From the beginning we adopted the slogan, _Better Books in Text and
+Manufacture_. It was evident to the men who had brought the leading
+technical journals of the country from comparative insignificance
+to positions of influence that there was need of a new technical
+literature--a literature for classroom and reference which should
+adequately supplement their periodicals.
+
+Our first efforts were largely in the field of engineering, but
+presently we set new goals for ourselves. By processes which seemed
+natural to us, we have extended our publishing not only into the
+fields of chemistry, physics, mathematics and English, with a view
+always of supplying better fundamental textbooks for students, but
+also into the fields of agriculture, business administration and
+economics. Similarly our range of publishing has broadened from the
+somewhat restricted field of _applied science_, to include numerous
+works of high standard dealing with _pure science_.
+
+In all these fields the aim has been, not only to produce a better
+grade of text and reference book, but to put behind each book a
+selling organization so competent that the maximum market, both
+in this country and abroad, would be reached. Without this the
+possibility of persuading important men, in all branches of science,
+to produce textbooks seemed futile, for the author's return must
+always be in proportion to the distribution.
+
+The association with the journals of the McGraw-Hill Company, which we
+represent in all matters pertaining to the production of books,
+brings us into close contact with the widest range of engineering and
+industrial activities. The circulations of these journals include the
+leading engineers and executives of the world. The list follows:
+
+  _American Machinist_
+  _Electric Railway Journal_
+  _Electrical World_
+  _Engineering and Mining Journal-Press_
+  _Coal Age_
+  _Engineering News-Record_
+  _Power_
+  _Chemical and Metallurgical Engineering_
+  _Electrical Merchandising_
+  _Industrial Engineer_
+  _Bus Transportation_
+  _Journal of Electricity_
+  _Ingenieria Internacional_
+
+From these journals we draw both editorial guidance and marketing
+power. They are the "natural resources" which simplified the problems
+of our early years and made possible our rapid development and growth,
+until today, by the application of the same editorial standards and
+marketing methods, in broader fields, we are able to offer to the
+author of technical books a highly developed machinery of publication
+and distribution.
+
+
+
+
+TABLE OF CONTENTS
+
+
+                                                                  PAGE
+
+   I. UNIFORMITY AND STANDARDS                                       1
+
+  II. PREPARING THE MANUSCRIPT                                       3
+
+        Typing--Numbering the Pages--Copy for Footnotes--Copy
+        for Illustrations--Subdividing the Text--Some Details
+        of Typography--Bibliographies--Tables of Contents--
+        Indexes--Some Details of Style--Copyright Infringements
+        --Shipping the Manuscript.
+
+ III. ILLUSTRATIONS                                                 10
+
+        Line Drawings--Halftone Illustrations--Wax Cuts--In
+        General--The Number of Illustrations.
+
+  IV. MANUFACTURING THE BOOK                                        14
+
+        Sample Galleys--Galley Proofs--Page Proofs--Answering
+        Queries--Proof-reading--Author's Corrections.
+
+   V. WHEN THE BOOK IS PUBLISHED                                    19
+
+        Marketing a Book--Corrections and Revisions--Translations
+        --Prompt Publication.
+
+
+
+
+A FEW SUGGESTIONS TO McGRAW-HILL AUTHORS
+
+
+
+
+I
+
+UNIFORMITY AND STANDARDS
+
+
+The purpose of these suggestions is fourfold:
+
+    (1) To assist our authors in preparing their manuscripts and
+    in understanding the general process of publication.
+
+    (2) To lighten the burden of the editors, typesetters, and
+    proof-readers in securing uniformity and adherence to high
+    standards.
+
+    (3) To avoid complications and delays and--worst of all--the
+    item of author's corrections.
+
+    (4) To obtain a standard of editorial details as uniformly
+    high as that of the subject-matter of our books.
+
+Let it be understood, first of all, that these are suggestions, not
+rules. Although we endeavor to maintain high standards, we do not
+insist upon uniformity of style or consistency throughout the books
+in our widely diversified list. The editor of a periodical or the
+proceedings of a society properly insists upon uniformity, generally
+issues a style sheet to guide his contributors, and edits all
+manuscript to fixed standards. But since our books cover nearly all
+branches of science, we feel that absolute uniformity would accomplish
+no good purpose.
+
+Throughout a single manuscript, however, in details of punctuation,
+spelling, abbreviation, compounding of words, side- and
+center-headings, notation, bibliographic references, etc., we do ask
+for the adoption of a conservative, well-recognized standard. Even
+uniformity throughout a manuscript seems, curiously enough,
+most difficult to secure, although the lack of it leads to
+misunderstandings, delays and author's corrections, with their
+attendant avoidable expenses.
+
+We have used the phrase "conservative, well-recognized standard"
+advisedly. Departure from such standards, either in spelling,
+punctuation, systems of notation or otherwise, is not advisable, for
+whatever convictions the author and the publisher may have it is quite
+certain that the majority of the readers of any given book will be
+conservative and more often annoyed than otherwise by any radical
+departures from common practice.
+
+Without reference to our own views on simplified spelling, for
+example, we are confident that the radical simplified speller is
+neither surprised nor disturbed to find in a book what he would term
+old-fashioned spelling. The conservative speller, on the other hand,
+is shocked even at _tho_ and _thru_, and the book suffers accordingly.
+Nevertheless, we have no quarrel with _sulfur_ in our manuscripts on
+chemical subjects, or with any other spelling which has been approved
+officially by the leading technical society in the particular field of
+the manuscript.
+
+To secure consistency in details throughout his manuscript it is best
+for an author to adopt as his guides, at the very beginning of
+his work, some standard unabridged dictionary and an authoritative
+writer's manual, and to stick to these alone until his book is on the
+market. By this method he will give his book not only a high standard
+but uniformity in details.
+
+
+
+
+II
+
+PREPARING THE MANUSCRIPT
+
+
+The first requisite of good manuscript is obviously legibility. To
+this end we suggest the following:
+
+=Typing.=--Manuscript should be typewritten in black on one side of
+white paper, uniform in size and preferably 8-1/2×11 inches. A paper
+of reasonable thickness and toughness is desirable. Thin, "manifold"
+paper should not be used for the publisher's copy.
+
+The same spacing should be used as far as practicable on each sheet
+to facilitate estimates as to the number of words in the complete
+manuscript. A margin of at least an inch should be left at top,
+bottom, and left-hand side. Single spacing should be avoided.
+
+A carbon copy should invariably be made and retained by the author,
+both for his reference and to protect him against possible loss of the
+original. The original or ribbon copy should be sent to the publisher.
+
+=Numbering the Pages.=--Sheets should be numbered consecutively in the
+upper right-hand corner from beginning to end and arranged in order
+of their numbers. Interpolated pages may be marked 36a, 36b, and so
+forth, in accordance with the number of the preceding page. If any
+pages are removed from the manuscript for any reason, the preceding
+page should be double numbered, as, for example: 36 & 7 or 36-40.
+
+=Copy for Footnotes.=--Footnotes, if used, should be put into the body
+of the manuscript immediately following the reference and separated
+from the text by parallel lines above and below. The number referring
+to the footnote should be placed in the text and before the footnote.
+Generally speaking, we prefer the use of arabic numerals for
+footnotes,[1] which should be carried out consecutively through each
+chapter, when the footnotes are numerous, with a new series for each
+chapter. In cases where footnotes are relatively few, the numerals
+may be repeated without risk of confusion from page to page as the
+footnotes occur.
+
+    [Footnote 1: This footnote is to show the size of type (8
+    point) which we generally use for footnotes. Incidentally
+    this booklet is set up in 10 point, and in the general
+    typographical style of our reference and textbooks, as
+    distinguished from handbooks. The dimensions of the type page
+    and the trimmed size of the page are those we usually adopt
+    for the standard 6×9-inch book.]
+
+=Copy for Illustrations.=--Drawings and photographs, which are
+discussed more fully later, should not be inserted in the manuscript,
+because illustrations are sent to the engraver at the same time that
+the manuscript is sent to the printer. Small drawings should be pasted
+on separate sheets of paper, one drawing to the sheet, but large
+drawings and photographs should not be treated in this manner. Mounted
+photographs are entirely satisfactory, but unmounted photographs
+should not be pasted on sheets or mounted, except by an expert. All
+illustrations should be referred to by figure numbers in the text and
+numbered correspondingly for identification on the copy. We prefer to
+have illustrations numbered consecutively from the beginning to the
+end of the manuscript.
+
+=Subdividing the Text.=--In modern textbooks and scientific works the
+tendency is toward clearly marked subdivisions of the text. To this
+end center-headings, side-headings, and subheadings are constantly
+used. It is in general advisable that all manuscripts be prepared in
+this way. As far as is possible the divisions should be of reasonable
+length in order that the text may be broken up sharply into its
+subdivisions. In the case of textbooks intended for classroom use, we
+find that teachers generally prefer divisions of approximately equal
+size and not over a page in length. Where the division is longer than
+a page, subdivisions with side-headings in italics may be used.
+
+Bold-face headings may be indicated in the manuscript either by the
+letters =b. f.= or by underlining with a wavy line. Italics may be
+indicated by underlining with a straight line. If bold-face capitals
+are required, mark =b. f. caps=.
+
+In the designation of headings and subheadings particular care should
+be taken to follow a consistent and easily understood plan.
+
+Some of our editors strongly recommend that every chapter should begin
+with an uncaptioned introductory paragraph to avoid the bald-headed
+appearance that results if a chapter begins immediately with a
+bold-face caption.
+
+If a text is designed for one of the numerous series which we publish,
+the author should consult the editor of the series for his preference
+in this and similar matters.
+
+=Some Details of Typography.=--For classroom use the majority
+of teachers seem to prefer to have the side-headings numbered
+consecutively throughout the book.
+
+Tables and illustrations should be numbered consecutively throughout
+the book but in separate series. Tables should have an appropriate
+caption above, and, generally speaking, illustrations should have a
+descriptive legend below. Tables should be arranged, if possible, so
+that they can be printed across the page.
+
+When equations and formulas are numerous, and especially in books
+designed for classroom use, it is often advantageous to number them
+consecutively throughout the text.
+
+For chapters and tables roman numerals should be used; for all other
+series, arabic.
+
+Excerpts from the works of other authors (when they are more than
+a phrase or sentence), problems, examples and test questions are
+generally set in smaller type than the body of the text itself.
+Accordingly they should be clearly marked.
+
+=Bibliographies.=--Bibliographic references by footnotes serve in
+most books. Bibliographies of greater extent should be arranged
+alphabetically at the end of each chapter of the book, or numbered
+serially and referred to by numbers in the text. The custom is to
+print the titles of books in roman and the titles of periodicals in
+italics. Abbreviations should conform to the well-established
+style sheets of technical societies. We recommend particularly the
+abbreviations of:
+
+                                { Issued by the American Society of
+  ENGINEERING INDEX             {   Mechanical Engineers, 29 West 39th
+                                {   Street, New York.
+
+                                { Issued by the American Chemical
+  CHEMICAL ABSTRACTS            {   Society, 1709 G Street, N. W.,
+                                {   Washington, D. C.
+
+                                { Issued by the Board of Control of
+                                {   Botanical Abstracts, Dr. Donald
+  BOTANICAL ABSTRACTS           {   Reddick, Business Manager, Cornell
+                                {   University, Ithaca, N. Y.
+
+                                { Issued by the Zoological Society of
+  THE ZOOLOGICAL RECORD         {   London, Regent's Park, London.
+
+  THE INTERNATIONAL CATALOGUE   { Issued by the Royal Society of
+    OF SCIENTIFIC LITERATURE    {   London.
+
+The extent of the bibliography will vary, of course, with the nature
+of the subject and the treatment. The tendency to-day appears to
+be toward rather excessive bibliographies, which do not seem to
+us generally to be justified. For a simple rule, we recommend
+"bibliographies of easily accessible sources."
+
+=Tables of Contents.=--Detailed tables of contents to run in the front
+of the book serve a useful purpose. They should, however, be kept down
+to reasonable limits.
+
+There are three forms of contents used in our books:
+
+    (1) A simple list of chapter headings. In many cases this is
+    sufficient.
+
+    (2) Chapter headings with all articles or sub-headings given
+    underneath. These may either be listed or "run in." With a
+    good index, such a full table of contents seems hardly to
+    serve a useful purpose.
+
+    (3) The chapter headings with the outstanding sub-headings
+    listed or "run in" underneath. When these headings are
+    selected carefully they give a quick but comprehensive picture
+    of the contents.
+
+Lists of illustrations are nowadays generally regarded as unnecessary
+in a technical book, and should be prepared only for the guidance of
+the author and the publisher.
+
+=Indexes.=--A good subject index is necessary in all technical works.
+A widely-read periodical in New York at one time published regularly
+the following notice of subject books which were submitted to it for
+review and found to be without indexes:
+
+    The publisher and the author did not think well enough of this
+    book to supply it with a suitable index. We feel, therefore,
+    that it is hardly worthy of a review in our columns.
+
+A good index is one which enables the reader or student to locate
+readily the subject or item which he seeks. It is usually best for an
+author to make his own index. A professional indexer is inclined to
+overload an index; the author, with his knowledge of the subject and a
+little study, will generally produce a better working index.
+
+Our usual style of index is two columns to the page, set in 8-point
+type, with not more than two indentions. The following example shows
+the use of the single and double indentions:
+
+
+INDEX
+
+  A
+
+  Acetylene starters, 263
+
+  Air cooling, 125
+    valve, 425
+      auxiliary, 72
+      dashpot, 74
+
+  Alcohol, heating value, 70
+    use in radiator, 128
+
+  Alignment of wheels, 421
+
+  Alternating current generator, simple, 280
+
+  Ammeter, method of connecting, 133
+  operation of, 337
+
+  Ampere, definition of, 132
+
+  Anti-friction bearings, 364
+
+  Armature type magneto, 191
+
+  Arm, torque, 400
+
+  Atwater-Kent ignition systems, 163, 167
+
+
+  B
+
+  Battery, effect of overcharging, 245
+      overfilling, 257
+      undercharging, 245
+    freezing temperature of, 250
+    ignition systems, 159
+      care of, 186
+      timing, 185
+    jars and covers, 242
+    markings, 244
+    necessity of pure water in, 247
+    operation of, 245
+    rundown, causes, 260
+    sediment, 260
+    specific gravity, change in, 247
+    sulphation, 256
+    testing with hydrometer, 247, 248
+      with voltmeter, 255
+    voltage, 244
+
+Serious objection is properly made to numerous page references under
+a single heading. For example, in a book on Petroleum, references to
+every page on which the word _petroleum_ appears would obviously be
+valueless. The solution lies in concise qualifications of the main
+titles to reduce to the minimum the actual number of page references
+opposite each heading.
+
+In the preparation of an index the use of 3×5-inch cards, or paper of
+sufficient weight to be handled easily and of similar dimensions,
+is advisable. This enables the author to arrange his subject matter
+alphabetically and assemble his duplicate references easily. The
+single and double indentions should be marked on these cards, and the
+guide words stricken out when indentions are indicated. For single
+indentions use this mark [sq]. For double indentions use [sq][sq].
+If, after the cards are so arranged and marked, it is possible for the
+author to have the index typewritten in manuscript form, the risk of
+mixing and loss of cards is minimized and the work of the printer is
+facilitated.
+
+=Some Details of Style.=--Because we do not seek uniformity throughout
+our entire list of books but ask only for uniformity within
+a manuscript itself, with adherence to any conservative and
+well-recognized standard, we do not issue a style sheet.
+
+The periodicals with which we are associated (the publications of the
+McGraw-Hill Company, Inc., Tenth Avenue and 36th Street, New York)
+have a sheet which is excellent, and which may well serve as a guide
+to the author who is undertaking the preparation of a manuscript. Or
+the author may use as his guide any good writer's manual. At the risk
+of monotonous repetition, however, we urge once more the importance of
+uniformity throughout the manuscript itself. To this end, we suggest
+the following:
+
+_Spelling._--Follow any one of the standard and well-recognized
+dictionaries, but follow it consistently. We encounter difficulties
+especially in the matter of hyphenated words; in using hyphens follow
+the dictionary.
+
+_Abbreviations._--Again, any well-recognized standard will satisfy us.
+Dictionaries do not, in general, cover the abbreviations of scientific
+words to a satisfactory extent. We would suggest, therefore, that
+the author secure the style sheet of one of the leading technical
+societies in the field in which he works.
+
+  For Chemistry                American Chemical Society
+
+  For Civil Engineering        American Society of Civil
+                                 Engineers
+
+  For Electrical Engineering   American Institute of Electrical
+                                 Engineers
+
+  For Mechanical Engineering   American Society of
+                                 Mechanical Engineers
+
+  For Mining and Metallurgy    American Institute of Mining
+                                 and Metallurgical Engineers
+
+  For Economics and Business   American Economic Association
+
+All of these technical societies have not only worked out their style
+sheets with care, but they have, in general, accustomed their numerous
+members to the details of these style sheets.
+
+=Copyright Infringements.=--All publishers have noted in recent years
+a great increase in the number of copyright infringement cases. Many
+of these appear to spring from the habit of first preparing lecture
+notes, which are compiled or dictated from various sources without
+thought of publication. By the time the plan to produce a book
+matures, the source of the original material is often entirely
+forgotten.
+
+No question is more common in the technical publishing field than "How
+far can I make excerpts, with credit but without permission, from the
+writings of other authors?"
+
+To this question no definite and entirely satisfactory answer can be
+given. Certainly, where illustrations, tables, or important abstracts
+are to be made, the author should ask permission of the publisher or
+author from whose work he wishes to quote. In addition he should take
+special pains to see that full credit is given in the form required by
+the author or publisher from whom he has secured permission.
+
+The copyright law and the penalties for infringement of copyright are
+drastic, but the decisions which have been rendered in cases that have
+gone to trial do not furnish any particularly safe guide.
+
+In our experience the safest guide is a simple rule of courtesy.
+Neither the author nor the publisher of a work will refuse any
+reasonable request, though he may greatly resent borrowing without the
+courtesy of a request. It is safer, therefore, to obtain permission
+from author or publisher before borrowing from another work.
+
+=Shipping the Manuscript.=--Manuscript should invariably be shipped
+flat, not folded or rolled.
+
+Manuscript and drawings should be sent together and not in
+instalments. Except in rare instances, we do not undertake piecemeal
+manufacture of a book. In our experience such publication methods save
+little or no time and more often result in confusion and expense.
+
+Manuscript, before it has been set up in type, should be shipped by
+express with a suitable valuation placed thereon. After the manuscript
+has been set up in type, the manuscript and proof may best be sent by
+parcel post, special delivery.
+
+
+
+
+III
+
+ILLUSTRATIONS
+
+
+In technical work such as ours the illustrations are of two classes:
+(1) line drawings; (2) photographic or halftone illustrations.
+
+=Line Drawings.=--Copy for line drawings should be made two to three
+times the dimensions of the completed illustration. The weight of
+line, and especially the lettering, should be carefully worked out
+to give desired results. The following illustrations, taken from
+"Engineering Drawing," by Thomas E. French, will serve as a guide to
+the draftsman preparing these illustrations. We suggest, however,
+that when the completed copy for a few characteristic illustrations
+is ready, the author send the samples to us in order that we may
+determine their suitability or even, if desirable, reproduce the
+samples in order that the author may examine the results with us. When
+difficulty is encountered in securing suitable lettering, which will
+give a finished appearance to the illustrations, we are willing to
+accept the drawings with the lettering penciled in. We, in turn,
+engage draftsmen, who are experienced in lettering for reproduction,
+to finish the work. As this often leads to errors, however, we prefer
+the completed drawings ready for reproduction.
+
+Line drawings from periodicals, catalogues and other publications can
+be reproduced direct without material reduction in size, when the copy
+is suitable for the book, and, of course, when permission to reproduce
+has been secured by the author.
+
+=Halftone Illustrations.=--Halftone illustrations can be made
+satisfactorily only from photographs or wash drawings. Photographs
+on a high-finish or glossy paper produce the best results. We cannot
+produce good results by making a halftone from a halftone print.
+A halftone engraving is photographed through a screen, and when we
+undertake to reproduce a halftone from a halftone print we throw one
+screen upon the other. In rare cases passable results can be obtained
+in this way, but such copy should be used most sparingly.
+
+[Illustration: Drawing for one-half reduction.]
+
+[Illustration: One-half reduction.]
+
+If photographs are unmounted, they should not be mounted or pasted on
+sheets of paper. Smoothly mounted photographs present no difficulties
+to the engraver.
+
+Numbers, letters or marks should not be placed on the face of
+photographic prints or wash drawings. If numbers or letters are called
+for, they should be indicated in pencil at the proper point on the
+back of unmounted prints. This can be done easily by holding the
+print against a window facing a strong light. In the case of mounted
+photographs, a fly leaf of thin paper pasted on the back of the
+photograph at the top and folded over the face of the photograph, can
+be used for the numbers or letters. In both cases the engraver adds
+the numbers or letters on the print in the manner best suited to
+reproduction.
+
+[Illustration: Drawing for two-thirds reduction.]
+
+[Illustration: Two-thirds reduction.]
+
+Manufacturers' cuts can sometimes be used when the nature of the text
+calls for them. If possible the manufacturer should be asked to supply
+the original photograph or drawing. If this is not available, then the
+original cut--not an electrotype--should be secured. Electrotypes can
+often be used, but the results are not of the standard which we like
+to maintain.
+
+=Wax Cuts.=--Formerly many textbooks were illustrated by engravings
+made by the wax process. This is the process ordinarily used for the
+production of maps. The cost of these engravings has risen, however,
+to a point which makes them now practically out of the question for
+the average book. They may be used in special cases. Their chief
+advantage is that they can be made from rough pen or pencil sketches
+and do not call either for finished lines or careful lettering.
+
+=In General.=--Wherever possible illustrations to occupy a full page
+should stand vertically on the page. This is, we think, obviously more
+satisfactory to the user of the book.
+
+Folded plates and charts should be avoided as far as possible,
+not only because they involve an unreasonable expense, but because
+American readers, at least, do not like them. Furthermore any
+considerable number of inserted charts weakens the binding of the
+book.
+
+Color plates and maps in color are prohibitively expensive for most
+technical books, but systems of shading and cross-hatching can be
+employed as a substitute for colors in many forms of illustration.
+
+=The Number of Illustrations.=--The cost of engravings of all types
+has risen out of all proportion to the costs of other details of book
+manufacture, and there is no present prospect of a reduction in
+the scale of prices. This proves to be especially burdensome to the
+publishers of technical and scientific books where the texts generally
+contain a large number of illustrations. Accordingly we ask authors
+to consider carefully the possibilities of reducing the number of
+illustrations. In books of the character of ours illustrations are
+essential, and wherever they aid the reader in grasping the subject
+or are essential to the understanding of the subject, they cannot be
+eliminated. But we do not believe in illustrations that are merely
+"pictures" and are not essential to the understanding of the text.
+Wherever they can be dispensed with, without injury to the text, they
+should be eliminated in order that the retail price of the book may be
+kept within reasonable limits.
+
+
+
+
+IV
+
+MANUFACTURING THE BOOK
+
+
+=Sample Galleys.=--When the manuscript has been prepared in our
+offices for the printer, and the time has come to undertake the
+manufacture of the book, we ask the printer, first, to set a few pages
+of the manuscript and submit them to us in galley proofs. These are in
+turn submitted to the author in order that he may study the typography
+and inform us if we have in any way misunderstood his manuscript and
+the marks on it. This step is, of course, dispensed with if a definite
+agreement has been reached in advance as to the typographical details
+of the book.
+
+When the author has looked over these first galleys, not with the idea
+of proof-reading but of determining upon the style, we instruct the
+printer to proceed with the typesetting.
+
+=Galley Proofs.=--These proofs in duplicate (one set is for the
+author's files) are first submitted to the author, and accompanying
+these is a cut dummy which shows the illustrations reproduced as they
+will appear in the book.
+
+Galley proofs should be read with extreme care, and wherever possible
+the author should call in some associate or assistant to read them as
+well, for it is our experience that the author who has spent a great
+deal of time in the preparation of a manuscript often reads with his
+memory rather than his eyes and passes the most obvious errors.
+
+When the author returns the galleys with his corrections marked
+thereon, he should at the same time return the original manuscript.
+At this time also figure numbers and captions should be added to
+the illustrations, and an indication should be made by number in
+the margin of the galleys of the approximate location of the
+illustrations.
+
+Illustrations are inserted in the pages by the printer as near the
+point of reference as the limitations of make-up will permit. If, as
+happens in rare cases, an illustration must be inserted in a given
+paragraph, this should be clearly indicated on the galley proof.
+
+=Page Proofs.=--The printer then proceeds to make the book up into
+pages, and duplicate page proofs are forwarded to the author. These
+again should be read carefully to make sure that all corrections which
+were indicated in the galleys have been properly made, and returned
+to us for final casting into plates. Changes, and additions other
+than typographical corrections, which involve the overrunning and
+rearranging of lines or pages, often mean the remake-up of many pages
+of type and an expense that is usually out of all proportion to the
+good accomplished. Corrections and changes should, therefore, always
+be made in the galley proofs, to avoid the difficult question of
+author's corrections, which is discussed on page 18.
+
+The duplicate set of page proofs should be retained by the author for
+use in preparing his index, in order that the copy for the index
+may be forwarded as soon after the final shipment of page proofs as
+possible.
+
+=Answering Queries.=--Frequently the proof-readers query certain
+points in the manuscript on the galley or page proofs. It is important
+that the author note these queries in all cases and indicate his
+decision regarding the questions so raised.
+
+=Proof-reading.=--In technical books especially, good proof-reading is
+essential. We use every effort to submit proofs which follow closely
+the original copy, but the experienced author knows that he himself
+cannot exercise too much care in proof-reading. The amount of damage
+which has been done to the reputation and sales of many otherwise
+excellent technical books, by carelessness in proof-reading, would
+astound the inexperienced author.
+
+One set of galley and one set of page proofs which the author receives
+are marked with the printer's corrections, generally in green or red
+ink. The set containing the printer's marks should be returned with
+the author's corrections added. The duplicate set the author should
+keep for his own files.
+
+For the guidance of those who are inexperienced in proof-reading,
+we give herewith a reproduction of a sheet showing the ordinary
+proof-reading marks. It is helpful if the author follows this general
+system in marking his proofs. It is essential that the corrections be
+clearly marked.
+
+
+
+
+PROOFREADER'S MARKS
+
+  [symbol] Insert the letter, word or punctuation mark indicated.
+  [symbol] Insert or substitute a period at the place indicated.
+  [symbol] Insert an apostrophe.
+  [symbol] Insert quotation marks.
+  [symbol] Insert a hyphen.
+  [symbol] Make a space at the point indicated.
+  [symbol] Close up or join separated letters or words.
+  [symbol] Delete or take out.
+  [l.c.]   Change from capital to small letter.
+  [Cap.]   Change to capital letter.
+  [s.c.]   Change to small caps.
+  [ital.]  Change to italics.
+  [rom.]   Change to roman type.
+  [w.f.]   Wrong font letter.
+  [tr]     Transpose.
+  [symbol] Words or letters inclosed by line should change places.
+  [¶]      Paragraph here.
+  [No ¶]   No paragraph here.
+  [Stet or ... ] Restore word or sentence mistakenly marked out.
+  [? or Qy.] Is this right?
+  [X]      Broken letter.
+  [symbol] Move to left.
+  [symbol] Move to right.
+  [symbol] Push down space.
+
+
+In preparing copy for the printer the writer should underline:
+
+  _One line_, words to be put in italics.
+  _Two lines_, words to be put in small caps.
+  _Three lines_, words to be put in large caps.
+  _Wave line_ (~~~~~~), words to be put in heavy face type.
+
+
+[Illustration: A CORRECTED PROOF-SHEET]
+
+
+=Author's Corrections.=--No problem in the publishing of technical
+books gives the publisher and the author more trouble than the
+question of author's corrections. The term "author's corrections"
+covers, technically, changes made in content, arrangement or
+typographical style, or additions to the manuscript, after the type
+has been set.
+
+The publisher, to protect himself against the author who practically
+rewrites his manuscript after it has been set up in type, usually
+provides in his contract that corrections in excess of a certain
+percentage of the cost of composition shall be charged to and paid
+for by the author. The printer makes a careful distinction between
+printer's corrections and author's corrections. Corrections marked in
+galley and page proofs of a book where the printer has not followed
+copy are printer's corrections. Author's corrections are changes and
+additions made in the proof. Obviously, where these changes make
+a distinct improvement in the text--that is, a better book--the
+publisher takes a sympathetic attitude; but when the item of author's
+corrections runs to a total of twenty-five or fifty per cent or more
+of the cost of setting up the book, there is clear indication that the
+author did not complete his book in the manuscript but in the proof.
+
+For a general rule it should be kept in mind that corrections in the
+galley proofs cost much less than corrections in the page proofs
+where remake-up of pages involving a large expense may result from
+the addition of a single line, or even a few words. But it is most
+important of all for the author to realize that every correction made
+after the manuscript has been set up in type is time-consuming and
+expensive, and that such delay and expense are reduced to a minimum
+when the author submits a clean, carefully prepared manuscript which
+embodies his final judgment of content and style.
+
+
+
+
+V
+
+WHEN THE BOOK IS PUBLISHED
+
+
+Within a short period after the author returns the proofs of the
+index, the book is ready for publication. The author's work is then
+practically done.
+
+Immediately upon the arrival of the bound books from the bindery,
+the publisher places the work upon the market, copyrights it in this
+country and abroad, and undertakes campaigns for its distribution.
+
+This section of the _Suggestions_ is intended to show the author how
+he can help in this work and to answer certain questions which are
+asked constantly.
+
+=Marketing a Book.=--We take pride in the thoroughness with which we
+seek the market for all books bearing our imprint. The spirit of
+the agreement which we make with the author is that each book is a
+separate business venture into which we have entered as a partner of
+the author.
+
+In marketing his book the author can be of material assistance to us.
+He knows the subject better than we can ever know it, and he knows the
+type of man to which he intends his book to appeal. For these reasons
+we always welcome the assistance and suggestions of the author.
+
+At the time when the author begins to receive page proofs of the book,
+we are outlining our campaign for its distribution. At that time we
+like to receive from the author, first, a brief but exact definition
+of the scope and purpose of the book. This we use, not for our
+advertising, but as the basis of our advertising. Second, we find
+distinctly helpful a list of points to emphasize in our circular and
+periodical advertising, and for such a list we look to the author. A
+cut-and-dried table of contents often fails to give as good a picture
+of a book as do a few well-selected points.
+
+At the same time the author's suggestions of special periodicals to
+which copies should be sent for review, and of special lists which may
+well be circularized, will also be helpful. These we generally know
+about, but sometimes we overlook obvious points of attack in our
+campaigns.
+
+=Corrections and Revisions.=--In practically every instance our books
+are printed from electrotype plates. Consequently the first printings
+are rarely large, because we are able to produce further copies, from
+our electrotype plates, as needed.
+
+Before a book is reprinted the author is given an opportunity to send
+in corrections of typographical and other errors which have escaped
+notice in the earlier printing or printings. Such reprints, however,
+are not called new editions nor is the title page date of the book
+changed. We follow strictly the policy of designating as new editions
+only books which have been more or less thoroughly revised, and the
+title page date of one of our books is an indication of the date of
+the text--not of the reprint.
+
+When, in the author's opinion or our own, the text requires revision,
+we discuss the details with the author and arrange for as complete a
+revision as the condition of the text calls for. Since the printings
+of our books are rarely large, we are able to arrange for the
+production of a new edition in normal cases as soon as the author
+feels that it is required and can complete his portion of the work.
+
+=Translations.=--We arrange, where possible, for translations of books
+into foreign languages, dividing the proceeds with the author. The
+underlying theory of this division is that, with the publication of a
+translation, both the author and the publisher suffer from the loss of
+sales of the edition in English.
+
+The foreign publisher generally has to pay to his translator about the
+royalties usually paid to an author, and accordingly the amount which
+can be charged to a foreign publisher for rights of translation
+is, except in rare cases, small. Translations must be regarded as a
+by-product.
+
+Our attempts to market books in foreign languages from New York,
+or from one of our foreign agencies, have not been encouraging.
+Accordingly, the first question, when we are endeavoring to arrange
+for a translation, is for us to find a publisher in the country
+selected who will undertake the work of securing a translator and
+publishing the book. When a translator offers his services, we find it
+necessary to ask him first to interest a publisher in his own country
+in the venture.
+
+=Prompt Publication.=--From the standpoint of both the author and the
+publisher it is desirable that a book should be put on the market as
+soon as possible after the manuscript is completed.
+
+From the moment the publisher undertakes to manufacture a book he has
+an investment which grows rapidly and yields nothing until the sales
+of the book begin.
+
+The production of technical books is delayed, generally, by one of the
+following causes:
+
+    (1) The author wishes to submit his material to his associates
+    or to specialists in the field. Except for purposes of
+    proof-reading such submission should be made in manuscript.
+
+    (2) The author fails to return his proofs and manuscript copy
+    promptly. The prompt reading and return of proofs is of the
+    greatest importance.
+
+    (3) The copy for the index does not follow closely upon the
+    return of the final batch of page proofs.
+
+The printer, the engraver, the paper manufacturer, the binder or
+the publisher may also interfere with prompt publication; but if the
+author's end of the work is handled systematically and promptly, we
+are generally able to control the manufacturing details.
+
+       *       *       *       *       *
+
+
+
+
+  Transcriber's Note
+
+
+  _ _ indicates italic script;
+
+  = = indicates bold script;
+
+  [sq] indicates a hollow square.
+
+
+  Sundry missing or damaged punctuation has been repaired.
+
+
+  Page 6, etc.: 'sub-headings', and 'subheadings' both appear in
+  this book, as do 'Proof-reader' and 'Proofreader', and some other
+  instances of hyphenated and non-hyphenated words.
+
+  As it is a book of suggestions on layout and style from a respected
+  publishing house, it can be assumed they knew what they intended,
+  so both hyphenated and non-hyphenated words have been retained.
+
+  Page 9: 'instalments'.
+
+    From Webster's Dictionary, 1913 Edition
+    (http: //www. bibliomania.com/2/3/257/frameset.html):
+
+    Installment
+    (In*stall"ment) n. [Written also instalment.]
+
+  'instalments' has therefore been retained.
+
+
+
+
+
+End of the Project Gutenberg EBook of A Few Suggestions to McGraw-Hill
+Authors., by McGraw-Hill Book Company
+
+*** END OF THE PROJECT GUTENBERG EBOOK 54146 ***

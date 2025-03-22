@@ -1,0 +1,576 @@
+*** START OF THE PROJECT GUTENBERG EBOOK 63122 ***
+
+VOL. III, PP. 41-52, MAY 1, 1891
+
+THE NATIONAL GEOGRAPHIC MAGAZINE
+
+
+
+
+GEOGRAPHY OF THE AIR
+
+ANNUAL REPORT BY VICE-PRESIDENT
+
+A. W. GREELY
+
+
+
+
+WASHINGTON
+
+PUBLISHED BY THE NATIONAL GEOGRAPHIC SOCIETY
+
+Price 25 Cents.
+
+
+{41}
+
+
+VOL. III, PP. 41-52, MAY 1, 1891
+
+THE NATIONAL GEOGRAPHIC MAGAZINE
+
+
+
+
+GEOGRAPHY OF THE AIR.
+
+ANNUAL REPORT BY VICE-PRESIDENT
+
+A. W. GREELY.
+
+(_Presented to the Society January 23, 1891._)
+
+
+In fulfilling the duties growing out of his official position in
+connection with this Society, your Vice-President of the Geography of
+the Air has been so closely occupied with executive and other official
+duties devolving upon him as to preclude his giving that amount of
+time and labor to this annual report that the subject merits. Indeed,
+no report would be submitted this year had it not seemed better to
+insure a continuity of these annual addresses, even if one of them
+might not be up to the high standard which should be maintained for
+them.
+
+It must have impressed every general reader of scientific journals
+that the past year has been marked by the publication of an unusual
+number of controversial articles relating entirely or in part to
+meteorology. Some of the discussions of this subject appear to be in
+the nature of speculation, which, by good authority, is defined to be
+"chiefly the work of the imagination, and has little to do with
+realities." The status of the meteorological discussion which has been
+going on for some time seems to be this: A number of men, applying
+themselves to investigation in separate branches or stages of the same
+science, are attempting to reconcile their views, which, based as they
+are upon entirely different processes of investigation, are not
+entirely accordant. Some, at least, of these writers are still
+apparently groping in the preliminary, the "natural history" stage of
+the {42} science of meteorology, while one alone stands as the
+exponent of the "natural philosophy" of meteorology.
+
+To me it seems that it could not have failed to impress any interested
+reader who has followed the late publications on the convectional
+theory that, in order to clear the ground for definite meteorological
+discussion, it is necessary to determine the exact meaning of the
+various technical terms employed by the various writers. Whether from
+looseness of verbiage originally or from the not infrequent habit of
+disputants when worsted to change their ground by claiming to be
+misunderstood, we find that some writers are unwilling either to stand
+by their first criticisms or to openly abandon them; they prefer to
+explain away their defective statements and gradually shift around to
+positions almost diametrically opposed to those originally assumed.
+
+The generally accepted theory as to cyclones attributes their
+initiatory formation to an unequal distribution of temperature with
+resulting mean diminution of pressure, and the movement of the air
+from places of high to places of low pressure, the lower air ascending
+with a gyratory motion, while air particles moving from opposite
+directions form couples which produce rotation. When energetic motions
+raise the ascending air to such a height that the temperature, cooled
+dynamically in ascending, goes below the dew-point, then the great
+store of latent heat thereby set free becomes, it is assumed, the main
+source of energy in maintaining the upward convectional movement. The
+subsidiary causes are attributed to the diminution of pressure on the
+collapse of the vapor, and also to the direct absorption of the sun's
+heat at the upper cloud surface.
+
+In anticyclones a slow gyratory descending motion of the air is
+assumed. Ferrel considers the cyclone and anticyclone one system, and
+believes that air flowing into the cyclone from a "high" at the ground
+passes out into the higher atmospheric strata.
+
+Dr. Hann has put forth the hypothesis that the genesis of cyclones and
+anticyclones may be sought in the general atmospheric circulation
+through a difference of temperature of the air from the equator to the
+poles. He speaks of a congestion in the upper or anti-trade winds,
+where the air heaps up to a great height, this being the cause of the
+anticyclones; and he maintains that the low temperature of the "high"
+is due to ground radiation, and that no part of the high pressure is
+the result of low temperature.
+
+{43} To this hypothesis of Dr. Hann, ascribing the genesis of storms
+to the general circulation of the atmosphere, no application of the
+laws of dynamics has yet been made with a view of developing it into
+an acceptable "theory." If it should be established it does not follow
+that it will in any way affect the truth of the commonly accepted
+"convectional system," which, founded as it is on the well-known laws
+of thermo-dynamics, is not likely to be successfully assailed. There
+may be an improved nomenclature for the laws of statics and dynamics
+that will express to the mind more clearly the relation of cause and
+effect; but until the advance of scientific research modifies the
+present formulation of these laws the convectional theory will be
+generally accepted as giving the true interpretation of all the
+phenomena to which it could be applied.
+
+Professor Russell, in commenting on this subject, expresses the
+opinion that the low temperature is due to the convective interchange
+of air at a low temperature in the upper strata with air of a high
+temperature in lower strata, such convective interchange tending to
+make the whole body of air of a temperature coinciding throughout with
+the adiabatic rate of upward diminution, with the consequent result of
+rendering the air at the surface of the earth cooler than previously
+and the upper air warmer. When the upward diminution of temperature is
+less than the adiabatic rate, in the forced circulation of air
+crossing a mountain ridge, there occurs the dynamic heating which is
+observed in the case of the foehn winds. The low temperature near the
+earth he does not believe could ever be entirely produced by nocturnal
+radiation from the ground. The high pressure, in his opinion, is
+largely the result of greater density due to low temperature, as is
+very clearly indicated by the fact that the temperature is almost
+inversely proportional to the pressure, and that the places of lower
+temperature substantially coincide with the places of greatest
+pressure.
+
+In advancing hypotheses and inviting discussion the real object is, or
+at least should be, to discover the essential cause or causes which
+determine the initial formation and subsequent maintenance and
+progress of the cyclone. Some real progress in charting lines of equal
+density seems to have been made by M. Nils Ekholm following Professor
+Abbe's system of "isostaths," one using the term density, the other
+buoyancy. Professor Abbe also introduces the factor of the orographic
+gradient, but the {44} latter is simply the measure of a resistance.
+The objection to this form of determination is this, that it is a
+measure of mass only. The density of two masses of air is determined
+to be the same; but as the density may result from two entirely
+different causes, their physical relations cannot be fully expressed
+in units of gravity. The methods of Professor Abbe and of M. Nils
+Ekholm undoubtedly give good results, partly from the coincidence that
+humidity usually varies directly as the temperature.
+
+The method proposed by Captain James Allen in 1888, which is briefly
+described in appendix 24 to the annual report of the Chief Signal
+Officer for 1890, appears to afford the means of more clearly
+expressing the relations that exist between the mass of the atmosphere
+and the forces available for the generation and movement of storms.
+Its tentative application at the Signal Office has anticipated and
+explained storm movements not indicated or accounted for by the usual
+methods.
+
+As pertinent to this matter, there is instanced a study of the
+progress of thunder-storms made by Berg, who observes that the line of
+storm front in every case investigated made a decidedly conspicuous
+bend into the densest part of the lines representing the absolute
+humidity.
+
+       *       *       *       *       *
+
+Scientific conditions have so changed that in these later years it
+becomes more and more difficult for investigators to publish any work
+which may be characterized as _magnum opus_. Under this head, however,
+must be classed Buchan's important memoir on the distribution of
+atmospheric pressure, temperature, and wind direction over the whole
+world; a large quarto volume, which contains much new material. It has
+been incorporated with the results of observations during the
+Challenger expedition, in which series this work appears. The isobars
+and isotherms for each month in the year for the whole earth are
+charted on Mercator's projection, and for the northern hemisphere on a
+chart constructed on a polar projection. In connection with an
+abstruse subject, to which Buchan has paid so much attention, the
+diurnal variation of pressure, he opines from the Challenger
+observations that the oscillations are due to the heat taken from the
+solar rays directly in passing through the air and instantaneously
+communicated through the whole mass from top to bottom by heating and
+evaporation of water on innumerable dust particles. The afternoon
+minimum, he thinks, is caused by upward currents removing a portion of
+the lower air. Marked {45} differences exist between the continental
+and insular types, since on islands the morning minimum is unusually
+large and the afternoon minimum so small as to disappear, while in
+continental types the reverse conditions obtain.
+
+       *       *       *       *       *
+
+Werner Von Siemens, in answering Sprung's criticism on his general air
+currents, after repelling certain statements of Sprung, describes his
+own theories, which are worthy of restating:
+
+1. All winds are caused by the disturbances of indifferent
+equilibrium, and the motion of the air is to restore equilibrium.
+
+2. These disturbances are caused through overheating of the layers of
+air near the surface of the earth by insolation, through unsymmetrical
+cooling of the higher layers by radiation, and through the heaping up
+of air masses caused by obstructions.
+
+3. The disturbances are adjusted by ascending currents, wherein the
+particular species of acceleration occurs in which the increase of
+velocity is proportioned to the diminution of pressure.
+
+4. The upward currents correspond to equally great descending currents
+in which there is a decrease of velocity corresponding to the
+acceleration in the upward velocity.
+
+5. If the region of overheating of the air is limited locally, a local
+upward current reaching to the highest layers of air arises, and
+whirlwinds appear with interior spirally ascending currents and
+outside similar spiral descending currents. The result of this is
+dispersion of the superfluous heat of the lower air by which the
+adiabatic equilibrium is disturbed throughout the whole column of air
+taking part in the whirling motion.
+
+6. In case the region of disturbance of the indifferent (or adiabatic)
+equilibrium is very extensive, as, for example, the whole of the
+tropical zone, the temperature adjustment can no longer be
+accomplished by locally ascending whirls, and a whirling current must
+then arise involving the whole atmosphere. The same conditions apply
+to these as to the local whirls of accelerated upward motion and
+retarded descent in such a manner that the velocity at different
+altitudes arising from heat converted to work is approximately
+proportional to the prevailing pressure at the place.
+
+7. In consequence of the meridional motion produced and maintained by
+conversion of heat into work, the whole atmosphere in every latitude
+must rotate with approximately the same absolute velocity. Thus the
+meridional currents produced by overheating combine with the currents
+embracing the whole {46} wind system of the earth, with the result of
+disseminating the excess of temperature and humidity of the torrid
+zone over the temperate and arctic zones, thereby producing the
+prevailing winds.
+
+8. This is accomplished by the production of alternating local
+depressions and elevations of barometric pressure by the disturbance
+of indifferent equilibrium in the upper layers of the air.
+
+9. "Highs" and "lows" are a consequence of the temperatures and
+velocities of the upper currents.
+
+Whence it follows that the most important problem of meteorology is
+the investigation of the causes and consequences of the disturbance of
+indifferent equilibrium of the atmosphere, and the weightiest problem
+in weather prediction is the investigation of the geographical origin
+or extraction of air currents pursuing their course above us toward
+the pole.
+
+       *       *       *       *       *
+
+In Pomortsew's treatise on synoptic meteorology, published in Russia,
+there are full chapters on prediction of weather, whether from
+synoptic charts, from observations at a single place, or from
+prognostics of great length based on researches on the succession of
+warm and cold months. It also contains Pomortsew's investigations on
+the types of pressure distribution in eastern Europe, as well as the
+average path of cyclones.
+
+       *       *       *       *       *
+
+The favorable opportunities afforded by the Eiffel tower have been
+utilized by French meteorologists. M. Angot states that during the
+anti-cyclone of November, 1889, the temperature on the tower was
+several degrees higher than below. The change of weather set in
+earlier, with a strong and warm wind, on the tower, while the air at
+the ground was cold and calm. Wind observations on the tower show a
+ratio of 3.1 at that height (303 meters) to the velocity at a height
+of 21 meters, as determined from 101 days' observations, which,
+remarkable at such a small height, discloses the peculiarity of high
+mountain stations.
+
+       *       *       *       *       *
+
+Partsch, writing on evidence of climatic changes within historical
+times in the Mediterranean region, remarks that too much attention has
+been given to changes in crops, the introduction of plants, and the
+limits of domestic animals. He states that existing information as to
+the harvest time of ancient days indicates an unchanged climate, while
+the land-locked lakes in Tunis, which afford the best evidence on
+rainfall variation, show absolutely no climatic change.
+
+       *       *       *       *       *
+
+{47} Van Bebber, in writing on weather types, claims that a line drawn
+from the center of a cyclone perpendicularly in the direction of the
+heaviest gradients will in general be perpendicular to the subsequent
+path of the "low," and that these lows leave high temperature on the
+right hand.
+
+       *       *       *       *       *
+
+Hill, in describing hail-stones and tornadoes in India, explains them
+on the principle of the great diminution of temperature upwards in the
+air, but a critic, in combating this theory, objects to the high and
+low stations selected to show temperatures.
+
+       *       *       *       *       *
+
+The so-called "weather plant" of the tropics has passed through the
+process of investigation with the usual result. It appears surprising
+that in these days it should be believed that any plant or animal can
+foretell weather 48 hours in advance, particularly after considering
+the vast amount of proof as to the enormous rapidity with which
+weather-changes progress from day to day.
+
+       *       *       *       *       *
+
+Hugo Meyer, in treating the precipitation of central Germany for the
+ten years ending in 1885, pertinently remarks that the same
+significance does not attach to the same rainfall for all places and
+different times of the year, for this average value is not the amount
+most likely to fall in any particular interval of time, since there is
+a limit to the extent of the negative deviations on one side--that is,
+0 or no rainfall, while on the positive side there is no limit. The
+most probable depth of rainfall, therefore, is less than the mean
+value, the preponderance of negative over positive deviations being
+about 10 per cent. and sometimes as great as 20 per cent.
+
+       *       *       *       *       *
+
+Professor W. M. Davis wrote an interesting review of Professor
+Ferrel's popular treatise on the winds, published a year ago.
+Commenting on the review, the editor of _Meteorologische Zeltschrift_,
+Vienna, remarks on a very important omission in the treatise, namely,
+the absence of all reference to the diurnal variation of the wind and
+the many interesting relations it bears to other phenomena, a notable
+omission in a treatise specially devoted to winds. The treatment of
+the monsoon wind and its relation to the general circulation is highly
+commended by the editor, and indicated as being all new.
+
+       *       *       *       *       *
+
+Your Vice-President has elsewhere expressed his opinion that monsoon
+winds, applying the term by liberal construction to signify winds
+which recur with returning seasons, cannot with {48} any degree of
+correctness be asserted to prevail in the United States. It is true
+that the prevailing surface winds of the greater part of the United
+States come from the western quadrants--that is, between southwest and
+northwest--and so are in substantial harmony with the general
+atmospheric circulation as shown by the upper-wind currents of Mount
+Washington (from the northwest) and Pike's peak (from the southwest).
+But, apart from the easterly and northeasterly trades on the Florida
+coast, it appears from the records that in no case for any
+considerable section of the country do 50 per cent. of the winds blow,
+for any consecutive number of months, either from any single point or
+from two neighboring points of the compass. Occasionally, however, the
+local configuration of the country is such that winds are drawn up or
+down valleys, and, being diverted from their free and proper
+direction, the wind in such cases follows the trend of the valley or
+depression.
+
+       *       *       *       *       *
+
+In general your Vice-President would feel inclined to refer only
+casually to the work proceeding from the Bureau over which he has the
+honor to preside, but this year has been marked by special researches
+and investigations of general interest. As the work of investigation
+has been entrusted to the professors of the Signal Service, due credit
+should not be refused them from their own official chief.
+
+Special reference should be made to the work of Professor Charles F.
+Marvin, whose successful experiments on wind pressures and velocities
+have attracted the attention of experts both in Europe and in this
+country. Unfortunately there was available only a small sum (about one
+hundred dollars) for the expense of experiments, but with this petty
+sum, supplemented by his ingenuity, Professor Marvin has very
+satisfactorily determined the coëfficients of the various forms of the
+Robinson anemometer, with which instrument the velocity of the wind is
+very generally determined. Following these investigations, the Royal
+Meteorological Society of England reopened the question, which, after
+a costly set of experiments with results widely differing from those
+of Professor Marvin, had been considered closed.
+
+The general results of these researches, which are believed to be
+sufficiently definite for general questions, are not only prized by
+the scientist, but they are of value to the engineer and the builder.
+Indeed, to all interested in costly structures or extended works
+liable to harm from wind pressures, the factor of safety is {49} a
+matter of no small pecuniary importance. These experiments show that,
+as was formerly believed to be the case, the wind pressure varies as
+the square of the velocity of the wind, expressed in miles per hour;
+but a most important fact has developed, namely, that the pressure in
+pounds per square foot is equal to the miles of hourly velocity
+multiplied by 0.004 instead of 0.005, as was formerly assumed.
+
+Professor Marvin was not content with one system of experiments, but
+he further attacked the problem in a direct manner by a method which
+checked and verified his experiments with the whirling machine. On the
+summit of Mount Washington, at an elevation of 6,300 feet, he obtained
+simultaneously and under the same conditions, by automatic and
+electrical apparatus, continuous registration of the pressure of the
+wind in pounds per square foot and of the velocity in miles per hour.
+
+The results thus verified can be considered as conclusive from a
+general standpoint. The corrections for the Robinson anemometer thus
+determined from these experiments are comparatively unimportant at low
+velocities, say from 10 to 15 miles per hour, being only a fraction of
+a mile per hour. The uncorrected velocities, however, are in all cases
+too large, and by greater and greater amounts the higher the velocity.
+At 60 miles per hour the observed velocities are about 12 miles per
+hour too high, and for an indicated velocity of 90 miles the
+experiments show that the actual velocity is but a fraction over 69
+miles per hour.
+
+The anemometer formula found to satisfy most closely the entire range
+of experiments has the following form for velocities in miles per
+hour:
+
+  Log. _V_ = 0.509 + 0.9012 log. _v_.
+
+This difference indicated by the formula may seem small and
+insignificant, as it is in the case of light winds, but at very high
+velocities the differences are very great. For instance, an actual
+velocity of 60 miles per hour may occur at some time in almost any
+locality of the United States for a few minutes, and even greater
+velocities are occasionally reported, apart from severe tornadoes.
+Under the old coëfficients for the Robinson anemometer an actual
+velocity of 60 miles per hour would have been reported as 77 miles per
+hour, which under the old factor of 0.005 would mean a pressure of
+29.6 pounds per square foot; but when considered with reference to the
+true velocity of 60 miles, under {50} the new factor of 0.004, the
+pressure would only be 14.4 pounds per square foot--a reduction of
+over 50 per cent. from the pressure-values formerly accepted.
+
+Professor Marvin has undertaken to verify, and also to extend to even
+lower temperatures, the observations of Regnault as to the pressure of
+aqueous vapor at low temperatures, especial attention being given to
+temperature conditions from 0° centigrade to -50° centigrade. These
+observations disclose, below 0° centigrade, small but constant
+differences from the values assigned by Regnault.
+
+In all this work Professor Marvin has shown such ingenuity of
+resource, such skill in adapting means to the end, and such deftness
+in improvising and manufacturing the requisite instruments as have
+elicited commendation from all who have seen his work and followed his
+methods. Your Vice-President alludes to this not only to give that
+credit rightfully due to Professor Marvin, but to illustrate this as a
+type of the highly important work which is being done in all branches
+of science here in Washington by young men sometimes illy equipped as
+to means, and still more illy paid. Men engaged in work of original
+investigation should receive higher pay than clerks in charge of
+routine duties; but unfortunately the majority of them do not.
+
+       *       *       *       *       *
+
+The work of Professor Hazen in charting tornadoes and in determining
+their relative frequency and severity is directly in the line of the
+Geography of the Air.
+
+Great attention had previously been given to this subject by
+Lieutenant John P. Finley, who, with indefatigable industry, had
+accumulated an enormous mass of data relative to these violent
+outbursts of nature's forces. The figures and deductions previously
+put forth under the authority of the Signal Service having been
+questioned, the Chief Signal Officer felt obliged, in view of the
+growing practical importance of the question, as indicated by the
+great sums annually paid out in the Ohio valley and in the
+trans-Mississippi region for protection against tornadoes, to reöpen
+the subject. Instructions of the most conservative character were
+given to Professor Hazen to determine carefully the prevalence and
+number of tornadoes in the United States, the areas devastated by
+them, and the number of lives lost annually. This work was carefully
+scrutinized during its progress to see that it should be devoid of
+theory and rest on the solid basis of fact. The results are most
+assuring to every {51} one, and must serve to allay the unreasonable
+fears of the inhabitants of the so-called "tornado districts." It
+appears that there is no part of the United States in which annually
+more than one square mile of devastation or severe destruction can be
+expected for each 185,000 square miles, although cases of _limited
+destruction_ may occur annually for about every 5,000 square miles of
+area. In no state may destructive tornadoes be expected, on an
+average, more than once in two years; and the area over which total
+destruction can be expected is, as shown by the foregoing figures,
+exceedingly small, even in localities most liable to these violent
+storms. The annual death casualties from tornadoes have averaged, in
+the last 18 years, 102 annually; but it is believed that the death
+rate from lightning is greater than that from tornadoes, since during
+March to August, 1890, the names of 110 are on record who have lost
+their lives by lightning, although the data are incomplete, especially
+as regards the southern states. These statistics cannot be passed by
+lightly, however, and it is doubtful if in the main they are much in
+error. By them it appears from five years' record that the average
+annual death rate by lightning in the United States is 3.8 per million
+of inhabitants, or 0.2 above the average. In Sweden, for sixty years,
+the average has been 3.0; in France, for forty-nine years, 3.1; in
+Baden, for seventeen years, 3.8; and in Prussia, for fifteen years,
+4.4 per million.
+
+Other figures, given by a life-insurance agent in St. Louis, which the
+author claims to have compiled with great care, place the average
+annual rate of death from lightning in the United States at 206, being
+more than double the deaths from tornadoes. It must be understood that
+these figures are not vouched for, and must be very cautiously
+received, as originating with companies interested pecuniarily in the
+statistics.
+
+On the whole, therefore, it may be safely assumed that tornadoes are
+not so destructive to life as thunder-storms.
+
+       *       *       *       *       *
+
+Professor Thomas Russell has formulated a method for prediction of
+cold waves. They always occur after "lows" and before "highs," and
+different cold waves vary in extent from three "units" to sixty. A
+"unit" of temperature-fall is taken as a fall of twenty degrees over
+an area of 50,000 square miles.
+
+The temperature-fall curves in the United States are approximately
+elliptical in shape. Perfect ellipses represent actual temperature
+falls with an error not exceeding six degrees in {52} most cases.
+These fall lines are intersections of planes with a cone which
+graphically represents the totality of temperature-fall, the contents
+of the cone being equal to the area of its base multiplied by its
+altitude, which is the greatest fall in temperature at the center of
+the cold wave.
+
+A formula has been devised, based on 127 special cases, representing
+the amount of fall in terms of the amount of barometric depression in
+a "low," and the amount of excess if a "high," and the density of the
+isothermal lines in the region.
+
+From proper consideration of the type of low area, shape of isobars,
+and position of the long axis, definite conclusions can be drawn as to
+the subsequent shape of the elliptical twenty-degree temperature-fall
+area and its position.
+
+A method has been devised, also by Professor Russell, for determining
+the maximum fall of temperature at the center of the cold wave. The
+maximum fall and extent of fall being known, from suitably prepared
+tables, the area of twenty-degree fall can be derived. Previously
+prepared pieces of card-board are laid in the proper position on a map
+of suitable scale, and lines drawn around them. Between the line
+representing the twenty-degree fall and the center, the other falls of
+thirty degrees, forty degrees, etc., are sketched in.
+
+       *       *       *       *       *
+
+The foregoing sketch of the geography of the air may appear too
+superficial and limited for the purposes of this Society, but its
+further elaboration was impracticable. Indeed, the subject of
+meteorology could hardly have been touched upon this year had it not
+been for the courtesy of Professor Russell in placing at my disposal
+notes upon translations from foreign publications, especially from the
+German; which publications I have been unable to examine save in a
+casual way.
+
+The address, as it is, is submitted only in the hope that it may
+serve, if no other purpose, at least to indicate the great interest
+which now obtains in the geography of the air, and which manifests
+itself in the production of meteorological pamphlets and publications
+too numerous to permit any one charged with important executive duties
+to examine them all, even in a non-critical way.
+
+
+
+
+
+
+End of the Project Gutenberg EBook of The National Geographic Magazine, Vol.
+III., PP. 41-52, May 1, 1891, by Adolphus Washington Greely
+
+*** END OF THE PROJECT GUTENBERG EBOOK 63122 ***

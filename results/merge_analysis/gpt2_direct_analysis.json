@@ -1,0 +1,838 @@
+{
+  "period_usage": {
+    "historical": {
+      "total_tokens": 95225,
+      "unique_tokens": 396,
+      "top_tokens": [
+        [
+          13,
+          "Token-13",
+          5809
+        ],
+        [
+          286,
+          "Token-286",
+          4320
+        ],
+        [
+          383,
+          "Token-383",
+          2562
+        ],
+        [
+          373,
+          "Token-373",
+          2432
+        ],
+        [
+          11,
+          "Token-11",
+          2363
+        ],
+        [
+          284,
+          "Token-284",
+          2134
+        ],
+        [
+          4371,
+          "Token-4371",
+          1829
+        ],
+        [
+          981,
+          "Token-981",
+          1705
+        ],
+        [
+          10939,
+          "Token-10939",
+          1612
+        ],
+        [
+          703,
+          "Token-703",
+          1600
+        ],
+        [
+          326,
+          "Token-326",
+          1496
+        ],
+        [
+          11622,
+          "Token-11622",
+          1442
+        ],
+        [
+          290,
+          "Token-290",
+          1397
+        ],
+        [
+          428,
+          "Token-428",
+          1299
+        ],
+        [
+          546,
+          "Token-546",
+          1265
+        ],
+        [
+          7189,
+          "Token-7189",
+          1227
+        ],
+        [
+          7997,
+          "Token-7997",
+          1227
+        ],
+        [
+          1141,
+          "Token-1141",
+          1201
+        ],
+        [
+          1808,
+          "Token-1808",
+          1200
+        ],
+        [
+          18436,
+          "Token-18436",
+          1200
+        ]
+      ]
+    },
+    "early_20th": {
+      "total_tokens": 95900,
+      "unique_tokens": 344,
+      "top_tokens": [
+        [
+          13,
+          "Token-13",
+          5845
+        ],
+        [
+          286,
+          "Token-286",
+          4396
+        ],
+        [
+          383,
+          "Token-383",
+          2590
+        ],
+        [
+          373,
+          "Token-373",
+          2463
+        ],
+        [
+          11,
+          "Token-11",
+          2163
+        ],
+        [
+          284,
+          "Token-284",
+          1833
+        ],
+        [
+          703,
+          "Token-703",
+          1810
+        ],
+        [
+          326,
+          "Token-326",
+          1705
+        ],
+        [
+          10939,
+          "Token-10939",
+          1612
+        ],
+        [
+          981,
+          "Token-981",
+          1600
+        ],
+        [
+          290,
+          "Token-290",
+          1474
+        ],
+        [
+          4371,
+          "Token-4371",
+          1462
+        ],
+        [
+          11622,
+          "Token-11622",
+          1455
+        ],
+        [
+          428,
+          "Token-428",
+          1410
+        ],
+        [
+          546,
+          "Token-546",
+          1212
+        ],
+        [
+          7189,
+          "Token-7189",
+          1208
+        ],
+        [
+          7997,
+          "Token-7997",
+          1208
+        ],
+        [
+          1808,
+          "Token-1808",
+          1200
+        ],
+        [
+          18436,
+          "Token-18436",
+          1200
+        ],
+        [
+          1948,
+          "Token-1948",
+          1200
+        ]
+      ]
+    },
+    "mid_20th": {
+      "total_tokens": 82872,
+      "unique_tokens": 2972,
+      "top_tokens": [
+        [
+          13,
+          "Token-13",
+          4691
+        ],
+        [
+          286,
+          "Token-286",
+          3597
+        ],
+        [
+          11,
+          "Token-11",
+          2742
+        ],
+        [
+          373,
+          "Token-373",
+          2092
+        ],
+        [
+          383,
+          "Token-383",
+          1959
+        ],
+        [
+          284,
+          "Token-284",
+          1574
+        ],
+        [
+          703,
+          "Token-703",
+          1463
+        ],
+        [
+          981,
+          "Token-981",
+          1386
+        ],
+        [
+          10939,
+          "Token-10939",
+          1382
+        ],
+        [
+          326,
+          "Token-326",
+          1313
+        ],
+        [
+          428,
+          "Token-428",
+          1228
+        ],
+        [
+          4371,
+          "Token-4371",
+          1113
+        ],
+        [
+          11622,
+          "Token-11622",
+          1113
+        ],
+        [
+          290,
+          "Token-290",
+          1098
+        ],
+        [
+          640,
+          "Token-640",
+          1059
+        ],
+        [
+          663,
+          "Token-663",
+          1057
+        ],
+        [
+          1141,
+          "Token-1141",
+          1049
+        ],
+        [
+          1393,
+          "Token-1393",
+          1041
+        ],
+        [
+          1854,
+          "Token-1854",
+          1040
+        ],
+        [
+          1808,
+          "Token-1808",
+          1038
+        ]
+      ]
+    },
+    "contemporary": {
+      "total_tokens": 269135,
+      "unique_tokens": 19504,
+      "top_tokens": [
+        [
+          11,
+          "Token-11",
+          14718
+        ],
+        [
+          13,
+          "Token-13",
+          11227
+        ],
+        [
+          262,
+          "Token-262",
+          9893
+        ],
+        [
+          286,
+          "Token-286",
+          7405
+        ],
+        [
+          290,
+          "Token-290",
+          4817
+        ],
+        [
+          284,
+          "Token-284",
+          4806
+        ],
+        [
+          287,
+          "Token-287",
+          3242
+        ],
+        [
+          257,
+          "Token-257",
+          3169
+        ],
+        [
+          326,
+          "Token-326",
+          2441
+        ],
+        [
+          373,
+          "Token-373",
+          2318
+        ],
+        [
+          383,
+          "Token-383",
+          2029
+        ],
+        [
+          318,
+          "Token-318",
+          1856
+        ],
+        [
+          26,
+          "Token-26",
+          1613
+        ],
+        [
+          314,
+          "Token-314",
+          1539
+        ],
+        [
+          340,
+          "Token-340",
+          1443
+        ],
+        [
+          329,
+          "Token-329",
+          1372
+        ],
+        [
+          4808,
+          "Token-4808",
+          1322
+        ],
+        [
+          428,
+          "Token-428",
+          1273
+        ],
+        [
+          355,
+          "Token-355",
+          1213
+        ],
+        [
+          12,
+          "Token-12",
+          1157
+        ]
+      ]
+    }
+  },
+  "distinctive_tokens": {
+    "historical": [
+      {
+        "token_id": 24569,
+        "token_text": "Token-24569",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 7593,
+        "token_text": "Token-7593",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 14479,
+        "token_text": "Token-14479",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 25289,
+        "token_text": "Token-25289",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 19497,
+        "token_text": "Token-19497",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 3962,
+        "token_text": "Token-3962",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 47220,
+        "token_text": "Token-47220",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 45278,
+        "token_text": "Token-45278",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 45630,
+        "token_text": "Token-45630",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 26401,
+        "token_text": "Token-26401",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 22926,
+        "token_text": "Token-22926",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 16223,
+        "token_text": "Token-16223",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 12069,
+        "token_text": "Token-12069",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 49658,
+        "token_text": "Token-49658",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 37667,
+        "token_text": "Token-37667",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 49938,
+        "token_text": "Token-49938",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 43407,
+        "token_text": "Token-43407",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 32896,
+        "token_text": "Token-32896",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 5566,
+        "token_text": "Token-5566",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 21216,
+        "token_text": "Token-21216",
+        "distinctiveness": 4.0
+      }
+    ],
+    "early_20th": [
+      {
+        "token_id": 14599,
+        "token_text": "Token-14599",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 38656,
+        "token_text": "Token-38656",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 12521,
+        "token_text": "Token-12521",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 9551,
+        "token_text": "Token-9551",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 20106,
+        "token_text": "Token-20106",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 44820,
+        "token_text": "Token-44820",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 5584,
+        "token_text": "Token-5584",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 22041,
+        "token_text": "Token-22041",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 26833,
+        "token_text": "Token-26833",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 32811,
+        "token_text": "Token-32811",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 32062,
+        "token_text": "Token-32062",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 30992,
+        "token_text": "Token-30992",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 14062,
+        "token_text": "Token-14062",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 37547,
+        "token_text": "Token-37547",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 35369,
+        "token_text": "Token-35369",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 31883,
+        "token_text": "Token-31883",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 35768,
+        "token_text": "Token-35768",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 36864,
+        "token_text": "Token-36864",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 22978,
+        "token_text": "Token-22978",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 37272,
+        "token_text": "Token-37272",
+        "distinctiveness": 4.0
+      }
+    ],
+    "mid_20th": [
+      {
+        "token_id": 27937,
+        "token_text": "Token-27937",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 25177,
+        "token_text": "Token-25177",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 24217,
+        "token_text": "Token-24217",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 26352,
+        "token_text": "Token-26352",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 23859,
+        "token_text": "Token-23859",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 24648,
+        "token_text": "Token-24648",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 24718,
+        "token_text": "Token-24718",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 25190,
+        "token_text": "Token-25190",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 20154,
+        "token_text": "Token-20154",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 4016,
+        "token_text": "Token-4016",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 36468,
+        "token_text": "Token-36468",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 2597,
+        "token_text": "Token-2597",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 9507,
+        "token_text": "Token-9507",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 19322,
+        "token_text": "Token-19322",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 17575,
+        "token_text": "Token-17575",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 15904,
+        "token_text": "Token-15904",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 16450,
+        "token_text": "Token-16450",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 15963,
+        "token_text": "Token-15963",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 20510,
+        "token_text": "Token-20510",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 46869,
+        "token_text": "Token-46869",
+        "distinctiveness": 4.0
+      }
+    ],
+    "contemporary": [
+      {
+        "token_id": 2990,
+        "token_text": "Token-2990",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 6654,
+        "token_text": "Token-6654",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 5899,
+        "token_text": "Token-5899",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 13463,
+        "token_text": "Token-13463",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 2322,
+        "token_text": "Token-2322",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 653,
+        "token_text": "Token-653",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 9178,
+        "token_text": "Token-9178",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 5019,
+        "token_text": "Token-5019",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 9156,
+        "token_text": "Token-9156",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 36819,
+        "token_text": "Token-36819",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 1844,
+        "token_text": "Token-1844",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 9018,
+        "token_text": "Token-9018",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 3385,
+        "token_text": "Token-3385",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 889,
+        "token_text": "Token-889",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 86,
+        "token_text": "Token-86",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 4509,
+        "token_text": "Token-4509",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 1107,
+        "token_text": "Token-1107",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 26901,
+        "token_text": "Token-26901",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 12271,
+        "token_text": "Token-12271",
+        "distinctiveness": 4.0
+      },
+      {
+        "token_id": 16197,
+        "token_text": "Token-16197",
+        "distinctiveness": 4.0
+      }
+    ]
+  }
+}
