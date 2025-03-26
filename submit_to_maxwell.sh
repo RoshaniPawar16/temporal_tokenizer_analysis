@@ -11,15 +11,26 @@ echo "Running on node: $(hostname)"
 echo "Starting at: $(date)"
 echo "Working directory: $(pwd)"
 
-# Load required modules (adjust as needed for Maxwell environment)
-module load python/3.9
+# Load required modules for Python
+module load anaconda3/2022.10
 
-# Create and activate a virtual environment if needed
-# python -m venv .venv
-# source .venv/bin/activate
+# Create and activate a virtual environment
+if [ ! -d "venv" ]; then
+    echo "Creating virtual environment..."
+    python -m venv venv
+fi
 
-# Install required packages if needed
-# pip install transformers numpy matplotlib seaborn cvxpy pandas
+echo "Activating virtual environment..."
+source venv/bin/activate
+
+# Install required packages
+echo "Installing required packages..."
+pip install --no-cache-dir transformers numpy matplotlib seaborn pandas cvxpy tqdm
+
+# Verify installations
+python -c "import transformers; print('Transformers version:', transformers.__version__)"
+python -c "import numpy; print('NumPy version:', numpy.__version__)"
+python -c "import matplotlib; print('Matplotlib version:', matplotlib.__version__)"
 
 # Run the analysis script with different configurations
 echo "Running uniform distribution analysis..."
