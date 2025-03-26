@@ -1,65 +1,49 @@
 """
-Statistical Validator for Temporal Inference
+Statistical validation for temporal distribution inference.
 
-Implements bootstrapping to estimate uncertainty in temporal distribution inference.
+This module provides methods for assessing the reliability of inferred
+temporal distributions through statistical techniques like bootstrapping.
 """
 
-import numpy as np
-import matplotlib.pyplot as plt
-import random
 import logging
-from typing import Dict, List, Callable, Optional
-import json
-from pathlib import Path
-
-from ..config import RESULTS_DIR
+import random
+import numpy as np
+from typing import Dict, List, Callable, Any
 
 logger = logging.getLogger(__name__)
 
 class TemporalValidator:
     """
-    Validates temporal distribution inference with bootstrapping.
-    Designed for resource-constrained environments.
+    Implements statistical validation techniques for temporal distribution inference.
     """
     
-    def __init__(self, inference_method: Callable):
+    def __init__(self, inference_method: Callable[[Dict[str, List[str]]], Dict[str, float]]):
         """
-        Initialize with inference method to validate.
+        Initialize with an inference method.
         
         Args:
-            inference_method: Function that performs inference
+            inference_method: Function that takes texts by decade and returns a distribution
         """
         self.inference_method = inference_method
-        self.results_dir = RESULTS_DIR / "validation"
-        self.results_dir.mkdir(parents=True, exist_ok=True)
     
-    def bootstrap_analysis(self,
-                         decade_texts: Dict[str, List[str]],
-                         n_bootstrap: int = 5,  # Reduced for resource constraints
+    def bootstrap_analysis(self, 
+                         decade_texts: Dict[str, List[str]], 
+                         n_bootstrap: int = 100, 
                          sample_ratio: float = 0.8) -> Dict[str, Dict[str, float]]:
         """
-        Perform bootstrap resampling to estimate uncertainty.
+        Perform bootstrap analysis to estimate confidence intervals.
         
         Args:
             decade_texts: Dictionary mapping decades to lists of texts
             n_bootstrap: Number of bootstrap iterations
-            sample_ratio: Proportion of texts to sample in each iteration
+            sample_ratio: Proportion of data to sample in each iteration
             
         Returns:
             Dictionary with confidence intervals for each decade
         """
-        # Filter to non-empty decades
-        decade_texts = {decade: texts for decade, texts in decade_texts.items() if texts}
-        
-        if not decade_texts:
-            logger.warning("No data available for bootstrapping")
-            return {}
-        
-        # Track bootstrap results
-        bootstrap_results = []
-        
-        # Run bootstrap iterations
         logger.info(f"Running {n_bootstrap} bootstrap iterations...")
+        
+        bootstrap_results = []
         
         for i in range(n_bootstrap):
             logger.info(f"Bootstrap iteration {i+1}/{n_bootstrap}")
@@ -67,92 +51,140 @@ class TemporalValidator:
             # Create bootstrap sample
             bootstrap_sample = {}
             for decade, texts in decade_texts.items():
-                # Calculate sample size
-                sample_size = max(1, int(len(texts) * sample_ratio))
-                # Sample with replacement
-                bootstrap_sample[decade] = random.choices(texts, k=sample_size)
+                if texts:
+                    # Sample with replacement
+                    sample_size = max(1, int(len(texts) * sample_ratio))
+                    bootstrap_sample[decade] = random.choices(texts, k=sample_size)
             
             # Run inference on bootstrap sample
-            try:
-                result = self.inference_method(bootstrap_sample)
-                bootstrap_results.append(result)
-            except Exception as e:
-                logger.warning(f"Inference failed on bootstrap sample: {e}")
+            distribution = self.inference_method(bootstrap_sample)
+            
+            bootstrap_results.append(distribution)
         
         # Calculate statistics
         all_decades = set()
-        for result in bootstrap_results:
-            all_decades.update(result.keys())
+        for dist in bootstrap_results:
+            all_decades.update(dist.keys())
         
         confidence_intervals = {}
         for decade in all_decades:
-            # Get all proportion estimates for this decade
-            proportions = [result.get(decade, 0) for result in bootstrap_results]
-            
-            if not proportions:
-                continue
-                
-            # Calculate statistics
-            confidence_intervals[decade] = {
-                "mean": float(np.mean(proportions)),
-                "std_dev": float(np.std(proportions)),
-                "lower_ci": float(np.percentile(proportions, 5) if len(proportions) >= 3 else 0),
-                "upper_ci": float(np.percentile(proportions, 95) if len(proportions) >= 3 else 0)
-            }
+            values = [dist.get(decade, 0) for dist in bootstrap_results]
+            if values:
+                confidence_intervals[decade] = {
+                    "mean": np.mean(values),
+                    "std_dev": np.std(values),
+                    "lower_ci": np.percentile(values, 2.5),  # 95% confidence interval
+                    "upper_ci": np.percentile(values, 97.5),
+                    "median": np.median(values),
+                    "min": np.min(values),
+                    "max": np.max(values)
+                }
         
         return confidence_intervals
     
-    def visualize_uncertainty(self, 
-                            confidence_intervals: Dict[str, Dict[str, float]],
-                            point_estimate: Optional[Dict[str, float]] = None):
+    def cross_validation(self, 
+                       decade_texts: Dict[str, List[str]], 
+                       k_folds: int = 5) -> Dict[str, Dict[str, float]]:
         """
-        Visualize bootstrap results with confidence intervals.
+        Perform k-fold cross-validation for assessing prediction stability.
         
         Args:
-            confidence_intervals: Results from bootstrap_analysis
-            point_estimate: Single point estimate for comparison
+            decade_texts: Dictionary mapping decades to lists of texts
+            k_folds: Number of folds for cross-validation
+            
+        Returns:
+            Dictionary with cross-validation results
         """
-        if not confidence_intervals:
-            logger.warning("No confidence intervals to visualize")
-            return
+        logger.info(f"Running {k_folds}-fold cross-validation...")
         
-        # Sort decades chronologically
-        decades = sorted(confidence_intervals.keys())
+        # Prepare folds
+        folds = []
+        for _ in range(k_folds):
+            fold = {}
+            for decade, texts in decade_texts.items():
+                if texts:
+                    # Random subset (without replacement)
+                    subset_size = len(texts) // k_folds
+                    if subset_size > 0:
+                        fold[decade] = random.sample(texts, subset_size)
+            folds.append(fold)
         
-        # Extract data
-        means = [confidence_intervals[d]["mean"] for d in decades]
-        lower = [confidence_intervals[d].get("lower_ci", means[i] * 0.8) for i, d in enumerate(decades)]
-        upper = [confidence_intervals[d].get("upper_ci", means[i] * 1.2) for i, d in enumerate(decades)]
+        # Run inference on each fold
+        fold_results = []
+        for i, fold in enumerate(folds):
+            logger.info(f"Processing fold {i+1}/{k_folds}")
+            distribution = self.inference_method(fold)
+            fold_results.append(distribution)
         
-        # Calculate error bars
-        errors_lower = [means[i] - lower[i] for i in range(len(means))]
-        errors_upper = [upper[i] - means[i] for i in range(len(means))]
+        # Calculate statistics
+        all_decades = set()
+        for dist in fold_results:
+            all_decades.update(dist.keys())
         
-        # Create figure
-        plt.figure(figsize=(12, 6))
+        cv_results = {}
+        for decade in all_decades:
+            values = [dist.get(decade, 0) for dist in fold_results]
+            if values:
+                cv_results[decade] = {
+                    "mean": np.mean(values),
+                    "std_dev": np.std(values),
+                    "coefficient_of_variation": np.std(values) / np.mean(values) if np.mean(values) > 0 else 0
+                }
         
-        # Plot confidence intervals
-        plt.bar(
-            decades, 
-            means, 
-            alpha=0.7, 
-            color='skyblue', 
-            yerr=[errors_lower, errors_upper],
-            capsize=5
-        )
+        return cv_results
+    
+    def sensitivity_analysis(self, 
+                          decade_texts: Dict[str, List[str]], 
+                          sample_fractions: List[float] = [0.2, 0.4, 0.6, 0.8, 1.0]) -> Dict:
+        """
+        Perform sensitivity analysis to data volume.
         
-        # Add data labels
-        for i, v in enumerate(means):
-            plt.text(i, v + 0.01, f"{v:.1%}", ha='center')
+        Args:
+            decade_texts: Dictionary mapping decades to lists of texts
+            sample_fractions: Fractions of data to sample
+            
+        Returns:
+            Dictionary with sensitivity analysis results
+        """
+        logger.info(f"Running sensitivity analysis with fractions: {sample_fractions}")
         
-        # Add title and labels
-        plt.title('Temporal Distribution with Confidence Intervals')
-        plt.xlabel('Decade')
-        plt.ylabel('Estimated Proportion')
-        plt.xticks(rotation=45)
-        plt.grid(axis='y', linestyle='--', alpha=0.7)
-        plt.tight_layout()
+        # Run inference with different data volumes
+        results = {}
+        for fraction in sample_fractions:
+            logger.info(f"Processing {fraction:.1%} of data")
+            
+            # Sample data
+            sampled_data = {}
+            for decade, texts in decade_texts.items():
+                if texts:
+                    sample_size = max(1, int(len(texts) * fraction))
+                    sampled_data[decade] = random.sample(texts, min(sample_size, len(texts)))
+            
+            # Run inference
+            distribution = self.inference_method(sampled_data)
+            results[fraction] = distribution
         
-        # Save figure
-        plt.savefig(self.results_dir / "temporal_distribution_uncertainty.png")
-        plt.close()
+        # Analyze stability across different data volumes
+        all_decades = set()
+        for dist in results.values():
+            all_decades.update(dist.keys())
+            
+        stability_metrics = {}
+        for decade in all_decades:
+            # Extract values across different fractions
+            values = [dist.get(decade, 0) for dist in results.values()]
+            
+            # Calculate variability
+            if len(values) > 1:
+                stability_metrics[decade] = {
+                    "values": {str(fraction): results[fraction].get(decade, 0) 
+                             for fraction in sample_fractions},
+                    "range": max(values) - min(values),
+                    "std_dev": np.std(values),
+                    "coefficient_of_variation": np.std(values) / np.mean(values) if np.mean(values) > 0 else 0
+                }
+        
+        return {
+            "distributions": results,
+            "stability_metrics": stability_metrics
+        }
