@@ -37,9 +37,9 @@ class TemporalDatasetManager:
         self.metadata_path = self.dataset_dir / "dataset_metadata.json"
     
     def build_temporal_dataset(self,
-                          texts_per_decade: int = 100,
-                          balance_sources: bool = True,
-                          save_dataset: bool = True) -> Dict[str, List[Tuple[str, str]]]:
+                      texts_per_decade: int = 100,
+                      balance_sources: bool = True,
+                      save_dataset: bool = True) -> Dict[str, List[Tuple[str, str]]]:
         """
         Build comprehensive historical dataset combining multiple sources with improved balance.
         
@@ -49,6 +49,13 @@ class TemporalDatasetManager:
             save_dataset: Whether to save dataset to disk
         """
         logger.info(f"Building temporal dataset with {texts_per_decade} texts per decade...")
+        
+        # Clear Gutenberg cache to force metadata regeneration
+        import os
+        gutenberg_cache_path = CACHE_DIR / "gutenberg_cache" / "gutenberg_metadata.json"
+        if os.path.exists(gutenberg_cache_path):
+            os.remove(gutenberg_cache_path)
+            logger.info(f"Removed Gutenberg metadata cache to force regeneration")
         
         # Define minimum acceptable texts per decade to ensure proper analysis
         min_texts_per_decade = {
