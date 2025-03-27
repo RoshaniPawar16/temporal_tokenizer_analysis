@@ -337,6 +337,11 @@ class TemporalDatasetManager:
         all_bl_texts = self.bl_loader.load_decade_samples(50)  # Get more than needed
         all_gutenberg_texts = self.gutenberg_loader.load_decade_samples(50)
         
+        # Handle case where Gutenberg loader returns None
+        if all_gutenberg_texts is None:
+            logger.error("Gutenberg loader returned None instead of dataset dictionary")
+            all_gutenberg_texts = {}  # Use empty dict as fallback
+        
         # Build the controlled dataset
         controlled_dataset = {}
         for decade, count in texts_per_decade.items():
@@ -370,7 +375,7 @@ class TemporalDatasetManager:
             logger.info(f"{decade}: {prop:.2%} (target: {target:.2%}, diff: {prop-target:.2%})")
         
         return controlled_dataset
-
+    
     # Add a method to evaluate MSE between distributions (like Hayase et al.)
     def calculate_distribution_mse(self, predicted: Dict[str, float], true: Dict[str, float]) -> float:
         """

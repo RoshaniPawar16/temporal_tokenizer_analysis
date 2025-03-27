@@ -92,6 +92,8 @@ class GutenbergLoader:
         Returns:
             Dict: Mapping of book IDs to their metadata
         """
+        metadata = {}  # Initialize empty dictionary to ensure we always return something
+        
         try:
             # Download catalog with timeout and retry
             for attempt in range(3):
@@ -101,14 +103,14 @@ class GutenbergLoader:
                     break
                 except (requests.RequestException, requests.Timeout) as e:
                     if attempt == 2:
-                        raise e
+                        logger.error(f"Failed to download catalog after 3 attempts: {e}")
+                        return metadata
                     logger.warning(f"Attempt {attempt + 1} failed. Retrying...")
             
             # Parse catalog
             catalog_df = pd.read_csv(pd.io.common.StringIO(response.text))
             
             # Process entries
-            metadata = {}
             for _, row in tqdm(catalog_df.iterrows(), 
                             total=len(catalog_df),
                             desc="Processing Gutenberg catalog"):
@@ -184,11 +186,11 @@ class GutenbergLoader:
                 json.dump(metadata, f, indent=2)
             
             logger.info(f"Created catalog with {len(metadata)} books")
-            return metadata
-            
+                
         except Exception as e:
             logger.error(f"Failed to create catalog: {e}")
-            return {}
+        
+        return metadata  # Always return the dictionary, even if empty
     
     def _get_historical_book_supplement(self) -> Dict[str, Dict]:
         """
@@ -411,85 +413,175 @@ class GutenbergLoader:
         """
         decade_texts = {decade: [] for decade in TIME_PERIODS.keys()}
         
-        # Add explicit debug logs to track metadata distribution
-        if not self.metadata:
-            logger.error("No metadata available - catalog may be empty or corrupted")
-            return decade_texts
-        
-        # Log number of books by century
-        century_counts = {"pre-1800": 0, "1800s": 0, "1900s": 0, "2000s": 0}
-        for meta in self.metadata.values():
-            year = meta.get('year')
-            if year:
-                if year < 1800:
-                    century_counts["pre-1800"] += 1
-                elif year < 1900:
-                    century_counts["1800s"] += 1
-                elif year < 2000:
-                    century_counts["1900s"] += 1
+        try:
+            # Add explicit debug logs to track metadata distribution
+            if not self.metadata:
+                logger.error("No metadata available - catalog may be empty or corrupted")
+                return decade_texts
+            
+            # Log number of books by century
+            century_counts = {"pre-1800": 0, "1800s": 0, "1900s": 0, "2000s": 0}
+            for meta in self.metadata.values():
+                year = meta.get('year')
+                if year:
+                    if year < 1800:
+                        century_counts["pre-1800"] += 1
+                    elif year < 1900:
+                        century_counts["1800s"] += 1
+                    elif year < 2000:
+                        century_counts["1900s"] += 1
+                    else:
+                        century_counts["2000s"] += 1
+            
+            logger.info("Metadata distribution by century:")
+            for century, count in century_counts.items():
+                logger.info(f"  {century}: {count} books")
+            
+            # Prioritize historical decades (use higher counts for older time periods)
+            prioritized_counts = {}
+            for decade in TIME_PERIODS.keys():
+                decade_start = int(decade[:4])
+                if decade_start < 1900:
+                    # Double the count for 19th century
+                    prioritized_counts[decade] = texts_per_decade * 2
+                elif decade_start < 1950:
+                    # 1.5x count for early 20th century
+                    prioritized_counts[decade] = int(texts_per_decade * 1.5)
                 else:
-                    century_counts["2000s"] += 1
-        
-        logger.info("Metadata distribution by century:")
-        for century, count in century_counts.items():
-            logger.info(f"  {century}: {count} books")
-        
-        # Prioritize historical decades (use higher counts for older time periods)
-        prioritized_counts = {}
-        for decade in TIME_PERIODS.keys():
-            decade_start = int(decade[:4])
-            if decade_start < 1900:
-                # Double the count for 19th century
-                prioritized_counts[decade] = texts_per_decade * 2
-            elif decade_start < 1950:
-                # 1.5x count for early 20th century
-                prioritized_counts[decade] = int(texts_per_decade * 1.5)
-            else:
-                # Standard count for modern periods
-                prioritized_counts[decade] = texts_per_decade
-        
-        # Check if we need to use the historical catalog supplement
-        need_historical = any(int(decade[:4]) < 1970 for decade in TIME_PERIODS.keys())
-        
-        # If we're missing historical metadata but need it, use the historical supplement
-        if need_historical and not self._has_historical_catalog():
-            logger.info("Adding historical book catalog supplement")
-            self._add_historical_catalog_supplement()
-        
-        # Group books by decade
-        decade_book_ids = {decade: [] for decade in TIME_PERIODS.keys()}
-        
-        # Count books without decade assignment for debugging
-        unassigned_books = 0
-        
-        # First pass: Process all books in the catalog
-        for book_id, meta in self.metadata.items():
-            year = meta.get('year')
-            if not year:
-                unassigned_books += 1
-                continue
+                    # Standard count for modern periods
+                    prioritized_counts[decade] = texts_per_decade
             
-            if english_only and meta.get('language', 'en') != 'en':
-                continue
+            # Check if we need to use the historical catalog supplement
+            need_historical = any(int(decade[:4]) < 1970 for decade in TIME_PERIODS.keys())
             
-            # Assign to decade
-            decade_assigned = False
-            for decade, (start_year, end_year) in TIME_PERIODS.items():
-                if start_year <= year <= end_year:
-                    decade_book_ids[decade].append(book_id)
-                    decade_assigned = True
-                    break
+            # If we're missing historical metadata but need it, use the historical supplement
+            if need_historical and not self._has_historical_catalog():
+                logger.info("Adding historical book catalog supplement")
+                self._add_historical_catalog_supplement()
             
-            if not decade_assigned:
-                unassigned_books += 1
+            # Group books by decade
+            decade_book_ids = {decade: [] for decade in TIME_PERIODS.keys()}
+            
+            # Count books without decade assignment for debugging
+            unassigned_books = 0
+            
+            # First pass: Process all books in the catalog
+            for book_id, meta in self.metadata.items():
+                year = meta.get('year')
+                if not year:
+                    unassigned_books += 1
+                    continue
+                
+                if english_only and meta.get('language', 'en') != 'en':
+                    continue
+                
+                # Assign to decade
+                decade_assigned = False
+                for decade, (start_year, end_year) in TIME_PERIODS.items():
+                    if start_year <= year <= end_year:
+                        decade_book_ids[decade].append(book_id)
+                        decade_assigned = True
+                        break
+                
+                if not decade_assigned:
+                    unassigned_books += 1
+            
+            # Log unassigned books
+            logger.info(f"{unassigned_books} books could not be assigned to a decade")
+            
+            # Log the distribution of books by decade
+            logger.info("Initial book distribution by decade:")
+            for decade, book_ids in decade_book_ids.items():
+                logger.info(f"  {decade}: {len(book_ids)} books available")
+            
+            # Second pass: Use the historical book fallback for decades with insufficient data
+            for decade, book_ids in decade_book_ids.items():
+                target_count = prioritized_counts[decade]
+                decade_start = int(decade[:4])
+                
+                # For historical periods with insufficient data, add fallback books
+                if len(book_ids) < target_count and decade_start < 1970:
+                    logger.warning(f"Insufficient data for {decade}, need {target_count}, have {len(book_ids)}")
+                    additional_ids = self._get_fallback_books_for_decade(decade, target_count - len(book_ids))
+                    if additional_ids:
+                        logger.info(f"Added {len(additional_ids)} historical fallback books for {decade}")
+                        decade_book_ids[decade].extend(additional_ids)
+            
+            # Process each decade
+            for decade, book_ids in decade_book_ids.items():
+                target_count = prioritized_counts[decade]
+                
+                if not book_ids:
+                    logger.warning(f"No books found for {decade}")
+                    continue
+                
+                # Determine which book IDs to sample, with genre balancing if requested
+                if balance_genres and len(book_ids) > target_count:
+                    # Get genre for each book
+                    book_genres = {}
+                    for book_id in book_ids:
+                        genre = self._extract_genre(book_id)
+                        if genre not in book_genres:
+                            book_genres[genre] = []
+                        book_genres[genre].append(book_id)
+                    
+                    # Balance across genres
+                    genres = list(book_genres.keys())
+                    if genres:
+                        # Calculate books per genre
+                        per_genre = max(1, target_count // len(genres))
+                        sampled_ids = []
+                        
+                        for genre, ids in book_genres.items():
+                            # Take up to per_genre from each genre
+                            sample_size = min(per_genre, len(ids))
+                            if sample_size > 0:
+                                sampled_ids.extend(random.sample(ids, sample_size))
+                        
+                        # Fill remaining with random selection
+                        if len(sampled_ids) < target_count and book_ids:
+                            remaining = target_count - len(sampled_ids)
+                            remaining_ids = [bid for bid in book_ids if bid not in sampled_ids]
+                            if remaining_ids:
+                                sampled_ids.extend(random.sample(remaining_ids, min(remaining, len(remaining_ids))))
+                    else:
+                        # Sample more than needed to account for failed downloads
+                        sampled_ids = random.sample(book_ids, min(target_count * 2, len(book_ids)))
+                else:
+                    # Sample more than needed to account for failed downloads
+                    sampled_ids = random.sample(book_ids, min(target_count * 2, len(book_ids)))
+                
+                # Download and process the sampled books
+                successful_texts = 0
+                for book_id in tqdm(sampled_ids, desc=f"Loading {decade} texts"):
+                    try:
+                        text = self._fetch_and_clean_text(book_id)
+                        if not text or len(text) < min_text_length:
+                            continue
+                        
+                        # Create chunks and select one randomly
+                        chunks = self._create_chunks(text, chunk_size=5000)
+                        if chunks:
+                            selected_chunk = random.choice(chunks)
+                            decade_texts[decade].append(selected_chunk)
+                            successful_texts += 1
+                            
+                            if successful_texts >= target_count:
+                                break
+                                
+                    except Exception as e:
+                        logger.debug(f"Error processing book {book_id}: {e}")
+                        continue
+                
+                if decade_texts[decade]:
+                    logger.info(f"{decade}: {len(decade_texts[decade])} texts, " +
+                            f"avg length: {sum(len(t) for t in decade_texts[decade]) / len(decade_texts[decade]) if decade_texts[decade] else 0:.0f} chars")
         
-        # Log unassigned books
-        logger.info(f"{unassigned_books} books could not be assigned to a decade")
+        except Exception as e:
+            logger.error(f"Error loading decade samples: {e}")
+            # Don't return None, return the empty dictionary
         
-        # Log the distribution of books by decade
-        logger.info("Initial book distribution by decade:")
-        for decade, book_ids in decade_book_ids.items():
-            logger.info(f"  {decade}: {len(book_ids)} books available")
+        return decade_texts  # Ensure we always return the dictionary, even if empty
 
     def _has_historical_catalog(self) -> bool:
         """Check if the current catalog has sufficient historical coverage."""

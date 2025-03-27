@@ -364,7 +364,7 @@ def main():
     parser = argparse.ArgumentParser(description="Retrieve and analyze results from Maxwell HPC")
     parser.add_argument("--username", type=str, default="t06rp23", 
                       help="Your Maxwell username (default: t06rp23)")
-    parser.add_argument("--remote_dir", type=str, required=True,
+    parser.add_argument("--remote_dir", type=str, required=False,
                       help="Path to results directory on Maxwell")
     parser.add_argument("--base_dir", type=str, default="maxwell_results", 
                       help="Base name for local results directory (date will be appended)")
@@ -377,15 +377,15 @@ def main():
         print(f"Analyzing existing results directory: {args.analyze_only}")
         summary_dir = analyze_results(args.analyze_only)
     else:
+        # In this case, remote_dir is required
+        if not args.remote_dir:
+            parser.error("--remote_dir is required when not using --analyze_only")
+            
         # Download results from Maxwell
         local_dir = download_results(args.username, args.remote_dir, args.base_dir)
         
         # Analyze results
         summary_dir = analyze_results(local_dir)
-    
-    if summary_dir:
-        print(f"Results analysis complete. Summary available at: {summary_dir}")
-        print(f"Open {summary_dir}/summary_report.md for detailed findings.")
 
 if __name__ == "__main__":
     main() 
