@@ -294,31 +294,29 @@ def create_comparison_visualizations(inferred, ground_truth, dist_name, tokenize
     plt.savefig(results_dir / "figures" / f"{tokenizer_name}_{dist_name}_error.png", dpi=300)
     plt.close()
 
-def create_bootstrap_visualization(inferred, ground_truth, confidence_intervals, 
-                                 dist_name, tokenizer_name, results_dir):
-    """Create visualization with confidence intervals from bootstrap analysis."""
+def create_bootstrap_visualization(inferred_distribution, ground_truth_distribution, confidence_intervals, output_path=None):
+    """Create visualization of bootstrap results with confidence intervals."""
+    plt.figure(figsize=(14, 7))
+    
     # Sort decades chronologically
-    decades = sorted(confidence_intervals.keys())
+    decades = sorted(inferred_distribution.keys())
     
     # Extract data
-    means = [confidence_intervals[d]["mean"] for d in decades]
-    lower = [confidence_intervals[d].get("lower_ci", means[i] * 0.8) for i, d in enumerate(decades)]
-    upper = [confidence_intervals[d].get("upper_ci", means[i] * 1.2) for i, d in enumerate(decades)]
+    means = [inferred_distribution.get(d, 0) for d in decades]
+    lower = [confidence_intervals.get(d, {}).get('lower_ci', means[i] * 0.8) for i, d in enumerate(decades)]
+    upper = [confidence_intervals.get(d, {}).get('upper_ci', means[i] * 1.2) for i, d in enumerate(decades)]
     
-    # Calculate error bars
-    errors_lower = [means[i] - lower[i] for i in range(len(means))]
-    errors_upper = [upper[i] - means[i] for i in range(len(means))]
+    # Calculate error bars AS POSITIVE DISTANCES (this is the key fix)
+    errors_lower = [max(0, means[i] - lower[i]) for i in range(len(means))]  # Ensure positive
+    errors_upper = [max(0, upper[i] - means[i]) for i in range(len(means))]  # Ensure positive
     
-    # Create figure
-    plt.figure(figsize=(12, 6))
-    
-    # Plot with confidence intervals
+    # Plot with confidence intervals - specify yerr as a 2xN array for asymmetric errors
     plt.bar(
         decades,
         means,
         alpha=0.7,
         color='skyblue',
-        yerr=[errors_lower, errors_upper],
+        yerr=[errors_lower, errors_upper],  # This format expects positive values
         capsize=5,
         label="Bootstrap Estimate"
     )
