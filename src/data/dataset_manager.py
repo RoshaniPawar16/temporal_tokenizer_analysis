@@ -35,7 +35,78 @@ class TemporalDatasetManager:
         self.dataset_dir = PROCESSED_DATA_DIR / "temporal_dataset"
         self.dataset_dir.mkdir(parents=True, exist_ok=True)
         self.metadata_path = self.dataset_dir / "dataset_metadata.json"
-    
+    def create_large_dataset(self, distribution: Dict[str, float], target_size_gb: float = 1.0) -> Dict[str, List[Tuple[str, str]]]:
+        """
+        Create a dataset with specified target size in GB.
+        
+        Args:
+            distribution: Dictionary mapping decades to proportions
+            target_size_gb: Target size in gigabytes
+            
+        Returns:
+            Dictionary mapping decades to lists of (text, source) tuples
+        """
+        logger.info(f"Creating dataset with target size of {target_size_gb} GB and distribution: {distribution}")
+        
+        # Calculate target size in bytes
+        target_size_bytes = target_size_gb * 1024 * 1024 * 1024
+        
+        # Calculate bytes per decade based on distribution
+        bytes_per_decade = {decade: target_size_bytes * prop for decade, prop in distribution.items()}
+        
+        # Load all available source texts
+        all_texts = {}
+        # British Library texts
+        bl_texts = self.bl_loader.load_all_texts()
+        # Gutenberg texts
+        gutenberg_texts = self.gutenberg_loader.load_all_texts()
+        
+        # Combine sources
+        for decade in distribution.keys():
+            decade_bl = [(text, "british_library") for text in bl_texts.get(decade, [])]
+            decade_gutenberg = [(text, "gutenberg") for text in gutenberg_texts.get(decade, [])]
+            all_texts[decade] = decade_bl + decade_gutenberg
+        
+        # Build dataset with target sizes
+        dataset = {}
+        total_size_bytes = 0
+        
+        for decade, target_bytes in bytes_per_decade.items():
+            decade_texts = all_texts.get(decade, [])
+            if not decade_texts:
+                logger.warning(f"No texts available for {decade}")
+                dataset[decade] = []
+                continue
+            
+            # Calculate current size
+            decade_size = 0
+            decade_dataset = []
+            
+            # Keep adding texts until we reach target size
+            # Use texts with replacement if necessary
+            while decade_size < target_bytes and decade_texts:
+                # If we've used all texts once, resample with replacement
+                if len(decade_dataset) >= len(decade_texts):
+                    text, source = random.choice(decade_texts)
+                else:
+                    idx = len(decade_dataset) % len(decade_texts)
+                    text, source = decade_texts[idx]
+                
+                decade_dataset.append((text, source))
+                decade_size += len(text.encode('utf-8'))
+                
+                # Break if we've added a lot of texts but still haven't reached target
+                if len(decade_dataset) > 1000 and decade_size < target_bytes * 0.5:
+                    logger.warning(f"Unable to reach target size for {decade}, stopping at {decade_size/1024/1024/1024:.2f} GB")
+                    break
+            
+            dataset[decade] = decade_dataset
+            total_size_bytes += decade_size
+            logger.info(f"{decade}: {len(decade_dataset)} texts, {decade_size/1024/1024/1024:.2f} GB (target: {target_bytes/1024/1024/1024:.2f} GB)")
+        
+        logger.info(f"Total dataset size: {total_size_bytes/1024/1024/1024:.2f} GB")
+        return dataset
+
     def build_temporal_dataset(self,
                       texts_per_decade: int = 100,
                       balance_sources: bool = True,

@@ -59,6 +59,76 @@ class TemporalDistributionInference:
         self.results_dir = RESULTS_DIR / "temporal_inference"
         self.results_dir.mkdir(parents=True, exist_ok=True)
     
+    def analyze_merge_rule_dynamics(self, decade_patterns: Dict[str, Dict]) -> Dict[str, List[str]]:
+        """
+        Analyze how merge rules change in importance across decades.
+        This helps identify stronger temporal markers.
+        
+        Args:
+            decade_patterns: Results from analyze_decade_patterns
+            
+        Returns:
+            Dictionary mapping decades to lists of decade-specific merge rules
+        """
+        # Get all decades
+        decades = sorted(decade_patterns.keys())
+        
+        # Extract merge rules from each decade
+        all_merge_rules = set()
+        decade_rules = {}
+        
+        for decade, patterns in decade_patterns.items():
+            if 'merge_rules' in patterns:
+                rules = patterns['merge_rules']
+                decade_rules[decade] = rules
+                all_merge_rules.update(rules.keys())
+        
+        # Calculate normalized frequencies
+        normalized_freqs = {}
+        for rule in all_merge_rules:
+            normalized_freqs[rule] = {}
+            for decade in decades:
+                if decade in decade_rules and rule in decade_rules[decade]:
+                    total_tokens = decade_patterns[decade]['total_tokens']
+                    if total_tokens > 0:
+                        normalized_freqs[rule][decade] = decade_rules[decade][rule] / total_tokens
+                    else:
+                        normalized_freqs[rule][decade] = 0
+                else:
+                    normalized_freqs[rule][decade] = 0
+        
+        # Find rules that show clear temporal trends
+        temporal_rules = {}
+        for decade in decades:
+            decade_distinctive = []
+            
+            for rule in all_merge_rules:
+                # Skip rules that don't appear in this decade
+                if decade not in normalized_freqs[rule] or normalized_freqs[rule][decade] == 0:
+                    continue
+                    
+                # Get frequencies for this rule across all decades
+                decade_freqs = [normalized_freqs[rule].get(d, 0) for d in decades]
+                
+                # Calculate average frequency in other decades
+                other_freqs = [f for i, f in enumerate(decade_freqs) if decades[i] != decade]
+                if other_freqs and sum(other_freqs) > 0:
+                    avg_other = sum(other_freqs) / len(other_freqs)
+                    
+                    # Calculate distinctiveness
+                    if avg_other > 0:
+                        distinctiveness = normalized_freqs[rule][decade] / avg_other
+                        
+                        # This rule is distinctive if it's much more common in this decade
+                        if distinctiveness > 2.0:
+                            decade_distinctive.append((rule, distinctiveness))
+            
+            # Sort by distinctiveness
+            decade_distinctive.sort(key=lambda x: x[1], reverse=True)
+            temporal_rules[decade] = [rule for rule, _ in decade_distinctive[:20]]
+        
+        return temporal_rules
+
     def analyze_decade_patterns(self, decade_texts: Dict[str, List[str]], sample_size: int = 5000) -> Dict[str, Dict]:
         """
         Analyze merge rules and token patterns for each decade with improved sampling.
@@ -221,17 +291,17 @@ class TemporalDistributionInference:
         return distinctive_patterns
     
     def infer_temporal_distribution(self, 
-                                 decade_patterns: Dict[str, Dict],
-                                 weight_early_merges: bool = True,
-                                 continuity_constraint: bool = True) -> Dict[str, float]:
+                             decade_patterns: Dict[str, Dict],
+                             num_merge_rules: int = 3000,
+                             weight_early_merges: bool = True) -> Dict[str, float]:
         """
         Infer the temporal distribution in training data using linear programming.
-        This improved implementation better approximates the approach from Hayase et al.
+        More closely approximates Hayase et al.'s approach.
         
         Args:
             decade_patterns: Results from analyze_decade_patterns
+            num_merge_rules: Number of merge rules to consider
             weight_early_merges: Whether to give higher weight to earlier merge rules
-            continuity_constraint: Whether to add temporal continuity constraints
             
         Returns:
             Dictionary mapping decades to their estimated proportion
@@ -244,69 +314,56 @@ class TemporalDistributionInference:
         
         try:
             # Prepare linear programming variables
-            alpha = {decade: cp.Variable(pos=True) for decade in decades}
+            alpha = cp.Variable(len(decades), pos=True)
             
             # Sum-to-one constraint
-            constraints = [sum(alpha.values()) == 1]
+            constraints = [cp.sum(alpha) == 1]
             
-            # Add minimum representation constraint
-            for decade in decades:
-                constraints.append(alpha[decade] >= 0.001)  # Ensure at least 0.1% representation
+            # Extract merge rule frequencies for each decade
+            merge_frequencies = {}
+            for i, decade in enumerate(decades):
+                if 'merge_rules' in decade_patterns[decade]:
+                    for rule, count in decade_patterns[decade]['merge_rules'].items():
+                        if rule not in merge_frequencies:
+                            merge_frequencies[rule] = np.zeros(len(decades))
+                        merge_frequencies[rule][i] = count / decade_patterns[decade]['total_tokens']
             
-            # Add temporal continuity constraints if requested
-            if continuity_constraint:
-                for i in range(len(decades) - 1):
-                    current, next_decade = decades[i], decades[i+1]
-                    # Limit difference between adjacent decades
-                    constraints.append(cp.abs(alpha[current] - alpha[next_decade]) <= 0.2)
-            
-            # Calculate pattern weights based on distinctiveness
-            distinctive_patterns = self.find_distinctive_patterns(decade_patterns)
-            
-            # Create objective function based on distinctive patterns
-            obj_terms = []
-            
-            for decade, patterns in distinctive_patterns.items():
-                for i, (pattern, distinctiveness) in enumerate(patterns):
-                    # Give more weight to more distinctive patterns
-                    weight = distinctiveness
-                    
-                    # Weight early merges more heavily if requested
-                    if weight_early_merges and i < len(patterns) // 2:
-                        weight *= 1.5
-                    
-                    # Create objective term that rewards matching the distinctive pattern
-                    obj_terms.append(weight * alpha[decade])
-            
-            # If no distinctive patterns found, use default uniform distribution
-            if not obj_terms:
-                return {decade: 1.0 / len(decades) for decade in decades}
-            
-            # Define objective function (maximize sum of weighted distinctive patterns)
-            objective = cp.Maximize(sum(obj_terms))
-            
-            # Solve the problem
-            prob = cp.Problem(objective, constraints)
-            prob.solve()
-            
-            # Extract solution
-            if prob.status == cp.OPTIMAL:
-                distribution = {decade: float(var.value) for decade, var in alpha.items()}
+            # Sort merge rules by frequency and take top N
+            if merge_frequencies:
+                merge_rules = sorted(merge_frequencies.keys(), 
+                                key=lambda r: sum(merge_frequencies[r]), 
+                                reverse=True)[:num_merge_rules]
                 
-                # Normalize to ensure sum to 1
-                total = sum(distribution.values())
-                if total > 0:
-                    return {decade: value / total for decade, value in distribution.items()}
-                else:
-                    return {decade: 1.0 / len(decades) for decade in decades}
-            else:
-                logger.warning(f"Linear programming failed with status: {prob.status}")
+                # Construct objective function matrix
+                objective_terms = []
+                for rule in merge_rules:
+                    freqs = merge_frequencies[rule]
+                    if sum(freqs) > 0:
+                        # Add term rewarding models whose merge rule distributions match the inferred alpha
+                        objective_terms.append(cp.sum(cp.multiply(alpha, freqs)))
                 
+                # Objective: maximize sum of weighted merge rule matches
+                objective = cp.Maximize(sum(objective_terms))
+                
+                # Solve the problem
+                prob = cp.Problem(objective, constraints)
+                prob.solve()
+                
+                # Extract solution
+                if prob.status == cp.OPTIMAL:
+                    distribution = {decade: float(alpha.value[i]) for i, decade in enumerate(decades)}
+                    
+                    # Normalize to ensure sum to 1
+                    total = sum(distribution.values())
+                    if total > 0:
+                        return {decade: value / total for decade, value in distribution.items()}
+            
+            # If we get here, something went wrong with the LP approach
+            logger.warning("Linear programming approach failed, falling back to heuristic")
         except Exception as e:
             logger.error(f"Error in linear programming: {e}")
         
         # Fallback to simple heuristic method
-        logger.info("Falling back to heuristic method")
         return self._infer_distribution_heuristic(decade_patterns)
     
     def _infer_distribution_heuristic(self, decade_patterns: Dict[str, Dict]) -> Dict[str, float]:
@@ -460,6 +517,13 @@ class TemporalDistributionInference:
         logger.info("Finding distinctive patterns...")
         distinctive_patterns = self.find_distinctive_patterns(decade_patterns)
         
+        # Analyze temporal dynamics of merge rules
+        temporal_markers = self.analyze_merge_rule_dynamics(decade_patterns)
+        logger.info("Found temporal marker merge rules:")
+        for decade, rules in temporal_markers.items():
+            if rules:
+                logger.info(f"  {decade}: {', '.join(rules[:5])}")
+
         # Step 3: Infer temporal distribution with enhanced approach
         logger.info("Inferring temporal distribution...")
         distribution = self.infer_temporal_distribution(

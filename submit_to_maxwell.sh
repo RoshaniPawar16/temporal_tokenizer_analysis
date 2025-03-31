@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=temporal_analysis
-#SBATCH --time=24:00:00
+#SBATCH --time=48:00:00    # Increased time for larger data processing
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=64G
@@ -32,30 +32,30 @@ python -c "import transformers; print('Transformers version:', transformers.__ve
 python -c "import numpy; print('NumPy version:', numpy.__version__)"
 python -c "import cvxpy; print('CVXPY version:', cvxpy.__version__)"
 
-# Set high data volume for more reliable results
+# Set high data volume for more reliable results and match Hayase et al.
 TEXTS_PER_DECADE=10000
+TARGET_SIZE_GB=1.0  # Match paper's 1GB per category for analysis
 
-# Run analysis for all distribution patterns with bootstrap validation
-echo "Running analyses with high data volume (${TEXTS_PER_DECADE} texts per decade)..."
+echo "Running analyses with high data volume (${TEXTS_PER_DECADE} texts per decade, ${TARGET_SIZE_GB}GB per category)..."
 
 echo "Running uniform distribution analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution uniform --texts_per_decade ${TEXTS_PER_DECADE} --bootstrap --bootstrap_iterations 100
+python run_on_maxwell.py --tokenizer gpt2 --distribution uniform --texts_per_decade ${TEXTS_PER_DECADE} --target_size_gb ${TARGET_SIZE_GB} --bootstrap --bootstrap_iterations 50
 
 echo "Running recency bias analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution recency_bias --texts_per_decade ${TEXTS_PER_DECADE} --bootstrap --bootstrap_iterations 100
+python run_on_maxwell.py --tokenizer gpt2 --distribution recency_bias --texts_per_decade ${TEXTS_PER_DECADE} --target_size_gb ${TARGET_SIZE_GB} --bootstrap --bootstrap_iterations 50
 
 echo "Running historical bias analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution historical_bias --texts_per_decade ${TEXTS_PER_DECADE} --bootstrap --bootstrap_iterations 100
+python run_on_maxwell.py --tokenizer gpt2 --distribution historical_bias --texts_per_decade ${TEXTS_PER_DECADE} --target_size_gb ${TARGET_SIZE_GB} --bootstrap --bootstrap_iterations 50
 
 echo "Running bimodal distribution analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution bimodal --texts_per_decade ${TEXTS_PER_DECADE} --bootstrap --bootstrap_iterations 100
+python run_on_maxwell.py --tokenizer gpt2 --distribution bimodal --texts_per_decade ${TEXTS_PER_DECADE} --target_size_gb ${TARGET_SIZE_GB} --bootstrap --bootstrap_iterations 50
 
 # Compare results across different tokenizers (using recency_bias as the test case)
 echo "Running tokenizer comparison with gpt2-medium..."
-python run_on_maxwell.py --tokenizer gpt2-medium --distribution recency_bias --texts_per_decade ${TEXTS_PER_DECADE} --bootstrap
+python run_on_maxwell.py --tokenizer gpt2-medium --distribution recency_bias --texts_per_decade ${TEXTS_PER_DECADE} --target_size_gb ${TARGET_SIZE_GB} --bootstrap
 
 echo "Running tokenizer comparison with bert-base-uncased..."
-python run_on_maxwell.py --tokenizer bert-base-uncased --distribution recency_bias --texts_per_decade ${TEXTS_PER_DECADE} --bootstrap
+python run_on_maxwell.py --tokenizer bert-base-uncased --distribution recency_bias --texts_per_decade ${TEXTS_PER_DECADE} --target_size_gb ${TARGET_SIZE_GB} --bootstrap
 
 # Create comparison visualizations
 echo "Creating comprehensive comparison visualizations..."

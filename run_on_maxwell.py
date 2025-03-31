@@ -98,7 +98,7 @@ def run_analysis(args):
     selected_dist = dist_info["distribution"]
     
     logger.info(f"Running analysis for {dist_info['name']} with {args.tokenizer} tokenizer")
-    logger.info(f"Using {args.texts_per_decade} texts per decade")
+    logger.info(f"Using {args.texts_per_decade} texts per decade and {args.target_size_gb}GB target size")
     
     # Create timestamp for this run
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -115,11 +115,21 @@ def run_analysis(args):
     evaluator = TemporalEvaluationMetrics()
     
     # Create controlled dataset
-    logger.info("Creating controlled dataset...")
-    controlled_dataset = dataset_manager.create_controlled_dataset(
-        distribution=selected_dist,
-        total_texts=args.texts_per_decade * len(selected_dist)
-    )
+    logger.info(f"Creating dataset with target size of {args.target_size_gb}GB per category...")
+    
+    # Determine which dataset creation method to use based on target size
+    if args.target_size_gb > 0:
+        # Create large dataset with target size in GB (matching Hayase et al.)
+        controlled_dataset = dataset_manager.create_large_dataset(
+            distribution=selected_dist,
+            target_size_gb=args.target_size_gb
+        )
+    else:
+        # Fall back to text count-based dataset creation
+        controlled_dataset = dataset_manager.create_controlled_dataset(
+            distribution=selected_dist,
+            total_texts=args.texts_per_decade * len(selected_dist)
+        )
     
     # Extract just texts (without source info)
     decade_texts = {decade: [text for text, _ in texts] 
@@ -294,7 +304,7 @@ def create_comparison_visualizations(inferred, ground_truth, dist_name, tokenize
     plt.savefig(results_dir / "figures" / f"{tokenizer_name}_{dist_name}_error.png", dpi=300)
     plt.close()
 
-def create_bootstrap_visualization(inferred_distribution, ground_truth_distribution, confidence_intervals, output_path=None):
+def create_bootstrap_visualization(inferred_distribution, ground_truth_distribution, confidence_intervals, dist_name, tokenizer_name, results_dir):
     """Create visualization of bootstrap results with confidence intervals."""
     plt.figure(figsize=(14, 7))
     
@@ -306,11 +316,11 @@ def create_bootstrap_visualization(inferred_distribution, ground_truth_distribut
     lower = [confidence_intervals.get(d, {}).get('lower_ci', means[i] * 0.8) for i, d in enumerate(decades)]
     upper = [confidence_intervals.get(d, {}).get('upper_ci', means[i] * 1.2) for i, d in enumerate(decades)]
     
-    # Calculate error bars AS POSITIVE DISTANCES (this is the key fix)
+    # Calculate error bars AS POSITIVE DISTANCES
     errors_lower = [max(0, means[i] - lower[i]) for i in range(len(means))]  # Ensure positive
     errors_upper = [max(0, upper[i] - means[i]) for i in range(len(means))]  # Ensure positive
     
-    # Plot with confidence intervals - specify yerr as a 2xN array for asymmetric errors
+    # Plot with confidence intervals
     plt.bar(
         decades,
         means,
@@ -322,7 +332,7 @@ def create_bootstrap_visualization(inferred_distribution, ground_truth_distribut
     )
     
     # Add ground truth as points
-    plt.plot(decades, [ground_truth.get(d, 0) for d in decades], 'ro', label="Ground Truth")
+    plt.plot(decades, [ground_truth_distribution.get(d, 0) for d in decades], 'ro', label="Ground Truth")
     
     # Add data labels
     for i, v in enumerate(means):
@@ -499,6 +509,8 @@ if __name__ == "__main__":
     parser.add_argument("--tokenizer", type=str, default="gpt2", help="Tokenizer to analyze")
     parser.add_argument("--texts_per_decade", type=int, default=1000, 
                       help="Number of texts per decade (higher = more accurate)")
+    parser.add_argument("--target_size_gb", type=float, default=0.0,
+                      help="Target size in GB per category (higher = more accurate, matching Hayase paper)")
     parser.add_argument("--distribution", type=str, default="uniform", 
                       choices=["uniform", "recency_bias", "historical_bias", "bimodal", "all"],
                       help="Distribution pattern to test (use 'all' to run all patterns)")
