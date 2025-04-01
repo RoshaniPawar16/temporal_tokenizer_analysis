@@ -64,9 +64,18 @@ class TemporalDatasetManager:
         # British Library texts - using the correct parameter name 'per_decade'
         bl_texts_by_decade = self.bl_loader.load_decade_samples(per_decade=max_texts)
         
-        # Gutenberg texts - check if it uses the same parameter name
-        # If you're unsure, just pass the value directly: self.gutenberg_loader.load_decade_samples(max_texts)
-        gutenberg_texts_by_decade = self.gutenberg_loader.load_decade_samples(per_decade=max_texts)
+        # Gutenberg texts - pass the parameter directly since it has a different parameter name
+        # It likely uses 'texts_per_decade' based on the error message
+        try:
+            # Try with 'texts_per_decade'
+            gutenberg_texts_by_decade = self.gutenberg_loader.load_decade_samples(texts_per_decade=max_texts)
+        except TypeError:
+            try:
+                # Fall back to positional argument if keyword doesn't work
+                gutenberg_texts_by_decade = self.gutenberg_loader.load_decade_samples(max_texts)
+            except Exception as e:
+                logger.error(f"Failed to load Gutenberg texts: {e}")
+                gutenberg_texts_by_decade = {}
         
         # Combine sources
         all_texts = {}
@@ -74,6 +83,8 @@ class TemporalDatasetManager:
             decade_bl = [(text, "british_library") for text in bl_texts_by_decade.get(decade, [])]
             decade_gutenberg = [(text, "gutenberg") for text in gutenberg_texts_by_decade.get(decade, [])]
             all_texts[decade] = decade_bl + decade_gutenberg
+            
+            logger.info(f"{decade}: {len(all_texts[decade])} total texts available ({len(decade_bl)} BL, {len(decade_gutenberg)} Gutenberg)")
         
         # Build dataset with target sizes
         dataset = {}
