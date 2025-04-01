@@ -528,8 +528,8 @@ class TemporalDistributionInference:
         logger.info("Inferring temporal distribution...")
         distribution = self.infer_temporal_distribution(
             decade_patterns,
-            weight_early_merges=True,
-            continuity_constraint=True
+            weight_early_merges=True
+            # Remove the continuity_constraint parameter
         )
         
         # Step 4: Visualize results
