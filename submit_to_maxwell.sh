@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=temporal_analysis
-#SBATCH --time=05:00:00    # Increased time for larger data processing
+#SBATCH --time=15:00:00    # Increased time for larger data processing
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=64G
