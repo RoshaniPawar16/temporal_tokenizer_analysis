@@ -36,56 +36,86 @@ class TemporalDistributionInference:
         """Initialize with tokenizer."""
         self.tokenizer_name = tokenizer_name
         try:
-            self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
+            # Load the tokenizer with additional options
+            self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name, use_fast=True)
             
-            # Extract merge rules from tokenizer - trying multiple approaches
+            # Extract merge rules - trying multiple approaches
             self.merge_rules = []
             
-            # Approach 1: Direct access to bpe_ranks (GPT-2 style)
+            # Method 1: GPT-2 style tokenizers often have bpe_ranks
             if hasattr(self.tokenizer, 'bpe_ranks'):
                 self.merge_rules = list(self.tokenizer.bpe_ranks.keys())
                 logger.info(f"Extracted {len(self.merge_rules)} merge rules from bpe_ranks")
             
-            # Approach 2: Access via merges attribute (BERT/RoBERTa style)
-            elif hasattr(self.tokenizer, 'merges'):
-                self.merge_rules = self.tokenizer.merges
-                logger.info(f"Extracted {len(self.merge_rules)} merge rules from merges attribute")
-            
-            # Approach 3: Try to access the tokenizer's model
-            elif hasattr(self.tokenizer, 'model') and hasattr(self.tokenizer.model, 'merges'):
-                self.merge_rules = self.tokenizer.model.merges
-                logger.info(f"Extracted {len(self.merge_rules)} merge rules from model.merges")
-            
-            # Approach 4: Look in tokenizer's backend tokenizer
+            # Method 2: Access via backend tokenizer for HuggingFace's fast tokenizers
             elif hasattr(self.tokenizer, 'backend_tokenizer'):
                 backend = self.tokenizer.backend_tokenizer
                 if hasattr(backend, 'mergeable_ranks'):
                     self.merge_rules = list(backend.mergeable_ranks.keys())
                     logger.info(f"Extracted {len(self.merge_rules)} merge rules from backend_tokenizer")
+                elif hasattr(backend, 'model') and hasattr(backend.model, 'merges'):
+                    self.merge_rules = backend.model.merges
+                    logger.info(f"Extracted {len(self.merge_rules)} merge rules from backend model")
             
-            # If no merge rules found, try to generate some by analyzing the tokenizer's behavior
+            # Method 3: Some tokenizers store merges directly
+            elif hasattr(self.tokenizer, 'merges'):
+                self.merge_rules = self.tokenizer.merges
+                logger.info(f"Extracted {len(self.merge_rules)} merge rules from merges attribute")
+            
+            # Method 4: Try to directly access the vocab file and parse merge rules
+            if not self.merge_rules:
+                try:
+                    # For GPT-2, try to load the merges file directly
+                    from transformers.models.gpt2.tokenization_gpt2 import bytes_to_unicode
+                    from transformers import cached_path
+                    vocab_files = self.tokenizer.vocab_files_names
+                    merges_file = cached_path(
+                        vocab_files.get('merges_file', 
+                                    f"https://huggingface.co/{tokenizer_name}/resolve/main/merges.txt")
+                    )
+                    
+                    with open(merges_file, encoding='utf-8') as f:
+                        bpe_merges = f.read().split('\n')[1:-1]
+                        bpe_merges = [tuple(merge.split()) for merge in bpe_merges]
+                        self.merge_rules = bpe_merges
+                        logger.info(f"Extracted {len(self.merge_rules)} merge rules from merges file")
+                except Exception as e:
+                    logger.warning(f"Could not load merges file: {e}")
+            
+            # If still no merge rules, create synthetic ones by analyzing tokenizer behavior
             if not self.merge_rules:
                 logger.warning(f"Could not extract merge rules directly, generating approximation")
-                # Generate a sample of text to analyze tokenizer behavior
-                sample_text = """This is a sample text to analyze the tokenizer's behavior.
-                We'll use this to identify patterns and generate approximate merge rules."""
-                tokens = self.tokenizer.tokenize(sample_text)
+                # Create a diverse sample of text to find patterns
+                sample_texts = [
+                    "The quick brown fox jumps over the lazy dog.",
+                    "Programming languages like Python, Java, and C++ are widely used.",
+                    "In 1956, artificial intelligence research began in earnest.",
+                    "The human genome contains approximately 3 billion DNA base pairs.",
+                    "Blockchain technology enables secure, decentralized transactions.",
+                    "Quantum computers leverage superposition and entanglement principles."
+                ]
                 
-                # Extract character pairs from tokens
+                # Analyze tokenization patterns
+                all_tokens = []
+                for text in sample_texts:
+                    all_tokens.extend(self.tokenizer.tokenize(text))
+                
+                # Generate approximate merge rules from tokens
                 char_pairs = set()
-                for token in tokens:
-                    # Extract raw token (removing potential prefixes)
+                for token in all_tokens:
+                    # Handle different tokenizer prefixes
                     if token.startswith('Ġ') or token.startswith('▁'):
                         raw_token = token[1:]
                     else:
                         raw_token = token
                     
-                    # Extract all character pairs
+                    # Extract character pairs
                     for i in range(len(raw_token) - 1):
                         char_pairs.add(raw_token[i:i+2])
                 
-                # Use these as approximate merge rules
+                # Use these character pairs as approximate merge rules
                 self.merge_rules = list(char_pairs)
+                logger.warning(f"Created {len(self.merge_rules)} synthetic merge rules")
             
             logger.info(f"Loaded {len(self.merge_rules)} merge rules from {tokenizer_name}")
         except Exception as e:
@@ -547,15 +577,9 @@ class TemporalDistributionInference:
             logger.warning("No data available for analysis")
             return {}
         
-        # Check if tokenizer is properly initialized
-        if not self.tokenizer or not self.merge_rules:
-            logger.error("Tokenizer not properly initialized or no merge rules available")
-            # Return placeholder results to avoid crashing
-            return {
-                "tokenizer": self.tokenizer_name,
-                "distinctive_patterns": {decade: [] for decade in decade_texts.keys()},
-                "distribution": {decade: 1.0 / len(decade_texts) for decade in decade_texts.keys()}
-            }
+        # Check if we have enough merge rules for meaningful analysis
+        if len(self.merge_rules) < 100:
+            logger.warning(f"Only {len(self.merge_rules)} merge rules available - analysis may be less accurate")
         
         # Step 1: Analyze decade patterns with increased sample size
         logger.info("Analyzing decade patterns...")
