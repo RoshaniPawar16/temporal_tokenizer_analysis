@@ -55,13 +55,18 @@ class TemporalDatasetManager:
         # Calculate bytes per decade based on distribution
         bytes_per_decade = {decade: target_size_bytes * prop for decade, prop in distribution.items()}
         
-        # Load all available source texts - use existing methods
+        # Load all available source texts
         logger.info("Loading all available source texts...")
         
-        # Get a large number of texts per decade from each source
-        max_texts = 200  # Request a high number to get as many as possible
-        bl_texts_by_decade = self.bl_loader.load_decade_samples(texts_per_decade=max_texts)
-        gutenberg_texts_by_decade = self.gutenberg_loader.load_decade_samples(texts_per_decade=max_texts)
+        # Load a large number of texts per decade to have sufficient data for large dataset
+        max_texts = 100  # Increase this if needed
+        
+        # British Library texts - using the correct parameter name 'per_decade'
+        bl_texts_by_decade = self.bl_loader.load_decade_samples(per_decade=max_texts)
+        
+        # Gutenberg texts - check if it uses the same parameter name
+        # If you're unsure, just pass the value directly: self.gutenberg_loader.load_decade_samples(max_texts)
+        gutenberg_texts_by_decade = self.gutenberg_loader.load_decade_samples(per_decade=max_texts)
         
         # Combine sources
         all_texts = {}
@@ -69,7 +74,6 @@ class TemporalDatasetManager:
             decade_bl = [(text, "british_library") for text in bl_texts_by_decade.get(decade, [])]
             decade_gutenberg = [(text, "gutenberg") for text in gutenberg_texts_by_decade.get(decade, [])]
             all_texts[decade] = decade_bl + decade_gutenberg
-            logger.info(f"Loaded {len(all_texts[decade])} initial texts for {decade} ({len(decade_bl)} from BL, {len(decade_gutenberg)} from Gutenberg)")
         
         # Build dataset with target sizes
         dataset = {}
@@ -88,10 +92,10 @@ class TemporalDatasetManager:
             
             # Keep adding texts until we reach target size
             # Use texts with replacement if necessary
+            max_iterations = 10000  # Prevent infinite loops
             iterations = 0
-            max_iterations = 5000  # Prevent infinite loops
             
-            while decade_size < target_bytes and iterations < max_iterations and decade_texts:
+            while decade_size < target_bytes and decade_texts and iterations < max_iterations:
                 # If we've used all texts once, resample with replacement
                 if len(decade_dataset) >= len(decade_texts):
                     text, source = random.choice(decade_texts)
@@ -100,13 +104,8 @@ class TemporalDatasetManager:
                     text, source = decade_texts[idx]
                 
                 decade_dataset.append((text, source))
-                text_size = len(text.encode('utf-8'))
-                decade_size += text_size
+                decade_size += len(text.encode('utf-8'))
                 iterations += 1
-                
-                # Provide progress updates
-                if iterations % 100 == 0:
-                    logger.info(f"{decade}: Added {iterations} texts, current size: {decade_size/1024/1024/1024:.3f} GB / {target_bytes/1024/1024/1024:.3f} GB")
                 
                 # Break if we've added a lot of texts but still haven't reached target
                 if len(decade_dataset) > 1000 and decade_size < target_bytes * 0.5:
@@ -115,9 +114,9 @@ class TemporalDatasetManager:
             
             dataset[decade] = decade_dataset
             total_size_bytes += decade_size
-            logger.info(f"{decade}: {len(decade_dataset)} texts, {decade_size/1024/1024/1024:.3f} GB (target: {target_bytes/1024/1024/1024:.3f} GB)")
+            logger.info(f"{decade}: {len(decade_dataset)} texts, {decade_size/1024/1024/1024:.2f} GB (target: {target_bytes/1024/1024/1024:.2f} GB)")
         
-        logger.info(f"Total dataset size: {total_size_bytes/1024/1024/1024:.3f} GB")
+        logger.info(f"Total dataset size: {total_size_bytes/1024/1024/1024:.2f} GB")
         return dataset
 
     def build_temporal_dataset(self,
