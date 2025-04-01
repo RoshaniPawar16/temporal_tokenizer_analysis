@@ -67,7 +67,10 @@ class TemporalDistributionInference:
                 try:
                     # For GPT-2, try to load the merges file directly
                     from transformers.models.gpt2.tokenization_gpt2 import bytes_to_unicode
-                    from transformers import cached_path
+                    # Import our custom cached_path function
+                    from fix_transformers import get_cached_path
+                    cached_path = get_cached_path()
+                    
                     vocab_files = self.tokenizer.vocab_files_names
                     merges_file = cached_path(
                         vocab_files.get('merges_file', 
