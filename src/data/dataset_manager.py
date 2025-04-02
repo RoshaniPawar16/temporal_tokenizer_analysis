@@ -1504,6 +1504,37 @@ class TemporalDatasetManager:
         paragraph += f"The impact of these changes would be felt for decades to come."
         
         return paragraph
+    
+    def analyze_decade_data_quality(self, decade: str) -> Dict:
+        """
+        Analyze the data quality for a specific decade.
+        """
+        decade_texts = self.load_dataset().get(decade, [])
+        
+        # Calculate statistics
+        stats = {
+            "total_texts": len(decade_texts),
+            "avg_length": sum(len(text) for text in decade_texts) / max(1, len(decade_texts)),
+            "source_distribution": {}
+        }
+        
+        # Analyze sources
+        if isinstance(decade_texts[0], tuple):
+            sources = [source for _, source in decade_texts]
+            for source in set(sources):
+                stats["source_distribution"][source] = sources.count(source) / len(sources)
+        
+        # Count most common character pairs (which might influence merge rules)
+        char_pairs = Counter()
+        for text in decade_texts:
+            if isinstance(text, tuple):
+                text = text[0]
+            for i in range(len(text) - 1):
+                char_pairs[text[i:i+2]] += 1
+        
+        stats["top_char_pairs"] = dict(char_pairs.most_common(20))
+        
+        return stats
 
     def _modify_text_slightly(self, text: str) -> str:
         """

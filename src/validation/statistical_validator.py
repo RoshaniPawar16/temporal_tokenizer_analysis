@@ -111,6 +111,31 @@ class TemporalValidator:
         
         return bootstrap_sample
     
+    def ensemble_inference(self, decade_patterns: Dict[str, Dict]) -> Dict[str, float]:
+        """
+        Combine multiple inference methods for more robust results.
+        """
+        # Get results from different methods
+        lp_distribution = self.inference.infer_temporal_distribution(decade_patterns)
+        heuristic_distribution = self.inference._infer_distribution_heuristic(decade_patterns)
+        
+        # Simple averaging ensemble (equal weights)
+        ensemble_distribution = {}
+        all_decades = sorted(set(lp_distribution.keys()) | set(heuristic_distribution.keys()))
+        
+        for decade in all_decades:
+            lp_value = lp_distribution.get(decade, 0.0)
+            heuristic_value = heuristic_distribution.get(decade, 0.0)
+            # Average the two methods
+            ensemble_distribution[decade] = (lp_value + heuristic_value) / 2.0
+        
+        # Ensure the distribution sums to 1
+        total = sum(ensemble_distribution.values())
+        if total > 0:
+            ensemble_distribution = {d: v/total for d, v in ensemble_distribution.items()}
+        
+        return ensemble_distribution
+
     def cross_validation(self, 
                        decade_texts: Dict[str, List[str]], 
                        k_folds: int = 5) -> Dict[str, Dict[str, float]]:
