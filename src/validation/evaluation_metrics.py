@@ -235,8 +235,8 @@ class TemporalEvaluationMetrics:
         return errors
     
     def _calculate_rank_correlation(self, 
-                                 inferred: Dict[str, float], 
-                                 ground_truth: Dict[str, float]) -> float:
+                             inferred: Dict[str, float], 
+                             ground_truth: Dict[str, float]) -> float:
         """
         Calculate Spearman rank correlation between distributions.
         
@@ -254,18 +254,35 @@ class TemporalEvaluationMetrics:
         inferred_values = [inferred.get(decade, 0.0) for decade in all_decades]
         truth_values = [ground_truth.get(decade, 0.0) for decade in all_decades]
         
+        # Check if ground truth is uniform (constant)
+        is_uniform = len(set(truth_values)) == 1
+        if is_uniform:
+            # For uniform distributions, calculate how close inferred is to uniform
+            uniform_value = truth_values[0]
+            if uniform_value > 0:
+                # Calculate normalized deviation from uniform
+                deviations = [abs(v - uniform_value) / uniform_value for v in inferred_values]
+                avg_deviation = sum(deviations) / len(deviations)
+                # Return score from -1 to 1 (1 = perfect uniform, -1 = completely skewed)
+                return 1.0 - min(1.0, 2 * avg_deviation)
+            return 0.0
+        
         # Check if we have enough non-zero values
         if len(all_decades) <= 2 or sum(1 for v in inferred_values if v > 0) < 2 or sum(1 for v in truth_values if v > 0) < 2:
             return 0.0
         
         # Calculate Spearman correlation
-        corr, _ = spearmanr(inferred_values, truth_values)
-        
-        # Handle NaN values
-        if np.isnan(corr):
-            return 0.0
+        try:
+            corr, _ = spearmanr(inferred_values, truth_values)
             
-        return corr
+            # Handle NaN values
+            if np.isnan(corr):
+                return 0.0
+                
+            return corr
+        except Exception as e:
+            logger.warning(f"Error calculating rank correlation: {e}")
+            return 0.0
     
     def _identify_representation_issues(self, 
                                      inferred: Dict[str, float], 

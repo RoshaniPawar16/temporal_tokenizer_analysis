@@ -62,7 +62,7 @@ class BritishLibraryLoader:
                     placeholder_data = []
                     for decade, (start_year, end_year) in TIME_PERIODS.items():
                         # Create multiple samples per decade for better representation
-                        for i in range(5):  # 5 samples per decade
+                        for i in range(20):  # 20 samples per decade
                             year = random.randint(start_year, end_year)
                             placeholder_data.append({
                                 "record_id": f"placeholder_{decade}_{i}",
@@ -250,12 +250,13 @@ class BritishLibraryLoader:
         
     #     return decade_texts
 
-    def load_decade_samples(self, per_decade: int = 30, balance_genres: bool = True) -> Dict[str, List[str]]:
+    def load_decade_samples(self, per_decade: int = 1000, balance_genres: bool = True) -> Dict[str, List[str]]:
         """
         Load balanced sample of texts for each decade with increased historical representation.
+        Scaled up to handle much larger samples for Hayase et al. data volumes.
         
         Args:
-            per_decade: Number of texts to sample per decade (increased from 20 to 30)
+            per_decade: Number of texts to sample per decade (increased from 30 to 1000)
             balance_genres: Whether to balance genres within each decade
                 
         Returns:
@@ -263,7 +264,7 @@ class BritishLibraryLoader:
         """
         decade_texts = {decade: [] for decade in TIME_PERIODS.keys()}
         
-        # Check if we have cached samples - force regeneration on first run
+        # Check if we have cached samples
         cache_file = self.cache_dir / f"samples_{per_decade}.json"
         
         # Force regeneration by clearing cache
@@ -284,7 +285,7 @@ class BritishLibraryLoader:
         # Load primary data
         if paste_data_path.exists():
             try:
-                with open(paste_data_path, "r", encoding="utf-8") as f:
+                with open(paste_data_path, "r", encoding='utf-8') as f:
                     primary_data = json.load(f)
                     metadata.extend(primary_data)
                 logger.info(f"Loaded primary metadata from paste_data.json with {len(primary_data)} entries")
@@ -294,7 +295,7 @@ class BritishLibraryLoader:
         # Load supplementary historical data if available
         if extra_data_path.exists():
             try:
-                with open(extra_data_path, "r", encoding="utf-8") as f:
+                with open(extra_data_path, "r", encoding='utf-8') as f:
                     historical_data = json.load(f)
                     metadata.extend(historical_data)
                 logger.info(f"Loaded supplementary historical data with {len(historical_data)} entries")
@@ -306,9 +307,10 @@ class BritishLibraryLoader:
             metadata = self._load_or_create_metadata()
         
         # If we still don't have data, create enhanced synthetic data
-        if not metadata or len(metadata) < 100:  # Minimum threshold
+        if not metadata or len(metadata) < 1000:  # Increased minimum threshold
             logger.warning("Insufficient real data, enhancing with realistic historical samples")
-            metadata.extend(self._create_enhanced_historical_samples())
+            enhanced_data = self._create_enhanced_historical_samples(5000)  # Create many more samples
+            metadata.extend(enhanced_data)
         
         if not metadata:
             logger.warning("No metadata found, cannot load samples")
@@ -418,9 +420,35 @@ class BritishLibraryLoader:
         total_texts = sum(len(texts) for texts in decade_texts.values())
         if total_texts > 0:
             try:
-                with open(cache_file, "w", encoding="utf-8") as f:
-                    json.dump(decade_texts, f, indent=2)
-                logger.info(f"Cached {total_texts} samples to {cache_file}")
+                # For large dataset requests, save in batches to avoid memory issues
+                if per_decade > 100:
+                    # Create directory for this cache
+                    cache_dir_path = self.cache_dir / f"samples_{per_decade}"
+                    cache_dir_path.mkdir(exist_ok=True, parents=True)
+                    
+                    # Save each decade separately
+                    for decade, texts in decade_texts.items():
+                        decade_cache_file = cache_dir_path / f"{decade}.json"
+                        with open(decade_cache_file, "w", encoding='utf-8') as f:
+                            json.dump(texts, f)
+                        
+                    # Save metadata about the cache
+                    cache_meta_file = cache_dir_path / "metadata.json"
+                    with open(cache_meta_file, "w", encoding='utf-8') as f:
+                        cache_meta = {
+                            "total_texts": total_texts,
+                            "per_decade": per_decade,
+                            "created": time.strftime("%Y-%m-%d %H:%M:%S"),
+                            "decades": {decade: len(texts) for decade, texts in decade_texts.items()}
+                        }
+                        json.dump(cache_meta, f, indent=2)
+                    
+                    logger.info(f"Cached {total_texts} samples to {cache_dir_path} in batches")
+                else:
+                    # Regular cache for smaller datasets
+                    with open(cache_file, "w", encoding='utf-8') as f:
+                        json.dump(decade_texts, f, indent=2)
+                    logger.info(f"Cached {total_texts} samples to {cache_file}")
             except Exception as e:
                 logger.warning(f"Failed to cache samples: {e}")
         
@@ -633,96 +661,61 @@ class BritishLibraryLoader:
         # Combine paragraphs
         return " ".join(paragraphs)
     
-    def _create_enhanced_historical_samples(self) -> List[Dict]:
+    def _create_enhanced_historical_samples(self, count: int = 5000) -> List[Dict]:
         """
         Create historically plausible sample data for periods with limited coverage.
         This generates realistic metadata for historical texts to supplement the dataset.
+        Scaled up to produce much more content.
         
+        Args:
+            count: Number of samples to generate (increased to 5000)
+            
         Returns:
             List of metadata items with historically authentic synthetic content
         """
         enhanced_samples = []
         
+        # Distribute the count across decades with bias toward historical periods
+        decade_distribution = {
+            "1850s": 0.10, "1860s": 0.10, "1870s": 0.08, "1880s": 0.08, "1890s": 0.08,
+            "1900s": 0.07, "1910s": 0.07, "1920s": 0.07, "1930s": 0.06, "1940s": 0.06,
+            "1950s": 0.05, "1960s": 0.05, "1970s": 0.04, "1980s": 0.03, "1990s": 0.03, 
+            "2000s": 0.02, "2010s": 0.01, "2020s": 0.00  # Focus heavily on historical periods
+        }
+        
+        # Calculate samples per decade
+        samples_per_decade = {decade: int(count * proportion) for decade, proportion in decade_distribution.items()}
+        
         # Generate samples for each decade
-        for decade, (start_year, end_year) in TIME_PERIODS.items():
-            # Focus on historical periods (pre-1970)
-            if end_year >= 1970:
+        for decade, samples_count in samples_per_decade.items():
+            if samples_count <= 0:
                 continue
                 
-            # Create multiple samples per decade
-            for i in range(10):  # 10 samples per historical decade
-                year = random.randint(start_year, end_year)
+            start_year, end_year = TIME_PERIODS[decade]
+            
+            logger.info(f"Generating {samples_count} enhanced samples for {decade}")
+            
+            # Create multiple themed sets of content per decade
+            decade_samples = self._generate_decade_samples(decade, count=samples_count)
+            enhanced_samples.extend(decade_samples)
+        
+        # Ensure we've generated enough samples
+        if len(enhanced_samples) < count:
+            shortfall = count - len(enhanced_samples)
+            logger.warning(f"Generated {len(enhanced_samples)}/{count} samples, generating {shortfall} more")
+            
+            # Generate additional samples for pre-1950s to make up shortfall
+            historical_decades = [d for d in TIME_PERIODS.keys() if int(d[:4]) < 1950]
+            for decade in historical_decades:
+                additional = shortfall // len(historical_decades) + 1
+                additional_samples = self._generate_decade_samples(decade, count=additional)
+                enhanced_samples.extend(additional_samples)
                 
-                # Create period-appropriate content
-                if decade == "1850s":
-                    theme = random.choice(["Industrial Progress", "Railway Development", "Social Reform"])
-                    title = f"Treatise on {theme}: Observations from {year}"
-                    text = f"The rapid advancement of {theme.lower()} has transformed British society in profound ways. In {year}, we witnessed remarkable developments in manufacturing and commerce. Steam power and mechanization continue to revolutionize our industrial capacities, while presenting new challenges for traditional social structures..."
-                
-                elif decade == "1860s":
-                    theme = random.choice(["The American War", "Colonial Enterprise", "Scientific Progress"])
-                    title = f"{theme}: Perspectives from {year}"
-                    text = f"The events of {year} have brought {theme.lower()} to the forefront of public discourse. The telegraph has enabled unprecedented speed in communications, transforming our understanding of global affairs. Recent developments in photography and scientific instrumentation have opened new avenues of inquiry..."
-                
-                elif decade == "1870s":
-                    theme = random.choice(["Telephonic Communication", "Electric Illumination", "Imperial Questions"])
-                    title = f"Modern Developments in {theme} ({year})"
-                    text = f"The invention of new electrical apparatus has significantly altered our approach to {theme.lower()}. The year {year} marked substantial progress in this domain, with several notable patents being registered. The scientific community continues to debate the practical applications of these technologies..."
-                
-                elif decade == "1880s":
-                    theme = random.choice(["Electrical Science", "Colonial Administration", "Public Health"])
-                    title = f"Advances in {theme}: {year} Report"
-                    text = f"Recent scientific congresses have highlighted the importance of {theme.lower()} to our modern society. Observations from {year} indicate a growing recognition of systematic approaches to this field. The electrical revolution continues to transform industrial practices, while raising important questions about resource allocation..."
-                
-                elif decade == "1890s":
-                    theme = random.choice(["Modern Transport", "Photographic Arts", "Imperial Strategy"])
-                    title = f"The Coming Century and {theme} ({year})"
-                    text = f"As the century draws to a close, considerable attention has been directed toward {theme.lower()}. The developments of {year} suggest new directions for the coming age. Horseless carriages and electrical traction systems represent merely the beginning of transportation revolution. Meanwhile, the cinematograph promises to transform visual documentation..."
-                
-                elif decade == "1900s":
-                    theme = random.choice(["Wireless Communication", "Automobile Development", "Imperial Politics"])
-                    title = f"Twentieth Century Views on {theme} ({year})"
-                    text = f"The dawn of the new century brings fresh perspectives on {theme.lower()}. In {year}, significant advancement was made in practical applications of modern scientific principles. The wireless transmission of information across great distances now appears an achievable reality, promising to revolutionize global communications..."
-                
-                elif decade in ["1910s", "1920s", "1930s", "1940s", "1950s", "1960s"]:
-                    # Later decades with their own themes
-                    decade_themes = {
-                        "1910s": ["The Great War", "Social Reconstruction", "Modern Industry"],
-                        "1920s": ["Broadcasting", "Cinema", "Economic Recovery"],
-                        "1930s": ["Economic Planning", "International Relations", "Modern Medicine"],
-                        "1940s": ["The War Effort", "Atomic Energy", "Post-War Planning"],
-                        "1950s": ["Television", "Space Research", "Cold War Politics"],
-                        "1960s": ["Space Exploration", "Computing Science", "Cultural Revolution"]
-                    }
-                    
-                    theme = random.choice(decade_themes.get(decade, ["Modern Society"]))
-                    title = f"{theme}: Perspectives from {year}"
-                    text = f"The impact of {theme.lower()} on contemporary society cannot be overstated. The year {year} witnessed significant developments in this area that merit careful analysis. Public discourse increasingly reflects awareness of how technological and social changes are reshaping traditional institutions..."
-                
-                else:
-                    # Generic fallback
-                    theme = "Contemporary Developments"
-                    title = f"{theme} in {year}"
-                    text = f"The societal changes observed in {year} reflect broader trends in technological and cultural evolution. This period has witnessed significant transformation in multiple domains, from scientific advancement to social organization..."
-                
-                # Add more text to make it substantial
-                text += " Further examination reveals complex patterns of adaptation and resistance to these changes. Historical analysis suggests that these developments must be understood within their broader context. The interplay between technological innovation and social structures continues to shape our understanding of progress and development."
-                
-                # Make text longer
-                text = text * 3  # Repeat the text to make it longer
-                
-                enhanced_samples.append({
-                    "record_id": f"enhanced_{decade}_{i}",
-                    "title": title,
-                    "date": f"{year}",
-                    "text": text,
-                    "language_1": "English",
-                    "mean_wc_ocr": 0.95,  # High quality for synthetic text
-                    "place": random.choice(["London", "Edinburgh", "Oxford", "Cambridge"])
-                })
+                if len(enhanced_samples) >= count:
+                    break
         
         logger.info(f"Created {len(enhanced_samples)} enhanced historical samples")
-        return enhanced_samples
+        return enhanced_samples[:count]  # Trim to requested count
 
     def _load_or_create_metadata(self) -> List[Dict]:
         """Load existing metadata or create from the data files."""

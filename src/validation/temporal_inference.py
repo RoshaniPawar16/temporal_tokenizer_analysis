@@ -18,6 +18,7 @@ import gc
 import re
 from transformers import AutoTokenizer
 import cvxpy as cp
+import os
 
 from ..config import (
     RESULTS_DIR,
@@ -71,17 +72,26 @@ class TemporalDistributionInference:
                     from fix_transformers import get_cached_path
                     cached_path = get_cached_path()
                     
-                    vocab_files = self.tokenizer.vocab_files_names
-                    merges_file = cached_path(
-                        vocab_files.get('merges_file', 
-                                    f"https://huggingface.co/{tokenizer_name}/resolve/main/merges.txt")
-                    )
+                    # First, explicitly download the tokenizer files if needed
+                    from huggingface_hub import hf_hub_download
+                    try:
+                        merges_file = hf_hub_download(repo_id=tokenizer_name, filename="merges.txt")
+                        logger.info(f"Successfully downloaded merges.txt from HuggingFace Hub")
+                    except Exception as e:
+                        logger.warning(f"Could not download from Hub: {e}")
+                        # Try to find the file in standard location
+                        vocab_files = self.tokenizer.vocab_files_names
+                        merges_file = vocab_files.get('merges_file', f"https://huggingface.co/{tokenizer_name}/resolve/main/merges.txt")
+                        merges_file = cached_path(merges_file) if callable(cached_path) else merges_file
                     
-                    with open(merges_file, encoding='utf-8') as f:
-                        bpe_merges = f.read().split('\n')[1:-1]
-                        bpe_merges = [tuple(merge.split()) for merge in bpe_merges]
-                        self.merge_rules = bpe_merges
-                        logger.info(f"Extracted {len(self.merge_rules)} merge rules from merges file")
+                    if os.path.exists(merges_file):
+                        with open(merges_file, encoding='utf-8') as f:
+                            bpe_merges = f.read().split('\n')[1:-1]
+                            bpe_merges = [tuple(merge.split()) for merge in bpe_merges]
+                            self.merge_rules = bpe_merges
+                            logger.info(f"Extracted {len(self.merge_rules)} merge rules from merges file")
+                    else:
+                        logger.warning(f"Merges file {merges_file} does not exist")
                 except Exception as e:
                     logger.warning(f"Could not load merges file: {e}")
             

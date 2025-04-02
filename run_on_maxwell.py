@@ -133,12 +133,29 @@ def run_analysis(args):
     
     # Extract just texts (without source info)
     decade_texts = {decade: [text for text, _ in texts] 
-                   for decade, texts in controlled_dataset.items()}
-    
-    # Run inference
+                for decade, texts in controlled_dataset.items()}
+
+    # Process texts in chunks to avoid exceeding model context limits
+    logger.info("Processing texts in chunks to stay within model context limits...")
+    chunked_decade_texts = {}
+    for decade, texts in decade_texts.items():
+        chunked_texts = []
+        for text in texts:
+            # Split longer texts into chunks of around 512 tokens
+            # This is a rough approximation - 1 token ≈ 4 characters for English
+            chunk_size = 2000  # ~500 tokens per chunk
+            if len(text) > chunk_size:
+                chunks = [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
+                chunked_texts.extend(chunks)
+            else:
+                chunked_texts.append(text)
+        chunked_decade_texts[decade] = chunked_texts
+        logger.info(f"Processed {decade}: {len(texts)} texts → {len(chunked_texts)} chunks")
+
+    # Run inference on chunked texts
     logger.info("Running tokenizer analysis...")
     start_time = time.time()
-    results = inference.run_analysis(decade_texts)
+    results = inference.run_analysis(chunked_decade_texts)
     inference_time = time.time() - start_time
     
     # Evaluate results

@@ -394,17 +394,14 @@ class GutenbergLoader:
         logger.debug(f"Failed to fetch text for book {book_id} from any mirror")
         return None
 
-    def load_decade_samples(self,
-                  texts_per_decade: int = 50,
-                  min_text_length: int = 1000,
-                  english_only: bool = True,
-                  balance_genres: bool = True) -> Dict[str, List[str]]:
+    def load_decade_samples(self, texts_per_decade: int = 1000, min_text_length: int = 5000, english_only: bool = True, balance_genres: bool = True) -> Dict[str, List[str]]:
         """
         Load a balanced sample of texts for each decade with improved historical coverage.
+        Scaled up to handle much larger samples for Hayase et al. data volumes.
         
         Args:
-            texts_per_decade: Target number of texts per decade
-            min_text_length: Minimum acceptable text length
+            texts_per_decade: Target number of texts per decade (increased from 50 to 1000)
+            min_text_length: Minimum acceptable text length (increased to 5000)
             english_only: Whether to restrict to English texts
             balance_genres: Whether to balance genres within each decade
                 
@@ -412,6 +409,7 @@ class GutenbergLoader:
             Dict mapping decades to lists of texts
         """
         decade_texts = {decade: [] for decade in TIME_PERIODS.keys()}
+        
         # Expand historical catalog to improve coverage of older decades
         self.expand_historical_catalog()
 
@@ -484,22 +482,14 @@ class GutenbergLoader:
             for decade in TIME_PERIODS.keys():
                 decade_start = int(decade[:4])
                 if decade_start < 1900:
-                    # Double the count for 19th century
-                    prioritized_counts[decade] = texts_per_decade * 2
+                    # 3x the count for 19th century for better historical representation
+                    prioritized_counts[decade] = texts_per_decade * 3
                 elif decade_start < 1950:
-                    # 1.5x count for early 20th century
-                    prioritized_counts[decade] = int(texts_per_decade * 1.5)
+                    # 2x count for early 20th century
+                    prioritized_counts[decade] = texts_per_decade * 2
                 else:
                     # Standard count for modern periods
                     prioritized_counts[decade] = texts_per_decade
-            
-            # Check if we need to use the historical catalog supplement
-            need_historical = any(int(decade[:4]) < 1970 for decade in TIME_PERIODS.keys())
-            
-            # If we're missing historical metadata but need it, use the historical supplement
-            if need_historical and not self._has_historical_catalog():
-                logger.info("Adding historical book catalog supplement")
-                self._add_historical_catalog_supplement()
             
             # Group books by decade
             decade_book_ids = {decade: [] for decade in TIME_PERIODS.keys()}
@@ -549,8 +539,13 @@ class GutenbergLoader:
                         logger.info(f"Added {len(additional_ids)} historical fallback books for {decade}")
                         decade_book_ids[decade].extend(additional_ids)
             
-            # Process each decade
-            for decade, book_ids in decade_book_ids.items():
+            # Process each decade - now with larger batch sizes and parallelization for performance
+            from tqdm.auto import tqdm
+            from concurrent.futures import ThreadPoolExecutor
+            
+            # Process decades in order to make progress display clearer
+            for decade in sorted(decade_book_ids.keys()):
+                book_ids = decade_book_ids[decade]
                 target_count = prioritized_counts[decade]
                 
                 if not book_ids:
@@ -587,41 +582,91 @@ class GutenbergLoader:
                             if remaining_ids:
                                 sampled_ids.extend(random.sample(remaining_ids, min(remaining, len(remaining_ids))))
                     else:
-                        # Sample more than needed to account for failed downloads
-                        sampled_ids = random.sample(book_ids, min(target_count * 2, len(book_ids)))
+                        # Sample more than needed to account for failed downloads and length filtering
+                        sample_multiplier = 3  # Sample 3x as many to account for rejections
+                        sampled_ids = random.sample(book_ids, min(target_count * sample_multiplier, len(book_ids)))
                 else:
-                    # Sample more than needed to account for failed downloads
-                    sampled_ids = random.sample(book_ids, min(target_count * 2, len(book_ids)))
+                    # Sample more than needed to account for failed downloads and length filtering
+                    sample_multiplier = 3  # Sample 3x as many to account for rejections
+                    sampled_ids = random.sample(book_ids, min(target_count * sample_multiplier, len(book_ids)))
                 
-                # Download and process the sampled books
-                successful_texts = 0
-                for book_id in tqdm(sampled_ids, desc=f"Loading {decade} texts"):
+                # Function to process each book - now also creating chunks for very long texts
+                def process_book(book_id):
                     try:
                         text = self._fetch_and_clean_text(book_id)
                         if not text or len(text) < min_text_length:
-                            continue
+                            return None
                         
-                        # Create chunks and select one randomly
-                        chunks = self._create_chunks(text, chunk_size=5000)
-                        if chunks:
-                            selected_chunk = random.choice(chunks)
-                            decade_texts[decade].append(selected_chunk)
-                            successful_texts += 1
-                            
-                            if successful_texts >= target_count:
-                                break
-                                
+                        # For very long texts, create multiple chunks to increase dataset size
+                        if len(text) > min_text_length * 5:  # If text is 5x minimum length
+                            chunks = self._create_chunks(text, chunk_size=min_text_length * 2)
+                            # Return up to 3 chunks from this book to avoid overrepresentation
+                            return random.sample(chunks, min(3, len(chunks)))
+                        else:
+                            # Return single text
+                            return [text]
                     except Exception as e:
                         logger.debug(f"Error processing book {book_id}: {e}")
-                        continue
+                        return None
                 
+                # Process books in parallel for better performance with large datasets
+                successful_texts = []
+                
+                # Use ThreadPoolExecutor for parallel processing with progress bar
+                with ThreadPoolExecutor(max_workers=8) as executor:
+                    # Create a progress bar
+                    futures = []
+                    for book_id in sampled_ids:
+                        futures.append(executor.submit(process_book, book_id))
+                    
+                    # Process results as they complete
+                    for future in tqdm(futures, desc=f"Loading {decade} texts", total=len(futures)):
+                        result = future.result()
+                        if result:
+                            successful_texts.extend(result)
+                            
+                            # If we have enough texts, break early to save time
+                            if len(successful_texts) >= target_count:
+                                # Cancel any remaining futures
+                                for f in futures:
+                                    if not f.done():
+                                        f.cancel()
+                                break
+                
+                # If we have more texts than needed, sample down to target count
+                if len(successful_texts) > target_count:
+                    # Sort by length and take a mix of longer and random texts
+                    successful_texts.sort(key=len, reverse=True)
+                    # Take top 20% by length
+                    top_count = max(1, target_count // 5)
+                    top_texts = successful_texts[:top_count]
+                    # And sample the rest randomly
+                    remaining_count = target_count - top_count
+                    remaining_texts = successful_texts[top_count:]
+                    if remaining_texts:
+                        sampled_remaining = random.sample(remaining_texts, min(remaining_count, len(remaining_texts)))
+                        successful_texts = top_texts + sampled_remaining
+                    else:
+                        successful_texts = top_texts[:target_count]
+                
+                # Save the processed texts
+                decade_texts[decade] = successful_texts[:target_count]  # Ensure we only take up to target count
+                
+                # Log details about the processed texts
                 if decade_texts[decade]:
-                    logger.info(f"{decade}: {len(decade_texts[decade])} texts, " +
-                            f"avg length: {sum(len(t) for t in decade_texts[decade]) / len(decade_texts[decade]) if decade_texts[decade] else 0:.0f} chars")
+                    total_chars = sum(len(t) for t in decade_texts[decade])
+                    avg_length = total_chars / len(decade_texts[decade]) if decade_texts[decade] else 0
+                    total_bytes = sum(len(t.encode('utf-8')) for t in decade_texts[decade])
+                    logger.info(f"{decade}: {len(decade_texts[decade])} texts, avg length: {avg_length:.0f} chars, {total_bytes/(1024*1024):.2f} MB")
         
         except Exception as e:
             logger.error(f"Error loading decade samples: {e}")
-            # Don't return None, return the empty dictionary
+            import traceback
+            logger.error(traceback.format_exc())
+        
+        # Calculate total data size for logging
+        total_bytes = sum(sum(len(t.encode('utf-8')) for t in texts) for texts in decade_texts.values())
+        logger.info(f"Total dataset size: {total_bytes/(1024*1024*1024):.2f} GB")
         
         return decade_texts  # Ensure we always return the dictionary, even if empty
 
