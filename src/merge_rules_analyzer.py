@@ -650,7 +650,7 @@ class MergeRulesAnalyzer:
     def _identify_applied_merge_rules(self, token: str) -> List[str]:
         """
         Determine which merge rules were applied to form a token.
-        Uses a complex algorithm to reconstruct the merge process.
+        Uses an improved algorithm to reconstruct the merge process.
         
         Args:
             token: The token to analyze
@@ -666,7 +666,7 @@ class MergeRulesAnalyzer:
         if len(token) == 1 or token in self.tokenizer.all_special_tokens:
             self._token_decomposition_cache[token] = []
             return []
-            
+                
         # For continuation tokens, remove prefix
         if token.startswith('##'):
             base_token = token[2:]
@@ -676,18 +676,45 @@ class MergeRulesAnalyzer:
             base_token = token[1:]
         else:
             base_token = token
-            
-        # Simple approach: assume each character merge
-        # A more sophisticated approach would trace the exact merges
+        
+        # Start with characters
+        parts = list(base_token)
         applied_rules = []
         
-        # Look for character pairs that appear in merge rules
-        for i in range(len(base_token) - 1):
-            char_pair = base_token[i:i+2]
-            if char_pair in self.merge_rule_indices:
-                applied_rules.append(char_pair)
+        # Simulate the BPE merge process
+        while len(parts) > 1:
+            # Find best merge according to merge rules priority
+            best_merge = None
+            best_rank = float('inf')
+            
+            for i in range(len(parts) - 1):
+                # Try to find this pair in merge rules
+                pair_str = parts[i] + parts[i+1]
+                for j in range(len(pair_str) - 1):
+                    pair = pair_str[j:j+2]
+                    if pair in self.merge_rule_indices:
+                        rank = self.merge_rule_indices[pair]
+                        if rank < best_rank:
+                            best_rank = rank
+                            best_merge = (i, pair)
+            
+            # If no valid merges found, break
+            if best_merge is None:
+                break
+                
+            # Perform the merge and record the rule
+            i, pair = best_merge
+            applied_rules.append(pair)
+            
+            # Simplistic merge - we don't need to track the exact modified text,
+            # just that this merge rule was applied
+            parts.pop(i)
+            
+            # If we've merged enough to have only one part left, we're done
+            if len(parts) <= 1:
+                break
         
-        # Cache result
+        # Cache and return
         self._token_decomposition_cache[token] = applied_rules
         return applied_rules
     

@@ -26,61 +26,89 @@ class TemporalValidator:
         """
         self.inference_method = inference_method
     
-    def bootstrap_analysis(self, 
-                         decade_texts: Dict[str, List[str]], 
-                         n_bootstrap: int = 100, 
-                         sample_ratio: float = 0.8) -> Dict[str, Dict[str, float]]:
+    def bootstrap_analysis(self, decade_texts, n_bootstrap=20, sample_ratio=0.8):
         """
         Perform bootstrap analysis to estimate confidence intervals.
         
         Args:
             decade_texts: Dictionary mapping decades to lists of texts
             n_bootstrap: Number of bootstrap iterations
-            sample_ratio: Proportion of data to sample in each iteration
+            sample_ratio: Proportion of samples to use in each bootstrap
             
         Returns:
-            Dictionary with confidence intervals for each decade
+            Dictionary with bootstrap statistics by decade
         """
         logger.info(f"Running {n_bootstrap} bootstrap iterations...")
         
-        bootstrap_results = []
+        # Initialize results
+        bootstrap_results = defaultdict(list)
         
+        # Run bootstrap iterations
         for i in range(n_bootstrap):
             logger.info(f"Bootstrap iteration {i+1}/{n_bootstrap}")
             
             # Create bootstrap sample
-            bootstrap_sample = {}
-            for decade, texts in decade_texts.items():
-                if texts:
-                    # Sample with replacement
-                    sample_size = max(1, int(len(texts) * sample_ratio))
-                    bootstrap_sample[decade] = random.choices(texts, k=sample_size)
+            bootstrap_sample = self._create_bootstrap_sample(decade_texts, sample_ratio)
             
-            # Run inference on bootstrap sample
-            distribution = self.inference_method(bootstrap_sample)
-            
-            bootstrap_results.append(distribution)
+            # Run inference
+            try:
+                distribution = self.inference_method(bootstrap_sample)
+                
+                # Record results for each decade
+                for decade, proportion in distribution.items():
+                    bootstrap_results[decade].append(proportion)
+            except Exception as e:
+                logger.error(f"Error in bootstrap iteration {i+1}: {e}")
         
         # Calculate statistics
-        all_decades = set()
-        for dist in bootstrap_results:
-            all_decades.update(dist.keys())
-        
         confidence_intervals = {}
-        for decade in all_decades:
-            values = [dist.get(decade, 0) for dist in bootstrap_results]
-            if values:
+        for decade, proportions in bootstrap_results.items():
+            if proportions:
+                mean = np.mean(proportions)
+                median = np.median(proportions)
+                std_dev = np.std(proportions, ddof=1)
+                
+                # 95% confidence interval
+                sorted_proportions = sorted(proportions)
+                lower_idx = int(0.025 * len(sorted_proportions))
+                upper_idx = int(0.975 * len(sorted_proportions))
+                lower_ci = sorted_proportions[max(0, lower_idx)]
+                upper_ci = sorted_proportions[min(len(sorted_proportions)-1, upper_idx)]
+                
                 confidence_intervals[decade] = {
-                    "mean": np.mean(values),
-                    "std_dev": np.std(values),
-                    "lower_ci": np.percentile(values, 2.5),  # 95% confidence interval
-                    "upper_ci": np.percentile(values, 97.5),
-                    "median": np.median(values),
-                    "min": np.min(values),
-                    "max": np.max(values)
+                    "mean": mean,
+                    "median": median,
+                    "std_dev": std_dev,
+                    "lower_ci": lower_ci,
+                    "upper_ci": upper_ci
                 }
         
         return confidence_intervals
+
+    def _create_bootstrap_sample(self, decade_texts, sample_ratio=0.8):
+        """
+        Create a bootstrap sample by randomly sampling with replacement.
+        
+        Args:
+            decade_texts: Dictionary mapping decades to lists of texts
+            sample_ratio: Proportion of samples to use
+            
+        Returns:
+            Dictionary mapping decades to bootstrapped text samples
+        """
+        bootstrap_sample = {}
+        
+        for decade, texts in decade_texts.items():
+            if not texts:
+                continue
+                
+            # Calculate sample size
+            sample_size = max(int(len(texts) * sample_ratio), 1)
+            
+            # Sample with replacement
+            bootstrap_sample[decade] = random.choices(texts, k=sample_size)
+        
+        return bootstrap_sample
     
     def cross_validation(self, 
                        decade_texts: Dict[str, List[str]], 

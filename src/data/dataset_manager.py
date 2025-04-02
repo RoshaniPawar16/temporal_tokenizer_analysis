@@ -859,14 +859,125 @@ class TemporalDatasetManager:
         
         return enhanced_dataset
 
+    def _augment_text_for_volume(self, base_text: str, decade: str, preserve_decade_style: bool = True) -> str:
+        """
+        Augment a base text to increase the data volume, tailored to specific decade.
+        Enhanced to better preserve decade-specific characteristics.
+        
+        Args:
+            base_text: Original text
+            decade: The decade to generate text for
+            preserve_decade_style: Whether to focus on preserving decade-specific style
+        """
+        import re
+        
+        # Start with the base text
+        augmented_text = base_text
+        
+        # Define decade-specific vocabulary and topics (existing code)
+        decade_vocab = self._get_decade_vocabulary(decade)
+        era_style = self._get_era_style(decade)
+        
+        # Add some period-specific paragraphs to increase volume
+        num_paragraphs = max(1, min(5, int(1048576 / max(1, len(base_text)))))
+        
+        # Generate paragraphs with decade-specific content and style
+        for _ in range(num_paragraphs):
+            # Analyze the base text to extract style patterns
+            sentence_length = self._analyze_sentence_length(base_text)
+            vocabulary_level = self._analyze_vocabulary_level(base_text)
+            formal_style = self._analyze_formality(base_text)
+            
+            # Generate period-appropriate paragraph that matches the style
+            if preserve_decade_style:
+                period_paragraph = self._generate_period_paragraph(
+                    decade, 
+                    vocab=decade_vocab,
+                    era_style=era_style,
+                    sentence_length=sentence_length,
+                    vocabulary_level=vocabulary_level,
+                    formality=formal_style
+                )
+            else:
+                period_paragraph = self._generate_period_paragraph(decade, decade_vocab, era_style)
+            
+            # Add it to the text at appropriate positions
+            if len(augmented_text) > 1000:
+                # Find paragraph breaks to insert new content
+                paragraphs = re.split(r'\n\s*\n', augmented_text)
+                if len(paragraphs) > 2:
+                    insert_pos = random.randint(1, len(paragraphs) - 1)
+                    paragraphs.insert(insert_pos, period_paragraph)
+                    augmented_text = "\n\n".join(paragraphs)
+                else:
+                    augmented_text += "\n\n" + period_paragraph
+            else:
+                augmented_text += "\n\n" + period_paragraph
+        
+        return augmented_text
+
+    def _analyze_sentence_length(self, text: str) -> str:
+        """Analyze average sentence length in the text."""
+        sentences = re.split(r'[.!?]+', text)
+        sentences = [s.strip() for s in sentences if s.strip()]
+        
+        if not sentences:
+            return "medium"
+            
+        avg_length = sum(len(s.split()) for s in sentences) / len(sentences)
+        
+        if avg_length < 12:
+            return "short"
+        elif avg_length > 25:
+            return "long"
+        else:
+            return "medium"
+
+    def _analyze_vocabulary_level(self, text: str) -> str:
+        """Analyze vocabulary complexity level."""
+        # Simple heuristic: average word length
+        words = [w for w in re.findall(r'\b\w+\b', text.lower()) if w]
+        
+        if not words:
+            return "medium"
+            
+        avg_word_length = sum(len(w) for w in words) / len(words)
+        
+        if avg_word_length < 4.5:
+            return "simple"
+        elif avg_word_length > 5.5:
+            return "complex"
+        else:
+            return "medium"
+
+    def _analyze_formality(self, text: str) -> str:
+        """Analyze formality level of the text."""
+        # Simple heuristic based on presence of formal/informal indicators
+        formal_indicators = ['therefore', 'thus', 'consequently', 'furthermore', 'nevertheless', 
+                            'accordingly', 'moreover', 'hereby', 'wherein', 'therein']
+        informal_indicators = ['okay', 'yeah', 'stuff', 'kind of', 'sort of', 'you know', 
+                            'like', 'anyway', 'basically', 'pretty much']
+        
+        text_lower = text.lower()
+        formal_count = sum(1 for word in formal_indicators if word in text_lower)
+        informal_count = sum(1 for word in informal_indicators if word in text_lower)
+        
+        if formal_count > informal_count:
+            return "formal"
+        elif informal_count > formal_count:
+            return "informal"
+        else:
+            return "neutral"
+
     def create_controlled_dataset(self, distribution: Dict[str, float], total_texts: int = 5000) -> Dict[str, List[Tuple[str, str]]]:
         """
         Create a dataset with known temporal distribution for validation,
         scaled up to match Hayase et al.'s data volumes.
+        Enhanced for better balance and decade-specific characteristics.
         
         Args:
-            distribution: Dictionary mapping decades to proportions (e.g. {'1950s': 0.2})
-            total_texts: Total number of texts to include (increased to 5000)
+            distribution: Dictionary mapping decades to proportions
+            total_texts: Total number of texts to include
                 
         Returns:
             Dictionary mapping decades to lists of texts with the specified distribution
@@ -888,24 +999,27 @@ class TemporalDatasetManager:
             distribution = normalized
         
         # Calculate texts per decade, with much higher counts than before
-        texts_per_decade = {decade: max(int(prop * total_texts), 100) for decade, prop in distribution.items()}
+        texts_per_decade = {decade: max(int(prop * total_texts), 50) for decade, prop in distribution.items()}
         
-        # Load all available data with expanded coverage - request much more data
+        # Load all available data with expanded coverage
         logger.info("Loading source texts for controlled dataset...")
         
         # Use the expanded historical catalog in the Gutenberg loader
         self.gutenberg_loader.expand_historical_catalog()
         all_gutenberg_texts = self.gutenberg_loader.load_decade_samples(texts_per_decade=1000)
         
-        # Handle case where Gutenberg loader returns None
-        if all_gutenberg_texts is None:
-            logger.error("Gutenberg loader returned None instead of dataset dictionary")
-            all_gutenberg_texts = {}  # Use empty dict as fallback
-        
-        # British Library texts - using the correct parameter name 'per_decade'
+        # British Library texts
         all_bl_texts = self.bl_loader.load_decade_samples(per_decade=1000)  # Get more than needed
         
-        # Build the controlled dataset
+        # Track success in meeting distribution targets
+        target_comparison = {
+            "target_distribution": distribution,
+            "achieved_distribution": {},
+            "target_bytes": bytes_per_decade,
+            "achieved_bytes": {}
+        }
+        
+        # Build the controlled dataset with enhanced decade-specific preservation
         controlled_dataset = {}
         current_size_bytes = 0
         
@@ -936,27 +1050,27 @@ class TemporalDatasetManager:
                 logger.info(f"Using all {len(source_texts)} available texts for {decade}")
             
             # Keep adding texts until we reach the target data volume
-            # Use texts with replacement if needed
+            # Use texts with replacement if needed, but with improved variation
             i = 0
             max_iterations = 100000  # Prevent infinite loops
             
             while decade_bytes < target_bytes and i < max_iterations:
                 if not source_texts:
-                    # If no real texts, generate synthetic ones
-                    text = self._create_historical_synthetic_texts(decade, 1, {})[0]
+                    # If no real texts, generate synthetic ones with decade-specific patterns
+                    text = self._create_historical_synthetic_texts(decade, 1, {}, preserve_decade_characteristics=True)[0]
                     source = "synthetic"
                 else:
                     # Use existing texts with wrapping when needed
                     idx = i % len(source_texts)
                     text, source = source_texts[idx]
                     
-                    # For data volume, augment the text to make it longer after first pass through all texts
+                    # For data volume, augment the text after first pass, but preserve decade characteristics
                     if i >= len(source_texts) and random.random() < 0.7:
-                        text = self._augment_text_for_volume(text, decade)
+                        text = self._augment_text_for_volume(text, decade, preserve_decade_style=True)
                         source = f"{source}_augmented"
                     elif i >= len(source_texts) * 2:
                         # After second pass, modify to avoid exact duplication
-                        text = self._modify_text_slightly(text)
+                        text = self._modify_text_slightly(text, decade_specific=True)
                         source = f"{source}_modified"
                 
                 decade_texts.append((text, source))
@@ -975,14 +1089,17 @@ class TemporalDatasetManager:
                     
             controlled_dataset[decade] = decade_texts
             current_size_bytes += decade_bytes
+            target_comparison["achieved_bytes"][decade] = decade_bytes
             
             logger.info(f"{decade}: {len(decade_texts)} texts, {decade_bytes/(1024*1024):.2f} MB ({distribution.get(decade, 0):.1%})")
         
-        # Calculate actual distribution
+        # Calculate actual distribution achieved
         actual_bytes_per_decade = {decade: sum(len(text.encode('utf-8')) for text, _ in texts) 
                                 for decade, texts in controlled_dataset.items()}
         actual_distribution = {decade: bytes/current_size_bytes 
                             for decade, bytes in actual_bytes_per_decade.items()}
+        
+        target_comparison["achieved_distribution"] = actual_distribution
         
         # Create metadata for the controlled dataset
         metadata = {
@@ -998,6 +1115,9 @@ class TemporalDatasetManager:
                     "texts": len(texts),
                     "bytes": actual_bytes_per_decade.get(decade, 0),
                     "mb": actual_bytes_per_decade.get(decade, 0) / (1024*1024),
+                    "target_proportion": distribution.get(decade, 0),
+                    "actual_proportion": actual_distribution.get(decade, 0),
+                    "proportion_error": actual_distribution.get(decade, 0) - distribution.get(decade, 0),
                     "sources": {
                         "british_library": sum(1 for _, src in texts if src == "british_library"),
                         "gutenberg": sum(1 for _, src in texts if src == "gutenberg"),
@@ -1009,11 +1129,15 @@ class TemporalDatasetManager:
             }
         }
         
-        # Save the metadata
+        # Save the metadata with more detailed information
         metadata_path = self.dataset_dir / "controlled_datasets"
         metadata_path.mkdir(exist_ok=True, parents=True)
         with open(metadata_path / f"controlled_dataset_{int(time.time())}.json", "w") as f:
             json.dump(metadata, f, indent=2)
+        
+        # Also save the target comparison separately for analysis
+        with open(metadata_path / f"target_comparison_{int(time.time())}.json", "w") as f:
+            json.dump(target_comparison, f, indent=2)
         
         logger.info("Actual distribution in controlled dataset:")
         for decade, prop in sorted(actual_distribution.items()):

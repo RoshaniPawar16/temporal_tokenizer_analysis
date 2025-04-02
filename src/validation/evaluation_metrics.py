@@ -57,12 +57,15 @@ class TemporalEvaluationMetrics:
         rank_correlation = self._calculate_rank_correlation(inferred, ground_truth)
         representation_analysis = self._identify_representation_issues(inferred, ground_truth)
         
+        shape_similarity = self.calculate_distribution_shape_similarity(inferred, ground_truth)
+
         # Collect metrics
         distribution_metrics = {
             "mse": mse,
             "log10_mse": log10_mse,
             "mae": mae,
-            "js_distance": js_distance
+            "js_distance": js_distance,
+            "shape_similarity": shape_similarity
         }
         
         decade_metrics = {
@@ -284,6 +287,45 @@ class TemporalEvaluationMetrics:
             logger.warning(f"Error calculating rank correlation: {e}")
             return 0.0
     
+    def calculate_distribution_shape_similarity(self, 
+                                        inferred: Dict[str, float], 
+                                        ground_truth: Dict[str, float]) -> float:
+        """
+        Calculate how similar the shapes of two distributions are,
+        regardless of absolute values. This helps identify if the
+        method is capturing the right trends even if absolute values differ.
+        
+        Args:
+            inferred: Inferred temporal distribution
+            ground_truth: Ground truth distribution
+            
+        Returns:
+            Shape similarity score between 0 and 1
+        """
+        # Collect all decades
+        all_decades = sorted(set(inferred.keys()) | set(ground_truth.keys()))
+        
+        # Create normalized vectors
+        inf_vector = np.array([inferred.get(decade, 0.0) for decade in all_decades])
+        gt_vector = np.array([ground_truth.get(decade, 0.0) for decade in all_decades])
+        
+        # Calculate trends (differences between adjacent decades)
+        if len(inf_vector) > 1:
+            inf_trends = np.diff(inf_vector)
+            gt_trends = np.diff(gt_vector)
+            
+            # Count how many trend directions match
+            matching_directions = sum(1 for i, g in zip(inf_trends, gt_trends) 
+                                    if (i > 0 and g > 0) or (i < 0 and g < 0) 
+                                    or (abs(i) < 0.01 and abs(g) < 0.01))
+            
+            # Normalize to get score between 0 and 1
+            if len(inf_trends) > 0:
+                return matching_directions / len(inf_trends)
+        
+        # Default return if vectors are too short or calculation fails
+        return 0.0
+
     def _identify_representation_issues(self, 
                                      inferred: Dict[str, float], 
                                      ground_truth: Dict[str, float]) -> Dict:
@@ -391,6 +433,7 @@ class TemporalEvaluationMetrics:
             f"log10(MSE): {distribution_metrics['log10_mse']:.2f}\n"
             f"MAE: {distribution_metrics['mae']:.4f}\n"
             f"JS Distance: {distribution_metrics['js_distance']:.4f}\n"
+            f"Shape Similarity: {distribution_metrics['shape_similarity']:.2f}\n"
             f"Rank Correlation: {decade_metrics['rank_correlation']:.2f}"
         )
         
