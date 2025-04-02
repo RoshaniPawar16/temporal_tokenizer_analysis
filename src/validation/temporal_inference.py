@@ -470,55 +470,29 @@ class TemporalDistributionInference:
                 # Add term
                 objective_terms.append(cp.sum(cp.multiply(alpha, weighted_freqs)))
             
-            # Add entropy regularization to prevent distribution collapse
-            regularization_strength = 0.05
-            entropy_term = -regularization_strength * cp.sum(cp.entr(alpha))
+            # Define a simple linear objective function - no entropy regularization
+            objective = cp.Maximize(sum(objective_terms))  # Simple linear objective
             
-            # # Modified section - converted maximization to minimization by negating
-            # # Objective: minimize negative sum of weighted terms with regularization
-            # objective = cp.Minimize(-(sum(objective_terms) + entropy_term))
-
-            
-            # # Solve the problem
-            # prob = cp.Problem(objective, constraints)
-            # try:
-            #     # Try with default solver first
-            #     prob.solve()
-            # except Exception as e:
-            #     try:
-            #         # Try with SCS solver if default fails
-            #         logger.warning(f"Default solver failed: {e}, trying SCS solver")
-            #         prob.solve(solver=cp.SCS)
-            #     except Exception as e2:
-            #         logger.error(f"SCS solver also failed: {e2}")
-            #         raise
-
-            # And now where you define the objective and solve the problem, change to:
-            # Split the objective into convex and concave parts
-            convex_objective = -sum(objective_terms)  # This part is convex when negated
-            concave_objective = -entropy_term  # This part is concave when negated
-
-            # Use the SCS solver with the proper formulation
-            prob = cp.Problem(cp.Minimize(convex_objective + concave_objective), constraints)
+            # Solve the problem
+            prob = cp.Problem(objective, constraints)
             try:
-                # Use SCS solver directly with specific parameters
-                prob.solve(solver=cp.SCS, eps=1e-4, max_iters=10000, 
-                        use_indirect=False, verbose=False)
-            except Exception as e:
-                logger.error(f"SCS solver failed: {e}")
-                # Fall back to the heuristic method
-                return self._infer_distribution_heuristic(decade_patterns)
-            
-            # Extract solution
-            if prob.status == cp.OPTIMAL:
-                distribution = {decade: float(alpha.value[i]) for i, decade in enumerate(decades)}
+                # Try with default solver
+                prob.solve()
                 
-                # Normalize to ensure sum to 1
-                total = sum(distribution.values())
-                if total > 0:
-                    return {decade: value / total for decade, value in distribution.items()}
+                # Extract solution if optimal
+                if prob.status == cp.OPTIMAL:
+                    distribution = {decade: float(alpha.value[i]) for i, decade in enumerate(decades)}
+                    
+                    # Normalize to ensure sum to 1
+                    total = sum(distribution.values())
+                    if total > 0:
+                        return {decade: value / total for decade, value in distribution.items()}
+                else:
+                    logger.warning(f"Solver failed to find optimal solution: {prob.status}")
+            except Exception as e:
+                logger.error(f"Solver error: {e}")
             
-            # If we get here, something went wrong with the LP approach
+            # If we get here, LP failed, so fall back to heuristic
             logger.warning("Linear programming approach failed, falling back to heuristic")
         except Exception as e:
             logger.error(f"Error in linear programming: {e}")
