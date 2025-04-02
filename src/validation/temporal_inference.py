@@ -474,12 +474,24 @@ class TemporalDistributionInference:
             regularization_strength = 0.05
             entropy_term = -regularization_strength * cp.sum(cp.entr(alpha))
             
-            # Objective: maximize sum of weighted terms with regularization
-            objective = cp.Maximize(sum(objective_terms) + entropy_term)
+            # Modified section - converted maximization to minimization by negating
+            # Objective: minimize negative sum of weighted terms with regularization
+            objective = cp.Minimize(-(sum(objective_terms) + entropy_term))
+
             
             # Solve the problem
             prob = cp.Problem(objective, constraints)
-            prob.solve()
+            try:
+                # Try with default solver first
+                prob.solve()
+            except Exception as e:
+                try:
+                    # Try with SCS solver if default fails
+                    logger.warning(f"Default solver failed: {e}, trying SCS solver")
+                    prob.solve(solver=cp.SCS)
+                except Exception as e2:
+                    logger.error(f"SCS solver also failed: {e2}")
+                    raise
             
             # Extract solution
             if prob.status == cp.OPTIMAL:

@@ -239,16 +239,23 @@ class TemporalDatasetManager:
         logger.info("Loading all available source texts...")
         
         # Load a large number of texts per decade to have sufficient data for large dataset
-        max_texts = 1000  # Request a lot of texts
+        max_texts = 5000  # Request a lot of texts
         
-        # British Library texts - using the correct parameter name 'per_decade'
+        # # British Library texts - using the correct parameter name 'per_decade'
+        # bl_texts_by_decade = self.bl_loader.load_decade_samples(per_decade=max_texts)
+        
+        # # Gutenberg texts - pass the parameter directly
+        # gutenberg_texts_by_decade = self.gutenberg_loader.load_decade_samples(texts_per_decade=max_texts)
+
+        # Modify the following lines to use more aggressive replication for historical periods
         bl_texts_by_decade = self.bl_loader.load_decade_samples(per_decade=max_texts)
-        
-        # Gutenberg texts - pass the parameter directly
         gutenberg_texts_by_decade = self.gutenberg_loader.load_decade_samples(texts_per_decade=max_texts)
         
         # Combine sources
         all_texts = {}
+        # Force expanded historical catalogs for both loaders
+        logger.info("Expanding historical catalogs for both data sources...")
+        self.gutenberg_loader.expand_historical_catalog()
         for decade in distribution.keys():
             decade_bl = [(text, "british_library") for text in bl_texts_by_decade.get(decade, [])]
             decade_gutenberg = [(text, "gutenberg") for text in gutenberg_texts_by_decade.get(decade, [])]
