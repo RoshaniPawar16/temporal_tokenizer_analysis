@@ -30,9 +30,9 @@ class TemporalEvaluationMetrics:
         self.results_dir.mkdir(parents=True, exist_ok=True)
     
     def evaluate_distribution(self, 
-                           inferred: Dict[str, float], 
-                           ground_truth: Dict[str, float],
-                           model_name: str = "model") -> Dict:
+                       inferred: Dict[str, float], 
+                       ground_truth: Dict[str, float],
+                       model_name: str = "model") -> Dict:
         """
         Evaluate inferred distribution against ground truth with multiple metrics.
         
@@ -51,14 +51,13 @@ class TemporalEvaluationMetrics:
         mse, log10_mse = self._calculate_mse(inferred, ground_truth)
         mae = self._calculate_mae(inferred, ground_truth)
         js_distance = self._calculate_js_distance(inferred, ground_truth)
+        shape_similarity = self.calculate_distribution_shape_similarity(inferred, ground_truth)
         
         # Calculate decade-level metrics
         decade_errors = self._calculate_decade_errors(inferred, ground_truth)
         rank_correlation = self._calculate_rank_correlation(inferred, ground_truth)
         representation_analysis = self._identify_representation_issues(inferred, ground_truth)
         
-        shape_similarity = self.calculate_distribution_shape_similarity(inferred, ground_truth)
-
         # Collect metrics
         distribution_metrics = {
             "mse": mse,
@@ -495,6 +494,45 @@ class TemporalEvaluationMetrics:
         plt.savefig(self.results_dir / f"{model_name}_representation_analysis.png", dpi=300)
         plt.close()
     
+    def calculate_distribution_shape_similarity(self, 
+                                        inferred: Dict[str, float], 
+                                        ground_truth: Dict[str, float]) -> float:
+        """
+        Calculate how similar the shapes of two distributions are,
+        regardless of absolute values. This helps identify if the
+        method is capturing the right trends even if absolute values differ.
+        
+        Args:
+            inferred: Inferred temporal distribution
+            ground_truth: Ground truth distribution
+            
+        Returns:
+            Shape similarity score between 0 and 1
+        """
+        # Collect all decades
+        all_decades = sorted(set(inferred.keys()) | set(ground_truth.keys()))
+        
+        # Create normalized vectors
+        inf_vector = np.array([inferred.get(decade, 0.0) for decade in all_decades])
+        gt_vector = np.array([ground_truth.get(decade, 0.0) for decade in all_decades])
+        
+        # Calculate trends (differences between adjacent decades)
+        if len(inf_vector) > 1:
+            inf_trends = np.diff(inf_vector)
+            gt_trends = np.diff(gt_vector)
+            
+            # Count how many trend directions match
+            matching_directions = sum(1 for i, g in zip(inf_trends, gt_trends) 
+                                if (i > 0 and g > 0) or (i < 0 and g < 0) 
+                                or (abs(i) < 0.01 and abs(g) < 0.01))
+            
+            # Normalize to get score between 0 and 1
+            if len(inf_trends) > 0:
+                return matching_directions / len(inf_trends)
+        
+        # Default return if vectors are too short or calculation fails
+        return 0.0
+
     def _create_comparative_visualizations(self, evaluations: List[Dict]):
         """
         Create visualizations comparing different models.

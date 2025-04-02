@@ -9,6 +9,7 @@ import logging
 import random
 import numpy as np
 from typing import Dict, List, Callable, Any
+from collections import defaultdict
 
 logger = logging.getLogger(__name__)
 

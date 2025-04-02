@@ -317,6 +317,9 @@ class TemporalDistributionInference:
         Args:
             decade_patterns: Results from analyze_decade_patterns
             threshold: How much more common a pattern must be
+            
+        Returns:
+            Dictionary mapping decades to lists of distinctive patterns
         """
         distinctive_patterns = {}
         
@@ -338,12 +341,14 @@ class TemporalDistributionInference:
                 continue
             
             # Calculate global pattern frequencies across all decades
-            global_freqs = defaultdict(list)
+            global_freqs = {}
             for other_decade in decades:
                 if pattern_type in decade_patterns[other_decade]:
                     other_patterns = decade_patterns[other_decade][pattern_type]
                     total_tokens = decade_patterns[other_decade]['total_tokens']
                     for pattern, freq in other_patterns.items():
+                        if pattern not in global_freqs:
+                            global_freqs[pattern] = []
                         # Store normalized frequency (by total tokens)
                         if total_tokens > 0:
                             norm_freq = freq / total_tokens
@@ -391,6 +396,9 @@ class TemporalDistributionInference:
             decade_patterns: Results from analyze_decade_patterns
             num_merge_rules: Number of merge rules to consider
             weight_early_merges: Whether to give higher weight to earlier merge rules
+            
+        Returns:
+            Dictionary mapping decades to their estimated proportion
         """
         # Extract decades
         decades = sorted(list(decade_patterns.keys()))
@@ -420,7 +428,7 @@ class TemporalDistributionInference:
                         if decade_patterns[decade]['total_tokens'] > 0:
                             merge_frequencies[rule][i] = count / decade_patterns[decade]['total_tokens']
             
-            # Calculate distinctiveness for each rule (how distinctive it is across decades)
+            # Calculate distinctiveness for each rule (how much it varies across decades)
             distinctiveness = {}
             for rule, freqs in merge_frequencies.items():
                 if np.sum(freqs) > 0:
@@ -431,21 +439,21 @@ class TemporalDistributionInference:
                     # Distinctiveness is ratio of max to mean of others (capped to avoid extreme values)
                     distinctiveness[rule] = min(max_val / mean_others if mean_others > 0 else 1.0, 5.0)
             
-            # Sort merge rules by frequency and take top N, considering distinctiveness
+            # Sort merge rules by a combination of frequency and distinctiveness
             rule_scores = {}
             for rule in merge_frequencies.keys():
                 freqs = merge_frequencies[rule]
                 overall_freq = np.sum(freqs)
                 distinct_score = distinctiveness.get(rule, 1.0)
-                # Balance frequency and distinctiveness
+                # Balance between frequency and distinctiveness
                 rule_scores[rule] = overall_freq * np.log1p(distinct_score)
             
-            # Select top rules
+            # Select top rules by this combined score
             merge_rules = sorted(rule_scores.keys(), 
                             key=lambda r: rule_scores[r], 
                             reverse=True)[:num_merge_rules]
             
-            # Construct objective terms with improved weighting
+            # Construct objective function with weighted terms
             objective_terms = []
             for idx, rule in enumerate(merge_rules):
                 freqs = merge_frequencies[rule]
