@@ -95,7 +95,13 @@ class TemporalDistributionInference:
                 except Exception as e:
                     logger.warning(f"Could not load merges file: {e}")
             
-            # If still no merge rules, create synthetic ones by analyzing tokenizer behavior
+            # Method 5: BERT-specific extraction for BERT-type tokenizers
+            if not self.merge_rules and "bert" in self.tokenizer_name.lower():
+                logger.info("Detected BERT-type tokenizer, using specialized extraction method")
+                self.merge_rules = self._extract_bert_merge_rules()
+                logger.info(f"Extracted {len(self.merge_rules)} merge rules using BERT-specific method")
+            
+            # Method 6: If still no merge rules, create synthetic ones by analyzing tokenizer behavior
             if not self.merge_rules:
                 logger.warning(f"Could not extract merge rules directly, generating approximation")
                 # Create a diverse sample of text to find patterns
@@ -139,6 +145,132 @@ class TemporalDistributionInference:
         # Set up results directory
         self.results_dir = RESULTS_DIR / "temporal_inference"
         self.results_dir.mkdir(parents=True, exist_ok=True)
+
+    def _extract_bert_merge_rules(self):
+        """
+        Extract merge rules from BERT tokenizer using a more direct approach.
+        This is a workaround for BERT-type tokenizers that don't expose merge rules.
+        """
+        if not hasattr(self, 'tokenizer'):
+            logger.error("No tokenizer available")
+            return []
+        
+        logger.info("Extracting BERT merge rules using vocabulary analysis")
+        
+        # Get vocabulary
+        vocab = self.tokenizer.get_vocab()
+        
+        # Identify subword patterns
+        merge_rules = []
+        
+        # Collect wordpieces that look like continuations (start with ##)
+        continuations = {}
+        for token, idx in vocab.items():
+            if token.startswith('##'):
+                continuations[token[2:]] = idx
+        
+        # Build potential merge rules from vocabulary structure
+        for token, idx in vocab.items():
+            # Skip special tokens
+            if token.startswith('[') or token in ['[UNK]', '[SEP]', '[PAD]', '[CLS]', '[MASK]']:
+                continue
+            
+            # Find potential subword pairs
+            for i in range(1, len(token)):
+                prefix = token[:i]
+                suffix = token[i:]
+                
+                # Check if both parts are in vocabulary
+                if prefix in vocab and ('##' + suffix) in vocab:
+                    # This is a potential merge
+                    rule = (prefix, '##' + suffix)
+                    merge_rules.append(rule)
+        
+        # Sort merge rules by token indices (rough approximation of merge order)
+        merge_rules.sort(key=lambda r: (vocab.get(r[0], 0) + vocab.get(r[1], 0)) / 2)
+        
+        logger.info(f"Extracted {len(merge_rules)} potential merge rules for BERT")
+        return merge_rules
+
+    def analyze_data_quality(self, decade_texts):
+        """
+        Analyze data quality to ensure it's sufficient for reliable inference.
+        
+        Args:
+            decade_texts: Dictionary mapping decades to lists of texts
+            
+        Returns:
+            Dictionary with data quality metrics
+        """
+        import re
+        import random
+        
+        quality_metrics = {}
+        
+        for decade, texts in decade_texts.items():
+            decade_metrics = {
+                'num_texts': len(texts),
+                'total_chars': sum(len(text) for text in texts),
+                'avg_text_length': sum(len(text) for text in texts) / max(1, len(texts)),
+                'min_text_length': min((len(text) for text in texts), default=0),
+                'max_text_length': max((len(text) for text in texts), default=0),
+                'vocabulary_size': self._estimate_vocabulary_size(texts),
+                'data_bytes': sum(len(text.encode('utf-8')) for text in texts),
+                'data_gb': sum(len(text.encode('utf-8')) for text in texts) / (1024**3),
+            }
+            
+            # Evaluate if data quality is sufficient
+            is_sufficient = (
+                decade_metrics['num_texts'] >= 30 and
+                decade_metrics['data_gb'] >= 0.5 and  # At least 0.5 GB per decade
+                decade_metrics['avg_text_length'] >= 1000  # Average text at least 1000 chars
+            )
+            
+            decade_metrics['is_sufficient'] = is_sufficient
+            quality_metrics[decade] = decade_metrics
+            
+            # Log warnings for insufficient data
+            if not is_sufficient:
+                if decade_metrics['num_texts'] < 30:
+                    logger.warning(f"{decade}: Insufficient text count ({decade_metrics['num_texts']} < 30)")
+                if decade_metrics['data_gb'] < 0.5:
+                    logger.warning(f"{decade}: Insufficient data volume ({decade_metrics['data_gb']:.2f} GB < 0.5 GB)")
+                if decade_metrics['avg_text_length'] < 1000:
+                    logger.warning(f"{decade}: Texts too short ({decade_metrics['avg_text_length']:.1f} chars < 1000)")
+        
+        # Overall quality assessment
+        quality_metrics['overall'] = {
+            'all_decades_sufficient': all(metrics['is_sufficient'] for metrics in quality_metrics.values() if isinstance(metrics, dict)),
+            'total_data_gb': sum(metrics['data_gb'] for metrics in quality_metrics.values() if isinstance(metrics, dict)),
+            'total_texts': sum(metrics['num_texts'] for metrics in quality_metrics.values() if isinstance(metrics, dict)),
+        }
+        
+        # Log overall assessment
+        if quality_metrics['overall']['all_decades_sufficient']:
+            logger.info(f"Data quality check passed: {quality_metrics['overall']['total_texts']} texts, {quality_metrics['overall']['total_data_gb']:.2f} GB total")
+        else:
+            logger.warning(f"Data quality check failed: {quality_metrics['overall']['total_texts']} texts, {quality_metrics['overall']['total_data_gb']:.2f} GB total")
+        
+        return quality_metrics
+
+    def _estimate_vocabulary_size(self, texts, sample_size=10000):
+        """Estimate vocabulary size from a sample of texts."""
+        import re
+        import random
+        
+        # Sample texts to limit processing time
+        if len(texts) > sample_size:
+            sampled_texts = random.sample(texts, sample_size)
+        else:
+            sampled_texts = texts
+        
+        # Collect unique words
+        word_set = set()
+        for text in sampled_texts:
+            words = re.findall(r'\b\w+\b', text.lower())
+            word_set.update(words)
+        
+        return len(word_set)
 
     def analyze_merge_rule_dynamics(self, decade_patterns: Dict[str, Dict]) -> Dict[str, List[str]]:
         """
@@ -426,17 +558,18 @@ class TemporalDistributionInference:
     #     return self._infer_distribution_heuristic(decade_patterns)
 
     def infer_temporal_distribution(self, 
-                         decade_patterns: Dict[str, Dict],
-                         num_merge_rules: int = 3000,
-                         weight_early_merges: bool = True) -> Dict[str, float]:
+                     decade_patterns: Dict[str, Dict],
+                     num_merge_rules: int = 3000,
+                     weight_early_merges: bool = True,
+                     regularization_strength: float = 0.1) -> Dict[str, float]:
         """
-        Infer the temporal distribution in training data using linear programming.
-        Enhanced with improved balancing, distinctiveness weighting, and post-processing.
+        Infer the temporal distribution in training data using enhanced linear programming.
         
         Args:
             decade_patterns: Results from analyze_decade_patterns
             num_merge_rules: Number of merge rules to consider
             weight_early_merges: Whether to give higher weight to earlier merge rules
+            regularization_strength: Strength of regularization term
             
         Returns:
             Dictionary mapping decades to their estimated proportion
@@ -455,19 +588,20 @@ class TemporalDistributionInference:
             constraints = [cp.sum(alpha) == 1]
             
             # Add minimum probability constraint to prevent zeros
-            min_prob = 0.04  # Increased minimum to 4% probability for any decade
+            min_prob = 0.03  # Minimum 3% probability for any decade
             constraints.extend([alpha[i] >= min_prob for i in range(len(decades))])
             
-            # Extract merge rule frequencies for each decade
+            # Extract normalized merge rule frequencies for each decade
             merge_frequencies = {}
             for i, decade in enumerate(decades):
                 if 'merge_rules' in decade_patterns[decade]:
-                    for rule, count in decade_patterns[decade]['merge_rules'].items():
-                        if rule not in merge_frequencies:
-                            merge_frequencies[rule] = np.zeros(len(decades))
-                        # Normalize by total tokens in this decade
-                        if decade_patterns[decade]['total_tokens'] > 0:
-                            merge_frequencies[rule][i] = count / decade_patterns[decade]['total_tokens']
+                    total_tokens = decade_patterns[decade]['total_tokens']
+                    if total_tokens > 0:
+                        for rule, count in decade_patterns[decade]['merge_rules'].items():
+                            if rule not in merge_frequencies:
+                                merge_frequencies[rule] = np.zeros(len(decades))
+                            # Normalize by total tokens
+                            merge_frequencies[rule][i] = count / total_tokens
             
             # Calculate distinctiveness for each rule (how much it varies across decades)
             distinctiveness = {}
@@ -477,9 +611,8 @@ class TemporalDistributionInference:
                     max_idx = np.argmax(freqs)
                     other_vals = np.delete(freqs, max_idx)
                     mean_others = np.mean(other_vals) if len(other_vals) > 0 else 0.0001
-                    # Distinctiveness is ratio of max to mean of others (capped to avoid extreme values)
-                    # Increased cap from 5.0 to 4.0 to reduce impact of highly distinctive patterns
-                    distinctiveness[rule] = min(max_val / mean_others if mean_others > 0 else 1.0, 4.0)
+                    # Distinctiveness ratio with capping to avoid extreme values
+                    distinctiveness[rule] = min(max_val / mean_others if mean_others > 0 else 1.0, 5.0)
             
             # Sort merge rules by a combination of frequency and distinctiveness
             rule_scores = {}
@@ -487,131 +620,125 @@ class TemporalDistributionInference:
                 freqs = merge_frequencies[rule]
                 overall_freq = np.sum(freqs)
                 distinct_score = distinctiveness.get(rule, 1.0)
-                # Use a more balanced scoring function with sqrt of distinctiveness
-                # This reduces the impact of extremely distinctive patterns
-                rule_scores[rule] = overall_freq * np.sqrt(distinct_score)
+                # Balance between frequency and distinctiveness
+                rule_scores[rule] = overall_freq * np.log1p(distinct_score)
             
             # Select top rules by this combined score
             merge_rules = sorted(rule_scores.keys(), 
                             key=lambda r: rule_scores[r], 
                             reverse=True)[:num_merge_rules]
             
-            # Count how many distinctive rules per decade
-            rules_per_decade = {decade: 0 for decade in decades}
-            for rule in merge_rules:
-                freqs = merge_frequencies[rule]
-                if np.sum(freqs) > 0:
-                    max_decade_idx = np.argmax(freqs)
-                    rules_per_decade[decades[max_decade_idx]] += 1
-            
-            # Log the rules per decade to help debug over-representation
-            logger.debug(f"Rules per decade: {rules_per_decade}")
-            
-            # Find the decade with the most rules - we'll apply stronger balancing to it
-            max_rules_decade = max(rules_per_decade.items(), key=lambda x: x[1])[0]
-            logger.debug(f"Decade with most rules: {max_rules_decade} with {rules_per_decade[max_rules_decade]} rules")
-            
-            # Construct objective function with weighted terms and decade balancing
-            objective_terms = []
+            # Build rule weights dictionary for more careful importance weighting
+            rule_weights = {}
             for idx, rule in enumerate(merge_rules):
-                freqs = merge_frequencies[rule]
                 distinct_factor = distinctiveness.get(rule, 1.0)
                 
-                # Apply early merge weight if enabled
+                # Position weight (if enabled)
                 position_weight = 1.0
                 if weight_early_merges:
-                    position_weight = 1.0 - (idx / (2 * num_merge_rules))  # Linear decay to 0.5
+                    # More aggressive weighting for early rules - exponential decay
+                    position_weight = np.exp(-0.5 * idx / len(merge_rules))
                 
-                # Add decade balancing - reduce weight for decades with many rules
-                decade_weights = np.ones(len(decades))
-                for i, decade in enumerate(decades):
-                    if rules_per_decade[decade] > 0:
-                        # Scale down weight for decades with many distinctive rules
-                        # Use a more aggressive scaling for the decade with the most rules
-                        if decade == max_rules_decade and rules_per_decade[decade] > 1.5 * (sum(rules_per_decade.values()) / len(decades)):
-                            decade_weights[i] = 1.0 / (rules_per_decade[decade] ** 0.75)  # More aggressive dampening
-                        else:
-                            decade_weights[i] = 1.0 / np.sqrt(rules_per_decade[decade])
-                
-                # Weight by distinctiveness, position, and decade balance
-                weighted_freqs = freqs * distinct_factor * position_weight * decade_weights
-                
-                # Add term
-                objective_terms.append(cp.sum(cp.multiply(alpha, weighted_freqs)))
+                # Combine distinctiveness and position
+                rule_weights[rule] = distinct_factor * position_weight
             
-            # Define a simple linear objective function - no entropy regularization
-            objective = cp.Maximize(sum(objective_terms))  # Simple linear objective
+            # Count how many rules are distinctive for each decade
+            decade_rule_counts = np.zeros(len(decades))
+            for rule in merge_rules:
+                freqs = merge_frequencies[rule]
+                max_idx = np.argmax(freqs)
+                decade_rule_counts[max_idx] += 1
+            
+            # Normalize to get relative rule density
+            if np.sum(decade_rule_counts) > 0:
+                normalized_counts = decade_rule_counts / np.sum(decade_rule_counts)
+                
+                # Use inverse of normalized counts for balancing
+                # This gives less weight to decades with many distinctive rules
+                decade_balance_weights = 1.0 / (normalized_counts + 0.1)  # Add small constant to avoid division by zero
+                
+                # Normalize the balance weights
+                decade_balance_weights = decade_balance_weights / np.sum(decade_balance_weights)
+            else:
+                # Default to equal weights if no rules found
+                decade_balance_weights = np.ones(len(decades)) / len(decades)
+            
+            # Construct objective function terms
+            objective_terms = []
+            
+            # Primary data fitting term
+            data_fit_term = 0
+            for rule in merge_rules:
+                freqs = merge_frequencies[rule]
+                weight = rule_weights[rule]
+                
+                # Apply decade balancing
+                balanced_freqs = freqs * decade_balance_weights
+                
+                # Add weighted term
+                data_fit_term += cp.sum(cp.multiply(alpha, balanced_freqs * weight))
+            
+            # Regularization term: encourage smoother distribution
+            if len(decades) > 2:
+                # Calculate differences between adjacent decades
+                diffs = []
+                for i in range(len(decades)-1):
+                    diffs.append(alpha[i+1] - alpha[i])
+                
+                # L2 regularization on differences - encourages smooth transitions
+                smoothness_term = cp.sum([diff**2 for diff in diffs])
+                
+                # Full objective with regularization
+                objective = cp.Maximize(data_fit_term - regularization_strength * smoothness_term)
+            else:
+                # No regularization needed for 2 or fewer decades
+                objective = cp.Maximize(data_fit_term)
             
             # Solve the problem
             prob = cp.Problem(objective, constraints)
-            try:
-                # Try with default solver
-                prob.solve()
-                
-                # Extract solution if optimal
-                if prob.status == cp.OPTIMAL:
-                    distribution = {decade: float(alpha.value[i]) for i, decade in enumerate(decades)}
-                    
-                    # Normalize to ensure sum to 1
-                    total = sum(distribution.values())
-                    if total > 0:
-                        normalized = {decade: value / total for decade, value in distribution.items()}
-                        
-                        # Apply two-step smoothing
-                        # First, identify the most over-represented decade
-                        max_decade = max(normalized, key=normalized.get)
-                        
-                        if normalized[max_decade] > 0.22:  # If any decade has >22%
-                            logger.info(f"Applying smoothing to reduce over-representation of {max_decade} (was {normalized[max_decade]:.2%})")
-                            # Reduce the highest value and redistribute
-                            excess = normalized[max_decade] - 0.22
-                            normalized[max_decade] = 0.22
-                            
-                            # Redistribute excess to other decades proportionally
-                            other_decades = [d for d in decades if d != max_decade]
-                            other_total = sum(normalized[d] for d in other_decades)
-                            
-                            if other_total > 0:
-                                for decade in other_decades:
-                                    normalized[decade] += excess * (normalized[decade] / other_total)
-                            
-                            logger.info(f"After smoothing: {max_decade} is now {normalized[max_decade]:.2%}")
-                        
-                        # Second smoothing step - ensure no decade is below 0.05
-                        min_threshold = 0.05
-                        under_represented = {d: v for d, v in normalized.items() if v < min_threshold}
-                        
-                        if under_represented:
-                            total_deficit = sum(min_threshold - v for v in under_represented.values())
-                            well_represented = {d: v for d, v in normalized.items() if v >= min_threshold}
-                            
-                            # Take from well-represented decades proportionally
-                            if well_represented and sum(well_represented.values()) > total_deficit:
-                                for decade in under_represented:
-                                    normalized[decade] = min_threshold
-                                
-                                # Reduce well-represented decades
-                                for decade in well_represented:
-                                    reduction_factor = total_deficit / sum(well_represented.values())
-                                    normalized[decade] -= reduction_factor * normalized[decade]
-                                
-                                # Re-normalize to ensure sum to 1
-                                total = sum(normalized.values())
-                                if total > 0 and abs(total - 1.0) > 1e-10:
-                                    normalized = {decade: value / total for decade, value in normalized.items()}
-                        
-                        return normalized
-                else:
-                    logger.warning(f"Solver failed to find optimal solution: {prob.status}")
-            except Exception as e:
-                logger.error(f"Solver error: {e}")
             
-            # If we get here, LP failed, so fall back to heuristic
-            logger.warning("Linear programming approach failed, falling back to heuristic")
+            # Try multiple solvers in case of issues
+            solvers = [None, 'ECOS', 'SCS', 'OSQP']
+            for solver in solvers:
+                try:
+                    if solver:
+                        prob.solve(solver=solver)
+                    else:
+                        prob.solve()
+                    
+                    # If we get here, solver succeeded
+                    break
+                except Exception as e:
+                    logger.warning(f"Solver {solver} failed: {e}")
+            
+            # Extract solution if optimal
+            if prob.status == cp.OPTIMAL or prob.status == cp.OPTIMAL_INACCURATE:
+                distribution = {decade: float(alpha.value[i]) for i, decade in enumerate(decades)}
+                
+                # Apply post-processing to ensure sum to 1 and smooth out extreme values
+                total = sum(distribution.values())
+                if total > 0:
+                    distribution = {decade: value / total for decade, value in distribution.items()}
+                    
+                    # Post-processing: smooth out extreme values
+                    max_decade = max(distribution, key=distribution.get)
+                    if distribution[max_decade] > 0.25:  # Cap at 25%
+                        excess = distribution[max_decade] - 0.25
+                        distribution[max_decade] = 0.25
+                        
+                        # Redistribute excess evenly to others
+                        other_decades = [d for d in decades if d != max_decade]
+                        for decade in other_decades:
+                            distribution[decade] += excess / len(other_decades)
+                    
+                    return distribution
+            else:
+                logger.warning(f"Solver failed to find optimal solution: {prob.status}")
         except Exception as e:
-            logger.error(f"Error in linear programming: {e}")
+            logger.error(f"Error in linear programming approach: {e}")
         
-        # Fallback to heuristic method
+        # If we get here, LP failed, so fall back to heuristic
+        logger.warning("Linear programming approach failed, falling back to heuristic method")
         return self._infer_distribution_heuristic(decade_patterns)
 
     def find_distinctive_patterns(self, 
@@ -1127,6 +1254,17 @@ class TemporalDistributionInference:
         if len(self.merge_rules) < 100:
             logger.warning(f"Only {len(self.merge_rules)} merge rules available - analysis may be less accurate")
         
+        # NEW: Check data quality before proceeding
+        logger.info("Analyzing data quality...")
+        quality_metrics = self.analyze_data_quality(decade_texts)
+        
+        # Warn if data quality is insufficient
+        if not quality_metrics['overall']['all_decades_sufficient']:
+            logger.warning("Data quality may be insufficient for reliable analysis")
+            logger.warning(f"Total data volume: {quality_metrics['overall']['total_data_gb']:.2f} GB")
+            logger.warning("Consider increasing data volume or text quality before proceeding")
+        
+        # Continue with the existing analysis steps...
         # Step 1: Analyze decade patterns with increased sample size
         logger.info("Analyzing decade patterns...")
         decade_patterns = self.analyze_decade_patterns(decade_texts, sample_size=10000)

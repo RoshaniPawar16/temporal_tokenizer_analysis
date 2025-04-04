@@ -38,6 +38,39 @@ class TemporalDatasetManager:
         self.dataset_dir.mkdir(parents=True, exist_ok=True)
         self.metadata_path = self.dataset_dir / "dataset_metadata.json"
     
+    def verify_dataset_volumes(self, dataset, target_gb_per_decade=1.0):
+        """
+        Verify that the dataset meets minimum volume requirements for each decade.
+        
+        Args:
+            dataset: The dataset to verify
+            target_gb_per_decade: Target gigabytes per decade
+            
+        Returns:
+            Dictionary mapping decades to their volume in GB, and a boolean indicating if all meet requirements
+        """
+        target_bytes = target_gb_per_decade * 1024 * 1024 * 1024
+        decade_volumes = {}
+        all_sufficient = True
+        
+        for decade, texts in dataset.items():
+            # Calculate total bytes for this decade
+            decade_bytes = sum(len(text.encode('utf-8')) for text in texts)
+            decade_gb = decade_bytes / (1024*1024*1024)
+            decade_volumes[decade] = decade_gb
+            
+            if decade_bytes < target_bytes:
+                logger.warning(f"Insufficient data for {decade}: {decade_gb:.2f} GB (target: {target_gb_per_decade:.2f} GB)")
+                all_sufficient = False
+        
+        # Log overall status
+        if all_sufficient:
+            logger.info(f"All decades meet the minimum volume requirement of {target_gb_per_decade:.2f} GB")
+        else:
+            logger.warning(f"Some decades do not meet the volume requirement of {target_gb_per_decade:.2f} GB")
+        
+        return decade_volumes, all_sufficient
+
     def ensure_historical_coverage(self):
         """
         Ensures we have sufficient data for all time periods, especially historical ones.
