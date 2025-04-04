@@ -557,11 +557,68 @@ class TemporalDistributionInference:
     #     # Fallback to heuristic method
     #     return self._infer_distribution_heuristic(decade_patterns)
 
+    def bootstrap_distribution_estimates(self, decade_patterns, num_bootstraps=100):
+        """
+        Use bootstrapping to estimate confidence intervals for distribution estimates.
+        
+        Args:
+            decade_patterns: Patterns detected for each decade
+            num_bootstraps: Number of bootstrap samples
+            
+        Returns:
+            Dictionary with bootstrapped distributions and confidence intervals
+        """
+        decades = sorted(decade_patterns.keys())
+        bootstrap_results = []
+        
+        # Run multiple bootstrap iterations
+        for i in range(num_bootstraps):
+            # Create bootstrapped sample of the patterns
+            bootstrapped_patterns = {}
+            for decade, patterns in decade_patterns.items():
+                if 'merge_rules' in patterns:
+                    # Sample with replacement
+                    bootstrapped_rules = {}
+                    rules = list(patterns['merge_rules'].items())
+                    sampled_rules = random.choices(rules, k=len(rules))
+                    for rule, count in sampled_rules:
+                        if rule in bootstrapped_rules:
+                            bootstrapped_rules[rule] += count
+                        else:
+                            bootstrapped_rules[rule] = count
+                    
+                    # Create new patterns dict with bootstrapped rules
+                    bootstrapped_patterns[decade] = {
+                        'merge_rules': bootstrapped_rules,
+                        'total_tokens': patterns['total_tokens']
+                    }
+            
+            # Infer distribution with bootstrapped sample
+            distribution = self.infer_temporal_distribution(bootstrapped_patterns)
+            bootstrap_results.append(distribution)
+        
+        # Calculate confidence intervals
+        confidence_intervals = {}
+        for decade in decades:
+            values = [dist.get(decade, 0) for dist in bootstrap_results]
+            values.sort()
+            
+            # 95% confidence interval
+            lower = values[int(0.025 * num_bootstraps)]
+            upper = values[int(0.975 * num_bootstraps)]
+            
+            confidence_intervals[decade] = (lower, upper)
+        
+        return {
+            'bootstrap_samples': bootstrap_results,
+            'confidence_intervals': confidence_intervals
+        }
+
     def infer_temporal_distribution(self, 
                      decade_patterns: Dict[str, Dict],
                      num_merge_rules: int = 3000,
                      weight_early_merges: bool = True,
-                     regularization_strength: float = 0.1) -> Dict[str, float]:
+                     regularization_strength: float = 0.2) -> Dict[str, float]:
         """
         Infer the temporal distribution in training data using enhanced linear programming.
         

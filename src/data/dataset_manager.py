@@ -385,7 +385,7 @@ class TemporalDatasetManager:
         return dataset
 
     def build_temporal_dataset(self,
-                  texts_per_decade: int = 500,  # Increased from 100 to 500
+                  texts_per_decade: int = 2000,  # Increased from 100 to 500
                   balance_sources: bool = True,
                   save_dataset: bool = True) -> Dict[str, List[Tuple[str, str]]]:
         """
@@ -420,10 +420,10 @@ class TemporalDatasetManager:
         per_source = texts_per_decade // 2 if balance_sources else texts_per_decade
         
         # For historical periods, double the source request to ensure we get enough data
-        historical_per_source = per_source * 2
+        historical_per_source = per_source * 4
         
         # Minimum text length to target longer texts
-        min_text_length = 5000  # 5000 characters minimum
+        min_text_length = 10000  # 5000 characters minimum
         
         # Load texts from historical sources with boosted counts for historical periods
         logger.info("Loading British Library texts...")
