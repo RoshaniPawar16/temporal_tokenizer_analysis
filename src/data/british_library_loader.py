@@ -63,84 +63,70 @@ class BritishLibraryLoader:
             self.dataset = {'train': []}
             
     def _filter_by_decade(self, decade: str):
-        """Filter the dataset to a specific decade with more robust date extraction."""
+        """Filter the dataset to a specific decade by extracting dates from text content."""
         if not self.dataset:
             self._load_dataset()
             
         start_year, end_year = TIME_PERIODS[decade]
+        logger.info(f"Filtering for decade {decade}: {start_year}-{end_year}")
         
-        # Print sample record to debug date format
-        if 'train' in self.dataset and len(self.dataset['train']) > 0:
-            sample_record = self.dataset['train'][0]
-            logger.info(f"Sample record: {sample_record}")
-            logger.info(f"Sample date format: {sample_record.get('date')}")
+        # Check how the dataset is structured
+        if len(self.dataset['train']) > 0:
+            record_type = type(self.dataset['train'][0]).__name__
+            logger.info(f"Dataset record type: {record_type}")
         
         filtered_records = []
-        for record in self.dataset['train']:
-            try:
-                # Try different date formats and fields
-                date_value = record.get('date')
-                year = None
-                
-                # Case 1: Direct integer year
-                if isinstance(date_value, int) and 1000 < date_value < 3000:
-                    year = date_value
-                
-                # Case 2: String with year pattern
-                elif isinstance(date_value, str):
-                    # Try to extract 4-digit year
-                    import re
-                    year_match = re.search(r'\b(1[5-9]\d\d|20\d\d)\b', date_value)
-                    if year_match:
-                        year = int(year_match.group(1))
-                
-                # Case 3: Try alternative date fields
-                if year is None and 'published_date' in record:
-                    published_date = record.get('published_date')
-                    if isinstance(published_date, int) and 1000 < published_date < 3000:
-                        year = published_date
-                    elif isinstance(published_date, str):
-                        year_match = re.search(r'\b(1[5-9]\d\d|20\d\d)\b', published_date)
-                        if year_match:
-                            year = int(year_match.group(1))
-                
-                # If we found a valid year and it's in our decade range
-                if year is not None and start_year <= year <= end_year:
+        examined_count = 0
+        
+        # Custom function to extract years from text
+        def extract_years_from_text(text):
+            """Extract potential years from a text string."""
+            import re
+            # Look for years in our target range
+            start_str = str(start_year)
+            end_str = str(end_year)
+            pattern = rf'\b({start_str}|{start_str[0:3]}[{start_str[3]}-{end_str[3]}])\b'
+            
+            year_matches = re.findall(pattern, text)
+            return [int(y) for y in year_matches if start_year <= int(y) <= end_year]
+        
+        # Process records based on their type
+        for i, record in enumerate(self.dataset['train']):
+            examined_count += 1
+            if examined_count % 500000 == 0:
+                logger.info(f"Examined {examined_count} records so far, found {len(filtered_records)} matches for {decade}")
+            
+            # For string records, extract years from the text
+            if isinstance(record, str):
+                years = extract_years_from_text(record)
+                if years:
+                    # If text contains a year in our decade, include it
                     filtered_records.append(record)
                     
-            except (ValueError, TypeError) as e:
-                # Skip records with invalid dates
-                continue
+            # For dictionary records, check date fields
+            elif isinstance(record, dict):
+                year = None
+                date_fields = ['date', 'publication_date', 'publish_date', 'year', 'published']
+                
+                for field in date_fields:
+                    if field in record:
+                        date_value = record[field]
+                        
+                        # Try to extract year from the field
+                        if isinstance(date_value, int) and start_year <= date_value <= end_year:
+                            year = date_value
+                            break
+                        elif isinstance(date_value, str):
+                            years = extract_years_from_text(date_value)
+                            if years:
+                                year = years[0]
+                                break
+                
+                if year is not None:
+                    filtered_records.append(record)
         
-        # Log the first few records to help with debugging
-        if filtered_records:
-            logger.info(f"First record in {decade}: {filtered_records[0]}")
-        else:
-            # If no records found, analyze the dataset to understand why
-            decade_counter = {}
-            for record in self.dataset['train'][:10000]:  # Sample first 10,000 records
-                try:
-                    date_value = record.get('date')
-                    year = None
-                    
-                    # Try to extract the year using the same logic as above
-                    if isinstance(date_value, int) and 1000 < date_value < 3000:
-                        year = date_value
-                    elif isinstance(date_value, str):
-                        import re
-                        year_match = re.search(r'\b(1[5-9]\d\d|20\d\d)\b', date_value)
-                        if year_match:
-                            year = int(year_match.group(1))
-                    
-                    if year is not None:
-                        decade_key = f"{(year // 10) * 10}s"
-                        decade_counter[decade_key] = decade_counter.get(decade_key, 0) + 1
-                except Exception:
-                    continue
-            
-            logger.warning(f"No records found for {decade}. Sample distribution of years: {decade_counter}")
+        logger.info(f"Found {len(filtered_records)} records for decade {decade} after examining {examined_count} records")
         
-        logger.info(f"Found {len(filtered_records)} records for decade {decade}")
         return filtered_records
         
     def load_decade_samples(self, per_decade: int = 1000, balance_genres: bool = True) -> Dict[str, List[str]]:
