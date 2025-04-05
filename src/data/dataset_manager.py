@@ -963,8 +963,7 @@ class TemporalDatasetManager:
 
     def _augment_text_for_volume(self, base_text: str, decade: str, volume_multiplier: int = 2) -> str:
         """
-        Augment a base text to significantly increase the data volume, tailored to specific decade.
-        Enhanced to create much larger volumes of text.
+        Augment a base text to increase data volume, tailored to specific decade.
         
         Args:
             base_text: Original text
@@ -1102,8 +1101,7 @@ class TemporalDatasetManager:
                 "openers": ["In this post-pandemic era", "As technology continues to evolve"]
             }
         }
-        
-        # Choose the correct era style based on decade
+
         # Choose the correct era style based on decade
         closest_era = decade
         for era in sorted(era_styles.keys()):
@@ -1112,7 +1110,10 @@ class TemporalDatasetManager:
         
         era_style = era_styles.get(closest_era, era_styles.get("1900s", {}))  # Default to 1900s style
         vocab = decade_vocab.get(decade, ["modern", "development", "society"])
-        
+        # Add period-specific content to increase volume
+        # Calculate the number of paragraphs needed based on multiplier
+        target_length = len(base_text) * volume_multiplier
+        current_length = len(augmented_text)
         # Add much more period-specific content to dramatically increase volume
         # Calculate the number of paragraphs needed based on multiplier
         target_length = len(base_text) * volume_multiplier
