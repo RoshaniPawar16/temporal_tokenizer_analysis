@@ -287,7 +287,7 @@ class TemporalDatasetManager:
         
         return chunks
 
-    def create_large_dataset(self, distribution: Dict[str, float] = None, target_size_gb: float = 5.0) -> Dict[str, List[Tuple[str, str]]]:
+    def create_large_dataset(self, distribution: Dict[str, float] = None, target_size_gb: float = 10.0) -> Dict[str, List[Tuple[str, str]]]:
         """
         Create a dataset with specified target size in GB to match Hayase et al.
         

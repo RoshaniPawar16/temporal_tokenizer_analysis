@@ -599,9 +599,10 @@ class GutenbergLoader:
                         
                         # For very long texts, create multiple chunks to increase dataset size
                         if len(text) > min_text_length * 5:  # If text is 5x minimum length
-                            chunks = self._create_chunks(text, chunk_size=min_text_length * 2)
+                            chunks = self._create_chunks(text, chunk_size=min_text_length * 6)  # Increase from 2 to 6
                             # Return up to 3 chunks from this book to avoid overrepresentation
-                            return random.sample(chunks, min(3, len(chunks)))
+                            # return random.sample(chunks, min(3, len(chunks)))
+                            return chunks[:8]  # Return up to 8 chunks instead of 3
                         else:
                             # Return single text
                             return [text]

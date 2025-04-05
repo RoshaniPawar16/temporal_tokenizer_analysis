@@ -27,9 +27,17 @@ class TemporalValidator:
         """
         self.inference_method = inference_method
     
-    def bootstrap_analysis(self, decade_texts, n_bootstrap=30, sample_ratio=0.8):
+    def bootstrap_analysis(self, decade_texts, n_bootstrap=50, sample_ratio=0.8):
         """
         Perform bootstrap analysis to estimate confidence intervals.
+        
+        Args:
+            decade_texts: Dictionary mapping decades to lists of texts
+            n_bootstrap: Number of bootstrap iterations to run
+            sample_ratio: Proportion of data to sample in each iteration
+            
+        Returns:
+            Dictionary with confidence intervals by decade
         """
         logger.info(f"Running {n_bootstrap} bootstrap iterations...")
         
@@ -43,9 +51,45 @@ class TemporalValidator:
             # Create bootstrap sample
             bootstrap_sample = self._create_bootstrap_sample(decade_texts, sample_ratio)
             
-            # Run inference
+            # Apply chunking to handle token length issues
+            chunked_bootstrap_sample = {}
+            for decade, texts in bootstrap_sample.items():
+                # Ensure texts are properly chunked
+                chunked_texts = []
+                for text in texts:
+                    # Handle text or (text, source) tuples
+                    if isinstance(text, tuple):
+                        content, source = text
+                    else:
+                        content, source = text, "unknown"
+                        
+                    # Split long texts into chunks using a reasonable character limit
+                    # 1024 tokens is roughly 3000-4000 characters for English text
+                    if len(content) > 3000:  
+                        import re
+                        # Use paragraph-based splitting
+                        paragraphs = re.split(r'\n\s*\n', content)
+                        current_chunk = ""
+                        for para in paragraphs:
+                            if len(current_chunk) + len(para) > 3000:
+                                if current_chunk:
+                                    chunked_texts.append((current_chunk, source))
+                                current_chunk = para
+                            else:
+                                if current_chunk:
+                                    current_chunk += "\n\n" + para
+                                else:
+                                    current_chunk = para
+                        if current_chunk:
+                            chunked_texts.append((current_chunk, source))
+                    else:
+                        chunked_texts.append((content, source))
+                
+                chunked_bootstrap_sample[decade] = chunked_texts
+            
+            # Run inference on chunked sample
             try:
-                distribution = self.inference_method(bootstrap_sample)
+                distribution = self.inference_method(chunked_bootstrap_sample)
                 
                 # Record results for each decade
                 for decade, proportion in distribution.items():

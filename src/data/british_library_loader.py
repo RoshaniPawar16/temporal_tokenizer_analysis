@@ -328,14 +328,17 @@ class BritishLibraryLoader:
             target_count = per_decade
             decade_start = int(decade[:4])
             if decade_start < 1900:
-                # 4x more for pre-1900s (increased from 1.5x)
-                target_count = per_decade * 4
+                # 6x more for pre-1900s (increased from 1.5x)
+                target_count = per_decade * 6
             elif decade_start < 1950:
-                # 3x more for early 20th century (increased from 2x)
-                target_count = per_decade * 3
+                # 5 more for early 20th century (increased from 2x)
+                target_count = per_decade * 5
             elif decade_start < 1980:
-                # 2x more for mid-20th century (new category)
-                target_count = per_decade * 2
+                # 4x more for mid-20th century (new category)
+                target_count = per_decade * 4
+            else:
+                # 3x more for recent decades to help balance
+                target_count = per_decade * 3
             
             logger.info(f"Processing texts for {decade} ({start_year}-{end_year}), target: {target_count}")
             
