@@ -245,7 +245,49 @@ class TemporalDatasetManager:
         modified_text = " ".join(sentences)
         return modified_text
 
-    def create_large_dataset(self, distribution: Dict[str, float] = None, target_size_gb: float = 10.0) -> Dict[str, List[Tuple[str, str]]]:
+    def chunk_texts_for_tokenizer(self, texts, max_tokens=800):
+        """
+        Split texts into smaller chunks to ensure they fit within tokenizer context window.
+        
+        Args:
+            texts: List of texts to chunk
+            max_tokens: Maximum tokens per chunk (less than model's 1024 limit)
+            
+        Returns:
+            List of text chunks suitable for tokenizer processing
+        """
+        import re
+        chunks = []
+        
+        # Simple text splitting heuristic based on paragraphs and sentences
+        for text in texts:
+            if len(text) < 2000:  # Short texts likely fit within token limit
+                chunks.append(text)
+                continue
+                
+            # Split by paragraphs first
+            paragraphs = re.split(r'\n\s*\n', text)
+            
+            current_chunk = ""
+            for para in paragraphs:
+                # If adding this paragraph would make chunk too long, save current and start new
+                if len(current_chunk) + len(para) > 3000:  # ~800 tokens ≈ 3000-4000 chars
+                    if current_chunk:
+                        chunks.append(current_chunk)
+                    current_chunk = para
+                else:
+                    if current_chunk:
+                        current_chunk += "\n\n" + para
+                    else:
+                        current_chunk = para
+                        
+            # Add the last chunk if it exists
+            if current_chunk:
+                chunks.append(current_chunk)
+        
+        return chunks
+
+    def create_large_dataset(self, distribution: Dict[str, float] = None, target_size_gb: float = 5.0) -> Dict[str, List[Tuple[str, str]]]:
         """
         Create a dataset with specified target size in GB to match Hayase et al.
         
@@ -385,9 +427,9 @@ class TemporalDatasetManager:
         return dataset
 
     def build_temporal_dataset(self,
-              texts_per_decade: int = 2000,
-              balance_sources: bool = True,
-              save_dataset: bool = True) -> Dict[str, List[Tuple[str, str]]]:
+          texts_per_decade: int = 2000,
+          balance_sources: bool = True,
+          save_dataset: bool = True) -> Dict[str, List[Tuple[str, str]]]:
         """
         Build comprehensive historical dataset with equal representation across decades.
         """
@@ -413,6 +455,7 @@ class TemporalDatasetManager:
         combined_dataset = {}
         dataset_metadata = {
             "total_texts": 0,
+            "total_chunks": 0,
             "sources": {
                 "british_library": 0,
                 "gutenberg": 0,
@@ -480,10 +523,17 @@ class TemporalDatasetManager:
                 remaining = random.sample(all_texts[top_count:], texts_per_decade - top_count)
                 all_texts = top_texts + remaining
             
-            combined_dataset[decade] = all_texts
+            # NEW: Chunk texts to stay within tokenizer context limit
+            chunked_texts = []
+            for text, source in all_texts:
+                # Split into smaller chunks that fit tokenizer context
+                chunks = self.chunk_texts_for_tokenizer([text])
+                chunked_texts.extend([(chunk, source) for chunk in chunks])
             
-            # Calculate decade size in bytes after sampling
-            decade_size_bytes = sum(len(text.encode('utf-8')) for text, _ in all_texts)
+            combined_dataset[decade] = chunked_texts
+            
+            # Calculate decade size in bytes after chunking
+            decade_size_bytes = sum(len(text.encode('utf-8')) for text, _ in chunked_texts)
             
             # Ensure minimum data volume for each decade (1GB)
             target_gb_bytes = 1 * 1024 * 1024 * 1024
@@ -491,24 +541,25 @@ class TemporalDatasetManager:
                 logger.warning(f"Insufficient data volume for {decade}: {decade_size_bytes/(1024*1024*1024):.2f} GB < 1.0 GB")
                 
                 # Augment texts to reach target volume
-                while decade_size_bytes < target_gb_bytes and all_texts:
+                while decade_size_bytes < target_gb_bytes and chunked_texts:
                     # Choose a text to augment
-                    base_idx = random.randint(0, len(all_texts) - 1)
-                    base_text, base_source = all_texts[base_idx]
+                    base_idx = random.randint(0, len(chunked_texts) - 1)
+                    base_text, base_source = chunked_texts[base_idx]
                     
                     # Create an expanded version
                     augmented_text = self._augment_text_for_volume(base_text, decade, volume_multiplier=2)
-                    all_texts.append((augmented_text, f"{base_source}_volume_augmented"))
+                    chunked_texts.append((augmented_text, f"{base_source}_volume_augmented"))
                     
                     # Update size
-                    decade_size_bytes = sum(len(text.encode('utf-8')) for text, _ in all_texts)
+                    decade_size_bytes = sum(len(text.encode('utf-8')) for text, _ in chunked_texts)
                     logger.info(f"Augmented {decade} to {decade_size_bytes/(1024*1024*1024):.2f} GB")
             
             total_size_bytes += decade_size_bytes
             
             # Update metadata
             decade_metadata = {
-                "total": len(all_texts),
+                "original_texts": len(all_texts),
+                "chunked_texts": len(chunked_texts),
                 "british_library": sum(1 for _, src in all_texts if src == "british_library"),
                 "gutenberg": sum(1 for _, src in all_texts if src == "gutenberg"),
                 "augmented": sum(1 for _, src in all_texts if "_augmented" in src),
@@ -519,13 +570,14 @@ class TemporalDatasetManager:
             }
             
             dataset_metadata["decades"][decade] = decade_metadata
-            dataset_metadata["total_texts"] += decade_metadata["total"]
+            dataset_metadata["total_texts"] += decade_metadata["original_texts"]
+            dataset_metadata["total_chunks"] += decade_metadata["chunked_texts"]
             dataset_metadata["sources"]["british_library"] += decade_metadata["british_library"]
             dataset_metadata["sources"]["gutenberg"] += decade_metadata["gutenberg"]
             dataset_metadata["sources"]["augmented"] += decade_metadata["augmented"]
             dataset_metadata["sources"]["synthetic"] += decade_metadata["synthetic"]
             
-            logger.info(f"{decade} final: {len(all_texts)} texts, {decade_size_bytes/(1024*1024):.2f} MB")
+            logger.info(f"{decade} final: {len(all_texts)} texts → {len(chunked_texts)} chunks, {decade_size_bytes/(1024*1024):.2f} MB")
         
         # Update total size in metadata
         dataset_metadata["size_bytes"] = total_size_bytes
@@ -540,7 +592,8 @@ class TemporalDatasetManager:
         
         # Log comprehensive statistics
         logger.info("\nDataset Statistics:")
-        logger.info(f"Total texts: {dataset_metadata['total_texts']}")
+        logger.info(f"Total original texts: {dataset_metadata['total_texts']}")
+        logger.info(f"Total chunked texts: {dataset_metadata['total_chunks']}")
         logger.info(f"Total size: {dataset_metadata['size_gb']:.2f} GB")
         logger.info(f"British Library texts: {dataset_metadata['sources']['british_library']}")
         logger.info(f"Gutenberg texts: {dataset_metadata['sources']['gutenberg']}")
@@ -550,14 +603,56 @@ class TemporalDatasetManager:
         # Log decade-level coverage
         logger.info("\nDecade Coverage:")
         for decade, stats in dataset_metadata["decades"].items():
-            if stats["total"] > 0:
-                logger.info(f"{decade}: {stats['total']} texts, {stats.get('size_mb', 0):.2f} MB")
+            if stats["chunked_texts"] > 0:
+                logger.info(f"{decade}: {stats['original_texts']} texts → {stats['chunked_texts']} chunks, {stats.get('size_gb', 0):.2f} GB")
         
         if save_dataset:
             self._save_dataset(combined_dataset, dataset_metadata)
         
         logger.info(f"Total dataset size: {total_size_bytes/(1024*1024*1024):.2f} GB")
         return combined_dataset
+
+    def chunk_texts_for_tokenizer(self, texts, max_tokens=800):
+        """
+        Split texts into smaller chunks to ensure they fit within tokenizer context window.
+        
+        Args:
+            texts: List of texts to chunk
+            max_tokens: Maximum tokens per chunk (less than model's 1024 limit)
+            
+        Returns:
+            List of text chunks suitable for tokenizer processing
+        """
+        import re
+        chunks = []
+        
+        # Simple text splitting heuristic based on paragraphs and sentences
+        for text in texts:
+            if len(text) < 2000:  # Short texts likely fit within token limit
+                chunks.append(text)
+                continue
+                
+            # Split by paragraphs first
+            paragraphs = re.split(r'\n\s*\n', text)
+            
+            current_chunk = ""
+            for para in paragraphs:
+                # If adding this paragraph would make chunk too long, save current and start new
+                if len(current_chunk) + len(para) > 3000:  # ~800 tokens ≈ 3000-4000 chars
+                    if current_chunk:
+                        chunks.append(current_chunk)
+                    current_chunk = para
+                else:
+                    if current_chunk:
+                        current_chunk += "\n\n" + para
+                    else:
+                        current_chunk = para
+                        
+            # Add the last chunk if it exists
+            if current_chunk:
+                chunks.append(current_chunk)
+        
+        return chunks
 
     def _create_historical_synthetic_texts(self, decade: str, count: int, existing_data: Dict[str, List]) -> List[str]:
         """

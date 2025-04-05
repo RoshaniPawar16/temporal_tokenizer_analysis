@@ -27,17 +27,9 @@ class TemporalValidator:
         """
         self.inference_method = inference_method
     
-    def bootstrap_analysis(self, decade_texts, n_bootstrap=20, sample_ratio=0.8):
+    def bootstrap_analysis(self, decade_texts, n_bootstrap=30, sample_ratio=0.8):
         """
         Perform bootstrap analysis to estimate confidence intervals.
-        
-        Args:
-            decade_texts: Dictionary mapping decades to lists of texts
-            n_bootstrap: Number of bootstrap iterations
-            sample_ratio: Proportion of samples to use in each bootstrap
-            
-        Returns:
-            Dictionary with bootstrap statistics by decade
         """
         logger.info(f"Running {n_bootstrap} bootstrap iterations...")
         
@@ -81,7 +73,8 @@ class TemporalValidator:
                     "median": median,
                     "std_dev": std_dev,
                     "lower_ci": lower_ci,
-                    "upper_ci": upper_ci
+                    "upper_ci": upper_ci,
+                    "samples": len(proportions)
                 }
         
         return confidence_intervals

@@ -345,13 +345,6 @@ class TemporalDistributionInference:
     def analyze_decade_patterns(self, decade_texts: Dict[str, List[str]], sample_size: int = 5000) -> Dict[str, Dict]:
         """
         Analyze merge rules and token patterns for each decade with improved sampling.
-        
-        Args:
-            decade_texts: Dictionary mapping decades to lists of texts
-            sample_size: Maximum number of tokens to analyze per decade
-            
-        Returns:
-            Dictionary with pattern statistics by decade
         """
         decade_patterns = {}
         
@@ -372,28 +365,38 @@ class TemporalDistributionInference:
             total_tokens = 0
             total_chars = 0
             
-            # Combine texts for more efficient tokenization
-            combined_text = " ".join(sampled_texts[:20])  # Process in batches
-            
-            # Tokenize combined text
-            tokens = self.tokenizer.tokenize(combined_text)
-            encoded = self.tokenizer.encode(combined_text, add_special_tokens=False)
-            
-            # Count tokens
-            token_counts.update(tokens)
-            total_tokens += len(tokens)
-            
-            # Count merge rules
-            for token in tokens:
-                # Extract applicable merge rules for this token
-                applicable_rules = self._extract_merge_rules(token)
-                merge_rule_counts.update(applicable_rules)
-            
-            # Count character pairs (bigrams)
-            for i in range(len(combined_text) - 1):
-                char_pair = combined_text[i:i+2]
-                char_pair_counts[char_pair] += 1
-                total_chars += 1
+            # Process texts individually to avoid context length issues
+            for text in sampled_texts[:20]:  # Process in batches for efficiency
+                # Ensure text is not too long for tokenizer
+                if isinstance(text, tuple):
+                    text = text[0]  # Extract text if it's a (text, source) tuple
+                    
+                # Split text into smaller chunks if needed
+                text_chunks = self._split_text_for_tokenizer(text)
+                
+                for chunk in text_chunks:
+                    # Tokenize chunk
+                    try:
+                        tokens = self.tokenizer.tokenize(chunk)
+                        encoded = self.tokenizer.encode(chunk, add_special_tokens=False)
+                        
+                        # Count tokens
+                        token_counts.update(tokens)
+                        total_tokens += len(tokens)
+                        
+                        # Count merge rules
+                        for token in tokens:
+                            # Extract applicable merge rules for this token
+                            applicable_rules = self._extract_merge_rules(token)
+                            merge_rule_counts.update(applicable_rules)
+                        
+                        # Count character pairs (bigrams)
+                        for i in range(len(chunk) - 1):
+                            char_pair = chunk[i:i+2]
+                            char_pair_counts[char_pair] += 1
+                            total_chars += 1
+                    except Exception as e:
+                        logger.warning(f"Error processing chunk: {e}")
             
             # Calculate statistics
             if total_tokens > 0 and total_chars > 0:
@@ -410,6 +413,36 @@ class TemporalDistributionInference:
             gc.collect()
         
         return decade_patterns
+
+    def _split_text_for_tokenizer(self, text, max_chars=3000):
+        """
+        Split text into smaller chunks to avoid context length issues.
+        """
+        if len(text) <= max_chars:
+            return [text]
+            
+        # Split by paragraphs
+        import re
+        paragraphs = re.split(r'\n\s*\n', text)
+        
+        chunks = []
+        current_chunk = ""
+        
+        for para in paragraphs:
+            if len(current_chunk) + len(para) > max_chars:
+                if current_chunk:
+                    chunks.append(current_chunk)
+                current_chunk = para
+            else:
+                if current_chunk:
+                    current_chunk += "\n\n" + para
+                else:
+                    current_chunk = para
+        
+        if current_chunk:
+            chunks.append(current_chunk)
+            
+        return chunks
     
     def _extract_merge_rules(self, token: str) -> Set[str]:
         """
@@ -577,6 +610,9 @@ class TemporalDistributionInference:
             min_prob = 0.01  # Reduced from 0.03
             constraints.extend([alpha[i] >= min_prob for i in range(len(decades))])
             
+            # Add upper bound constraint to prevent single decade dominance
+            constraints.extend([alpha[i] <= 0.30 for i in range(len(decades))])
+
             # Extract normalized merge rule frequencies
             merge_frequencies = {}
             for i, decade in enumerate(decades):
