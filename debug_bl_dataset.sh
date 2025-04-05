@@ -1,3 +1,4 @@
+cat > debug_bl_dataset.sh << 'EOF'
 #!/bin/bash
 #SBATCH --job-name=debug_bl_dataset
 #SBATCH --time=1:00:00
@@ -6,14 +7,25 @@
 #SBATCH --mem=8G
 #SBATCH --output=debug_bl_dataset_%j.log
 
-# Load the required modules
-module load anaconda3/2022.10
+# Display job information
+echo "Running on node: $(hostname)"
+echo "Job started at: $(date)"
 
-# Activate the virtual environment
-source venv/bin/activate
+# Load modules (using the ones that worked in your main script)
+echo "Loading Python modules..."
+module load anaconda3/2022.10 || echo "Failed to load anaconda module"
 
-# Create a simple script to debug the dataset format
-cat > debug_dataset.py << 'EOF'
+# Activate your virtual environment if it exists
+if [ -d "venv" ]; then
+    echo "Activating virtual environment..."
+    source venv/bin/activate || echo "Failed to activate venv"
+else
+    echo "No venv found, using system Python"
+fi
+
+# Create the debugging script
+echo "Creating debugging script..."
+cat > debug_dataset.py << 'PYEOF'
 from datasets import load_dataset
 import json
 import re
@@ -119,9 +131,22 @@ try:
 except Exception as e:
     print(f"Error loading dataset: {e}")
 
-EOF
+PYEOF
+
+# Check if datasets is installed
+echo "Checking Python packages..."
+python -c "import sys; print(f'Python version: {sys.version}')"
+pip list | grep -E 'datasets|huggingface'
+
+# Install datasets if needed
+if ! python -c "import datasets" 2>/dev/null; then
+    echo "Installing datasets package..."
+    pip install datasets
+fi
 
 # Run the debugging script
+echo "Running debug script..."
 python debug_dataset.py
 
 echo "Debug completed at $(date)"
+EOF
