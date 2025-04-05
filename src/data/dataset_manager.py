@@ -245,7 +245,7 @@ class TemporalDatasetManager:
         modified_text = " ".join(sentences)
         return modified_text
 
-    def chunk_texts_for_tokenizer(self, texts, max_tokens=800):
+    def chunk_texts_for_tokenizer(self, texts, max_tokens=512):
         """
         Split texts into smaller chunks to ensure they fit within tokenizer context window.
         
@@ -261,7 +261,10 @@ class TemporalDatasetManager:
         
         # Simple text splitting heuristic based on paragraphs and sentences
         for text in texts:
-            if len(text) < 2000:  # Short texts likely fit within token limit
+            if isinstance(text, tuple):
+                text = text[0]  # Extract text if it's a (text, source) tuple
+                
+            if len(text) < 1500:  # Short texts likely fit within token limit (reduced from 2000)
                 chunks.append(text)
                 continue
                 
@@ -271,7 +274,7 @@ class TemporalDatasetManager:
             current_chunk = ""
             for para in paragraphs:
                 # If adding this paragraph would make chunk too long, save current and start new
-                if len(current_chunk) + len(para) > 3000:  # ~800 tokens ≈ 3000-4000 chars
+                if len(current_chunk) + len(para) > 1800:  # Reduced from 3000 to ensure it fits in 512 tokens
                     if current_chunk:
                         chunks.append(current_chunk)
                     current_chunk = para
@@ -287,9 +290,12 @@ class TemporalDatasetManager:
         
         return chunks
 
+
+    # In the TemporalDatasetManager class, modify the create_large_dataset method:
     def create_large_dataset(self, distribution: Dict[str, float] = None, target_size_gb: float = 10.0) -> Dict[str, List[Tuple[str, str]]]:
         """
         Create a dataset with specified target size in GB to match Hayase et al.
+        Increased from 1GB to 10GB for better results.
         
         Args:
             distribution: Dictionary mapping decades to proportions (if None, uses equal distribution)
@@ -310,27 +316,21 @@ class TemporalDatasetManager:
         # Calculate bytes per decade based on distribution
         bytes_per_decade = {decade: target_size_bytes * prop for decade, prop in distribution.items()}
         
-        # Load all available source texts
-        logger.info("Loading all available source texts...")
+        # Load all available source texts with more aggressive sampling
+        logger.info("Loading all available source texts with expanded coverage...")
         
         # Load a large number of texts per decade to have sufficient data for large dataset
-        max_texts = 5000  # Request a lot of texts
+        max_texts = 10000  # Increased from 5000 to 10000
         
-        # # British Library texts - using the correct parameter name 'per_decade'
-        # bl_texts_by_decade = self.bl_loader.load_decade_samples(per_decade=max_texts)
-        
-        # # Gutenberg texts - pass the parameter directly
-        # gutenberg_texts_by_decade = self.gutenberg_loader.load_decade_samples(texts_per_decade=max_texts)
-
-        # Modify the following lines to use more aggressive replication for historical periods
+        # Expand historical catalogs for both loaders
+        self.gutenberg_loader.expand_historical_catalog()
         bl_texts_by_decade = self.bl_loader.load_decade_samples(per_decade=max_texts)
         gutenberg_texts_by_decade = self.gutenberg_loader.load_decade_samples(texts_per_decade=max_texts)
         
         # Combine sources
         all_texts = {}
-        # Force expanded historical catalogs for both loaders
         logger.info("Expanding historical catalogs for both data sources...")
-        self.gutenberg_loader.expand_historical_catalog()
+        
         for decade in distribution.keys():
             decade_bl = [(text, "british_library") for text in bl_texts_by_decade.get(decade, [])]
             decade_gutenberg = [(text, "gutenberg") for text in gutenberg_texts_by_decade.get(decade, [])]
@@ -355,28 +355,37 @@ class TemporalDatasetManager:
             
             # Keep adding texts until we reach target size
             # Use texts with replacement if necessary
-            max_iterations = 100000  # Prevent infinite loops
+            max_iterations = 500000  # Increased from 100000 to allow for larger targets
             iterations = 0
             
+            # Implement more aggressive augmentation
             while decade_size < target_bytes and iterations < max_iterations:
-                # If we've used all texts once, start augmenting to increase volume
-                if iterations >= len(decade_texts):
-                    # Choose a text to augment or duplicate
+                # Different augmentation strategies based on iteration count
+                if iterations >= len(decade_texts) * 3:
+                    # After extensive reuse, create more diverse variations
                     idx = iterations % len(decade_texts)
                     base_text, base_source = decade_texts[idx]
                     
                     # For historical periods especially, use more aggressive augmentation
                     if int(decade[:4]) < 1970:
                         # Create a significantly modified version to increase volume
-                        augmented_text = self._augment_text_for_volume(base_text, decade)
+                        augmented_text = self._augment_text_for_volume(base_text, decade, volume_multiplier=4)
                         text = augmented_text
-                        source = base_source + "_augmented"
+                        source = base_source + "_heavily_augmented"
                     else:
                         # For modern periods, use milder augmentation
-                        # But still make modifications to avoid exact duplication
-                        modified_text = self._modify_text_slightly(base_text)
+                        modified_text = self._augment_text_for_volume(base_text, decade, volume_multiplier=2)
                         text = modified_text
-                        source = base_source + "_modified"
+                        source = base_source + "_augmented"
+                elif iterations >= len(decade_texts):
+                    # For first few passes of augmentation
+                    idx = iterations % len(decade_texts)
+                    base_text, base_source = decade_texts[idx]
+                    
+                    # More moderate augmentation
+                    modified_text = self._augment_text_for_volume(base_text, decade, volume_multiplier=2)
+                    text = modified_text
+                    source = base_source + "_augmented"
                 else:
                     # For first pass, use original texts
                     text, source = decade_texts[iterations]
@@ -386,11 +395,11 @@ class TemporalDatasetManager:
                 iterations += 1
                 
                 # Log progress periodically
-                if iterations % 100 == 0:
-                    logger.info(f"{decade} progress: {iterations} texts, {decade_size/(1024*1024):.2f} MB / {target_bytes/(1024*1024):.2f} MB")
+                if iterations % 500 == 0:
+                    logger.info(f"{decade} progress: {iterations} texts, {decade_size/(1024*1024*1024):.2f} GB / {target_bytes/(1024*1024*1024):.2f} GB")
                 
                 # Break if we've added a lot of texts but still haven't reached target
-                if iterations > 10000 and decade_size < target_bytes * 0.5:
+                if iterations > 50000 and decade_size < target_bytes * 0.5:
                     logger.warning(f"Unable to reach target size for {decade}, stopping at {decade_size/1024/1024/1024:.2f} GB")
                     break
             
@@ -1095,6 +1104,7 @@ class TemporalDatasetManager:
         }
         
         # Choose the correct era style based on decade
+        # Choose the correct era style based on decade
         closest_era = decade
         for era in sorted(era_styles.keys()):
             if decade >= era:
@@ -1106,15 +1116,14 @@ class TemporalDatasetManager:
         # Add much more period-specific content to dramatically increase volume
         # Calculate the number of paragraphs needed based on multiplier
         target_length = len(base_text) * volume_multiplier
-        current_length = len(augmented_text)
-        
+        current_length = len(augmented_text)     
         while current_length < target_length:
             # Generate several period-appropriate paragraphs
-            num_paragraphs = min(10, (target_length - current_length) // 1000)  # Aim for reasonable chunk
+            num_paragraphs = min(15, (target_length - current_length) // 800)  # More paragraphs, shorter length
             
-            for _ in range(max(1, num_paragraphs)):
+            for _ in range(max(2, num_paragraphs)):
                 # Generate rich period-appropriate paragraph
-                period_paragraph = self._generate_decade_paragraphs(decade, vocab, era_style, paragraphs=3)
+                period_paragraph = self._generate_decade_paragraphs(decade, vocab, era_style, paragraphs=5)  # Increased from 3 to 5
                 
                 # Add it to the text at appropriate positions
                 if len(augmented_text) > 1000:

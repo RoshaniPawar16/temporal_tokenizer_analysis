@@ -117,45 +117,83 @@ def run_analysis(args):
     # Create controlled dataset
     logger.info(f"Creating dataset with target size of {args.target_size_gb}GB per category...")
     
-    # Determine which dataset creation method to use based on target size
-    if args.target_size_gb > 0:
-        # Create large dataset with target size in GB (matching Hayase et al.)
-        controlled_dataset = dataset_manager.create_large_dataset(
-            distribution=selected_dist,
-            target_size_gb=args.target_size_gb
-        )
-    else:
-        # Fall back to text count-based dataset creation
-        controlled_dataset = dataset_manager.create_controlled_dataset(
-            distribution=selected_dist,
-            total_texts=args.texts_per_decade * len(selected_dist)
-        )
+    # Always use the high-volume data approach for better results
+    target_size = max(args.target_size_gb, 1.0)  # Ensure at least 1GB minimum
+    logger.info(f"Creating dataset with increased target size of {target_size}GB...")
+    controlled_dataset = dataset_manager.create_large_dataset(
+        distribution=selected_dist,
+        target_size_gb=target_size
+    )
+
+    # Verify data volumes meet minimum requirements
+    volume_check = dataset_manager.verify_dataset_volumes(controlled_dataset, target_gb_per_decade=0.5)
+    if not volume_check[1]:  # Second return value is boolean "all_sufficient"
+        logger.warning("Dataset volumes do not meet minimum target requirements")
+        for decade, volume in volume_check[0].items():
+            logger.info(f"  {decade}: {volume:.2f} GB")
     
     # Extract just texts (without source info)
     decade_texts = {decade: [text for text, _ in texts] 
                 for decade, texts in controlled_dataset.items()}
 
     # Process texts in chunks to avoid exceeding model context limits
-    logger.info("Processing texts in chunks to stay within model context limits...")
+    logger.info("Processing texts in chunks with improved context window management...")
     chunked_decade_texts = {}
     for decade, texts in decade_texts.items():
         chunked_texts = []
         for text in texts:
-            # Split longer texts into chunks of around 512 tokens
-            # This is a rough approximation - 1 token ≈ 4 characters for English
-            chunk_size = 2000  # ~500 tokens per chunk
+            # Use smaller chunk size to ensure staying within token limits
+            # GPT-2 has context window of 1024, so aim for ~400 tokens per chunk
+            chunk_size = 1600  # ~400 tokens per chunk
+            
+            # For very long texts, use more sophisticated chunking
             if len(text) > chunk_size:
-                chunks = [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
-                chunked_texts.extend(chunks)
+                # Try to split on paragraph boundaries for more coherent chunks
+                import re
+                paragraphs = re.split(r'\n\s*\n', text)
+                current_chunk = ""
+                
+                for para in paragraphs:
+                    if len(current_chunk) + len(para) > chunk_size:
+                        if current_chunk:
+                            chunked_texts.append(current_chunk)
+                        current_chunk = para
+                    else:
+                        if current_chunk:
+                            current_chunk += "\n\n" + para
+                        else:
+                            current_chunk = para
+                
+                # Add the last chunk if it exists
+                if current_chunk:
+                    chunked_texts.append(current_chunk)
             else:
                 chunked_texts.append(text)
+        
         chunked_decade_texts[decade] = chunked_texts
         logger.info(f"Processed {decade}: {len(texts)} texts → {len(chunked_texts)} chunks")
 
     # Run inference on chunked texts
-    logger.info("Running tokenizer analysis...")
+    logger.info("Running tokenizer analysis with ensemble method...")
     start_time = time.time()
-    results = inference.run_analysis(chunked_decade_texts)
+
+    # First analyze patterns
+    logger.info("Analyzing decade patterns...")
+    decade_patterns = inference.analyze_decade_patterns(chunked_decade_texts)
+
+    # Then use ensemble method for more robust inference
+    logger.info("Applying ensemble inference...")
+    distribution = inference.infer_distribution_ensemble(decade_patterns)
+
+    # Construct results in expected format
+    results = {
+        "tokenizer": args.tokenizer,
+        "distribution": distribution,
+        "distinctive_patterns": inference.find_decade_distinctive_rules(
+            inference.analyze_merge_rule_usage_batched(chunked_decade_texts)
+        )
+    }
+
     inference_time = time.time() - start_time
     
     # Evaluate results
@@ -524,9 +562,9 @@ def create_distribution_comparison(results_by_dist, distributions, tokenizer_nam
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run temporal distribution inference on Maxwell")
     parser.add_argument("--tokenizer", type=str, default="gpt2", help="Tokenizer to analyze")
-    parser.add_argument("--texts_per_decade", type=int, default=1000, 
+    parser.add_argument("--texts_per_decade", type=int, default=5000, 
                       help="Number of texts per decade (higher = more accurate)")
-    parser.add_argument("--target_size_gb", type=float, default=0.0,
+    parser.add_argument("--target_size_gb", type=float, default=1.0,
                       help="Target size in GB per category (higher = more accurate, matching Hayase paper)")
     parser.add_argument("--distribution", type=str, default="uniform", 
                       choices=["uniform", "recency_bias", "historical_bias", "bimodal", "all"],

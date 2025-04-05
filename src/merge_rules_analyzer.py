@@ -40,16 +40,20 @@ class MergeRulesAnalyzer:
         self._rule_usage_cache = {}
         
         # Memory efficiency flag
-        self.memory_efficient = False
+        self.memory_efficient = True  # Default to memory efficient mode
+        self.batch_size = 20  # Add a reasonable batch size for memory-efficient processing
         
         # Extract merge rules
         self.merge_rules = self._extract_merge_rules()
         
         # Handle case when merge_rules extraction fails
-        if not self.merge_rules:
-            logger.warning(f"No merge rules found for {tokenizer_name}. Using fallback strategy.")
-            # Create a minimal set of rules to prevent further errors
-            self.merge_rules = [((chr(i), chr(i+1)), i) for i in range(97, 122)]
+        if not self.merge_rules or len(self.merge_rules) < 50:
+            logger.warning(f"Few merge rules found for {tokenizer_name}. Using enhanced fallback strategy.")
+            # Create additional rules by vocabulary inspection
+            additional_rules = self._approximate_merge_rules_from_vocab()
+            if additional_rules:
+                self.merge_rules.extend(additional_rules)
+                logger.info(f"Added {len(additional_rules)} approximated rules for a total of {len(self.merge_rules)}")
         
         # Create index mapping
         self.merge_rule_indices = {rule[0]: i for i, rule in enumerate(self.merge_rules)}
