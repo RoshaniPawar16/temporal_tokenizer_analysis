@@ -23,14 +23,23 @@ fi
 echo "Activating virtual environment..."
 source venv/bin/activate
 
-# Install required packages
+# Install required packages including datasets for British Library
 echo "Installing required packages..."
-pip install --no-cache-dir transformers numpy matplotlib seaborn pandas scipy cvxpy tqdm
+pip install --no-cache-dir transformers numpy matplotlib seaborn pandas scipy cvxpy tqdm datasets huggingface_hub
+
+# Set up cache for Hugging Face datasets
+export HF_DATASETS_CACHE="./hf_cache"
+mkdir -p $HF_DATASETS_CACHE
 
 # Verify installations
 python -c "import transformers; print('Transformers version:', transformers.__version__)"
 python -c "import numpy; print('NumPy version:', numpy.__version__)"
 python -c "import cvxpy; print('CVXPY version:', cvxpy.__version__)"
+python -c "import datasets; print('Datasets version:', datasets.__version__)"
+
+# Pre-fetch British Library dataset to avoid re-downloading during analysis
+echo "Pre-fetching British Library dataset to local cache (this may take some time)..."
+python -c "from datasets import load_dataset; print('Starting dataset download...'); load_dataset('TheBritishLibrary/blbooks', '1500_1899', trust_remote_code=True, cache_dir='./hf_cache'); print('Dataset pre-fetching complete')"
 
 # Set high data volume for more reliable results and match Hayase et al.
 TEXTS_PER_DECADE=10000
@@ -95,4 +104,4 @@ plt.tight_layout()
 plt.savefig('results/final_comparison.png', dpi=300)
 "
 
-echo "Job completed at: $(date)"
+echo "Job completed at: $(date)""
