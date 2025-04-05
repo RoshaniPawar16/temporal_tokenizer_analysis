@@ -1,4 +1,3 @@
-cat > debug_bl_dataset.sh << 'EOF'
 #!/bin/bash
 #SBATCH --job-name=bl_debug_simple
 #SBATCH --time=1:00:00
