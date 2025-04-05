@@ -70,59 +70,46 @@ class BritishLibraryLoader:
         start_year, end_year = TIME_PERIODS[decade]
         logger.info(f"Filtering for decade {decade}: {start_year}-{end_year}")
         
-        # Check how the dataset is structured
-        if len(self.dataset['train']) > 0:
-            record_type = type(self.dataset['train'][0]).__name__
-            logger.info(f"Dataset record type: {record_type}")
-        
         filtered_records = []
         examined_count = 0
         
-        # Custom function to extract years from text
-        def extract_years_from_text(text):
-            """Extract potential years from a text string."""
-            import re
-            # Look for years in our target range
-            start_str = str(start_year)
-            end_str = str(end_year)
-            pattern = rf'\b({start_str}|{start_str[0:3]}[{start_str[3]}-{end_str[3]}])\b'
-            
-            year_matches = re.findall(pattern, text)
-            return [int(y) for y in year_matches if start_year <= int(y) <= end_year]
-        
-        # Process records based on their type
-        for i, record in enumerate(self.dataset['train']):
+        # Process records
+        for record in self.dataset['train']:
             examined_count += 1
             if examined_count % 500000 == 0:
                 logger.info(f"Examined {examined_count} records so far, found {len(filtered_records)} matches for {decade}")
             
-            # For string records, extract years from the text
-            if isinstance(record, str):
-                years = extract_years_from_text(record)
-                if years:
-                    # If text contains a year in our decade, include it
-                    filtered_records.append(record)
-                    
-            # For dictionary records, check date fields
-            elif isinstance(record, dict):
+            # Check if record is a dictionary with date fields
+            if isinstance(record, dict):
                 year = None
-                date_fields = ['date', 'publication_date', 'publish_date', 'year', 'published']
                 
-                for field in date_fields:
-                    if field in record:
-                        date_value = record[field]
-                        
-                        # Try to extract year from the field
-                        if isinstance(date_value, int) and start_year <= date_value <= end_year:
-                            year = date_value
-                            break
-                        elif isinstance(date_value, str):
-                            years = extract_years_from_text(date_value)
-                            if years:
-                                year = years[0]
-                                break
+                # Try to extract year from date field
+                if 'date' in record:
+                    date_value = record['date']
+                    if isinstance(date_value, str):
+                        # Try to extract year from ISO format date string
+                        try:
+                            if '-' in date_value:
+                                # Format like '1692-01-01 00:00:00'
+                                year_str = date_value.split('-')[0]
+                                year = int(year_str)
+                            else:
+                                # Try direct conversion
+                                year = int(date_value)
+                        except (ValueError, IndexError):
+                            pass
                 
-                if year is not None:
+                # If no year found yet, try raw_date field
+                if year is None and 'raw_date' in record:
+                    raw_date = record['raw_date']
+                    if isinstance(raw_date, str) or isinstance(raw_date, int):
+                        try:
+                            year = int(raw_date)
+                        except (ValueError, TypeError):
+                            pass
+                
+                # Check if the year is in our target decade
+                if year is not None and start_year <= year <= end_year:
                     filtered_records.append(record)
         
         logger.info(f"Found {len(filtered_records)} records for decade {decade} after examining {examined_count} records")
@@ -166,7 +153,7 @@ class BritishLibraryLoader:
             return decade_texts
             
         # Set minimum OCR quality threshold
-        ocr_threshold = 0.7  # Only include texts with good OCR quality
+        ocr_threshold = 0.5  # Only include texts with good OCR quality
             
         # Process each decade
         for decade in TIME_PERIODS.keys():
@@ -182,9 +169,14 @@ class BritishLibraryLoader:
             # Filter by OCR quality
             quality_records = [
                 record for record in decade_records 
-                if record.get('mean_wc_ocr', 0) >= ocr_threshold
-                and not record.get('empty_pg', True)
-                and record.get('text')  # Ensure text exists
+                if (
+                    # Make OCR quality check optional if value exists
+                    (record.get('mean_wc_ocr', 0) >= ocr_threshold if 'mean_wc_ocr' in record else True) and
+                    # Only filter out definitely empty pages
+                    (not record.get('empty_pg', False)) and
+                    # Ensure text exists and has minimum length
+                    record.get('text') and len(record.get('text', '')) > 200
+                )
             ]
             
             logger.info(f"Found {len(quality_records)} quality records for {decade}")
