@@ -1166,6 +1166,77 @@ class TemporalDistributionInference:
         else:
             return {decade: 1.0/len(decades) for decade in decades}
 
+    def analyze_temporal_progression(self, decade_patterns: Dict[str, Dict]) -> Dict[str, Dict]:
+        """
+        Analyze how rule frequencies change across decades to identify temporal trends.
+        
+        Args:
+            decade_patterns: Patterns detected for each decade
+            
+        Returns:
+            Dictionary mapping rules to their temporal progression metrics
+        """
+        decades = sorted(list(decade_patterns.keys()))
+        if len(decades) < 3:
+            return {}  # Need at least 3 decades for meaningful trend analysis
+        
+        # Create mapping of decade to index for correlation calculation
+        decade_indices = {decade: i for i, decade in enumerate(decades)}
+        
+        # Extract rules and their normalized frequencies across decades
+        rule_progressions = {}
+        
+        for decade, patterns in decade_patterns.items():
+            if 'merge_rules' in patterns:
+                rules = patterns['merge_rules']
+                total_tokens = patterns['total_tokens']
+                
+                if total_tokens > 0:
+                    for rule, count in rules.items():
+                        if rule not in rule_progressions:
+                            rule_progressions[rule] = {d: 0.0 for d in decades}
+                        
+                        # Normalize by total tokens
+                        rule_progressions[rule][decade] = count / total_tokens
+        
+        # Analyze progression for each rule
+        results = {}
+        for rule, decade_freqs in rule_progressions.items():
+            # Convert to arrays for correlation calculation
+            indices = np.array(list(range(len(decades))))
+            freqs = np.array([decade_freqs[d] for d in decades])
+            
+            # Only analyze rules that appear in multiple decades
+            non_zero_decades = sum(1 for f in freqs if f > 0)
+            if non_zero_decades < 2:
+                continue
+            
+            # Calculate correlation with decade progression
+            if non_zero_decades > 2:
+                correlation = np.corrcoef(indices, freqs)[0, 1]
+                is_significant = abs(correlation) > 0.5  # Threshold for significance
+                direction = 'increasing' if correlation > 0 else 'decreasing'
+            else:
+                # For just 2 non-zero points, use simple comparison
+                if len(np.nonzero(freqs)[0]) == 2:
+                    idx1, idx2 = np.nonzero(freqs)[0]
+                    direction = 'increasing' if idx1 < idx2 and freqs[idx1] < freqs[idx2] else 'decreasing'
+                    correlation = 0.5 * (1 if direction == 'increasing' else -1)
+                    is_significant = True
+                else:
+                    direction = 'stable'
+                    correlation = 0
+                    is_significant = False
+            
+            results[rule] = {
+                'direction': direction,
+                'strength': abs(correlation),
+                'significant': is_significant,
+                'frequencies': decade_freqs
+            }
+        
+        return results
+
     def _infer_distribution_heuristic(self, decade_patterns: Dict[str, Dict]) -> Dict[str, float]:
         """
         Improved heuristic method for temporal distribution inference.

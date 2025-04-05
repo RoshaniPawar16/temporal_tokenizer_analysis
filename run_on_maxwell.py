@@ -189,7 +189,7 @@ def run_analysis(args):
     results = {
         "tokenizer": args.tokenizer,
         "distribution": distribution,
-        "distinctive_patterns": inference.find_decade_distinctive_rules(
+        "distinctive_patterns": inference.find_distinctive_patterns(
             inference.analyze_merge_rule_usage_batched(chunked_decade_texts)
         )
     }
