@@ -959,7 +959,52 @@ class TemporalDatasetManager:
         
         return enhanced_dataset
 
-    
+    def _generate_decade_paragraphs(self, decade: str, vocab: list, era_style: dict, paragraphs: int = 3) -> str:
+        """
+        Generate historically appropriate paragraphs for a specific decade.
+        
+        Args:
+            decade: Target decade
+            vocab: List of period-specific vocabulary
+            era_style: Dict with period-specific style elements
+            paragraphs: Number of paragraphs to generate
+            
+        Returns:
+            A string containing generated paragraphs appropriate for the time period
+        """
+        import random
+        
+        result = []
+        
+        for _ in range(paragraphs):
+            # Select opener and prepare paragraph
+            opener = random.choice(era_style.get("openers", ["In this period"]))
+            topic = random.choice(vocab)
+            
+            # Build a paragraph with period-appropriate language
+            paragraph = f"{opener}, the development of {topic} represented a significant change in society. "
+            
+            # Add 3-5 more sentences with period vocabulary and phrasing
+            for _ in range(random.randint(3, 5)):
+                sentence_templates = [
+                    f"The influence of {random.choice(vocab)} cannot be overstated. ",
+                    f"Many considered {random.choice(vocab)} to be essential to progress. ",
+                    f"The relationship between {random.choice(vocab)} and {random.choice(vocab)} merits further examination. ",
+                    f"The advancement of {random.choice(vocab)} continued to transform daily life. ",
+                    f"Scholars often debate the significance of {random.choice(vocab)} during this period. "
+                ]
+                paragraph += random.choice(sentence_templates)
+            
+            # Add a period-specific phrase
+            if era_style.get("phrases"):
+                paragraph += f"It was {random.choice(era_style['phrases'])}, that such developments would continue. "
+            
+            # Add concluding sentence
+            paragraph += f"The impact of these changes would be felt for decades to come."
+            
+            result.append(paragraph)
+        
+        return "\n\n".join(result)
 
     def _augment_text_for_volume(self, base_text: str, decade: str, volume_multiplier: int = 2) -> str:
         """

@@ -34,7 +34,7 @@ python -c "import cvxpy; print('CVXPY version:', cvxpy.__version__)"
 
 # Set high data volume for more reliable results and match Hayase et al.
 TEXTS_PER_DECADE=10000
-TARGET_SIZE_GB=2.0  # Match paper's 1GB per category for analysis
+TARGET_SIZE_GB=1.5  # Match paper's 1GB per category for analysis
 
 echo "Running analyses with high data volume (${TEXTS_PER_DECADE} texts per decade, ${TARGET_SIZE_GB}GB per category)..."
 
