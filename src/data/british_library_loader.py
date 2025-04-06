@@ -62,87 +62,62 @@ class BritishLibraryLoader:
             # Create a fallback empty dataset
             self.dataset = {'train': []}
             
-    def _filter_by_decade(self, decade: str):
-        """Filter the dataset to a specific decade by extracting dates from text content."""
-        if not self.dataset:
+    def create_decade_indexed_dataset(self):
+        """Preprocess the entire British Library dataset and organize by decade."""
+        import re
+        from ..config import TIME_PERIODS
+        
+        if self.dataset is None:
             self._load_dataset()
             
-        start_year, end_year = TIME_PERIODS[decade]
-        logger.info(f"Filtering for decade {decade}: {start_year}-{end_year}")
+        decade_indices = {decade: [] for decade in TIME_PERIODS.keys()}
         
-        filtered_records = []
-        examined_count = 0
+        logger.info("Creating decade-indexed dataset (this will take time but save future runs)...")
         
-        # Set maximum matches needed (with buffer for quality filtering)
-        max_matches = 15000  # We only need 10,000 in the end, but get extra for quality filtering
+        # Process in batches to avoid memory issues
+        batch_size = 100000
+        total_records = len(self.dataset['train'])
         
-        # Use optimized regex pattern for year extraction
-        year_pattern = re.compile(r'^(\d{4})')
-        
-        # Process records
-        for record in self.dataset['train']:
-            examined_count += 1
+        for i in range(0, total_records, batch_size):
+            batch = self.dataset['train'][i:min(i+batch_size, total_records)]
+            logger.info(f"Processing batch {i//batch_size + 1}/{(total_records+batch_size-1)//batch_size}")
             
-            # Log progress periodically
-            if examined_count % 500000 == 0:
-                logger.info(f"Examined {examined_count} records so far, found {len(filtered_records)} matches for {decade}")
-            
-            # Early stopping if we have enough records
-            if len(filtered_records) >= max_matches:
-                logger.info(f"Found {len(filtered_records)} matches for {decade}, stopping early")
-                break
-            
-            # Check if record is a dictionary with date fields
-            if isinstance(record, dict):
+            for idx, record in enumerate(batch):
+                record_idx = i + idx
                 year = None
                 
-                # Try to extract year from date field first (most common)
+                # Skip if record is not a dictionary
+                if not isinstance(record, dict):
+                    continue
+                    
+                # Extract year from date field
                 if 'date' in record:
                     date_value = record['date']
                     if isinstance(date_value, str):
-                        # Use regex for faster extraction
-                        match = year_pattern.search(date_value)
+                        match = re.search(r'^(\d{4})', date_value)
                         if match:
                             try:
                                 year = int(match.group(1))
                             except ValueError:
                                 pass
-                        # Fallback to older method if regex fails
-                        elif '-' in date_value:
-                            try:
-                                year_str = date_value.split('-')[0]
-                                year = int(year_str)
-                            except (ValueError, IndexError):
-                                pass
-                        else:
-                            try:
-                                year = int(date_value)
-                            except (ValueError, IndexError):
-                                pass
-                    elif isinstance(date_value, int):
-                        # Direct year value
-                        year = date_value
                 
-                # If no year found yet, try raw_date field
-                if year is None and 'raw_date' in record:
-                    raw_date = record['raw_date']
-                    if isinstance(raw_date, (str, int)):
-                        try:
-                            year = int(raw_date)
-                        except (ValueError, TypeError):
-                            pass
-                
-                # Check if the year is in our target decade
-                if year is not None and start_year <= year <= end_year:
-                    # Minimal quality checks
-                    if (record.get('text') and 
-                        len(record.get('text', '')) > 200 and 
-                        not record.get('empty_pg', False)):
-                        filtered_records.append(record)
+                # Find which decade this belongs to
+                if year:
+                    for decade, (start_year, end_year) in TIME_PERIODS.items():
+                        if start_year <= year <= end_year:
+                            decade_indices[decade].append(record_idx)
+                            break
+            
+        # Save indices to cache
+        indices_path = self.cache_dir / "decade_indices.json"
+        with open(indices_path, 'w') as f:
+            json.dump(decade_indices, f)
         
-        logger.info(f"Found {len(filtered_records)} records for decade {decade} after examining {examined_count} records")
+        logger.info(f"Created decade index with records per decade:")
+        for decade, indices in decade_indices.items():
+            logger.info(f"  {decade}: {len(indices)} records")
         
-        return filtered_records
+        return decade_indices
 
     def create_decade_indexed_dataset(self):
         """Preprocess the entire British Library dataset and organize by decade."""

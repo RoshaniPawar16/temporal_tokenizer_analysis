@@ -271,7 +271,7 @@ def run_analysis(args):
         for text in texts:
             # Use smaller chunk size to ensure staying within token limits
             # GPT-2 has context window of 1024, so aim for ~400 tokens per chunk
-            chunk_size = 1600  # ~400 tokens per chunk
+            chunk_size = 800  # ~400 tokens per chunk
             
             # For very long texts, use more sophisticated chunking
             if len(text) > chunk_size:
