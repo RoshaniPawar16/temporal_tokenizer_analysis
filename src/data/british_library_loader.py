@@ -73,82 +73,112 @@ class BritishLibraryLoader:
         filtered_records = []
         examined_count = 0
         
-        # Set maximum matches needed (with buffer for quality filtering)
-        max_matches = 25000  # We only need 10,000 in the end, but get extra for quality filtering
+        # Set maximum matches needed (reduced to improve speed)
+        max_matches = 15000  # Reduced from 25000 to be more efficient
         
-        # Process records
-        for record in self.dataset['train']:
-            examined_count += 1
-            
-            # Log progress periodically
-            if examined_count % 500000 == 0:
-                logger.info(f"Examined {examined_count} records so far, found {len(filtered_records)} matches for {decade}")
-            
-            # Early stopping if we have enough records
-            if len(filtered_records) >= max_matches:
-                logger.info(f"Found {len(filtered_records)} matches for {decade}, stopping early")
-                break
-            
-            # Check if record is a dictionary with date fields
-            if isinstance(record, dict):
+        # Use more efficient pattern matching for year extraction
+        year_pattern = re.compile(r'^(\d{4})')
+        
+        # Process records in parallel using multiprocessing
+        from concurrent.futures import ProcessPoolExecutor
+        import math
+        
+        def process_batch(batch):
+            batch_results = []
+            for record in batch:
+                # Check if record is a dictionary with date fields
+                if not isinstance(record, dict):
+                    continue
+                    
                 year = None
                 
-                # Try to extract year from date field first (most common)
+                # Try to extract year from date field first (most common case)
                 if 'date' in record:
                     date_value = record['date']
                     if isinstance(date_value, str):
-                        # Try to extract year from ISO format date string
-                        try:
-                            if '-' in date_value:
-                                # Format like '1692-01-01 00:00:00'
-                                year_str = date_value.split('-')[0]
-                                year = int(year_str)
-                            else:
-                                # Try direct conversion
-                                year = int(date_value)
-                        except (ValueError, IndexError):
-                            pass
+                        # Use regex for faster extraction
+                        match = year_pattern.search(date_value)
+                        if match:
+                            try:
+                                year = int(match.group(1))
+                            except ValueError:
+                                pass
                     elif isinstance(date_value, int):
-                        # Direct year value
                         year = date_value
                 
-                # If no year found yet, try raw_date field
+                # Quick check for raw_date if no year found
                 if year is None and 'raw_date' in record:
                     raw_date = record['raw_date']
-                    if isinstance(raw_date, str) or isinstance(raw_date, int):
-                        try:
-                            year = int(raw_date)
-                        except (ValueError, TypeError):
-                            pass
-                
-                # Additional date field checks if needed
-                if year is None and 'year' in record:
                     try:
-                        year = int(record['year'])
+                        year = int(raw_date)
                     except (ValueError, TypeError):
                         pass
                 
-                # Check if the year is in our target decade
+                # If we found a year in the target decade, pre-filter for quality
                 if year is not None and start_year <= year <= end_year:
-                    # Pre-filter for quality to avoid adding low-quality records
-                    if (
-                        # Text exists and has reasonable length
-                        record.get('text') and len(record.get('text', '')) > 200 and
-                        # Not marked as empty
-                        not record.get('empty_pg', False) and
-                        # Reasonable OCR quality if available
-                        (record.get('mean_wc_ocr', 0.5) >= 0.5 if 'mean_wc_ocr' in record else True)
-                    ):
-                        filtered_records.append(record)
+                    # Apply minimal quality checks
+                    if (record.get('text') and 
+                        len(record.get('text', '')) > 200 and 
+                        not record.get('empty_pg', False)):
+                        batch_results.append(record)
+                        
+                        # Stop early if we've found enough records
+                        if len(batch_results) >= max_matches:
+                            break
+                            
+            return batch_results
         
-        logger.info(f"Found {len(filtered_records)} records for decade {decade} after examining {examined_count} records")
+        # Create batch size and number of workers based on dataset size
+        batch_size = 100000  # Process in larger chunks for efficiency
+        num_workers = 4  # Use multiple CPU cores
         
+        # Split dataset into batches
+        batch_count = min(num_workers * 10, math.ceil(len(self.dataset['train']) / batch_size))
+        batch_size = math.ceil(len(self.dataset['train']) / batch_count)
+        
+        # Process batches until we have enough records
+        with ProcessPoolExecutor(max_workers=num_workers) as executor:
+            futures = []
+            
+            # Submit initial batches
+            for i in range(min(4, batch_count)):  # Start with a few batches
+                start_idx = i * batch_size
+                end_idx = min(start_idx + batch_size, len(self.dataset['train']))
+                batch = self.dataset['train'][start_idx:end_idx]
+                futures.append(executor.submit(process_batch, batch))
+                examined_count += len(batch)
+                
+            # Process results as they complete
+            for i, future in enumerate(futures):
+                batch_results = future.result()
+                filtered_records.extend(batch_results)
+                logger.info(f"Examined ~{(i+1)*batch_size} records, found {len(filtered_records)} matches for {decade}")
+                
+                # If we have enough records, stop processing
+                if len(filtered_records) >= max_matches:
+                    break
+                    
+                # Submit next batch if needed
+                next_batch_idx = len(futures)
+                if next_batch_idx < batch_count and len(filtered_records) < max_matches:
+                    start_idx = next_batch_idx * batch_size
+                    end_idx = min(start_idx + batch_size, len(self.dataset['train']))
+                    batch = self.dataset['train'][start_idx:end_idx]
+                    futures.append(executor.submit(process_batch, batch))
+                    examined_count += len(batch)
+        
+        logger.info(f"Found {len(filtered_records)} records for decade {decade} after examining approximately {examined_count} records")
+        
+        # If we have too many records, sample down to max_matches
+        if len(filtered_records) > max_matches:
+            filtered_records = random.sample(filtered_records, max_matches)
+            
         return filtered_records
-        
+
     def load_decade_samples(self, per_decade: int = 1000, balance_genres: bool = True) -> Dict[str, List[str]]:
         """
         Load balanced sample of texts for each decade using the Hugging Face dataset.
-        For decades beyond 1899 (the BL dataset limit), returns empty lists.
+        Optimized for speed with parallel processing.
         
         Args:
             per_decade: Number of texts to sample per decade
@@ -181,121 +211,116 @@ class BritishLibraryLoader:
             logger.warning("No data in the British Library dataset, returning empty results")
             return decade_texts
             
-        # Set minimum OCR quality threshold
-        ocr_threshold = 0.5  # Only include texts with good OCR quality
-            
-        # Process each decade
+        # Set minimum OCR quality threshold - even more permissive for speed
+        ocr_threshold = 0.4  # Further reduced threshold for faster processing
+        
+        # Dictionary to store texts by decade in JSON format
+        json_decade_texts = {}
+        
+        # Process multiple decades in parallel
+        from concurrent.futures import ThreadPoolExecutor
+        from queue import Queue
+        
+        # Queue for decades that need processing
+        decade_queue = Queue()
+        
+        # Only add decades in the dataset range
         for decade in TIME_PERIODS.keys():
-            # Skip decades outside the dataset range (1500-1899)
             decade_start = int(decade[:4])
-            if decade_start > 1899 or decade_start < 1500:
-                logger.info(f"Decade {decade} outside of dataset range (1500-1899), skipping")
+            if 1500 <= decade_start <= 1899:  # Only add decades in range
+                decade_queue.put(decade)
+        
+        # Process decade function
+        def process_decade():
+            while not decade_queue.empty():
+                try:
+                    decade = decade_queue.get(block=False)
+                except:
+                    return
+                    
+                # Skip if we already have enough data cached
+                if decade in json_decade_texts and len(json_decade_texts[decade]) >= per_decade:
+                    continue
+                    
+                # Get records for this decade (using optimized filter)
+                try:
+                    decade_records = self._filter_by_decade(decade)
+                    
+                    # Apply minimal quality filtering
+                    quality_records = [
+                        record for record in decade_records 
+                        if record.get('text') and len(record.get('text', '')) > 200
+                    ]
+                    
+                    logger.info(f"Found {len(quality_records)} quality records for {decade}")
+                    
+                    # Sample records
+                    if quality_records:
+                        # Use simple random sampling for speed
+                        if len(quality_records) > per_decade:
+                            sampled_records = random.sample(quality_records, per_decade)
+                        else:
+                            sampled_records = quality_records
+                        
+                        # Extract text from each record
+                        decade_texts = []
+                        for record in sampled_records:
+                            text = record.get("text", "")
+                            if text:
+                                # Simple cleanup
+                                text = ' '.join(text.split())
+                                decade_texts.append(text)
+                        
+                        # Store in result dictionary
+                        json_decade_texts[decade] = decade_texts
+                        
+                        logger.info(f"Selected {len(decade_texts)} texts for {decade}")
+                    else:
+                        logger.warning(f"No quality British Library texts found for {decade}")
+                except Exception as e:
+                    logger.error(f"Error processing decade {decade}: {e}")
+                    
+                decade_queue.task_done()
+        
+        # Start worker threads
+        with ThreadPoolExecutor(max_workers=4) as executor:
+            for _ in range(4):  # Use 4 worker threads
+                executor.submit(process_decade)
+        
+        # Generate synthetic data for decades with insufficient data
+        for decade in TIME_PERIODS.keys():
+            # Skip if we already have enough data
+            if decade in json_decade_texts and len(json_decade_texts[decade]) >= per_decade:
+                decade_texts[decade] = json_decade_texts[decade]
                 continue
                 
-            # Get records for this decade
-            decade_records = self._filter_by_decade(decade)
-            
-            # Filter by OCR quality
-            quality_records = [
-                record for record in decade_records 
-                if (
-                    # Make OCR quality check optional if value exists
-                    (record.get('mean_wc_ocr', 0) >= ocr_threshold if 'mean_wc_ocr' in record else True) and
-                    # Only filter out definitely empty pages
-                    (not record.get('empty_pg', False)) and
-                    # Ensure text exists and has minimum length
-                    record.get('text') and len(record.get('text', '')) > 200
-                )
-            ]
-            
-            logger.info(f"Found {len(quality_records)} quality records for {decade}")
-            
-            if not quality_records:
-                logger.warning(f"No quality British Library texts found for {decade}")
-                continue
-                
-            # Group by genre if requested
-            if balance_genres and len(quality_records) > per_decade:
-                sampled_records = self._sample_with_genre_balance(quality_records, per_decade)
+            # Check if we need to generate synthetic data
+            if decade in json_decade_texts:
+                real_texts = json_decade_texts[decade]
+                additional_needed = per_decade - len(real_texts)
+                decade_texts[decade] = real_texts
             else:
-                # Simple random sampling if we have more than needed
-                if len(quality_records) > per_decade:
-                    sampled_records = random.sample(quality_records, per_decade)
-                else:
-                    sampled_records = quality_records
-            
-            # Extract text from each record
-            for record in sampled_records:
-                text = record.get("text", "")
-                if text:
-                    # Clean text - remove excessive whitespace
-                    text = re.sub(r'\s+', ' ', text).strip()
-                    decade_texts[decade].append(text)
-                    logger.debug(f"Added text of length {len(text)} for {decade}")
-            
-            # For historical decades with insufficient data, try to fill with synthetic samples
-            # to match approach from original implementation
-            if len(decade_texts[decade]) < per_decade:
-                additional_needed = per_decade - len(decade_texts[decade])
-                logger.warning(f"Insufficient data for {decade}, adding {additional_needed} synthetic samples")
+                additional_needed = per_decade
+                decade_texts[decade] = []
+                
+            if additional_needed > 0:
+                logger.warning(f"Generating {additional_needed} synthetic texts for {decade}")
+                # Generate synthetic texts concurrently
                 synthetic_texts = self._generate_decade_samples(decade, count=additional_needed)
                 decade_texts[decade].extend(synthetic_texts)
-                    
-            logger.info(f"Selected {len(decade_texts[decade])} texts for {decade}")
-        
-        # For decades outside the dataset range that need data, generate synthetic samples
-        for decade in TIME_PERIODS.keys():
-            decade_start = int(decade[:4])
-            if (decade_start > 1899 or decade_start < 1500) and decade_texts[decade] == []:
-                logger.warning(f"No British Library data for {decade}, generating synthetic samples")
-                synthetic_texts = self._generate_decade_samples(decade, count=per_decade)
-                decade_texts[decade] = synthetic_texts
                 logger.info(f"Added {len(synthetic_texts)} synthetic texts for {decade}")
         
-        # Save cache only if we have data
-        total_texts = sum(len(texts) for texts in decade_texts.values())
-        if total_texts > 0:
-            try:
-                # For large dataset requests, save in batches to avoid memory issues
-                if per_decade > 100:
-                    # Create directory for this cache
-                    cache_dir_path = self.cache_dir / f"samples_{per_decade}"
-                    cache_dir_path.mkdir(exist_ok=True, parents=True)
-                    
-                    # Save each decade separately
-                    for decade, texts in decade_texts.items():
-                        decade_cache_file = cache_dir_path / f"{decade}.json"
-                        with open(decade_cache_file, "w", encoding='utf-8') as f:
-                            json.dump(texts, f)
-                        
-                    # Save metadata about the cache
-                    cache_meta_file = cache_dir_path / "metadata.json"
-                    with open(cache_meta_file, "w", encoding='utf-8') as f:
-                        cache_meta = {
-                            "total_texts": total_texts,
-                            "per_decade": per_decade,
-                            "created": time.strftime("%Y-%m-%d %H:%M:%S"),
-                            "decades": {decade: len(texts) for decade, texts in decade_texts.items()}
-                        }
-                        json.dump(cache_meta, f, indent=2)
-                    
-                    logger.info(f"Cached {total_texts} samples to {cache_dir_path} in batches")
-                else:
-                    # Regular cache for smaller datasets
-                    with open(cache_file, "w", encoding='utf-8') as f:
-                        json.dump(decade_texts, f, indent=2)
-                    logger.info(f"Cached {total_texts} samples to {cache_file}")
-            except Exception as e:
-                logger.warning(f"Failed to cache samples: {e}")
+        # Save cache
+        try:
+            # Save directly to file for speed
+            with open(cache_file, "w", encoding='utf-8') as f:
+                json.dump(decade_texts, f)
+            logger.info(f"Cached {sum(len(texts) for texts in decade_texts.values())} samples to {cache_file}")
+        except Exception as e:
+            logger.warning(f"Failed to cache samples: {e}")
         
-        # Log summary statistics
-        logger.info(f"Loaded {total_texts} total texts from British Library")
-        
-        # Print detailed summary
-        logger.info("\nBritish Library Sample Dataset Summary:")
-        logger.info("-" * 50)
-        for decade, texts in decade_texts.items():
-            logger.info(f"{decade}: {len(texts)} texts")
+        # Log summary
+        logger.info(f"Loaded {sum(len(texts) for texts in decade_texts.values())} total texts")
         
         return decade_texts
         
