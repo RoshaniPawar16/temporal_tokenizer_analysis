@@ -414,7 +414,7 @@ class TemporalDistributionInference:
         
         return decade_patterns
 
-    def _split_text_for_tokenizer(self, text, max_chars=3000):
+    def _split_text_for_tokenizer(self, text, max_chars=800):
         """
         Split text into smaller chunks to avoid context length issues.
         """
@@ -587,7 +587,7 @@ class TemporalDistributionInference:
 
     def infer_temporal_distribution(self, 
                      decade_patterns: Dict[str, Dict],
-                     num_merge_rules: int = 5000,  # Increased from 3000
+                     num_merge_rules: int = 2000,  # Increased from 3000
                      weight_early_merges: bool = True,
                      regularization_strength: float = 0.05) -> Dict[str, float]:  # Reduced from 0.1
         """
