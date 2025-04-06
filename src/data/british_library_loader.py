@@ -144,21 +144,72 @@ class BritishLibraryLoader:
         
         return filtered_records
 
-    def load_decade_samples(self, per_decade: int = 1000, balance_genres: bool = True, force_fresh: bool = True) -> Dict[str, List[str]]:
+    def create_decade_indexed_dataset(self):
+        """Preprocess the entire British Library dataset and organize by decade."""
+        import re
+        from ..config import TIME_PERIODS
+        
+        if self.dataset is None:
+            self._load_dataset()
+            
+        decade_indices = {decade: [] for decade in TIME_PERIODS.keys()}
+        
+        logger.info("Creating decade-indexed dataset (this will take time but save future runs)...")
+        
+        # Process in batches to avoid memory issues
+        batch_size = 100000
+        total_records = len(self.dataset['train'])
+        
+        for i in range(0, total_records, batch_size):
+            batch = self.dataset['train'][i:min(i+batch_size, total_records)]
+            logger.info(f"Processing batch {i//batch_size + 1}/{(total_records+batch_size-1)//batch_size}")
+            
+            for idx, record in enumerate(batch):
+                record_idx = i + idx
+                year = None
+                
+                # Extract year from date field
+                if 'date' in record:
+                    date_value = record['date']
+                    if isinstance(date_value, str):
+                        match = re.search(r'^(\d{4})', date_value)
+                        if match:
+                            try:
+                                year = int(match.group(1))
+                            except ValueError:
+                                pass
+                
+                # Find which decade this belongs to
+                if year:
+                    for decade, (start_year, end_year) in TIME_PERIODS.items():
+                        if start_year <= year <= end_year:
+                            decade_indices[decade].append(record_idx)
+                            break
+            
+        # Save indices to cache
+        indices_path = self.cache_dir / "decade_indices.json"
+        with open(indices_path, 'w') as f:
+            json.dump(decade_indices, f)
+        
+        logger.info(f"Created decade index with records per decade:")
+        for decade, indices in decade_indices.items():
+            logger.info(f"  {decade}: {len(indices)} records")
+        
+        return decade_indices
+
+    def load_decade_samples(self, per_decade: int = 1000, balance_genres: bool = True, force_fresh: bool = False) -> Dict[str, List[str]]:
         """
         Load balanced sample of texts for each decade using the Hugging Face dataset.
-        Optimized for speed with simplified processing.
+        Optimized version using decade index for faster loading.
         
         Args:
             per_decade: Number of texts to sample per decade
             balance_genres: Whether to balance genres within each decade
             force_fresh: If True, ignore cache and process fresh data
-                
+                    
         Returns:
             Dictionary mapping decades to lists of texts
         """
-        decade_texts = {decade: [] for decade in TIME_PERIODS.keys()}
-        
         # Check if we have cached samples - respect the per_decade parameter
         cache_file = self.cache_dir / f"samples_{per_decade}.json"
         
@@ -175,95 +226,54 @@ class BritishLibraryLoader:
         # Load the dataset if not already loaded
         if not self.dataset:
             self._load_dataset()
-                
+        
         # If dataset loading failed, return empty results
         if len(self.dataset.get('train', [])) == 0:
             logger.warning("No data in the British Library dataset, returning empty results")
-            return decade_texts
+            return {decade: [] for decade in TIME_PERIODS.keys()}
         
         logger.info("Processing fresh data (ignoring cache)" if force_fresh else "Processing data")
         
-        # Set minimum OCR quality threshold - more permissive
-        ocr_threshold = 0.4  # Reduced threshold for faster processing
+        # Check if we have a cached index
+        indices_path = self.cache_dir / "decade_indices.json"
         
-        # Process only decades in range to avoid wasting time
-        for decade in list(TIME_PERIODS.keys()):
-            decade_start = int(decade[:4])
-            if decade_start > 1899 or decade_start < 1500:
-                logger.info(f"Decade {decade} outside of dataset range (1500-1899), skipping BL search")
+        if not indices_path.exists():
+            decade_indices = self.create_decade_indexed_dataset()
+        else:
+            logger.info("Loading decade indices from cache")
+            with open(indices_path, 'r') as f:
+                decade_indices = json.load(f)
+                # Convert index strings back to integers
+                decade_indices = {k: [int(idx) for idx in v] for k, v in decade_indices.items()}
+        
+        # Now use the indexed dataset to quickly sample texts
+        decade_texts = {}
+        for decade, indices in decade_indices.items():
+            if not indices:
+                decade_texts[decade] = []
                 continue
                 
-            # Get records for this decade
-            decade_records = self._filter_by_decade(decade)
+            # Sample indices
+            sample_size = min(per_decade, len(indices))
+            sampled_indices = random.sample(indices, sample_size)
             
-            # Skip quality filtering if we didn't find many records
-            if len(decade_records) <= per_decade:
-                quality_records = decade_records
-            else:
-                # Minimal quality filtering
-                quality_records = [
-                    record for record in decade_records 
-                    if record.get('text') and len(record.get('text', '')) > 200
-                ]
+            # Load texts from sampled indices
+            texts = []
+            for idx in sampled_indices:
+                record = self.dataset['train'][int(idx)]
+                if 'text' in record and len(record['text']) > 200:
+                    texts.append(record['text'])
             
-            logger.info(f"Found {len(quality_records)} quality records for {decade}")
-            
-            if not quality_records:
-                logger.warning(f"No quality British Library texts found for {decade}")
-                continue
-                
-            # Simple random sampling for speed
-            if len(quality_records) > per_decade:
-                sampled_records = random.sample(quality_records, per_decade)
-            else:
-                sampled_records = quality_records
-            
-            # Extract text from each record
-            for record in sampled_records:
-                text = record.get("text", "")
-                if text:
-                    # Simple cleanup
-                    text = ' '.join(text.split())
-                    decade_texts[decade].append(text)
-                    
-            logger.info(f"Selected {len(decade_texts[decade])} texts for {decade}")
-            
-            # Save progress immediately for this decade
-            try:
-                partial_cache_dir = self.cache_dir / "partial_cache"
-                partial_cache_dir.mkdir(exist_ok=True, parents=True)
-                
-                decade_cache_file = partial_cache_dir / f"{decade}_{per_decade}.json"
-                with open(decade_cache_file, "w", encoding='utf-8') as f:
-                    json.dump(decade_texts[decade], f)
-                logger.info(f"Cached {len(decade_texts[decade])} texts for {decade} to {decade_cache_file}")
-            except Exception as e:
-                logger.warning(f"Failed to cache decade samples: {e}")
+            decade_texts[decade] = texts
+            logger.info(f"Loaded {len(texts)} texts for {decade}")
         
-        # Add synthetic texts for decades with insufficient data
-        for decade in TIME_PERIODS.keys():
-            if len(decade_texts.get(decade, [])) < per_decade:
-                additional_needed = per_decade - len(decade_texts.get(decade, []))
-                logger.warning(f"Insufficient data for {decade}, adding {additional_needed} synthetic samples")
-                synthetic_texts = self._generate_decade_samples(decade, count=additional_needed)
-                
-                if decade not in decade_texts:
-                    decade_texts[decade] = []
-                    
-                decade_texts[decade].extend(synthetic_texts)
-                logger.info(f"Added {len(synthetic_texts)} synthetic texts for {decade}")
-        
-        # Save complete cache
-        total_texts = sum(len(texts) for texts in decade_texts.values())
+        # Save to cache for future use
         try:
             with open(cache_file, "w", encoding='utf-8') as f:
                 json.dump(decade_texts, f)
-            logger.info(f"Cached {total_texts} samples to {cache_file}")
+            logger.info(f"Cached {sum(len(texts) for texts in decade_texts.values())} samples to {cache_file}")
         except Exception as e:
             logger.warning(f"Failed to cache samples: {e}")
-        
-        # Log summary
-        logger.info(f"Loaded {total_texts} total texts")
         
         return decade_texts
         

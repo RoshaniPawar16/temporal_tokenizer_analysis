@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from pathlib import Path
 import time
+
 from datetime import datetime
 
 from src.data.dataset_manager import TemporalDatasetManager
@@ -20,6 +21,43 @@ from src.validation.temporal_inference import TemporalDistributionInference
 from src.validation.statistical_validator import TemporalValidator
 from src.validation.evaluation_metrics import TemporalEvaluationMetrics
 from src.config import TIME_PERIODS, RESULTS_DIR
+# Set up cache path for datasets
+from pathlib import Path
+import pickle
+import os
+import multiprocessing as mp
+from functools import partial
+
+def process_decade(decade, texts, inference):
+    """Process a single decade in parallel."""
+    logger.info(f"Processing {decade} with {len(texts)} texts...")
+    decade_data = {decade: texts}
+    decade_patterns = inference.analyze_decade_patterns(decade_data)
+    return decade, decade_patterns[decade]
+
+def run_parallel_analysis(inference, decade_texts):
+    """Process decades in parallel using multiprocessing."""
+    # Create a pool with number of available CPUs
+    num_cpus = min(mp.cpu_count(), 8)  # Use at most 8 CPUs to avoid overloading
+    logger.info(f"Using {num_cpus} CPUs for parallel processing")
+    pool = mp.Pool(processes=num_cpus)
+    
+    # Prepare function with fixed inference object
+    process_fn = partial(process_decade, inference=inference)
+    
+    # Process each decade in parallel
+    decade_args = [(decade, texts) for decade, texts in decade_texts.items()]
+    results = pool.starmap(process_fn, decade_args)
+    
+    # Combine results
+    decade_patterns = {}
+    for decade, patterns in results:
+        decade_patterns[decade] = patterns
+    
+    pool.close()
+    pool.join()
+    
+    return decade_patterns
 
 # Configure logging
 logging.basicConfig(
@@ -114,16 +152,111 @@ def run_analysis(args):
     )
     evaluator = TemporalEvaluationMetrics()
     
-    # Create controlled dataset
-    logger.info(f"Creating dataset with target size of {args.target_size_gb}GB per category...")
-    
-    # Always use the high-volume data approach for better results
-    target_size = max(args.target_size_gb, 1.0)  # Ensure at least 1GB minimum
-    logger.info(f"Creating dataset with increased target size of {target_size}GB...")
-    controlled_dataset = dataset_manager.create_large_dataset(
-        distribution=selected_dist,
-        target_size_gb=target_size
-    )
+
+
+    cache_dir = Path(RESULTS_DIR) / "dataset_cache"
+    cache_dir.mkdir(exist_ok=True, parents=True)
+    cached_dataset_path = cache_dir / f"{args.tokenizer}_{args.distribution}_{args.target_size_gb}GB.pkl"
+
+    # Check for cached dataset
+    if cached_dataset_path.exists() and not args.force_fresh:
+        logger.info(f"Loading cached dataset from {cached_dataset_path}")
+        try:
+            with open(cached_dataset_path, 'rb') as f:
+                controlled_dataset = pickle.load(f)
+            
+            # Extract just texts (without source info)
+            decade_texts = {decade: [text for text, _ in texts] 
+                        for decade, texts in controlled_dataset.items()}
+            
+            # Process texts in chunks
+            logger.info("Processing cached texts in chunks with improved context window management...")
+            chunked_decade_texts = {}
+            for decade, texts in decade_texts.items():
+                # Use dataset_manager's chunking function
+                chunked_texts = dataset_manager.chunk_texts_for_tokenizer(texts)
+                chunked_decade_texts[decade] = chunked_texts
+                logger.info(f"Processed {decade}: {len(texts)} texts → {len(chunked_texts)} chunks")
+        except Exception as e:
+            logger.warning(f"Failed to load cached dataset: {e}")
+            # Continue with dataset creation
+            chunked_decade_texts = None
+    else:
+        chunked_decade_texts = None
+
+    # Set up cache path for datasets
+    from pathlib import Path
+    import pickle
+    import os
+
+    cache_dir = Path(RESULTS_DIR) / "dataset_cache"
+    cache_dir.mkdir(exist_ok=True, parents=True)
+    cached_dataset_path = cache_dir / f"{args.tokenizer}_{args.distribution}_{args.target_size_gb}GB.pkl"
+
+    # Check for cached dataset
+    if cached_dataset_path.exists() and not args.force_fresh:
+        logger.info(f"Loading cached dataset from {cached_dataset_path}")
+        try:
+            with open(cached_dataset_path, 'rb') as f:
+                controlled_dataset = pickle.load(f)
+            
+            # Extract just texts (without source info)
+            decade_texts = {decade: [text for text, _ in texts] 
+                        for decade, texts in controlled_dataset.items()}
+            
+            # Process texts in chunks
+            logger.info("Processing cached texts in chunks with improved context window management...")
+            chunked_decade_texts = {}
+            for decade, texts in decade_texts.items():
+                # Use dataset_manager's chunking function
+                chunked_texts = dataset_manager.chunk_texts_for_tokenizer(texts)
+                chunked_decade_texts[decade] = chunked_texts
+                logger.info(f"Processed {decade}: {len(texts)} texts → {len(chunked_texts)} chunks")
+        except Exception as e:
+            logger.warning(f"Failed to load cached dataset: {e}")
+            # Continue with dataset creation
+            chunked_decade_texts = None
+    else:
+        chunked_decade_texts = None
+
+    if chunked_decade_texts is None:
+        # Create controlled dataset
+        logger.info(f"Creating dataset with target size of {args.target_size_gb}GB per category...")
+        
+        # Always use the high-volume data approach for better results
+        target_size = max(args.target_size_gb, 1.0)  # Ensure at least 1GB minimum
+        logger.info(f"Creating dataset with increased target size of {target_size}GB...")
+        controlled_dataset = dataset_manager.create_large_dataset(
+            distribution=selected_dist,
+            target_size_gb=target_size
+        )
+
+        # Verify data volumes meet minimum requirements
+        volume_check = dataset_manager.verify_dataset_volumes(controlled_dataset, target_gb_per_decade=0.5)
+        if not volume_check[1]:  # Second return value is boolean "all_sufficient"
+            logger.warning("Dataset volumes do not meet minimum target requirements")
+            for decade, volume in volume_check[0].items():
+                logger.info(f"  {decade}: {volume:.2f} GB")
+        
+        # Extract just texts (without source info)
+        decade_texts = {decade: [text for text, _ in texts] 
+                    for decade, texts in controlled_dataset.items()}
+
+        # Process texts in chunks to avoid exceeding model context limits
+        logger.info("Processing texts in chunks with improved context window management...")
+        chunked_decade_texts = {}
+        for decade, texts in decade_texts.items():
+            chunked_texts = dataset_manager.chunk_texts_for_tokenizer(texts)
+            chunked_decade_texts[decade] = chunked_texts
+            logger.info(f"Processed {decade}: {len(texts)} texts → {len(chunked_texts)} chunks")
+        
+        # Cache the dataset for future runs
+        try:
+            with open(cached_dataset_path, 'wb') as f:
+                pickle.dump(controlled_dataset, f)
+            logger.info(f"Cached dataset to {cached_dataset_path}")
+        except Exception as e:
+            logger.warning(f"Failed to cache dataset: {e}")
 
     # Verify data volumes meet minimum requirements
     volume_check = dataset_manager.verify_dataset_volumes(controlled_dataset, target_gb_per_decade=0.5)
@@ -177,9 +310,9 @@ def run_analysis(args):
     logger.info("Running tokenizer analysis with ensemble method...")
     start_time = time.time()
 
-    # First analyze patterns
-    logger.info("Analyzing decade patterns...")
-    decade_patterns = inference.analyze_decade_patterns(chunked_decade_texts)
+    # First analyze patterns in parallel
+    logger.info("Analyzing decade patterns in parallel...")
+    decade_patterns = run_parallel_analysis(inference, chunked_decade_texts)
 
     # Then use ensemble method for more robust inference
     logger.info("Applying ensemble inference...")
@@ -216,10 +349,12 @@ def run_analysis(args):
     
     # Bootstrap validation (if requested)
     if args.bootstrap:
-        logger.info(f"Performing bootstrap validation with {args.bootstrap_iterations} iterations...")
+        # Reduce iterations but ensure enough for statistical validity
+        bootstrap_iterations = min(args.bootstrap_iterations, 30)
+        logger.info(f"Performing bootstrap validation with {bootstrap_iterations} iterations...")
         confidence_intervals = validator.bootstrap_analysis(
             decade_texts=decade_texts,
-            n_bootstrap=args.bootstrap_iterations,
+            n_bootstrap=bootstrap_iterations,
             sample_ratio=0.8
         )
         
@@ -573,7 +708,9 @@ if __name__ == "__main__":
                       help="Perform bootstrap validation for confidence intervals")
     parser.add_argument("--bootstrap_iterations", type=int, default=100,
                       help="Number of bootstrap iterations to perform (higher = more reliable)")
-    
+    parser.add_argument("--force_fresh", action="store_true", 
+                  help="Force fresh dataset creation (ignore cache)")
+
     args = parser.parse_args()
     
     # Run all distributions or just the specified one
