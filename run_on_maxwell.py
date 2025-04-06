@@ -183,11 +183,6 @@ def run_analysis(args):
     else:
         chunked_decade_texts = None
 
-    # Set up cache path for datasets
-    from pathlib import Path
-    import pickle
-    import os
-
     cache_dir = Path(RESULTS_DIR) / "dataset_cache"
     cache_dir.mkdir(exist_ok=True, parents=True)
     cached_dataset_path = cache_dir / f"{args.tokenizer}_{args.distribution}_{args.target_size_gb}GB.pkl"
