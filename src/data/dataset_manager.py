@@ -324,7 +324,7 @@ class TemporalDatasetManager:
         
         # Expand historical catalogs for both loaders
         self.gutenberg_loader.expand_historical_catalog()
-        bl_texts_by_decade = self.bl_loader.load_decade_samples(per_decade=max_texts)
+        bl_texts_by_decade = self.bl_loader.load_decade_samples(per_decade=max_texts, force_fresh=True)
         gutenberg_texts_by_decade = self.gutenberg_loader.load_decade_samples(texts_per_decade=max_texts)
         
         # Combine sources
@@ -455,7 +455,7 @@ class TemporalDatasetManager:
         
         # Load texts from sources with equal sampling
         logger.info("Loading British Library texts...")
-        bl_texts = self.bl_loader.load_decade_samples(per_source)
+        bl_texts = self.bl_loader.load_decade_samples(per_source, force_fresh=True)
         
         logger.info("Loading Gutenberg texts...")
         gutenberg_texts = self.gutenberg_loader.load_decade_samples(texts_per_decade=per_source)
@@ -1282,7 +1282,7 @@ class TemporalDatasetManager:
         all_gutenberg_texts = self.gutenberg_loader.load_decade_samples(texts_per_decade=1000)
         
         # British Library texts
-        all_bl_texts = self.bl_loader.load_decade_samples(per_decade=1000)  # Get more than needed
+        all_bl_texts = self.bl_loader.load_decade_samples(per_decade=1000, force_fresh=True)  # Get more than needed
         
         # Track success in meeting distribution targets
         target_comparison = {

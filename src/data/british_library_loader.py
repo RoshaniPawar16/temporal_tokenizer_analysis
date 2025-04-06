@@ -144,7 +144,7 @@ class BritishLibraryLoader:
         
         return filtered_records
 
-    def load_decade_samples(self, per_decade: int = 1000, balance_genres: bool = True) -> Dict[str, List[str]]:
+    def load_decade_samples(self, per_decade: int = 1000, balance_genres: bool = True, force_fresh: bool = True) -> Dict[str, List[str]]:
         """
         Load balanced sample of texts for each decade using the Hugging Face dataset.
         Optimized for speed with simplified processing.
@@ -152,6 +152,7 @@ class BritishLibraryLoader:
         Args:
             per_decade: Number of texts to sample per decade
             balance_genres: Whether to balance genres within each decade
+            force_fresh: If True, ignore cache and process fresh data
                 
         Returns:
             Dictionary mapping decades to lists of texts
@@ -161,8 +162,8 @@ class BritishLibraryLoader:
         # Check if we have cached samples - respect the per_decade parameter
         cache_file = self.cache_dir / f"samples_{per_decade}.json"
         
-        # Try to load from cache if it exists
-        if cache_file.exists():
+        # Try to load from cache if it exists and we're not forcing fresh processing
+        if cache_file.exists() and not force_fresh:
             try:
                 with open(cache_file, "r", encoding="utf-8") as f:
                     decade_texts = json.load(f)
@@ -179,7 +180,9 @@ class BritishLibraryLoader:
         if len(self.dataset.get('train', [])) == 0:
             logger.warning("No data in the British Library dataset, returning empty results")
             return decade_texts
-            
+        
+        logger.info("Processing fresh data (ignoring cache)" if force_fresh else "Processing data")
+        
         # Set minimum OCR quality threshold - more permissive
         ocr_threshold = 0.4  # Reduced threshold for faster processing
         
