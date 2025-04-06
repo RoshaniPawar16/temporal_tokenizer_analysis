@@ -22,7 +22,6 @@ from src.validation.statistical_validator import TemporalValidator
 from src.validation.evaluation_metrics import TemporalEvaluationMetrics
 from src.config import TIME_PERIODS, RESULTS_DIR
 # Set up cache path for datasets
-from pathlib import Path
 import pickle
 import os
 import multiprocessing as mp
