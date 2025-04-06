@@ -73,17 +73,27 @@ class BritishLibraryLoader:
         filtered_records = []
         examined_count = 0
         
+        # Set maximum matches needed (with buffer for quality filtering)
+        max_matches = 25000  # We only need 10,000 in the end, but get extra for quality filtering
+        
         # Process records
         for record in self.dataset['train']:
             examined_count += 1
+            
+            # Log progress periodically
             if examined_count % 500000 == 0:
                 logger.info(f"Examined {examined_count} records so far, found {len(filtered_records)} matches for {decade}")
+            
+            # Early stopping if we have enough records
+            if len(filtered_records) >= max_matches:
+                logger.info(f"Found {len(filtered_records)} matches for {decade}, stopping early")
+                break
             
             # Check if record is a dictionary with date fields
             if isinstance(record, dict):
                 year = None
                 
-                # Try to extract year from date field
+                # Try to extract year from date field first (most common)
                 if 'date' in record:
                     date_value = record['date']
                     if isinstance(date_value, str):
@@ -98,6 +108,9 @@ class BritishLibraryLoader:
                                 year = int(date_value)
                         except (ValueError, IndexError):
                             pass
+                    elif isinstance(date_value, int):
+                        # Direct year value
+                        year = date_value
                 
                 # If no year found yet, try raw_date field
                 if year is None and 'raw_date' in record:
@@ -108,9 +121,25 @@ class BritishLibraryLoader:
                         except (ValueError, TypeError):
                             pass
                 
+                # Additional date field checks if needed
+                if year is None and 'year' in record:
+                    try:
+                        year = int(record['year'])
+                    except (ValueError, TypeError):
+                        pass
+                
                 # Check if the year is in our target decade
                 if year is not None and start_year <= year <= end_year:
-                    filtered_records.append(record)
+                    # Pre-filter for quality to avoid adding low-quality records
+                    if (
+                        # Text exists and has reasonable length
+                        record.get('text') and len(record.get('text', '')) > 200 and
+                        # Not marked as empty
+                        not record.get('empty_pg', False) and
+                        # Reasonable OCR quality if available
+                        (record.get('mean_wc_ocr', 0.5) >= 0.5 if 'mean_wc_ocr' in record else True)
+                    ):
+                        filtered_records.append(record)
         
         logger.info(f"Found {len(filtered_records)} records for decade {decade} after examining {examined_count} records")
         
