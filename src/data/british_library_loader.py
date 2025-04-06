@@ -143,6 +143,10 @@ class BritishLibraryLoader:
                 record_idx = i + idx
                 year = None
                 
+                # THIS IS THE FIX - Add this check before trying to access record['date']
+                if not isinstance(record, dict):
+                    continue
+                
                 # Extract year from date field
                 if 'date' in record:
                     date_value = record['date']
@@ -153,24 +157,6 @@ class BritishLibraryLoader:
                                 year = int(match.group(1))
                             except ValueError:
                                 pass
-                
-                # Find which decade this belongs to
-                if year:
-                    for decade, (start_year, end_year) in TIME_PERIODS.items():
-                        if start_year <= year <= end_year:
-                            decade_indices[decade].append(record_idx)
-                            break
-            
-        # Save indices to cache
-        indices_path = self.cache_dir / "decade_indices.json"
-        with open(indices_path, 'w') as f:
-            json.dump(decade_indices, f)
-        
-        logger.info(f"Created decade index with records per decade:")
-        for decade, indices in decade_indices.items():
-            logger.info(f"  {decade}: {len(indices)} records")
-        
-        return decade_indices
 
     def load_decade_samples(self, per_decade: int = 1000, balance_genres: bool = True, force_fresh: bool = False) -> Dict[str, List[str]]:
         """
