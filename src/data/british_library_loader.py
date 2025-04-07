@@ -107,7 +107,7 @@ class BritishLibraryLoader:
                         if start_year <= year <= end_year:
                             decade_indices[decade].append(record_idx)
                             break
-            
+        
         # Save indices to cache
         indices_path = self.cache_dir / "decade_indices.json"
         with open(indices_path, 'w') as f:
@@ -117,46 +117,8 @@ class BritishLibraryLoader:
         for decade, indices in decade_indices.items():
             logger.info(f"  {decade}: {len(indices)} records")
         
+        # Add this return statement that was missing
         return decade_indices
-
-    def create_decade_indexed_dataset(self):
-        """Preprocess the entire British Library dataset and organize by decade."""
-        import re
-        from ..config import TIME_PERIODS
-        
-        if self.dataset is None:
-            self._load_dataset()
-            
-        decade_indices = {decade: [] for decade in TIME_PERIODS.keys()}
-        
-        logger.info("Creating decade-indexed dataset (this will take time but save future runs)...")
-        
-        # Process in batches to avoid memory issues
-        batch_size = 100000
-        total_records = len(self.dataset['train'])
-        
-        for i in range(0, total_records, batch_size):
-            batch = self.dataset['train'][i:min(i+batch_size, total_records)]
-            logger.info(f"Processing batch {i//batch_size + 1}/{(total_records+batch_size-1)//batch_size}")
-            
-            for idx, record in enumerate(batch):
-                record_idx = i + idx
-                year = None
-                
-                # THIS IS THE FIX - Add this check before trying to access record['date']
-                if not isinstance(record, dict):
-                    continue
-                
-                # Extract year from date field
-                if 'date' in record:
-                    date_value = record['date']
-                    if isinstance(date_value, str):
-                        match = re.search(r'^(\d{4})', date_value)
-                        if match:
-                            try:
-                                year = int(match.group(1))
-                            except ValueError:
-                                pass
 
     def load_decade_samples(self, per_decade: int = 1000, balance_genres: bool = True, force_fresh: bool = False) -> Dict[str, List[str]]:
         """
