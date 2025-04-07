@@ -290,18 +290,10 @@ class TemporalDatasetManager:
         
         return chunks
 
-
-    # In the TemporalDatasetManager class, modify the create_large_dataset method:
+    # Replace the create_large_dataset method in dataset_manager.py
     def create_large_dataset(self, distribution: Dict[str, float] = None, target_size_gb: float = 0.15) -> Dict[str, List[Tuple[str, str]]]:
         """
-        Create a dataset with specified target size in GB - smaller but more balanced
-        
-        Args:
-            distribution: Dictionary mapping decades to proportions (if None, uses equal distribution)
-            target_size_gb: Target size in gigabytes (reduced to ensure all decades can reach this)
-                
-        Returns:
-            Dictionary mapping decades to lists of (text, source) tuples
+        Create a dataset with specified target size in GB - more efficient implementation
         """
         # If no distribution provided, use equal distribution across all decades
         if distribution is None:
@@ -309,31 +301,59 @@ class TemporalDatasetManager:
         
         logger.info(f"Creating balanced dataset with target size of {target_size_gb} GB per decade")
         
-        # Calculate target size in bytes
+        # Calculate target size in bytes - more precise calculation
         target_size_bytes = target_size_gb * 1024 * 1024 * 1024
+        bytes_per_decade = {decade: target_size_bytes * distribution.get(decade, 0) for decade in TIME_PERIODS.keys()}
         
-        # Set equal targets for all decades, ignoring distribution
-        # This ensures better balance for the linear programming
-        bytes_per_decade = {decade: target_size_bytes for decade in TIME_PERIODS.keys()}
+        # Cache path for tracking already processed texts to avoid duplicates
+        cache_dir = Path(CACHE_DIR) / "processed_texts"
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        processed_texts_file = cache_dir / f"processed_{int(time.time())}.json"
         
-        # Load all available source texts
-        logger.info("Loading source texts for all decades...")
+        processed_ids = set()
+        if processed_texts_file.exists():
+            try:
+                with open(processed_texts_file, 'r') as f:
+                    processed_ids = set(json.load(f))
+                logger.info(f"Loaded {len(processed_ids)} previously processed text IDs")
+            except Exception as e:
+                logger.warning(f"Error loading processed IDs: {e}")
         
-        # Use expanded historical catalogs
-        self.gutenberg_loader.expand_historical_catalog()
-        all_gutenberg_texts = self.gutenberg_loader.load_decade_samples(texts_per_decade=1000)
-        all_bl_texts = self.bl_loader.load_decade_samples(per_decade=1000, force_fresh=False)
-        
-        # Combine sources
+        # Load data more efficiently, with early stopping when targets are reached
         all_texts = {}
         for decade in TIME_PERIODS.keys():
-            decade_bl = [(text, "british_library") for text in all_bl_texts.get(decade, [])]
-            decade_gutenberg = [(text, "gutenberg") for text in all_gutenberg_texts.get(decade, [])]
-            all_texts[decade] = decade_bl + decade_gutenberg
+            if bytes_per_decade.get(decade, 0) <= 0:
+                all_texts[decade] = []
+                continue
+                
+            # Calculate how many texts we need to sample initially
+            # More efficient approach using estimated text sizes
+            avg_text_size = 10000  # Average text size in bytes (conservative estimate)
+            initial_sample_count = int(bytes_per_decade[decade] / avg_text_size * 1.5)  # 50% buffer
             
-            logger.info(f"{decade}: {len(all_texts[decade])} total texts available ({len(decade_bl)} BL, {len(decade_gutenberg)} Gutenberg)")
+            # Load texts from sources with efficient caching
+            decade_bl = []
+            decade_gutenberg = []
+            
+            # Only load what we need - don't waste time on unnecessary loading
+            if initial_sample_count > 0:
+                logger.info(f"Loading approximately {initial_sample_count} texts for {decade}")
+                
+                # Load from British Library with appropriate chunking            
+                bl_texts = self.bl_loader.load_decade_samples(per_decade=min(initial_sample_count, 1000), force_fresh=False)
+                decade_bl = [(text, "british_library") for text in bl_texts.get(decade, [])]
+                
+                # If we need more, load from Gutenberg
+                if len(decade_bl) < initial_sample_count:
+                    remaining = initial_sample_count - len(decade_bl)
+                    gutenberg_texts = self.gutenberg_loader.load_decade_samples(texts_per_decade=min(remaining, 1000))
+                    decade_gutenberg = [(text, "gutenberg") for text in gutenberg_texts.get(decade, [])]
+            
+            # Combine sources
+            all_texts[decade] = decade_bl + decade_gutenberg
+            logger.info(f"{decade}: Initially loaded {len(all_texts[decade])} texts ({len(decade_bl)} BL, {len(decade_gutenberg)} Gutenberg)")
         
-        # Build dataset with target sizes
+        # Build dataset with target sizes - more memory efficient approach
         dataset = {}
         total_size_bytes = 0
         
@@ -344,50 +364,75 @@ class TemporalDatasetManager:
                 dataset[decade] = []
                 continue
             
-            # Track decade data volume
+            # Track decade data volume with more accurate byte counting
             decade_bytes = 0
             decade_dataset = []
             
             logger.info(f"Building {decade} dataset to target {target_bytes/(1024*1024):.2f} MB")
             
-            # Filter by minimum length to favor longer texts
-            min_length = 1000  # Reduced from 5000 to include more texts
+            # Filter by minimum length for quality but avoid excluding too much
+            min_length = 800  # Reduced from 5000 to include more texts
             quality_texts = [t for t in decade_texts if len(t[0]) >= min_length]
             
-            # Use any texts we can find
+            # Use quality texts if available, otherwise fallback
             source_texts = quality_texts if quality_texts else decade_texts
             
-            # Keep adding texts until we reach the target data volume
-            i = 0
-            max_iterations = 50000  # Prevent infinite loops
+            # Process texts with better deduplication
+            processed_in_decade = set()
             
-            while decade_bytes < target_bytes and i < max_iterations:
-                if not source_texts:
-                    # If no real texts, generate synthetic ones
-                    synthetic_text = self._create_historical_synthetic_texts(decade, 1, {})[0]
-                    text = synthetic_text
-                    source = "synthetic"
-                else:
-                    # Use existing texts with wrapping
-                    idx = i % len(source_texts)
-                    text, source = source_texts[idx]
+            # First pass: add original texts
+            for text, source in source_texts:
+                # Skip if already processed (avoid duplicates)
+                text_hash = hash(text[:100] + text[-100:] if len(text) > 200 else text)
+                if text_hash in processed_ids or text_hash in processed_in_decade:
+                    continue
                     
-                    # For historical decades, aggressively augment to reach volume
-                    is_historical = int(decade[:4]) < 1970
-                    if is_historical or i >= len(source_texts):
-                        # Stronger augmentation for historical periods
-                        volume_multiplier = 8 if is_historical else 4
-                        text = self._augment_text_for_volume(text, decade, volume_multiplier=volume_multiplier)
-                        source = f"{source}_augmented"
-                
                 decade_dataset.append((text, source))
                 text_bytes = len(text.encode('utf-8'))
                 decade_bytes += text_bytes
-                i += 1
+                processed_in_decade.add(text_hash)
                 
-                # Log progress periodically
-                if i % 100 == 0:
-                    logger.info(f"{decade} progress: {i} texts, {decade_bytes/(1024*1024):.2f} MB / {target_bytes/(1024*1024):.2f} MB")
+                # Stop if we've reached the target
+                if decade_bytes >= target_bytes:
+                    break
+            
+            # If we need more data, use augmentation with controlled randomness
+            if decade_bytes < target_bytes:
+                logger.info(f"{decade}: Need more data, current: {decade_bytes/(1024*1024):.2f}MB, target: {target_bytes/(1024*1024):.2f}MB")
+                
+                # Calculate remaining bytes needed
+                remaining_bytes = target_bytes - decade_bytes
+                
+                # Sort texts by length (prefer longer ones for augmentation)
+                source_texts.sort(key=lambda x: len(x[0]), reverse=True)
+                
+                # Determine how many augmented versions we need per text
+                texts_to_augment = source_texts[:min(50, len(source_texts))]  # Limit to avoid too much repetition
+                augmentations_per_text = max(1, int(remaining_bytes / (len(texts_to_augment) * 10000)))
+                
+                # Generate augmented texts with controlled randomness
+                for base_text, base_source in texts_to_augment:
+                    augmentation_count = 0
+                    
+                    while decade_bytes < target_bytes and augmentation_count < augmentations_per_text:
+                        # Add jitter to volume multiplier for more diversity
+                        volume_multiplier = random.uniform(4, 8)
+                        augmented_text = self._augment_text_for_volume(base_text, decade, volume_multiplier=volume_multiplier)
+                        
+                        # Skip if too similar to existing texts
+                        text_hash = hash(augmented_text[:100] + augmented_text[-100:] if len(augmented_text) > 200 else augmented_text)
+                        if text_hash in processed_ids or text_hash in processed_in_decade:
+                            augmentation_count += 1
+                            continue
+                        
+                        decade_dataset.append((augmented_text, f"{base_source}_augmented"))
+                        text_bytes = len(augmented_text.encode('utf-8'))
+                        decade_bytes += text_bytes
+                        processed_in_decade.add(text_hash)
+                        augmentation_count += 1
+                
+                # Update processed IDs
+                processed_ids.update(processed_in_decade)
             
             dataset[decade] = decade_dataset
             total_size_bytes += decade_bytes
@@ -396,31 +441,14 @@ class TemporalDatasetManager:
         
         logger.info(f"Total dataset size: {total_size_bytes/1024/1024/1024:.2f} GB")
         
-        # Save metadata
-        dataset_metadata = {
-            "total_texts": sum(len(texts) for texts in dataset.values()),
-            "total_size_bytes": total_size_bytes,
-            "total_size_gb": total_size_bytes / (1024*1024*1024),
-            "target_size_gb": target_size_gb,
-            "decades": {
-                decade: {
-                    "texts": len(texts),
-                    "size_bytes": sum(len(text.encode('utf-8')) for text, _ in texts),
-                    "size_gb": sum(len(text.encode('utf-8')) for text, _ in texts) / (1024*1024*1024)
-                } for decade, texts in dataset.items()
-            }
-        }
+        # Save processed IDs
+        try:
+            with open(processed_texts_file, 'w') as f:
+                json.dump(list(processed_ids), f)
+        except Exception as e:
+            logger.warning(f"Failed to save processed IDs: {e}")
         
-        # Save to disk
-        metadata_path = self.dataset_dir / "large_datasets"
-        metadata_path.mkdir(exist_ok=True, parents=True)
-        
-        with open(metadata_path / f"balanced_dataset_{int(time.time())}_metadata.json", "w") as f:
-            json.dump(dataset_metadata, f, indent=2)
-        
-        return dataset
-        
-        # Save metadata about the large dataset
+        # Create detailed metadata
         dataset_metadata = {
             "total_texts": sum(len(texts) for texts in dataset.values()),
             "total_size_bytes": total_size_bytes,
@@ -436,14 +464,13 @@ class TemporalDatasetManager:
             }
         }
         
-        # Save to a special location for large datasets
-        large_dataset_dir = self.dataset_dir / "large_datasets"
-        large_dataset_dir.mkdir(exist_ok=True, parents=True)
+        # Save metadata
+        metadata_path = self.dataset_dir / "large_datasets"
+        metadata_path.mkdir(exist_ok=True, parents=True)
         
-        with open(large_dataset_dir / f"large_dataset_{int(time.time())}_metadata.json", "w") as f:
+        with open(metadata_path / f"large_dataset_{int(time.time())}_metadata.json", "w") as f:
             json.dump(dataset_metadata, f, indent=2)
         
-        logger.info(f"Saved large dataset metadata. Total size: {dataset_metadata['total_size_gb']:.2f} GB")
         return dataset
 
     def build_temporal_dataset(self,

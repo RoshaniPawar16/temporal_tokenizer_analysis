@@ -344,11 +344,11 @@ class TemporalDistributionInference:
 
     def analyze_decade_patterns(self, decade_texts: Dict[str, List[str]], sample_size: int = 5000) -> Dict[str, Dict]:
         """
-        Analyze merge rules and token patterns for each decade with improved sampling.
+        Analyze merge rules and token patterns for each decade with improved memory efficiency.
         """
         decade_patterns = {}
         
-        # Process each decade
+        # Process each decade with better memory management
         for decade, texts in decade_texts.items():
             if not texts:
                 continue
@@ -365,42 +365,58 @@ class TemporalDistributionInference:
             total_tokens = 0
             total_chars = 0
             
-            # Process texts individually to avoid context length issues
-            for text in sampled_texts[:20]:  # Process in batches for efficiency
-                # Ensure text is not too long for tokenizer
-                if isinstance(text, tuple):
-                    text = text[0]  # Extract text if it's a (text, source) tuple
-                    
-                # Split text into smaller chunks if needed
-                text_chunks = self._split_text_for_tokenizer(text)
+            # Process texts in batches to control memory usage
+            batch_size = 5  # Process 5 texts at a time
+            for i in range(0, min(20, len(sampled_texts)), batch_size):
+                batch_texts = sampled_texts[i:i+batch_size]
                 
-                for chunk in text_chunks:
-                    # Tokenize chunk
-                    try:
-                        tokens = self.tokenizer.tokenize(chunk)
-                        encoded = self.tokenizer.encode(chunk, add_special_tokens=False)
+                # Process each text in the batch
+                for text in batch_texts:
+                    # Ensure text is not too long for tokenizer
+                    if isinstance(text, tuple):
+                        text = text[0]  # Extract text if it's a (text, source) tuple
                         
-                        # Count tokens
-                        token_counts.update(tokens)
-                        total_tokens += len(tokens)
-                        
-                        # Count merge rules
-                        for token in tokens:
-                            # Extract applicable merge rules for this token
-                            applicable_rules = self._extract_merge_rules(token)
-                            merge_rule_counts.update(applicable_rules)
-                        
-                        # Count character pairs (bigrams)
-                        for i in range(len(chunk) - 1):
-                            char_pair = chunk[i:i+2]
-                            char_pair_counts[char_pair] += 1
-                            total_chars += 1
-                    except Exception as e:
-                        logger.warning(f"Error processing chunk: {e}")
+                    # Split text into smaller chunks if needed
+                    text_chunks = self._split_text_for_tokenizer(text)
+                    
+                    for chunk in text_chunks:
+                        # Skip very short chunks
+                        if len(chunk) < 100:
+                            continue
+                            
+                        # Tokenize chunk with error handling
+                        try:
+                            tokens = self.tokenizer.tokenize(chunk)
+                            
+                            # Skip if tokenization failed
+                            if not tokens:
+                                continue
+                                
+                            # Count tokens
+                            token_counts.update(tokens)
+                            total_tokens += len(tokens)
+                            
+                            # Count merge rules - more memory efficient approach
+                            for token in tokens:
+                                # Extract applicable merge rules for this token
+                                applicable_rules = self._extract_merge_rules(token)
+                                for rule in applicable_rules:
+                                    merge_rule_counts[rule] = merge_rule_counts.get(rule, 0) + 1
+                            
+                            # Count character pairs (bigrams)
+                            for i in range(len(chunk) - 1):
+                                char_pair = chunk[i:i+2]
+                                char_pair_counts[char_pair] = char_pair_counts.get(char_pair, 0) + 1
+                                total_chars += 1
+                        except Exception as e:
+                            logger.debug(f"Error processing chunk: {e}")
+                
+                # Force garbage collection after each batch
+                gc.collect()
             
             # Calculate statistics
             if total_tokens > 0 and total_chars > 0:
-                # Store decade statistics
+                # Store decade statistics - convert to regular dicts to reduce memory usage
                 decade_patterns[decade] = {
                     'merge_rules': dict(merge_rule_counts),
                     'tokens': dict(token_counts),
@@ -410,6 +426,7 @@ class TemporalDistributionInference:
                 }
             
             # Clean up to free memory
+            del merge_rule_counts, token_counts, char_pair_counts
             gc.collect()
         
         return decade_patterns

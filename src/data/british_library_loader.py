@@ -161,15 +161,7 @@ class BritishLibraryLoader:
     def load_decade_samples(self, per_decade: int = 1000, balance_genres: bool = True, force_fresh: bool = False) -> Dict[str, List[str]]:
         """
         Load balanced sample of texts for each decade using the Hugging Face dataset.
-        Optimized version using decade index for faster loading.
-        
-        Args:
-            per_decade: Number of texts to sample per decade
-            balance_genres: Whether to balance genres within each decade
-            force_fresh: If True, ignore cache and process fresh data
-                    
-        Returns:
-            Dictionary mapping decades to lists of texts
+        Enhanced with better error handling and retry logic.
         """
         # Check if we have cached samples - respect the per_decade parameter
         cache_file = self.cache_dir / f"samples_{per_decade}.json"
@@ -183,56 +175,81 @@ class BritishLibraryLoader:
                 return decade_texts
             except Exception as e:
                 logger.warning(f"Failed to load from cache: {e}")
-        # Since we're running out of time, create an empty result set for all decades
-        # This is a fallback solution to avoid breaking the entire pipeline
-        empty_decades = {decade: [] for decade in TIME_PERIODS.keys()}
-        logger.warning("Using empty British Library dataset due to loading issues")
         
-        # Return empty dataset to allow the rest of the pipeline to continue
-        return empty_decades
         # Load the dataset if not already loaded
         if not self.dataset:
             self._load_dataset()
         
         # If dataset loading failed, return empty results
-        if len(self.dataset.get('train', [])) == 0:
+        if not self.dataset or len(self.dataset.get('train', [])) == 0:
             logger.warning("No data in the British Library dataset, returning empty results")
             return {decade: [] for decade in TIME_PERIODS.keys()}
         
-        logger.info("Processing fresh data (ignoring cache)" if force_fresh else "Processing data")
-        
         # Check if we have a cached index
         indices_path = self.cache_dir / "decade_indices.json"
+        decade_indices = {}
         
-        if not indices_path.exists():
+        # Try to load decade indices from cache first
+        if indices_path.exists():
+            try:
+                logger.info("Loading decade indices from cache")
+                with open(indices_path, 'r') as f:
+                    decade_indices = json.load(f)
+                    # Convert index strings back to integers
+                    decade_indices = {k: [int(idx) for idx in v] for k, v in decade_indices.items()}
+            except Exception as e:
+                logger.warning(f"Failed to load decade indices, creating new ones: {e}")
+                decade_indices = {}
+        
+        # If indices not loaded, create them
+        if not decade_indices:
             decade_indices = self.create_decade_indexed_dataset()
-        else:
-            logger.info("Loading decade indices from cache")
-            with open(indices_path, 'r') as f:
-                decade_indices = json.load(f)
-                # Convert index strings back to integers
-                decade_indices = {k: [int(idx) for idx in v] for k, v in decade_indices.items()}
         
-        # Now use the indexed dataset to quickly sample texts
+        # Create result dictionary
         decade_texts = {}
+        
+        # Process each decade with error handling and retries
         for decade, indices in decade_indices.items():
+            decade_texts[decade] = []
+            
             if not indices:
-                decade_texts[decade] = []
                 continue
                 
-            # Sample indices
+            # Sample indices with retry mechanism
             sample_size = min(per_decade, len(indices))
             sampled_indices = random.sample(indices, sample_size)
             
-            # Load texts from sampled indices
-            texts = []
-            for idx in sampled_indices:
-                record = self.dataset['train'][int(idx)]
-                if 'text' in record and len(record['text']) > 200:
-                    texts.append(record['text'])
+            # Load texts in batches to avoid memory issues
+            batch_size = 50
+            total_loaded = 0
             
-            decade_texts[decade] = texts
-            logger.info(f"Loaded {len(texts)} texts for {decade}")
+            for start_idx in range(0, len(sampled_indices), batch_size):
+                batch_indices = sampled_indices[start_idx:start_idx + batch_size]
+                
+                # Use retry mechanism for batch loading
+                max_retries = 3
+                for attempt in range(max_retries):
+                    try:
+                        batch_texts = []
+                        for idx in batch_indices:
+                            try:
+                                record = self.dataset['train'][int(idx)]
+                                if 'text' in record and isinstance(record['text'], str) and len(record['text']) > 200:
+                                    batch_texts.append(record['text'])
+                            except Exception as e:
+                                logger.debug(f"Error loading text {idx}: {e}")
+                        
+                        decade_texts[decade].extend(batch_texts)
+                        total_loaded += len(batch_texts)
+                        break  # Exit retry loop if successful
+                    except Exception as e:
+                        if attempt < max_retries - 1:
+                            logger.warning(f"Error in batch {start_idx//batch_size}, attempt {attempt+1}: {e}")
+                            time.sleep(1)  # Wait before retry
+                        else:
+                            logger.error(f"Failed to load batch after {max_retries} attempts: {e}")
+            
+            logger.info(f"Loaded {total_loaded} texts for {decade}")
         
         # Save to cache for future use
         try:

@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=temporal_analysis
-#SBATCH --time=15:00:00    # Increased time for larger data processing
+#SBATCH --time=15:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=64G
@@ -27,81 +27,29 @@ source venv/bin/activate
 echo "Installing required packages..."
 pip install --no-cache-dir transformers numpy matplotlib seaborn pandas scipy cvxpy tqdm datasets huggingface_hub
 
-# Set up cache for Hugging Face datasets
+# Set up cache for Hugging Face datasets with memory limits
 export HF_DATASETS_CACHE="./hf_cache"
-mkdir -p $HF_DATASETS_CACHE
+mkdir -p $HF_CACHE_DIR
+export HF_DATASETS_IN_MEMORY_MAX_SIZE=4000000000  # 4GB max memory for datasets
 
-# Verify installations
-python -c "import transformers; print('Transformers version:', transformers.__version__)"
-python -c "import numpy; print('NumPy version:', numpy.__version__)"
-python -c "import cvxpy; print('CVXPY version:', cvxpy.__version__)"
-python -c "import datasets; print('Datasets version:', datasets.__version__)"
+# Configure environment for better memory usage
+export TOKENIZERS_PARALLELISM=false  # Disable parallel tokenization to reduce memory
+export OMP_NUM_THREADS=4  # Limit number of OpenMP threads
 
-# Pre-fetch British Library dataset to avoid re-downloading during analysis
-echo "Pre-fetching British Library dataset to local cache (this may take some time)..."
-python -c "from datasets import load_dataset; print('Starting dataset download...'); load_dataset('TheBritishLibrary/blbooks', '1500_1899', trust_remote_code=True, cache_dir='./hf_cache'); print('Dataset pre-fetching complete')"
+# Set chunk size for processing to avoid memory issues
+export PYTHONUNBUFFERED=1
 
-# Set high data volume for more reliable results and match Hayase et al.
-TEXTS_PER_DECADE=10000
-TARGET_SIZE_GB=1.5  # Match paper's 1GB per category for analysis
-
-echo "Running analyses with high data volume (${TEXTS_PER_DECADE} texts per decade, ${TARGET_SIZE_GB}GB per category)..."
-
+# Run analysis with memory-optimized settings
 echo "Running uniform distribution analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution uniform --texts_per_decade ${TEXTS_PER_DECADE} --target_size_gb ${TARGET_SIZE_GB} --bootstrap --bootstrap_iterations 50
+PYTHONMEMMON=1 python run_on_maxwell.py --tokenizer gpt2 --distribution uniform --texts_per_decade 10000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
 
 echo "Running recency bias analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution recency_bias --texts_per_decade ${TEXTS_PER_DECADE} --target_size_gb ${TARGET_SIZE_GB} --bootstrap --bootstrap_iterations 50
+PYTHONMEMMON=1 python run_on_maxwell.py --tokenizer gpt2 --distribution recency_bias --texts_per_decade 10000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
 
 echo "Running historical bias analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution historical_bias --texts_per_decade ${TEXTS_PER_DECADE} --target_size_gb ${TARGET_SIZE_GB} --bootstrap --bootstrap_iterations 50
+PYTHONMEMMON=1 python run_on_maxwell.py --tokenizer gpt2 --distribution historical_bias --texts_per_decade 10000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
 
 echo "Running bimodal distribution analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution bimodal --texts_per_decade ${TEXTS_PER_DECADE} --target_size_gb ${TARGET_SIZE_GB} --bootstrap --bootstrap_iterations 50
+PYTHONMEMMON=1 python run_on_maxwell.py --tokenizer gpt2 --distribution bimodal --texts_per_decade 10000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
 
-# Compare results across different tokenizers (using recency_bias as the test case)
-echo "Running tokenizer comparison with gpt2-medium..."
-python run_on_maxwell.py --tokenizer gpt2-medium --distribution recency_bias --texts_per_decade ${TEXTS_PER_DECADE} --target_size_gb ${TARGET_SIZE_GB} --bootstrap
-
-echo "Running tokenizer comparison with bert-base-uncased..."
-python run_on_maxwell.py --tokenizer bert-base-uncased --distribution recency_bias --texts_per_decade ${TEXTS_PER_DECADE} --target_size_gb ${TARGET_SIZE_GB} --bootstrap
-
-# Create comparison visualizations
-echo "Creating comprehensive comparison visualizations..."
-python -c "
-import matplotlib.pyplot as plt
-import seaborn as sns
-import json
-import glob
-from pathlib import Path
-
-# Load all result files
-result_files = glob.glob('results/distributions/*_distribution.json')
-results = {}
-
-for file in result_files:
-    with open(file, 'r') as f:
-        data = json.load(f)
-        key = f\"{data['tokenizer']}_{Path(file).stem.split('_')[1]}\"
-        results[key] = data
-
-# Create comparison figure
-plt.figure(figsize=(15, 10))
-plt.subplot(2, 2, 1)
-plt.title('log10(MSE) Comparison')
-tokenizers = set(k.split('_')[0] for k in results)
-distributions = set(k.split('_')[1] for k in results)
-
-# Plot by tokenizer
-for dist in distributions:
-    values = [results.get(f'{tok}_{dist}', {}).get('evaluation', {}).get('log10_mse', 0) 
-             for tok in tokenizers]
-    plt.bar(list(tokenizers), values, label=dist)
-
-plt.xticks(rotation=45)
-plt.legend()
-plt.tight_layout()
-plt.savefig('results/final_comparison.png', dpi=300)
-"
-
-echo "Job completed at: $(date)""
+echo "Job completed at: $(date)"

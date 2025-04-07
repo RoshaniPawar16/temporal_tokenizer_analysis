@@ -35,52 +35,45 @@ def process_decade(decade, texts, inference):
     return decade, decade_patterns[decade]
 
 def run_parallel_analysis(inference, decade_texts):
-    """Process decades in parallel using multiprocessing."""
-    # Create a pool with number of available CPUs
-    num_cpus = min(mp.cpu_count(), 8)  # Use at most 8 CPUs to avoid overloading
+    """Process decades in parallel using multiprocessing with better resource management."""
+    # Create a pool with optimal number of CPUs
+    num_cpus = min(mp.cpu_count(), 6)  # Using 6 instead of 8 to avoid overloading Maxwell
     logger.info(f"Using {num_cpus} CPUs for parallel processing")
-    pool = mp.Pool(processes=num_cpus)
     
-    # Prepare function with fixed inference object
-    process_fn = partial(process_decade, inference=inference)
+    # Process in smaller batches to manage memory better
+    all_decades = list(decade_texts.keys())
+    batch_size = max(1, len(all_decades) // 2)  # Split decades into 2 batches minimum
     
-    # Process each decade in parallel
-    decade_args = [(decade, texts) for decade, texts in decade_texts.items()]
-    results = pool.starmap(process_fn, decade_args)
-    
-    # Combine results
     decade_patterns = {}
-    for decade, patterns in results:
-        decade_patterns[decade] = patterns
     
-    pool.close()
-    pool.join()
+    # Process batches sequentially to avoid memory issues
+    for i in range(0, len(all_decades), batch_size):
+        batch_decades = all_decades[i:i+batch_size]
+        logger.info(f"Processing batch of {len(batch_decades)} decades: {batch_decades}")
+        
+        # Create args for this batch
+        decade_args = [(decade, decade_texts[decade]) for decade in batch_decades]
+        
+        # Process this batch in parallel
+        with mp.Pool(processes=num_cpus) as pool:
+            # Prepare function with fixed inference object
+            process_fn = partial(process_decade, inference=inference)
+            
+            # Process in parallel
+            results = list(tqdm(
+                pool.starmap(process_fn, decade_args),
+                total=len(decade_args),
+                desc=f"Processing batch {i//batch_size + 1}"
+            ))
+            
+            # Combine results for this batch
+            for decade, patterns in results:
+                decade_patterns[decade] = patterns
+        
+        # Force garbage collection between batches
+        gc.collect()
     
     return decade_patterns
-
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-)
-logger = logging.getLogger(__name__)
-
-# Set up visualization style
-plt.style.use('seaborn-v0_8-whitegrid')
-sns.set_palette("muted")
-
-def setup_directories():
-    """Create necessary directories for results and figures."""
-    results_dir = RESULTS_DIR
-    results_dir.mkdir(parents=True, exist_ok=True)
-    
-    # Create subdirectories for different result types
-    (results_dir / "distributions").mkdir(exist_ok=True)
-    (results_dir / "figures").mkdir(exist_ok=True)
-    (results_dir / "metrics").mkdir(exist_ok=True)
-    (results_dir / "bootstrap").mkdir(exist_ok=True)
-    
-    return results_dir
 
 def define_distributions():
     """Define test distributions for evaluation."""
