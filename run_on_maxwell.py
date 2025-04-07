@@ -34,6 +34,19 @@ def process_decade(decade, texts, inference):
     decade_patterns = inference.analyze_decade_patterns(decade_data)
     return decade, decade_patterns[decade]
 
+def setup_directories():
+    """Create necessary directories for results and figures."""
+    results_dir = RESULTS_DIR
+    results_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Create subdirectories for different result types
+    (results_dir / "distributions").mkdir(exist_ok=True)
+    (results_dir / "figures").mkdir(exist_ok=True)
+    (results_dir / "metrics").mkdir(exist_ok=True)
+    (results_dir / "bootstrap").mkdir(exist_ok=True)
+    
+    return results_dir
+
 def run_parallel_analysis(inference, decade_texts):
     """Process decades in parallel using multiprocessing with better resource management."""
     # Create a pool with optimal number of CPUs
