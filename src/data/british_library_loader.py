@@ -47,8 +47,8 @@ class BritishLibraryLoader:
         try:
             # Load each configuration separately with explicit timeouts and retries
             datasets = {}
-            # Use ALL available configurations to get historical content
-            for config in ['1510_1699', '1700_1799', '1800_1849', '1850_1899']:
+            # Use the CORRECT configurations that actually exist in the dataset
+            for config in ['1510_1699', '1700_1799', '1800_1899', '1500_1899']:
                 max_retries = 5
                 for retry in range(max_retries):
                     try:
@@ -119,13 +119,13 @@ class BritishLibraryLoader:
         import re
         import shutil
         
-        logger.info(f"Cache directory: {self.cache_dir}")
         try:
+            logger.info(f"Cache directory: {self.cache_dir}")
             logger.info(f"Available disk space: {shutil.disk_usage(self.cache_dir).free / (1024**3):.2f} GB")
         except Exception as e:
             logger.warning(f"Could not check disk space: {e}")
-            
-        # Ensure dataset is loaded
+        
+        # Load dataset if not already loaded
         if not self.dataset:
             self._load_dataset()
         
@@ -137,26 +137,39 @@ class BritishLibraryLoader:
         
         logger.info(f"Processing {len(self.dataset['train'])} British Library records")
         
+        # Count processing stats
+        processed = 0
+        assigned = 0
+        
         # Process all records to extract decade information
-        for i, record in enumerate(self.dataset['train']):
-            if i % 1000 == 0:
-                logger.info(f"Processed {i} records")
+        for record in self.dataset['train']:
+            processed += 1
+            if processed % 1000 == 0:
+                logger.info(f"Processed {processed} records, assigned {assigned} to decades")
                 
             # Skip if not a dictionary
             if not isinstance(record, dict):
                 continue
                 
-            # Extract year from date field
+            # Extract year from date field with improved patterns
             year = None
             if 'date' in record and record['date']:
                 date_str = str(record['date'])
-                # Look for year patterns
-                year_match = re.search(r'\b(1[5-9]\d\d|20[0-2]\d)\b', date_str)
-                if year_match:
-                    try:
-                        year = int(year_match.group(1))
-                    except ValueError:
-                        pass
+                # Try different date formats
+                year_patterns = [
+                    r'\b(1[5-9]\d\d|20[0-2]\d)\b',  # Simple year (1500-2029)
+                    r'([12]\d{3})[-/]',  # Year followed by separator (1800-12)
+                    r'([12]\d{3})\s*$'   # Year at end of string
+                ]
+                
+                for pattern in year_patterns:
+                    year_match = re.search(pattern, date_str)
+                    if year_match:
+                        try:
+                            year = int(year_match.group(1))
+                            break
+                        except ValueError:
+                            pass
             
             # If no year found in date, check title
             if not year and 'title' in record and record['title']:
@@ -167,6 +180,27 @@ class BritishLibraryLoader:
                         year = int(year_match.group(1))
                     except ValueError:
                         pass
+                        
+            # If still no year, check if we have a century indication in any field
+            if not year:
+                # Check if metadata might have century indication
+                century_patterns = {
+                    '16th century': 1550,  # mid-point of century
+                    '17th century': 1650, 
+                    '18th century': 1750,
+                    '19th century': 1850,
+                    '20th century': 1950
+                }
+                
+                for field in ['date', 'title', 'metadata']:
+                    if field in record and record[field]:
+                        content = str(record[field]).lower()
+                        for century_text, century_year in century_patterns.items():
+                            if century_text in content:
+                                year = century_year
+                                break
+                        if year:
+                            break
             
             # Skip if no year found
             if not year:
@@ -178,12 +212,14 @@ class BritishLibraryLoader:
                     # Extract text content
                     if 'text' in record and record['text'] and len(record['text']) > 500:
                         decade_texts[decade].append(record['text'])
+                        assigned += 1
                         # If we have enough for this decade, break
                         if len(decade_texts[decade]) >= per_decade:
                             break
                     break
         
         # Log what we found
+        logger.info(f"Processed {processed} records, assigned {assigned} to decades")
         for decade, texts in decade_texts.items():
             logger.info(f"Found {len(texts)} British Library texts for {decade}")
         
