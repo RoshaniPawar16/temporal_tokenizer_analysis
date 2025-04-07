@@ -8,7 +8,7 @@ from typing import Dict, List, Optional, Tuple
 from pathlib import Path
 import time
 import re
-from datasets import load_dataset
+from datasets import load_dataset, DownloadConfig
 
 from ..config import (
     CACHE_DIR,
@@ -47,11 +47,6 @@ class BritishLibraryLoader:
         try:
             # Load each configuration separately with explicit timeouts and retries
             datasets = {}
-            
-            # Use shorter timeout and more retries
-            from huggingface_hub import HfApi
-            import time
-            
             for config in ['1500_1899', '1800_1899', '1700_1799', '1510_1699']:
                 max_retries = 5
                 for retry in range(max_retries):
@@ -66,7 +61,6 @@ class BritishLibraryLoader:
                             cache_dir=str(self.cache_dir),
                             download_config=DownloadConfig(
                                 max_retries=5,
-                                num_proc=1,  # Use single process download
                                 force_download=False,
                                 cache_dir=str(self.cache_dir),
                             )
@@ -100,9 +94,13 @@ class BritishLibraryLoader:
                 except Exception as e:
                     logger.error(f"Failed to combine datasets: {e}")
                     # Use whatever we got successfully
-                    first_key = list(datasets.keys())[0]
-                    self.dataset = {'train': datasets[first_key]}
-                    logger.info(f"Using only dataset {first_key} with {len(datasets[first_key])} records")
+                    if datasets:
+                        first_key = list(datasets.keys())[0]
+                        self.dataset = {'train': datasets[first_key]}
+                        logger.info(f"Using only dataset {first_key} with {len(datasets[first_key])} records")
+                    else:
+                        logger.warning("No datasets available after attempted loads")
+                        self.dataset = {'train': []}
             else:
                 logger.warning("No BL configurations could be loaded, falling back to empty dataset")
                 self.dataset = {'train': []}
