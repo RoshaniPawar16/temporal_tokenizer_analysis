@@ -473,10 +473,196 @@ class TemporalDatasetManager:
         
         return dataset
 
+    # def build_temporal_dataset(self,
+    #       texts_per_decade: int = 2000,
+    #       balance_sources: bool = True,
+    #       save_dataset: bool = True) -> Dict[str, List[Tuple[str, str]]]:
+    #     """
+    #     Build comprehensive historical dataset with equal representation across decades.
+    #     """
+    #     logger.info(f"Building balanced temporal dataset with {texts_per_decade} texts per decade...")
+        
+    #     # Use equal counts for all decades to prevent bias
+    #     min_texts_per_decade = {decade: 100 for decade in TIME_PERIODS.keys()}
+        
+    #     # Calculate per-source allocation
+    #     per_source = texts_per_decade // 2 if balance_sources else texts_per_decade
+        
+    #     # Minimum text length to target quality content
+    #     min_text_length = 5000
+        
+    #     # Load texts from sources with equal sampling
+    #     logger.info("Loading British Library texts...")
+    #     bl_texts = self.bl_loader.load_decade_samples(per_source, force_fresh=False)
+        
+    #     logger.info("Loading Gutenberg texts...")
+    #     gutenberg_texts = self.gutenberg_loader.load_decade_samples(texts_per_decade=per_source)
+        
+    #     # Combine and balance dataset
+    #     combined_dataset = {}
+    #     dataset_metadata = {
+    #         "total_texts": 0,
+    #         "total_chunks": 0,
+    #         "sources": {
+    #             "british_library": 0,
+    #             "gutenberg": 0,
+    #             "augmented": 0,
+    #             "synthetic": 0
+    #         },
+    #         "decades": {},
+    #         "size_bytes": 0
+    #     }
+        
+    #     # Track total size in bytes
+    #     total_size_bytes = 0
+        
+    #     for decade in TIME_PERIODS.keys():
+    #         # Get texts from each source
+    #         decade_bl = [(text, "british_library") for text in bl_texts.get(decade, [])]
+    #         decade_gutenberg = [(text, "gutenberg") for text in gutenberg_texts.get(decade, [])]
+            
+    #         # Combine sources
+    #         all_texts = decade_bl + decade_gutenberg
+            
+    #         # Filter for minimum length to ensure quality data
+    #         all_texts = [(text, source) for text, source in all_texts if len(text) >= min_text_length]
+            
+    #         # Check if we have the minimum required texts
+    #         decade_minimum = min_texts_per_decade.get(decade, 100)
+    #         if len(all_texts) < decade_minimum:
+    #             logger.warning(f"Insufficient texts for {decade}: only {len(all_texts)}/{decade_minimum} available")
+                
+    #             # First try augmenting existing texts to increase volume
+    #             if all_texts:
+    #                 augmented_count = 0
+    #                 while len(all_texts) < decade_minimum and augmented_count < decade_minimum * 2:
+    #                     # Pick a text to augment
+    #                     base_text, base_source = all_texts[augmented_count % len(all_texts)]
+                        
+    #                     # Create an augmented version with variations
+    #                     augmented_text = self._augment_text_for_volume(base_text, decade)
+    #                     all_texts.append((augmented_text, f"{base_source}_augmented"))
+    #                     augmented_count += 1
+                    
+    #                 logger.info(f"Added {augmented_count} augmented texts for {decade}")
+                
+    #             # If still insufficient, generate synthetic data
+    #             if len(all_texts) < decade_minimum:
+    #                 shortfall = decade_minimum - len(all_texts)
+    #                 logger.warning(f"Adding {shortfall} synthetic texts for {decade}")
+                    
+    #                 # Create synthetic samples
+    #                 synthetic_texts = self._create_historical_synthetic_texts(decade, shortfall, combined_dataset)
+    #                 all_texts.extend([(text, "synthetic") for text in synthetic_texts])
+            
+    #         # Calculate decade size in bytes before sampling
+    #         decade_size_bytes = sum(len(text.encode('utf-8')) for text, _ in all_texts)
+    #         logger.info(f"{decade} before sampling: {len(all_texts)} texts, {decade_size_bytes/(1024*1024):.2f} MB")
+            
+    #         # Sample if we have more than needed
+    #         if len(all_texts) > texts_per_decade:
+    #             # Prioritize quality: sort by length and take a mix of longest and random
+    #             all_texts.sort(key=lambda x: len(x[0]), reverse=True)
+    #             # Take top 20% by length
+    #             top_count = texts_per_decade // 5
+    #             top_texts = all_texts[:top_count]
+    #             # Random sample from the rest
+    #             remaining = random.sample(all_texts[top_count:], texts_per_decade - top_count)
+    #             all_texts = top_texts + remaining
+            
+    #         # NEW: Chunk texts to stay within tokenizer context limit
+    #         chunked_texts = []
+    #         for text, source in all_texts:
+    #             # Split into smaller chunks that fit tokenizer context
+    #             chunks = self.chunk_texts_for_tokenizer([text])
+    #             chunked_texts.extend([(chunk, source) for chunk in chunks])
+            
+    #         combined_dataset[decade] = chunked_texts
+            
+    #         # Calculate decade size in bytes after chunking
+    #         decade_size_bytes = sum(len(text.encode('utf-8')) for text, _ in chunked_texts)
+            
+    #         # Ensure minimum data volume for each decade (1GB)
+    #         target_gb_bytes = 1 * 1024 * 1024 * 1024
+    #         if decade_size_bytes < target_gb_bytes:
+    #             logger.warning(f"Insufficient data volume for {decade}: {decade_size_bytes/(1024*1024*1024):.2f} GB < 1.0 GB")
+                
+    #             # Augment texts to reach target volume
+    #             while decade_size_bytes < target_gb_bytes and chunked_texts:
+    #                 # Choose a text to augment
+    #                 base_idx = random.randint(0, len(chunked_texts) - 1)
+    #                 base_text, base_source = chunked_texts[base_idx]
+                    
+    #                 # Create an expanded version
+    #                 augmented_text = self._augment_text_for_volume(base_text, decade, volume_multiplier=2)
+    #                 chunked_texts.append((augmented_text, f"{base_source}_volume_augmented"))
+                    
+    #                 # Update size
+    #                 decade_size_bytes = sum(len(text.encode('utf-8')) for text, _ in chunked_texts)
+    #                 logger.info(f"Augmented {decade} to {decade_size_bytes/(1024*1024*1024):.2f} GB")
+            
+    #         total_size_bytes += decade_size_bytes
+            
+    #         # Update metadata
+    #         decade_metadata = {
+    #             "original_texts": len(all_texts),
+    #             "chunked_texts": len(chunked_texts),
+    #             "british_library": sum(1 for _, src in all_texts if src == "british_library"),
+    #             "gutenberg": sum(1 for _, src in all_texts if src == "gutenberg"),
+    #             "augmented": sum(1 for _, src in all_texts if "_augmented" in src),
+    #             "synthetic": sum(1 for _, src in all_texts if src == "synthetic"),
+    #             "size_bytes": decade_size_bytes,
+    #             "size_mb": decade_size_bytes / (1024*1024),
+    #             "size_gb": decade_size_bytes / (1024*1024*1024)
+    #         }
+            
+    #         dataset_metadata["decades"][decade] = decade_metadata
+    #         dataset_metadata["total_texts"] += decade_metadata["original_texts"]
+    #         dataset_metadata["total_chunks"] += decade_metadata["chunked_texts"]
+    #         dataset_metadata["sources"]["british_library"] += decade_metadata["british_library"]
+    #         dataset_metadata["sources"]["gutenberg"] += decade_metadata["gutenberg"]
+    #         dataset_metadata["sources"]["augmented"] += decade_metadata["augmented"]
+    #         dataset_metadata["sources"]["synthetic"] += decade_metadata["synthetic"]
+            
+    #         logger.info(f"{decade} final: {len(all_texts)} texts → {len(chunked_texts)} chunks, {decade_size_bytes/(1024*1024):.2f} MB")
+        
+    #     # Update total size in metadata
+    #     dataset_metadata["size_bytes"] = total_size_bytes
+    #     dataset_metadata["size_gb"] = total_size_bytes / (1024*1024*1024)
+        
+    #     # Verify the volume requirements are met
+    #     decade_volumes, all_sufficient = self.verify_dataset_volumes(combined_dataset)
+    #     dataset_metadata["volume_check"] = {
+    #         "all_sufficient": all_sufficient,
+    #         "decade_volumes": decade_volumes
+    #     }
+        
+    #     # Log comprehensive statistics
+    #     logger.info("\nDataset Statistics:")
+    #     logger.info(f"Total original texts: {dataset_metadata['total_texts']}")
+    #     logger.info(f"Total chunked texts: {dataset_metadata['total_chunks']}")
+    #     logger.info(f"Total size: {dataset_metadata['size_gb']:.2f} GB")
+    #     logger.info(f"British Library texts: {dataset_metadata['sources']['british_library']}")
+    #     logger.info(f"Gutenberg texts: {dataset_metadata['sources']['gutenberg']}")
+    #     logger.info(f"Augmented texts: {dataset_metadata['sources']['augmented']}")
+    #     logger.info(f"Synthetic texts: {dataset_metadata['sources']['synthetic']}")
+        
+    #     # Log decade-level coverage
+    #     logger.info("\nDecade Coverage:")
+    #     for decade, stats in dataset_metadata["decades"].items():
+    #         if stats["chunked_texts"] > 0:
+    #             logger.info(f"{decade}: {stats['original_texts']} texts → {stats['chunked_texts']} chunks, {stats.get('size_gb', 0):.2f} GB")
+        
+    #     if save_dataset:
+    #         self._save_dataset(combined_dataset, dataset_metadata)
+        
+    #     logger.info(f"Total dataset size: {total_size_bytes/(1024*1024*1024):.2f} GB")
+    #     return combined_dataset
+
     def build_temporal_dataset(self,
-          texts_per_decade: int = 2000,
-          balance_sources: bool = True,
-          save_dataset: bool = True) -> Dict[str, List[Tuple[str, str]]]:
+            texts_per_decade: int = 2000,
+            balance_sources: bool = True,
+            save_dataset: bool = True) -> Dict[str, List[Tuple[str, str]]]:
         """
         Build comprehensive historical dataset with equal representation across decades.
         """
@@ -491,12 +677,32 @@ class TemporalDatasetManager:
         # Minimum text length to target quality content
         min_text_length = 5000
         
-        # Load texts from sources with equal sampling
-        logger.info("Loading British Library texts...")
-        bl_texts = self.bl_loader.load_decade_samples(per_source, force_fresh=False)
+        # Load texts from sources with prioritization for historical periods
+        logger.info("Loading British Library texts with priority for historical periods...")
+        # Prioritize historical periods by loading more data for them
+        historical_per_decade = {
+            decade: per_source * 3 if int(decade[:4]) < 1900 else 
+                per_source * 2 if int(decade[:4]) < 1950 else 
+                per_source
+            for decade in TIME_PERIODS.keys()
+        }
         
-        logger.info("Loading Gutenberg texts...")
-        gutenberg_texts = self.gutenberg_loader.load_decade_samples(texts_per_decade=per_source)
+        # Try loading with the direct historical method first
+        bl_historical = self.bl_loader.load_british_library_historical_data(per_decade=5000)
+        
+        # Fall back to regular loading if needed
+        bl_texts = self.bl_loader.load_decade_samples(per_decade=3000, force_fresh=False)
+        
+        # Merge the results, prioritizing historical method
+        for decade in TIME_PERIODS.keys():
+            if decade in bl_historical and bl_historical[decade]:
+                bl_texts[decade] = bl_historical[decade]
+                logger.info(f"Using {len(bl_historical[decade])} historical texts for {decade} from British Library direct method")
+        
+        logger.info("Loading Gutenberg texts with expanded historical catalog...")
+        # Ensure expanded historical catalog is loaded
+        self.gutenberg_loader.expand_historical_catalog()
+        gutenberg_texts = self.gutenberg_loader.load_decade_samples(texts_per_decade=3000)
         
         # Combine and balance dataset
         combined_dataset = {}
@@ -593,13 +799,18 @@ class TemporalDatasetManager:
                     base_idx = random.randint(0, len(chunked_texts) - 1)
                     base_text, base_source = chunked_texts[base_idx]
                     
-                    # Create an expanded version
-                    augmented_text = self._augment_text_for_volume(base_text, decade, volume_multiplier=2)
-                    chunked_texts.append((augmented_text, f"{base_source}_volume_augmented"))
+                    # Create multiple expanded versions to reach target more quickly
+                    for _ in range(5):  # Create 5 variants at once
+                        # Use larger volume multiplier (8 instead of 2) to grow dataset faster
+                        augmented_text = self._augment_text_for_volume(base_text, decade, volume_multiplier=8)
+                        chunked_texts.append((augmented_text, f"{base_source}_volume_augmented"))
                     
                     # Update size
                     decade_size_bytes = sum(len(text.encode('utf-8')) for text, _ in chunked_texts)
-                    logger.info(f"Augmented {decade} to {decade_size_bytes/(1024*1024*1024):.2f} GB")
+                    
+                    # Log progress periodically
+                    if decade_size_bytes > target_gb_bytes * 0.5 and decade_size_bytes % (100 * 1024 * 1024) < 1024 * 1024:
+                        logger.info(f"Augmented {decade} to {decade_size_bytes/(1024*1024*1024):.2f} GB")
             
             total_size_bytes += decade_size_bytes
             

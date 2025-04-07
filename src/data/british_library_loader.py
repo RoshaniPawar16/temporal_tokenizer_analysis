@@ -47,7 +47,8 @@ class BritishLibraryLoader:
         try:
             # Load each configuration separately with explicit timeouts and retries
             datasets = {}
-            for config in ['1500_1899', '1800_1899', '1700_1799', '1510_1699']:
+            # Use ALL available configurations to get historical content
+            for config in ['1510_1699', '1700_1799', '1800_1849', '1850_1899']:
                 max_retries = 5
                 for retry in range(max_retries):
                     try:
@@ -67,8 +68,8 @@ class BritishLibraryLoader:
                         )
                         
                         if 'train' in ds:
-                            # Only take a subset to avoid memory issues
-                            subset_size = min(5000, len(ds['train']))
+                            # Take a larger subset to get more data
+                            subset_size = min(10000, len(ds['train']))
                             if subset_size > 0:
                                 # Sample from the dataset
                                 indices = list(range(len(ds['train'])))
@@ -115,88 +116,78 @@ class BritishLibraryLoader:
         Load historical texts directly from year-specific subsets of the BL dataset.
         This provides a more direct approach to accessing historical content.
         """
+        import re
+        import shutil
+        
         logger.info(f"Cache directory: {self.cache_dir}")
-        logger.info(f"Available disk space: {shutil.disk_usage(self.cache_dir).free / (1024**3):.2f} GB")
-        year_ranges = {
-            # Map decades to BL dataset configurations
-            "1850s": "1850_1899",
-            "1860s": "1850_1899",
-            "1870s": "1850_1899",
-            "1880s": "1850_1899",
-            "1890s": "1850_1899",
-            "1700s": "1700_1799",
-            "1710s": "1700_1799",
-            "1720s": "1700_1799",
-            "1730s": "1700_1799",
-            "1740s": "1700_1799",
-            "1750s": "1700_1799",
-            "1760s": "1700_1799",
-            "1770s": "1700_1799",
-            "1780s": "1700_1799",
-            "1790s": "1700_1799",
-            "1800s": "1800_1849",
-            "1810s": "1800_1849",
-            "1820s": "1800_1849",
-            "1830s": "1800_1849",
-            "1840s": "1800_1849"
-        }
+        try:
+            logger.info(f"Available disk space: {shutil.disk_usage(self.cache_dir).free / (1024**3):.2f} GB")
+        except Exception as e:
+            logger.warning(f"Could not check disk space: {e}")
+            
+        # Ensure dataset is loaded
+        if not self.dataset:
+            self._load_dataset()
         
         decade_texts = {decade: [] for decade in TIME_PERIODS.keys()}
         
-        # Load relevant year ranges for historical periods
-        for decade, dataset_name in year_ranges.items():
-            if decade not in TIME_PERIODS:
+        if not self.dataset or 'train' not in self.dataset or len(self.dataset['train']) == 0:
+            logger.warning("No British Library dataset available")
+            return decade_texts
+        
+        logger.info(f"Processing {len(self.dataset['train'])} British Library records")
+        
+        # Process all records to extract decade information
+        for i, record in enumerate(self.dataset['train']):
+            if i % 1000 == 0:
+                logger.info(f"Processed {i} records")
+                
+            # Skip if not a dictionary
+            if not isinstance(record, dict):
                 continue
                 
-            logger.info(f"Loading British Library data for {decade} from {dataset_name} dataset")
+            # Extract year from date field
+            year = None
+            if 'date' in record and record['date']:
+                date_str = str(record['date'])
+                # Look for year patterns
+                year_match = re.search(r'\b(1[5-9]\d\d|20[0-2]\d)\b', date_str)
+                if year_match:
+                    try:
+                        year = int(year_match.group(1))
+                    except ValueError:
+                        pass
             
-            try:
-                # Load the specific year-range dataset
-                dataset = load_dataset(
-                    "TheBritishLibrary/blbooks", 
-                    dataset_name,
-                    trust_remote_code=True,
-                    cache_dir=str(self.cache_dir)
-                )
-                
-                if 'train' not in dataset:
-                    logger.warning(f"No 'train' split in {dataset_name} dataset")
-                    continue
-                    
-                # Extract decade year range
-                start_year, end_year = TIME_PERIODS[decade]
-                
-                # Sample texts from this period
-                matching_indices = []
-                
-                # First pass: Identify candidate texts
-                for i, example in enumerate(dataset['train']):
-                    if 'date' in example and example['date']:
-                        year_match = re.search(r'\b(1\d{3}|20[0-2]\d)\b', str(example['date']))
-                        if year_match:
-                            try:
-                                year = int(year_match.group(1))
-                                if start_year <= year <= end_year:
-                                    matching_indices.append(i)
-                            except ValueError:
-                                pass
-                
-                # Sample texts
-                sample_size = min(per_decade, len(matching_indices))
-                if sample_size > 0:
-                    sampled_indices = random.sample(matching_indices, sample_size)
-                    
-                    for idx in sampled_indices:
-                        example = dataset['train'][idx]
-                        if 'text' in example and example['text'] and len(example['text']) > 500:
-                            decade_texts[decade].append(example['text'])
-                
-                logger.info(f"Added {len(decade_texts[decade])} texts for {decade} from British Library")
-                
-            except Exception as e:
-                logger.error(f"Error loading {dataset_name} dataset: {e}")
+            # If no year found in date, check title
+            if not year and 'title' in record and record['title']:
+                title = str(record['title'])
+                year_match = re.search(r'\b(1[5-9]\d\d|20[0-2]\d)\b', title)
+                if year_match:
+                    try:
+                        year = int(year_match.group(1))
+                    except ValueError:
+                        pass
+            
+            # Skip if no year found
+            if not year:
+                continue
+            
+            # Determine which decade this belongs to
+            for decade, (start_year, end_year) in TIME_PERIODS.items():
+                if start_year <= year <= end_year:
+                    # Extract text content
+                    if 'text' in record and record['text'] and len(record['text']) > 500:
+                        decade_texts[decade].append(record['text'])
+                        # If we have enough for this decade, break
+                        if len(decade_texts[decade]) >= per_decade:
+                            break
+                    break
         
-        return decade_texts 
+        # Log what we found
+        for decade, texts in decade_texts.items():
+            logger.info(f"Found {len(texts)} British Library texts for {decade}")
+        
+        return decade_texts
 
     def create_decade_indexed_dataset(self):
         """Preprocess the entire British Library dataset and organize by decade."""
