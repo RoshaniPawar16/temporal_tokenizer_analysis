@@ -1044,12 +1044,12 @@ class TemporalDatasetManager:
         
         return "\n\n".join(result)
 
-    def _augment_text_for_volume(self, base_text: str, decade: str, volume_multiplier: int = 5) -> str:
+    def _augment_text_for_volume(self, text: str, decade: str, volume_multiplier: int = 5) -> str:
         """
         Augment a base text to increase data volume, tailored to specific decade.
         
         Args:
-            base_text: Original text
+            text: Original text
             decade: The decade to generate text for
             volume_multiplier: How many times to multiply the volume (increased from 2 to 5)
             
@@ -1057,9 +1057,10 @@ class TemporalDatasetManager:
             Augmented text with period-appropriate content
         """
         import re
+        import random
         
         # Start with the base text
-        augmented_text = base_text
+        augmented_text = text
         
         # Define decade-specific vocabulary and topics
         decade_vocab = {
@@ -1106,7 +1107,7 @@ class TemporalDatasetManager:
             "1950s": ["atomic", "television", "modern", "electric", "radio", "nuclear", "Soviet", "space race",
                     "Rock and Roll", "hydrogen bomb", "satellite", "automation", "transistor radio",
                     "polio vaccine", "civil rights", "suburban", "integrated circuit", "beatnik"],
-            
+                    
             "1960s": ["television", "modern", "electronic", "space", "computer", "Apollo", "lunar", "transistor",
                     "Vietnam War", "civil rights", "hippie", "counterculture", "LSD", "microchip", "The Pill",
                     "women's liberation", "mainframe", "NASA", "integrated circuit", "miniskirt"],
@@ -1195,15 +1196,15 @@ class TemporalDatasetManager:
         vocab = decade_vocab.get(decade, ["modern", "development", "society"])
         
         # Calculate target length
-        target_length = len(base_text) * volume_multiplier  # Increased multiplier
+        target_length = len(text) * volume_multiplier  # Increased multiplier
         current_length = len(augmented_text)
         
         # Add much more period-specific content to dramatically increase volume
         while current_length < target_length:
             # Generate more period-appropriate paragraphs - increased quantity
-            num_paragraphs = min(20, (target_length - current_length) // 500)  # More paragraphs, shorter length
+            num_paragraphs = min(20, int((target_length - current_length) // 500))  # Fixed: Ensure integer
             
-            for _ in range(max(3, num_paragraphs)):
+            for _ in range(max(3, num_paragraphs)):  # Fixed: Use integer in range()
                 # Generate rich period-appropriate paragraph with multiple sentences
                 paragraph = ""
                 
