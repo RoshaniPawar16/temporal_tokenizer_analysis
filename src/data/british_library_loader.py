@@ -47,7 +47,8 @@ class BritishLibraryLoader:
         try:
             # Load each configuration separately to prevent timeout
             datasets = {}
-            for config in ['1500_1699', '1700_1799', '1800_1849', '1850_1899']:
+            # Use the correct configurations as shown in the error message
+            for config in ['1500_1899', '1800_1899', '1700_1799', '1510_1699']:
                 try:
                     logger.info(f"Loading BL configuration: {config}")
                     ds = load_dataset(
