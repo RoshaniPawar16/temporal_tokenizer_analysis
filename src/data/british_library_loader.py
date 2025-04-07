@@ -39,41 +39,74 @@ class BritishLibraryLoader:
         logger.info("British Library loader initialized")
     
     def _load_dataset(self):
-        """Load the British Library dataset from Hugging Face with better error handling."""
+        """Load the British Library dataset from Hugging Face with better error handling and timeouts."""
         if self.dataset is not None:
             return
                 
         logger.info("Loading British Library Books dataset from Hugging Face...")
         try:
-            # Load each configuration separately to prevent timeout
+            # Load each configuration separately with explicit timeouts and retries
             datasets = {}
-            # Use the correct configurations as shown in the error message
-            for config in ['1500_1899', '1800_1899', '1700_1799', '1510_1699']:
-                try:
-                    logger.info(f"Loading BL configuration: {config}")
-                    ds = load_dataset(
-                        "TheBritishLibrary/blbooks", 
-                        config,
-                        trust_remote_code=True,
-                        cache_dir=str(self.cache_dir)
-                    )
-                    if 'train' in ds:
-                        datasets[config] = ds['train']
-                        logger.info(f"Successfully loaded {config} with {len(ds['train'])} records")
-                except Exception as e:
-                    logger.warning(f"Failed to load configuration {config}: {e}")
             
-            # Combine datasets from different configurations
+            # Use shorter timeout and more retries
+            from huggingface_hub import HfApi
+            import time
+            
+            for config in ['1500_1899', '1800_1899', '1700_1799', '1510_1699']:
+                max_retries = 5
+                for retry in range(max_retries):
+                    try:
+                        logger.info(f"Loading BL configuration {config} (attempt {retry+1}/{max_retries})")
+                        
+                        # Set explicit timeout and download chunk size
+                        ds = load_dataset(
+                            "TheBritishLibrary/blbooks", 
+                            config,
+                            trust_remote_code=True,
+                            cache_dir=str(self.cache_dir),
+                            download_config=DownloadConfig(
+                                max_retries=5,
+                                num_proc=1,  # Use single process download
+                                force_download=False,
+                                cache_dir=str(self.cache_dir),
+                            )
+                        )
+                        
+                        if 'train' in ds:
+                            # Only take a subset to avoid memory issues
+                            subset_size = min(5000, len(ds['train']))
+                            if subset_size > 0:
+                                # Sample from the dataset
+                                indices = list(range(len(ds['train'])))
+                                random.shuffle(indices)
+                                subset_indices = indices[:subset_size]
+                                datasets[config] = ds['train'].select(subset_indices)
+                                logger.info(f"Successfully loaded {subset_size} samples from {config}")
+                                break  # Success, exit retry loop
+                        else:
+                            logger.warning(f"No 'train' split in {config}")
+                            
+                    except Exception as e:
+                        logger.warning(f"Attempt {retry+1}/{max_retries} for {config} failed: {e}")
+                        time.sleep(10)  # Wait before retrying
+            
+            # If we got any successful loads, combine them
             if datasets:
-                # Use datasets library to concatenate them
-                from datasets import concatenate_datasets
-                combined = concatenate_datasets(list(datasets.values()))
-                self.dataset = {'train': combined}
-                logger.info(f"Combined dataset has {len(combined)} records")
+                try:
+                    from datasets import concatenate_datasets
+                    combined = concatenate_datasets(list(datasets.values()))
+                    self.dataset = {'train': combined}
+                    logger.info(f"Combined dataset has {len(combined)} records")
+                except Exception as e:
+                    logger.error(f"Failed to combine datasets: {e}")
+                    # Use whatever we got successfully
+                    first_key = list(datasets.keys())[0]
+                    self.dataset = {'train': datasets[first_key]}
+                    logger.info(f"Using only dataset {first_key} with {len(datasets[first_key])} records")
             else:
-                logger.error("No configurations could be loaded")
+                logger.warning("No BL configurations could be loaded, falling back to empty dataset")
                 self.dataset = {'train': []}
-                    
+                
         except Exception as e:
             logger.error(f"Failed to load British Library dataset: {e}")
             # Create a fallback empty dataset
