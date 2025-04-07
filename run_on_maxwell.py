@@ -6,6 +6,7 @@ various distribution patterns and tokenizers.
 """
 
 import argparse
+import gc
 import logging
 import json
 import numpy as np
