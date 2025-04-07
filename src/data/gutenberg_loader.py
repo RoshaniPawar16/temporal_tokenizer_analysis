@@ -88,11 +88,9 @@ class GutenbergLoader:
     def _create_new_catalog(self) -> Dict:
         """
         Create a new catalog by downloading and processing the Gutenberg metadata.
-        
-        Returns:
-            Dict: Mapping of book IDs to their metadata
+        Improved to better handle historical publication dates.
         """
-        metadata = {}  # Initialize empty dictionary to ensure we always return something
+        metadata = {}
         
         try:
             # Download catalog with timeout and retry
@@ -110,7 +108,7 @@ class GutenbergLoader:
             # Parse catalog
             catalog_df = pd.read_csv(pd.io.common.StringIO(response.text))
             
-            # Process entries
+            # Process entries with improved year extraction
             for _, row in tqdm(catalog_df.iterrows(), 
                             total=len(catalog_df),
                             desc="Processing Gutenberg catalog"):
@@ -123,43 +121,79 @@ class GutenbergLoader:
                     
                     book_id = str(int(book_id))
                     
-                    # Extract and validate year - MODIFIED TO PRIORITIZE ORIGINAL PUBLICATION DATE
-                    year = None
+                    # IMPROVED YEAR EXTRACTION LOGIC
+                    # Various fields that might contain year info
+                    year_fields = ['Title', 'Subject', 'LoCC', 'Bookshelves', 'Author', 'Issued']
+                    potential_years = []
                     
-                    # First try to find original publication dates
+                    # Extract years from title first (most reliable for original publication)
                     title = str(row.get('Title', '')) if pd.notnull(row.get('Title')) else ''
                     
-                    # Look for publication years in title (common in Gutenberg titles)
-                    title_year_match = re.search(r'\((\d{4})\)', title)
-                    if title_year_match:
-                        potential_year = int(title_year_match.group(1))
-                        if 1400 <= potential_year <= 2023:  # Wider range for historical works
-                            year = potential_year
+                    # Common patterns in Gutenberg titles indicating original publication year
+                    year_patterns = [
+                        r'\((\d{4})\)',           # Year in parentheses: "Title (1850)"
+                        r', (\d{4})',             # Year after comma: "Title, 1850"
+                        r'(\d{4})-(\d{4})',       # Year range: "1850-1900"
+                        r'published in (\d{4})',  # Explicit publication year
+                        r'written in (\d{4})',    # Year written
+                        r'\[(\d{4})\]',           # Year in brackets
+                        r'first published (\d{4})' # First publication reference
+                    ]
                     
-                    # If no year in title, try other fields
-                    if not year:
-                        for field in ['Issued', 'Year', 'Release Date', 'Created']:
-                            if field in row and pd.notnull(row[field]):
-                                # Try to find 4-digit years in the field
-                                matches = re.findall(r'\b(1[4-9]\d\d|20[0-2]\d)\b', str(row[field]))
-                                if matches:
-                                    # Prefer the earliest year as it's more likely to be original publication
-                                    potential_years = [int(y) for y in matches]
-                                    potential_years.sort()  # Sort years in ascending order
-                                    year = potential_years[0]  # Take earliest year
-                                    break
+                    # Try to find year in title using various patterns
+                    for pattern in year_patterns:
+                        title_matches = re.findall(pattern, title)
+                        if title_matches:
+                            for match in title_matches:
+                                if isinstance(match, tuple):  # Handle groups in regex
+                                    match = match[0]  # Take first group (start year)
+                                try:
+                                    year_val = int(match)
+                                    if 1400 <= year_val <= 2023:  # Reasonable range
+                                        potential_years.append(year_val)
+                                except ValueError:
+                                    pass
                     
-                    # If we still don't have a year, use release date as last resort
+                    # Try other metadata fields
+                    for field in year_fields:
+                        if field in row and pd.notnull(row[field]):
+                            field_text = str(row[field])
+                            year_matches = re.findall(r'\b(1[4-9]\d\d|20[0-2]\d)\b', field_text)
+                            for match in year_matches:
+                                try:
+                                    year_val = int(match)
+                                    if 1400 <= year_val <= 2023:
+                                        potential_years.append(year_val)
+                                except ValueError:
+                                    pass
+                    
+                    # Determine the most likely original publication year
+                    year = None
+                    if potential_years:
+                        # Sort years ascending - prefer earlier dates for original publication
+                        potential_years.sort()
+                        
+                        # Choose earliest plausible year
+                        for y in potential_years:
+                            # Avoid years that are clearly just ID numbers
+                            if 1400 <= y <= 2023:
+                                year = y
+                                break
+                    
+                    # If still no year but we have a release date, use that as last resort
                     if not year and 'Release Date' in row and pd.notnull(row['Release Date']):
-                        release_match = re.search(r'\b(19\d\d|20[0-2]\d)\b', str(row['Release Date']))
-                        if release_match:
-                            year = int(release_match.group(1))
+                        release_matches = re.findall(r'\b(1[8-9]\d\d|20[0-2]\d)\b', str(row['Release Date']))
+                        if release_matches:
+                            try:
+                                year = int(release_matches[0])
+                            except ValueError:
+                                pass
                     
                     # Skip if no valid year found
-                    if not year or not (1400 <= year <= 2023):
+                    if not year:
                         continue
                     
-                    # Process metadata fields with proper null handling
+                    # Process other metadata fields safely
                     title = str(row.get('Title', '')) if pd.notnull(row.get('Title')) else ''
                     author = str(row.get('Author', '')) if pd.notnull(row.get('Author')) else ''
                     language = str(row.get('Language', 'en')).lower() if pd.notnull(row.get('Language')) else 'en'
@@ -190,7 +224,7 @@ class GutenbergLoader:
         except Exception as e:
             logger.error(f"Failed to create catalog: {e}")
         
-        return metadata  # Always return the dictionary, even if empty
+        return metadata
     
     def _get_historical_book_supplement(self) -> Dict[str, Dict]:
         """
