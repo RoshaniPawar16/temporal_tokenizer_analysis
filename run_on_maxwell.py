@@ -15,6 +15,7 @@ from pathlib import Path
 import time
 
 from datetime import datetime
+from tqdm import tqdm
 
 from src.data.dataset_manager import TemporalDatasetManager
 from src.validation.temporal_inference import TemporalDistributionInference
