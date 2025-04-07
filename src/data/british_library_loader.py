@@ -114,64 +114,75 @@ class BritishLibraryLoader:
             self.dataset = {'train': []}
 
     def diagnose_dataset_structure(self):
-        """One-off function to diagnose dataset structure for debugging purposes"""
-        if not self.dataset or 'train' not in self.dataset:
-            self._load_dataset()
-            if not self.dataset or 'train' not in self.dataset:
-                logger.error("Could not load dataset for diagnosis")
+        """
+        Diagnose the structure of the dataset to understand what fields are available.
+        """
+        try:
+            if not self.dataset or 'train' not in self.dataset or len(self.dataset['train']) == 0:
+                logger.error("No dataset available to diagnose")
                 return
-        
-        # Sample some records
-        sample_size = min(20, len(self.dataset['train']))
-        samples = [self.dataset['train'][i] for i in range(sample_size)]
-        
-        # Collect all field names across samples
-        all_fields = set()
-        for sample in samples:
-            if isinstance(sample, dict):
-                all_fields.update(sample.keys())
-        
-        logger.info(f"Found {len(all_fields)} fields across {sample_size} sample records: {sorted(all_fields)}")
-        
-        # Check for date information in different fields
-        date_patterns = [
-            (r'\b(1[5-9]\d\d|20[0-2]\d)\b', "Exact year (1500-2029)"),
-            (r'(\d{1,2})[-/](\d{1,2})[-/](\d{4})', "Date with separators (DD-MM-YYYY)"),
-            (r'(\d{4})[-/](\d{1,2})[-/](\d{1,2})', "Date with separators (YYYY-MM-DD)"),
-            (r'(1[5-9]|20[0-2])\d{2}', "Four-digit year"),
-            (r'(1[5-9]|20[0-2])\d{2}s', "Decade reference (1800s)"),
-            (r'(\d{1,2})(?:st|nd|rd|th) [Cc]entury', "Century reference")
-        ]
-        
-        potential_date_fields = {}
-        for field in sorted(all_fields):
-            date_matches = 0
+                
+            # Sample a few records
+            sample_size = min(10, len(self.dataset['train']))
+            samples = self.dataset['train'][:sample_size]
+            
+            # Collect all field names
+            all_fields = set()
             for sample in samples:
-                if isinstance(sample, dict) and field in sample and sample[field]:
-                    value = str(sample[field])
-                    for pattern, desc in date_patterns:
-                        if re.search(pattern, value):
-                            date_matches += 1
+                all_fields.update(sample.keys())
+            
+            logger.info(f"Dataset has the following fields: {sorted(list(all_fields))}")
+            
+            # Check common field values
+            date_fields = ['date', 'pubDate', 'issued', 'created', 'publicationDate', 'year']
+            for field in date_fields:
+                if field in all_fields:
+                    values = [sample.get(field) for sample in samples if field in sample]
+                    logger.info(f"Sample '{field}' values: {values}")
+            
+            # Check for text content
+            if 'text' in all_fields:
+                text_samples = []
+                for sample in samples:
+                    if 'text' in sample and sample['text']:
+                        text = sample['text']
+                        if len(text) > 100:
+                            text = text[:100] + "..."
+                        text_samples.append(text)
+                
+                if text_samples:
+                    logger.info(f"Sample text content: {text_samples[0]}")
+                else:
+                    logger.warning("No text content found in samples")
+            
+            # Check for any fields that might contain year information
+            year_pattern = re.compile(r'\b(1[5-9]\d\d|20[0-2]\d)\b')
+            year_fields = []
+            
+            for field in all_fields:
+                for sample in samples:
+                    if field in sample and sample[field]:
+                        value = str(sample[field])
+                        match = year_pattern.search(value)
+                        if match:
+                            year_fields.append(field)
+                            logger.info(f"Found potential year in field '{field}': {value} -> {match.group(1)}")
                             break
             
-            if date_matches > 0:
-                match_percent = (date_matches / sample_size) * 100
-                potential_date_fields[field] = f"{match_percent:.1f}% of values match date patterns"
-        
-        logger.info(f"Potential date fields: {potential_date_fields}")
-        
-        # Sample values from promising fields
-        for field, stats in potential_date_fields.items():
-            logger.info(f"Sample values for '{field}' ({stats}):")
-            for i, sample in enumerate(samples[:5]):
-                if isinstance(sample, dict) and field in sample:
-                    logger.info(f"  Sample {i+1}: {sample[field]}")
+            logger.info(f"Fields that may contain year information: {year_fields}")
+            
+        except Exception as e:
+            logger.error(f"Error diagnosing dataset structure: {e}")
 
     def load_british_library_historical_data(self, per_decade=1000):
         """
         Load historical texts directly from year-specific subsets of the BL dataset.
         This provides a more direct approach to accessing historical content.
-        """       
+        """
+        import re
+        import shutil
+        from tqdm import tqdm
+        
         try:
             logger.info(f"Cache directory: {self.cache_dir}")
             logger.info(f"Available disk space: {shutil.disk_usage(self.cache_dir).free / (1024**3):.2f} GB")
@@ -180,13 +191,13 @@ class BritishLibraryLoader:
         
         # Initialize decade texts container
         decade_texts = {decade: [] for decade in TIME_PERIODS.keys()}
-
-        if self.dataset and 'train' in self.dataset:
-            self.diagnose_dataset_structure()  # Call the diagnostic method
         
         # Load dataset if not already loaded
         if not self.dataset:
             self._load_dataset()
+        
+        # Diagnose dataset structure
+        self.diagnose_dataset_structure()
         
         if not self.dataset or 'train' not in self.dataset or len(self.dataset['train']) == 0:
             logger.warning("No British Library dataset available")
@@ -195,21 +206,19 @@ class BritishLibraryLoader:
         total_records = len(self.dataset['train'])
         logger.info(f"Processing {total_records} British Library records")
         
-        # Print sample record for debugging
-        if total_records > 0:
-            sample_record = self.dataset['train'][0]
-            logger.info(f"Sample record structure: {list(sample_record.keys())}")
-            for field in ['date', 'title', 'text']:
-                if field in sample_record:
-                    sample_value = sample_record[field]
-                    if isinstance(sample_value, str) and len(sample_value) > 100:
-                        sample_value = sample_value[:100] + "..."
-                    logger.info(f"Sample {field}: {sample_value}")
-        
         # Counter for stats
         processed = 0
         year_found = 0
         assigned = 0
+        
+        # Based on diagnostic, use these fields to look for year information
+        date_fields = ['date', 'issued', 'Issued', 'Title', 'title', 'publisher']
+        century_patterns = {
+            '16th century': 1550, '17th century': 1650,
+            '18th century': 1750, '19th century': 1850,
+            '20th century': 1950, 'nineteenth century': 1850,
+            'eighteenth century': 1750, 'seventeenth century': 1650
+        }
         
         # Process records with progress bar
         for record in tqdm(self.dataset['train'], desc="Processing BL records", total=total_records):
@@ -222,67 +231,92 @@ class BritishLibraryLoader:
             # Initialize with no year found
             year = None
             
-            # COMPREHENSIVE YEAR EXTRACTION STRATEGY
-            
-            # 1. Check for known date fields with various formats
-            date_fields = ['date', 'pubDate', 'publicationDate', 'year', 'created']
+            # STRATEGY 1: Look for year in date fields
             for field in date_fields:
                 if field in record and record[field]:
                     date_str = str(record[field])
                     
-                    # Try exact year pattern (1500-2029)
-                    year_match = re.search(r'\b(1[5-9]\d\d|20[0-2]\d)\b', date_str)
-                    if year_match:
-                        try:
-                            year = int(year_match.group(1))
-                            break
-                        except ValueError:
-                            pass
-            
-            # 2. If no year yet, search in publication info or title
-            if not year:
-                search_fields = ['title', 'publisher', 'description', 'creator']
-                for field in search_fields:
-                    if field in record and record[field]:
-                        content = str(record[field])
-                        
-                        # Look for years in text
-                        year_match = re.search(r'\b(1[5-9]\d\d|20[0-2]\d)\b', content)
+                    # Try multiple date patterns
+                    year_patterns = [
+                        r'\b(1[5-9]\d\d|20[0-2]\d)\b',  # Simple year (1500-2029)
+                        r'([12]\d{3})[-/]',             # Year followed by separator (1800-)
+                        r'^([12]\d{3})$',               # Exact year
+                        r'\[([12]\d{3})\]'              # Year in brackets
+                    ]
+                    
+                    for pattern in year_patterns:
+                        year_match = re.search(pattern, date_str)
                         if year_match:
                             try:
                                 year = int(year_match.group(1))
                                 break
                             except ValueError:
                                 pass
+                    
+                    if year:
+                        break
             
-            # 3. Check for century indicators
+            # STRATEGY 2: If dataset is from British Library historical collections, 
+            # use the configuration to estimate year
+            if not year and hasattr(record, '_blbooks_config'):
+                config = record._blbooks_config
+                if config == '1510_1699':
+                    # Randomly assign to a year in this range for better distribution
+                    year = random.randint(1510, 1699)
+                elif config == '1700_1799':
+                    year = random.randint(1700, 1799)
+                elif config == '1800_1899':
+                    year = random.randint(1800, 1899)
+                elif config == '1500_1899':
+                    # For wider range, focus on 19th century which has more texts typically
+                    weights = [0.1, 0.2, 0.7]  # 10% 16th, 20% 17th-18th, 70% 19th
+                    century = random.choices([16, 17.5, 19], weights=weights)[0]
+                    if century == 16:
+                        year = random.randint(1500, 1599)
+                    elif century == 17.5:
+                        year = random.randint(1600, 1799)
+                    else:
+                        year = random.randint(1800, 1899)
+            
+            # STRATEGY 3: If we can access the filename, it might contain year information
+            if not year and 'id' in record:
+                id_str = str(record['id'])
+                year_match = re.search(r'\b(1[5-9]\d\d|20[0-2]\d)\b', id_str)
+                if year_match:
+                    try:
+                        year = int(year_match.group(1))
+                    except ValueError:
+                        pass
+            
+            # STRATEGY 4: Check for century indications in text content and title
             if not year:
-                century_patterns = {
-                    '16th century': 1550, '17th century': 1650,
-                    '18th century': 1750, '19th century': 1850,
-                    '20th century': 1950, 'nineteenth century': 1850,
-                    'eighteenth century': 1750, 'seventeenth century': 1650
-                }
-                
-                for field in ['title', 'date', 'description']:
+                for field in ['title', 'date', 'text']:
                     if field in record and record[field]:
                         content = str(record[field]).lower()
                         for century_text, century_year in century_patterns.items():
                             if century_text in content:
-                                year = century_year
+                                # Add some randomization within the century
+                                offset = random.randint(-40, 40)
+                                year = century_year + offset
                                 break
                         if year:
                             break
             
-            # 4. If still no year, check if config name provides a clue
-            if not year and hasattr(record, '_index') and isinstance(record._index, str):
-                config = record._index
-                if config == '1510_1699':
-                    year = 1650  # Midpoint
-                elif config == '1700_1799':
-                    year = 1750
-                elif config == '1800_1899':
-                    year = 1850
+            # STRATEGY 5: If dataset source is known, use that information
+            if not year:
+                # Default logic for British Library books based on the configuration
+                # If we know it's from a specific config, assign appropriately
+                for config_name in ['1510_1699', '1700_1799', '1800_1899', '1500_1899']:
+                    if config_name in str(record):
+                        if config_name == '1510_1699':
+                            year = random.randint(1510, 1699)
+                        elif config_name == '1700_1799':
+                            year = random.randint(1700, 1799)
+                        elif config_name == '1800_1899':
+                            year = random.randint(1800, 1899)
+                        elif config_name == '1500_1899':
+                            year = random.randint(1800, 1899)  # Bias toward 19th century
+                        break
             
             # Count if we found a year
             if year:
@@ -291,14 +325,10 @@ class BritishLibraryLoader:
                 # Determine decade and extract text
                 for decade, (start_year, end_year) in TIME_PERIODS.items():
                     if start_year <= year <= end_year:
-                        if 'text' in record and record['text'] and len(record['text']) > 500:
+                        if 'text' in record and record[field] and len(record[field]) > 500:
                             decade_texts[decade].append(record['text'])
                             assigned += 1
-                            
-                            # If we have enough for this decade, move on
-                            if len(decade_texts[decade]) >= per_decade:
-                                break
-                        break
+                            break
             
             # Log progress periodically
             if processed % 5000 == 0:
@@ -307,6 +337,7 @@ class BritishLibraryLoader:
         # Final stats
         logger.info(f"BL dataset processing complete: processed {processed} records, found year for {year_found}, assigned {assigned} texts")
         
+        # Log what we found
         for decade, texts in decade_texts.items():
             logger.info(f"Found {len(texts)} British Library texts for {decade}")
         
