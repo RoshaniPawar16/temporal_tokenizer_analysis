@@ -29,7 +29,7 @@ pip install --no-cache-dir transformers numpy matplotlib seaborn pandas scipy cv
 
 # Set up cache for Hugging Face datasets with memory limits
 export HF_DATASETS_CACHE="./hf_cache"
-mkdir -p $HF_CACHE_DIR
+mkdir -p $HF_DATASETS_CACHE
 export HF_DATASETS_IN_MEMORY_MAX_SIZE=4000000000  # 4GB max memory for datasets
 
 # Configure environment for better memory usage

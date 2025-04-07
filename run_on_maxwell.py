@@ -27,6 +27,13 @@ import os
 import multiprocessing as mp
 from functools import partial
 
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+)
+logger = logging.getLogger(__name__)
+
 def process_decade(decade, texts, inference):
     """Process a single decade in parallel."""
     logger.info(f"Processing {decade} with {len(texts)} texts...")
