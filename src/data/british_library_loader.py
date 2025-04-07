@@ -39,24 +39,40 @@ class BritishLibraryLoader:
         logger.info("British Library loader initialized")
     
     def _load_dataset(self):
-        """Load the British Library dataset from Hugging Face."""
+        """Load the British Library dataset from Hugging Face with better error handling."""
         if self.dataset is not None:
             return
-            
+                
         logger.info("Loading British Library Books dataset from Hugging Face...")
         try:
-            self.dataset = load_dataset(
-                "TheBritishLibrary/blbooks", 
-                "1500_1899",
-                trust_remote_code=True,
-                cache_dir=str(self.cache_dir)
-            )
+            # Load each configuration separately to prevent timeout
+            datasets = {}
+            for config in ['1500_1699', '1700_1799', '1800_1849', '1850_1899']:
+                try:
+                    logger.info(f"Loading BL configuration: {config}")
+                    ds = load_dataset(
+                        "TheBritishLibrary/blbooks", 
+                        config,
+                        trust_remote_code=True,
+                        cache_dir=str(self.cache_dir)
+                    )
+                    if 'train' in ds:
+                        datasets[config] = ds['train']
+                        logger.info(f"Successfully loaded {config} with {len(ds['train'])} records")
+                except Exception as e:
+                    logger.warning(f"Failed to load configuration {config}: {e}")
             
-            # Basic validation
-            if 'train' not in self.dataset:
-                raise ValueError("Dataset does not contain expected 'train' split")
-                
-            logger.info(f"Successfully loaded British Library dataset with {len(self.dataset['train'])} records")
+            # Combine datasets from different configurations
+            if datasets:
+                # Use datasets library to concatenate them
+                from datasets import concatenate_datasets
+                combined = concatenate_datasets(list(datasets.values()))
+                self.dataset = {'train': combined}
+                logger.info(f"Combined dataset has {len(combined)} records")
+            else:
+                logger.error("No configurations could be loaded")
+                self.dataset = {'train': []}
+                    
         except Exception as e:
             logger.error(f"Failed to load British Library dataset: {e}")
             # Create a fallback empty dataset
@@ -67,6 +83,8 @@ class BritishLibraryLoader:
         Load historical texts directly from year-specific subsets of the BL dataset.
         This provides a more direct approach to accessing historical content.
         """
+        logger.info(f"Cache directory: {self.cache_dir}")
+        logger.info(f"Available disk space: {shutil.disk_usage(self.cache_dir).free / (1024**3):.2f} GB")
         year_ranges = {
             # Map decades to BL dataset configurations
             "1850s": "1850_1899",
@@ -155,7 +173,7 @@ class BritishLibraryLoader:
         
         if self.dataset is None:
             self._load_dataset()
-            
+                
         decade_indices = {decade: [] for decade in TIME_PERIODS.keys()}
         
         logger.info("Creating decade-indexed dataset (this will take time but save future runs)...")
@@ -198,6 +216,31 @@ class BritishLibraryLoader:
                                     year = int(range_match.group(1))
                                 except ValueError:
                                     pass
+                
+                # Check title for year information as fallback
+                if not year and 'title' in record and isinstance(record['title'], str):
+                    title = record['title']
+                    # Look for years in titles (common in historical records)
+                    year_patterns = [
+                        r'\((\d{4})\)',            # Year in parentheses: "Title (1850)"
+                        r', (\d{4})',              # Year after comma: "Title, 1850"
+                        r'(\d{4})-(\d{4})',        # Year range: "1850-1900"
+                        r'published in (\d{4})',   # Explicit publication year
+                        r'written in (\d{4})',     # Year written
+                        r'\[(\d{4})\]',            # Year in brackets
+                        r'first published (\d{4})' # First publication reference
+                    ]
+                    
+                    for pattern in year_patterns:
+                        match = re.search(pattern, title)
+                        if match:
+                            try:
+                                potential_year = int(match.group(1))
+                                if 1500 <= potential_year <= 2023:  # Reasonable range
+                                    year = potential_year
+                                    break
+                            except ValueError:
+                                pass
                 
                 # Check dataset-specific metadata fields
                 if not year and hasattr(record, 'metadata'):
