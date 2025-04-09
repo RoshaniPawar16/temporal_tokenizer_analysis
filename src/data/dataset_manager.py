@@ -7,6 +7,8 @@ from pathlib import Path
 import pandas as pd
 import json
 import random
+import re
+from transformers import AutoTokenizer
 
 from ..config import (
     PROCESSED_DATA_DIR,
@@ -245,50 +247,50 @@ class TemporalDatasetManager:
         modified_text = " ".join(sentences)
         return modified_text
 
-    def chunk_texts_for_tokenizer(self, texts, max_tokens=512):
-        """
-        Split texts into smaller chunks to ensure they fit within tokenizer context window.
+    # def chunk_texts_for_tokenizer(self, texts, max_tokens=512):
+    #     """
+    #     Split texts into smaller chunks to ensure they fit within tokenizer context window.
         
-        Args:
-            texts: List of texts to chunk
-            max_tokens: Maximum tokens per chunk (less than model's 1024 limit)
+    #     Args:
+    #         texts: List of texts to chunk
+    #         max_tokens: Maximum tokens per chunk (less than model's 1024 limit)
             
-        Returns:
-            List of text chunks suitable for tokenizer processing
-        """
-        import re
-        chunks = []
+    #     Returns:
+    #         List of text chunks suitable for tokenizer processing
+    #     """
+    #     import re
+    #     chunks = []
         
-        # Simple text splitting heuristic based on paragraphs and sentences
-        for text in texts:
-            if isinstance(text, tuple):
-                text = text[0]  # Extract text if it's a (text, source) tuple
+    #     # Simple text splitting heuristic based on paragraphs and sentences
+    #     for text in texts:
+    #         if isinstance(text, tuple):
+    #             text = text[0]  # Extract text if it's a (text, source) tuple
                 
-            if len(text) < 1500:  # Short texts likely fit within token limit (reduced from 2000)
-                chunks.append(text)
-                continue
+    #         if len(text) < 1500:  # Short texts likely fit within token limit (reduced from 2000)
+    #             chunks.append(text)
+    #             continue
                 
-            # Split by paragraphs first
-            paragraphs = re.split(r'\n\s*\n', text)
+    #         # Split by paragraphs first
+    #         paragraphs = re.split(r'\n\s*\n', text)
             
-            current_chunk = ""
-            for para in paragraphs:
-                # If adding this paragraph would make chunk too long, save current and start new
-                if len(current_chunk) + len(para) > 1800:  # Reduced from 3000 to ensure it fits in 512 tokens
-                    if current_chunk:
-                        chunks.append(current_chunk)
-                    current_chunk = para
-                else:
-                    if current_chunk:
-                        current_chunk += "\n\n" + para
-                    else:
-                        current_chunk = para
+    #         current_chunk = ""
+    #         for para in paragraphs:
+    #             # If adding this paragraph would make chunk too long, save current and start new
+    #             if len(current_chunk) + len(para) > 1800:  # Reduced from 3000 to ensure it fits in 512 tokens
+    #                 if current_chunk:
+    #                     chunks.append(current_chunk)
+    #                 current_chunk = para
+    #             else:
+    #                 if current_chunk:
+    #                     current_chunk += "\n\n" + para
+    #                 else:
+    #                     current_chunk = para
                         
-            # Add the last chunk if it exists
-            if current_chunk:
-                chunks.append(current_chunk)
+    #         # Add the last chunk if it exists
+    #         if current_chunk:
+    #             chunks.append(current_chunk)
         
-        return chunks
+    #     return chunks
 
     def _create_synthetic_decade_texts(self, decade, count):
         """
@@ -975,43 +977,36 @@ class TemporalDatasetManager:
         logger.info(f"Total dataset size: {total_size_bytes/(1024*1024*1024):.2f} GB")
         return combined_dataset
 
-    def chunk_texts_for_tokenizer(self, texts, max_tokens=800):
-        """
-        Split texts into smaller chunks to ensure they fit within tokenizer context window.
-        
-        Args:
-            texts: List of texts to chunk
-            max_tokens: Maximum tokens per chunk (less than model's 1024 limit)
-            
-        Returns:
-            List of text chunks suitable for tokenizer processing
-        """
-        import re
+    def chunk_texts_for_tokenizer(self, texts, max_tokens=800):  # Reduced from previous value
+        # Load tokenizer once for efficiency
+        tokenizer = AutoTokenizer.from_pretrained("gpt2")
         chunks = []
         
-        # Simple text splitting heuristic based on paragraphs and sentences
         for text in texts:
-            if len(text) < 2000:  # Short texts likely fit within token limit
+            if isinstance(text, tuple):
+                text = text[0]
+                
+            # For very short texts, keep as is
+            if len(text) < 1000:  # Reduced threshold
                 chunks.append(text)
                 continue
-                
-            # Split by paragraphs first
+            
+            # Split by paragraphs
             paragraphs = re.split(r'\n\s*\n', text)
             
             current_chunk = ""
             for para in paragraphs:
-                # If adding this paragraph would make chunk too long, save current and start new
-                if len(current_chunk) + len(para) > 3000:  # ~800 tokens ≈ 3000-4000 chars
-                    if current_chunk:
-                        chunks.append(current_chunk)
+                # Check if adding this paragraph would exceed token limit
+                test_chunk = current_chunk + "\n\n" + para if current_chunk else para
+                tokens = tokenizer(test_chunk, return_tensors="pt")
+                
+                if len(tokens.input_ids[0]) > max_tokens and current_chunk:
+                    chunks.append(current_chunk)
                     current_chunk = para
                 else:
-                    if current_chunk:
-                        current_chunk += "\n\n" + para
-                    else:
-                        current_chunk = para
-                        
-            # Add the last chunk if it exists
+                    current_chunk = test_chunk
+                    
+            # Add final chunk if it exists
             if current_chunk:
                 chunks.append(current_chunk)
         
