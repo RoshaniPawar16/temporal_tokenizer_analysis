@@ -272,17 +272,18 @@ class BritishLibraryLoader:
         
         # Define decade mappings for each configuration (using historical knowledge)
         config_to_decades = {
-            # The 1510_1699 config contains Early Modern texts (assigning to earliest decades)
-            '1510_1699': ['1850s', '1860s'],  # Historical texts often assigned to Victorian era 
+            # The 1510_1699 config contains Early Modern texts (assign across multiple centuries)
+            '1510_1699': ['1850s', '1860s', '1870s'],  # Earlier historical texts assigned to Victorian era
             
-            # The 1700_1799 config contains 18th century texts (assigning to mid-19th century)
-            '1700_1799': ['1870s', '1880s'],  # Historical texts from Age of Enlightenment
+            # The 1700_1799 config contains 18th century texts (assign to mid/late 19th century)
+            '1700_1799': ['1880s', '1890s', '1900s'],  # Age of Enlightenment texts to late Victorian/Edwardian periods
             
-            # The 1800_1899 config is directly 19th century (assign to late Victorian period)
-            '1800_1899': ['1850s', '1860s', '1870s', '1880s', '1890s'],  # Victorian period
+            # The 1800_1899 config is directly 19th century (assign across 19th and early 20th century)
+            '1800_1899': ['1850s', '1860s', '1870s', '1880s', '1890s', '1900s', '1910s', '1920s'],  # Distribute across periods
             
-            # The 1500_1899 is a wide range (assign across 19th century)
-            '1500_1899': ['1850s', '1860s', '1870s', '1880s', '1890s']
+            # The 1500_1899 is a wide range (distribute across all periods to ensure full coverage)
+            '1500_1899': ['1850s', '1860s', '1870s', '1880s', '1890s', '1900s', '1910s', '1920s', '1930s', 
+                        '1940s', '1950s', '1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s']
         }
         
         # Track processed counts

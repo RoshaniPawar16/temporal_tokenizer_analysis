@@ -977,19 +977,26 @@ class TemporalDatasetManager:
         logger.info(f"Total dataset size: {total_size_bytes/(1024*1024*1024):.2f} GB")
         return combined_dataset
 
-    def chunk_texts_for_tokenizer(self, texts, max_tokens=800):  # Reduced from previous value
-        # Load tokenizer once for efficiency
-        tokenizer = AutoTokenizer.from_pretrained("gpt2")
-        chunks = []
+    def chunk_texts_for_tokenizer(self, texts, max_tokens=800):
+        """
+        Split texts into smaller chunks to ensure they fit within tokenizer context window.
+        """
+        from transformers import GPT2Tokenizer
+        tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
         
+        chunks = []
         for text in texts:
             if isinstance(text, tuple):
-                text = text[0]
-                
-            # For very short texts, keep as is
-            if len(text) < 1000:  # Reduced threshold
-                chunks.append(text)
-                continue
+                text, source = text
+            else:
+                source = "unknown"
+            
+            # For very short texts, check directly
+            if len(text) < 1000:
+                tokens = tokenizer(text, return_tensors="pt").input_ids
+                if len(tokens[0]) <= max_tokens:
+                    chunks.append((text, source))
+                    continue
             
             # Split by paragraphs
             paragraphs = re.split(r'\n\s*\n', text)
@@ -998,17 +1005,39 @@ class TemporalDatasetManager:
             for para in paragraphs:
                 # Check if adding this paragraph would exceed token limit
                 test_chunk = current_chunk + "\n\n" + para if current_chunk else para
-                tokens = tokenizer(test_chunk, return_tensors="pt")
+                tokens = tokenizer(test_chunk, return_tensors="pt").input_ids
                 
-                if len(tokens.input_ids[0]) > max_tokens and current_chunk:
-                    chunks.append(current_chunk)
-                    current_chunk = para
+                if len(tokens[0]) > max_tokens:
+                    if current_chunk:
+                        chunks.append((current_chunk, source))
+                        current_chunk = para
+                    else:
+                        # Handle paragraph that's too long by itself - split into sentences
+                        sentences = re.split(r'(?<=[.!?])\s+', para)
+                        sent_chunk = ""
+                        for sent in sentences:
+                            test_sent_chunk = sent_chunk + " " + sent if sent_chunk else sent
+                            tokens = tokenizer(test_sent_chunk, return_tensors="pt").input_ids
+                            
+                            if len(tokens[0]) > max_tokens:
+                                if sent_chunk:
+                                    chunks.append((sent_chunk, source))
+                                    sent_chunk = sent
+                                else:
+                                    # Even a single sentence is too long - truncate it
+                                    trunc_sent = tokenizer.decode(tokens[0][:max_tokens-50])
+                                    chunks.append((trunc_sent, source))
+                            else:
+                                sent_chunk = test_sent_chunk
+                        
+                        if sent_chunk:
+                            chunks.append((sent_chunk, source))
                 else:
                     current_chunk = test_chunk
-                    
+            
             # Add final chunk if it exists
             if current_chunk:
-                chunks.append(current_chunk)
+                chunks.append((current_chunk, source))
         
         return chunks
 
