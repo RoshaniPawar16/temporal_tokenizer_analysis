@@ -37,11 +37,24 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def process_decade(decade, texts, inference):
-    """Process a single decade in parallel."""
-    logger.info(f"Processing {decade} with {len(texts)} texts...")
-    decade_data = {decade: texts}
-    decade_patterns = inference.analyze_decade_patterns(decade_data)
-    return decade, decade_patterns[decade]
+    """Process a single decade in parallel with better error handling."""
+    try:
+        if not texts:
+            logger.warning(f"No texts available for {decade}, skipping analysis")
+            return None
+            
+        logger.info(f"Processing {decade} with {len(texts)} texts...")
+        decade_data = {decade: texts}
+        decade_patterns = inference.analyze_decade_patterns(decade_data)
+        
+        if decade not in decade_patterns:
+            logger.warning(f"No patterns generated for {decade}")
+            return None
+            
+        return decade, decade_patterns[decade]
+    except Exception as e:
+        logger.error(f"Error processing {decade}: {e}")
+        return None
 
 def setup_directories():
     """Create necessary directories for results and figures."""
@@ -57,13 +70,18 @@ def setup_directories():
     return results_dir
 
 def run_parallel_analysis(inference, decade_texts):
-    """Process decades in parallel using multiprocessing with better resource management."""
-    # Create a pool with optimal number of CPUs
-    num_cpus = min(mp.cpu_count(), 6)  # Using 6 instead of 8 to avoid overloading Maxwell
-    logger.info(f"Using {num_cpus} CPUs for parallel processing")
+    """Process decades in parallel using multiprocessing with better error handling."""
+    # Filter out empty decades before processing
+    non_empty_decades = {decade: texts for decade, texts in decade_texts.items() if texts}
+    
+    if not non_empty_decades:
+        logger.error("No data available for any decade! Cannot proceed with analysis.")
+        return {}
+        
+    logger.info(f"Processing {len(non_empty_decades)}/{len(decade_texts)} decades with data")
     
     # Process in smaller batches to manage memory better
-    all_decades = list(decade_texts.keys())
+    all_decades = list(non_empty_decades.keys())
     batch_size = max(1, len(all_decades) // 2)  # Split decades into 2 batches minimum
     
     decade_patterns = {}
@@ -73,25 +91,25 @@ def run_parallel_analysis(inference, decade_texts):
         batch_decades = all_decades[i:i+batch_size]
         logger.info(f"Processing batch of {len(batch_decades)} decades: {batch_decades}")
         
-        # Create args for this batch
-        decade_args = [(decade, decade_texts[decade]) for decade in batch_decades]
+        # Create args for this batch using only non-empty decades
+        decade_args = [(decade, non_empty_decades[decade]) for decade in batch_decades]
         
         # Process this batch in parallel
-        with mp.Pool(processes=num_cpus) as pool:
+        with mp.Pool(processes=min(mp.cpu_count(), 6)) as pool:
             # Prepare function with fixed inference object
             process_fn = partial(process_decade, inference=inference)
             
-            # Process in parallel
-            results = list(tqdm(
+            # Process in parallel with better error handling
+            results = []
+            for result in tqdm(
                 pool.starmap(process_fn, decade_args),
                 total=len(decade_args),
                 desc=f"Processing batch {i//batch_size + 1}"
-            ))
+            ):
+                if result is not None:  # Handle potential None returns from process_decade
+                    decade, patterns = result
+                    decade_patterns[decade] = patterns
             
-            # Combine results for this batch
-            for decade, patterns in results:
-                decade_patterns[decade] = patterns
-        
         # Force garbage collection between batches
         gc.collect()
     
@@ -132,7 +150,13 @@ def define_distributions():
     }
 
 def run_analysis(args):
-    """Run the complete analysis with specified parameters."""
+    """
+    Run the complete analysis with specified parameters and improved error handling
+    for better statistical validation.
+    
+    Args:
+        args: Command-line arguments containing analysis parameters
+    """
     # Set up directories
     results_dir = setup_directories()
     
@@ -166,98 +190,28 @@ def run_analysis(args):
     )
     evaluator = TemporalEvaluationMetrics()
     
-
-
+    # Check for cached dataset
     cache_dir = Path(RESULTS_DIR) / "dataset_cache"
     cache_dir.mkdir(exist_ok=True, parents=True)
     cached_dataset_path = cache_dir / f"{args.tokenizer}_{args.distribution}_{args.target_size_gb}GB.pkl"
 
-    # Check for cached dataset
+    controlled_dataset = None
     if cached_dataset_path.exists() and not args.force_fresh:
         logger.info(f"Loading cached dataset from {cached_dataset_path}")
         try:
             with open(cached_dataset_path, 'rb') as f:
                 controlled_dataset = pickle.load(f)
-            
-            # Extract just texts (without source info)
-            decade_texts = {decade: [text for text, _ in texts] 
-                        for decade, texts in controlled_dataset.items()}
-            
-            # Process texts in chunks
-            logger.info("Processing cached texts in chunks with improved context window management...")
-            chunked_decade_texts = {}
-            for decade, texts in decade_texts.items():
-                # Use dataset_manager's chunking function
-                chunked_texts = dataset_manager.chunk_texts_for_tokenizer(texts)
-                chunked_decade_texts[decade] = chunked_texts
-                logger.info(f"Processed {decade}: {len(texts)} texts → {len(chunked_texts)} chunks")
+            logger.info(f"Loaded cached dataset with {sum(len(texts) for texts in controlled_dataset.values())} texts")
         except Exception as e:
             logger.warning(f"Failed to load cached dataset: {e}")
-            # Continue with dataset creation
-            chunked_decade_texts = None
-    else:
-        chunked_decade_texts = None
-
-    cache_dir = Path(RESULTS_DIR) / "dataset_cache"
-    cache_dir.mkdir(exist_ok=True, parents=True)
-    cached_dataset_path = cache_dir / f"{args.tokenizer}_{args.distribution}_{args.target_size_gb}GB.pkl"
-
-    # Check for cached dataset
-    if cached_dataset_path.exists() and not args.force_fresh:
-        logger.info(f"Loading cached dataset from {cached_dataset_path}")
-        try:
-            with open(cached_dataset_path, 'rb') as f:
-                controlled_dataset = pickle.load(f)
-            
-            # Extract just texts (without source info)
-            decade_texts = {decade: [text for text, _ in texts] 
-                        for decade, texts in controlled_dataset.items()}
-            
-            # Process texts in chunks
-            logger.info("Processing cached texts in chunks with improved context window management...")
-            chunked_decade_texts = {}
-            for decade, texts in decade_texts.items():
-                # Use dataset_manager's chunking function
-                chunked_texts = dataset_manager.chunk_texts_for_tokenizer(texts)
-                chunked_decade_texts[decade] = chunked_texts
-                logger.info(f"Processed {decade}: {len(texts)} texts → {len(chunked_texts)} chunks")
-        except Exception as e:
-            logger.warning(f"Failed to load cached dataset: {e}")
-            # Continue with dataset creation
-            chunked_decade_texts = None
-    else:
-        chunked_decade_texts = None
-
-    if chunked_decade_texts is None:
-        # Create controlled dataset
-        logger.info(f"Creating dataset with target size of {args.target_size_gb}GB per category...")
-        
-        # Always use the high-volume data approach for better results
-        target_size = max(args.target_size_gb, 1.0)  # Ensure at least 1GB minimum
-        logger.info(f"Creating dataset with increased target size of {target_size}GB...")
+    
+    if controlled_dataset is None:
+        # Create dataset with target distribution
+        logger.info(f"Creating dataset with target size of {args.target_size_gb}GB...")
         controlled_dataset = dataset_manager.create_large_dataset(
             distribution=selected_dist,
-            target_size_gb=target_size
+            target_size_gb=args.target_size_gb
         )
-
-        # Verify data volumes meet minimum requirements
-        volume_check = dataset_manager.verify_dataset_volumes(controlled_dataset, target_gb_per_decade=0.5)
-        if not volume_check[1]:  # Second return value is boolean "all_sufficient"
-            logger.warning("Dataset volumes do not meet minimum target requirements")
-            for decade, volume in volume_check[0].items():
-                logger.info(f"  {decade}: {volume:.2f} GB")
-        
-        # Extract just texts (without source info)
-        decade_texts = {decade: [text for text, _ in texts] 
-                    for decade, texts in controlled_dataset.items()}
-
-        # Process texts in chunks to avoid exceeding model context limits
-        logger.info("Processing texts in chunks with improved context window management...")
-        chunked_decade_texts = {}
-        for decade, texts in decade_texts.items():
-            chunked_texts = dataset_manager.chunk_texts_for_tokenizer(texts)
-            chunked_decade_texts[decade] = chunked_texts
-            logger.info(f"Processed {decade}: {len(texts)} texts → {len(chunked_texts)} chunks")
         
         # Cache the dataset for future runs
         try:
@@ -266,74 +220,91 @@ def run_analysis(args):
             logger.info(f"Cached dataset to {cached_dataset_path}")
         except Exception as e:
             logger.warning(f"Failed to cache dataset: {e}")
-
+    
     # Verify data volumes meet minimum requirements
-    volume_check = dataset_manager.verify_dataset_volumes(controlled_dataset, target_gb_per_decade=0.5)
-    if not volume_check[1]:  # Second return value is boolean "all_sufficient"
+    volume_check, all_sufficient = dataset_manager.verify_dataset_volumes(controlled_dataset, target_gb_per_decade=0.5)
+    if not all_sufficient:
         logger.warning("Dataset volumes do not meet minimum target requirements")
-        for decade, volume in volume_check[0].items():
+        for decade, volume in volume_check.items():
             logger.info(f"  {decade}: {volume:.2f} GB")
     
-    # Extract just texts (without source info)
-    decade_texts = {decade: [text for text, _ in texts] 
-                for decade, texts in controlled_dataset.items()}
-
-    # Process texts in chunks to avoid exceeding model context limits
-    logger.info("Processing texts in chunks with improved context window management...")
+    # Extract just texts (without source info) and filter out empty decades
+    decade_texts = {}
+    for decade, texts in controlled_dataset.items():
+        if texts:
+            decade_texts[decade] = [text for text, _ in texts]
+            logger.info(f"Found {len(decade_texts[decade])} texts for {decade}")
+    
+    # Check if we have enough decades with data
+    if len(decade_texts) < 2:
+        logger.error(f"Insufficient data: only {len(decade_texts)} decades have data")
+        logger.info(f"Decades with data: {list(decade_texts.keys())}")
+        
+        # Create synthetic data for missing decades
+        for decade in TIME_PERIODS.keys():
+            if decade not in decade_texts or not decade_texts[decade]:
+                logger.info(f"Generating synthetic texts for {decade}")
+                
+                # Use existing methods to create synthetic texts
+                synthetic_texts = dataset_manager._create_historical_synthetic_texts(
+                    decade=decade, 
+                    count=args.texts_per_decade // 2,  # Use half the target count
+                    existing_data={}
+                )
+                
+                decade_texts[decade] = synthetic_texts
+                logger.info(f"Generated {len(synthetic_texts)} synthetic texts for {decade}")
+    
+    # Process texts in chunks
     chunked_decade_texts = {}
     for decade, texts in decade_texts.items():
-        chunked_texts = []
-        for text in texts:
-            # Use smaller chunk size to ensure staying within token limits
-            # GPT-2 has context window of 1024, so aim for ~400 tokens per chunk
-            chunk_size = 800  # ~400 tokens per chunk
+        # Skip empty decades
+        if not texts:
+            logger.warning(f"No texts for {decade}, skipping chunking")
+            continue
             
-            # For very long texts, use more sophisticated chunking
-            if len(text) > chunk_size:
-                # Try to split on paragraph boundaries for more coherent chunks
-                import re
-                paragraphs = re.split(r'\n\s*\n', text)
-                current_chunk = ""
-                
-                for para in paragraphs:
-                    if len(current_chunk) + len(para) > chunk_size:
-                        if current_chunk:
-                            chunked_texts.append(current_chunk)
-                        current_chunk = para
-                    else:
-                        if current_chunk:
-                            current_chunk += "\n\n" + para
-                        else:
-                            current_chunk = para
-                
-                # Add the last chunk if it exists
-                if current_chunk:
-                    chunked_texts.append(current_chunk)
-            else:
-                chunked_texts.append(text)
-        
+        chunked_texts = dataset_manager.chunk_texts_for_tokenizer(texts)
         chunked_decade_texts[decade] = chunked_texts
         logger.info(f"Processed {decade}: {len(texts)} texts → {len(chunked_texts)} chunks")
-
-    # Run inference on chunked texts
+    
+    # Running tokenizer analysis
     logger.info("Running tokenizer analysis with ensemble method...")
     start_time = time.time()
 
-    # First analyze patterns in parallel
+    # First analyze patterns in parallel with better error handling
     logger.info("Analyzing decade patterns in parallel...")
-    decade_patterns = run_parallel_analysis(inference, chunked_decade_texts)
-
-    # Then use ensemble method for more robust inference
+    
+    # Filter out empty decades to prevent crashes
+    non_empty_decades = {decade: texts for decade, texts in chunked_decade_texts.items() if texts}
+    if not non_empty_decades:
+        logger.error("No decades have texts available for analysis. Exiting.")
+        return
+        
+    logger.info(f"Analyzing {len(non_empty_decades)} decades with data")
+    decade_patterns = run_parallel_analysis(inference, non_empty_decades)
+    
+    # Verify we have results
+    if not decade_patterns:
+        logger.error("No decade patterns were generated. Analysis failed.")
+        return
+        
+    logger.info(f"Successfully analyzed {len(decade_patterns)} decades")
+    
+    # Apply ensemble inference method for more robust results
     logger.info("Applying ensemble inference...")
-    distribution = inference.infer_distribution_ensemble(decade_patterns)
+    try:
+        distribution = inference.infer_distribution_ensemble(decade_patterns)
+    except Exception as e:
+        logger.error(f"Error in ensemble inference: {e}")
+        # Fall back to basic inference method
+        logger.info("Falling back to basic inference method...")
+        distribution = inference.infer_temporal_distribution(decade_patterns)
 
     # Construct results in expected format
     results = {
         "tokenizer": args.tokenizer,
         "distribution": distribution,
-        "distinctive_patterns": inference.find_distinctive_patterns(
-            inference.analyze_decade_patterns(chunked_decade_texts)
-        )
+        "distinctive_patterns": inference.find_distinctive_patterns(decade_patterns)
     }
 
     inference_time = time.time() - start_time
@@ -345,6 +316,21 @@ def run_analysis(args):
         selected_dist,
         model_name=args.tokenizer
     )
+    
+    # Add statistical validity assessment
+    sample_sizes = {decade: len(texts) for decade, texts in decade_texts.items()}
+    
+    # Apply statistical validation if available in validator
+    if hasattr(validator, 'assess_statistical_power'):
+        statistical_assessment = validator.assess_statistical_power(sample_sizes)
+        evaluation["statistical_assessment"] = statistical_assessment
+        
+        # Log reliability warnings for low-power decades
+        low_power_decades = [d for d, stats in statistical_assessment.items() 
+                           if stats.get("reliability") in ["Very Low", "Low"]]
+        if low_power_decades:
+            logger.warning(f"Low statistical power for decades: {low_power_decades}")
+            logger.warning("Results for these decades should be interpreted with caution")
     
     # Save detailed results
     save_distribution_results(results, evaluation, run_id, results_dir)
@@ -361,32 +347,38 @@ def run_analysis(args):
         # Reduce iterations but ensure enough for statistical validity
         bootstrap_iterations = min(args.bootstrap_iterations, 30)
         logger.info(f"Performing bootstrap validation with {bootstrap_iterations} iterations...")
-        confidence_intervals = validator.bootstrap_analysis(
-            decade_texts=decade_texts,
-            n_bootstrap=bootstrap_iterations,
-            sample_ratio=0.8
-        )
         
-        # Save bootstrap results
-        bootstrap_path = results_dir / "bootstrap" / f"{run_id}_bootstrap.json"
-        with open(bootstrap_path, 'w') as f:
-            # Convert numpy values to Python types for JSON serialization
-            ci_json = {}
-            for decade, stats in confidence_intervals.items():
-                ci_json[decade] = {k: float(v) for k, v in stats.items()}
-            json.dump(ci_json, f, indent=2)
-        
-        # Visualize with confidence intervals
-        create_bootstrap_visualization(results["distribution"], selected_dist, 
-                                     confidence_intervals, args.distribution, 
-                                     args.tokenizer, results_dir)
-        
-        # Calculate reliability metrics
-        reliability_metrics = calculate_reliability_metrics(confidence_intervals)
-        logger.info(f"Reliability metrics:")
-        logger.info(f"  Reliability score: {reliability_metrics['reliability_score']:.1f}/100")
-        logger.info(f"  Coefficient of variation: {reliability_metrics['coefficient_of_variation']:.2f}")
-        logger.info(f"  Normalized CI width: {reliability_metrics['normalized_ci_width']:.2f}")
+        try:
+            confidence_intervals = validator.bootstrap_analysis(
+                decade_texts=decade_texts,
+                n_bootstrap=bootstrap_iterations,
+                sample_ratio=0.8
+            )
+            
+            # Save bootstrap results
+            bootstrap_path = results_dir / "bootstrap" / f"{run_id}_bootstrap.json"
+            with open(bootstrap_path, 'w') as f:
+                # Convert numpy values to Python types for JSON serialization
+                ci_json = {}
+                for decade, stats in confidence_intervals.items():
+                    ci_json[decade] = {k: float(v) for k, v in stats.items() if not isinstance(v, list)}
+                json.dump(ci_json, f, indent=2)
+            
+            # Visualize with confidence intervals
+            create_bootstrap_visualization(results["distribution"], selected_dist, 
+                                         confidence_intervals, args.distribution, 
+                                         args.tokenizer, results_dir)
+            
+            # Calculate reliability metrics if available
+            if hasattr(validator, 'calculate_reliability_metrics'):
+                reliability_metrics = validator.calculate_reliability_metrics(confidence_intervals)
+                logger.info(f"Reliability metrics:")
+                logger.info(f"  Reliability score: {reliability_metrics.get('reliability_score', 'N/A')}")
+                logger.info(f"  Coefficient of variation: {reliability_metrics.get('coefficient_of_variation', 'N/A')}")
+                logger.info(f"  Normalized CI width: {reliability_metrics.get('normalized_ci_width', 'N/A')}")
+        except Exception as e:
+            logger.error(f"Error in bootstrap validation: {e}")
+            logger.error("Skipping bootstrap analysis")
     
     logger.info(f"Analysis completed for {args.distribution} with {args.tokenizer}")
     

@@ -290,188 +290,293 @@ class TemporalDatasetManager:
         
         return chunks
 
-    # Replace the create_large_dataset method in dataset_manager.py
-    def create_large_dataset(self, distribution: Dict[str, float] = None, target_size_gb: float = 0.15) -> Dict[str, List[Tuple[str, str]]]:
+    def _create_synthetic_decade_texts(self, decade, count):
         """
-        Create a dataset with specified target size in GB - more efficient implementation
+        Create synthetic texts for a specific decade with appropriate vocabulary
+        and style to supplement missing data.
+        
+        Args:
+            decade: Target decade (e.g. '1850s')
+            count: Number of texts to generate
+            
+        Returns:
+            List of synthetic texts with period-appropriate content
         """
-        # If no distribution provided, use equal distribution across all decades
+        # Check if we already have a similar method
+        if hasattr(self, '_create_historical_synthetic_texts'):
+            # Use existing method if available
+            return self._create_historical_synthetic_texts(decade, count, {})
+            
+        # Define decade-specific vocabulary (if not already defined elsewhere)
+        decade_vocab = {
+            "1850s": ["railway", "telegraph", "empire", "industrial revolution", "manufactures", 
+                    "workhouse", "steam-engine", "daguerreotype", "ether", "Chartists", 
+                    "Crystal Palace", "Great Exhibition", "galvanic", "phrenology", "laudanum"],
+            
+            "1860s": ["telegram", "American Civil War", "telegraph wires", "colonization", "ironclad",
+                    "Fenian", "suffrage", "zouave", "torpedo", "velocipede", "metropolitan railway",
+                    "penny post", "chloroform", "telegraph", "typewriter", "dynamite"],
+            
+            "1870s": ["telephone", "phonograph", "typewriter", "electric light", "exhibition",
+                    "gramophone", "hansom cab", "penny-farthing", "impressionism", "carbolic acid",
+                    "jingoism", "anthropometry", "dynamo", "vulcanite", "gerrymander"],
+            
+            "1880s": ["electricity", "scientific", "phonograph", "industrial", "photographic", "bicycle",
+                    "tuberculosis", "microbiology", "motorcar", "Home Rule", "suffragist", "telephone exchange",
+                    "underground railway", "penny-farthing", "cocaine", "antiseptic", "germ theory"],
+            
+            "1890s": ["bicycle", "cinematograph", "photography", "modern", "telephone", "horseless carriage",
+                    "horseless vehicle", "wireless", "X-rays", "aeroplane", "suffragette", "psychoanalysis",
+                    "radioactivity", "typewriter", "tuberculin", "kinetoscope", "Kodak", "electric lights"],
+            
+            "1900s": ["automobile", "aeroplane", "wireless", "gramophone", "motion pictures", "cinematograph",
+                    "suffragette", "wireless telegraph", "moving pictures", "eugenics", "psychoanalysis",
+                    "radioactive", "modernism", "quantum", "Model T", "psychotherapy", "Zeppelin"],
+            
+            "1910s": ["Great War", "aeroplane", "wireless", "cinema", "modern", "trench warfare", "Soviet",
+                    "jazz", "Bolshevik", "influenza epidemic", "conscription", "Zeppelin", "poison gas",
+                    "tank", "shell shock", "U-boat", "wireless telephone", "dogfight", "cubism"],
+            
+            "1920s": ["wireless", "radio", "cinema", "automobile", "aeroplane", "modern", "broadcasting",
+                    "flapper", "jazz", "talkies", "quantum mechanics", "relativity", "Prohibition", 
+                    "stock market", "Hollywood", "bobbed hair", "insulin", "television", "speakeasy"],
+            
+            "1930s": ["depression", "radio", "cinema", "modern", "automobile", "broadcasting", "talking pictures",
+                    "Dust Bowl", "New Deal", "Fascism", "Nazism", "unemployment", "breadline", "hooverville",
+                    "dust storm", "talkie", "Empire State Building", "streamline", "radar", "quantum physics"],
+            
+            "1940s": ["war", "atomic", "radar", "radio", "modern", "atomic bomb", "nuclear", "antibiotics",
+                    "United Nations", "Iron Curtain", "Holocaust", "television", "jet aircraft", "computer",
+                    "penicillin", "nylon", "transistor", "Cold War", "NATO", "V-2 rocket"],
+            
+            "1950s": ["atomic", "television", "modern", "electric", "radio", "nuclear", "Soviet", "space race",
+                    "Rock and Roll", "hydrogen bomb", "satellite", "automation", "transistor radio",
+                    "polio vaccine", "civil rights", "suburban", "integrated circuit", "beatnik"],
+                    
+            "1960s": ["television", "modern", "electronic", "space", "computer", "Apollo", "lunar", "transistor",
+                    "Vietnam War", "civil rights", "hippie", "counterculture", "LSD", "microchip", "The Pill",
+                    "women's liberation", "mainframe", "NASA", "integrated circuit", "miniskirt"],
+                    
+            "1970s": ["computerized", "digital", "electronic", "microprocessor", "environmentalism", 
+                    "floppy disk", "pocket calculator", "video game", "pet rock", "disco", 
+                    "oil crisis", "punk rock", "Star Wars", "mainframe computer"],
+                    
+            "1980s": ["personal computer", "IBM PC", "Apple Macintosh", "microcomputer", "MS-DOS", 
+                    "Internet", "MTV", "VHS", "Walkman", "compact disc", "fax machine", "mobile phone", 
+                    "email", "spreadsheet", "word processor", "desktop publishing"],
+                    
+            "1990s": ["Internet", "World Wide Web", "email", "dot-com", "website", "browser", 
+                    "Windows 95", "modem", "chat room", "DVD", "MP3", "cellular phone", "laptop", 
+                    "search engine", "Y2K", "Silicon Valley"],
+                    
+            "2000s": ["smartphone", "Google", "Facebook", "social media", "blog", "Wikipedia", 
+                    "YouTube", "broadband", "iPod", "Wi-Fi", "Bluetooth", "USB drive", "GPS", 
+                    "9/11", "War on Terror", "financial crisis"],
+                    
+            "2010s": ["social networking", "smartphone", "app", "tablet", "streaming", "cloud computing", 
+                    "Bitcoin", "artificial intelligence", "machine learning", "Instagram", "Twitter",
+                    "Uber", "sharing economy", "selfie", "drone", "smart home"],
+                    
+            "2020s": ["pandemic", "COVID-19", "Zoom", "remote work", "blockchain", "NFT", "cryptocurrency", 
+                    "TikTok", "climate crisis", "vaccine", "lockdown", "mRNA", "face mask", 
+                    "artificial intelligence", "ChatGPT", "large language model"]
+        }
+        
+        # Define era-specific writing styles for more authentic text
+        era_styles = {
+            "1850s": "formal Victorian prose with long sentences and elaborate descriptions",
+            "1870s": "confident Victorian optimism about progress and industry",
+            "1890s": "late Victorian scientific and social awareness",
+            "1900s": "enthusiasm for new century and technology",
+            "1920s": "jazz age modernity with shorter sentences and newer vocabulary",
+            "1940s": "more direct, practical language reflecting war and reconstruction",
+            "1960s": "increasingly informal with references to popular culture",
+            "1980s": "technical and efficiency-focused language",
+            "2000s": "digital-era casual language with technical terminology",
+            "2020s": "contemporary language with emphasis on social and technological issues"
+        }
+        
+        # Find closest era style for this decade
+        closest_era = decade
+        for era in sorted(era_styles.keys()):
+            if decade >= era:
+                closest_era = era
+        
+        era_style = era_styles.get(closest_era, "standard historical prose")
+        vocab = decade_vocab.get(decade, ["historical", "period", "era", "decade", "time"])
+        
+        texts = []
+        for i in range(count):
+            # Generate a synthetic text with period vocabulary
+            paragraphs = []
+            
+            # Add a title and introduction
+            start_year = int(decade[:4])
+            title = f"Historical Account from the {decade}"
+            intro = f"The following text represents language typical of the {decade} period " + \
+                    f"({start_year}-{start_year+9}), written in {era_style}."
+            
+            paragraphs.append(title)
+            paragraphs.append(intro)
+            
+            # Generate 5-15 paragraphs with period-appropriate content
+            for _ in range(random.randint(5, 15)):
+                # Create a paragraph with period vocabulary
+                sentences = []
+                
+                # Start with a topic sentence using period vocabulary
+                topic_word = random.choice(vocab)
+                topic_sentence = f"The {topic_word} was of considerable importance during this period."
+                sentences.append(topic_sentence)
+                
+                # Add 3-8 supporting sentences
+                for _ in range(random.randint(3, 8)):
+                    # Occasionally use period vocabulary (30% chance)
+                    if random.random() < 0.3:
+                        word1 = random.choice(vocab)
+                        word2 = random.choice(vocab)
+                        
+                        templates = [
+                            f"The {word1} contributed significantly to developments in {word2}.",
+                            f"Many considered {word1} to be essential to modern {word2}.",
+                            f"The relationship between {word1} and {word2} merits further examination.",
+                            f"The advancement of {word1} continued to transform {word2}.",
+                            f"Scholars debated the significance of {word1} in relation to {word2}."
+                        ]
+                        
+                        sentences.append(random.choice(templates))
+                    else:
+                        # General filler sentences
+                        templates = [
+                            "This development had far-reaching implications.",
+                            "The consequences were felt throughout society.",
+                            "Many contemporary accounts mention this phenomenon.",
+                            "Historical records from this period confirm these observations.",
+                            "The general public reacted with both enthusiasm and skepticism.",
+                            "Subsequent events would prove these assessments correct.",
+                            "Various factors contributed to this situation.",
+                            "The historical context helps explain these developments."
+                        ]
+                        
+                        sentences.append(random.choice(templates))
+                
+                # Combine sentences into a paragraph
+                paragraph = " ".join(sentences)
+                paragraphs.append(paragraph)
+            
+            # Combine paragraphs into a complete text
+            text = "\n\n".join(paragraphs)
+            texts.append(text)
+        
+        return texts
+
+    def create_large_dataset(self, distribution=None, target_size_gb=1.0):
+        """Create dataset with specified size - improved error handling."""
+        # If no distribution provided, use equal distribution
         if distribution is None:
             distribution = {decade: 1.0 / len(TIME_PERIODS) for decade in TIME_PERIODS.keys()}
         
-        logger.info(f"Creating balanced dataset with target size of {target_size_gb} GB per decade")
+        logger.info(f"Creating balanced dataset with target size of {target_size_gb}GB per decade...")
         
-        # Calculate target size in bytes - more precise calculation
+        # Calculate target size in bytes
         target_size_bytes = target_size_gb * 1024 * 1024 * 1024
         bytes_per_decade = {decade: target_size_bytes * distribution.get(decade, 0) for decade in TIME_PERIODS.keys()}
         
-        # Cache path for tracking already processed texts to avoid duplicates
-        cache_dir = Path(CACHE_DIR) / "processed_texts"
-        cache_dir.mkdir(parents=True, exist_ok=True)
-        processed_texts_file = cache_dir / f"processed_{int(time.time())}.json"
+        # Load data from sources
+        decade_texts = {}
         
-        processed_ids = set()
-        if processed_texts_file.exists():
-            try:
-                with open(processed_texts_file, 'r') as f:
-                    processed_ids = set(json.load(f))
-                logger.info(f"Loaded {len(processed_ids)} previously processed text IDs")
-            except Exception as e:
-                logger.warning(f"Error loading processed IDs: {e}")
+        # Load from British Library with fallback for historical periods
+        bl_historical = self.bl_loader.load_british_library_historical_data(per_decade=5000)
         
-        # Load data more efficiently, with early stopping when targets are reached
-        all_texts = {}
+        # Load from Gutenberg
+        gutenberg_texts = self.gutenberg_loader.load_decade_samples(texts_per_decade=5000)
+        
+        # Combine sources with better error handling
         for decade in TIME_PERIODS.keys():
-            if bytes_per_decade.get(decade, 0) <= 0:
-                all_texts[decade] = []
-                continue
-                
-            # Calculate how many texts we need to sample initially
-            # More efficient approach using estimated text sizes
-            avg_text_size = 10000  # Average text size in bytes (conservative estimate)
-            initial_sample_count = int(bytes_per_decade[decade] / avg_text_size * 1.5)  # 50% buffer
-            
-            # Load texts from sources with efficient caching
-            decade_bl = []
-            decade_gutenberg = []
-            
-            # Only load what we need - don't waste time on unnecessary loading
-            if initial_sample_count > 0:
-                logger.info(f"Loading approximately {initial_sample_count} texts for {decade}")
-                
-                # Load from British Library with appropriate chunking            
-                bl_texts = self.bl_loader.load_decade_samples(per_decade=min(initial_sample_count, 1000), force_fresh=False)
-                decade_bl = [(text, "british_library") for text in bl_texts.get(decade, [])]
-                
-                # If we need more, load from Gutenberg
-                if len(decade_bl) < initial_sample_count:
-                    remaining = initial_sample_count - len(decade_bl)
-                    gutenberg_texts = self.gutenberg_loader.load_decade_samples(texts_per_decade=min(remaining, 1000))
-                    decade_gutenberg = [(text, "gutenberg") for text in gutenberg_texts.get(decade, [])]
+            # Get texts from each source
+            decade_bl = [(text, "british_library") for text in bl_historical.get(decade, [])]
+            decade_gutenberg = [(text, "gutenberg") for text in gutenberg_texts.get(decade, [])]
             
             # Combine sources
-            all_texts[decade] = decade_bl + decade_gutenberg
-            logger.info(f"{decade}: Initially loaded {len(all_texts[decade])} texts ({len(decade_bl)} BL, {len(decade_gutenberg)} Gutenberg)")
+            all_texts = decade_bl + decade_gutenberg
+            
+            # If we have almost no real data for this decade, use synthetic data
+            if len(all_texts) < 10:
+                logger.warning(f"Insufficient real data for {decade}, generating synthetic texts")
+                
+                # Get synthetic data from fill_missing_decades.py methods if they exist
+                synthetic_count = 100
+                
+                # Try to use your existing fill_missing_decades methods
+                try:
+                    from src.data.fill_missing_decades import generate_synthetic_texts_for_decade
+                    synthetic_texts = generate_synthetic_texts_for_decade(decade, synthetic_count)
+                    all_texts.extend([(text, "synthetic") for text in synthetic_texts])
+                    logger.info(f"Added {len(synthetic_texts)} synthetic texts to {decade}")
+                except ImportError:
+                    # Fallback to a simpler synthetic text generator
+                    logger.info(f"Using simple synthetic text generator for {decade}")
+                    synthetic_texts = self._create_synthetic_decade_texts(decade, synthetic_count)
+                    all_texts.extend([(text, "synthetic") for text in synthetic_texts])
+            
+            decade_texts[decade] = all_texts
         
-        # Build dataset with target sizes - more memory efficient approach
-        dataset = {}
-        total_size_bytes = 0
-        
+        # Process each decade to reach target size
+        final_dataset = {}
         for decade, target_bytes in bytes_per_decade.items():
-            decade_texts = all_texts.get(decade, [])
-            if not decade_texts:
+            texts = decade_texts.get(decade, [])
+            if not texts:
                 logger.warning(f"No texts available for {decade}")
-                dataset[decade] = []
+                final_dataset[decade] = []
                 continue
-            
-            # Track decade data volume with more accurate byte counting
-            decade_bytes = 0
-            decade_dataset = []
-            
+                
             logger.info(f"Building {decade} dataset to target {target_bytes/(1024*1024):.2f} MB")
             
-            # Filter by minimum length for quality but avoid excluding too much
-            min_length = 800  # Reduced from 5000 to include more texts
-            quality_texts = [t for t in decade_texts if len(t[0]) >= min_length]
+            # Calculate current size
+            decade_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
             
-            # Use quality texts if available, otherwise fallback
-            source_texts = quality_texts if quality_texts else decade_texts
-            
-            # Process texts with better deduplication
-            processed_in_decade = set()
-            
-            # First pass: add original texts
-            for text, source in source_texts:
-                # Skip if already processed (avoid duplicates)
-                text_hash = hash(text[:100] + text[-100:] if len(text) > 200 else text)
-                if text_hash in processed_ids or text_hash in processed_in_decade:
-                    continue
-                    
-                decade_dataset.append((text, source))
-                text_bytes = len(text.encode('utf-8'))
-                decade_bytes += text_bytes
-                processed_in_decade.add(text_hash)
-                
-                # Stop if we've reached the target
-                if decade_bytes >= target_bytes:
-                    break
-            
-            # If we need more data, use augmentation with controlled randomness
-            if decade_bytes < target_bytes:
+            # If we need more data, use augmentation
+            if decade_bytes < target_bytes and texts:
                 logger.info(f"{decade}: Need more data, current: {decade_bytes/(1024*1024):.2f}MB, target: {target_bytes/(1024*1024):.2f}MB")
                 
-                # Calculate remaining bytes needed
-                remaining_bytes = target_bytes - decade_bytes
+                # Calculate how many more texts we need (approximately)
+                avg_text_bytes = decade_bytes / len(texts)
+                needed_texts = int((target_bytes - decade_bytes) / avg_text_bytes) + 1
                 
-                # Sort texts by length (prefer longer ones for augmentation)
-                source_texts.sort(key=lambda x: len(x[0]), reverse=True)
+                # Augment existing texts to reach target
+                augmented_texts = []
+                base_texts = texts.copy()  # Copy to avoid modifying during iteration
                 
-                # Determine how many augmented versions we need per text
-                texts_to_augment = source_texts[:min(50, len(source_texts))]  # Limit to avoid too much repetition
-                augmentations_per_text = max(1, int(remaining_bytes / (len(texts_to_augment) * 10000)))
-                
-                # Generate augmented texts with controlled randomness
-                for base_text, base_source in texts_to_augment:
-                    augmentation_count = 0
+                for _ in range(needed_texts):
+                    # Choose a text to augment
+                    if not base_texts:
+                        break
+                        
+                    base_idx = random.randint(0, len(base_texts) - 1)
+                    base_text, base_source = base_texts[base_idx]
                     
-                    while decade_bytes < target_bytes and augmentation_count < augmentations_per_text:
-                        # Add jitter to volume multiplier for more diversity
-                        volume_multiplier = random.uniform(4, 8)
-                        augmented_text = self._augment_text_for_volume(base_text, decade, volume_multiplier=volume_multiplier)
-                        
-                        # Skip if too similar to existing texts
-                        text_hash = hash(augmented_text[:100] + augmented_text[-100:] if len(augmented_text) > 200 else augmented_text)
-                        if text_hash in processed_ids or text_hash in processed_in_decade:
-                            augmentation_count += 1
-                            continue
-                        
-                        decade_dataset.append((augmented_text, f"{base_source}_augmented"))
-                        text_bytes = len(augmented_text.encode('utf-8'))
-                        decade_bytes += text_bytes
-                        processed_in_decade.add(text_hash)
-                        augmentation_count += 1
+                    # Create an expanded version with variations
+                    augmented_text = self._augment_text_for_volume(base_text, decade)
+                    augmented_texts.append((augmented_text, f"{base_source}_augmented"))
+                    
+                    # Occasionally cycle base texts to maintain diversity
+                    if random.random() < 0.1:
+                        base_texts.pop(base_idx)
                 
-                # Update processed IDs
-                processed_ids.update(processed_in_decade)
+                # Add augmented texts to the dataset
+                texts.extend(augmented_texts)
             
-            dataset[decade] = decade_dataset
-            total_size_bytes += decade_bytes
+            final_dataset[decade] = texts
             
-            logger.info(f"{decade}: {len(decade_dataset)} texts, {decade_bytes/1024/1024/1024:.2f} GB")
+            # Update decade size for reporting
+            decade_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
+            logger.info(f"{decade}: {len(texts)} texts, {decade_bytes/(1024*1024*1024):.2f} GB")
         
-        logger.info(f"Total dataset size: {total_size_bytes/1024/1024/1024:.2f} GB")
+        # Calculate total size
+        total_size_bytes = sum(sum(len(text.encode('utf-8')) for text, _ in texts) for texts in final_dataset.values())
+        logger.info(f"Total dataset size: {total_size_bytes/(1024*1024*1024):.2f} GB")
         
-        # Save processed IDs
-        try:
-            with open(processed_texts_file, 'w') as f:
-                json.dump(list(processed_ids), f)
-        except Exception as e:
-            logger.warning(f"Failed to save processed IDs: {e}")
-        
-        # Create detailed metadata
-        dataset_metadata = {
-            "total_texts": sum(len(texts) for texts in dataset.values()),
-            "total_size_bytes": total_size_bytes,
-            "total_size_gb": total_size_bytes / (1024*1024*1024),
-            "target_size_gb": target_size_gb,
-            "distribution": distribution,
-            "decades": {
-                decade: {
-                    "texts": len(texts),
-                    "size_bytes": sum(len(text.encode('utf-8')) for text, _ in texts),
-                    "size_gb": sum(len(text.encode('utf-8')) for text, _ in texts) / (1024*1024*1024)
-                } for decade, texts in dataset.items()
-            }
-        }
-        
-        # Save metadata
-        metadata_path = self.dataset_dir / "large_datasets"
-        metadata_path.mkdir(exist_ok=True, parents=True)
-        
-        with open(metadata_path / f"large_dataset_{int(time.time())}_metadata.json", "w") as f:
-            json.dump(dataset_metadata, f, indent=2)
-        
-        return dataset
+        return final_dataset
 
     # def build_temporal_dataset(self,
     #       texts_per_decade: int = 2000,
