@@ -473,7 +473,7 @@ class TemporalDatasetManager:
         return texts
 
     def create_large_dataset(self, distribution=None, target_size_gb=1.0):
-        """Create dataset with specified size - improved error handling."""
+        """Create dataset with specified size and improved handling for mid-century decades."""
         # If no distribution provided, use equal distribution
         if distribution is None:
             distribution = {decade: 1.0 / len(TIME_PERIODS) for decade in TIME_PERIODS.keys()}
@@ -484,14 +484,35 @@ class TemporalDatasetManager:
         target_size_bytes = target_size_gb * 1024 * 1024 * 1024
         bytes_per_decade = {decade: target_size_bytes * distribution.get(decade, 0) for decade in TIME_PERIODS.keys()}
         
+        # Identify decades that typically have sparse data
+        sparse_decades = ["1930s", "1940s", "1950s", "1960s", "1970s", "1980s"]
+        
         # Load data from sources
         decade_texts = {}
         
         # Load from British Library with fallback for historical periods
         bl_historical = self.bl_loader.load_british_library_historical_data(per_decade=5000)
         
-        # Load from Gutenberg
-        gutenberg_texts = self.gutenberg_loader.load_decade_samples(texts_per_decade=5000)
+        # Enhanced Gutenberg loading with focus on sparse decades
+        logger.info("Loading Gutenberg texts with enhanced mid-century coverage...")
+        self.gutenberg_loader.expand_metadata_sources()
+        
+        # Focus on sparse decades first
+        focused_gutenberg = self.gutenberg_loader.load_focused_decade_samples(
+            target_decades=sparse_decades,
+            texts_per_decade=5000
+        )
+        
+        # Load regular texts for other decades
+        regular_gutenberg_texts = self.gutenberg_loader.load_decade_samples(texts_per_decade=5000)
+        
+        # Merge regular and focused collections
+        gutenberg_texts = regular_gutenberg_texts.copy()
+        for decade, texts in focused_gutenberg.items():
+            if decade in gutenberg_texts:
+                gutenberg_texts[decade].extend(texts)
+            else:
+                gutenberg_texts[decade] = texts
         
         # Combine sources with better error handling
         for decade in TIME_PERIODS.keys():
@@ -537,9 +558,17 @@ class TemporalDatasetManager:
             # Calculate current size
             decade_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
             
+            # Set a reasonable minimum acceptable size for sparse decades
+            minimum_acceptable_bytes = 0.1 * 1024 * 1024 * 1024  # 100 MB minimum
+            
             # If we need more data, use augmentation
             if decade_bytes < target_bytes and texts:
                 logger.info(f"{decade}: Need more data, current: {decade_bytes/(1024*1024):.2f}MB, target: {target_bytes/(1024*1024):.2f}MB")
+                
+                # Apply more aggressive augmentation for sparse decades
+                augmentation_multiplier = 1
+                if decade in sparse_decades:
+                    augmentation_multiplier = 2  # Double augmentation for sparse decades
                 
                 # Calculate how many more texts we need (approximately)
                 avg_text_bytes = decade_bytes / len(texts)
@@ -549,24 +578,67 @@ class TemporalDatasetManager:
                 augmented_texts = []
                 base_texts = texts.copy()  # Copy to avoid modifying during iteration
                 
-                for _ in range(needed_texts):
-                    # Choose a text to augment
-                    if not base_texts:
-                        break
+                # For sparse decades, apply more aggressive expansion
+                if decade in sparse_decades:
+                    logger.info(f"Applying enhanced augmentation for sparse decade: {decade}")
+                    
+                    # Use the Gutenberg loader's advanced text expansion for mid-century content
+                    for i in range(needed_texts):
+                        # Choose a text to augment
+                        if not base_texts:
+                            break
+                            
+                        base_idx = random.randint(0, len(base_texts) - 1)
+                        base_text, base_source = base_texts[base_idx]
                         
-                    base_idx = random.randint(0, len(base_texts) - 1)
-                    base_text, base_source = base_texts[base_idx]
-                    
-                    # Create an expanded version with variations
-                    augmented_text = self._augment_text_for_volume(base_text, decade)
-                    augmented_texts.append((augmented_text, f"{base_source}_augmented"))
-                    
-                    # Occasionally cycle base texts to maintain diversity
-                    if random.random() < 0.1:
-                        base_texts.pop(base_idx)
+                        # Create multiple expanded versions with high volume
+                        for j in range(5):  # Create 5 variants at once
+                            # Use the Gutenberg loader's enhanced expansion method
+                            augmented_text = self.gutenberg_loader._create_expanded_variation(
+                                base_text, decade, variation_level=j % 4
+                            )
+                            augmented_texts.append((augmented_text, f"{base_source}_augmented_v{j}"))
+                        
+                        # Occasionally cycle base texts to maintain diversity
+                        if random.random() < 0.2:
+                            base_texts.pop(base_idx)
+                else:
+                    # Standard augmentation for normal decades
+                    for _ in range(needed_texts):
+                        # Choose a text to augment
+                        if not base_texts:
+                            break
+                            
+                        base_idx = random.randint(0, len(base_texts) - 1)
+                        base_text, base_source = base_texts[base_idx]
+                        
+                        # Create an expanded version with variations
+                        augmented_text = self._augment_text_for_volume(base_text, decade)
+                        augmented_texts.append((augmented_text, f"{base_source}_augmented"))
+                        
+                        # Occasionally cycle base texts to maintain diversity
+                        if random.random() < 0.1:
+                            base_texts.pop(base_idx)
                 
                 # Add augmented texts to the dataset
                 texts.extend(augmented_texts)
+                
+                # Update decade size
+                decade_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
+                logger.info(f"After augmentation: {decade} has {len(texts)} texts, {decade_bytes/(1024*1024*1024):.2f} GB")
+                
+                # If we're still below the minimum after augmentation for sparse decades, add synthetic content
+                if decade in sparse_decades and decade_bytes < minimum_acceptable_bytes:
+                    logger.warning(f"Still insufficient data for {decade} after augmentation, adding synthetic content")
+                    
+                    # Generate high-quality synthetic texts
+                    synthetic_count = 100
+                    synthetic_texts = self.gutenberg_loader._create_synthetic_texts_for_decade(decade, synthetic_count)
+                    texts.extend([(text, "synthetic_enrichment") for text in synthetic_texts])
+                    
+                    # Update size again
+                    decade_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
+                    logger.info(f"After synthetic enrichment: {decade} has {len(texts)} texts, {decade_bytes/(1024*1024*1024):.2f} GB")
             
             final_dataset[decade] = texts
             
@@ -977,12 +1049,10 @@ class TemporalDatasetManager:
         logger.info(f"Total dataset size: {total_size_bytes/(1024*1024*1024):.2f} GB")
         return combined_dataset
 
-    def chunk_texts_for_tokenizer(self, texts, max_tokens=800):
-        """
-        Split texts into smaller chunks to ensure they fit within tokenizer context window.
-        """
-        from transformers import GPT2Tokenizer
-        tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
+    def chunk_texts_for_tokenizer(self, texts, max_tokens=750):
+        """Split texts into smaller chunks based on actual token counts."""
+        from transformers import AutoTokenizer
+        tokenizer = AutoTokenizer.from_pretrained("gpt2")
         
         chunks = []
         for text in texts:
@@ -991,42 +1061,37 @@ class TemporalDatasetManager:
             else:
                 source = "unknown"
             
-            # For very short texts, check directly
-            if len(text) < 1000:
-                tokens = tokenizer(text, return_tensors="pt").input_ids
-                if len(tokens[0]) <= max_tokens:
-                    chunks.append((text, source))
-                    continue
-            
-            # Split by paragraphs
+            # Force chunking for all texts for safety
             paragraphs = re.split(r'\n\s*\n', text)
             
             current_chunk = ""
             for para in paragraphs:
-                # Check if adding this paragraph would exceed token limit
+                # Check token count directly
                 test_chunk = current_chunk + "\n\n" + para if current_chunk else para
-                tokens = tokenizer(test_chunk, return_tensors="pt").input_ids
+                token_count = len(tokenizer(test_chunk)["input_ids"])
                 
-                if len(tokens[0]) > max_tokens:
+                if token_count > max_tokens:
                     if current_chunk:
                         chunks.append((current_chunk, source))
                         current_chunk = para
                     else:
-                        # Handle paragraph that's too long by itself - split into sentences
+                        # Paragraph too long by itself, split into sentences
                         sentences = re.split(r'(?<=[.!?])\s+', para)
                         sent_chunk = ""
                         for sent in sentences:
                             test_sent_chunk = sent_chunk + " " + sent if sent_chunk else sent
-                            tokens = tokenizer(test_sent_chunk, return_tensors="pt").input_ids
+                            token_count = len(tokenizer(test_sent_chunk)["input_ids"])
                             
-                            if len(tokens[0]) > max_tokens:
+                            if token_count > max_tokens:
                                 if sent_chunk:
                                     chunks.append((sent_chunk, source))
                                     sent_chunk = sent
                                 else:
-                                    # Even a single sentence is too long - truncate it
-                                    trunc_sent = tokenizer.decode(tokens[0][:max_tokens-50])
-                                    chunks.append((trunc_sent, source))
+                                    # Even a single sentence is too long, must truncate
+                                    truncated = tokenizer.decode(
+                                        tokenizer(sent, truncation=True, max_length=max_tokens)["input_ids"]
+                                    )
+                                    chunks.append((truncated, source))
                             else:
                                 sent_chunk = test_sent_chunk
                         
@@ -1035,7 +1100,6 @@ class TemporalDatasetManager:
                 else:
                     current_chunk = test_chunk
             
-            # Add final chunk if it exists
             if current_chunk:
                 chunks.append((current_chunk, source))
         
