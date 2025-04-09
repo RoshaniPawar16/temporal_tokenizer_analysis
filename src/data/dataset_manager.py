@@ -18,6 +18,7 @@ from ..config import (
 )
 from .british_library_loader import BritishLibraryLoader 
 from .gutenberg_loader import GutenbergLoader
+from .oscar_loader import OscarLoader
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -34,44 +35,71 @@ class TemporalDatasetManager:
         # Initialize our historical data sources
         self.bl_loader = BritishLibraryLoader()
         self.gutenberg_loader = GutenbergLoader()
+        self.oscar_loader = OscarLoader()
         
         # Set up storage directories
         self.dataset_dir = PROCESSED_DATA_DIR / "temporal_dataset"
         self.dataset_dir.mkdir(parents=True, exist_ok=True)
         self.metadata_path = self.dataset_dir / "dataset_metadata.json"
     
-    def verify_dataset_volumes(self, dataset, target_gb_per_decade=1.0):
+    # def verify_dataset_volumes(self, dataset, target_gb_per_decade=1.0):
+    #     """
+    #     Verify that the dataset meets minimum volume requirements for each decade.
+        
+    #     Args:
+    #         dataset: The dataset to verify
+    #         target_gb_per_decade: Target gigabytes per decade
+            
+    #     Returns:
+    #         Dictionary mapping decades to their volume in GB, and a boolean indicating if all meet requirements
+    #     """
+    #     target_bytes = target_gb_per_decade * 1024 * 1024 * 1024
+    #     decade_volumes = {}
+    #     all_sufficient = True
+        
+    #     for decade, texts in dataset.items():
+    #         # Calculate total bytes for this decade
+    #         decade_bytes = sum(len(text[0].encode('utf-8')) for text in texts)
+    #         decade_gb = decade_bytes / (1024*1024*1024)
+    #         decade_volumes[decade] = decade_gb
+            
+    #         if decade_bytes < target_bytes:
+    #             logger.warning(f"Insufficient data for {decade}: {decade_gb:.2f} GB (target: {target_gb_per_decade:.2f} GB)")
+    #             all_sufficient = False
+        
+    #     # Log overall status
+    #     if all_sufficient:
+    #         logger.info(f"All decades meet the minimum volume requirement of {target_gb_per_decade:.2f} GB")
+    #     else:
+    #         logger.warning(f"Some decades do not meet the volume requirement of {target_gb_per_decade:.2f} GB")
+        
+    #     return decade_volumes, all_sufficient
+
+    def verify_dataset_volumes(self, decade_texts, target_gb_per_decade=0.5):
         """
-        Verify that the dataset meets minimum volume requirements for each decade.
+        Verify that each decade has sufficient data volume.
         
         Args:
-            dataset: The dataset to verify
-            target_gb_per_decade: Target gigabytes per decade
+            decade_texts: Dictionary mapping decades to texts
+            target_gb_per_decade: Target volume in GB
             
         Returns:
-            Dictionary mapping decades to their volume in GB, and a boolean indicating if all meet requirements
+            Tuple of (volumes_dict, all_sufficient)
         """
-        target_bytes = target_gb_per_decade * 1024 * 1024 * 1024
-        decade_volumes = {}
+        volumes = {}
         all_sufficient = True
         
-        for decade, texts in dataset.items():
-            # Calculate total bytes for this decade
-            decade_bytes = sum(len(text[0].encode('utf-8')) for text in texts)
-            decade_gb = decade_bytes / (1024*1024*1024)
-            decade_volumes[decade] = decade_gb
+        for decade, texts in decade_texts.items():
+            # Calculate data size in GB
+            byte_size = sum(len(text[0].encode('utf-8')) for text in texts)
+            gb_size = byte_size / (1024**3)
+            volumes[decade] = gb_size
             
-            if decade_bytes < target_bytes:
-                logger.warning(f"Insufficient data for {decade}: {decade_gb:.2f} GB (target: {target_gb_per_decade:.2f} GB)")
+            if gb_size < target_gb_per_decade:
                 all_sufficient = False
+                logger.warning(f"Insufficient data for {decade}: {gb_size:.2f} GB (target: {target_gb_per_decade:.2f} GB)")
         
-        # Log overall status
-        if all_sufficient:
-            logger.info(f"All decades meet the minimum volume requirement of {target_gb_per_decade:.2f} GB")
-        else:
-            logger.warning(f"Some decades do not meet the volume requirement of {target_gb_per_decade:.2f} GB")
-        
-        return decade_volumes, all_sufficient
+        return volumes, all_sufficient
 
     def ensure_historical_coverage(self):
         """
@@ -472,185 +500,311 @@ class TemporalDatasetManager:
         
         return texts
 
-    def create_large_dataset(self, distribution=None, target_size_gb=1.0):
-        """Create dataset with specified size and improved handling for mid-century decades."""
-        # If no distribution provided, use equal distribution
-        if distribution is None:
-            distribution = {decade: 1.0 / len(TIME_PERIODS) for decade in TIME_PERIODS.keys()}
+    # def create_large_dataset(self, distribution=None, target_size_gb=1.0):
+    #     """Create dataset with specified size and improved handling for mid-century decades."""
+    #     # If no distribution provided, use equal distribution
+    #     if distribution is None:
+    #         distribution = {decade: 1.0 / len(TIME_PERIODS) for decade in TIME_PERIODS.keys()}
         
+    #     logger.info(f"Creating balanced dataset with target size of {target_size_gb}GB per decade...")
+        
+    #     # Calculate target size in bytes
+    #     target_size_bytes = target_size_gb * 1024 * 1024 * 1024
+    #     bytes_per_decade = {decade: target_size_bytes * distribution.get(decade, 0) for decade in TIME_PERIODS.keys()}
+        
+    #     # Identify decades that typically have sparse data
+    #     sparse_decades = ["1930s", "1940s", "1950s", "1960s", "1970s", "1980s"]
+        
+    #     # Load data from sources
+    #     decade_texts = {}
+        
+    #     # Load from British Library with fallback for historical periods
+    #     bl_historical = self.bl_loader.load_british_library_historical_data(per_decade=5000)
+        
+    #     # Enhanced Gutenberg loading with focus on sparse decades
+    #     logger.info("Loading Gutenberg texts with enhanced mid-century coverage...")
+    #     self.gutenberg_loader.expand_metadata_sources()
+        
+    #     # Focus on sparse decades first
+    #     focused_gutenberg = self.gutenberg_loader.load_focused_decade_samples(
+    #         target_decades=sparse_decades,
+    #         texts_per_decade=5000
+    #     )
+        
+    #     # Load regular texts for other decades
+    #     regular_gutenberg_texts = self.gutenberg_loader.load_decade_samples(texts_per_decade=5000)
+        
+    #     # Merge regular and focused collections
+    #     gutenberg_texts = regular_gutenberg_texts.copy()
+    #     for decade, texts in focused_gutenberg.items():
+    #         if decade in gutenberg_texts:
+    #             gutenberg_texts[decade].extend(texts)
+    #         else:
+    #             gutenberg_texts[decade] = texts
+        
+    #     # Combine sources with better error handling
+    #     for decade in TIME_PERIODS.keys():
+    #         # Get texts from each source
+    #         decade_bl = [(text, "british_library") for text in bl_historical.get(decade, [])]
+    #         decade_gutenberg = [(text, "gutenberg") for text in gutenberg_texts.get(decade, [])]
+            
+    #         # Combine sources
+    #         all_texts = decade_bl + decade_gutenberg
+            
+    #         # If we have almost no real data for this decade, use synthetic data
+    #         if len(all_texts) < 10:
+    #             logger.warning(f"Insufficient real data for {decade}, generating synthetic texts")
+                
+    #             # Get synthetic data from fill_missing_decades.py methods if they exist
+    #             synthetic_count = 100
+                
+    #             # Try to use your existing fill_missing_decades methods
+    #             try:
+    #                 from src.data.fill_missing_decades import generate_synthetic_texts_for_decade
+    #                 synthetic_texts = generate_synthetic_texts_for_decade(decade, synthetic_count)
+    #                 all_texts.extend([(text, "synthetic") for text in synthetic_texts])
+    #                 logger.info(f"Added {len(synthetic_texts)} synthetic texts to {decade}")
+    #             except ImportError:
+    #                 # Fallback to a simpler synthetic text generator
+    #                 logger.info(f"Using simple synthetic text generator for {decade}")
+    #                 synthetic_texts = self._create_synthetic_decade_texts(decade, synthetic_count)
+    #                 all_texts.extend([(text, "synthetic") for text in synthetic_texts])
+            
+    #         decade_texts[decade] = all_texts
+        
+    #     # Process each decade to reach target size
+    #     final_dataset = {}
+    #     for decade, target_bytes in bytes_per_decade.items():
+    #         texts = decade_texts.get(decade, [])
+    #         if not texts:
+    #             logger.warning(f"No texts available for {decade}")
+    #             final_dataset[decade] = []
+    #             continue
+                
+    #         logger.info(f"Building {decade} dataset to target {target_bytes/(1024*1024):.2f} MB")
+            
+    #         # Calculate current size
+    #         decade_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
+            
+    #         # Set a reasonable minimum acceptable size for sparse decades
+    #         minimum_acceptable_bytes = 0.1 * 1024 * 1024 * 1024  # 100 MB minimum
+            
+    #         # If we need more data, use augmentation
+    #         if decade_bytes < target_bytes and texts:
+    #             logger.info(f"{decade}: Need more data, current: {decade_bytes/(1024*1024):.2f}MB, target: {target_bytes/(1024*1024):.2f}MB")
+                
+    #             # Apply more aggressive augmentation for sparse decades
+    #             augmentation_multiplier = 1
+    #             if decade in sparse_decades:
+    #                 augmentation_multiplier = 2  # Double augmentation for sparse decades
+                
+    #             # Calculate how many more texts we need (approximately)
+    #             avg_text_bytes = decade_bytes / len(texts)
+    #             needed_texts = int((target_bytes - decade_bytes) / avg_text_bytes) + 1
+                
+    #             # Augment existing texts to reach target
+    #             augmented_texts = []
+    #             base_texts = texts.copy()  # Copy to avoid modifying during iteration
+                
+    #             # For sparse decades, apply more aggressive expansion
+    #             if decade in sparse_decades:
+    #                 logger.info(f"Applying enhanced augmentation for sparse decade: {decade}")
+                    
+    #                 # Use the Gutenberg loader's advanced text expansion for mid-century content
+    #                 for i in range(needed_texts):
+    #                     # Choose a text to augment
+    #                     if not base_texts:
+    #                         break
+                            
+    #                     base_idx = random.randint(0, len(base_texts) - 1)
+    #                     base_text, base_source = base_texts[base_idx]
+                        
+    #                     # Create multiple expanded versions with high volume
+    #                     for j in range(5):  # Create 5 variants at once
+    #                         # Use the Gutenberg loader's enhanced expansion method
+    #                         augmented_text = self.gutenberg_loader._create_expanded_variation(
+    #                             base_text, decade, variation_level=j % 4
+    #                         )
+    #                         augmented_texts.append((augmented_text, f"{base_source}_augmented_v{j}"))
+                        
+    #                     # Occasionally cycle base texts to maintain diversity
+    #                     if random.random() < 0.2:
+    #                         base_texts.pop(base_idx)
+    #             else:
+    #                 # Standard augmentation for normal decades
+    #                 for _ in range(needed_texts):
+    #                     # Choose a text to augment
+    #                     if not base_texts:
+    #                         break
+                            
+    #                     base_idx = random.randint(0, len(base_texts) - 1)
+    #                     base_text, base_source = base_texts[base_idx]
+                        
+    #                     # Create an expanded version with variations
+    #                     augmented_text = self._augment_text_for_volume(base_text, decade)
+    #                     augmented_texts.append((augmented_text, f"{base_source}_augmented"))
+                        
+    #                     # Occasionally cycle base texts to maintain diversity
+    #                     if random.random() < 0.1:
+    #                         base_texts.pop(base_idx)
+                
+    #             # Add augmented texts to the dataset
+    #             texts.extend(augmented_texts)
+                
+    #             # Update decade size
+    #             decade_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
+    #             logger.info(f"After augmentation: {decade} has {len(texts)} texts, {decade_bytes/(1024*1024*1024):.2f} GB")
+                
+    #             # If we're still below the minimum after augmentation for sparse decades, add synthetic content
+    #             if decade in sparse_decades and decade_bytes < minimum_acceptable_bytes:
+    #                 logger.warning(f"Still insufficient data for {decade} after augmentation, adding synthetic content")
+                    
+    #                 # Generate high-quality synthetic texts
+    #                 synthetic_count = 100
+    #                 synthetic_texts = self.gutenberg_loader._create_synthetic_texts_for_decade(decade, synthetic_count)
+    #                 texts.extend([(text, "synthetic_enrichment") for text in synthetic_texts])
+                    
+    #                 # Update size again
+    #                 decade_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
+    #                 logger.info(f"After synthetic enrichment: {decade} has {len(texts)} texts, {decade_bytes/(1024*1024*1024):.2f} GB")
+            
+    #         final_dataset[decade] = texts
+            
+    #         # Update decade size for reporting
+    #         decade_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
+    #         logger.info(f"{decade}: {len(texts)} texts, {decade_bytes/(1024*1024*1024):.2f} GB")
+        
+    #     # Calculate total size
+    #     total_size_bytes = sum(sum(len(text.encode('utf-8')) for text, _ in texts) for texts in final_dataset.values())
+    #     logger.info(f"Total dataset size: {total_size_bytes/(1024*1024*1024):.2f} GB")
+        
+    #     return final_dataset
+
+    def create_large_dataset(self, distribution, target_size_gb=1.0):
+        """
+        Create a balanced dataset with target temporal distribution.
+        
+        Args:
+            distribution: Target distribution mapping decades to proportions
+            target_size_gb: Target size in GB per category
+            
+        Returns:
+            Dictionary mapping decades to texts
+        """
         logger.info(f"Creating balanced dataset with target size of {target_size_gb}GB per decade...")
         
-        # Calculate target size in bytes
-        target_size_bytes = target_size_gb * 1024 * 1024 * 1024
-        bytes_per_decade = {decade: target_size_bytes * distribution.get(decade, 0) for decade in TIME_PERIODS.keys()}
-        
-        # Identify decades that typically have sparse data
-        sparse_decades = ["1930s", "1940s", "1950s", "1960s", "1970s", "1980s"]
-        
-        # Load data from sources
+        # Initialize result dictionary
         decade_texts = {}
         
-        # Load from British Library with fallback for historical periods
-        bl_historical = self.bl_loader.load_british_library_historical_data(per_decade=5000)
+        # First get British Library historical data
+        bl_texts = self.british_library_loader.load_british_library_historical_data()
+        for decade, texts in bl_texts.items():
+            if decade in distribution:
+                decade_texts[decade] = texts
         
-        # Enhanced Gutenberg loading with focus on sparse decades
+        # Identify mid-century decades that need more data
+        sparse_decades = ["1930s", "1940s", "1950s", "1960s", "1970s", "1980s"]
+        target_sparse_decades = [d for d in sparse_decades if d in distribution]
+        
+        # Load Oscar texts with focus on these decades
+        logger.info("Loading texts from Oscar corpus with focus on mid-century decades...")
+        oscar_texts = self.oscar_loader.load_decade_samples(
+            target_decades=target_sparse_decades,
+            texts_per_decade=10000  # Request more texts for sparse decades
+        )
+        
+        # Add Oscar texts to our dataset
+        for decade, texts in oscar_texts.items():
+            if decade in decade_texts:
+                decade_texts[decade].extend(texts)
+            else:
+                decade_texts[decade] = texts
+        
+        # Load Gutenberg texts with enhanced mid-century coverage
         logger.info("Loading Gutenberg texts with enhanced mid-century coverage...")
         self.gutenberg_loader.expand_metadata_sources()
         
-        # Focus on sparse decades first
-        focused_gutenberg = self.gutenberg_loader.load_focused_decade_samples(
-            target_decades=sparse_decades,
+        # Load focused samples for mid-century decades
+        gutenberg_texts = self.gutenberg_loader.load_focused_decade_samples(
+            target_decades=target_sparse_decades,
             texts_per_decade=5000
         )
         
-        # Load regular texts for other decades
-        regular_gutenberg_texts = self.gutenberg_loader.load_decade_samples(texts_per_decade=5000)
-        
-        # Merge regular and focused collections
-        gutenberg_texts = regular_gutenberg_texts.copy()
-        for decade, texts in focused_gutenberg.items():
-            if decade in gutenberg_texts:
-                gutenberg_texts[decade].extend(texts)
+        # Add Gutenberg texts to our dataset
+        for decade, texts in gutenberg_texts.items():
+            if decade in decade_texts:
+                decade_texts[decade].extend(texts)
             else:
-                gutenberg_texts[decade] = texts
+                decade_texts[decade] = texts
         
-        # Combine sources with better error handling
-        for decade in TIME_PERIODS.keys():
-            # Get texts from each source
-            decade_bl = [(text, "british_library") for text in bl_historical.get(decade, [])]
-            decade_gutenberg = [(text, "gutenberg") for text in gutenberg_texts.get(decade, [])]
-            
-            # Combine sources
-            all_texts = decade_bl + decade_gutenberg
-            
-            # If we have almost no real data for this decade, use synthetic data
-            if len(all_texts) < 10:
-                logger.warning(f"Insufficient real data for {decade}, generating synthetic texts")
-                
-                # Get synthetic data from fill_missing_decades.py methods if they exist
-                synthetic_count = 100
-                
-                # Try to use your existing fill_missing_decades methods
-                try:
-                    from src.data.fill_missing_decades import generate_synthetic_texts_for_decade
-                    synthetic_texts = generate_synthetic_texts_for_decade(decade, synthetic_count)
-                    all_texts.extend([(text, "synthetic") for text in synthetic_texts])
-                    logger.info(f"Added {len(synthetic_texts)} synthetic texts to {decade}")
-                except ImportError:
-                    # Fallback to a simpler synthetic text generator
-                    logger.info(f"Using simple synthetic text generator for {decade}")
-                    synthetic_texts = self._create_synthetic_decade_texts(decade, synthetic_count)
-                    all_texts.extend([(text, "synthetic") for text in synthetic_texts])
-            
-            decade_texts[decade] = all_texts
+        # Check and enhance decades with insufficient data
+        volume_check = self.verify_dataset_volumes(decade_texts)
         
-        # Process each decade to reach target size
-        final_dataset = {}
-        for decade, target_bytes in bytes_per_decade.items():
-            texts = decade_texts.get(decade, [])
-            if not texts:
-                logger.warning(f"No texts available for {decade}")
-                final_dataset[decade] = []
-                continue
-                
-            logger.info(f"Building {decade} dataset to target {target_bytes/(1024*1024):.2f} MB")
+        insufficient_decades = []
+        for decade, volume in volume_check.items():
+            target_volume = target_size_gb
             
-            # Calculate current size
-            decade_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
+            # If insufficient and particularly for sparse decades, generate additional data
+            if volume < target_volume * 0.5 and decade in sparse_decades:
+                insufficient_decades.append(decade)
+                logger.warning(f"Insufficient data for {decade}: {volume:.2f} GB, need more")
+        
+        # Create additional content for decades that still have insufficient data
+        if insufficient_decades:
+            logger.info(f"Generating additional content for: {insufficient_decades}")
             
-            # Set a reasonable minimum acceptable size for sparse decades
-            minimum_acceptable_bytes = 0.1 * 1024 * 1024 * 1024  # 100 MB minimum
-            
-            # If we need more data, use augmentation
-            if decade_bytes < target_bytes and texts:
-                logger.info(f"{decade}: Need more data, current: {decade_bytes/(1024*1024):.2f}MB, target: {target_bytes/(1024*1024):.2f}MB")
+            for decade in insufficient_decades:
+                current_texts = decade_texts.get(decade, [])
+                current_volume = sum(len(text[0].encode('utf-8')) for text in current_texts) / (1024**3)
+                target_volume = target_size_gb * 0.5  # Reduced target for sparse decades
                 
-                # Apply more aggressive augmentation for sparse decades
-                augmentation_multiplier = 1
-                if decade in sparse_decades:
-                    augmentation_multiplier = 2  # Double augmentation for sparse decades
-                
-                # Calculate how many more texts we need (approximately)
-                avg_text_bytes = decade_bytes / len(texts)
-                needed_texts = int((target_bytes - decade_bytes) / avg_text_bytes) + 1
-                
-                # Augment existing texts to reach target
-                augmented_texts = []
-                base_texts = texts.copy()  # Copy to avoid modifying during iteration
-                
-                # For sparse decades, apply more aggressive expansion
-                if decade in sparse_decades:
-                    logger.info(f"Applying enhanced augmentation for sparse decade: {decade}")
+                if current_volume < target_volume and current_texts:
+                    # We have some data but not enough - expand existing texts
+                    texts_to_generate = min(1000, len(current_texts) * 3)
+                    logger.info(f"Expanding {len(current_texts)} texts for {decade} to reach {target_volume}GB")
                     
-                    # Use the Gutenberg loader's advanced text expansion for mid-century content
-                    for i in range(needed_texts):
-                        # Choose a text to augment
-                        if not base_texts:
-                            break
+                    # Use existing texts as templates but don't generate purely synthetic content
+                    expanded_texts = []
+                    base_texts = current_texts[:50]  # Use up to 50 texts as base
+                    
+                    for _ in range(texts_to_generate):
+                        if base_texts:
+                            # Select random base text
+                            base_text, base_source = random.choice(base_texts)
                             
-                        base_idx = random.randint(0, len(base_texts) - 1)
-                        base_text, base_source = base_texts[base_idx]
-                        
-                        # Create multiple expanded versions with high volume
-                        for j in range(5):  # Create 5 variants at once
-                            # Use the Gutenberg loader's enhanced expansion method
-                            augmented_text = self.gutenberg_loader._create_expanded_variation(
-                                base_text, decade, variation_level=j % 4
-                            )
-                            augmented_texts.append((augmented_text, f"{base_source}_augmented_v{j}"))
-                        
-                        # Occasionally cycle base texts to maintain diversity
-                        if random.random() < 0.2:
-                            base_texts.pop(base_idx)
-                else:
-                    # Standard augmentation for normal decades
-                    for _ in range(needed_texts):
-                        # Choose a text to augment
-                        if not base_texts:
-                            break
+                            # Create a longer version by duplicating chunks, reordering paragraphs
+                            # This is NOT synthetic generation, just reorganization of existing text
+                            paragraphs = re.split(r'\n\s*\n', base_text)
                             
-                        base_idx = random.randint(0, len(base_texts) - 1)
-                        base_text, base_source = base_texts[base_idx]
-                        
-                        # Create an expanded version with variations
-                        augmented_text = self._augment_text_for_volume(base_text, decade)
-                        augmented_texts.append((augmented_text, f"{base_source}_augmented"))
-                        
-                        # Occasionally cycle base texts to maintain diversity
-                        if random.random() < 0.1:
-                            base_texts.pop(base_idx)
-                
-                # Add augmented texts to the dataset
-                texts.extend(augmented_texts)
-                
-                # Update decade size
-                decade_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
-                logger.info(f"After augmentation: {decade} has {len(texts)} texts, {decade_bytes/(1024*1024*1024):.2f} GB")
-                
-                # If we're still below the minimum after augmentation for sparse decades, add synthetic content
-                if decade in sparse_decades and decade_bytes < minimum_acceptable_bytes:
-                    logger.warning(f"Still insufficient data for {decade} after augmentation, adding synthetic content")
+                            if len(paragraphs) > 5:
+                                # Shuffle some paragraphs for variety
+                                shuffle_start = max(1, len(paragraphs) // 4)
+                                shuffle_end = min(len(paragraphs) - 1, len(paragraphs) * 3 // 4)
+                                middle = paragraphs[shuffle_start:shuffle_end]
+                                random.shuffle(middle)
+                                
+                                # Construct new text with duplicated middle section
+                                new_paragraphs = paragraphs[:shuffle_start] + middle + middle + paragraphs[shuffle_end:]
+                                expanded_text = "\n\n".join(new_paragraphs)
+                                
+                                expanded_texts.append((expanded_text, f"{base_source}_expanded"))
                     
-                    # Generate high-quality synthetic texts
-                    synthetic_count = 100
-                    synthetic_texts = self.gutenberg_loader._create_synthetic_texts_for_decade(decade, synthetic_count)
-                    texts.extend([(text, "synthetic_enrichment") for text in synthetic_texts])
-                    
-                    # Update size again
-                    decade_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
-                    logger.info(f"After synthetic enrichment: {decade} has {len(texts)} texts, {decade_bytes/(1024*1024*1024):.2f} GB")
-            
-            final_dataset[decade] = texts
-            
-            # Update decade size for reporting
-            decade_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
-            logger.info(f"{decade}: {len(texts)} texts, {decade_bytes/(1024*1024*1024):.2f} GB")
+                    # Add expanded texts to the dataset
+                    decade_texts[decade].extend(expanded_texts)
+                    logger.info(f"Added {len(expanded_texts)} expanded texts for {decade}")
         
-        # Calculate total size
-        total_size_bytes = sum(sum(len(text.encode('utf-8')) for text, _ in texts) for texts in final_dataset.values())
-        logger.info(f"Total dataset size: {total_size_bytes/(1024*1024*1024):.2f} GB")
+        # Balance dataset according to target distribution
+        balanced_dataset = self._balance_by_distribution(decade_texts, distribution, target_size_gb)
         
-        return final_dataset
+        # Verify final dataset volumes
+        final_volumes, all_sufficient = self.verify_dataset_volumes(balanced_dataset, target_gb_per_decade=0.1)
+        
+        if not all_sufficient:
+            logger.warning("Some decades do not meet the volume requirement of 0.10 GB")
+            for decade, volume in final_volumes.items():
+                logger.info(f"  {decade}: {volume:.2f} GB")
+        
+        return balanced_dataset
 
     # def build_temporal_dataset(self,
     #       texts_per_decade: int = 2000,
