@@ -54,6 +54,25 @@ class GutenbergLoader:
         # Load or create metadata catalog
         self.metadata = self._load_or_create_catalog()
     
+    def _load_or_create_catalog(self) -> Dict:
+        """
+        Load catalog from cache if it exists, otherwise create a new one.
+        
+        Returns:
+            Dict: Mapping of book IDs to metadata
+        """
+        if self.metadata_path.exists():
+            try:
+                with open(self.metadata_path, 'r') as f:
+                    metadata = json.load(f)
+                logger.info(f"Loaded Gutenberg catalog with {len(metadata)} books")
+                return metadata
+            except Exception as e:
+                logger.warning(f"Failed to load cached catalog: {e}")
+        
+        logger.info("Creating new Gutenberg catalog...")
+        return self._create_new_catalog()
+
     def expand_metadata_sources(self):
         """
         Expand metadata sources to get better coverage of mid-20th century books.
