@@ -278,7 +278,7 @@ def run_analysis(args):
     decade_texts = {}
     for decade, texts in controlled_dataset.items():
         if texts:
-            decade_texts[decade] = [text for text, _ in texts]
+            decade_texts[decade] = [item[0] if isinstance(item, tuple) else item for item in texts]
             logger.info(f"Found {len(decade_texts[decade])} texts for {decade}")
     
     # Check if we have enough decades with data
