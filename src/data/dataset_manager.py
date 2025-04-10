@@ -33,10 +33,10 @@ class TemporalDatasetManager:
     def __init__(self):
         """Initialize data loaders and set up directory structure."""
         # Initialize our historical data sources
+        self.oscar_loader = OscarLoader()
         self.bl_loader = BritishLibraryLoader()
         self.gutenberg_loader = GutenbergLoader()
-        self.oscar_loader = OscarLoader()
-        
+               
         # Set up storage directories
         self.dataset_dir = PROCESSED_DATA_DIR / "temporal_dataset"
         self.dataset_dir.mkdir(parents=True, exist_ok=True)
