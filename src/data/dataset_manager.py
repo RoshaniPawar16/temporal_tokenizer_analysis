@@ -879,7 +879,7 @@ class TemporalDatasetManager:
         logger.info(f"Total dataset size: {total_size_bytes/(1024*1024*1024):.2f} GB")
         return combined_dataset
 
-    def chunk_texts_for_tokenizer(self, texts, max_tokens=350):
+    def chunk_texts_for_tokenizer(self, texts, max_tokens=250):
         """
         Split texts into smaller chunks based on actual token counts.
         
