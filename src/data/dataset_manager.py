@@ -879,18 +879,15 @@ class TemporalDatasetManager:
         logger.info(f"Total dataset size: {total_size_bytes/(1024*1024*1024):.2f} GB")
         return combined_dataset
 
-    def chunk_texts_for_tokenizer(self, texts, max_tokens=250):  # Reduced from 350
+    def chunk_texts_for_tokenizer(self, texts, max_tokens=200):  # Reduced further
         """
         Split texts into smaller chunks based on actual token counts.
-        
-        Args:
-            texts: List of texts or (text, source) tuples
-            max_tokens: Maximum tokens per chunk
-            
-        Returns:
-            List of chunked (text, source) tuples
+        Ensures no chunk exceeds the model's maximum sequence length.
         """
         from transformers import AutoTokenizer
+        
+        # Load tokenizer once
+        tokenizer = AutoTokenizer.from_pretrained("gpt2")
         
         # Add safety check for extremely long texts
         safe_texts = []
@@ -901,69 +898,70 @@ class TemporalDatasetManager:
                 text = text_item
                 source = "unknown"
                 
-            if len(text) > 500000:  # Check for extremely long texts
+            # Aggressive truncation for very long texts
+            if len(text) > 100000:  # Much stricter limit
                 logger.warning(f"Found extremely long text ({len(text)} chars) - truncating")
-                # Truncate to a reasonable size
-                safe_texts.append((text[:500000], source))
-            else:
-                safe_texts.append((text, source))
-        
-        # Proceed with chunking using the safety-checked texts
-        tokenizer = AutoTokenizer.from_pretrained("gpt2")
+                # Truncate to much smaller size
+                text = text[:100000]
+                
+            safe_texts.append((text, source))
         
         chunks = []
         for text, source in safe_texts:
-            # Force chunking for all texts for safety
-            paragraphs = re.split(r'\n\s*\n', text)
+            # First try direct tokenization and truncation
+            encoded = tokenizer(text, truncation=True, max_length=900)
+            decoded = tokenizer.decode(encoded["input_ids"])
             
-            current_chunk = ""
+            # Split into paragraphs for processing
+            paragraphs = re.split(r'\n\s*\n', decoded)
+            
+            # Process paragraph by paragraph
             for para in paragraphs:
-                # Check token count directly
-                test_chunk = current_chunk + "\n\n" + para if current_chunk else para
-                token_count = len(tokenizer(test_chunk)["input_ids"])
+                if not para.strip():
+                    continue
+                    
+                # Check token count
+                token_count = len(tokenizer(para)["input_ids"])
                 
-                if token_count > max_tokens:
-                    if current_chunk:
-                        chunks.append((current_chunk, source))
-                        current_chunk = para
-                    else:
-                        # Paragraph too long by itself, split into sentences
-                        sentences = re.split(r'(?<=[.!?])\s+', para)
-                        sent_chunk = ""
-                        for sent in sentences:
-                            test_sent_chunk = sent_chunk + " " + sent if sent_chunk else sent
-                            token_count = len(tokenizer(test_sent_chunk)["input_ids"])
-                            
-                            if token_count > max_tokens:
-                                if sent_chunk:
-                                    chunks.append((sent_chunk, source))
-                                    sent_chunk = sent
-                                else:
-                                    # Even a single sentence is too long, must truncate
-                                    truncated = tokenizer.decode(
-                                        tokenizer(sent, truncation=True, max_length=max_tokens)["input_ids"]
-                                    )
-                                    chunks.append((truncated, source))
-                            else:
-                                sent_chunk = test_sent_chunk
-                        
-                        if sent_chunk:
-                            chunks.append((sent_chunk, source))
+                if token_count <= max_tokens:
+                    # Paragraph fits in one chunk
+                    chunks.append((para, source))
                 else:
-                    current_chunk = test_chunk
-            
-            if current_chunk:
-                chunks.append((current_chunk, source))
+                    # Split paragraph into sentences
+                    sentences = re.split(r'(?<=[.!?])\s+', para)
+                    sent_chunk = ""
+                    
+                    for sent in sentences:
+                        if not sent.strip():
+                            continue
+                            
+                        test_chunk = sent_chunk + " " + sent if sent_chunk else sent
+                        token_count = len(tokenizer(test_chunk)["input_ids"])
+                        
+                        if token_count > max_tokens:
+                            if sent_chunk:
+                                chunks.append((sent_chunk, source))
+                                sent_chunk = sent
+                            else:
+                                # Hard truncate the sentence
+                                truncated = tokenizer.decode(
+                                    tokenizer(sent, truncation=True, max_length=max_tokens)["input_ids"]
+                                )
+                                chunks.append((truncated, source))
+                        else:
+                            sent_chunk = test_chunk
+                    
+                    if sent_chunk:
+                        chunks.append((sent_chunk, source))
         
-        # Add final safety check to ensure no chunk exceeds max sequence length
+        # Final safety check - NO chunk can exceed the limit
         final_chunks = []
         for chunk_text, chunk_source in chunks:
             token_count = len(tokenizer(chunk_text)["input_ids"])
-            if token_count > 1000:  # Choose a value safely below 1024
-                logger.warning(f"Found chunk with {token_count} tokens - truncating further")
-                # Forcibly truncate to ensure it's within limits
+            if token_count > 900:  # Well below the 1024 limit
+                # Force hard truncation
                 truncated = tokenizer.decode(
-                    tokenizer(chunk_text, truncation=True, max_length=1000)["input_ids"]
+                    tokenizer(chunk_text, truncation=True, max_length=900)["input_ids"]
                 )
                 final_chunks.append((truncated, chunk_source))
             else:
