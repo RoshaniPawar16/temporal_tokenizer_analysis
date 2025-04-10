@@ -879,7 +879,7 @@ class TemporalDatasetManager:
         logger.info(f"Total dataset size: {total_size_bytes/(1024*1024*1024):.2f} GB")
         return combined_dataset
 
-    def chunk_texts_for_tokenizer(self, texts, max_tokens=250):
+    def chunk_texts_for_tokenizer(self, texts, max_tokens=250):  # Reduced from 350
         """
         Split texts into smaller chunks based on actual token counts.
         
@@ -955,7 +955,21 @@ class TemporalDatasetManager:
             if current_chunk:
                 chunks.append((current_chunk, source))
         
-        return chunks
+        # Add final safety check to ensure no chunk exceeds max sequence length
+        final_chunks = []
+        for chunk_text, chunk_source in chunks:
+            token_count = len(tokenizer(chunk_text)["input_ids"])
+            if token_count > 1000:  # Choose a value safely below 1024
+                logger.warning(f"Found chunk with {token_count} tokens - truncating further")
+                # Forcibly truncate to ensure it's within limits
+                truncated = tokenizer.decode(
+                    tokenizer(chunk_text, truncation=True, max_length=1000)["input_ids"]
+                )
+                final_chunks.append((truncated, chunk_source))
+            else:
+                final_chunks.append((chunk_text, chunk_source))
+        
+        return final_chunks
 
     def _create_historical_synthetic_texts(self, decade: str, count: int, existing_data: Dict[str, List]) -> List[str]:
         """
