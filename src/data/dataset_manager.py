@@ -1203,7 +1203,7 @@ class TemporalDatasetManager:
         logger.info(f"Total dataset size: {total_size_bytes/(1024*1024*1024):.2f} GB")
         return combined_dataset
 
-    def chunk_texts_for_tokenizer(self, texts, max_tokens=750):
+    def chunk_texts_for_tokenizer(self, texts, max_tokens=512):
         """Split texts into smaller chunks based on actual token counts."""
         from transformers import AutoTokenizer
         tokenizer = AutoTokenizer.from_pretrained("gpt2")
