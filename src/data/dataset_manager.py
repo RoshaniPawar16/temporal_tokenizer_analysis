@@ -880,17 +880,39 @@ class TemporalDatasetManager:
         return combined_dataset
 
     def chunk_texts_for_tokenizer(self, texts, max_tokens=350):
-        """Split texts into smaller chunks based on actual token counts."""
+        """
+        Split texts into smaller chunks based on actual token counts.
+        
+        Args:
+            texts: List of texts or (text, source) tuples
+            max_tokens: Maximum tokens per chunk
+            
+        Returns:
+            List of chunked (text, source) tuples
+        """
         from transformers import AutoTokenizer
+        
+        # Add safety check for extremely long texts
+        safe_texts = []
+        for text_item in texts:
+            if isinstance(text_item, tuple):
+                text, source = text_item
+            else:
+                text = text_item
+                source = "unknown"
+                
+            if len(text) > 500000:  # Check for extremely long texts
+                logger.warning(f"Found extremely long text ({len(text)} chars) - truncating")
+                # Truncate to a reasonable size
+                safe_texts.append((text[:500000], source))
+            else:
+                safe_texts.append((text, source))
+        
+        # Proceed with chunking using the safety-checked texts
         tokenizer = AutoTokenizer.from_pretrained("gpt2")
         
         chunks = []
-        for text in texts:
-            if isinstance(text, tuple):
-                text, source = text
-            else:
-                source = "unknown"
-            
+        for text, source in safe_texts:
             # Force chunking for all texts for safety
             paragraphs = re.split(r'\n\s*\n', text)
             
