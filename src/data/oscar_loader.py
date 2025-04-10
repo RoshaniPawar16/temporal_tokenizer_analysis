@@ -81,7 +81,7 @@ class OscarLoader:
         try:
             # Load Oscar dataset
             logger.info(f"Loading Oscar dataset from Hugging Face...")
-            dataset = load_dataset("oscar", self.oscar_subset, streaming=True, split="train")
+            dataset = load_dataset("oscar", self.oscar_subset, streaming=True, split="train", trust_remote_code=True)
             
             # Process a sample of the dataset to find temporal information
             processed_count = 0

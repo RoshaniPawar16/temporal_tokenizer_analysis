@@ -35,6 +35,9 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
 )
 logger = logging.getLogger(__name__)
+# Add this near the top, after other imports but before any dataset operations
+import datasets
+datasets.config.TRUST_REMOTE_CODE = True
 
 def process_decade(decade, texts, inference):
     """Process a single decade in parallel with better error handling."""

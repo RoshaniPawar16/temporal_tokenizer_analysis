@@ -39,6 +39,7 @@ export OMP_NUM_THREADS=4  # Limit number of OpenMP threads
 # Set chunk size for processing to avoid memory issues
 export PYTHONUNBUFFERED=1
 
+export HF_DATASETS_TRUST_REMOTE_CODE=1
 # Run analysis with memory-optimized settings
 echo "Running uniform distribution analysis..."
 PYTHONMEMMON=1 python run_on_maxwell.py --tokenizer gpt2 --distribution uniform --texts_per_decade 10000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
