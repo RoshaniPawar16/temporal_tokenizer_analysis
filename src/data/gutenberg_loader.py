@@ -362,7 +362,7 @@ class GutenbergLoader:
     def _fetch_and_clean_text(self, book_id: str) -> Optional[str]:
         """
         Fetch and clean text for a given book ID with improved error handling
-        and support for more mirrors and file formats.
+        and more aggressive retry logic to maximize successful downloads.
         
         Args:
             book_id: Gutenberg book identifier
@@ -384,24 +384,87 @@ class GutenbergLoader:
             except Exception as e:
                 logger.debug(f"Failed to read cached file for {book_id}: {e}")
         
-        # First try the standard URL templates
-        text = self._try_fetch_from_mirrors(book_id)
-        if text:
-            return text
+        # Try with aggressive retry and fallback approach
+        # 1. Set up extended mirror list with multiple formats for each mirror
+        mirrors = [
+            "https://www.gutenberg.org/files/{id}/{id}-0.txt",
+            "https://www.gutenberg.org/files/{id}/{id}.txt",
+            "https://www.gutenberg.org/files/{id}/txt/{id}-0.txt",
+            "https://www.gutenberg.org/files/{id}/txt/{id}.txt",
+            "https://www.gutenberg.org/cache/epub/{id}/pg{id}.txt",
+            "https://www.gutenberg.org/ebooks/{id}.txt.utf-8",      
+            "https://gutenberg.pglaf.org/{id}/pg{id}.txt",
+            "http://mirrors.xmission.com/gutenberg/{id}/{id}.txt",
+            "http://mirrors.xmission.com/gutenberg/ebooks/{id}/{id}.txt",
+            "http://gutenberg.readingroo.ms/{id}/{id}.txt",
+            # Additional mirrors for robustness
+            "https://gutenberg.org/ebooks/{id}.txt.utf-8",
+            "https://www.mirrorservice.org/sites/ftp.ibiblio.org/pub/docs/books/gutenberg/{id}/{id}.txt",
+            "https://www.gutenberg.lib.md.us/cache/epub/{id}/pg{id}.txt"
+        ]
         
-        # If standard mirrors fail, try without the file variations
-        text = self._try_fetch_with_variations(book_id)
-        if text:
-            return text
+        # Try all mirrors with multiple retries
+        for mirror in mirrors:
+            max_retries = 5  # Increase from 3
+            for retry in range(max_retries):
+                try:
+                    url = mirror.format(id=book_id)
+                    logger.debug(f"Attempt {retry+1}/{max_retries} downloading {book_id} from {url}")
+                    
+                    # Use longer timeout for more reliable downloads
+                    response = requests.get(url, timeout=60)  # Longer timeout (60s)
+                    
+                    if response.status_code == 200:
+                        text = response.text
+                        
+                        # Skip if too short
+                        if len(text) < 1000:
+                            logger.debug(f"Response from {url} too short ({len(text)} chars), trying next")
+                            continue
+                        
+                        # Cache the downloaded text
+                        cache_path = self.cache_dir / f"{book_id}.txt"
+                        with open(cache_path, 'w', encoding='utf-8') as f:
+                            f.write(text)
+                        
+                        logger.debug(f"Successfully downloaded book {book_id} ({len(text)} chars)")
+                        return self._clean_text(text)
+                    
+                    elif response.status_code == 404:
+                        # No need to retry on 404
+                        break
+                    
+                    else:
+                        # Server error, worth retrying
+                        logger.debug(f"HTTP error {response.status_code} for {url}, retry {retry+1}/{max_retries}")
+                        time.sleep(1 * (retry + 1))  # Exponential backoff
+                
+                except requests.exceptions.Timeout:
+                    # Special handling for timeouts - try again with longer timeout
+                    logger.debug(f"Timeout for {url}, retry with longer timeout")
+                    try:
+                        response = requests.get(url, timeout=90)  # Even longer timeout for retry
+                        if response.status_code == 200:
+                            text = response.text
+                            if len(text) >= 1000:
+                                with open(cache_path, 'w', encoding='utf-8') as f:
+                                    f.write(text)
+                                return self._clean_text(text)
+                    except Exception:
+                        pass
+                        
+                except Exception as e:
+                    logger.debug(f"Error downloading {book_id} from {url}: {e}")
+                    time.sleep(1 * (retry + 1))  # Backoff on other errors too
         
-        # If all attempts fail, try a last-resort extraction from the HTML version
+        # After trying all mirrors with retries, attempt one final approach:
+        # Try HTML version and extract text (for newer books this is sometimes more reliable)
         try:
             html_url = f"https://www.gutenberg.org/files/{book_id}/{book_id}-h/{book_id}-h.htm"
-            logger.debug(f"Attempting HTML extraction from {html_url}")
+            logger.info(f"Trying HTML extraction for {book_id} from {html_url}")
             
-            response = requests.get(html_url, timeout=30)
+            response = requests.get(html_url, timeout=60)
             if response.status_code == 200:
-                # Extract text from HTML
                 from bs4 import BeautifulSoup
                 soup = BeautifulSoup(response.text, 'html.parser')
                 
@@ -409,21 +472,25 @@ class GutenbergLoader:
                 for div in soup.find_all(['div', 'pre'], class_=['pgheader', 'pgfooter']):
                     div.decompose()
                 
-                # Get body content
-                body_content = soup.find('body')
-                if body_content:
-                    text = body_content.get_text()
-                    
-                    # Cache the extracted text
-                    with open(cache_path, 'w', encoding='utf-8') as f:
-                        f.write(text)
-                    
-                    logger.debug(f"Extracted text from HTML for book {book_id} ({len(text)} chars)")
-                    return self._clean_text(text)
+                # Get primary content
+                content_divs = soup.find_all(['div', 'section'], class_=['chapter', 'section', 'pgcontent'])
+                if content_divs:
+                    text = " ".join(div.get_text() for div in content_divs)
+                else:
+                    # Fall back to body content
+                    text = soup.get_text()
+                
+                # Cache the extracted text
+                with open(cache_path, 'w', encoding='utf-8') as f:
+                    f.write(text)
+                
+                logger.info(f"Successfully extracted text from HTML for book {book_id} ({len(text)} chars)")
+                return self._clean_text(text)
+            
         except Exception as e:
-            logger.debug(f"Failed HTML extraction for {book_id}: {e}")
+            logger.debug(f"HTML extraction failed for {book_id}: {e}")
         
-        logger.debug(f"Failed to fetch text for book {book_id} from any source")
+        logger.info(f"Failed to fetch text for book {book_id} from any source after multiple attempts")
         return None
 
     def _try_fetch_from_mirrors(self, book_id: str) -> Optional[str]:

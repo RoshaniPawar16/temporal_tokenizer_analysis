@@ -457,7 +457,8 @@ class TemporalDatasetManager:
 
     def _balance_by_distribution(self, decade_texts, distribution, target_size_gb=1.0):
         """
-        Balance the dataset according to the target distribution.
+        Balance the dataset according to the target distribution with emphasis on
+        maximizing real data and minimizing synthetic content.
         
         Args:
             decade_texts: Dictionary mapping decades to lists of texts
@@ -494,6 +495,7 @@ class TemporalDatasetManager:
         # Create balanced dataset
         balanced_dataset = {}
         
+        # First, categorize data sources for each decade
         for decade, target_prop in distribution.items():
             texts = decade_texts.get(decade, [])
             
@@ -502,37 +504,121 @@ class TemporalDatasetManager:
                 logger.warning(f"No texts available for {decade}, cannot match distribution")
                 continue
             
+            # Categorize texts by source type
+            real_texts = []
+            expanded_texts = []
+            synthetic_texts = []
+            
+            for text, source in texts:
+                if "synthetic" in source:
+                    synthetic_texts.append((text, source))
+                elif "expanded" in source or "augmented" in source:
+                    expanded_texts.append((text, source))
+                else:
+                    real_texts.append((text, source))
+            
             current_bytes = decade_bytes.get(decade, 0)
             target_bytes = target_bytes_per_decade.get(decade, 0)
             
             # If current is less than target, use all available texts
+            # Prioritizing real texts over expanded and synthetic
             if current_bytes <= target_bytes:
-                balanced_dataset[decade] = texts
-                logger.info(f"Using all {len(texts)} texts for {decade} (under target)")
+                balanced_dataset[decade] = real_texts + expanded_texts + synthetic_texts
+                logger.info(f"Using all {len(real_texts)} real, {len(expanded_texts)} expanded, and {len(synthetic_texts)} synthetic texts for {decade} (under target)")
             else:
                 # We have more than needed, sample to match target
-                bytes_per_text = current_bytes / len(texts)
-                sample_size = max(10, int(target_bytes / bytes_per_text))
+                # First calculate bytes for each category
+                real_bytes = sum(len(text.encode('utf-8')) for text, _ in real_texts)
+                expanded_bytes = sum(len(text.encode('utf-8')) for text, _ in expanded_texts)
+                synthetic_bytes = sum(len(text.encode('utf-8')) for text, _ in synthetic_texts)
                 
-                # Prioritize longer, higher quality texts
-                texts_with_length = [(text, source, len(text.encode('utf-8'))) 
-                                for text, source in texts]
-                texts_with_length.sort(key=lambda x: x[2], reverse=True)
+                # Determine how much of each type to use
+                if real_bytes >= target_bytes * 0.9:
+                    # We have enough real data to almost meet target
+                    # Calculate how many real texts to sample
+                    bytes_per_real_text = real_bytes / len(real_texts) if real_texts else 0
+                    real_sample_size = min(len(real_texts), int(target_bytes * 0.9 / bytes_per_real_text) if bytes_per_real_text > 0 else 0)
+                    
+                    # Prioritize longer, higher quality texts
+                    real_texts_with_length = [(text, source, len(text.encode('utf-8'))) 
+                                        for text, source in real_texts]
+                    real_texts_with_length.sort(key=lambda x: x[2], reverse=True)
+                    
+                    # Take top 20% by length
+                    top_count = max(5, real_sample_size // 5)
+                    top_texts = [real_texts_with_length[i][:2] for i in range(min(top_count, len(real_texts_with_length)))]
+                    
+                    # Random sample from the rest
+                    if real_sample_size - top_count > 0 and len(real_texts_with_length) > top_count:
+                        remaining = random.sample(real_texts_with_length[top_count:], 
+                                                min(real_sample_size - top_count, len(real_texts_with_length) - top_count))
+                        sampled_real_texts = top_texts + [item[:2] for item in remaining]
+                    else:
+                        sampled_real_texts = top_texts
+                    
+                    # Calculate remaining target
+                    real_sampled_bytes = sum(len(text.encode('utf-8')) for text, _ in sampled_real_texts)
+                    remaining_target = target_bytes - real_sampled_bytes
+                    
+                    # Fill remaining with expanded texts
+                    expanded_sample_size = 0
+                    sampled_expanded_texts = []
+                    
+                    if remaining_target > 0 and expanded_texts:
+                        bytes_per_expanded = expanded_bytes / len(expanded_texts)
+                        expanded_sample_size = min(len(expanded_texts), int(remaining_target / bytes_per_expanded) if bytes_per_expanded > 0 else 0)
+                        sampled_expanded_texts = random.sample(expanded_texts, expanded_sample_size) if expanded_sample_size > 0 else []
+                    
+                    # Only use synthetic as last resort
+                    expanded_sampled_bytes = sum(len(text.encode('utf-8')) for text, _ in sampled_expanded_texts)
+                    remaining_target = target_bytes - real_sampled_bytes - expanded_sampled_bytes
+                    
+                    sampled_synthetic_texts = []
+                    if remaining_target > 0 and synthetic_texts:
+                        bytes_per_synthetic = synthetic_bytes / len(synthetic_texts)
+                        synthetic_sample_size = min(len(synthetic_texts), int(remaining_target / bytes_per_synthetic) if bytes_per_synthetic > 0 else 0)
+                        # Limit synthetic to 10% maximum
+                        synthetic_sample_size = min(synthetic_sample_size, int(real_sample_size * 0.1))
+                        sampled_synthetic_texts = random.sample(synthetic_texts, synthetic_sample_size) if synthetic_sample_size > 0 else []
+                    
+                    # Combine all sampled texts
+                    balanced_dataset[decade] = sampled_real_texts + sampled_expanded_texts + sampled_synthetic_texts
+                    
+                    logger.info(f"Sampled {len(sampled_real_texts)} real, {len(sampled_expanded_texts)} expanded, and {len(sampled_synthetic_texts)} synthetic texts for {decade} to match distribution")
                 
-                # Take top 20% by length
-                top_count = max(5, sample_size // 5)
-                top_texts = [texts_with_length[i][:2] for i in range(min(top_count, len(texts_with_length)))]
-                
-                # Random sample from the rest
-                if sample_size - top_count > 0 and len(texts_with_length) > top_count:
-                    remaining = random.sample(texts_with_length[top_count:], 
-                                            min(sample_size - top_count, len(texts_with_length) - top_count))
-                    sampled_texts = top_texts + [item[:2] for item in remaining]
                 else:
-                    sampled_texts = top_texts
-                
-                balanced_dataset[decade] = sampled_texts
-                logger.info(f"Sampled {len(sampled_texts)} texts for {decade} to match distribution")
+                    # We don't have enough real data - use all real and some expanded/synthetic
+                    real_bytes = sum(len(text.encode('utf-8')) for text, _ in real_texts)
+                    remaining_target = target_bytes - real_bytes
+                    
+                    # Use expanded texts to fill gap
+                    expanded_sample_size = 0
+                    sampled_expanded_texts = []
+                    
+                    if remaining_target > 0 and expanded_texts:
+                        bytes_per_expanded = expanded_bytes / len(expanded_texts)
+                        expanded_sample_size = min(len(expanded_texts), int(remaining_target / bytes_per_expanded) if bytes_per_expanded > 0 else 0)
+                        if expanded_sample_size > 0:
+                            sampled_expanded_texts = expanded_texts[:expanded_sample_size]
+                    
+                    # Use synthetic as last resort, limited to 20% of real+expanded
+                    expanded_sampled_bytes = sum(len(text.encode('utf-8')) for text, _ in sampled_expanded_texts)
+                    remaining_target = target_bytes - real_bytes - expanded_sampled_bytes
+                    
+                    sampled_synthetic_texts = []
+                    if remaining_target > 0 and synthetic_texts:
+                        bytes_per_synthetic = synthetic_bytes / len(synthetic_texts)
+                        synthetic_sample_size = min(len(synthetic_texts), int(remaining_target / bytes_per_synthetic) if bytes_per_synthetic > 0 else 0)
+                        # Limit synthetic to 20% of real+expanded
+                        synthetic_limit = max(10, int((len(real_texts) + expanded_sample_size) * 0.2))
+                        synthetic_sample_size = min(synthetic_sample_size, synthetic_limit)
+                        if synthetic_sample_size > 0:
+                            sampled_synthetic_texts = synthetic_texts[:synthetic_sample_size]
+                    
+                    # Combine all sampled texts
+                    balanced_dataset[decade] = real_texts + sampled_expanded_texts + sampled_synthetic_texts
+                    
+                    logger.info(f"Using all {len(real_texts)} real texts plus {len(sampled_expanded_texts)} expanded and {len(sampled_synthetic_texts)} synthetic for {decade}")
         
         # Verify final size
         final_bytes = sum(sum(len(text[0].encode('utf-8')) for text in texts) 
@@ -540,11 +626,28 @@ class TemporalDatasetManager:
         
         logger.info(f"Balanced dataset total size: {final_bytes/(1024*1024*1024):.2f} GB")
         
+        # Analyze final composition
+        total_real = sum(sum(1 for text, source in texts if not ("synthetic" in source or "expanded" in source or "augmented" in source))
+                    for decade, texts in balanced_dataset.items())
+        total_expanded = sum(sum(1 for text, source in texts if "expanded" in source or "augmented" in source)
+                        for decade, texts in balanced_dataset.items())
+        total_synthetic = sum(sum(1 for text, source in texts if "synthetic" in source)
+                        for decade, texts in balanced_dataset.items())
+        total_texts = total_real + total_expanded + total_synthetic
+        
+        if total_texts > 0:
+            real_percent = total_real / total_texts * 100
+            expanded_percent = total_expanded / total_texts * 100
+            synthetic_percent = total_synthetic / total_texts * 100
+            
+            logger.info(f"Final dataset composition: {real_percent:.1f}% real, {expanded_percent:.1f}% expanded, {synthetic_percent:.1f}% synthetic")
+        
         return balanced_dataset
 
     def create_large_dataset(self, distribution, target_size_gb=1.0):
         """
         Create a balanced dataset with target temporal distribution.
+        Optimized to maximize use of real data and minimize synthetic content.
         
         Args:
             distribution: Target distribution mapping decades to proportions
@@ -568,11 +671,11 @@ class TemporalDatasetManager:
         sparse_decades = ["1930s", "1940s", "1950s", "1960s", "1970s", "1980s"]
         target_sparse_decades = [d for d in sparse_decades if d in distribution]
         
-        # Load Oscar texts with focus on these decades
+        # Load Oscar texts with focus on these decades - increase texts_per_decade
         logger.info("Loading texts from Oscar corpus with focus on mid-century decades...")
         oscar_texts = self.oscar_loader.load_decade_samples(
             target_decades=target_sparse_decades,
-            texts_per_decade=10000  # Request more texts for sparse decades
+            texts_per_decade=20000  # Increased from 10000 to get more real data
         )
         
         # Add Oscar texts to our dataset
@@ -582,14 +685,22 @@ class TemporalDatasetManager:
             else:
                 decade_texts[decade] = texts
         
+        # Load additional contemporary sources
+        additional_texts = self.load_additional_sources(distribution.keys())
+        for decade, texts in additional_texts.items():
+            if decade in decade_texts:
+                decade_texts[decade].extend(texts)
+            else:
+                decade_texts[decade] = texts
+        
         # Load Gutenberg texts with enhanced mid-century coverage
         logger.info("Loading Gutenberg texts with enhanced mid-century coverage...")
         self.gutenberg_loader.expand_metadata_sources()
         
-        # Load focused samples for mid-century decades
+        # Load focused samples for mid-century decades with higher counts
         gutenberg_texts = self.gutenberg_loader.load_focused_decade_samples(
             target_decades=target_sparse_decades,
-            texts_per_decade=5000
+            texts_per_decade=8000  # Increased from 5000
         )
         
         # Add Gutenberg texts to our dataset
@@ -600,7 +711,7 @@ class TemporalDatasetManager:
                 decade_texts[decade] = texts
         
         # Check and enhance decades with insufficient data
-        volume_check, all_sufficient = self.verify_dataset_volumes(decade_texts)
+        volume_check = self.verify_dataset_volumes(decade_texts)
         
         insufficient_decades = []
         for decade, volume in volume_check.items():
@@ -627,7 +738,7 @@ class TemporalDatasetManager:
                     
                     # Use existing texts as templates but don't generate purely synthetic content
                     expanded_texts = []
-                    base_texts = current_texts[:50]  # Use up to 50 texts as base
+                    base_texts = current_texts[:100]  # Use up to 100 texts as base - increased from 50
                     
                     for _ in range(texts_to_generate):
                         if base_texts:
@@ -667,6 +778,296 @@ class TemporalDatasetManager:
                 logger.info(f"  {decade}: {volume:.2f} GB")
         
         return balanced_dataset
+
+    def load_additional_sources(self, target_decades):
+        """
+        Load additional contemporary data sources to supplement the dataset,
+        particularly for modern decades where there might be gaps.
+        
+        Args:
+            target_decades: List of decades to focus on
+            
+        Returns:
+            Dictionary mapping decades to lists of (text, source) tuples
+        """
+        logger.info("Loading additional contemporary data sources...")
+        
+        decade_texts = {decade: [] for decade in target_decades}
+        
+        # Only focus on newer decades that typically need more data
+        modern_decades = [d for d in target_decades if d in ["1990s", "2000s", "2010s", "2020s"]]
+        
+        if not modern_decades:
+            return decade_texts
+        
+        try:
+            # Try to load C4 dataset samples - good source for 2000s and 2010s
+            from datasets import load_dataset
+            
+            logger.info("Loading samples from C4 dataset...")
+            try:
+                # Load a small sample of C4
+                c4_dataset = load_dataset(
+                    "c4", "en", split="train", streaming=True, 
+                    trust_remote_code=True
+                )
+                
+                # Process a limited number of examples
+                sample_size = 10000  # Adjust as needed
+                
+                processed = 0
+                assigned = 0
+                
+                for i, example in enumerate(c4_dataset.take(sample_size)):
+                    if "text" not in example or not example["text"]:
+                        continue
+                        
+                    text = example["text"]
+                    # Skip if too short
+                    if len(text) < 1000:
+                        continue
+                        
+                    # Extract decade information - focusing on modern decades
+                    decade = self._extract_decade_from_text_enhanced(text, modern_decades)
+                    
+                    if decade:
+                        decade_texts[decade].append((text, "c4_dataset"))
+                        assigned += 1
+                    
+                    processed += 1
+                    if processed % 1000 == 0:
+                        logger.info(f"Processed {processed} C4 examples, assigned {assigned}")
+                        
+                    if assigned >= 5000:  # Stop once we have enough
+                        break
+                
+                logger.info(f"Added {assigned} texts from C4 dataset")
+                
+            except Exception as e:
+                logger.warning(f"Failed to load C4 dataset: {e}")
+        
+        except ImportError:
+            logger.warning("Could not import datasets library, skipping C4 loading")
+        
+        # Try loading Wikipedia samples if available
+        try:
+            wiki_texts = self._load_wikipedia_samples(modern_decades)
+            for decade, texts in wiki_texts.items():
+                if decade in decade_texts:
+                    decade_texts[decade].extend(texts)
+            
+            wiki_count = sum(len(texts) for decade, texts in wiki_texts.items())
+            logger.info(f"Added {wiki_count} texts from Wikipedia samples")
+        except Exception as e:
+            logger.warning(f"Failed to load Wikipedia samples: {e}")
+        
+        # Return the collected additional texts
+        total_texts = sum(len(texts) for decade, texts in decade_texts.items())
+        logger.info(f"Loaded {total_texts} texts from additional sources")
+        
+        return decade_texts
+
+    def _extract_decade_from_text_enhanced(self, text, target_decades):
+        """
+        Enhanced version of decade extraction with better pattern recognition
+        for more accurate temporal classification.
+        
+        Args:
+            text: Text content to analyze
+            target_decades: List of decades to consider
+            
+        Returns:
+            Detected decade or None
+        """
+        # 1. Look for explicit year mentions with more patterns (19XX or 20XX)
+        year_patterns = [
+            r'\b(19[0-9]{2}|20[0-2][0-9])\b',  # YYYY (1900-2029)
+            r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* [0-9]{1,2},? (19[0-9]{2}|20[0-2][0-9])\b',  # Month D(D), YYYY
+            r'\b[0-9]{1,2}[/-][0-9]{1,2}[/-](19[0-9]{2}|20[0-2][0-9])\b',  # D(D)/D(D)/YYYY
+            r'copyright\s+(?:©|\(c\))?\s*(19[0-9]{2}|20[0-2][0-9])',  # Copyright year
+            r'published\s+(?:in)?\s*(19[0-9]{2}|20[0-2][0-9])'  # Publication year
+        ]
+        
+        # Combine patterns for efficiency
+        combined_pattern = '|'.join(f'({pattern})' for pattern in year_patterns)
+        years = re.findall(combined_pattern, text, re.IGNORECASE)
+        
+        # Flatten and clean the results
+        flat_years = []
+        for match in years:
+            for group in match:
+                if group and re.match(r'^(19|20)\d{2}$', group):
+                    flat_years.append(group)
+        
+        # Convert found years to decades with weighted distribution
+        decade_counts = {}
+        for year_str in flat_years:
+            try:
+                year = int(year_str)
+                for decade, (start_year, end_year) in TIME_PERIODS.items():
+                    if start_year <= year <= end_year and decade in target_decades:
+                        # Give more weight to years that appear early in the text (likely publication dates)
+                        position_weight = 2.0 if text.find(year_str) < len(text) // 4 else 1.0
+                        decade_counts[decade] = decade_counts.get(decade, 0) + position_weight
+            except ValueError:
+                continue
+        
+        # If we found years, use the most common decade
+        if decade_counts:
+            most_common_decade = max(decade_counts.items(), key=lambda x: x[1])[0]
+            return most_common_decade
+        
+        # 2. Look for decade names with more variations ("1990s", "sixties", etc.)
+        decade_patterns = {
+            "1930s": [r'\b19[3]0s\b', r'\bthirties\b', r'\b30s\b', r'\b1930\'?s\b'],
+            "1940s": [r'\b19[4]0s\b', r'\bforties\b', r'\b40s\b', r'\b1940\'?s\b'],
+            "1950s": [r'\b19[5]0s\b', r'\bfifties\b', r'\b50s\b', r'\b1950\'?s\b'],
+            "1960s": [r'\b19[6]0s\b', r'\bsixties\b', r'\b60s\b', r'\b1960\'?s\b'],
+            "1970s": [r'\b19[7]0s\b', r'\bseventies\b', r'\b70s\b', r'\b1970\'?s\b'],
+            "1980s": [r'\b19[8]0s\b', r'\beighties\b', r'\b80s\b', r'\b1980\'?s\b'],
+            "1990s": [r'\b19[9]0s\b', r'\bnineties\b', r'\b90s\b', r'\b1990\'?s\b'],
+            "2000s": [r'\b20[0]0s\b', r'\btwo thousands\b', r'\b2000\'?s\b', r'\nearly 2000s\b'],
+            "2010s": [r'\b20[1]0s\b', r'\btwenty tens\b', r'\b2010\'?s\b', r'\b201\ds\b'],
+            "2020s": [r'\b20[2]0s\b', r'\btwenty twenties\b', r'\b2020\'?s\b', r'\b202\ds\b'],
+        }
+        
+        for decade, patterns in decade_patterns.items():
+            if decade in target_decades:
+                for pattern in patterns:
+                    matches = re.findall(pattern, text, re.IGNORECASE)
+                    if matches:
+                        return decade
+        
+        # 3. Use era-specific vocabulary and markers
+        decade_markers = {
+            "1990s": ["world wide web", "clinton", "internet explorer", "windows 95", "netscape", 
+                    "dial-up", "gulf war", "berlin wall", "soviet union collapse", "y2k"],
+            "2000s": ["9/11", "iraq war", "facebook", "ipod", "bush administration", "myspace", 
+                    "financial crisis", "harry potter", "hurricane katrina", "web 2.0"],
+            "2010s": ["smartphone", "obama", "instagram", "trump", "brexit", "occupy wall street", 
+                    "social media", "arab spring", "cloud computing", "black lives matter"],
+            "2020s": ["covid", "pandemic", "tiktok", "ukraine war", "vaccine", "lockdown", 
+                    "zoom", "remote work", "inflation", "metaverse", "nft"]
+        }
+        
+        decade_scores = {decade: 0 for decade in target_decades if decade in decade_markers}
+        
+        for decade, markers in decade_markers.items():
+            if decade in target_decades:
+                for term in markers:
+                    count = len(re.findall(r'\b' + re.escape(term) + r'\b', text, re.IGNORECASE))
+                    decade_scores[decade] += count * 2  # Give more weight to era-specific terms
+        
+        # Return the decade with the highest score, if any
+        if decade_scores and max(decade_scores.values()) > 0:
+            return max(decade_scores.items(), key=lambda x: x[1])[0]
+        
+        # If no decade detected, return None or random assignment with lower probability
+        if target_decades and random.random() < 0.05:  # 5% chance of random assignment - reduced from 10%
+            return random.choice(target_decades)
+        
+        return None
+
+    def _load_wikipedia_samples(self, target_decades):
+        """
+        Load Wikipedia samples with better decade classification.
+        
+        Args:
+            target_decades: List of decades to focus on
+            
+        Returns:
+            Dictionary mapping decades to texts
+        """
+        decade_texts = {decade: [] for decade in target_decades}
+        
+        # Try to load from cache first
+        cache_path = CACHE_DIR / "wikipedia_samples.pkl"
+        if cache_path.exists():
+            try:
+                with open(cache_path, 'rb') as f:
+                    wiki_samples = pickle.load(f)
+                    logger.info(f"Loaded {sum(len(texts) for texts in wiki_samples.values())} Wikipedia samples from cache")
+                    return {k: v for k, v in wiki_samples.items() if k in target_decades}
+            except Exception as e:
+                logger.warning(f"Failed to load Wikipedia samples from cache: {e}")
+        
+        try:
+            # Load a sample of Wikipedia
+            from datasets import load_dataset
+            
+            wiki_dataset = load_dataset(
+                "wikipedia", "20220301.en", split="train", streaming=True,
+                trust_remote_code=True
+            )
+            
+            sample_size = 8000  # Adjust as needed
+            processed = 0
+            assigned = 0
+            
+            for i, example in enumerate(wiki_dataset.take(sample_size)):
+                if "text" not in example or not example["text"]:
+                    continue
+                    
+                text = example["text"]
+                title = example.get("title", "")
+                
+                # Skip if too short
+                if len(text) < 1000:
+                    continue
+                    
+                # Check for time-specific articles
+                time_indicators = [
+                    "history", "in the", "century", "decade", 
+                    "period", "era", "year", "timeline"
+                ]
+                
+                # Give preference to articles with time indicators in title
+                has_time_indicator = any(indicator in title.lower() for indicator in time_indicators)
+                
+                # Extract decade with enhanced method
+                decade = self._extract_decade_from_text_enhanced(text, target_decades)
+                
+                # For time-related articles, use a more aggressive classification approach
+                if has_time_indicator and not decade:
+                    # Look harder for temporal clues in the first paragraph
+                    first_para = text.split("\n\n")[0] if "\n\n" in text else text[:2000]
+                    decades_mentioned = []
+                    
+                    for d in target_decades:
+                        decade_year = d[:4]
+                        if decade_year in first_para or d in first_para:
+                            decades_mentioned.append(d)
+                    
+                    if decades_mentioned:
+                        decade = random.choice(decades_mentioned)
+                
+                if decade:
+                    decade_texts[decade].append((text, f"wikipedia_{title}"))
+                    assigned += 1
+                
+                processed += 1
+                if processed % 500 == 0:
+                    logger.info(f"Processed {processed} Wikipedia articles, assigned {assigned}")
+                    
+                # Ensure we have a good balance
+                min_per_decade = 200
+                if all(len(texts) >= min_per_decade for decade, texts in decade_texts.items() 
+                    if decade in ["1990s", "2000s", "2010s"]):
+                    break
+            
+            # Cache the results
+            try:
+                with open(cache_path, 'wb') as f:
+                    pickle.dump(decade_texts, f)
+            except Exception as e:
+                logger.warning(f"Failed to cache Wikipedia samples: {e}")
+            
+            logger.info(f"Loaded {assigned} Wikipedia articles, distributed across {len(target_decades)} decades")
+            return decade_texts
+            
+        except Exception as e:
+            logger.error(f"Failed to load Wikipedia dataset: {e}")
+            return decade_texts
 
     def build_temporal_dataset(self,
             texts_per_decade: int = 2000,
