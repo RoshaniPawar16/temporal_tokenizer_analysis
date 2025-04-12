@@ -1,4 +1,10 @@
 #!/bin/bash
+#SBATCH --job-name=temporal_analysis
+#SBATCH --time=20:00:00
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=64G
+#SBATCH --output=temporal_analysis_%j.log
 
 # Enhanced error handling
 set -e  # Exit immediately if a command exits with a non-zero status
@@ -48,13 +54,6 @@ except Exception as e:
 
 # Set up the trap
 trap cleanup EXIT
-
-#SBATCH --job-name=temporal_analysis
-#SBATCH --time=20:00:00
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=8
-#SBATCH --mem=64G
-#SBATCH --output=temporal_analysis_%j.log
 
 # Display information about the job
 echo "Running on node: $(hostname)"
