@@ -752,6 +752,7 @@ class TemporalDatasetManager:
         volume_check = self.verify_dataset_volumes(decade_texts)
         
         insufficient_decades = []
+        volume_check, all_sufficient = self.verify_dataset_volumes(controlled_dataset)
         for decade, volume in volume_check.items():
             target_volume = target_size_gb
             
