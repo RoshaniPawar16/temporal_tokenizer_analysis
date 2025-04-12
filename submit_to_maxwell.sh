@@ -11,33 +11,30 @@ echo "Running on node: $(hostname)"
 echo "Starting at: $(date)"
 echo "Working directory: $(pwd)"
 
-# Clean up any previous environment to avoid conflicts
+# Clean up any previous environment
 if [ -d "venv" ]; then
     rm -rf venv
 fi
 
-# Find which system Python to use
-echo "Looking for available Python versions..."
-which python3.9 || which python3.8 || which python3.7 || which python3.6 || which python3 || which python
-
-# Use the latest available Python
-PYTHON_CMD=$(which python3.9 || which python3.8 || which python3.7 || which python3.6 || which python3 || which python)
-
+# Find Python version
+PYTHON_CMD=$(which python3)
 echo "Using Python: $PYTHON_CMD"
 $PYTHON_CMD --version
 
-# First upgrade pip
-$PYTHON_CMD -m pip install --upgrade pip
-
-# Create a fresh virtual environment
+# Create virtual environment
 $PYTHON_CMD -m venv venv
 source venv/bin/activate
 
-# Install dependencies flexibly (without specifying versions)
-echo "Installing dependencies..."
-pip install --no-cache-dir numpy scipy matplotlib seaborn pandas
-pip install --no-cache-dir cvxpy tqdm bs4 psutil retrying
-pip install --no-cache-dir transformers datasets huggingface_hub
+# Upgrade pip first
+pip install --upgrade pip --no-cache-dir
+
+# Install packages with --only-binary flag to avoid compilation
+pip install --only-binary=:all: numpy scipy matplotlib pandas tqdm --no-cache-dir
+pip install --only-binary=:all: beautifulsoup4 requests --no-cache-dir
+
+# Try a minimal set of packages for your analysis
+# Avoid packages that require compilation
+pip install --only-binary=:all: transformers --no-cache-dir || echo "Failed to install transformers"
 
 # Configure environment
 export HF_DATASETS_CACHE="./hf_cache"
@@ -47,6 +44,14 @@ export TOKENIZERS_PARALLELISM=false
 export OMP_NUM_THREADS=4
 export PYTHONUNBUFFERED=1
 export HF_DATASETS_TRUST_REMOTE_CODE=1
+
+# Let's modify the approach to fix dataset_manager.py issue
+echo "Modifying dataset_manager.py to fix tuple unpacking issue..."
+sed -i 's/for decade, volume in volume_check\.items()/volume_check, all_sufficient = self.verify_dataset_volumes(controlled_dataset)\nfor decade, volume in volume_check.items()/' src/data/dataset_manager.py || echo "Failed to fix dataset_manager.py"
+
+# First run a minimal test to make sure imports work
+echo "Testing imports..."
+python -c "import numpy; import scipy; import matplotlib.pyplot; print('Basic imports successful')" || echo "Basic imports failed"
 
 # Run analyses
 echo "Running uniform distribution analysis..."
