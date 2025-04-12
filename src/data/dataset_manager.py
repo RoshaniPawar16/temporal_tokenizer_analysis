@@ -8,6 +8,7 @@ import pandas as pd
 import json
 import random
 import re
+import pickle
 from transformers import AutoTokenizer
 
 from ..config import (
@@ -42,39 +43,6 @@ class TemporalDatasetManager:
         self.dataset_dir.mkdir(parents=True, exist_ok=True)
         self.metadata_path = self.dataset_dir / "dataset_metadata.json"
     
-    # def verify_dataset_volumes(self, dataset, target_gb_per_decade=1.0):
-    #     """
-    #     Verify that the dataset meets minimum volume requirements for each decade.
-        
-    #     Args:
-    #         dataset: The dataset to verify
-    #         target_gb_per_decade: Target gigabytes per decade
-            
-    #     Returns:
-    #         Dictionary mapping decades to their volume in GB, and a boolean indicating if all meet requirements
-    #     """
-    #     target_bytes = target_gb_per_decade * 1024 * 1024 * 1024
-    #     decade_volumes = {}
-    #     all_sufficient = True
-        
-    #     for decade, texts in dataset.items():
-    #         # Calculate total bytes for this decade
-    #         decade_bytes = sum(len(text[0].encode('utf-8')) for text in texts)
-    #         decade_gb = decade_bytes / (1024*1024*1024)
-    #         decade_volumes[decade] = decade_gb
-            
-    #         if decade_bytes < target_bytes:
-    #             logger.warning(f"Insufficient data for {decade}: {decade_gb:.2f} GB (target: {target_gb_per_decade:.2f} GB)")
-    #             all_sufficient = False
-        
-    #     # Log overall status
-    #     if all_sufficient:
-    #         logger.info(f"All decades meet the minimum volume requirement of {target_gb_per_decade:.2f} GB")
-    #     else:
-    #         logger.warning(f"Some decades do not meet the volume requirement of {target_gb_per_decade:.2f} GB")
-        
-    #     return decade_volumes, all_sufficient
-
     def verify_dataset_volumes(self, decade_texts, target_gb_per_decade=0.5):
         """
         Verify that each decade has sufficient data volume.
@@ -90,16 +58,86 @@ class TemporalDatasetManager:
         all_sufficient = True
         
         for decade, texts in decade_texts.items():
-            # Calculate data size in GB
-            byte_size = sum(len(text[0].encode('utf-8')) for text in texts)
-            gb_size = byte_size / (1024**3)
-            volumes[decade] = gb_size
-            
-            if gb_size < target_gb_per_decade:
+            # Handle both (text, source) tuples and raw text strings
+            if texts:
+                if isinstance(texts[0], tuple):
+                    # Calculate data size in GB
+                    byte_size = sum(len(text[0].encode('utf-8')) for text in texts)
+                else:
+                    # Raw text strings
+                    byte_size = sum(len(text.encode('utf-8')) for text in texts)
+                    
+                gb_size = byte_size / (1024**3)
+                volumes[decade] = gb_size
+                
+                if gb_size < target_gb_per_decade:
+                    all_sufficient = False
+                    logger.warning(f"Insufficient data for {decade}: {gb_size:.2f} GB (target: {target_gb_per_decade:.2f} GB)")
+            else:
+                volumes[decade] = 0.0
                 all_sufficient = False
-                logger.warning(f"Insufficient data for {decade}: {gb_size:.2f} GB (target: {target_gb_per_decade:.2f} GB)")
+                logger.warning(f"No data for {decade}: 0.00 GB (target: {target_gb_per_decade:.2f} GB)")
+        
+        # Log overall status
+        if all_sufficient:
+            logger.info(f"All decades meet the minimum volume requirement of {target_gb_per_decade:.2f} GB")
         
         return volumes, all_sufficient
+
+    def load_checkpoint(self, name="checkpoint"):
+        """
+        Load the most recent checkpoint.
+        
+        Args:
+            name: Checkpoint name prefix
+            
+        Returns:
+            Checkpoint data or None if not found
+        """
+        import pickle
+        
+        checkpoint_dir = CACHE_DIR / "checkpoints"
+        latest_path = checkpoint_dir / f"{name}_latest.pkl"
+        
+        if latest_path.exists():
+            try:
+                with open(latest_path, 'rb') as f:
+                    data = pickle.load(f)
+                logger.info(f"Loaded checkpoint from {latest_path}")
+                return data
+            except Exception as e:
+                logger.error(f"Failed to load checkpoint: {e}")
+        
+        return None
+
+    def save_checkpoint(self, data, name="checkpoint"):
+        """
+        Save a checkpoint during long-running operations.
+        
+        Args:
+            data: Data to checkpoint
+            name: Checkpoint name prefix
+        """
+        import pickle
+        import time
+        
+        checkpoint_dir = CACHE_DIR / "checkpoints"
+        checkpoint_dir.mkdir(parents=True, exist_ok=True)
+        
+        timestamp = time.strftime("%Y%m%d_%H%M%S")
+        checkpoint_path = checkpoint_dir / f"{name}_{timestamp}.pkl"
+        
+        try:
+            with open(checkpoint_path, 'wb') as f:
+                pickle.dump(data, f)
+            logger.info(f"Saved checkpoint to {checkpoint_path}")
+            
+            # Also save a latest version that always has the same name
+            latest_path = checkpoint_dir / f"{name}_latest.pkl"
+            with open(latest_path, 'wb') as f:
+                pickle.dump(data, f)
+        except Exception as e:
+            logger.error(f"Failed to save checkpoint: {e}")
 
     def ensure_historical_coverage(self):
         """
@@ -802,47 +840,121 @@ class TemporalDatasetManager:
         
         try:
             # Try to load C4 dataset samples - good source for 2000s and 2010s
-            from datasets import load_dataset
+            from datasets import load_dataset, DownloadConfig
+            import pickle
             
             logger.info("Loading samples from C4 dataset...")
             try:
-                # Load a small sample of C4
-                c4_dataset = load_dataset(
-                    "c4", "en", split="train", streaming=True, 
-                    trust_remote_code=True
-                )
+                # Set a timeout for the entire operation
+                import signal
                 
-                # Process a limited number of examples
-                sample_size = 10000  # Adjust as needed
+                class TimeoutException(Exception):
+                    pass
                 
-                processed = 0
-                assigned = 0
+                def timeout_handler(signum, frame):
+                    raise TimeoutException("C4 dataset loading timed out")
                 
-                for i, example in enumerate(c4_dataset.take(sample_size)):
-                    if "text" not in example or not example["text"]:
-                        continue
-                        
-                    text = example["text"]
-                    # Skip if too short
-                    if len(text) < 1000:
-                        continue
-                        
-                    # Extract decade information - focusing on modern decades
-                    decade = self._extract_decade_from_text_enhanced(text, modern_decades)
+                # Set a 5-minute timeout
+                signal.signal(signal.SIGALRM, timeout_handler)
+                signal.alarm(300)
+                
+                try:
+                    # Explicitly set a download configuration with more retries and longer timeout
+                    download_config = DownloadConfig(
+                        max_retries=10,
+                        timeout=120,
+                        force_download=False,
+                        cache_dir=str(CACHE_DIR / "c4")
+                    )
                     
-                    if decade:
-                        decade_texts[decade].append((text, "c4_dataset"))
-                        assigned += 1
+                    # Load a small sample of C4 with robust configuration
+                    c4_dataset = load_dataset(
+                        "c4", "en", split="train", streaming=True, 
+                        trust_remote_code=True,
+                        download_config=download_config
+                    )
                     
-                    processed += 1
-                    if processed % 1000 == 0:
-                        logger.info(f"Processed {processed} C4 examples, assigned {assigned}")
+                    # Reset the alarm
+                    signal.alarm(0)
+                    
+                    # Process a limited number of examples
+                    sample_size = 10000  # Adjust as needed
+                    
+                    processed = 0
+                    assigned = 0
+                    
+                    # Check if we have a checkpoint to resume from
+                    checkpoint_path = CACHE_DIR / "checkpoints" / "c4_processing_latest.pkl"
+                    if checkpoint_path.exists():
+                        try:
+                            with open(checkpoint_path, 'rb') as f:
+                                checkpoint = pickle.load(f)
+                                if "decade_texts" in checkpoint and "processed" in checkpoint:
+                                    # Resume from checkpoint
+                                    stored_texts = checkpoint["decade_texts"]
+                                    for decade in target_decades:
+                                        if decade in stored_texts and stored_texts[decade]:
+                                            decade_texts[decade].extend(stored_texts[decade])
+                                    processed = checkpoint.get("processed", 0)
+                                    assigned = checkpoint.get("assigned", 0)
+                                    logger.info(f"Resumed C4 processing from checkpoint: {processed} processed, {assigned} assigned")
+                        except Exception as e:
+                            logger.warning(f"Failed to load C4 processing checkpoint: {e}")
+                    
+                    # Skip already processed examples if resuming
+                    skip_count = processed
+                    processed_this_session = 0
+                    
+                    for i, example in enumerate(c4_dataset.take(sample_size + skip_count)):
+                        # Skip examples we've already processed
+                        if i < skip_count:
+                            continue
+                            
+                        if "text" not in example or not example["text"]:
+                            continue
+                            
+                        text = example["text"]
+                        # Skip if too short
+                        if len(text) < 1000:
+                            continue
+                            
+                        # Extract decade information - focusing on modern decades
+                        decade = self._extract_decade_from_text_enhanced(text, modern_decades)
                         
-                    if assigned >= 5000:  # Stop once we have enough
-                        break
-                
-                logger.info(f"Added {assigned} texts from C4 dataset")
-                
+                        if decade:
+                            decade_texts[decade].append((text, f"c4_dataset"))
+                            assigned += 1
+                        
+                        processed += 1
+                        processed_this_session += 1
+                        
+                        if processed % 1000 == 0:
+                            logger.info(f"Processed {processed} C4 examples, assigned {assigned}")
+                            
+                        # Save checkpoint periodically
+                        if processed_this_session % 2000 == 0:
+                            checkpoint_dir = CACHE_DIR / "checkpoints"
+                            checkpoint_dir.mkdir(exist_ok=True, parents=True)
+                            
+                            with open(checkpoint_dir / "c4_processing_latest.pkl", 'wb') as f:
+                                pickle.dump({
+                                    "processed": processed,
+                                    "assigned": assigned,
+                                    "decade_texts": decade_texts
+                                }, f)
+                            logger.info(f"Saved C4 processing checkpoint at {processed} examples")
+                            
+                        if assigned >= 5000:  # Stop once we have enough
+                            break
+                    
+                    logger.info(f"Added {assigned} texts from C4 dataset")
+                    
+                except TimeoutException:
+                    logger.warning("C4 dataset loading timed out after 5 minutes")
+                finally:
+                    # Ensure alarm is disabled even if there was an error
+                    signal.alarm(0)
+                    
             except Exception as e:
                 logger.warning(f"Failed to load C4 dataset: {e}")
         
@@ -851,15 +963,107 @@ class TemporalDatasetManager:
         
         # Try loading Wikipedia samples if available
         try:
-            wiki_texts = self._load_wikipedia_samples(modern_decades)
-            for decade, texts in wiki_texts.items():
-                if decade in decade_texts:
-                    decade_texts[decade].extend(texts)
+            # Make sure pickle is imported
+            wiki_cache_path = CACHE_DIR / "wikipedia_samples.pkl"
+            if wiki_cache_path.exists():
+                try:
+                    with open(wiki_cache_path, 'rb') as f:
+                        wiki_samples = pickle.load(f)
+                        logger.info(f"Loaded {sum(len(texts) for texts in wiki_samples.values())} Wikipedia samples from cache")
+                        for decade in modern_decades:
+                            if decade in wiki_samples:
+                                decade_texts[decade].extend(wiki_samples[decade])
+                except Exception as e:
+                    logger.warning(f"Failed to load Wikipedia samples from cache: {e}")
             
-            wiki_count = sum(len(texts) for decade, texts in wiki_texts.items())
-            logger.info(f"Added {wiki_count} texts from Wikipedia samples")
+            # If we don't have cached data or it failed to load, fetch new data
+            if all(len(decade_texts[decade]) == 0 for decade in modern_decades):
+                try:
+                    # Add a more robust download configuration
+                    from datasets import DownloadConfig
+                    download_config = DownloadConfig(
+                        max_retries=10,  # Increase retries
+                        timeout=300,     # Longer timeout (5 minutes)
+                        force_download=False,
+                        cache_dir=str(CACHE_DIR / "wikipedia")
+                    )
+                    
+                    wiki_dataset = load_dataset(
+                        "wikipedia", "20220301.en", split="train", streaming=True,
+                        trust_remote_code=True,
+                        download_config=download_config
+                    )
+                    
+                    sample_size = 8000  # Adjust as needed
+                    processed = 0
+                    assigned = 0
+                    
+                    for i, example in enumerate(wiki_dataset.take(sample_size)):
+                        if "text" not in example or not example["text"]:
+                            continue
+                            
+                        text = example["text"]
+                        title = example.get("title", "")
+                        
+                        # Skip if too short
+                        if len(text) < 1000:
+                            continue
+                            
+                        # Check for time-specific articles
+                        time_indicators = [
+                            "history", "in the", "century", "decade", 
+                            "period", "era", "year", "timeline"
+                        ]
+                        
+                        # Give preference to articles with time indicators in title
+                        has_time_indicator = any(indicator in title.lower() for indicator in time_indicators)
+                        
+                        # Extract decade with enhanced method
+                        decade = self._extract_decade_from_text_enhanced(text, modern_decades)
+                        
+                        # For time-related articles, use a more aggressive classification approach
+                        if has_time_indicator and not decade:
+                            # Look harder for temporal clues in the first paragraph
+                            first_para = text.split("\n\n")[0] if "\n\n" in text else text[:2000]
+                            decades_mentioned = []
+                            
+                            for d in modern_decades:
+                                decade_year = d[:4]
+                                if decade_year in first_para or d in first_para:
+                                    decades_mentioned.append(d)
+                            
+                            if decades_mentioned:
+                                decade = random.choice(decades_mentioned)
+                        
+                        if decade:
+                            # Check if we need more texts for this decade
+                            decade_texts[decade].append((text, f"wikipedia_{title}"))
+                            assigned += 1
+                        
+                        processed += 1
+                        if processed % 500 == 0:
+                            logger.info(f"Processed {processed} Wikipedia articles, assigned {assigned}")
+                            
+                        # Ensure we have a good balance
+                        min_per_decade = 200
+                        if all(len(texts) >= min_per_decade for decade, texts in decade_texts.items() 
+                            if decade in ["1990s", "2000s", "2010s"]):
+                            break
+                    
+                    # Cache the results
+                    try:
+                        with open(wiki_cache_path, 'wb') as f:
+                            pickle.dump(decade_texts, f)
+                    except Exception as e:
+                        logger.warning(f"Failed to cache Wikipedia samples: {e}")
+                    
+                    logger.info(f"Loaded {assigned} Wikipedia articles, distributed across {len(modern_decades)} decades")
+                
+                except Exception as e:
+                    logger.error(f"Failed to load Wikipedia dataset: {e}")
+        
         except Exception as e:
-            logger.warning(f"Failed to load Wikipedia samples: {e}")
+            logger.warning(f"Error processing Wikipedia samples: {e}")
         
         # Return the collected additional texts
         total_texts = sum(len(texts) for decade, texts in decade_texts.items())
@@ -995,10 +1199,26 @@ class TemporalDatasetManager:
             # Load a sample of Wikipedia
             from datasets import load_dataset
             
-            wiki_dataset = load_dataset(
-                "wikipedia", "20220301.en", split="train", streaming=True,
-                trust_remote_code=True
-            )
+            try:
+                # Add a more robust download configuration
+                from datasets import DownloadConfig
+                download_config = DownloadConfig(
+                    max_retries=10,  # Increase retries
+                    timeout=300,     # Longer timeout (5 minutes)
+                    force_download=False,
+                    cache_dir=str(CACHE_DIR / "wikipedia")
+                )
+                
+                wiki_dataset = load_dataset(
+                    "wikipedia", "20220301.en", split="train", streaming=True,
+                    trust_remote_code=True,
+                    download_config=download_config
+                )
+            except Exception as e:
+                logger.warning(f"Failed to load Wikipedia dataset: {e}")
+                # Create a fallback empty dataset
+                from datasets import Dataset
+                wiki_dataset = Dataset.from_dict({"text": [], "title": []})
             
             sample_size = 8000  # Adjust as needed
             processed = 0

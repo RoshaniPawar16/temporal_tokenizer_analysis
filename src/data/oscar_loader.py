@@ -77,9 +77,14 @@ class OscarLoader:
         try:
             # Load Oscar dataset with increased batch size for efficiency
             logger.info(f"Loading Oscar dataset from Hugging Face...")
-            dataset = load_dataset("oscar", self.oscar_subset, streaming=True, 
-                                split="train", trust_remote_code=True, 
-                                batch_size=1000)  # Increased batch size
+            try:
+                dataset = load_dataset("oscar", self.oscar_subset, streaming=True, 
+                                    split="train", trust_remote_code=True)
+            except Exception as e:
+                # Fallback to a more compatible configuration
+                logger.warning(f"Failed to load Oscar with batch_size parameter: {e}")
+                dataset = load_dataset("oscar", self.oscar_subset, streaming=True, 
+                                    split="train", trust_remote_code=True)
             
             # Process a sample of the dataset to find temporal information
             processed_count = 0

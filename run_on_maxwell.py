@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from pathlib import Path
 import time
-
+import pickle
 from datetime import datetime
 from tqdm import tqdm
 
@@ -71,6 +71,41 @@ def setup_directories():
     (results_dir / "bootstrap").mkdir(exist_ok=True)
     
     return results_dir
+
+def limit_memory_usage():
+    """
+    Limit memory usage to prevent OOM errors on cluster jobs.
+    """
+    import gc
+    import os
+    import psutil
+    
+    # Force garbage collection
+    gc.collect()
+    
+    # Get current memory usage
+    process = psutil.Process(os.getpid())
+    memory_info = process.memory_info()
+    memory_usage_gb = memory_info.rss / (1024 ** 3)
+    
+    logger.info(f"Current memory usage: {memory_usage_gb:.2f} GB")
+    
+    # If memory usage is high, take action
+    if memory_usage_gb > 30:  # 30 GB threshold - adjust based on your cluster's limits
+        logger.warning(f"High memory usage detected: {memory_usage_gb:.2f} GB")
+        # Force more aggressive garbage collection
+        gc.collect()
+        # Clear any large variables if possible
+        import sys
+        for name in list(sys.modules.keys()):
+            if not name.startswith('_') and name not in ('sys', 'os', 'gc', 'psutil'):
+                sys.modules.pop(name, None)
+        gc.collect()
+        
+        # Check memory again
+        memory_info = process.memory_info()
+        memory_usage_gb = memory_info.rss / (1024 ** 3)
+        logger.info(f"Memory usage after cleanup: {memory_usage_gb:.2f} GB")
 
 def run_parallel_analysis(inference, decade_texts):
     """Process decades in parallel using multiprocessing with better error handling."""
@@ -215,6 +250,7 @@ def run_analysis(args):
         
         # Create dataset with target distribution
         logger.info(f"Creating dataset with target size of {args.target_size_gb}GB...")
+        limit_memory_usage()
         controlled_dataset = dataset_manager.create_large_dataset(
             distribution=selected_dist,
             target_size_gb=args.target_size_gb
@@ -233,6 +269,7 @@ def run_analysis(args):
     if not all_sufficient:
         # Identify the decades that need augmentation
         insufficient_decades = []
+        volume_check, all_sufficient = self.verify_dataset_volumes(decade_texts)
         for decade, volume in volume_check.items():
             if volume < 0.5:  # Less than 0.5 GB
                 insufficient_decades.append(decade)
@@ -327,6 +364,7 @@ def run_analysis(args):
         return
         
     logger.info(f"Analyzing {len(non_empty_decades)} decades with data")
+    limit_memory_usage()
     decade_patterns = run_parallel_analysis(inference, non_empty_decades)
     
     # Verify we have results
@@ -380,6 +418,7 @@ def run_analysis(args):
         logger.info(f"Performing bootstrap validation with {bootstrap_iterations} iterations...")
         
         try:
+            limit_memory_usage()
             confidence_intervals = validator.bootstrap_analysis(
                 decade_texts=decade_texts,
                 n_bootstrap=bootstrap_iterations,

@@ -465,27 +465,60 @@ class GutenbergLoader:
             
             response = requests.get(html_url, timeout=60)
             if response.status_code == 200:
-                from bs4 import BeautifulSoup
-                soup = BeautifulSoup(response.text, 'html.parser')
-                
-                # Remove headers, footers
-                for div in soup.find_all(['div', 'pre'], class_=['pgheader', 'pgfooter']):
-                    div.decompose()
-                
-                # Get primary content
-                content_divs = soup.find_all(['div', 'section'], class_=['chapter', 'section', 'pgcontent'])
-                if content_divs:
-                    text = " ".join(div.get_text() for div in content_divs)
-                else:
-                    # Fall back to body content
-                    text = soup.get_text()
-                
-                # Cache the extracted text
-                with open(cache_path, 'w', encoding='utf-8') as f:
-                    f.write(text)
-                
-                logger.info(f"Successfully extracted text from HTML for book {book_id} ({len(text)} chars)")
-                return self._clean_text(text)
+                # Use a try-except block to properly handle BeautifulSoup import errors
+                try:
+                    from bs4 import BeautifulSoup
+                    soup = BeautifulSoup(response.text, 'html.parser')
+                    
+                    # Remove headers, footers
+                    for div in soup.find_all(['div', 'pre'], class_=['pgheader', 'pgfooter']):
+                        div.decompose()
+                    
+                    # Get primary content
+                    content_divs = soup.find_all(['div', 'section'], class_=['chapter', 'section', 'pgcontent', 'pgdocbody'])
+                    
+                    if content_divs:
+                        text = " ".join(div.get_text() for div in content_divs)
+                    else:
+                        # Try to find the main content heuristically
+                        body = soup.find('body')
+                        if body:
+                            # Get the largest div in the body as a fallback
+                            content_divs = body.find_all('div')
+                            if content_divs:
+                                # Sort by content length and take the largest
+                                largest_div = max(content_divs, key=lambda div: len(div.get_text()))
+                                text = largest_div.get_text()
+                            else:
+                                # Use the whole body as a last resort
+                                text = body.get_text()
+                        else:
+                            # Last resort - get all text
+                            text = soup.get_text()
+                        
+                    # Skip if text is too short after extraction
+                    if len(text) < 1000:
+                        logger.warning(f"Extracted text too short for {book_id}: {len(text)} chars")
+                        return None
+                        
+                    # Cache the extracted text
+                    with open(cache_path, 'w', encoding='utf-8') as f:
+                        f.write(text)
+                    
+                    logger.info(f"Successfully extracted text from HTML for book {book_id} ({len(text)} chars)")
+                    return self._clean_text(text)
+                    
+                except ImportError as e:
+                    logger.warning(f"Failed to import BeautifulSoup for HTML extraction: {e}")
+                    
+                    # Fallback to a very basic HTML text extraction
+                    text = re.sub(r'<[^>]+>', ' ', response.text)  # Simple HTML tag removal
+                    text = re.sub(r'\s+', ' ', text).strip()  # Normalize whitespace
+                    
+                    if len(text) >= 1000:
+                        with open(cache_path, 'w', encoding='utf-8') as f:
+                            f.write(text)
+                        return self._clean_text(text)
             
         except Exception as e:
             logger.debug(f"HTML extraction failed for {book_id}: {e}")
