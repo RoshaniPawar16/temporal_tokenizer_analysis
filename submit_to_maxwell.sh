@@ -43,14 +43,8 @@ export OMP_NUM_THREADS=4
 export PYTHONUNBUFFERED=1
 export HF_DATASETS_TRUST_REMOTE_CODE=1
 
-# Fix dataset_manager.py issue if needed
-echo "Checking dataset_manager.py for tuple unpacking issue..."
-if grep -q "for decade, volume in volume_check\.items()" src/data/dataset_manager.py; then
-    echo "Fixing tuple unpacking issue in dataset_manager.py..."
-    sed -i 's/for decade, volume in volume_check\.items()/volume_check, all_sufficient = self.verify_dataset_volumes(controlled_dataset)\nfor decade, volume in volume_check.items()/' src/data/dataset_manager.py || echo "Failed to fix dataset_manager.py"
-else
-    echo "dataset_manager.py appears to be already fixed or has a different pattern"
-fi
+# Skipping the problematic sed command - manual fix has been applied
+echo "Skipping automatic dataset_manager.py modification - manual fix applied"
 
 # First run a minimal test to make sure imports work
 echo "Testing imports..."
