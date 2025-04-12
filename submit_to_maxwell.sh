@@ -28,13 +28,11 @@ source venv/bin/activate
 # Upgrade pip first
 pip install --upgrade pip --no-cache-dir
 
-# Install packages with --only-binary flag to avoid compilation
-pip install --only-binary=:all: numpy scipy matplotlib pandas tqdm --no-cache-dir
-pip install --only-binary=:all: beautifulsoup4 requests --no-cache-dir
-
-# Try a minimal set of packages for your analysis
-# Avoid packages that require compilation
-pip install --only-binary=:all: transformers --no-cache-dir || echo "Failed to install transformers"
+# Install all required packages - note that seaborn is included
+pip install --no-cache-dir numpy scipy matplotlib pandas tqdm seaborn
+pip install --no-cache-dir beautifulsoup4 requests bs4
+pip install --no-cache-dir transformers datasets huggingface_hub
+pip install --no-cache-dir cvxpy psutil
 
 # Configure environment
 export HF_DATASETS_CACHE="./hf_cache"
@@ -45,25 +43,51 @@ export OMP_NUM_THREADS=4
 export PYTHONUNBUFFERED=1
 export HF_DATASETS_TRUST_REMOTE_CODE=1
 
-# Let's modify the approach to fix dataset_manager.py issue
-echo "Modifying dataset_manager.py to fix tuple unpacking issue..."
-sed -i 's/for decade, volume in volume_check\.items()/volume_check, all_sufficient = self.verify_dataset_volumes(controlled_dataset)\nfor decade, volume in volume_check.items()/' src/data/dataset_manager.py || echo "Failed to fix dataset_manager.py"
+# Fix dataset_manager.py issue if needed
+echo "Checking dataset_manager.py for tuple unpacking issue..."
+if grep -q "for decade, volume in volume_check\.items()" src/data/dataset_manager.py; then
+    echo "Fixing tuple unpacking issue in dataset_manager.py..."
+    sed -i 's/for decade, volume in volume_check\.items()/volume_check, all_sufficient = self.verify_dataset_volumes(controlled_dataset)\nfor decade, volume in volume_check.items()/' src/data/dataset_manager.py || echo "Failed to fix dataset_manager.py"
+else
+    echo "dataset_manager.py appears to be already fixed or has a different pattern"
+fi
 
 # First run a minimal test to make sure imports work
 echo "Testing imports..."
-python -c "import numpy; import scipy; import matplotlib.pyplot; print('Basic imports successful')" || echo "Basic imports failed"
+python -c "import numpy; import scipy; import matplotlib.pyplot; import seaborn; import cvxpy; print('Basic imports successful')" || echo "Basic imports failed"
 
-# Run analyses
+# Create directory for results
+mkdir -p results/figures
+mkdir -p results/distributions
+mkdir -p results/bootstrap
+
+# Run each analysis with error handling and reduced iterations for testing
 echo "Running uniform distribution analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution uniform --texts_per_decade 10000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30 || echo "Uniform distribution analysis failed"
+python run_on_maxwell.py --tokenizer gpt2 --distribution uniform --texts_per_decade 5000 --target_size_gb 0.5 --bootstrap --bootstrap_iterations 10 || {
+    echo "Uniform distribution analysis failed with exit code $?";
+    echo "Saving trace...";
+    python -c "import traceback; traceback.print_exc()" > error_uniform.log;
+}
 
 echo "Running recency bias analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution recency_bias --texts_per_decade 10000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30 || echo "Recency bias analysis failed"
+python run_on_maxwell.py --tokenizer gpt2 --distribution recency_bias --texts_per_decade 5000 --target_size_gb 0.5 --bootstrap --bootstrap_iterations 10 || {
+    echo "Recency bias analysis failed with exit code $?";
+    echo "Saving trace...";
+    python -c "import traceback; traceback.print_exc()" > error_recency.log;
+}
 
 echo "Running historical bias analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution historical_bias --texts_per_decade 10000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30 || echo "Historical bias analysis failed"
+python run_on_maxwell.py --tokenizer gpt2 --distribution historical_bias --texts_per_decade 5000 --target_size_gb 0.5 --bootstrap --bootstrap_iterations 10 || {
+    echo "Historical bias analysis failed with exit code $?";
+    echo "Saving trace...";
+    python -c "import traceback; traceback.print_exc()" > error_historical.log;
+}
 
 echo "Running bimodal distribution analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution bimodal --texts_per_decade 10000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30 || echo "Bimodal distribution analysis failed"
+python run_on_maxwell.py --tokenizer gpt2 --distribution bimodal --texts_per_decade 5000 --target_size_gb 0.5 --bootstrap --bootstrap_iterations 10 || {
+    echo "Bimodal distribution analysis failed with exit code $?";
+    echo "Saving trace...";
+    python -c "import traceback; traceback.print_exc()" > error_bimodal.log;
+}
 
 echo "Job completed at: $(date)"
