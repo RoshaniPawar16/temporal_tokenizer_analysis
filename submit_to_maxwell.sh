@@ -6,12 +6,6 @@
 #SBATCH --mem=64G
 #SBATCH --output=temporal_analysis_%j.log
 
-# Enhanced error handling
-set -e  # Exit immediately if a command exits with a non-zero status
-
-# Function to handle errors and clean up
-trap 'echo "Error occurred, cleaning up"; exit 1' ERR
-
 # Display information about the job
 echo "Running on node: $(hostname)"
 echo "Starting at: $(date)"
@@ -22,30 +16,28 @@ if [ -d "venv" ]; then
     rm -rf venv
 fi
 
-# Find which system Python to use - prefer 3.9 if available
-PYTHON_CMD=""
-if command -v python3.9 &> /dev/null; then
-    PYTHON_CMD="python3.9"
-elif command -v python3 &> /dev/null; then
-    PYTHON_CMD="python3"
-else
-    echo "No suitable Python found"
-    exit 1
-fi
+# Find which system Python to use
+echo "Looking for available Python versions..."
+which python3.9 || which python3.8 || which python3.7 || which python3.6 || which python3 || which python
+
+# Use the latest available Python
+PYTHON_CMD=$(which python3.9 || which python3.8 || which python3.7 || which python3.6 || which python3 || which python)
 
 echo "Using Python: $PYTHON_CMD"
 $PYTHON_CMD --version
+
+# First upgrade pip
+$PYTHON_CMD -m pip install --upgrade pip
 
 # Create a fresh virtual environment
 $PYTHON_CMD -m venv venv
 source venv/bin/activate
 
-# Install a compatible numpy version first
-pip install --no-cache-dir numpy==1.22.4
-
-# Install other dependencies
-pip install --no-cache-dir scipy matplotlib seaborn pandas cvxpy tqdm 
-pip install --no-cache-dir transformers datasets huggingface_hub bs4 psutil retrying
+# Install dependencies flexibly (without specifying versions)
+echo "Installing dependencies..."
+pip install --no-cache-dir numpy scipy matplotlib seaborn pandas
+pip install --no-cache-dir cvxpy tqdm bs4 psutil retrying
+pip install --no-cache-dir transformers datasets huggingface_hub
 
 # Configure environment
 export HF_DATASETS_CACHE="./hf_cache"
