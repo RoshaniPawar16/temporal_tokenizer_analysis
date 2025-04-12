@@ -43,9 +43,6 @@ export OMP_NUM_THREADS=4
 export PYTHONUNBUFFERED=1
 export HF_DATASETS_TRUST_REMOTE_CODE=1
 
-# Skipping the problematic sed command - manual fix has been applied
-echo "Skipping automatic dataset_manager.py modification - manual fix applied"
-
 # First run a minimal test to make sure imports work
 echo "Testing imports..."
 python -c "import numpy; import scipy; import matplotlib.pyplot; import seaborn; import cvxpy; print('Basic imports successful')" || echo "Basic imports failed"
