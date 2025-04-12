@@ -269,7 +269,6 @@ def run_analysis(args):
     if not all_sufficient:
         # Identify the decades that need augmentation
         insufficient_decades = []
-        volume_check, all_sufficient = self.verify_dataset_volumes(decade_texts)
         for decade, volume in volume_check.items():
             if volume < 0.5:  # Less than 0.5 GB
                 insufficient_decades.append(decade)
