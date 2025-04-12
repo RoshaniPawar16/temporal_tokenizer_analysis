@@ -10,60 +10,53 @@
 set -e  # Exit immediately if a command exits with a non-zero status
 
 # Function to handle errors and clean up
-cleanup() {
-    EXIT_CODE=$?
-    if [ $EXIT_CODE -ne 0 ]; then
-        echo "Error detected, exit code: $EXIT_CODE"
-        echo "Saving any partial results..."
-    fi
-    
-    echo "Cleaning up..."
-    echo "Job exited with status $EXIT_CODE"
-    exit $EXIT_CODE
-}
-
-# Set up the trap
-trap cleanup EXIT
+trap 'echo "Error occurred, cleaning up"; exit 1' ERR
 
 # Display information about the job
 echo "Running on node: $(hostname)"
 echo "Starting at: $(date)"
 echo "Working directory: $(pwd)"
 
-# Create a clean conda environment instead of venv
-echo "Setting up conda environment..."
-module load anaconda3  # Try to load any anaconda module
-
-# If previous conda environment exists, remove it to avoid conflicts
-if [ -d "./conda_env" ]; then
-    rm -rf ./conda_env
+# Clean up any previous environment to avoid conflicts
+if [ -d "venv" ]; then
+    rm -rf venv
 fi
 
-# Create a new conda environment with specific Python version
-conda create -y -p ./conda_env python=3.9
-source activate ./conda_env
+# Find which system Python to use - prefer 3.9 if available
+PYTHON_CMD=""
+if command -v python3.9 &> /dev/null; then
+    PYTHON_CMD="python3.9"
+elif command -v python3 &> /dev/null; then
+    PYTHON_CMD="python3"
+else
+    echo "No suitable Python found"
+    exit 1
+fi
 
-# Verify Python version
-python --version
+echo "Using Python: $PYTHON_CMD"
+$PYTHON_CMD --version
 
-# Install required packages
-echo "Installing required packages..."
-pip install --no-cache-dir numpy==1.22.4 scipy matplotlib seaborn pandas cvxpy tqdm datasets huggingface_hub transformers bs4 psutil retrying
+# Create a fresh virtual environment
+$PYTHON_CMD -m venv venv
+source venv/bin/activate
 
-# Set up cache for Hugging Face datasets with memory limits
+# Install a compatible numpy version first
+pip install --no-cache-dir numpy==1.22.4
+
+# Install other dependencies
+pip install --no-cache-dir scipy matplotlib seaborn pandas cvxpy tqdm 
+pip install --no-cache-dir transformers datasets huggingface_hub bs4 psutil retrying
+
+# Configure environment
 export HF_DATASETS_CACHE="./hf_cache"
 mkdir -p $HF_DATASETS_CACHE
-export HF_DATASETS_IN_MEMORY_MAX_SIZE=4000000000  # 4GB max memory for datasets
-
-# Configure environment for better memory usage
-export TOKENIZERS_PARALLELISM=false  # Disable parallel tokenization to reduce memory
-export OMP_NUM_THREADS=4  # Limit number of OpenMP threads
-
-# Set chunk size for processing to avoid memory issues
+export HF_DATASETS_IN_MEMORY_MAX_SIZE=4000000000
+export TOKENIZERS_PARALLELISM=false
+export OMP_NUM_THREADS=4
 export PYTHONUNBUFFERED=1
 export HF_DATASETS_TRUST_REMOTE_CODE=1
 
-# Run analysis with memory-optimized settings
+# Run analyses
 echo "Running uniform distribution analysis..."
 python run_on_maxwell.py --tokenizer gpt2 --distribution uniform --texts_per_decade 10000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30 || echo "Uniform distribution analysis failed"
 
