@@ -11,26 +11,24 @@ echo "Running on node: $(hostname)"
 echo "Starting at: $(date)"
 echo "Working directory: $(pwd)"
 
-# Load required modules for Python
-module load python/3.9.5
+# Load a Python module that's available on Maxwell
+module load python/3.9.12
 
 # Verify Python version
 echo "Python version:"
 python --version
 
-# Create and activate a conda environment (more reliable than venv)
-if [ ! -d "conda_env" ]; then
-    echo "Creating conda environment..."
-    module load anaconda3/2022.10
-    conda create -p ./conda_env python=3.9.5 -y
+# Create and use a virtual environment instead of conda
+echo "Creating Python virtual environment..."
+if [ ! -d "venv" ]; then
+    python -m venv venv
 fi
 
-echo "Activating conda environment..."
-source $(conda info --base)/etc/profile.d/conda.sh
-conda activate ./conda_env
+echo "Activating virtual environment..."
+source venv/bin/activate
 
 # Verify environment Python version
-echo "Conda environment Python version:"
+echo "Virtual environment Python version:"
 python --version
 
 # Install required packages with specific versions
@@ -54,10 +52,6 @@ export HF_HOME="./hf_cache"
 export HF_HUB_CACHE="./hf_cache/hub"
 export HF_DATASETS_CACHE="./hf_cache/datasets"
 mkdir -p $HF_HOME $HF_HUB_CACHE $HF_DATASETS_CACHE
-
-# Configure proxy if needed (uncomment and modify if required)
-# export HTTP_PROXY="http://proxy.abdn.ac.uk:8080"
-# export HTTPS_PROXY="http://proxy.abdn.ac.uk:8080"
 
 # Configure environment for better memory usage
 export TOKENIZERS_PARALLELISM=false
