@@ -75,66 +75,120 @@ class OscarLoader:
         decade_texts = {decade: [] for decade in target_decades}
         
         try:
-            # Load Oscar dataset with increased batch size for efficiency
+            # Try different approaches for loading Oscar, with fallbacks for different library versions
             logger.info(f"Loading Oscar dataset from Hugging Face...")
+            
+            # First try the modern approach
             try:
-                dataset = load_dataset("oscar", self.oscar_subset, streaming=True, 
-                                    split="train", trust_remote_code=True)
-            except Exception as e:
-                # Fallback to a more compatible configuration
-                logger.warning(f"Failed to load Oscar with batch_size parameter: {e}")
-                dataset = load_dataset("oscar", self.oscar_subset, streaming=True, 
-                                    split="train", trust_remote_code=True)
+                from datasets import load_dataset
+                dataset = load_dataset("oscar", "unshuffled_deduplicated_en", split="train")
+                
+                logger.info(f"Successfully loaded Oscar with modern approach")
+                modern_load_success = True
+            except Exception as e1:
+                logger.warning(f"Failed to load Oscar with modern approach: {e1}")
+                modern_load_success = False
+                
+                # Try older approach without trust_remote_code
+                try:
+                    dataset = load_dataset("oscar", "unshuffled_deduplicated_en", split="train")
+                    logger.info(f"Successfully loaded Oscar with older approach")
+                except Exception as e2:
+                    logger.warning(f"Failed to load Oscar with older approach: {e2}")
+                    
+                    # Try loading from local files if available
+                    try:
+                        local_path = self.raw_data_dir / "oscar_samples.json"
+                        if local_path.exists():
+                            with open(local_path, 'r', encoding='utf-8') as f:
+                                local_samples = json.load(f)
+                                
+                            # Process samples
+                            for sample in local_samples:
+                                if "text" in sample:
+                                    text = sample["text"]
+                                    decade = self._extract_decade_from_text(text, target_decades)
+                                    if decade and decade in target_decades:
+                                        decade_texts[decade].append((text, "oscar_local"))
+                            
+                            logger.info(f"Loaded {sum(len(texts) for texts in decade_texts.values())} texts from local Oscar samples")
+                        else:
+                            logger.warning("No local Oscar samples available")
+                            
+                            # Last resort - try to download a small sample directly
+                            try:
+                                import requests
+                                url = "https://huggingface.co/datasets/oscar/resolve/main/unshuffled_deduplicated_en/train-sample.json"
+                                response = requests.get(url, timeout=120)
+                                if response.status_code == 200:
+                                    samples = [json.loads(line) for line in response.text.splitlines() if line.strip()]
+                                    
+                                    for sample in samples:
+                                        if "text" in sample:
+                                            text = sample["text"]
+                                            decade = self._extract_decade_from_text(text, target_decades)
+                                            if decade and decade in target_decades:
+                                                decade_texts[decade].append((text, "oscar_direct"))
+                                    
+                                    logger.info(f"Loaded {sum(len(texts) for texts in decade_texts.values())} texts from direct Oscar sample")
+                                else:
+                                    logger.warning(f"Failed to download Oscar sample: HTTP {response.status_code}")
+                            except Exception as e3:
+                                logger.error(f"Failed to download Oscar sample: {e3}")
+                    except Exception as e3:
+                        logger.error(f"Failed to load local Oscar samples: {e3}")
             
-            # Process a sample of the dataset to find temporal information
-            processed_count = 0
-            assigned_count = 0
-            
-            # Increase samples to process for better coverage
-            samples_to_process = texts_per_decade * 50  # Significantly increased
-            
-            logger.info(f"Processing {samples_to_process} Oscar samples...")
-            
-            for i, example in enumerate(tqdm(dataset.take(samples_to_process), 
-                                        total=samples_to_process,
-                                        desc="Processing Oscar samples")):
-                processed_count += 1
+            # If we successfully loaded the dataset, process it
+            if modern_load_success:
+                # Process a sample of the dataset to find temporal information
+                processed_count = 0
+                assigned_count = 0
                 
-                # Extract text
-                if 'text' not in example:
-                    continue
+                # Use batch processing to avoid memory issues
+                batch_size = 100
+                samples_to_process = texts_per_decade * 10  # 10x to ensure we find enough
                 
-                text = example['text']
+                logger.info(f"Processing {samples_to_process} Oscar samples in batches...")
                 
-                # Relaxed minimum length requirement to include more data
-                if len(text) < 500:  # Reduced from 1000
-                    continue
+                for i in range(0, samples_to_process, batch_size):
+                    current_batch = min(batch_size, samples_to_process - i)
+                    if current_batch <= 0:
+                        break
+                        
+                    batch = list(dataset.take(current_batch))
+                    processed_count += len(batch)
+                    
+                    for j, example in enumerate(batch):
+                        if 'text' not in example:
+                            continue
+                        
+                        text = example['text']
+                        
+                        # Relaxed minimum length requirement
+                        if len(text) < 500:
+                            continue
+                        
+                        # Try to extract decade information from text
+                        decade = self._extract_decade_from_text(text, target_decades)
+                        
+                        if decade:
+                            # Check if we need more texts for this decade
+                            if len(decade_texts[decade]) < texts_per_decade * 1.2:
+                                decade_texts[decade].append((text, f"oscar_{i+j}"))
+                                assigned_count += 1
+                    
+                    # Log progress
+                    if (i // batch_size) % 10 == 0:
+                        logger.info(f"Processed {processed_count} samples, assigned {assigned_count} texts")
+                    
+                    # Check if we have enough texts for all decades
+                    if all(len(texts) >= texts_per_decade for decade, texts in decade_texts.items() 
+                        if decade in target_decades):
+                        logger.info("Collected sufficient texts for all target decades")
+                        break
                 
-                # Try to extract decade information from text
-                decade = self._extract_decade_from_text(text, target_decades)
-                
-                if decade:
-                    # Check if we need more texts for this decade
-                    if len(decade_texts[decade]) < texts_per_decade * 1.2:  # Get 20% extra for filtering
-                        decade_texts[decade].append((text, f"oscar_{i}"))
-                        assigned_count += 1
-                
-                # Check if we have enough texts for all decades - only stop if we have substantial excess
-                if all(len(texts) >= texts_per_decade * 1.2 for decade, texts in decade_texts.items() 
-                    if decade in target_decades):
-                    logger.info("Collected sufficient texts for all target decades")
-                    break
-                
-                # Log progress periodically
-                if i % 5000 == 0:  # More frequent logging
-                    logger.info(f"Processed {i} samples, assigned {assigned_count} texts")
-                    for decade in target_decades:
-                        logger.info(f"  {decade}: {len(decade_texts[decade])} texts")
-            
-            # Log final stats
-            logger.info(f"Oscar processing complete: processed {processed_count} records, assigned {assigned_count} texts")
-            for decade in target_decades:
-                logger.info(f"Final count for {decade}: {len(decade_texts[decade])} texts")
+                # Log final stats
+                logger.info(f"Oscar processing complete: processed {processed_count} records, assigned {assigned_count} texts")
             
             # Cache the results
             try:
@@ -150,6 +204,10 @@ class OscarLoader:
         
         except Exception as e:
             logger.error(f"Error loading Oscar dataset: {e}")
+        
+        # Final stats
+        for decade in target_decades:
+            logger.info(f"Final count for {decade}: {len(decade_texts[decade])} texts")
         
         return decade_texts
 

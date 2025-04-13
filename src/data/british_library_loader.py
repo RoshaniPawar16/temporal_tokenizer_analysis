@@ -46,72 +46,68 @@ class BritishLibraryLoader:
             return
                 
         logger.info("Loading British Library Books dataset from Hugging Face...")
+        
+        # First check if we have a cached version we can use
+        cache_path = self.cache_dir / "british_library_cached.json"
+        if cache_path.exists():
+            try:
+                import json
+                with open(cache_path, 'r', encoding='utf-8') as f:
+                    cached_data = json.load(f)
+                    self.dataset = {'train': cached_data}
+                    logger.info(f"Loaded {len(cached_data)} records from cached British Library data")
+                    return
+            except Exception as e:
+                logger.warning(f"Failed to load British Library from cache: {e}")
+        
+        # If no cache, try direct dataset loading with fixed parameters
         try:
-            # Load each configuration separately with explicit timeouts and retries
-            datasets = {}
-            # Use the CORRECT configurations that actually exist in the dataset
-            for config in ['1510_1699', '1700_1799', '1800_1899', '1500_1899']:
-                max_retries = 5
-                for retry in range(max_retries):
-                    try:
-                        logger.info(f"Loading BL configuration {config} (attempt {retry+1}/{max_retries})")
-                        
-                        # Set explicit timeout and download chunk size
-                        ds = load_dataset(
-                            "TheBritishLibrary/blbooks", 
-                            config,
-                            trust_remote_code=True,
-                            cache_dir=str(self.cache_dir),
-                            download_config=DownloadConfig(
-                                max_retries=5,
-                                force_download=False,
-                                cache_dir=str(self.cache_dir),
-                            )
-                        )
-                        
-                        if 'train' in ds:
-                            # Take a larger subset to get more data
-                            subset_size = min(10000, len(ds['train']))
-                            if subset_size > 0:
-                                # Sample from the dataset
-                                indices = list(range(len(ds['train'])))
-                                random.shuffle(indices)
-                                subset_indices = indices[:subset_size]
-                                datasets[config] = ds['train'].select(subset_indices)
-                                logger.info(f"Successfully loaded {subset_size} samples from {config}")
-                                break  # Success, exit retry loop
-                        else:
-                            logger.warning(f"No 'train' split in {config}")
-                            
-                    except Exception as e:
-                        logger.warning(f"Attempt {retry+1}/{max_retries} for {config} failed: {e}")
-                        time.sleep(10)  # Wait before retrying
+            # Only use parameters guaranteed to be compatible with older datasets library versions
+            from datasets import load_dataset
             
-            # If we got any successful loads, combine them
-            if datasets:
+            # First try with conservative parameters
+            try:
+                dataset = load_dataset(
+                    "TheBritishLibrary/blbooks", 
+                    "1800_1899",  # Most reliable configuration
+                    split="train"
+                )
+                if dataset is not None and len(dataset) > 0:
+                    logger.info(f"Successfully loaded {len(dataset)} records from British Library")
+                    self.dataset = {'train': dataset}
+                    return
+            except Exception as e:
+                logger.warning(f"Failed to load British Library with standard parameters: {e}")
+            
+            # Fallback to local loading if available
+            local_path = self.cache_dir / "british_library_raw"
+            if local_path.exists():
                 try:
-                    from datasets import concatenate_datasets
-                    combined = concatenate_datasets(list(datasets.values()))
-                    self.dataset = {'train': combined}
-                    logger.info(f"Combined dataset has {len(combined)} records")
+                    dataset = load_dataset(
+                        "json", 
+                        data_files=str(local_path / "*.json"),
+                        split="train"
+                    )
+                    if dataset is not None and len(dataset) > 0:
+                        logger.info(f"Successfully loaded {len(dataset)} records from local British Library files")
+                        self.dataset = {'train': dataset}
+                        return
                 except Exception as e:
-                    logger.error(f"Failed to combine datasets: {e}")
-                    # Use whatever we got successfully
-                    if datasets:
-                        first_key = list(datasets.keys())[0]
-                        self.dataset = {'train': datasets[first_key]}
-                        logger.info(f"Using only dataset {first_key} with {len(datasets[first_key])} records")
-                    else:
-                        logger.warning("No datasets available after attempted loads")
-                        self.dataset = {'train': []}
-            else:
-                logger.warning("No BL configurations could be loaded, falling back to empty dataset")
-                self.dataset = {'train': []}
-                
+                    logger.warning(f"Failed to load local British Library data: {e}")
+        
         except Exception as e:
             logger.error(f"Failed to load British Library dataset: {e}")
-            # Create a fallback empty dataset
-            self.dataset = {'train': []}
+        
+        # Last resort: Create a small synthetic placeholder dataset
+        logger.warning("No British Library dataset available - using fallback mechanism")
+        
+        # Either load cached synthetic or create new
+        try:
+            self._create_synthetic_british_library_dataset()
+            logger.info("Created synthetic British Library dataset")
+        except Exception as e:
+            logger.error(f"Failed to create synthetic dataset: {e}")
+            self.dataset = {'train': []}  # Empty fallback
 
     def diagnose_dataset_structure(self):
         """

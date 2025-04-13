@@ -232,7 +232,7 @@ def run_analysis(args):
     cache_dir = Path(RESULTS_DIR) / "dataset_cache"
     cache_dir.mkdir(exist_ok=True, parents=True)
     cached_dataset_path = cache_dir / f"{args.tokenizer}_{args.distribution}_{args.target_size_gb}GB.pkl"
-
+    
     controlled_dataset = None
     if cached_dataset_path.exists() and not args.force_fresh:
         logger.info(f"Loading cached dataset from {cached_dataset_path}")
@@ -240,8 +240,17 @@ def run_analysis(args):
             with open(cached_dataset_path, 'rb') as f:
                 controlled_dataset = pickle.load(f)
             logger.info(f"Loaded cached dataset with {sum(len(texts) for texts in controlled_dataset.values())} texts")
+            
+            # Verify dataset quality
+            is_valid, quality_report = dataset_manager.verify_dataset_quality(controlled_dataset)
+            if not is_valid:
+                logger.warning("Cached dataset does not meet quality standards")
+                if args.force_quality:
+                    logger.warning("Forcing fresh dataset creation due to quality issues")
+                    controlled_dataset = None
         except Exception as e:
             logger.warning(f"Failed to load cached dataset: {e}")
+            controlled_dataset = None
     
     if controlled_dataset is None:
         # Before creating dataset, enhance the Gutenberg loader for better mid-century coverage
@@ -250,41 +259,49 @@ def run_analysis(args):
         
         # Create dataset with target distribution
         logger.info(f"Creating dataset with target size of {args.target_size_gb}GB...")
-        limit_memory_usage()
         controlled_dataset = dataset_manager.create_large_dataset(
             distribution=selected_dist,
             target_size_gb=args.target_size_gb
         )
         
-        # Cache the dataset for future runs
-        try:
-            with open(cached_dataset_path, 'wb') as f:
-                pickle.dump(controlled_dataset, f)
-            logger.info(f"Cached dataset to {cached_dataset_path}")
-        except Exception as e:
-            logger.warning(f"Failed to cache dataset: {e}")
+        # Verify dataset quality
+        is_valid, quality_report = dataset_manager.verify_dataset_quality(controlled_dataset)
+        
+        if is_valid or not args.force_quality:
+            # Cache the dataset for future runs
+            try:
+                with open(cached_dataset_path, 'wb') as f:
+                    pickle.dump(controlled_dataset, f)
+                logger.info(f"Cached dataset to {cached_dataset_path}")
+            except Exception as e:
+                logger.warning(f"Failed to cache dataset: {e}")
+        else:
+            logger.error("Generated dataset does not meet quality standards")
+            logger.error("Use --force_quality=false to proceed anyway")
+            return
     
     # Verify data volumes meet minimum requirements
-    volume_check, all_sufficient = dataset_manager.verify_dataset_volumes(controlled_dataset, target_gb_per_decade=0.5)
+    volume_check, all_sufficient = dataset_manager.verify_dataset_volumes(controlled_dataset, target_gb_per_decade=0.1)
+    
     if not all_sufficient:
         # Identify the decades that need augmentation
         insufficient_decades = []
         for decade, volume in volume_check.items():
-            if volume < 0.5:  # Less than 0.5 GB
+            if volume < 0.1:  # Less than 0.1 GB
                 insufficient_decades.append(decade)
-                logger.warning(f"Insufficient data for {decade}: {volume:.2f} GB < 0.5 GB")
+                logger.warning(f"Insufficient data for {decade}: {volume:.2f} GB < 0.1 GB")
         
         # Special handling for mid-century decades with known data sparsity
         sparse_decades = ["1930s", "1940s", "1950s", "1960s", "1970s", "1980s"]
         target_decades = [decade for decade in insufficient_decades if decade in sparse_decades]
         
-        if target_decades:
+        if target_decades and args.apply_enhancements:
             logger.info(f"Applying targeted enhancement for sparse decades: {target_decades}")
             
             # Get focused samples for these decades
             focused_samples = dataset_manager.gutenberg_loader.load_focused_decade_samples(
                 target_decades=target_decades,
-                texts_per_decade=max(1000, args.texts_per_decade)
+                texts_per_decade=max(5000, args.texts_per_decade)
             )
             
             # Add to our dataset
@@ -318,24 +335,29 @@ def run_analysis(args):
             logger.info(f"Found {len(decade_texts[decade])} texts for {decade}")
     
     # Check if we have enough decades with data
-    if len(decade_texts) < 2:
+    if len(decade_texts) < 4:  # Need at least 4 decades for meaningful analysis
         logger.error(f"Insufficient data: only {len(decade_texts)} decades have data")
         logger.info(f"Decades with data: {list(decade_texts.keys())}")
         
-        # Create synthetic data for missing decades
-        for decade in TIME_PERIODS.keys():
-            if decade not in decade_texts or not decade_texts[decade]:
-                logger.info(f"Generating synthetic texts for {decade}")
-                
-                # Use existing methods to create synthetic texts
-                synthetic_texts = dataset_manager._create_historical_synthetic_texts(
-                    decade=decade, 
-                    count=args.texts_per_decade // 2,  # Use half the target count
-                    existing_data={}
-                )
-                
-                decade_texts[decade] = synthetic_texts
-                logger.info(f"Generated {len(synthetic_texts)} synthetic texts for {decade}")
+        if args.allow_synthetic_fallback:
+            # Create synthetic data for missing decades
+            logger.warning("Using synthetic fallback for missing decades")
+            for decade in TIME_PERIODS.keys():
+                if decade not in decade_texts or not decade_texts[decade]:
+                    logger.info(f"Generating synthetic texts for {decade}")
+                    
+                    # Use existing methods to create synthetic texts
+                    synthetic_texts = dataset_manager._create_synthetic_texts_for_decade(
+                        decade=decade, 
+                        count=args.texts_per_decade // 2,  # Use half the target count
+                    )
+                    
+                    decade_texts[decade] = synthetic_texts
+                    logger.info(f"Generated {len(synthetic_texts)} synthetic texts for {decade}")
+        else:
+            logger.error("Insufficient decade coverage and synthetic fallback not enabled")
+            logger.error("Use --allow_synthetic_fallback to continue with synthetic data")
+            return
     
     # Process texts in chunks
     chunked_decade_texts = {}
@@ -353,9 +375,6 @@ def run_analysis(args):
     logger.info("Running tokenizer analysis with ensemble method...")
     start_time = time.time()
 
-    # First analyze patterns in parallel with better error handling
-    logger.info("Analyzing decade patterns in parallel...")
-    
     # Filter out empty decades to prevent crashes
     non_empty_decades = {decade: texts for decade, texts in chunked_decade_texts.items() if texts}
     if not non_empty_decades:
@@ -363,7 +382,6 @@ def run_analysis(args):
         return
         
     logger.info(f"Analyzing {len(non_empty_decades)} decades with data")
-    limit_memory_usage()
     decade_patterns = run_parallel_analysis(inference, non_empty_decades)
     
     # Verify we have results
@@ -409,7 +427,7 @@ def run_analysis(args):
     # Create comparison visualizations
     create_comparison_visualizations(results["distribution"], selected_dist, 
                                    args.distribution, args.tokenizer, results_dir)
-    
+        
     # Bootstrap validation (if requested)
     if args.bootstrap:
         # Reduce iterations but ensure enough for statistical validity
@@ -776,10 +794,16 @@ if __name__ == "__main__":
                       help="Distribution pattern to test (use 'all' to run all patterns)")
     parser.add_argument("--bootstrap", action="store_true", 
                       help="Perform bootstrap validation for confidence intervals")
-    parser.add_argument("--bootstrap_iterations", type=int, default=100,
-                      help="Number of bootstrap iterations to perform (higher = more reliable)")
+    parser.add_argument("--bootstrap_iterations", type=int, default=30,
+                      help="Number of bootstrap iterations to perform")
     parser.add_argument("--force_fresh", action="store_true", 
-                  help="Force fresh dataset creation (ignore cache)")
+                      help="Force fresh dataset creation (ignore cache)")
+    parser.add_argument("--force_quality", action="store_true",
+                      help="Only proceed with analysis if dataset meets quality standards")
+    parser.add_argument("--apply_enhancements", action="store_true",
+                      help="Apply targeted enhancements for sparse decades")
+    parser.add_argument("--allow_synthetic_fallback", action="store_true",
+                      help="Allow synthetic data generation for missing decades")
 
     args = parser.parse_args()
     

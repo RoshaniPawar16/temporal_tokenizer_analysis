@@ -11,74 +11,82 @@ echo "Running on node: $(hostname)"
 echo "Starting at: $(date)"
 echo "Working directory: $(pwd)"
 
-# Clean up any previous environment
-if [ -d "venv" ]; then
-    rm -rf venv
+# Load required modules for Python
+module load python/3.9.5
+
+# Verify Python version
+echo "Python version:"
+python --version
+
+# Create and activate a conda environment (more reliable than venv)
+if [ ! -d "conda_env" ]; then
+    echo "Creating conda environment..."
+    module load anaconda3/2022.10
+    conda create -p ./conda_env python=3.9.5 -y
 fi
 
-# Find Python version
-PYTHON_CMD=$(which python3)
-echo "Using Python: $PYTHON_CMD"
-$PYTHON_CMD --version
+echo "Activating conda environment..."
+source $(conda info --base)/etc/profile.d/conda.sh
+conda activate ./conda_env
 
-# Create virtual environment
-$PYTHON_CMD -m venv venv
-source venv/bin/activate
+# Verify environment Python version
+echo "Conda environment Python version:"
+python --version
 
-# Upgrade pip first
-pip install --upgrade pip --no-cache-dir
+# Install required packages with specific versions
+echo "Installing required packages..."
+pip install --no-cache-dir \
+    transformers==4.30.0 \
+    datasets==2.14.0 \
+    numpy==1.24.3 \
+    matplotlib==3.7.1 \
+    seaborn==0.12.2 \
+    pandas==2.0.3 \
+    scipy==1.10.1 \
+    cvxpy==1.3.1 \
+    tqdm==4.65.0 \
+    huggingface_hub==0.16.4 \
+    bs4==0.0.1 \
+    requests==2.31.0
 
-# Install all required packages - note that seaborn is included
-pip install --no-cache-dir numpy scipy matplotlib pandas tqdm seaborn
-pip install --no-cache-dir beautifulsoup4 requests bs4
-pip install --no-cache-dir transformers datasets huggingface_hub
-pip install --no-cache-dir cvxpy psutil
+# Configure environment variables for Hugging Face
+export HF_HOME="./hf_cache"
+export HF_HUB_CACHE="./hf_cache/hub"
+export HF_DATASETS_CACHE="./hf_cache/datasets"
+mkdir -p $HF_HOME $HF_HUB_CACHE $HF_DATASETS_CACHE
 
-# Configure environment
-export HF_DATASETS_CACHE="./hf_cache"
-mkdir -p $HF_DATASETS_CACHE
-export HF_DATASETS_IN_MEMORY_MAX_SIZE=4000000000
+# Configure proxy if needed (uncomment and modify if required)
+# export HTTP_PROXY="http://proxy.abdn.ac.uk:8080"
+# export HTTPS_PROXY="http://proxy.abdn.ac.uk:8080"
+
+# Configure environment for better memory usage
 export TOKENIZERS_PARALLELISM=false
 export OMP_NUM_THREADS=4
 export PYTHONUNBUFFERED=1
-export HF_DATASETS_TRUST_REMOTE_CODE=1
 
-# First run a minimal test to make sure imports work
-echo "Testing imports..."
-python -c "import numpy; import scipy; import matplotlib.pyplot; import seaborn; import cvxpy; print('Basic imports successful')" || echo "Basic imports failed"
+# Test dataset access - verify before proceeding to main analysis
+echo "Testing dataset access..."
+python -c "
+from datasets import load_dataset
+try:
+    # Test with a small dataset that should load quickly
+    data = load_dataset('csv', data_files={'test': 'path/to/small_test.csv'}, split='test', trust_remote_code=True)
+    print('Dataset test successful')
+except Exception as e:
+    print(f'Dataset test failed: {e}')
+"
 
-# Create directory for results
-mkdir -p results/figures
-mkdir -p results/distributions
-mkdir -p results/bootstrap
-
-# Run each analysis with error handling and reduced iterations for testing
+# Run analysis with memory-optimized settings
 echo "Running uniform distribution analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution uniform --texts_per_decade 5000 --target_size_gb 0.5 --bootstrap --bootstrap_iterations 10 || {
-    echo "Uniform distribution analysis failed with exit code $?";
-    echo "Saving trace...";
-    python -c "import traceback; traceback.print_exc()" > error_uniform.log;
-}
+python run_on_maxwell.py --tokenizer gpt2 --distribution uniform --texts_per_decade 2000 --target_size_gb 0.5 --bootstrap --bootstrap_iterations 30
 
 echo "Running recency bias analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution recency_bias --texts_per_decade 5000 --target_size_gb 0.5 --bootstrap --bootstrap_iterations 10 || {
-    echo "Recency bias analysis failed with exit code $?";
-    echo "Saving trace...";
-    python -c "import traceback; traceback.print_exc()" > error_recency.log;
-}
+python run_on_maxwell.py --tokenizer gpt2 --distribution recency_bias --texts_per_decade 2000 --target_size_gb 0.5 --bootstrap --bootstrap_iterations 30
 
 echo "Running historical bias analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution historical_bias --texts_per_decade 5000 --target_size_gb 0.5 --bootstrap --bootstrap_iterations 10 || {
-    echo "Historical bias analysis failed with exit code $?";
-    echo "Saving trace...";
-    python -c "import traceback; traceback.print_exc()" > error_historical.log;
-}
+python run_on_maxwell.py --tokenizer gpt2 --distribution historical_bias --texts_per_decade 2000 --target_size_gb 0.5 --bootstrap --bootstrap_iterations 30
 
 echo "Running bimodal distribution analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution bimodal --texts_per_decade 5000 --target_size_gb 0.5 --bootstrap --bootstrap_iterations 10 || {
-    echo "Bimodal distribution analysis failed with exit code $?";
-    echo "Saving trace...";
-    python -c "import traceback; traceback.print_exc()" > error_bimodal.log;
-}
+python run_on_maxwell.py --tokenizer gpt2 --distribution bimodal --texts_per_decade 2000 --target_size_gb 0.5 --bootstrap --bootstrap_iterations 30
 
 echo "Job completed at: $(date)"
