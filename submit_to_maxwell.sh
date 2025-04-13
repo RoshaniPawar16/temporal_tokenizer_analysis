@@ -11,41 +11,37 @@ echo "Running on node: $(hostname)"
 echo "Starting at: $(date)"
 echo "Working directory: $(pwd)"
 
-# Load a Python module that's available on Maxwell
+# Purge all modules to avoid conflicts
+module purge
+# Load Python 3.9.12
 module load python/3.9.12
 
 # Verify Python version
 echo "Python version:"
 python --version
 
-# Create and use a virtual environment instead of conda
-echo "Creating Python virtual environment..."
-if [ ! -d "venv" ]; then
-    python -m venv venv
-fi
-
-echo "Activating virtual environment..."
-source venv/bin/activate
-
-# Verify environment Python version
-echo "Virtual environment Python version:"
-python --version
+# Install packages to a local directory without using venv
+# This approach avoids issues with Python version mismatch
+echo "Setting up pip install directory..."
+mkdir -p $HOME/.local/pip/temporal_analysis
+export PYTHONPATH=$HOME/.local/pip/temporal_analysis:$PYTHONPATH
+export PIP_TARGET=$HOME/.local/pip/temporal_analysis
 
 # Install required packages with specific versions
 echo "Installing required packages..."
 pip install --no-cache-dir \
-    transformers==4.30.0 \
-    datasets==2.14.0 \
-    numpy==1.24.3 \
-    matplotlib==3.7.1 \
-    seaborn==0.12.2 \
-    pandas==2.0.3 \
-    scipy==1.10.1 \
-    cvxpy==1.3.1 \
-    tqdm==4.65.0 \
-    huggingface_hub==0.16.4 \
-    bs4==0.0.1 \
-    requests==2.31.0
+    transformers \
+    datasets \
+    numpy \
+    matplotlib \
+    seaborn \
+    pandas \
+    scipy \
+    cvxpy \
+    tqdm \
+    huggingface_hub \
+    bs4 \
+    requests
 
 # Configure environment variables for Hugging Face
 export HF_HOME="./hf_cache"
@@ -58,17 +54,13 @@ export TOKENIZERS_PARALLELISM=false
 export OMP_NUM_THREADS=4
 export PYTHONUNBUFFERED=1
 
-# Test dataset access - verify before proceeding to main analysis
-echo "Testing dataset access..."
-python -c "
-from datasets import load_dataset
-try:
-    # Test with a small dataset that should load quickly
-    data = load_dataset('csv', data_files={'test': 'path/to/small_test.csv'}, split='test', trust_remote_code=True)
-    print('Dataset test successful')
-except Exception as e:
-    print(f'Dataset test failed: {e}')
-"
+# Verify installation by checking NumPy version
+echo "Checking NumPy installation:"
+python -c "import numpy; print(f'NumPy version: {numpy.__version__}')"
+
+# Test dataset access - use a simple test
+echo "Testing basic imports..."
+python -c "import transformers; import datasets; print('Basic imports successful')"
 
 # Run analysis with memory-optimized settings
 echo "Running uniform distribution analysis..."
