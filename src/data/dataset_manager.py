@@ -44,6 +44,10 @@ class TemporalDatasetManager:
         self.dataset_dir = PROCESSED_DATA_DIR / "temporal_dataset"
         self.dataset_dir.mkdir(parents=True, exist_ok=True)
         self.metadata_path = self.dataset_dir / "dataset_metadata.json"
+
+        # Add this line to define the cache_dir attribute
+        self.cache_dir = CACHE_DIR / "dataset_manager"
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
     
     def load_modern_web_content(self, target_decades=None, texts_per_decade=1000):
         """

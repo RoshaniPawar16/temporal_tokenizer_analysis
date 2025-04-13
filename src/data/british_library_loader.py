@@ -40,6 +40,13 @@ class BritishLibraryLoader:
         
         logger.info("British Library loader initialized")
     
+    def _create_synthetic_british_library_dataset(self):
+        """Create a synthetic British Library dataset as a fallback."""
+        logger.info("Creating synthetic British Library dataset")
+        # Just create an empty dataset structure as a fallback
+        dataset = {'train': []}
+        return dataset
+
     def _load_dataset(self):
         """Load the British Library dataset from Hugging Face with better error handling and timeouts."""
         if self.dataset is not None:
@@ -70,7 +77,8 @@ class BritishLibraryLoader:
                 dataset = load_dataset(
                     "TheBritishLibrary/blbooks", 
                     "1800_1899",  # Most reliable configuration
-                    split="train"
+                    split="train",
+                    trust_remote_code=True
                 )
                 if dataset is not None and len(dataset) > 0:
                     logger.info(f"Successfully loaded {len(dataset)} records from British Library")
@@ -86,7 +94,8 @@ class BritishLibraryLoader:
                     dataset = load_dataset(
                         "json", 
                         data_files=str(local_path / "*.json"),
-                        split="train"
+                        split="train",
+                        trust_remote_code=True
                     )
                     if dataset is not None and len(dataset) > 0:
                         logger.info(f"Successfully loaded {len(dataset)} records from local British Library files")

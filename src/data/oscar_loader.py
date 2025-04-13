@@ -81,7 +81,7 @@ class OscarLoader:
             # First try the modern approach
             try:
                 from datasets import load_dataset
-                dataset = load_dataset("oscar", "unshuffled_deduplicated_en", split="train")
+                dataset = load_dataset("oscar", "unshuffled_deduplicated_en", split="train", trust_remote_code=True)
                 
                 logger.info(f"Successfully loaded Oscar with modern approach")
                 modern_load_success = True
@@ -91,7 +91,7 @@ class OscarLoader:
                 
                 # Try older approach without trust_remote_code
                 try:
-                    dataset = load_dataset("oscar", "unshuffled_deduplicated_en", split="train")
+                    dataset = load_dataset("oscar", "unshuffled_deduplicated_en", split="train", trust_remote_code=True)
                     logger.info(f"Successfully loaded Oscar with older approach")
                 except Exception as e2:
                     logger.warning(f"Failed to load Oscar with older approach: {e2}")
