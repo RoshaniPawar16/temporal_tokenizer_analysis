@@ -53,6 +53,73 @@ class GutenbergLoader:
         # Load or create metadata catalog
         self.metadata = self._load_or_create_catalog()
     
+    def _clean_text(self, text: str) -> str:
+        """
+        Clean and normalize text content from Gutenberg.
+        Removes headers, footers, and other boilerplate.
+        
+        Args:
+            text: Raw text content from Gutenberg
+            
+        Returns:
+            Cleaned text
+        """
+        if not text:
+            return ""
+            
+        # Remove Gutenberg header
+        header_end_markers = [
+            "*** START OF THIS PROJECT GUTENBERG EBOOK",
+            "*** START OF THE PROJECT GUTENBERG EBOOK",
+            "***START OF THE PROJECT GUTENBERG EBOOK",
+            "*** START OF PROJECT GUTENBERG EBOOK",
+            "*END*THE SMALL PRINT",
+            "*** START OF THE COPYRIGHTED",
+            "This etext was prepared by",
+            "E-text prepared by",
+            "Produced by",
+            "Transcribed from",
+            "**The Project Gutenberg",
+            "*SMALL PRINT!",
+            "THE FULL PROJECT GUTENBERG LICENSE"
+        ]
+        
+        # Remove Gutenberg footer
+        footer_start_markers = [
+            "*** END OF THIS PROJECT GUTENBERG EBOOK",
+            "*** END OF THE PROJECT GUTENBERG EBOOK",
+            "***END OF THE PROJECT GUTENBERG EBOOK",
+            "*** END OF PROJECT GUTENBERG EBOOK",
+            "End of the Project Gutenberg EBook",
+            "End of Project Gutenberg's",
+            "This file should be named",
+            "This file was first posted on",
+            "End of The Project Gutenberg Etext",
+            "End of Project Gutenberg etext",
+            "End of the Project Gutenberg etext"
+        ]
+        
+        # Try to find and remove header
+        for marker in header_end_markers:
+            if marker in text:
+                parts = text.split(marker, 1)
+                if len(parts) > 1:
+                    text = parts[1]
+        
+        # Try to find and remove footer
+        for marker in footer_start_markers:
+            if marker in text:
+                parts = text.split(marker, 1)
+                if len(parts) > 0:
+                    text = parts[0]
+        
+        # Remove extra whitespace and normalize
+        text = re.sub(r'\r\n', '\n', text)  # Normalize line endings
+        text = re.sub(r'\n{3,}', '\n\n', text)  # Normalize paragraph breaks
+        text = text.strip()
+        
+        return text
+
     def _load_or_create_catalog(self) -> Dict:
         """
         Load catalog from cache if it exists, otherwise create a new one.
