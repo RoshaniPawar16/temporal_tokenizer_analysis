@@ -41,7 +41,8 @@ pip install --no-cache-dir \
     tqdm \
     huggingface_hub \
     bs4 \
-    requests
+    requests \
+    psutil
 
 # Configure environment variables for Hugging Face
 export HF_HOME="./hf_cache"
@@ -62,17 +63,17 @@ python -c "import numpy; print(f'NumPy version: {numpy.__version__}')"
 echo "Testing basic imports..."
 python -c "import transformers; import datasets; print('Basic imports successful')"
 
-# Run analysis with memory-optimized settings
+# Run analysis with increased data volume and filtering
 echo "Running uniform distribution analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution uniform --texts_per_decade 2000 --target_size_gb 0.5 --bootstrap --bootstrap_iterations 30
+python run_on_maxwell.py --tokenizer gpt2 --distribution uniform --texts_per_decade 5000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
 
 echo "Running recency bias analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution recency_bias --texts_per_decade 2000 --target_size_gb 0.5 --bootstrap --bootstrap_iterations 30
+python run_on_maxwell.py --tokenizer gpt2 --distribution recency_bias --texts_per_decade 5000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
 
 echo "Running historical bias analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution historical_bias --texts_per_decade 2000 --target_size_gb 0.5 --bootstrap --bootstrap_iterations 30
+python run_on_maxwell.py --tokenizer gpt2 --distribution historical_bias --texts_per_decade 5000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
 
 echo "Running bimodal distribution analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution bimodal --texts_per_decade 2000 --target_size_gb 0.5 --bootstrap --bootstrap_iterations 30
+python run_on_maxwell.py --tokenizer gpt2 --distribution bimodal --texts_per_decade 5000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
 
 echo "Job completed at: $(date)"

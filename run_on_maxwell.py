@@ -375,6 +375,39 @@ def run_analysis(args):
     logger.info("Running tokenizer analysis with ensemble method...")
     start_time = time.time()
 
+    # Analyze decade patterns with new focus on the 1960s decade
+    decade_patterns = run_parallel_analysis(inference, chunked_decade_texts)
+    
+    # Analyze specific issues with the 1960s decade
+    if '1960s' in decade_patterns:
+        logger.info("Performing specific analysis of 1960s decade patterns...")
+        sixties_analysis = inference.analyze_decade_specific_issues(decade_patterns, "1960s")
+        
+        # Save results to a separate file
+        sixties_path = results_dir / "distributions" / f"{run_id}_1960s_analysis.json"
+        with open(sixties_path, 'w') as f:
+            json.dump(sixties_analysis, f, indent=2)
+            
+        # Log key findings
+        logger.info(f"1960s analysis: {sixties_analysis['analysis_summary']}")
+        
+        # If distinctive rules contribute significantly, modify the inference approach
+        if sixties_analysis['total_distinctive_contribution'] > 30:  # More than 30%
+            logger.info("1960s has highly distinctive rules, using modified inference approach")
+            
+            # Infer with specific 1960s correction
+            distribution = inference.infer_temporal_distribution(
+                decade_patterns,
+                remove_top_tokens=True,
+                top_n=10  # Increase to 10 to better filter problematic tokens
+            )
+        else:
+            # Use standard ensemble approach
+            distribution = inference.infer_distribution_ensemble(decade_patterns)
+    else:
+        # Standard approach if 1960s data not available
+        distribution = inference.infer_distribution_ensemble(decade_patterns)
+
     # Filter out empty decades to prevent crashes
     non_empty_decades = {decade: texts for decade, texts in chunked_decade_texts.items() if texts}
     if not non_empty_decades:
@@ -435,7 +468,18 @@ def run_analysis(args):
         logger.info(f"Performing bootstrap validation with {bootstrap_iterations} iterations...")
         
         try:
-            limit_memory_usage()
+            # First check for psutil
+            try:
+                import psutil
+                has_psutil = True
+            except ImportError:
+                logger.warning("psutil module not available, bootstrapping may use more memory")
+                has_psutil = False
+                
+            # Apply memory limiting function if psutil is available
+            if has_psutil:
+                limit_memory_usage()
+                
             confidence_intervals = validator.bootstrap_analysis(
                 decade_texts=decade_texts,
                 n_bootstrap=bootstrap_iterations,
@@ -456,13 +500,6 @@ def run_analysis(args):
                                          confidence_intervals, args.distribution, 
                                          args.tokenizer, results_dir)
             
-            # Calculate reliability metrics if available
-            if hasattr(validator, 'calculate_reliability_metrics'):
-                reliability_metrics = validator.calculate_reliability_metrics(confidence_intervals)
-                logger.info(f"Reliability metrics:")
-                logger.info(f"  Reliability score: {reliability_metrics.get('reliability_score', 'N/A')}")
-                logger.info(f"  Coefficient of variation: {reliability_metrics.get('coefficient_of_variation', 'N/A')}")
-                logger.info(f"  Normalized CI width: {reliability_metrics.get('normalized_ci_width', 'N/A')}")
         except Exception as e:
             logger.error(f"Error in bootstrap validation: {e}")
             logger.error("Skipping bootstrap analysis")

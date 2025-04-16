@@ -602,16 +602,145 @@ class TemporalDistributionInference:
             'confidence_intervals': confidence_intervals
         }
 
+    def analyze_decade_specific_issues(self, decade_patterns: Dict[str, Dict], problematic_decade="1960s") -> Dict:
+        """
+        Analyze patterns specific to a problematic decade to identify anomalies.
+        
+        Args:
+            decade_patterns: Dictionary mapping decades to pattern frequencies
+            problematic_decade: The decade to analyze (default: "1960s")
+            
+        Returns:
+            Dictionary with analysis results
+        """
+        if problematic_decade not in decade_patterns:
+            logger.warning(f"No data available for {problematic_decade}")
+            return {}
+        
+        # Get merge rules for the problematic decade
+        if 'merge_rules' not in decade_patterns[problematic_decade]:
+            logger.warning(f"No merge rules found for {problematic_decade}")
+            return {}
+            
+        decade_rules = decade_patterns[problematic_decade]['merge_rules']
+        
+        # Calculate distinctiveness for each rule
+        distinctive_rules = []
+        for rule, count in decade_rules.items():
+            # Calculate frequency in other decades
+            other_decade_counts = []
+            for decade, patterns in decade_patterns.items():
+                if decade != problematic_decade and 'merge_rules' in patterns:
+                    other_count = patterns['merge_rules'].get(rule, 0)
+                    other_decade_counts.append(other_count)
+            
+            # Calculate average count in other decades
+            if other_decade_counts:
+                avg_other = sum(other_decade_counts) / len(other_decade_counts)
+                # Distinctiveness is ratio of this decade's count to average in others
+                if avg_other > 0:
+                    distinctiveness = count / avg_other
+                else:
+                    distinctiveness = float('inf')  # Uniquely appears in this decade
+            else:
+                distinctiveness = float('inf')  # Uniquely appears in this decade
+                
+            distinctive_rules.append((rule, distinctiveness, count))
+        
+        # Sort by distinctiveness
+        distinctive_rules.sort(key=lambda x: x[1], reverse=True)
+        
+        # Calculate total token count for the decade
+        total_count = sum(decade_rules.values())
+        
+        # Calculate contribution percentage for top distinctive rules
+        top_distinctive = distinctive_rules[:20]
+        distinctive_contribution = {
+            rule: {
+                "distinctiveness": dist,
+                "count": count,
+                "contribution": (count / total_count) * 100 if total_count > 0 else 0
+            } for rule, dist, count in top_distinctive
+        }
+        
+        # Calculate the total contribution of these distinctive rules
+        total_distinctive_contribution = sum(
+            item["contribution"] for item in distinctive_contribution.values()
+        )
+        
+        return {
+            "top_distinctive_rules": distinctive_contribution,
+            "total_distinctive_contribution": total_distinctive_contribution,
+            "analysis_summary": f"The top 20 distinctive rules contribute {total_distinctive_contribution:.2f}% to {problematic_decade}'s total token count"
+        }
+
+    def remove_top_frequent_tokens(self, decade_patterns: Dict[str, Dict], top_n=5) -> Dict[str, Dict]:
+        """
+        Remove the top N most frequent tokens across all decades.
+        
+        Args:
+            decade_patterns: Dictionary mapping decades to pattern frequencies
+            top_n: Number of top frequent tokens to remove
+            
+        Returns:
+            Filtered decade patterns with top frequent tokens removed
+        """
+        # Global frequency calculation across all decades
+        global_freq = {}
+        for decade, patterns in decade_patterns.items():
+            if 'merge_rules' in patterns:
+                for rule, count in patterns['merge_rules'].items():
+                    if rule not in global_freq:
+                        global_freq[rule] = 0
+                    global_freq[rule] += count
+        
+        # Identify top N most frequent tokens
+        top_tokens = sorted(global_freq.items(), key=lambda x: x[1], reverse=True)[:top_n]
+        top_token_keys = [token for token, _ in top_tokens]
+        
+        logger.info(f"Removing top {top_n} most frequent tokens: {top_token_keys}")
+        
+        # Filter these tokens from all decade patterns
+        filtered_patterns = {}
+        for decade, patterns in decade_patterns.items():
+            filtered_patterns[decade] = patterns.copy()  # Deep copy to avoid modifying original
+            if 'merge_rules' in filtered_patterns[decade]:
+                filtered_patterns[decade]['merge_rules'] = {
+                    rule: count for rule, count in patterns['merge_rules'].items() 
+                    if rule not in top_token_keys
+                }
+        
+        return filtered_patterns
+
     def infer_temporal_distribution(self, 
                      decade_patterns: Dict[str, Dict],
-                     num_merge_rules: int = 2000,  # Increased from 3000
+                     num_merge_rules: int = 2000,
                      weight_early_merges: bool = True,
-                     regularization_strength: float = 0.05) -> Dict[str, float]:  # Reduced from 0.1
+                     regularization_strength: float = 0.05,
+                     remove_top_tokens: bool = True,
+                     top_n: int = 5) -> Dict[str, float]:
         """
         Infer the temporal distribution in training data using enhanced linear programming.
+        
+        Args:
+            decade_patterns: Dictionary mapping decades to their patterns
+            num_merge_rules: Number of merge rules to consider
+            weight_early_merges: Whether to give higher weight to early merges
+            regularization_strength: Strength of regularization term
+            remove_top_tokens: Whether to remove top frequent tokens
+            top_n: Number of top tokens to remove
+            
+        Returns:
+            Dictionary mapping decades to their estimated proportion
         """
+        # First filter out top frequent tokens if requested
+        if remove_top_tokens:
+            filtered_patterns = self.remove_top_frequent_tokens(decade_patterns, top_n)
+        else:
+            filtered_patterns = decade_patterns
+        
         # Extract decades
-        decades = sorted(list(decade_patterns.keys()))
+        decades = sorted(list(filtered_patterns.keys()))
         
         if not decades:
             return {}
@@ -792,6 +921,40 @@ class TemporalDistributionInference:
         # Fallback to heuristic method
         return self._infer_distribution_heuristic(decade_patterns)
 
+    def remove_top_frequent_tokens(self, decade_patterns, top_n=5):
+        """
+        Remove the top N most frequent tokens across all decades.
+        
+        Args:
+            decade_patterns: Dictionary mapping decades to pattern frequencies
+            top_n: Number of top frequent tokens to remove
+            
+        Returns:
+            Filtered decade patterns with top frequent tokens removed
+        """
+        # Calculate global token frequencies across all decades
+        global_freq = {}
+        for decade, patterns in decade_patterns.items():
+            for pattern, freq in patterns.items():
+                if pattern not in global_freq:
+                    global_freq[pattern] = 0
+                global_freq[pattern] += freq
+        
+        # Identify the top N most frequent tokens
+        top_tokens = sorted(global_freq.items(), key=lambda x: x[1], reverse=True)[:top_n]
+        top_token_keys = [token for token, _ in top_tokens]
+        
+        # Log the tokens being removed
+        logging.info(f"Removing top {top_n} tokens: {top_token_keys}")
+        
+        # Filter these tokens from all decade patterns
+        filtered_patterns = {}
+        for decade, patterns in decade_patterns.items():
+            filtered_patterns[decade] = {pattern: freq for pattern, freq in patterns.items() 
+                                    if pattern not in top_token_keys}
+        
+        return filtered_patterns
+
     def find_distinctive_patterns(self, 
                             decade_patterns: Dict[str, Dict],
                             threshold: float = 3.0) -> Dict[str, List[Tuple[str, float]]]:
@@ -967,158 +1130,223 @@ class TemporalDistributionInference:
         # Select top rules by this combined score
         return sorted(rule_scores.keys(), key=lambda r: rule_scores[r], reverse=True)[:num_rules]
     
-    def infer_distribution_ensemble(self, decade_patterns) -> Dict[str, float]:
-        """
-        Use an ensemble of methods to produce a more robust distribution estimate.
+    # def infer_distribution_ensemble(self, decade_patterns) -> Dict[str, float]:
+    #     """
+    #     Use an ensemble of methods to produce a more robust distribution estimate.
         
-        Args:
-            decade_patterns: Patterns detected for each decade
+    #     Args:
+    #         decade_patterns: Patterns detected for each decade
                 
-        Returns:
-            Dictionary mapping decades to their estimated proportion
-        """
-        decades = sorted(list(decade_patterns.keys()))
-        if not decades:
-            return {}
+    #     Returns:
+    #         Dictionary mapping decades to their estimated proportion
+    #     """
+    #     decades = sorted(list(decade_patterns.keys()))
+    #     if not decades:
+    #         return {}
             
-        logger.info("Using ensemble approach with multiple methods and parameters")
+    #     logger.info("Using ensemble approach with multiple methods and parameters")
         
-        # Initialize ensemble results
-        all_distributions = []
-        weights = []
+    #     # Initialize ensemble results
+    #     all_distributions = []
+    #     weights = []
         
-        # Try different parameter combinations for LP method
-        param_sets = [
-            # num_rules, reg_strength, weight
-            (3000, 0.05, 3.0),    # Base case
-            (5000, 0.05, 2.0),    # More rules
-            (3000, 0.01, 1.0),    # Weaker regularization
-            (5000, 0.10, 1.0),    # Stronger regularization
-            (2000, 0.02, 1.0),    # Fewer rules
-        ]
+    #     # Try different parameter combinations for LP method
+    #     param_sets = [
+    #         # num_rules, reg_strength, weight
+    #         (3000, 0.05, 3.0),    # Base case
+    #         (5000, 0.05, 2.0),    # More rules
+    #         (3000, 0.01, 1.0),    # Weaker regularization
+    #         (5000, 0.10, 1.0),    # Stronger regularization
+    #         (2000, 0.02, 1.0),    # Fewer rules
+    #     ]
         
-        for num_rules, reg_strength, weight in param_sets:
-            try:
-                logger.info(f"Trying LP with {num_rules} rules, {reg_strength} regularization")
-                distribution = self.infer_temporal_distribution(
-                    decade_patterns,
-                    num_merge_rules=num_rules,
-                    regularization_strength=reg_strength
-                )
+    #     for num_rules, reg_strength, weight in param_sets:
+    #         try:
+    #             logger.info(f"Trying LP with {num_rules} rules, {reg_strength} regularization")
+    #             distribution = self.infer_temporal_distribution(
+    #                 decade_patterns,
+    #                 num_merge_rules=num_rules,
+    #                 regularization_strength=reg_strength
+    #             )
                 
-                # Check if distribution is reasonable (not too extreme)
-                max_val = max(distribution.values()) if distribution else 0
-                if distribution and max_val < 0.5:  # No single decade should have >50%
-                    all_distributions.append(distribution)
-                    weights.append(weight)
-                    logger.info(f"Added distribution with weight {weight}")
-                else:
-                    logger.warning(f"Skipping distribution with max value {max_val}")
-            except Exception as e:
-                logger.warning(f"LP method failed with {num_rules} rules, {reg_strength} reg: {e}")
+    #             # Check if distribution is reasonable (not too extreme)
+    #             max_val = max(distribution.values()) if distribution else 0
+    #             if distribution and max_val < 0.5:  # No single decade should have >50%
+    #                 all_distributions.append(distribution)
+    #                 weights.append(weight)
+    #                 logger.info(f"Added distribution with weight {weight}")
+    #             else:
+    #                 logger.warning(f"Skipping distribution with max value {max_val}")
+    #         except Exception as e:
+    #             logger.warning(f"LP method failed with {num_rules} rules, {reg_strength} reg: {e}")
         
-        # Add bayesian method
-        try:
-            bayesian_dist = self._infer_distribution_bayesian(decade_patterns)
-            if bayesian_dist:
-                all_distributions.append(bayesian_dist)
-                weights.append(1.0)
-                logger.info("Added Bayesian distribution")
-        except Exception as e:
-            logger.warning(f"Bayesian method failed: {e}")
+    #     # Add bayesian method
+    #     try:
+    #         bayesian_dist = self._infer_distribution_bayesian(decade_patterns)
+    #         if bayesian_dist:
+    #             all_distributions.append(bayesian_dist)
+    #             weights.append(1.0)
+    #             logger.info("Added Bayesian distribution")
+    #     except Exception as e:
+    #         logger.warning(f"Bayesian method failed: {e}")
         
-        # Add heuristic method
-        try:
-            heuristic_dist = self._infer_distribution_heuristic(decade_patterns)
-            if heuristic_dist:
-                all_distributions.append(heuristic_dist)
-                weights.append(1.0)
-                logger.info("Added heuristic distribution")
-        except Exception as e:
-            logger.warning(f"Heuristic method failed: {e}")
+    #     # Add heuristic method
+    #     try:
+    #         heuristic_dist = self._infer_distribution_heuristic(decade_patterns)
+    #         if heuristic_dist:
+    #             all_distributions.append(heuristic_dist)
+    #             weights.append(1.0)
+    #             logger.info("Added heuristic distribution")
+    #     except Exception as e:
+    #         logger.warning(f"Heuristic method failed: {e}")
         
-        # If we have distributions, compute weighted average
-        if all_distributions:
-            # Normalize weights
-            total_weight = sum(weights)
-            if total_weight > 0:
-                normalized_weights = [w / total_weight for w in weights]
+    #     # If we have distributions, compute weighted average
+    #     if all_distributions:
+    #         # Normalize weights
+    #         total_weight = sum(weights)
+    #         if total_weight > 0:
+    #             normalized_weights = [w / total_weight for w in weights]
                 
-                # Compute weighted average
-                ensemble_dist = {decade: 0.0 for decade in decades}
-                for dist, weight in zip(all_distributions, normalized_weights):
-                    for decade in decades:
-                        ensemble_dist[decade] += dist.get(decade, 0.0) * weight
+    #             # Compute weighted average
+    #             ensemble_dist = {decade: 0.0 for decade in decades}
+    #             for dist, weight in zip(all_distributions, normalized_weights):
+    #                 for decade in decades:
+    #                     ensemble_dist[decade] += dist.get(decade, 0.0) * weight
                 
-                # Apply final bias correction for 1970s
-                if "1970s" in ensemble_dist:
-                    ensemble_dist["1970s"] *= 0.7
-                    # Redistribute to maintain sum=1
-                    excess = 1.0 - sum(ensemble_dist.values())
-                    other_decades = [d for d in ensemble_dist if d != "1970s"]
-                    if other_decades:
-                        for d in other_decades:
-                            ensemble_dist[d] += excess / len(other_decades)
+    #             # Apply final bias correction for 1970s
+    #             if "1970s" in ensemble_dist:
+    #                 ensemble_dist["1970s"] *= 0.7
+    #                 # Redistribute to maintain sum=1
+    #                 excess = 1.0 - sum(ensemble_dist.values())
+    #                 other_decades = [d for d in ensemble_dist if d != "1970s"]
+    #                 if other_decades:
+    #                     for d in other_decades:
+    #                         ensemble_dist[d] += excess / len(other_decades)
                 
-                logger.info(f"Created ensemble distribution from {len(all_distributions)} methods")
-                return ensemble_dist
+    #             logger.info(f"Created ensemble distribution from {len(all_distributions)} methods")
+    #             return ensemble_dist
         
-        # Fallback to standard method if ensemble fails
-        logger.warning("Ensemble approach failed, falling back to standard LP")
-        return self.infer_temporal_distribution(decade_patterns)
+    #     # Fallback to standard method if ensemble fails
+    #     logger.warning("Ensemble approach failed, falling back to standard LP")
+    #     return self.infer_temporal_distribution(decade_patterns)
 
     def infer_distribution_ensemble(self, decade_patterns, methods=None, weights=None):
         """
-        Use an ensemble of methods to produce a more robust distribution estimate.
+        Use an improved ensemble of methods to produce more robust distribution estimates.
         
         Args:
             decade_patterns: Patterns detected for each decade
-            methods: List of (method_function, params_dict) tuples
-            weights: List of weights for each method
-            
+            methods: List of method configurations to use
+            weights: Weights for each method
+                
         Returns:
             Dictionary mapping decades to their estimated proportion
         """
+        # If methods and weights not provided, use improved defaults
         if methods is None:
             methods = [
-                (self.infer_temporal_distribution, {'num_merge_rules': 500, 'regularization_strength': 0.05}),
-                (self.infer_temporal_distribution, {'num_merge_rules': 1000, 'regularization_strength': 0.1}),
-                (self.infer_temporal_distribution, {'num_merge_rules': 2000, 'regularization_strength': 0.2}),
-                (self._infer_distribution_bayesian, {}),
-                (self._infer_distribution_heuristic, {})
+                # Standard LP with different parameters
+                (lambda dp: self.infer_temporal_distribution(dp, num_merge_rules=500, 
+                                                        remove_top_tokens=True, top_n=5), 0.3),
+                (lambda dp: self.infer_temporal_distribution(dp, num_merge_rules=1000, 
+                                                        remove_top_tokens=True, top_n=10), 0.2),
+                # LP with 1970s correction - found to be problematic in meetings
+                (lambda dp: self._apply_decade_correction(
+                    self.infer_temporal_distribution(dp, num_merge_rules=1500), 
+                    decade='1970s', factor=0.7), 0.2),
+                # Heuristic method
+                (lambda dp: self._infer_distribution_heuristic(dp), 0.15),
+                # Bayesian method
+                (lambda dp: self._infer_distribution_bayesian(dp), 0.15)
             ]
-        
-        if weights is None:
-            weights = [0.3, 0.2, 0.2, 0.15, 0.15]  # Weights for each method
+        else:
+            methods = [(m, w) for m, w in zip(methods, weights or [1/len(methods)]*len(methods))]
         
         # Apply each method
         distributions = []
-        for (method, params) in methods:
+        used_weights = []
+        
+        for method_func, weight in methods:
             try:
-                distribution = method(decade_patterns, **params)
-                distributions.append(distribution)
+                # Apply method with error handling
+                distribution = method_func(decade_patterns)
+                
+                # Validate distribution (should sum to ~1)
+                total = sum(distribution.values())
+                if 0.9 <= total <= 1.1:  # Allow small numerical errors
+                    distributions.append({k: v/total for k, v in distribution.items()})
+                    used_weights.append(weight)
+                else:
+                    logger.warning(f"Skipping invalid distribution with sum {total}")
             except Exception as e:
-                logger.warning(f"Method {method.__name__} failed: {e}")
-                # Add uniform distribution as fallback
-                decades = sorted(decade_patterns.keys())
-                distributions.append({d: 1.0/len(decades) for d in decades})
+                logger.warning(f"Method failed: {e}")
+        
+        # If no valid distributions, return uniform fallback
+        if not distributions:
+            logger.warning("All methods failed, returning uniform distribution")
+            decades = decade_patterns.keys()
+            return {decade: 1.0/len(decades) for decade in decades}
         
         # Combine distributions using weighted average
-        decades = sorted(list(set().union(*[d.keys() for d in distributions])))
-        ensemble_distribution = {}
+        decades = set()
+        for dist in distributions:
+            decades.update(dist.keys())
+        decades = sorted(decades)
         
+        # Normalize weights
+        total_weight = sum(used_weights)
+        if total_weight > 0:
+            norm_weights = [w/total_weight for w in used_weights]
+        else:
+            norm_weights = [1.0/len(used_weights)]*len(used_weights)
+        
+        # Compute weighted average
+        ensemble_distribution = {}
         for decade in decades:
             ensemble_distribution[decade] = sum(
-                weights[i] * dist.get(decade, 0) 
-                for i, dist in enumerate(distributions)
+                dist.get(decade, 0) * weight 
+                for dist, weight in zip(distributions, norm_weights)
             )
         
-        # Normalize to ensure sum to 1
+        # Final normalization
         total = sum(ensemble_distribution.values())
         if total > 0:
-            ensemble_distribution = {d: v/total for d, v in ensemble_distribution.items()}
+            return {decade: value/total for decade, value in ensemble_distribution.items()}
+        else:
+            return {decade: 1.0/len(decades) for decade in decades}
         
-        return ensemble_distribution
+    def _apply_decade_correction(self, distribution, decade, factor):
+        """
+        Apply a correction factor to a specific decade and redistribute.
+        Used for correcting known biases (like 1970s over-representation).
+        
+        Args:
+            distribution: Original distribution dictionary
+            decade: The decade to correct
+            factor: Correction factor (e.g., 0.7 reduces the decade's weight by 30%)
+            
+        Returns:
+            Corrected distribution
+        """
+        if decade not in distribution:
+            return distribution
+            
+        # Copy distribution to avoid modifying original
+        corrected = distribution.copy()
+        
+        # Apply reduction factor
+        original_value = corrected[decade]
+        corrected[decade] = original_value * factor
+        
+        # Redistribute excess to other decades
+        excess = original_value - corrected[decade]
+        other_decades = [d for d in corrected if d != decade]
+        
+        if other_decades and excess > 0:
+            for d in other_decades:
+                corrected[d] += excess / len(other_decades)
+        
+        return corrected
 
     def _infer_distribution_bayesian(self, decade_patterns):
         """
