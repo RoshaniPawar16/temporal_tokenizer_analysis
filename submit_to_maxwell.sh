@@ -4,7 +4,8 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=64G
-#SBATCH --output=temporal_analysis_%j.log
+#SBATCH --output=temporal_analysis_%j.out
+#SBATCH --error=temporal_analysis_%j.err
 
 # Display information about the job
 echo "Running on node: $(hostname)"
@@ -65,15 +66,15 @@ python -c "import transformers; import datasets; print('Basic imports successful
 
 # Run analysis with increased data volume and filtering
 echo "Running uniform distribution analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution uniform --texts_per_decade 5000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
+python run_on_maxwell.py --tokenizer gpt2 --distribution uniform --texts_per_decade 5000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30 --verbose
 
 echo "Running recency bias analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution recency_bias --texts_per_decade 5000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
+python run_on_maxwell.py --tokenizer gpt2 --distribution recency_bias --texts_per_decade 5000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30 
 
 echo "Running historical bias analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution historical_bias --texts_per_decade 5000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
+python run_on_maxwell.py --tokenizer gpt2 --distribution historical_bias --texts_per_decade 5000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30 
 
 echo "Running bimodal distribution analysis..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution bimodal --texts_per_decade 5000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
+python run_on_maxwell.py --tokenizer gpt2 --distribution bimodal --texts_per_decade 5000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30 
 
 echo "Job completed at: $(date)"

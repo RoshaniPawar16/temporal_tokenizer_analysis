@@ -17,6 +17,7 @@ import time
 import pickle
 from datetime import datetime
 from tqdm import tqdm
+import re
 
 from src.data.dataset_manager import TemporalDatasetManager
 from src.validation.temporal_inference import TemporalDistributionInference
@@ -29,12 +30,100 @@ import os
 import multiprocessing as mp
 from functools import partial
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-)
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+class ProgressFilter(logging.Filter):
+    """Filter to reduce frequency of progress messages."""
+    
+    def __init__(self, name=''):
+        super().__init__(name)
+        self.last_progress = {}
+        self.min_percent_change = 5.0  # Only log when progress increases by 5%
+    
+    def filter(self, record):
+        # Check if this is a progress message
+        if hasattr(record, 'msg') and isinstance(record.msg, str):
+            if "Processed" in record.msg and "records" in record.msg:
+                # Extract progress info
+                match = re.search(r'Processed (\d+)/(\d+)', record.msg)
+                if match:
+                    current, total = int(match.group(1)), int(match.group(2))
+                    current_pct = (current / total) * 100
+                    logger_name = record.name
+                    
+                    # Check if we've seen this progress type before
+                    if logger_name not in self.last_progress:
+                        self.last_progress[logger_name] = current_pct
+                        return True
+                    
+                    # Only log if progress increased significantly
+                    if current_pct - self.last_progress[logger_name] >= self.min_percent_change:
+                        self.last_progress[logger_name] = current_pct
+                        return True
+                    return False
+        
+        # Keep all non-progress messages
+        return True
+
+def configure_logging(args):
+    """Configure logging with appropriate verbosity and output."""
+    # Import re module if not already imported
+    import re
+    
+    # Create logs directory if it doesn't exist
+    log_dir = Path("logs")
+    log_dir.mkdir(exist_ok=True)
+    
+    # Create a unique log filename for this run
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_filename = log_dir / f"{args.tokenizer}_{args.distribution}_{timestamp}.log"
+    
+    # Configure root logger
+    root_logger = logging.getLogger()
+    
+    # Clear any existing handlers
+    for handler in root_logger.handlers[:]:
+        root_logger.removeHandler(handler)
+    
+    # Create handlers
+    # File handler - captures all INFO and above
+    file_handler = logging.FileHandler(log_filename)
+    file_handler.setLevel(logging.INFO)
+    file_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    file_handler.setFormatter(file_formatter)
+    
+    # Console handler - only shows WARNING and above by default
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.WARNING)  # Less verbose on console
+    console_formatter = logging.Formatter('%(levelname)s: %(message)s')
+    console_handler.setFormatter(console_formatter)
+    
+    # Create and apply progress filter
+    progress_filter = ProgressFilter()
+    file_handler.addFilter(progress_filter)
+    console_handler.addFilter(progress_filter)
+    
+    # Add handlers to root logger
+    root_logger.addHandler(file_handler)
+    root_logger.addHandler(console_handler)
+    root_logger.setLevel(logging.INFO)
+    
+    # Adjust verbosity based on args
+    if hasattr(args, 'verbose') and args.verbose:
+        console_handler.setLevel(logging.INFO)  # Show INFO level in console too
+    
+    # Silence particularly noisy modules
+    logging.getLogger('transformers').setLevel(logging.WARNING)
+    logging.getLogger('datasets').setLevel(logging.WARNING)
+    logging.getLogger('urllib3').setLevel(logging.WARNING)
+    logging.getLogger('huggingface_hub').setLevel(logging.WARNING)
+    
+    # Get the module-level logger for this file
+    logger = logging.getLogger(__name__)
+    logger.info(f"Logging configured. Full logs will be saved to {log_filename}")
+    return log_filename
+
 # Add this near the top, after other imports but before any dataset operations
 import datasets
 datasets.config.TRUST_REMOTE_CODE = True
@@ -195,6 +284,19 @@ def run_analysis(args):
     Args:
         args: Command-line arguments containing analysis parameters
     """
+    # Configure logging first
+    log_filename = configure_logging(args)
+    
+    # Set up directories
+    results_dir = setup_directories()
+    
+    # Log run parameters
+    logger.info(f"Starting analysis with parameters:")
+    logger.info(f"  Tokenizer: {args.tokenizer}")
+    logger.info(f"  Distribution: {args.distribution}")
+    logger.info(f"  Texts per decade: {args.texts_per_decade}")
+    logger.info(f"  Target size (GB): {args.target_size_gb}")
+
     # Set up directories
     results_dir = setup_directories()
     
@@ -821,6 +923,7 @@ def create_distribution_comparison(results_by_dist, distributions, tokenizer_nam
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run temporal distribution inference on Maxwell")
+    parser.add_argument("--verbose", action="store_true", help="Enable verbose logging output")
     parser.add_argument("--tokenizer", type=str, default="gpt2", help="Tokenizer to analyze")
     parser.add_argument("--texts_per_decade", type=int, default=5000, 
                       help="Number of texts per decade (higher = more accurate)")
