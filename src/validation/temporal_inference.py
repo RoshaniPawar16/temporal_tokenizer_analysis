@@ -431,15 +431,26 @@ class TemporalDistributionInference:
         
         return decade_patterns
 
-    def _split_text_for_tokenizer(self, text, max_chars=800):
+    def _split_text_for_tokenizer(self, text, max_chars=500):
         """
-        Split text into smaller chunks to avoid context length issues.
+        Split text into smaller chunks to avoid context length issues and memory problems.
+        Uses a more aggressive approach to handle extremely long texts.
+        
+        Args:
+            text: Text to split
+            max_chars: Maximum characters per chunk
+            
+        Returns:
+            List of text chunks
         """
-        # First, handle extremely long texts by truncating to a reasonable length
-        if len(text) > 10000:  # Truncate texts longer than 10K characters
-            logger.warning(f"Found extremely long text ({len(text)} chars) - truncating")
-            text = text[:10000]  # Only keep first 10K characters
+        # Handle extremely long texts more gracefully - hard truncate at a reasonable size
+        max_text_length = 10000  # Maximum text length to process in characters
+        
+        if len(text) > max_text_length:
+            logger.warning(f"Found extremely long text ({len(text)} chars) - truncating to {max_text_length} chars")
+            text = text[:max_text_length]
 
+        # If text is still within limits, return as single chunk
         if len(text) <= max_chars:
             return [text]
             
@@ -450,19 +461,49 @@ class TemporalDistributionInference:
         chunks = []
         current_chunk = ""
         
+        # Process paragraphs into chunks
         for para in paragraphs:
-            if len(current_chunk) + len(para) > max_chars:
-                if current_chunk:
-                    chunks.append(current_chunk)
-                current_chunk = para
+            # If paragraph is too long, split it further
+            if len(para) > max_chars:
+                # Split long paragraph into sentences
+                sentences = re.split(r'(?<=[.!?])\s+', para)
+                
+                # Process sentences
+                for sentence in sentences:
+                    if len(current_chunk) + len(sentence) + 2 > max_chars:
+                        if current_chunk:
+                            chunks.append(current_chunk)
+                        
+                        # Handle sentences longer than max_chars
+                        if len(sentence) > max_chars:
+                            # Split very long sentence into smaller parts
+                            for i in range(0, len(sentence), max_chars // 2):
+                                end = min(i + max_chars // 2, len(sentence))
+                                chunks.append(sentence[i:end])
+                        else:
+                            current_chunk = sentence
+                    else:
+                        if current_chunk:
+                            current_chunk += " " + sentence
+                        else:
+                            current_chunk = sentence
             else:
-                if current_chunk:
-                    current_chunk += "\n\n" + para
-                else:
+                # For normal-sized paragraphs
+                if len(current_chunk) + len(para) + 2 > max_chars:
+                    chunks.append(current_chunk)
                     current_chunk = para
+                else:
+                    if current_chunk:
+                        current_chunk += "\n\n" + para
+                    else:
+                        current_chunk = para
         
+        # Add any remaining text
         if current_chunk:
             chunks.append(current_chunk)
+        
+        # Ensure no empty chunks
+        chunks = [chunk for chunk in chunks if chunk.strip()]
             
         return chunks
     

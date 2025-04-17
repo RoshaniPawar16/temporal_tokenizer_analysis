@@ -33,6 +33,97 @@ from functools import partial
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Add this after your imports but before the ProgressFilter class
+
+import time  # Make sure time is imported
+
+def limit_text_truncation_warnings(module_name='temporal_inference'):
+    """
+    Replace the logger in the specified module to reduce truncation warnings.
+    
+    Args:
+        module_name: The name of the module to modify logging for
+    """
+    logger = logging.getLogger(module_name)
+    
+    # Save the original warning method
+    original_warning = logger.warning
+    
+    # Tracking variables
+    truncation_count = 0
+    last_truncation_time = 0
+    
+    # Define a new warning method that filters truncation messages
+    def filtered_warning(msg, *args, **kwargs):
+        nonlocal truncation_count, last_truncation_time
+        
+        # Check if this is a truncation warning
+        if isinstance(msg, str) and "truncating" in msg and "extremely long text" in msg:
+            current_time = time.time()
+            
+            # Only show truncation warnings occasionally
+            if current_time - last_truncation_time < 5:  # 5 second window
+                truncation_count += 1
+                return  # Skip this warning
+            else:
+                # If it's been more than 5 seconds, show a summary and reset
+                if truncation_count > 0:
+                    original_warning(f"Truncated {truncation_count} additional long texts")
+                    truncation_count = 0
+                last_truncation_time = current_time
+                # Let the original message through
+        
+        # Pass other warnings through unchanged
+        original_warning(msg, *args, **kwargs)
+    
+    # Replace the warning method
+    logger.warning = filtered_warning
+    
+    return logger
+
+
+def batch_log_progress(total, current, logger, desc="Processing", min_interval=1.0, increments=10):
+    """
+    Log progress updates with controlled frequency.
+    
+    Args:
+        total: Total number of items
+        current: Current item index
+        logger: Logger to use
+        desc: Description for the progress message
+        min_interval: Minimum seconds between progress updates
+        increments: Only log at these percentage increments
+    
+    Returns:
+        Boolean: Whether a log message was emitted
+    """
+    # Static variables using a dictionary
+    if not hasattr(batch_log_progress, "state"):
+        batch_log_progress.state = {
+            "last_time": 0,
+            "last_percent": 0
+        }
+    
+    # Calculate percentage
+    if total <= 0:
+        return False
+        
+    percent = int((current / total) * 100)
+    
+    # Only log at specific increments and time intervals
+    current_time = time.time()
+    time_elapsed = current_time - batch_log_progress.state["last_time"]
+    percent_change = percent - batch_log_progress.state["last_percent"]
+    
+    if (percent % increments == 0 and percent > batch_log_progress.state["last_percent"] and 
+            time_elapsed >= min_interval):
+        logger.info(f"{desc}: {current}/{total} ({percent}%)")
+        batch_log_progress.state["last_time"] = current_time
+        batch_log_progress.state["last_percent"] = percent
+        return True
+        
+    return False
+
 class ProgressFilter(logging.Filter):
     """Filter to reduce frequency of progress messages."""
     
@@ -87,19 +178,58 @@ def configure_logging(args):
         root_logger.removeHandler(handler)
     
     # Create handlers
-    # File handler - captures all INFO and above
+    # File handler - captures all INFO and above but with filtering
     file_handler = logging.FileHandler(log_filename)
     file_handler.setLevel(logging.INFO)
-    file_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    file_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     file_handler.setFormatter(file_formatter)
     
-    # Console handler - only shows WARNING and above by default
+    # Console handler - only shows WARNING and above by default, with minimal formatting
     console_handler = logging.StreamHandler()
     console_handler.setLevel(logging.WARNING)  # Less verbose on console
     console_formatter = logging.Formatter('%(levelname)s: %(message)s')
     console_handler.setFormatter(console_formatter)
     
-    # Create and apply progress filter
+    # Create and apply progress filter to reduce repetitive messages
+    class ProgressFilter(logging.Filter):
+        def __init__(self):
+            super().__init__()
+            self.last_progress = {}
+            self.truncation_count = 0
+            self.last_truncation_time = 0
+            
+        def filter(self, record):
+            # Skip repetitive processing messages
+            if hasattr(record, 'msg') and isinstance(record.msg, str):
+                # Group similar truncation warnings
+                if "Found extremely long text" in record.msg and "truncating" in record.msg:
+                    current_time = time.time()
+                    # Only show truncation warnings once every 5 seconds
+                    if current_time - self.last_truncation_time < 5:
+                        self.truncation_count += 1
+                        return False
+                    else:
+                        # Reset counter and show summary
+                        if self.truncation_count > 0:
+                            record.msg = f"Found extremely long texts - truncated {self.truncation_count + 1} texts"
+                            self.truncation_count = 0
+                        self.last_truncation_time = current_time
+                
+                # Reduce frequency of progress updates
+                if "Processing" in record.msg and "%" in record.msg:
+                    match = re.search(r'(\d+)%', record.msg)
+                    if match:
+                        progress = int(match.group(1))
+                        source = record.name
+                        
+                        # Only log major progress milestones (10% increments)
+                        if source not in self.last_progress or progress - self.last_progress[source] >= 10:
+                            self.last_progress[source] = progress
+                            return True
+                        return False
+            
+            return True
+    
     progress_filter = ProgressFilter()
     file_handler.addFilter(progress_filter)
     console_handler.addFilter(progress_filter)
@@ -114,10 +244,10 @@ def configure_logging(args):
         console_handler.setLevel(logging.INFO)  # Show INFO level in console too
     
     # Silence particularly noisy modules
-    logging.getLogger('transformers').setLevel(logging.WARNING)
-    logging.getLogger('datasets').setLevel(logging.WARNING)
-    logging.getLogger('urllib3').setLevel(logging.WARNING)
-    logging.getLogger('huggingface_hub').setLevel(logging.WARNING)
+    logging.getLogger('transformers').setLevel(logging.ERROR)  # Increased from WARNING to ERROR
+    logging.getLogger('datasets').setLevel(logging.ERROR)      # Increased from WARNING to ERROR
+    logging.getLogger('urllib3').setLevel(logging.ERROR)       # Increased from WARNING to ERROR
+    logging.getLogger('huggingface_hub').setLevel(logging.ERROR)
     
     # Get the module-level logger for this file
     logger = logging.getLogger(__name__)
@@ -226,16 +356,23 @@ def run_parallel_analysis(inference, decade_texts):
             # Prepare function with fixed inference object
             process_fn = partial(process_decade, inference=inference)
             
-            # Process in parallel with better error handling
-            results = []
-            for result in tqdm(
-                pool.starmap(process_fn, decade_args),
-                total=len(decade_args),
-                desc=f"Processing batch {i//batch_size + 1}"
-            ):
+            # Process in parallel with better error handling and controlled logging
+            completed = 0
+            total = len(decade_args)
+            
+            for result in pool.starmap(process_fn, decade_args):
                 if result is not None:  # Handle potential None returns from process_decade
                     decade, patterns = result
                     decade_patterns[decade] = patterns
+                
+                completed += 1
+                # Use batch logging to reduce output noise
+                batch_log_progress(
+                    total=total,
+                    current=completed,
+                    logger=logger,
+                    desc=f"Processing batch {i//batch_size + 1}"
+                )
             
         # Force garbage collection between batches
         gc.collect()
@@ -287,6 +424,10 @@ def run_analysis(args):
     # Configure logging first
     log_filename = configure_logging(args)
     
+    # Apply warning limiting to reduce noise
+    limit_text_truncation_warnings('src.validation.temporal_inference')
+    limit_text_truncation_warnings('src.data.dataset_manager')
+
     # Set up directories
     results_dir = setup_directories()
     
@@ -573,6 +714,7 @@ def run_analysis(args):
                                    args.distribution, args.tokenizer, results_dir)
         
     # Bootstrap validation (if requested)
+    # Bootstrap validation (if requested)
     if args.bootstrap:
         # Reduce iterations but ensure enough for statistical validity
         bootstrap_iterations = min(args.bootstrap_iterations, 30)
@@ -591,7 +733,38 @@ def run_analysis(args):
             if has_psutil:
                 limit_memory_usage()
                 
-            confidence_intervals = validator.bootstrap_analysis(
+            # Create a clean wrapper function to ensure consistent data structure for inference
+            def inference_wrapper(texts):
+                try:
+                    # First handle different types of input
+                    clean_texts = {}
+                    for decade, decade_texts in texts.items():
+                        if decade_texts:
+                            # Process text items depending on their format
+                            clean_decade_texts = []
+                            for item in decade_texts:
+                                if isinstance(item, tuple) and len(item) >= 1:
+                                    # Extract the text component (assume it's the first element)
+                                    clean_decade_texts.append(item[0])
+                                elif isinstance(item, str):
+                                    clean_decade_texts.append(item)
+                            clean_texts[decade] = clean_decade_texts
+                    
+                    # Process these cleaned texts
+                    patterns = inference.analyze_decade_patterns(clean_texts)
+                    
+                    # Return a dictionary mapping decades to proportions
+                    return inference.infer_temporal_distribution(patterns)
+                except Exception as e:
+                    logger.error(f"Error in inference wrapper: {e}")
+                    # Return a uniform distribution as fallback
+                    return {decade: 1.0/len(texts) for decade in texts.keys()}
+            
+            # Set up validator with wrapper function
+            bootstrap_validator = TemporalValidator(inference_method=inference_wrapper)
+            
+            # Use the validator in bootstrap analysis
+            confidence_intervals = bootstrap_validator.bootstrap_analysis(
                 decade_texts=decade_texts,
                 n_bootstrap=bootstrap_iterations,
                 sample_ratio=0.8
@@ -608,8 +781,8 @@ def run_analysis(args):
             
             # Visualize with confidence intervals
             create_bootstrap_visualization(results["distribution"], selected_dist, 
-                                         confidence_intervals, args.distribution, 
-                                         args.tokenizer, results_dir)
+                                        confidence_intervals, args.distribution, 
+                                        args.tokenizer, results_dir)
             
         except Exception as e:
             logger.error(f"Error in bootstrap validation: {e}")
