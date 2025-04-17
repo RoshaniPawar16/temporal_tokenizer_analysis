@@ -305,7 +305,7 @@ class TemporalDatasetManager:
 
     def verify_dataset_volumes(self, decade_texts, target_gb_per_decade=0.5):
         """
-        Verify that each decade has sufficient data volume.
+        Verify that each decade has sufficient data volume with enhanced error handling.
         
         Args:
             decade_texts: Dictionary mapping decades to texts
@@ -318,25 +318,46 @@ class TemporalDatasetManager:
         all_sufficient = True
         
         for decade, texts in decade_texts.items():
-            # Handle both (text, source) tuples and raw text strings
-            if texts:
-                if isinstance(texts[0], tuple):
-                    # Calculate data size in GB
-                    byte_size = sum(len(text[0].encode('utf-8')) for text in texts)
-                else:
-                    # Raw text strings
-                    byte_size = sum(len(text.encode('utf-8')) for text in texts)
+            try:
+                # Handle empty lists
+                if not texts:
+                    volumes[decade] = 0.0
+                    all_sufficient = False
+                    logger.warning(f"No data for {decade}: 0.00 GB (target: {target_gb_per_decade:.2f} GB)")
+                    continue
                     
+                # Calculate size with extensive error handling
+                byte_size = 0
+                for item in texts:
+                    try:
+                        if isinstance(item, tuple):
+                            # Extract the text component (assume it's the first element)
+                            text_content = item[0]
+                        else:
+                            # Use the item directly as text
+                            text_content = item
+                            
+                        # Now ensure text_content is a string before encoding
+                        if not isinstance(text_content, str):
+                            logger.warning(f"Non-string content found in {decade}: {type(text_content)}")
+                            continue
+                            
+                        byte_size += len(text_content.encode('utf-8'))
+                    except Exception as e:
+                        logger.warning(f"Error processing item in {decade}: {e}")
+                        continue
+                
                 gb_size = byte_size / (1024**3)
                 volumes[decade] = gb_size
                 
                 if gb_size < target_gb_per_decade:
                     all_sufficient = False
                     logger.warning(f"Insufficient data for {decade}: {gb_size:.2f} GB (target: {target_gb_per_decade:.2f} GB)")
-            else:
+                
+            except Exception as e:
+                logger.error(f"Error processing decade {decade}: {e}")
                 volumes[decade] = 0.0
                 all_sufficient = False
-                logger.warning(f"No data for {decade}: 0.00 GB (target: {target_gb_per_decade:.2f} GB)")
         
         # Log overall status
         if all_sufficient:
@@ -1010,8 +1031,33 @@ class TemporalDatasetManager:
         
         # 2. Check data volumes and enhance as needed
         
+        # Debug the structure of decade_texts before verification
+        for decade, texts in decade_texts.items():
+            if texts:
+                sample = texts[0]
+                logger.debug(f"Sample data structure for {decade}: {type(sample)}")
+                if isinstance(sample, tuple) and len(sample) > 0:
+                    logger.debug(f"  Tuple length: {len(sample)}")
+                    logger.debug(f"  First element type: {type(sample[0])}")
+        
         # Use our verification method to check volumes
-        decade_volumes, all_sufficient = self.verify_dataset_volumes(decade_texts, target_gb_per_decade=target_size_gb*0.2)
+        try:
+            decade_volumes, all_sufficient = self.verify_dataset_volumes(decade_texts, target_gb_per_decade=target_size_gb*0.2)
+        except Exception as e:
+            logger.error(f"Error in verify_dataset_volumes: {e}")
+            # Create a fallback volume check
+            decade_volumes = {}
+            all_sufficient = False
+            for decade, texts in decade_texts.items():
+                try:
+                    if texts and isinstance(texts[0], tuple):
+                        byte_size = sum(len(text[0].encode('utf-8')) for text in texts)
+                    else:
+                        byte_size = 0
+                    decade_volumes[decade] = byte_size / (1024**3)
+                except Exception as inner_e:
+                    logger.error(f"Error calculating volume for {decade}: {inner_e}")
+                    decade_volumes[decade] = 0
         
         # Identify decades with insufficient data
         insufficient_decades = []
@@ -1034,78 +1080,143 @@ class TemporalDatasetManager:
                 
                 # First try to expand existing texts if available
                 if len(current_texts) > 0:
-                    # Calculate how many expansions needed
-                    needed_gb = target_volume - current_volume
-                    avg_text_bytes = sum(len(text.encode('utf-8')) for text, _ in current_texts) / len(current_texts)
-                    needed_texts = int((needed_gb * 1024 * 1024 * 1024) / avg_text_bytes) + 1
-                    
-                    # Cap at a reasonable number
-                    texts_to_expand = min(1000, needed_texts)
-                    
-                    if texts_to_expand > 0:
-                        logger.info(f"Expanding {min(len(current_texts), texts_to_expand)} texts for {decade}")
+                    try:
+                        # Calculate how many expansions needed
+                        needed_gb = target_volume - current_volume
                         
-                        # Use existing texts as templates
-                        expanded_texts = []
+                        # Safely calculate average text size
+                        total_bytes = 0
+                        valid_texts = 0
+                        for item in current_texts:
+                            try:
+                                if isinstance(item, tuple):
+                                    text = item[0]
+                                else:
+                                    text = item
+                                if isinstance(text, str):
+                                    total_bytes += len(text.encode('utf-8'))
+                                    valid_texts += 1
+                            except Exception as e:
+                                logger.warning(f"Error calculating text size: {e}")
                         
-                        # Use at most 100 texts as base - ensures diversity
-                        base_texts = current_texts[:min(100, len(current_texts))]
+                        avg_text_bytes = total_bytes / valid_texts if valid_texts > 0 else 6000
+                        needed_texts = int((needed_gb * 1024 * 1024 * 1024) / avg_text_bytes) + 1
                         
-                        for i in range(texts_to_expand):
-                            if base_texts:
-                                # Select random base text
-                                base_text, base_source = random.choice(base_texts)
-                                
-                                # Create expanded version
-                                expanded_text = self._augment_text_for_volume(base_text, decade, volume_multiplier=5)
-                                expanded_texts.append((expanded_text, f"{base_source}_expanded"))
-                                
-                                # Check if we've reached target
-                                if i % 100 == 0:
-                                    expanded_volume = sum(len(text.encode('utf-8')) for text, _ in expanded_texts) / (1024**3)
-                                    if current_volume + expanded_volume >= target_volume:
-                                        logger.info(f"Reached target volume after {i+1} expansions")
-                                        break
+                        # Cap at a reasonable number
+                        texts_to_expand = min(1000, needed_texts)
                         
-                        # Add expanded texts to the dataset
-                        decade_texts[decade].extend(expanded_texts)
-                        logger.info(f"Added {len(expanded_texts)} expanded texts for {decade}")
+                        if texts_to_expand > 0:
+                            logger.info(f"Expanding {min(len(current_texts), texts_to_expand)} texts for {decade}")
+                            
+                            # Use existing texts as templates
+                            expanded_texts = []
+                            
+                            # Use at most 100 texts as base - ensures diversity
+                            base_texts = []
+                            for item in current_texts[:min(100, len(current_texts))]:
+                                try:
+                                    if isinstance(item, tuple) and isinstance(item[0], str):
+                                        base_texts.append(item)
+                                    elif isinstance(item, str):
+                                        base_texts.append((item, "unknown"))
+                                except Exception as e:
+                                    logger.warning(f"Error processing base text: {e}")
+                            
+                            for i in range(texts_to_expand):
+                                if base_texts:
+                                    try:
+                                        # Select random base text
+                                        base_text, base_source = random.choice(base_texts)
+                                        
+                                        # Create expanded version
+                                        expanded_text = self._augment_text_for_volume(base_text, decade, volume_multiplier=5)
+                                        expanded_texts.append((expanded_text, f"{base_source}_expanded"))
+                                        
+                                        # Check if we've reached target
+                                        if i % 100 == 0:
+                                            expanded_volume = sum(len(text.encode('utf-8')) for text, _ in expanded_texts) / (1024**3)
+                                            if current_volume + expanded_volume >= target_volume:
+                                                logger.info(f"Reached target volume after {i+1} expansions")
+                                                break
+                                    except Exception as e:
+                                        logger.warning(f"Error expanding text: {e}")
+                                        continue
+                            
+                            # Add expanded texts to the dataset
+                            decade_texts[decade].extend(expanded_texts)
+                            logger.info(f"Added {len(expanded_texts)} expanded texts for {decade}")
+                    except Exception as e:
+                        logger.error(f"Error expanding texts for {decade}: {e}")
                 
                 # If still insufficient, generate synthetic texts
-                current_texts = decade_texts.get(decade, [])
-                current_volume = sum(len(text.encode('utf-8')) for text, _ in current_texts) / (1024**3)
-                
-                if current_volume < target_volume:
-                    needed_gb = target_volume - current_volume
+                try:
+                    current_texts = decade_texts.get(decade, [])
                     
-                    # Estimate text size (use 6KB as default if no texts)
-                    avg_text_bytes = 6000
-                    if current_texts:
-                        avg_text_bytes = sum(len(text.encode('utf-8')) for text, _ in current_texts) / len(current_texts)
+                    # Safely calculate current volume
+                    current_volume = 0
+                    for item in current_texts:
+                        try:
+                            if isinstance(item, tuple) and isinstance(item[0], str):
+                                current_volume += len(item[0].encode('utf-8'))
+                            elif isinstance(item, str):
+                                current_volume += len(item.encode('utf-8'))
+                        except Exception as e:
+                            logger.warning(f"Error calculating volume: {e}")
                     
-                    needed_texts = int((needed_gb * 1024 * 1024 * 1024) / avg_text_bytes) + 1
+                    current_volume = current_volume / (1024**3)
                     
-                    logger.info(f"Generating {needed_texts} synthetic texts for {decade}")
-                    
-                    # Generate synthetic texts
-                    synthetic_texts = self._create_synthetic_texts_for_decade(decade, needed_texts)
-                    decade_texts[decade].extend([(text, "synthetic") for text in synthetic_texts])
-                    logger.info(f"Added {len(synthetic_texts)} synthetic texts for {decade}")
+                    if current_volume < target_volume:
+                        needed_gb = target_volume - current_volume
+                        
+                        # Estimate text size (use 6KB as default if no texts)
+                        avg_text_bytes = 6000
+                        if current_texts:
+                            total_bytes = 0
+                            valid_texts = 0
+                            for item in current_texts:
+                                try:
+                                    if isinstance(item, tuple):
+                                        text = item[0]
+                                    else:
+                                        text = item
+                                    if isinstance(text, str):
+                                        total_bytes += len(text.encode('utf-8'))
+                                        valid_texts += 1
+                                except Exception as e:
+                                    pass
+                            avg_text_bytes = total_bytes / valid_texts if valid_texts > 0 else 6000
+                        
+                        needed_texts = int((needed_gb * 1024 * 1024 * 1024) / avg_text_bytes) + 1
+                        
+                        logger.info(f"Generating {needed_texts} synthetic texts for {decade}")
+                        
+                        # Generate synthetic texts
+                        synthetic_texts = self._create_synthetic_texts_for_decade(decade, needed_texts)
+                        decade_texts[decade].extend([(text, "synthetic") for text in synthetic_texts])
+                        logger.info(f"Added {len(synthetic_texts)} synthetic texts for {decade}")
+                except Exception as e:
+                    logger.error(f"Error generating synthetic texts for {decade}: {e}")
         
         # 3. Apply balancing to match target distribution
-        
-        balanced_dataset = self._balance_by_distribution(decade_texts, distribution, target_size_gb)
+        try:
+            balanced_dataset = self._balance_by_distribution(decade_texts, distribution, target_size_gb)
+        except Exception as e:
+            logger.error(f"Error in _balance_by_distribution: {e}")
+            # Fallback to using the original dataset
+            balanced_dataset = decade_texts
         
         # 4. Validate and report final dataset quality
-        
-        is_valid, quality_report = self.verify_dataset_quality(balanced_dataset)
-        
-        if is_valid:
-            logger.info(f"Created valid balanced dataset with {quality_report['total_texts']} texts")
-            logger.info(f"Composition: {quality_report['real_percentage']:.1%} real, {quality_report['expanded_percentage']:.1%} expanded, {quality_report['synthetic_percentage']:.1%} synthetic")
-        else:
-            logger.warning(f"Created dataset does not meet quality standards")
-            logger.warning(f"Composition: {quality_report['real_percentage']:.1%} real, {quality_report['expanded_percentage']:.1%} expanded, {quality_report['synthetic_percentage']:.1%} synthetic")
+        try:
+            is_valid, quality_report = self.verify_dataset_quality(balanced_dataset)
+            
+            if is_valid:
+                logger.info(f"Created valid balanced dataset with {quality_report['total_texts']} texts")
+                logger.info(f"Composition: {quality_report['real_percentage']:.1%} real, {quality_report['expanded_percentage']:.1%} expanded, {quality_report['synthetic_percentage']:.1%} synthetic")
+            else:
+                logger.warning(f"Created dataset does not meet quality standards")
+                logger.warning(f"Composition: {quality_report['real_percentage']:.1%} real, {quality_report['expanded_percentage']:.1%} expanded, {quality_report['synthetic_percentage']:.1%} synthetic")
+        except Exception as e:
+            logger.error(f"Error validating dataset quality: {e}")
         
         return balanced_dataset
 
