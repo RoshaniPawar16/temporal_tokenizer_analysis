@@ -435,6 +435,11 @@ class TemporalDistributionInference:
         """
         Split text into smaller chunks to avoid context length issues.
         """
+        # First, handle extremely long texts by truncating to a reasonable length
+        if len(text) > 10000:  # Truncate texts longer than 10K characters
+            logger.warning(f"Found extremely long text ({len(text)} chars) - truncating")
+            text = text[:10000]  # Only keep first 10K characters
+
         if len(text) <= max_chars:
             return [text]
             
@@ -1188,106 +1193,6 @@ class TemporalDistributionInference:
         # Select top rules by this combined score
         return sorted(rule_scores.keys(), key=lambda r: rule_scores[r], reverse=True)[:num_rules]
     
-    # def infer_distribution_ensemble(self, decade_patterns) -> Dict[str, float]:
-    #     """
-    #     Use an ensemble of methods to produce a more robust distribution estimate.
-        
-    #     Args:
-    #         decade_patterns: Patterns detected for each decade
-                
-    #     Returns:
-    #         Dictionary mapping decades to their estimated proportion
-    #     """
-    #     decades = sorted(list(decade_patterns.keys()))
-    #     if not decades:
-    #         return {}
-            
-    #     logger.info("Using ensemble approach with multiple methods and parameters")
-        
-    #     # Initialize ensemble results
-    #     all_distributions = []
-    #     weights = []
-        
-    #     # Try different parameter combinations for LP method
-    #     param_sets = [
-    #         # num_rules, reg_strength, weight
-    #         (3000, 0.05, 3.0),    # Base case
-    #         (5000, 0.05, 2.0),    # More rules
-    #         (3000, 0.01, 1.0),    # Weaker regularization
-    #         (5000, 0.10, 1.0),    # Stronger regularization
-    #         (2000, 0.02, 1.0),    # Fewer rules
-    #     ]
-        
-    #     for num_rules, reg_strength, weight in param_sets:
-    #         try:
-    #             logger.info(f"Trying LP with {num_rules} rules, {reg_strength} regularization")
-    #             distribution = self.infer_temporal_distribution(
-    #                 decade_patterns,
-    #                 num_merge_rules=num_rules,
-    #                 regularization_strength=reg_strength
-    #             )
-                
-    #             # Check if distribution is reasonable (not too extreme)
-    #             max_val = max(distribution.values()) if distribution else 0
-    #             if distribution and max_val < 0.5:  # No single decade should have >50%
-    #                 all_distributions.append(distribution)
-    #                 weights.append(weight)
-    #                 logger.info(f"Added distribution with weight {weight}")
-    #             else:
-    #                 logger.warning(f"Skipping distribution with max value {max_val}")
-    #         except Exception as e:
-    #             logger.warning(f"LP method failed with {num_rules} rules, {reg_strength} reg: {e}")
-        
-    #     # Add bayesian method
-    #     try:
-    #         bayesian_dist = self._infer_distribution_bayesian(decade_patterns)
-    #         if bayesian_dist:
-    #             all_distributions.append(bayesian_dist)
-    #             weights.append(1.0)
-    #             logger.info("Added Bayesian distribution")
-    #     except Exception as e:
-    #         logger.warning(f"Bayesian method failed: {e}")
-        
-    #     # Add heuristic method
-    #     try:
-    #         heuristic_dist = self._infer_distribution_heuristic(decade_patterns)
-    #         if heuristic_dist:
-    #             all_distributions.append(heuristic_dist)
-    #             weights.append(1.0)
-    #             logger.info("Added heuristic distribution")
-    #     except Exception as e:
-    #         logger.warning(f"Heuristic method failed: {e}")
-        
-    #     # If we have distributions, compute weighted average
-    #     if all_distributions:
-    #         # Normalize weights
-    #         total_weight = sum(weights)
-    #         if total_weight > 0:
-    #             normalized_weights = [w / total_weight for w in weights]
-                
-    #             # Compute weighted average
-    #             ensemble_dist = {decade: 0.0 for decade in decades}
-    #             for dist, weight in zip(all_distributions, normalized_weights):
-    #                 for decade in decades:
-    #                     ensemble_dist[decade] += dist.get(decade, 0.0) * weight
-                
-    #             # Apply final bias correction for 1970s
-    #             if "1970s" in ensemble_dist:
-    #                 ensemble_dist["1970s"] *= 0.7
-    #                 # Redistribute to maintain sum=1
-    #                 excess = 1.0 - sum(ensemble_dist.values())
-    #                 other_decades = [d for d in ensemble_dist if d != "1970s"]
-    #                 if other_decades:
-    #                     for d in other_decades:
-    #                         ensemble_dist[d] += excess / len(other_decades)
-                
-    #             logger.info(f"Created ensemble distribution from {len(all_distributions)} methods")
-    #             return ensemble_dist
-        
-    #     # Fallback to standard method if ensemble fails
-    #     logger.warning("Ensemble approach failed, falling back to standard LP")
-    #     return self.infer_temporal_distribution(decade_patterns)
-
     def infer_distribution_ensemble(self, decade_patterns, methods=None, weights=None):
         """
         Use an improved ensemble of methods to produce more robust distribution estimates.
@@ -1333,10 +1238,7 @@ class TemporalDistributionInference:
                 cleaned_distribution = {}
                 for decade, value in distribution.items():
                     if isinstance(value, (int, float)):
-                        cleaned_distribution[decade] = value
-                    elif isinstance(value, dict):
-                        logger.warning(f"Got dictionary instead of number for {decade} - using fallback")
-                        cleaned_distribution[decade] = 0.0  # Or some appropriate default
+                        cleaned_distribution[decade] = float(value)  # Ensure everything is a float
                     else:
                         logger.warning(f"Skipping non-numeric value for {decade}: {type(value)}")
                         cleaned_distribution[decade] = 0.0
@@ -1373,10 +1275,11 @@ class TemporalDistributionInference:
         # Compute weighted average
         ensemble_distribution = {}
         for decade in decades:
-            ensemble_distribution[decade] = sum(
-                dist.get(decade, 0) * weight 
-                for dist, weight in zip(distributions, norm_weights)
-            )
+            ensemble_distribution[decade] = 0.0  # Initialize with zero
+            for i, dist in enumerate(distributions):
+                # Only add if the decade exists in this distribution
+                if decade in dist:
+                    ensemble_distribution[decade] += dist[decade] * norm_weights[i]
         
         # Final normalization
         total = sum(ensemble_distribution.values())

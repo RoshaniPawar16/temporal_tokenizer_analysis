@@ -26,106 +26,10 @@ class TemporalValidator:
             inference_method: Function that takes texts by decade and returns a distribution
         """
         self.inference_method = inference_method
-    
-    # def bootstrap_analysis(self, decade_texts, n_bootstrap=50, sample_ratio=0.8):
-    #     """
-    #     Perform bootstrap analysis to estimate confidence intervals.
-        
-    #     Args:
-    #         decade_texts: Dictionary mapping decades to lists of texts
-    #         n_bootstrap: Number of bootstrap iterations to run
-    #         sample_ratio: Proportion of data to sample in each iteration
-            
-    #     Returns:
-    #         Dictionary with confidence intervals by decade
-    #     """
-    #     logger.info(f"Running {n_bootstrap} bootstrap iterations...")
-        
-    #     # Initialize results
-    #     bootstrap_results = defaultdict(list)
-        
-    #     # Run bootstrap iterations
-    #     for i in range(n_bootstrap):
-    #         logger.info(f"Bootstrap iteration {i+1}/{n_bootstrap}")
-            
-    #         # Create bootstrap sample
-    #         bootstrap_sample = self._create_bootstrap_sample(decade_texts, sample_ratio)
-            
-    #         # Apply chunking to handle token length issues
-    #         chunked_bootstrap_sample = {}
-    #         for decade, texts in bootstrap_sample.items():
-    #             # Ensure texts are properly chunked
-    #             chunked_texts = []
-    #             for text in texts:
-    #                 # Handle text or (text, source) tuples
-    #                 if isinstance(text, tuple):
-    #                     content, source = text
-    #                 else:
-    #                     content, source = text, "unknown"
-                        
-    #                 # Split long texts into chunks using a reasonable character limit
-    #                 # 1024 tokens is roughly 3000-4000 characters for English text
-    #                 if len(content) > 3000:  
-    #                     import re
-    #                     # Use paragraph-based splitting
-    #                     paragraphs = re.split(r'\n\s*\n', content)
-    #                     current_chunk = ""
-    #                     for para in paragraphs:
-    #                         if len(current_chunk) + len(para) > 3000:
-    #                             if current_chunk:
-    #                                 chunked_texts.append((current_chunk, source))
-    #                             current_chunk = para
-    #                         else:
-    #                             if current_chunk:
-    #                                 current_chunk += "\n\n" + para
-    #                             else:
-    #                                 current_chunk = para
-    #                     if current_chunk:
-    #                         chunked_texts.append((current_chunk, source))
-    #                 else:
-    #                     chunked_texts.append((content, source))
-                
-    #             chunked_bootstrap_sample[decade] = chunked_texts
-            
-    #         # Run inference on chunked sample
-    #         try:
-    #             distribution = self.inference_method(chunked_bootstrap_sample)
-                
-    #             # Record results for each decade
-    #             for decade, proportion in distribution.items():
-    #                 bootstrap_results[decade].append(proportion)
-    #         except Exception as e:
-    #             logger.error(f"Error in bootstrap iteration {i+1}: {e}")
-        
-    #     # Calculate statistics
-    #     confidence_intervals = {}
-    #     for decade, proportions in bootstrap_results.items():
-    #         if proportions:
-    #             mean = np.mean(proportions)
-    #             median = np.median(proportions)
-    #             std_dev = np.std(proportions, ddof=1)
-                
-    #             # 95% confidence interval
-    #             sorted_proportions = sorted(proportions)
-    #             lower_idx = int(0.025 * len(sorted_proportions))
-    #             upper_idx = int(0.975 * len(sorted_proportions))
-    #             lower_ci = sorted_proportions[max(0, lower_idx)]
-    #             upper_ci = sorted_proportions[min(len(sorted_proportions)-1, upper_idx)]
-                
-    #             confidence_intervals[decade] = {
-    #                 "mean": mean,
-    #                 "median": median,
-    #                 "std_dev": std_dev,
-    #                 "lower_ci": lower_ci,
-    #                 "upper_ci": upper_ci,
-    #                 "samples": len(proportions)
-    #             }
-        
-    #     return confidence_intervals
 
-    def bootstrap_analysis(self, decade_texts, n_bootstrap=50, sample_ratio=0.8):
+    def bootstrap_analysis(self, decade_texts, n_bootstrap=30, sample_ratio=0.8):
         """
-        Perform bootstrap analysis to estimate confidence intervals.
+        Perform bootstrap analysis to estimate confidence intervals with improved error handling.
         
         Args:
             decade_texts: Dictionary mapping decades to lists of texts
@@ -158,12 +62,7 @@ class TemporalValidator:
                     for decade, proportion in distribution.items():
                         # Make sure proportion is a numeric value
                         if isinstance(proportion, (int, float)):
-                            bootstrap_results[decade].append(proportion)
-                        elif isinstance(proportion, dict):
-                            # If it's a dictionary, try to extract a numerical value
-                            # Choose an appropriate key or calculate a value based on your needs
-                            logger.warning(f"Got dictionary instead of number for {decade} - using fallback")
-                            bootstrap_results[decade].append(0.0)  # Or some default value
+                            bootstrap_results[decade].append(float(proportion))  # Convert to float
                         else:
                             logger.warning(f"Skipping non-numeric value for {decade}: {type(proportion)}")
                 except Exception as e:
@@ -194,30 +93,21 @@ class TemporalValidator:
                     upper_ci = sorted_proportions[min(len(sorted_proportions)-1, upper_idx)]
                     
                     confidence_intervals[decade] = {
-                        "mean": mean,
-                        "median": median,
-                        "std_dev": std_dev,
-                        "lower_ci": lower_ci,
-                        "upper_ci": upper_ci,
+                        "mean": float(mean),  # Ensure values are float
+                        "median": float(median),
+                        "std_dev": float(std_dev),
+                        "lower_ci": float(lower_ci),
+                        "upper_ci": float(upper_ci),
                         "samples": len(proportions),
-                        "coefficient_of_variation": std_dev / mean if mean > 0 else float('inf')
+                        "coefficient_of_variation": float(std_dev / mean) if mean > 0 else float('inf')
                     }
         
-        # Add reliability assessment
+        # Return just the confidence intervals if there are some successful iterations
         if confidence_intervals:
-            reliability_metrics = self.calculate_reliability_metrics(confidence_intervals)
-            overall_assessment = {
-                "successful_iterations": successful_iterations,
-                "total_iterations": n_bootstrap,
-                "success_rate": successful_iterations / n_bootstrap,
-                "reliability_metrics": reliability_metrics
-            }
-            logger.info(f"Bootstrap reliability: {reliability_metrics['reliability_score']:.2f}/100")
-            
-            return confidence_intervals, overall_assessment
+            return confidence_intervals
         else:
             logger.error("No successful bootstrap iterations")
-            return {}, {"successful_iterations": 0, "total_iterations": n_bootstrap}
+            return {}
 
     def _create_bootstrap_sample(self, decade_texts, sample_ratio=0.8):
         """
