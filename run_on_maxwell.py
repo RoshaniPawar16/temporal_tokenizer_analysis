@@ -493,16 +493,25 @@ def run_analysis(args):
         # Log key findings
         logger.info(f"1960s analysis: {sixties_analysis['analysis_summary']}")
         
-        # If distinctive rules contribute significantly, modify the inference approach
-        if sixties_analysis['total_distinctive_contribution'] > 30:  # More than 30%
+        # Apply correction based on analysis
+        if sixties_analysis['total_distinctive_contribution'] > 20:  # More than 20%
             logger.info("1960s has highly distinctive rules, using modified inference approach")
             
-            # Infer with specific 1960s correction
+            # Infer with specific 1960s correction and token removal
             distribution = inference.infer_temporal_distribution(
                 decade_patterns,
                 remove_top_tokens=True,
-                top_n=10  # Increase to 10 to better filter problematic tokens
+                top_n=15  # Increased to 15 to better filter problematic tokens
             )
+            
+            # Apply correction factor as recommended
+            distribution = inference.apply_decade_correction(
+                distribution,
+                decade="1960s", 
+                factor=sixties_analysis.get('suggested_correction_factor', 0.6)
+            )
+            
+            logger.info("Applied 1960s correction factor")
         else:
             # Use standard ensemble approach
             distribution = inference.infer_distribution_ensemble(decade_patterns)
