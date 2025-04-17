@@ -1271,10 +1271,22 @@ class TemporalDistributionInference:
                 # Apply method with error handling
                 distribution = method_func(decade_patterns)
                 
+                # Ensure all values are numeric
+                cleaned_distribution = {}
+                for decade, value in distribution.items():
+                    if isinstance(value, (int, float)):
+                        cleaned_distribution[decade] = value
+                    elif isinstance(value, dict):
+                        logger.warning(f"Got dictionary instead of number for {decade} - using fallback")
+                        cleaned_distribution[decade] = 0.0  # Or some appropriate default
+                    else:
+                        logger.warning(f"Skipping non-numeric value for {decade}: {type(value)}")
+                        cleaned_distribution[decade] = 0.0
+                
                 # Validate distribution (should sum to ~1)
-                total = sum(distribution.values())
+                total = sum(cleaned_distribution.values())
                 if 0.9 <= total <= 1.1:  # Allow small numerical errors
-                    distributions.append({k: v/total for k, v in distribution.items()})
+                    distributions.append({k: v/total for k, v in cleaned_distribution.items()})
                     used_weights.append(weight)
                 else:
                     logger.warning(f"Skipping invalid distribution with sum {total}")

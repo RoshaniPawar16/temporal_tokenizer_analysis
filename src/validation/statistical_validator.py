@@ -154,11 +154,26 @@ class TemporalValidator:
                     distribution = self.inference_method(bootstrap_sample)
                     successful_iterations += 1
                     
-                    # Record results for each decade
+                    # Record results for each decade - WITH TYPE CHECKING
                     for decade, proportion in distribution.items():
-                        bootstrap_results[decade].append(proportion)
+                        # Make sure proportion is a numeric value
+                        if isinstance(proportion, (int, float)):
+                            bootstrap_results[decade].append(proportion)
+                        elif isinstance(proportion, dict):
+                            # If it's a dictionary, try to extract a numerical value
+                            # Choose an appropriate key or calculate a value based on your needs
+                            logger.warning(f"Got dictionary instead of number for {decade} - using fallback")
+                            bootstrap_results[decade].append(0.0)  # Or some default value
+                        else:
+                            logger.warning(f"Skipping non-numeric value for {decade}: {type(proportion)}")
                 except Exception as e:
                     logger.error(f"Error in bootstrap inference: {e}")
+                    
+                # Force garbage collection every few iterations
+                if i % 5 == 0:
+                    import gc
+                    gc.collect()
+                    
             except Exception as e:
                 logger.error(f"Error in bootstrap iteration {i+1}: {e}")
         

@@ -2038,7 +2038,7 @@ class TemporalDatasetManager:
         logger.info(f"Total dataset size: {total_size_bytes/(1024*1024*1024):.2f} GB")
         return combined_dataset
 
-    def chunk_texts_for_tokenizer(self, texts, max_tokens=200):  # Reduced further
+    def chunk_texts_for_tokenizer(self, texts, max_tokens=100):  # Reduced from 200 to 100
         """
         Split texts into smaller chunks based on actual token counts.
         Ensures no chunk exceeds the model's maximum sequence length.
@@ -2056,19 +2056,19 @@ class TemporalDatasetManager:
             else:
                 text = text_item
                 source = "unknown"
-                
+                    
             # Aggressive truncation for very long texts
-            if len(text) > 100000:  # Much stricter limit
+            if len(text) > 10000:  # Reduced from 100000 to 10000
                 logger.warning(f"Found extremely long text ({len(text)} chars) - truncating")
                 # Truncate to much smaller size
-                text = text[:100000]
-                
+                text = text[:10000]
+                    
             safe_texts.append((text, source))
         
         chunks = []
         for text, source in safe_texts:
             # First try direct tokenization and truncation
-            encoded = tokenizer(text, truncation=True, max_length=900)
+            encoded = tokenizer(text, truncation=True, max_length=500)  # Reduced from 900 to 500
             decoded = tokenizer.decode(encoded["input_ids"])
             
             # Split into paragraphs for processing
@@ -2117,10 +2117,10 @@ class TemporalDatasetManager:
         final_chunks = []
         for chunk_text, chunk_source in chunks:
             token_count = len(tokenizer(chunk_text)["input_ids"])
-            if token_count > 900:  # Well below the 1024 limit
+            if token_count > 500:  # Reduced from 900 to 500
                 # Force hard truncation
                 truncated = tokenizer.decode(
-                    tokenizer(chunk_text, truncation=True, max_length=900)["input_ids"]
+                    tokenizer(chunk_text, truncation=True, max_length=500)["input_ids"]
                 )
                 final_chunks.append((truncated, chunk_source))
             else:
