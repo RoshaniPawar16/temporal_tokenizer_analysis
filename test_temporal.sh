@@ -109,13 +109,14 @@ def create_test_dataset(decades, texts_per_decade=10):
     return controlled_dataset
 EOF
 
-# Update the test_mode_patch.py file to completely skip data loading
+# Update run_on_maxwell.py to use the test dataset override with ENHANCED OUTPUT
 cat > test_mode_patch.py << 'EOF'
 """
-Patch for run_on_maxwell.py to use test dataset override.
+Patch for run_on_maxwell.py to use test dataset override with ENHANCED OUTPUT.
 """
 import sys
 import os
+import json
 from pathlib import Path
 
 # Add test dataset override to path
@@ -126,161 +127,307 @@ from test_dataset_override import create_test_dataset
 os.environ['RUNNING_TEST_MODE'] = 'true'
 
 # Main script execution continues from here
-import run_on_maxwell
-from run_on_maxwell import run_analysis, configure_logging, setup_directories, limit_text_truncation_warnings
+from run_on_maxwell import run_analysis
 import argparse
 
-# Save original function for later
-original_run_analysis = run_on_maxwell.run_analysis
+# Create function to print section headers for better visibility
+def print_section(title):
+    """Print a clearly visible section header"""
+    print("\n" + "="*80)
+    print(f"  {title.upper()}")
+    print("="*80)
+    sys.stdout.flush()
 
+# Create function to pretty print dictionaries
+def print_dict(data, title=None):
+    """Pretty print a dictionary"""
+    if title:
+        print(f"\n--- {title} ---")
+    
+    if isinstance(data, dict):
+        for k, v in data.items():
+            print(f"  {k}: {v}")
+    else:
+        print(f"  {data}")
+    
+    sys.stdout.flush()
+
+# Patch run_analysis function
 def patched_run_analysis(args):
-    """Patched run_analysis to use test dataset override."""
+    """Patched run_analysis to use test dataset override with enhanced output."""
+    print_section("STARTING TEST RUN")
+    print(f"Tokenizer: {args.tokenizer}")
+    print(f"Distribution: {args.distribution}")
+    print(f"Test decades: {args.test_decades}")
+    print(f"Texts per decade: {args.texts_per_decade}")
+    
     import logging
     logger = logging.getLogger(__name__)
     
-    # Configure logging and setup
-    log_filename = run_on_maxwell.configure_logging(args)
-    run_on_maxwell.limit_text_truncation_warnings('src.validation.temporal_inference')
-    run_on_maxwell.limit_text_truncation_warnings('src.data.dataset_manager')
-    results_dir = run_on_maxwell.setup_directories()
-    
-    # Parse test decades
-    test_decades = [d.strip() for d in args.test_decades.split(",")]
-    logger.info(f"TEST PATCH: Using synthetic data for {test_decades}")
-    
-    # Create test dataset with synthetic data - COMPLETELY BYPASS ANY REAL DATA LOADING
-    controlled_dataset = create_test_dataset(test_decades, args.texts_per_decade)
-    
-    # Get distributions
-    distributions = run_on_maxwell.define_distributions()
-    dist_info = distributions[args.distribution]
-    selected_dist = dist_info["distribution"]
-    
-    # Normalize distribution to only include test decades
-    modified_dist = {}
-    total = 0
-    for decade in test_decades:
-        if decade in selected_dist:
-            modified_dist[decade] = selected_dist[decade]
-            total += modified_dist[decade]
-    
-    # Normalize to sum to 1
-    if total > 0:
-        selected_dist = {decade: value/total for decade, value in modified_dist.items()}
-    
-    logger.info(f"TEST PATCH: Using distribution: {selected_dist}")
-    
-    # Set up components - USE DIRECT IMPORTS TO AVOID LOADING FULL MODULES
-    from src.data.dataset_manager import TemporalDatasetManager
-    dataset_manager = TemporalDatasetManager()
-    
-    from src.validation.temporal_inference import TemporalDistributionInference
-    inference = TemporalDistributionInference(tokenizer_name=args.tokenizer)
-    
-    from src.validation.statistical_validator import TemporalValidator
-    validator = TemporalValidator(
-        inference_method=lambda texts: inference.infer_temporal_distribution(
-            inference.analyze_decade_patterns(texts)
-        )
-    )
-    
-    from src.validation.evaluation_metrics import TemporalEvaluationMetrics
-    evaluator = TemporalEvaluationMetrics()
-    
-    # Extract text from tuples
-    decade_texts = {}
-    for decade, texts in controlled_dataset.items():
-        decade_texts[decade] = [item[0] if isinstance(item, tuple) else item for item in texts]
-    
-    # Process dataset
-    chunked_decade_texts = {}
-    for decade, texts in decade_texts.items():
-        if not texts:
-            continue
-            
-        # Use simplified chunking for test
-        chunked_decade_texts[decade] = texts[:5]  # Just use the first 5
-        logger.info(f"Using {len(chunked_decade_texts[decade])} texts for {decade}")
-    
-    # Run analysis with the professor's suggestion for top token removal
+    # Import required modules with better error handling
     import time
     start_time = time.time()
+    import run_on_maxwell
     
-    # Analyze decade patterns
-    logger.info("Analyzing decade patterns...")
-    decade_patterns = inference.analyze_decade_patterns(chunked_decade_texts)
-    
-    # Infer distribution with top 5 token removal as per professor's suggestion
-    logger.info("Inferring distribution with removal of top 5 tokens...")
-    distribution = inference.infer_temporal_distribution(
-        decade_patterns,
-        remove_top_tokens=True,
-        top_n=5  # Professor's suggestion
-    )
-    
-    # Construct results
-    results = {
-        "tokenizer": args.tokenizer,
-        "distribution": distribution,
-        "distinctive_patterns": inference.find_distinctive_patterns(decade_patterns)
-    }
-    
-    inference_time = time.time() - start_time
-    
-    # Evaluate results
-    logger.info("Evaluating results...")
-    evaluation = evaluator.evaluate_distribution(
-        results["distribution"],
-        selected_dist,
-        model_name=args.tokenizer
-    )
-    
-    # Save and visualize results
-    run_on_maxwell.save_distribution_results(results, evaluation, f"{args.tokenizer}_{args.distribution}_{run_on_maxwell.datetime.now().strftime('%Y%m%d_%H%M%S')}", results_dir)
-    run_on_maxwell.log_evaluation_metrics(evaluation, inference_time, args)
-    run_on_maxwell.create_comparison_visualizations(results["distribution"], selected_dist, args.distribution, args.tokenizer, results_dir)
-    
-    # Bootstrap validation
-    if args.bootstrap:
-        logger.info(f"Performing bootstrap validation with {args.bootstrap_iterations} iterations...")
+    try:
+        # Configure logging and setup
+        print_section("SETTING UP TEST ENVIRONMENT")
+        log_filename = run_on_maxwell.configure_logging(args)
+        print(f"Log file: {log_filename}")
         
-        try:
-            # Create the safe inference wrapper
-            safe_inference_wrapper = run_on_maxwell.create_inference_wrapper(inference)
-            bootstrap_validator = TemporalValidator(inference_method=safe_inference_wrapper)
-            
-            # Run bootstrap
-            confidence_intervals = bootstrap_validator.bootstrap_analysis(
-                decade_texts=controlled_dataset,
-                n_bootstrap=args.bootstrap_iterations,
-                sample_ratio=0.8
+        run_on_maxwell.limit_text_truncation_warnings('src.validation.temporal_inference')
+        run_on_maxwell.limit_text_truncation_warnings('src.data.dataset_manager')
+        results_dir = run_on_maxwell.setup_directories()
+        print(f"Results directory: {results_dir}")
+        
+        # Parse test decades
+        test_decades = [d.strip() for d in args.test_decades.split(",")]
+        print(f"Using synthetic data for decades: {test_decades}")
+        
+        # Create test dataset with synthetic data - COMPLETELY BYPASS ANY REAL DATA LOADING
+        print_section("CREATING SYNTHETIC TEST DATA")
+        controlled_dataset = create_test_dataset(test_decades, args.texts_per_decade)
+        
+        # Get distributions
+        print_section("CONFIGURING TEST DISTRIBUTIONS")
+        distributions = run_on_maxwell.define_distributions()
+        dist_info = distributions[args.distribution]
+        
+        print(f"Original distribution: {dist_info['distribution']}")
+        
+        # Normalize distribution to only include test decades
+        selected_dist = {}
+        total = 0
+        for decade in test_decades:
+            if decade in dist_info["distribution"]:
+                selected_dist[decade] = dist_info["distribution"][decade]
+                total += selected_dist[decade]
+        
+        # Normalize to sum to 1
+        if total > 0:
+            selected_dist = {decade: value/total for decade, value in selected_dist.items()}
+        
+        print(f"Test ground truth distribution: {selected_dist}")
+        
+        # Set up components
+        print_section("INITIALIZING ANALYSIS COMPONENTS")
+        from src.data.dataset_manager import TemporalDatasetManager
+        dataset_manager = TemporalDatasetManager()
+        
+        from src.validation.temporal_inference import TemporalDistributionInference
+        inference = TemporalDistributionInference(tokenizer_name=args.tokenizer)
+        print(f"Using tokenizer: {inference.tokenizer_name}")
+        print(f"Number of merge rules: {len(inference.merge_rules)}")
+        
+        from src.validation.statistical_validator import TemporalValidator
+        validator = TemporalValidator(
+            inference_method=lambda texts: inference.infer_temporal_distribution(
+                inference.analyze_decade_patterns(texts)
             )
+        )
+        
+        from src.validation.evaluation_metrics import TemporalEvaluationMetrics
+        evaluator = TemporalEvaluationMetrics()
+        
+        # Extract text from tuples
+        print_section("PREPARING TEXT DATA")
+        decade_texts = {}
+        for decade, texts in controlled_dataset.items():
+            decade_texts[decade] = [item[0] if isinstance(item, tuple) else item for item in texts]
+            print(f"  {decade}: {len(decade_texts[decade])} texts")
             
-            # Save bootstrap results
-            bootstrap_path = results_dir / "bootstrap" / f"{args.tokenizer}_{args.distribution}_{run_on_maxwell.datetime.now().strftime('%Y%m%d_%H%M%S')}_bootstrap.json"
-            with open(bootstrap_path, 'w') as f:
-                import json
-                ci_json = {}
+            # Print a sample of the first text
+            if decade_texts[decade]:
+                sample = decade_texts[decade][0][:100] + "..."
+                print(f"  Sample: {sample}")
+        
+        # Process dataset
+        chunked_decade_texts = {}
+        for decade, texts in decade_texts.items():
+            if not texts:
+                continue
+            
+            chunked_decade_texts[decade] = texts
+            print(f"  {decade}: {len(chunked_decade_texts[decade])} texts after chunking")
+        
+        # Run analysis with the professor's suggestion for top token removal
+        print_section("ANALYZING DECADE PATTERNS")
+        analysis_start = time.time()
+        
+        # Analyze decade patterns
+        decade_patterns = inference.analyze_decade_patterns(chunked_decade_texts)
+        
+        print(f"Generated patterns for {len(decade_patterns)} decades")
+        for decade, patterns in decade_patterns.items():
+            if isinstance(patterns, dict):
+                total_tokens = patterns.get('total_tokens', 0)
+                merge_rules = len(patterns.get('merge_rules', {}))
+                print(f"  {decade}: {total_tokens} total tokens, {merge_rules} merge rules")
+                
+                # Print top 5 most frequent merge rules
+                if 'merge_rules' in patterns and patterns['merge_rules']:
+                    top_rules = sorted(patterns['merge_rules'].items(), key=lambda x: x[1], reverse=True)[:5]
+                    print(f"  Top merge rules:")
+                    for rule, count in top_rules:
+                        print(f"    {rule}: {count}")
+        
+        print_section("INFERRING TEMPORAL DISTRIBUTION (WITH TOP 5 TOKEN REMOVAL)")
+        # Infer distribution with top 5 token removal as per professor's suggestion
+        distribution = inference.infer_temporal_distribution(
+            decade_patterns,
+            remove_top_tokens=True,
+            top_n=5  # Professor's suggestion
+        )
+        
+        # Print the inferred distribution
+        print("\nINFERRED DISTRIBUTION:")
+        for decade, value in distribution.items():
+            print(f"  {decade}: {value:.4f} ({value*100:.1f}%)")
+        
+        # Construct results
+        results = {
+            "tokenizer": args.tokenizer,
+            "distribution": distribution,
+            "distinctive_patterns": inference.find_distinctive_patterns(decade_patterns)
+        }
+        
+        inference_time = time.time() - analysis_start
+        print(f"\nInference completed in {inference_time:.2f} seconds")
+        
+        # Evaluate results
+        print_section("EVALUATING RESULTS")
+        evaluation = evaluator.evaluate_distribution(
+            results["distribution"],
+            selected_dist,
+            model_name=args.tokenizer
+        )
+        
+        # Print evaluation metrics
+        print("EVALUATION METRICS:")
+        dist_metrics = evaluation["distribution_metrics"]
+        print(f"  log10(MSE): {dist_metrics['log10_mse']:.4f}")
+        print(f"  MAE: {dist_metrics['mae']:.4f}")
+        print(f"  Jensen-Shannon Distance: {dist_metrics['js_distance']:.4f}")
+        print(f"  Rank Correlation: {evaluation['decade_metrics']['rank_correlation']:.4f}")
+        
+        # Print representation analysis
+        rep_analysis = evaluation["decade_metrics"]["representation_analysis"]
+        if rep_analysis["over_represented"]:
+            print("\nOVER-REPRESENTED DECADES:")
+            for decade, value in sorted(rep_analysis["over_represented"].items(), key=lambda x: x[1], reverse=True):
+                print(f"  {decade}: +{value:.1%}")
+                
+        if rep_analysis["under_represented"]:
+            print("\nUNDER-REPRESENTED DECADES:")
+            for decade, value in sorted(rep_analysis["under_represented"].items(), key=lambda x: x[1], reverse=True):
+                print(f"  {decade}: -{value:.1%}")
+        
+        # Save and visualize results
+        print_section("SAVING RESULTS")
+        run_id = f"{args.tokenizer}_{args.distribution}_{run_on_maxwell.datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        run_on_maxwell.save_distribution_results(results, evaluation, run_id, results_dir)
+        print(f"Results saved with ID: {run_id}")
+        
+        # Show file paths
+        dist_path = results_dir / "distributions" / f"{run_id}_distribution.json"
+        patterns_path = results_dir / "distributions" / f"{run_id}_patterns.json"
+        print(f"Distribution file: {dist_path}")
+        print(f"Patterns file: {patterns_path}")
+        
+        # Load and print the saved distribution file for verification
+        if dist_path.exists():
+            try:
+                with open(dist_path, 'r') as f:
+                    saved_data = json.load(f)
+                    print("\nSAVED DISTRIBUTION (from file):")
+                    saved_dist = saved_data.get("distribution", {})
+                    for decade, value in saved_dist.items():
+                        print(f"  {decade}: {value:.4f} ({value*100:.1f}%)")
+            except Exception as e:
+                print(f"Error reading saved distribution: {e}")
+        
+        # Create visualizations
+        print_section("CREATING VISUALIZATIONS")
+        run_on_maxwell.create_comparison_visualizations(
+            results["distribution"], 
+            selected_dist, 
+            args.distribution, 
+            args.tokenizer, 
+            results_dir
+        )
+        
+        # Print figure paths
+        comp_fig = results_dir / "figures" / f"{args.tokenizer}_{args.distribution}_comparison.png"
+        error_fig = results_dir / "figures" / f"{args.tokenizer}_{args.distribution}_error.png"
+        print(f"Comparison visualization: {comp_fig}")
+        print(f"Error visualization: {error_fig}")
+        
+        # Bootstrap validation
+        if args.bootstrap:
+            print_section("PERFORMING BOOTSTRAP VALIDATION")
+            print(f"Running {args.bootstrap_iterations} bootstrap iterations...")
+            
+            try:
+                # Create the safe inference wrapper
+                safe_inference_wrapper = run_on_maxwell.create_inference_wrapper(inference)
+                bootstrap_validator = TemporalValidator(inference_method=safe_inference_wrapper)
+                
+                # Run bootstrap
+                confidence_intervals = bootstrap_validator.bootstrap_analysis(
+                    decade_texts=controlled_dataset,
+                    n_bootstrap=args.bootstrap_iterations,
+                    sample_ratio=0.8
+                )
+                
+                # Print bootstrap results
+                print("\nBOOTSTRAP RESULTS (95% CONFIDENCE INTERVALS):")
                 for decade, stats in confidence_intervals.items():
-                    ci_json[decade] = {k: float(v) for k, v in stats.items() if not isinstance(v, list)}
-                json.dump(ci_json, f, indent=2)
-            
-            # Visualize
-            run_on_maxwell.create_bootstrap_visualization(
-                results["distribution"], 
-                selected_dist,
-                confidence_intervals, 
-                args.distribution,
-                args.tokenizer, 
-                results_dir
-            )
-            
-        except Exception as e:
-            logger.error(f"Error in bootstrap validation: {e}")
-    
-    logger.info(f"TEST PATCH: Analysis completed successfully")
+                    mean = stats.get("mean", 0)
+                    lower = stats.get("lower_ci", 0)
+                    upper = stats.get("upper_ci", 0)
+                    print(f"  {decade}: {mean:.4f} ({mean*100:.1f}%), CI [{lower:.4f}, {upper:.4f}]")
+                
+                # Save bootstrap results
+                bootstrap_path = results_dir / "bootstrap" / f"{run_id}_bootstrap.json"
+                with open(bootstrap_path, 'w') as f:
+                    ci_json = {}
+                    for decade, stats in confidence_intervals.items():
+                        ci_json[decade] = {k: float(v) for k, v in stats.items() if not isinstance(v, list)}
+                    json.dump(ci_json, f, indent=2)
+                
+                print(f"Bootstrap results saved to: {bootstrap_path}")
+                
+                # Visualize
+                bootstrap_fig = results_dir / "figures" / f"{args.tokenizer}_{args.distribution}_bootstrap.png"
+                run_on_maxwell.create_bootstrap_visualization(
+                    results["distribution"], 
+                    selected_dist,
+                    confidence_intervals, 
+                    args.distribution,
+                    args.tokenizer, 
+                    results_dir
+                )
+                print(f"Bootstrap visualization: {bootstrap_fig}")
+                
+            except Exception as e:
+                print(f"Error in bootstrap validation: {e}")
+                import traceback
+                traceback.print_exc()
+        
+        # Completion summary
+        total_time = time.time() - start_time
+        print_section("TEST COMPLETED SUCCESSFULLY")
+        print(f"Total execution time: {total_time:.2f} seconds")
+        print(f"Result files located in: {results_dir}")
+        
+    except Exception as e:
+        print_section("ERROR OCCURRED")
+        print(f"Error: {e}")
+        import traceback
+        traceback.print_exc()
 
 # Replace run_analysis with our patched version
+import run_on_maxwell
 run_on_maxwell.run_analysis = patched_run_analysis
 
 # Create parser with test arguments
@@ -300,6 +447,7 @@ parser.add_argument("--force_quality", action="store_true", help="Force quality 
 parser.add_argument("--apply_enhancements", action="store_true", help="Apply targeted enhancements")
 parser.add_argument("--target_size_gb", type=float, default=0.005, help="Target size in GB")
 
+# Create arguments with both decades to test
 args = parser.parse_args([
     "--tokenizer", "gpt2",
     "--distribution", "uniform",
@@ -317,7 +465,7 @@ args = parser.parse_args([
 run_analysis(args)
 EOF
 
-# Run the modified test with shorter timeout
+# Run the modified test with more detailed output
 echo "Running test for removing top tokens..."
 python test_mode_patch.py
 
