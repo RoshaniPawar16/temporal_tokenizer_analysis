@@ -20,6 +20,21 @@ module load python/3.9.12
 echo "Python version:"
 python --version
 
+# Install required packages to a local directory
+echo "Installing required packages..."
+pip install --user transformers datasets numpy matplotlib seaborn pandas scipy cvxpy tqdm huggingface_hub bs4 requests psutil
+
+# Configure environment variables for Hugging Face
+export HF_HOME="./hf_cache"
+export HF_HUB_CACHE="./hf_cache/hub"
+export HF_DATASETS_CACHE="./hf_cache/datasets"
+mkdir -p $HF_HOME $HF_HUB_CACHE $HF_DATASETS_CACHE
+
+# Configure environment for better memory usage
+export TOKENIZERS_PARALLELISM=false
+export OMP_NUM_THREADS=4
+export PYTHONUNBUFFERED=1
+
 # Run test with minimal data
 python run_on_maxwell.py \
     --tokenizer gpt2 \
