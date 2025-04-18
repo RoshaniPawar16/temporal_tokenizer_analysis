@@ -2038,6 +2038,57 @@ class TemporalDatasetManager:
         logger.info(f"Total dataset size: {total_size_bytes/(1024*1024*1024):.2f} GB")
         return combined_dataset
 
+    def create_minimal_test_dataset(self, decades=None, texts_per_decade=5):
+        """
+        Create a minimal synthetic dataset for testing purposes.
+        
+        Args:
+            decades: List of decades to include
+            texts_per_decade: Number of synthetic texts per decade
+            
+        Returns:
+            Dictionary mapping decades to lists of (text, source) tuples
+        """
+        if decades is None:
+            decades = list(TIME_PERIODS.keys())[:2]  # Just use first two decades by default
+        
+        logger.info(f"Creating minimal test dataset for {len(decades)} decades")
+        
+        test_dataset = {}
+        for decade in decades:
+            # Create synthetic texts
+            decade_texts = []
+            for i in range(texts_per_decade):
+                # Create a very short text with decade-specific terms
+                text = f"This is test text {i} from the {decade}. "
+                
+                # Add some decade-specific terms
+                if decade == "1950s":
+                    text += "Terms: atomic, television, radio, nuclear, Soviet, space race."
+                elif decade == "1960s":
+                    text += "Terms: Apollo, lunar, Vietnam War, civil rights, hippie, counterculture."
+                elif decade == "1970s":
+                    text += "Terms: disco, oil crisis, Watergate, pocket calculator, mainframe."
+                elif decade == "1980s":
+                    text += "Terms: personal computer, MTV, Reagan, Cold War, VHS."
+                elif decade == "1990s":
+                    text += "Terms: internet, web, email, dot-com, website, Windows 95."
+                elif decade == "2000s":
+                    text += "Terms: 9/11, iPhone, Facebook, Google, YouTube, broadband."
+                elif decade == "2010s":
+                    text += "Terms: smartphone, social media, streaming, cloud computing, AI."
+                elif decade == "2020s":
+                    text += "Terms: pandemic, COVID-19, TikTok, remote work, blockchain."
+                else:
+                    text += f"Generic terms for {decade}."
+                
+                decade_texts.append((text, "test_synthetic"))
+            
+            test_dataset[decade] = decade_texts
+            logger.info(f"Added {len(decade_texts)} synthetic texts for {decade}")
+        
+        return test_dataset
+
     def chunk_texts_for_tokenizer(self, texts, max_tokens=100):
         """
         Split texts into smaller chunks based on actual token counts.

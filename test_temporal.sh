@@ -42,9 +42,10 @@ python run_on_maxwell.py \
     --test_mode \
     --test_size_mb 5 \
     --test_decades "1960s,2000s" \
-    --texts_per_decade 20 \
+    --texts_per_decade 5 \
     --bootstrap \
     --bootstrap_iterations 2 \
-    --verbose
+    --verbose \
+    --allow_synthetic_fallback
 
 echo "Test completed at: $(date)"

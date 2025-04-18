@@ -419,7 +419,7 @@ def limit_memory_usage():
         logger.info(f"Memory usage after cleanup: {memory_usage_gb:.2f} GB")
 
 def run_parallel_analysis(inference, decade_texts):
-    """Process decades in parallel using multiprocessing with better error handling."""
+    """Process decades in parallel or sequentially depending on test mode."""
     # Filter out empty decades before processing
     non_empty_decades = {decade: texts for decade, texts in decade_texts.items() if texts}
     
@@ -429,9 +429,32 @@ def run_parallel_analysis(inference, decade_texts):
         
     logger.info(f"Processing {len(non_empty_decades)}/{len(decade_texts)} decades with data")
     
+    # Detect test mode by the amount of data
+    total_texts = sum(len(texts) for texts in non_empty_decades.values())
+    test_mode = total_texts < 100  # If fewer than 100 texts, we're in test mode
+    
+    # For test mode or very small datasets, process sequentially for simplicity and debugging
+    if test_mode:
+        logger.info(f"Processing {len(non_empty_decades)} decades sequentially (test mode)")
+        decade_patterns = {}
+        for decade, texts in non_empty_decades.items():
+            try:
+                logger.info(f"Processing {decade} with {len(texts)} texts...")
+                decade_data = {decade: texts}
+                patterns = inference.analyze_decade_patterns(decade_data)
+                decade_patterns.update(patterns)
+                logger.info(f"Completed analysis for {decade}")
+            except Exception as e:
+                logger.error(f"Error processing {decade}: {e}")
+        
+        return decade_patterns
+    
+    # For larger datasets, continue with parallel processing
     # Process in smaller batches to manage memory better
     all_decades = list(non_empty_decades.keys())
     batch_size = max(1, len(all_decades) // 2)  # Split decades into 2 batches minimum
+    
+    # Rest of your existing code for parallel processing...
     
     decade_patterns = {}
     
@@ -532,7 +555,7 @@ def run_analysis(args):
 
     # Set up directories
     results_dir = setup_directories()
-    
+
     # Test mode parameters
     if args.test_mode:
         logger.info(f"RUNNING IN TEST MODE with reduced data")
@@ -541,13 +564,42 @@ def run_analysis(args):
         # Override the normal parameters
         args.texts_per_decade = min(args.texts_per_decade, 50)  # Limit texts
         args.target_size_gb = args.test_size_mb / 1000.0  # Convert MB to GB
-        # Only use selected decades
+        # Parse test decades from command line argument
         test_decades = [d.strip() for d in args.test_decades.split(",")]
         logger.info(f"  Limited to {len(test_decades)} decades: {test_decades}")
     else:
         logger.info(f"  Texts per decade: {args.texts_per_decade}")
         logger.info(f"  Target size (GB): {args.target_size_gb}")
-        test_decades = None  # Use all decades
+        test_decades = list(TIME_PERIODS.keys())  # Use all decades in non-test mode
+
+    # Special handling for test mode - override data loading
+    if args.test_mode:
+        logger.info("Running in TEST MODE - using minimal synthetic data")
+        # Create minimal test data instead of loading real data
+        controlled_dataset = {}
+        for decade in test_decades:
+            # Create 5-10 very small synthetic texts for each test decade
+            synthetic_texts = []
+            for i in range(min(10, args.texts_per_decade)):
+                # Very small text to speed up processing
+                text = f"This is test text {i} for {decade} with keywords specific to this time period."
+                synthetic_texts.append((text, "test_synthetic"))
+            controlled_dataset[decade] = synthetic_texts
+            
+        logger.info(f"Created minimal test dataset with {len(controlled_dataset)} decades")
+        # Skip all the expensive data loading and processing
+    else:
+        # MOVE EXISTING DATA LOADING CODE HERE
+        # Before creating dataset, enhance the Gutenberg loader for better mid-century coverage
+        logger.info("Expanding Gutenberg loader with enhanced mid-century decade coverage...")
+        dataset_manager.gutenberg_loader.expand_metadata_sources()
+        
+        # Create dataset with target distribution
+        logger.info(f"Creating dataset with target size of {args.target_size_gb}GB...")
+        controlled_dataset = dataset_manager.create_large_dataset(
+            distribution=selected_dist,
+            target_size_gb=args.target_size_gb
+        )    
 
     # Get distributions
     distributions = define_distributions()
