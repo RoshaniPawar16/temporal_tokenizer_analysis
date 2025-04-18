@@ -33,9 +33,7 @@ from functools import partial
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Add this after your imports but before the ProgressFilter class
 
-import time  # Make sure time is imported
 
 def limit_text_truncation_warnings(module_name='temporal_inference'):
     """
@@ -123,6 +121,100 @@ def batch_log_progress(total, current, logger, desc="Processing", min_interval=1
         return True
         
     return False
+
+def create_inference_wrapper(inference):
+    """
+    Creates a robust wrapper for inference that handles various edge cases.
+    
+    Args:
+        inference: The inference object with analyze_decade_patterns and infer_temporal_distribution methods
+        
+    Returns:
+        A function that safely performs inference
+    """
+    def safe_inference_wrapper(texts):
+        try:
+            # First ensure texts are in the right format
+            clean_texts = {}
+            for decade, decade_texts in texts.items():
+                if not decade_texts:
+                    continue
+                    
+                # Process text items depending on their format
+                clean_decade_texts = []
+                for item in decade_texts:
+                    try:
+                        if isinstance(item, tuple) and len(item) >= 1:
+                            # Extract the text component (first element)
+                            text = item[0]
+                            if isinstance(text, str):
+                                clean_decade_texts.append(text)
+                        elif isinstance(item, str):
+                            clean_decade_texts.append(item)
+                        # Skip other formats
+                    except Exception as e:
+                        logger.debug(f"Skipping invalid text item: {e}")
+                
+                if clean_decade_texts:
+                    clean_texts[decade] = clean_decade_texts
+            
+            # If no valid decades, return a uniform distribution
+            if not clean_texts:
+                logger.warning("No valid texts found for any decade")
+                return {decade: 1.0/len(texts) for decade in texts.keys()}
+                
+            # Process these cleaned texts
+            try:
+                decade_patterns = inference.analyze_decade_patterns(clean_texts)
+                
+                # Check if we got valid patterns
+                if not decade_patterns:
+                    logger.warning("No patterns found in analyze_decade_patterns")
+                    return {decade: 1.0/len(clean_texts) for decade in clean_texts.keys()}
+                    
+                # Try to infer distribution
+                try:
+                    distribution = inference.infer_temporal_distribution(decade_patterns)
+                    
+                    # Verify the distribution is valid
+                    if not isinstance(distribution, dict):
+                        logger.warning(f"Invalid distribution type: {type(distribution)}")
+                        return {decade: 1.0/len(clean_texts) for decade in clean_texts.keys()}
+                    
+                    # Ensure all values are floats
+                    float_distribution = {}
+                    for decade, value in distribution.items():
+                        try:
+                            float_distribution[decade] = float(value)
+                        except (TypeError, ValueError):
+                            logger.warning(f"Non-numeric value in distribution: {decade}: {value}")
+                            float_distribution[decade] = 0.0
+                    
+                    # Normalize to ensure sum to 1
+                    total = sum(float_distribution.values())
+                    if total > 0:
+                        return {decade: value/total for decade, value in float_distribution.items()}
+                    else:
+                        logger.warning("Distribution sums to zero, returning uniform distribution")
+                        return {decade: 1.0/len(clean_texts) for decade in clean_texts.keys()}
+                        
+                except Exception as e:
+                    logger.error(f"Error in infer_temporal_distribution: {e}")
+                    return {decade: 1.0/len(clean_texts) for decade in clean_texts.keys()}
+            
+            except Exception as e:
+                logger.error(f"Error in analyze_decade_patterns: {e}")
+                return {decade: 1.0/len(texts) for decade in texts.keys()}
+                
+        except Exception as e:
+            logger.error(f"Error in inference wrapper: {e}")
+            if texts:
+                # Return a uniform distribution as fallback
+                return {decade: 1.0/len(texts) for decade in texts.keys()}
+            else:
+                return {"unknown": 1.0}
+    
+    return safe_inference_wrapper
 
 class ProgressFilter(logging.Filter):
     """Filter to reduce frequency of progress messages."""
@@ -441,6 +533,22 @@ def run_analysis(args):
     # Set up directories
     results_dir = setup_directories()
     
+    # Test mode parameters
+    if args.test_mode:
+        logger.info(f"RUNNING IN TEST MODE with reduced data")
+        logger.info(f"  Test size per decade: {args.test_size_mb} MB")
+        logger.info(f"  Test decades: {args.test_decades}")
+        # Override the normal parameters
+        args.texts_per_decade = min(args.texts_per_decade, 50)  # Limit texts
+        args.target_size_gb = args.test_size_mb / 1000.0  # Convert MB to GB
+        # Only use selected decades
+        test_decades = [d.strip() for d in args.test_decades.split(",")]
+        logger.info(f"  Limited to {len(test_decades)} decades: {test_decades}")
+    else:
+        logger.info(f"  Texts per decade: {args.texts_per_decade}")
+        logger.info(f"  Target size (GB): {args.target_size_gb}")
+        test_decades = None  # Use all decades
+
     # Get distributions
     distributions = define_distributions()
     
@@ -453,6 +561,21 @@ def run_analysis(args):
     # Get selected distribution
     dist_info = distributions[args.distribution]
     selected_dist = dist_info["distribution"]
+
+    # If in test mode, modify the distribution to focus on test decades
+    if args.test_mode and test_decades:
+        # Create a modified distribution with only test decades
+        modified_dist = {}
+        total = 0
+        for decade in test_decades:
+            if decade in selected_dist:
+                modified_dist[decade] = selected_dist[decade]
+                total += modified_dist[decade]
+        
+        # Normalize to sum to 1
+        if total > 0:
+            selected_dist = {decade: value/total for decade, value in modified_dist.items()}
+            logger.info(f"Modified distribution for test mode: {selected_dist}")
     
     logger.info(f"Running analysis for {dist_info['name']} with {args.tokenizer} tokenizer")
     logger.info(f"Using {args.texts_per_decade} texts per decade and {args.target_size_gb}GB target size")
@@ -614,6 +737,13 @@ def run_analysis(args):
         chunked_decade_texts[decade] = chunked_texts
         logger.info(f"Processed {decade}: {len(texts)} texts → {len(chunked_texts)} chunks")
     
+    # Apply test mode filtering if needed
+    if args.test_mode and test_decades:
+        # Filter to only include test decades
+        chunked_decade_texts = {decade: texts for decade, texts in chunked_decade_texts.items() 
+                              if decade in test_decades}
+        logger.info(f"Filtered to {len(chunked_decade_texts)} test decades for analysis")
+    
     # Running tokenizer analysis with better handling for mid-century decades
     logger.info("Running tokenizer analysis with ensemble method...")
     start_time = time.time()
@@ -660,32 +790,6 @@ def run_analysis(args):
         # Standard approach if 1960s data not available
         distribution = inference.infer_distribution_ensemble(decade_patterns)
 
-    # Filter out empty decades to prevent crashes
-    non_empty_decades = {decade: texts for decade, texts in chunked_decade_texts.items() if texts}
-    if not non_empty_decades:
-        logger.error("No decades have texts available for analysis. Exiting.")
-        return
-        
-    logger.info(f"Analyzing {len(non_empty_decades)} decades with data")
-    decade_patterns = run_parallel_analysis(inference, non_empty_decades)
-    
-    # Verify we have results
-    if not decade_patterns:
-        logger.error("No decade patterns were generated. Analysis failed.")
-        return
-        
-    logger.info(f"Successfully analyzed {len(decade_patterns)} decades")
-    
-    # Apply ensemble inference method for more robust results
-    logger.info("Applying ensemble inference...")
-    try:
-        distribution = inference.infer_distribution_ensemble(decade_patterns)
-    except Exception as e:
-        logger.error(f"Error in ensemble inference: {e}")
-        # Fall back to basic inference method
-        logger.info("Falling back to basic inference method...")
-        distribution = inference.infer_temporal_distribution(decade_patterns)
-
     # Construct results in expected format
     results = {
         "tokenizer": args.tokenizer,
@@ -714,10 +818,13 @@ def run_analysis(args):
                                    args.distribution, args.tokenizer, results_dir)
         
     # Bootstrap validation (if requested)
-    # Bootstrap validation (if requested)
     if args.bootstrap:
-        # Reduce iterations but ensure enough for statistical validity
-        bootstrap_iterations = min(args.bootstrap_iterations, 30)
+        # If in test mode, use fewer iterations
+        if args.test_mode:
+            bootstrap_iterations = min(args.bootstrap_iterations, 5)  # Just 5 iterations for testing
+        else:
+            bootstrap_iterations = min(args.bootstrap_iterations, 30)
+            
         logger.info(f"Performing bootstrap validation with {bootstrap_iterations} iterations...")
         
         try:
@@ -733,39 +840,36 @@ def run_analysis(args):
             if has_psutil:
                 limit_memory_usage()
                 
-            # Create a clean wrapper function to ensure consistent data structure for inference
-            def inference_wrapper(texts):
-                try:
-                    # First handle different types of input
-                    clean_texts = {}
-                    for decade, decade_texts in texts.items():
-                        if decade_texts:
-                            # Process text items depending on their format
-                            clean_decade_texts = []
-                            for item in decade_texts:
-                                if isinstance(item, tuple) and len(item) >= 1:
-                                    # Extract the text component (assume it's the first element)
-                                    clean_decade_texts.append(item[0])
-                                elif isinstance(item, str):
-                                    clean_decade_texts.append(item)
-                            clean_texts[decade] = clean_decade_texts
-                    
-                    # Process these cleaned texts
-                    patterns = inference.analyze_decade_patterns(clean_texts)
-                    
-                    # Return a dictionary mapping decades to proportions
-                    return inference.infer_temporal_distribution(patterns)
-                except Exception as e:
-                    logger.error(f"Error in inference wrapper: {e}")
-                    # Return a uniform distribution as fallback
-                    return {decade: 1.0/len(texts) for decade in texts.keys()}
+            # Create the safe inference wrapper
+            safe_inference_wrapper = create_inference_wrapper(inference)
             
-            # Set up validator with wrapper function
-            bootstrap_validator = TemporalValidator(inference_method=inference_wrapper)
+            # Create validator with safe wrapper
+            bootstrap_validator = TemporalValidator(inference_method=safe_inference_wrapper)
             
-            # Use the validator in bootstrap analysis
+            # Filter texts to ensure only valid data is used
+            filtered_texts = {}
+            for decade, texts in decade_texts.items():
+                if texts:
+                    # Convert tuples to just text strings if needed
+                    filtered_decade_texts = []
+                    for item in texts:
+                        try:
+                            if isinstance(item, tuple) and len(item) >= 1:
+                                # Extract the text component
+                                text = item[0]
+                                if isinstance(text, str):
+                                    filtered_decade_texts.append((text, "filtered"))
+                            elif isinstance(item, str):
+                                filtered_decade_texts.append((item, "filtered"))
+                        except Exception as e:
+                            logger.debug(f"Skipping invalid item: {e}")
+                    
+                    if filtered_decade_texts:
+                        filtered_texts[decade] = filtered_decade_texts
+            
+            # Run with the filtered texts
             confidence_intervals = bootstrap_validator.bootstrap_analysis(
-                decade_texts=decade_texts,
+                decade_texts=filtered_texts,
                 n_bootstrap=bootstrap_iterations,
                 sample_ratio=0.8
             )
@@ -781,8 +885,8 @@ def run_analysis(args):
             
             # Visualize with confidence intervals
             create_bootstrap_visualization(results["distribution"], selected_dist, 
-                                        confidence_intervals, args.distribution, 
-                                        args.tokenizer, results_dir)
+                                         confidence_intervals, args.distribution, 
+                                         args.tokenizer, results_dir)
             
         except Exception as e:
             logger.error(f"Error in bootstrap validation: {e}")
@@ -1105,6 +1209,12 @@ def create_distribution_comparison(results_by_dist, distributions, tokenizer_nam
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run temporal distribution inference on Maxwell")
+    parser.add_argument("--test_mode", action="store_true", 
+                  help="Run in test mode with minimal data for error checking")
+    parser.add_argument("--test_size_mb", type=float, default=10.0,
+                    help="Size of test data in MB per decade (only used with --test_mode)")
+    parser.add_argument("--test_decades", type=str, default="1950s,2000s",
+                    help="Comma-separated list of decades to use in test mode")
     parser.add_argument("--verbose", action="store_true", help="Enable verbose logging output")
     parser.add_argument("--tokenizer", type=str, default="gpt2", help="Tokenizer to analyze")
     parser.add_argument("--texts_per_decade", type=int, default=5000, 
