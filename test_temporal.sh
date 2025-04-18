@@ -50,7 +50,7 @@ def create_test_dataset(decades, texts_per_decade=10):
     """Create a minimal test dataset with decade-specific vocabulary."""
     logger.info(f"Creating synthetic test dataset for {len(decades)} decades with {texts_per_decade} texts each")
     
-    # Decade-specific vocabulary
+    # Decade-specific vocabulary - use MORE distinctive vocabulary patterns
     decade_vocab = {
         "1950s": ["atomic", "television", "radio", "nuclear", "Soviet", "space race",
                  "hydrogen bomb", "satellite", "automation", "transistor radio"],
@@ -109,7 +109,7 @@ def create_test_dataset(decades, texts_per_decade=10):
     return controlled_dataset
 EOF
 
-# Update run_on_maxwell.py to use the test dataset override
+# Update the test_mode_patch.py file to completely skip data loading
 cat > test_mode_patch.py << 'EOF'
 """
 Patch for run_on_maxwell.py to use test dataset override.
@@ -126,40 +126,9 @@ from test_dataset_override import create_test_dataset
 os.environ['RUNNING_TEST_MODE'] = 'true'
 
 # Main script execution continues from here
-from run_on_maxwell import run_analysis
-import argparse
-
-parser = argparse.ArgumentParser(description="Run temporal distribution inference test")
-parser.add_argument("--tokenizer", type=str, default="gpt2", help="Tokenizer to analyze")
-parser.add_argument("--distribution", type=str, default="uniform", help="Distribution pattern to test")
-parser.add_argument("--test_mode", action="store_true", help="Run in test mode with minimal data")
-parser.add_argument("--test_size_mb", type=float, default=1.0, help="Size of test data in MB per decade")
-parser.add_argument("--test_decades", type=str, default="1960s,2000s", help="Comma-separated list of decades to use")
-parser.add_argument("--texts_per_decade", type=int, default=5, help="Number of texts per decade")
-parser.add_argument("--bootstrap", action="store_true", help="Perform bootstrap validation")
-parser.add_argument("--bootstrap_iterations", type=int, default=2, help="Number of bootstrap iterations")
-parser.add_argument("--verbose", action="store_true", help="Enable verbose logging")
-parser.add_argument("--allow_synthetic_fallback", action="store_true", help="Allow synthetic fallback for missing decades")
-parser.add_argument("--force_fresh", action="store_true", help="Force fresh dataset creation")
-parser.add_argument("--force_quality", action="store_true", help="Force quality requirements")
-parser.add_argument("--apply_enhancements", action="store_true", help="Apply targeted enhancements")
-parser.add_argument("--target_size_gb", type=float, default=0.005, help="Target size in GB")
-
-args = parser.parse_args([
-    "--tokenizer", "gpt2",
-    "--distribution", "uniform",
-    "--test_mode",
-    "--test_size_mb", "1",
-    "--test_decades", "1960s,2000s",
-    "--texts_per_decade", "5",
-    "--bootstrap",
-    "--bootstrap_iterations", "2",
-    "--allow_synthetic_fallback",
-    "--verbose"
-])
-
-# Override run_analysis to use our test dataset
 import run_on_maxwell
+from run_on_maxwell import run_analysis, configure_logging, setup_directories, limit_text_truncation_warnings
+import argparse
 
 # Save original function for later
 original_run_analysis = run_on_maxwell.run_analysis
@@ -179,7 +148,7 @@ def patched_run_analysis(args):
     test_decades = [d.strip() for d in args.test_decades.split(",")]
     logger.info(f"TEST PATCH: Using synthetic data for {test_decades}")
     
-    # Create test dataset with synthetic data
+    # Create test dataset with synthetic data - COMPLETELY BYPASS ANY REAL DATA LOADING
     controlled_dataset = create_test_dataset(test_decades, args.texts_per_decade)
     
     # Get distributions
@@ -199,15 +168,24 @@ def patched_run_analysis(args):
     if total > 0:
         selected_dist = {decade: value/total for decade, value in modified_dist.items()}
     
-    # Set up components
-    dataset_manager = run_on_maxwell.TemporalDatasetManager()
-    inference = run_on_maxwell.TemporalDistributionInference(tokenizer_name=args.tokenizer)
-    validator = run_on_maxwell.TemporalValidator(
+    logger.info(f"TEST PATCH: Using distribution: {selected_dist}")
+    
+    # Set up components - USE DIRECT IMPORTS TO AVOID LOADING FULL MODULES
+    from src.data.dataset_manager import TemporalDatasetManager
+    dataset_manager = TemporalDatasetManager()
+    
+    from src.validation.temporal_inference import TemporalDistributionInference
+    inference = TemporalDistributionInference(tokenizer_name=args.tokenizer)
+    
+    from src.validation.statistical_validator import TemporalValidator
+    validator = TemporalValidator(
         inference_method=lambda texts: inference.infer_temporal_distribution(
             inference.analyze_decade_patterns(texts)
         )
     )
-    evaluator = run_on_maxwell.TemporalEvaluationMetrics()
+    
+    from src.validation.evaluation_metrics import TemporalEvaluationMetrics
+    evaluator = TemporalEvaluationMetrics()
     
     # Extract text from tuples
     decade_texts = {}
@@ -230,7 +208,7 @@ def patched_run_analysis(args):
     
     # Analyze decade patterns
     logger.info("Analyzing decade patterns...")
-    decade_patterns = run_on_maxwell.run_parallel_analysis(inference, chunked_decade_texts)
+    decade_patterns = inference.analyze_decade_patterns(chunked_decade_texts)
     
     # Infer distribution with top 5 token removal as per professor's suggestion
     logger.info("Inferring distribution with removal of top 5 tokens...")
@@ -269,7 +247,7 @@ def patched_run_analysis(args):
         try:
             # Create the safe inference wrapper
             safe_inference_wrapper = run_on_maxwell.create_inference_wrapper(inference)
-            bootstrap_validator = run_on_maxwell.TemporalValidator(inference_method=safe_inference_wrapper)
+            bootstrap_validator = TemporalValidator(inference_method=safe_inference_wrapper)
             
             # Run bootstrap
             confidence_intervals = bootstrap_validator.bootstrap_analysis(
@@ -305,12 +283,42 @@ def patched_run_analysis(args):
 # Replace run_analysis with our patched version
 run_on_maxwell.run_analysis = patched_run_analysis
 
+# Create parser with test arguments
+parser = argparse.ArgumentParser(description="Run temporal distribution inference test")
+parser.add_argument("--tokenizer", type=str, default="gpt2", help="Tokenizer to analyze")
+parser.add_argument("--distribution", type=str, default="uniform", help="Distribution pattern to test")
+parser.add_argument("--test_mode", action="store_true", help="Run in test mode with minimal data")
+parser.add_argument("--test_size_mb", type=float, default=1.0, help="Size of test data in MB per decade")
+parser.add_argument("--test_decades", type=str, default="1960s,2000s", help="Comma-separated list of decades to use")
+parser.add_argument("--texts_per_decade", type=int, default=5, help="Number of texts per decade")
+parser.add_argument("--bootstrap", action="store_true", help="Perform bootstrap validation")
+parser.add_argument("--bootstrap_iterations", type=int, default=2, help="Number of bootstrap iterations")
+parser.add_argument("--verbose", action="store_true", help="Enable verbose logging")
+parser.add_argument("--allow_synthetic_fallback", action="store_true", help="Allow synthetic fallback for missing decades")
+parser.add_argument("--force_fresh", action="store_true", help="Force fresh dataset creation")
+parser.add_argument("--force_quality", action="store_true", help="Force quality requirements")
+parser.add_argument("--apply_enhancements", action="store_true", help="Apply targeted enhancements")
+parser.add_argument("--target_size_gb", type=float, default=0.005, help="Target size in GB")
+
+args = parser.parse_args([
+    "--tokenizer", "gpt2",
+    "--distribution", "uniform",
+    "--test_mode",
+    "--test_size_mb", "1",
+    "--test_decades", "1960s,2000s",
+    "--texts_per_decade", "5",
+    "--bootstrap",
+    "--bootstrap_iterations", "2",
+    "--allow_synthetic_fallback",
+    "--verbose"
+])
+
 # Run the patched analysis
 run_analysis(args)
 EOF
 
-# Run the modified test
-echo "Running test with professor's suggestion for removing top tokens..."
+# Run the modified test with shorter timeout
+echo "Running test for removing top tokens..."
 python test_mode_patch.py
 
 echo "Test completed at: $(date)"

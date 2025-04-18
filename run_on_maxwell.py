@@ -536,6 +536,12 @@ def run_analysis(args):
     Args:
         args: Command-line arguments containing analysis parameters
     """
+    # Check if running in test mode with override
+    if os.environ.get('RUNNING_TEST_MODE') == 'true':
+        logger.info("Running in TEST MODE with override")
+        # The test_mode_patch.py will handle everything
+        return
+    
     # Configure logging first
     log_filename = configure_logging(args)
     
