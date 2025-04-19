@@ -239,22 +239,25 @@ class TemporalDatasetManager:
             return False, {"error": "Empty dataset"}
         
         # Calculate dataset statistics
-        total_texts = sum(len(texts) for texts in dataset.values())
-        if total_texts == 0:
-            return False, {"error": "Dataset contains no texts"}
-        
-        # Count real vs synthetic texts
+        total_texts = 0
         real_count = 0
         synthetic_count = 0
         expanded_count = 0
         
         for decade, texts in dataset.items():
-            for text, source in texts:
-                if "synthetic" in source:
-                    synthetic_count += 1
-                elif "expanded" in source or "augmented" in source:
-                    expanded_count += 1
+            for item in texts:
+                total_texts += 1
+                # Handle different data formats
+                if isinstance(item, tuple) and len(item) > 1:
+                    source = item[1]
+                    if "synthetic" in source:
+                        synthetic_count += 1
+                    elif "expanded" in source or "augmented" in source:
+                        expanded_count += 1
+                    else:
+                        real_count += 1
                 else:
+                    # Assume it's real data if not a tuple with source info
                     real_count += 1
         
         # Calculate percentages
@@ -783,22 +786,44 @@ class TemporalDatasetManager:
             decade_texts: Dictionary mapping decades to lists of texts
             distribution: Target distribution mapping decades to proportions
             target_size_gb: Target size in GB for the total dataset
-            
+                
         Returns:
             Balanced dataset with proportions matching target distribution
         """
         logger.info("Balancing dataset according to target distribution...")
         
+        # First, normalize data structure to ensure consistency
+        normalized_texts = {}
+        for decade, texts in decade_texts.items():
+            normalized_decade_texts = []
+            for item in texts:
+                try:
+                    # Handle different formats
+                    if isinstance(item, tuple) and len(item) >= 1:
+                        # Extract text component ensuring it's a string
+                        text = item[0]
+                        source = item[1] if len(item) > 1 else "unknown"
+                        if isinstance(text, str):
+                            normalized_decade_texts.append((text, source))
+                    elif isinstance(item, str):
+                        # Convert string to (text, source) tuple
+                        normalized_decade_texts.append((item, "normalized"))
+                    # Skip other formats
+                except Exception as e:
+                    logger.debug(f"Skipping invalid item: {e}")
+            
+            normalized_texts[decade] = normalized_decade_texts
+        
         # Calculate total size and current distribution
         total_bytes = 0
         decade_bytes = {}
         
-        for decade, texts in decade_texts.items():
+        for decade, texts in normalized_texts.items():
             if not texts:
                 decade_bytes[decade] = 0
                 continue
                 
-            bytes_size = sum(len(text[0].encode('utf-8')) for text in texts)
+            bytes_size = sum(len(text.encode('utf-8')) for text, _ in texts)
             decade_bytes[decade] = bytes_size
             total_bytes += bytes_size
         
@@ -816,7 +841,7 @@ class TemporalDatasetManager:
         
         # First, categorize data sources for each decade
         for decade, target_prop in distribution.items():
-            texts = decade_texts.get(decade, [])
+            texts = normalized_texts.get(decade, [])
             
             if not texts:
                 balanced_dataset[decade] = []
@@ -940,7 +965,7 @@ class TemporalDatasetManager:
                     logger.info(f"Using all {len(real_texts)} real texts plus {len(sampled_expanded_texts)} expanded and {len(sampled_synthetic_texts)} synthetic for {decade}")
         
         # Verify final size
-        final_bytes = sum(sum(len(text[0].encode('utf-8')) for text in texts) 
+        final_bytes = sum(sum(len(text.encode('utf-8')) for text, _ in texts) 
                         for decade, texts in balanced_dataset.items())
         
         logger.info(f"Balanced dataset total size: {final_bytes/(1024*1024*1024):.2f} GB")

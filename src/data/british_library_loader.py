@@ -3,6 +3,7 @@
 import logging
 import os
 import json
+import pickle
 import random
 from typing import Dict, List, Optional, Tuple
 from pathlib import Path
@@ -222,13 +223,31 @@ class BritishLibraryLoader:
         
         return texts
 
-    def load_british_library_historical_data(self, per_decade=1000):
+    def load_british_library_historical_data(self, per_decade=1000, early_stop=True):
         """
         Load historical texts by directly assigning decades based on dataset configuration.
-        Enhanced with robust fallback mechanisms.
+        Enhanced with robust fallback mechanisms and early stopping.
+        
+        Args:
+            per_decade: Number of texts to target per decade
+            early_stop: Whether to stop once all decades have reached target
+            
+        Returns:
+            Dictionary mapping decades to texts
         """
         # Initialize decade texts container
         decade_texts = {decade: [] for decade in TIME_PERIODS.keys()}
+        
+        # Check for existing cached results first
+        cache_path = self.cache_dir / f"bl_historical_data_{per_decade}.pkl"
+        if cache_path.exists():
+            try:
+                with open(cache_path, 'rb') as f:
+                    decade_texts = pickle.load(f)
+                logger.info(f"Loaded cached British Library data with {sum(len(texts) for texts in decade_texts.values())} texts")
+                return decade_texts
+            except Exception as e:
+                logger.warning(f"Failed to load cached data: {e}")
         
         # Load dataset if not already loaded
         if not self.dataset:
@@ -239,7 +258,6 @@ class BritishLibraryLoader:
         
         if not has_data:
             logger.warning("No British Library dataset available - using fallback mechanism")
-            
             # Look for cached texts first
             cache_path = self.cache_dir / "synthetic_historical_texts.json"
             if cache_path.exists():
@@ -267,7 +285,7 @@ class BritishLibraryLoader:
             except Exception as e:
                 logger.warning(f"Failed to cache synthetic texts: {e}")
                 
-            return decade_texts
+            return decade_texts    
         
         total_records = len(self.dataset['train'])
         logger.info(f"Processing {total_records} British Library records using direct decade assignment")
@@ -296,6 +314,10 @@ class BritishLibraryLoader:
         assigned = 0
         assignments = {decade: 0 for decade in TIME_PERIODS.keys()}
         
+        # Add early stopping check variables
+        all_decades_filled = False
+        target_decades_to_fill = set(decade for decade in TIME_PERIODS.keys() if decade in config_to_decades.values())    
+
         # Process each record
         for record in tqdm(self.dataset['train'], desc="Processing BL records", total=total_records):
             processed += 1
@@ -362,7 +384,20 @@ class BritishLibraryLoader:
                     decade_texts[chosen_decade].append(text)
                     assigned += 1
                     assignments[chosen_decade] += 1
-            
+                    
+                    # Check if this decade is now full
+                    if assignments[chosen_decade] >= per_decade:
+                        # Update the set of target decades that still need filling
+                        if chosen_decade in target_decades_to_fill:
+                            target_decades_to_fill.remove(chosen_decade)
+                            logger.info(f"Completed target for {chosen_decade}: {assignments[chosen_decade]}/{per_decade}")
+                
+                # Check for early stopping - all target decades have reached desired count
+                if early_stop and len(target_decades_to_fill) == 0:
+                    logger.info(f"Early stopping achieved: all target decades have reached {per_decade} texts")
+                    all_decades_filled = True
+                    break
+
             # Log progress periodically
             if processed % 5000 == 0:
                 logger.info(f"Processed {processed}/{total_records} records, assigned {assigned} texts")
@@ -375,6 +410,14 @@ class BritishLibraryLoader:
         # Summary of what we found
         for decade, texts in decade_texts.items():
             logger.info(f"Found {len(texts)} British Library texts for {decade}")
+        
+        # Cache results for future use
+        try:
+            with open(cache_path, 'wb') as f:
+                pickle.dump(decade_texts, f)
+            logger.info(f"Cached {sum(len(texts) for texts in decade_texts.values())} British Library texts for future use")
+        except Exception as e:
+            logger.warning(f"Failed to cache British Library data: {e}")
         
         return decade_texts
 

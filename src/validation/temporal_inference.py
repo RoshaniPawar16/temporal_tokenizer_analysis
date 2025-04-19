@@ -12,6 +12,7 @@ from typing import Dict, List, Tuple, Optional, Set
 from collections import defaultdict, Counter
 import random
 import logging
+
 from pathlib import Path
 import json
 import gc
@@ -341,6 +342,109 @@ class TemporalDistributionInference:
             temporal_rules[decade] = [rule for rule, _ in decade_distinctive[:20]]
         
         return temporal_rules
+
+    def quantify_uncertainty(self, decade_patterns, distribution, sample_sizes=None):
+        """
+        Quantify uncertainty in distribution estimates, especially for small sample sizes.
+        Implements the statistical validation suggested by the professor.
+        
+        Args:
+            decade_patterns: Patterns detected for each decade
+            distribution: The inferred distribution
+            sample_sizes: Optional dictionary mapping decades to sample sizes
+            
+        Returns:
+            Dictionary with uncertainty estimates
+        """
+        decades = sorted(distribution.keys())
+        
+        # If sample sizes not provided, extract from patterns
+        if not sample_sizes:
+            sample_sizes = {}
+            for decade, patterns in decade_patterns.items():
+                if 'total_tokens' in patterns:
+                    sample_sizes[decade] = patterns['total_tokens']
+                else:
+                    # Estimate from merge rules
+                    if 'merge_rules' in patterns:
+                        sample_sizes[decade] = sum(patterns['merge_rules'].values())
+                    else:
+                        sample_sizes[decade] = 0
+        
+        # Calculate uncertainty based on sample size
+        uncertainty = {}
+        for decade in decades:
+            sample_size = sample_sizes.get(decade, 0)
+            
+            # Apply statistical formula for margin of error in proportion
+            # 95% confidence interval uses z=1.96
+            # Formula: z * sqrt(p*(1-p)/n)
+            p = distribution.get(decade, 0)
+            
+            if sample_size > 0:
+                margin_of_error = 1.96 * np.sqrt((p * (1-p)) / sample_size)
+                
+                # For very small sample sizes (as per professor's concern), increase uncertainty
+                if sample_size < 100:
+                    # Add additional penalty for extremely small samples
+                    small_sample_penalty = 1.0 + (100 - sample_size) / 100
+                    margin_of_error *= small_sample_penalty
+            else:
+                # If no samples, set a high uncertainty
+                margin_of_error = 0.5  # Represent high uncertainty with 50% margin
+            
+            # Calculate confidence interval
+            lower_bound = max(0, p - margin_of_error)
+            upper_bound = min(1, p + margin_of_error)
+            
+            # Assess reliability based on sample size
+            if sample_size > 1000:
+                reliability = "high"
+            elif sample_size > 100:
+                reliability = "medium"
+            else:
+                reliability = "low"
+            
+            # Store results
+            uncertainty[decade] = {
+                "value": p,
+                "margin_of_error": margin_of_error,
+                "lower_bound": lower_bound,
+                "upper_bound": upper_bound,
+                "sample_size": sample_size,
+                "reliability": reliability
+            }
+        
+        # Calculate the 1960s correction factor based on uncertainty
+        # This implements the professor's suggestion about the 1960s
+        if "1960s" in uncertainty:
+            sixties_data = uncertainty["1960s"]
+            # Apply stronger correction (0.6) for 1960s as suggested by professor
+            correction_factor = 0.6
+            
+            # Adjust the correction factor based on sample size reliability
+            if sixties_data["reliability"] == "high":
+                # High reliability means we can be more confident in the correction
+                sixties_data["corrected_value"] = sixties_data["value"] * correction_factor
+            elif sixties_data["reliability"] == "medium":
+                # Medium reliability means we apply a slightly less aggressive correction
+                adjusted_factor = (correction_factor + 1.0) / 2  # Average between correction and no correction
+                sixties_data["corrected_value"] = sixties_data["value"] * adjusted_factor
+            else:
+                # Low reliability means high uncertainty, so we're more cautious with correction
+                # Use a milder correction
+                sixties_data["corrected_value"] = sixties_data["value"] * 0.8  # 20% reduction instead of 40%
+            
+            uncertainty["1960s"] = sixties_data
+        
+        # Also add the professor's suggestion about removing top tokens
+        uncertainty["methodology_notes"] = {
+            "top_tokens_removed": 5,  # As suggested by professor
+            "sixties_correction_applied": "1960s" in uncertainty,
+            "sixties_correction_factor": 0.6  # Professor's suggested value
+        }
+        
+        return uncertainty
 
     def analyze_decade_patterns(self, decade_texts: Dict[str, List[str]], sample_size: int = 5000) -> Dict[str, Dict]:
         """
@@ -776,103 +880,154 @@ class TemporalDistributionInference:
     def remove_top_frequent_tokens(self, decade_patterns, top_n=5):
         """
         Remove the top N most frequent tokens across all decades.
+        Implements the professor's suggestion to remove top 5 tokens.
         
         Args:
             decade_patterns: Dictionary mapping decades to pattern frequencies
-            top_n: Number of top frequent tokens to remove
+            top_n: Number of top frequent tokens to remove (set to 5 as per professor)
             
         Returns:
             Filtered decade patterns with top frequent tokens removed
         """
-        # Debug the structure of decade_patterns
-        logger.info(f"DEBUG: decade_patterns type: {type(decade_patterns)}")
-        if isinstance(decade_patterns, dict):
-            for decade, patterns in decade_patterns.items():
-                logger.info(f"DEBUG: decade {decade} patterns type: {type(patterns)}")
-                if isinstance(patterns, dict):
-                    for key in patterns.keys():
-                        logger.info(f"DEBUG: decade {decade} has key: {key}")
-        
-        # Ensure the input is a dictionary
-        if not isinstance(decade_patterns, dict):
-            logger.warning(f"Invalid decade_patterns structure: {type(decade_patterns)}")
-            return decade_patterns
-        
-        # Create a safe copy to avoid modifying the original
+        # Create a copy to avoid modifying the original
         filtered_patterns = {}
         for decade, patterns in decade_patterns.items():
-            # Copy the structure for this decade
-            filtered_patterns[decade] = patterns.copy() if isinstance(patterns, dict) else patterns
+            filtered_patterns[decade] = {key: value.copy() if isinstance(value, dict) else value 
+                                        for key, value in patterns.items()} if isinstance(patterns, dict) else patterns
         
-        # Completely different approach: don't try to calculate global frequencies
-        # Just remove tokens based on patterns from individual decades
-        try:
-            # Find tokens that appear frequently in each decade
-            all_frequent_tokens = []
+        # Find global token frequencies
+        token_freqs = {}
+        
+        # First pass: calculate frequencies
+        for decade, patterns in decade_patterns.items():
+            if isinstance(patterns, dict) and 'merge_rules' in patterns:
+                for token, freq in patterns['merge_rules'].items():
+                    if token not in token_freqs:
+                        token_freqs[token] = 0
+                    token_freqs[token] += freq
+        
+        # Get top N most frequent tokens
+        top_tokens = []
+        if token_freqs:
+            top_tokens = sorted(token_freqs.items(), key=lambda x: x[1], reverse=True)[:top_n]
+            top_tokens = [token for token, _ in top_tokens]
+        
+        if top_tokens:
+            logger.info(f"Top {len(top_tokens)} tokens being removed: {top_tokens}")
             
-            for decade, patterns in decade_patterns.items():
-                if not isinstance(patterns, dict):
-                    continue
-                    
-                # Try different keys that might contain token frequencies
-                if 'merge_rules' in patterns:
-                    # Get token frequencies safely
-                    token_freqs = []
-                    for token, freq in patterns['merge_rules'].items():
-                        if isinstance(freq, (int, float)):
-                            token_freqs.append((token, freq))
-                        elif isinstance(freq, dict) and 'count' in freq:
-                            # Handle case where freq is a dict with a count
-                            count = freq['count']
-                            if isinstance(count, (int, float)):
-                                token_freqs.append((token, count))
-                    
-                    # Sort by frequency and take top tokens
-                    token_freqs.sort(key=lambda x: x[1], reverse=True)
-                    top_tokens = [token for token, _ in token_freqs[:top_n]]
-                    all_frequent_tokens.extend(top_tokens)
-                
-                # Try other possible keys
-                elif 'tokens' in patterns:
-                    top_tokens = sorted(patterns['tokens'].items(), 
-                                key=lambda x: x[1] if isinstance(x[1], (int, float)) else 0,
-                                reverse=True)[:top_n]
-                    all_frequent_tokens.extend([token for token, _ in top_tokens])
-        except Exception as e:
-            logger.error(f"Error finding frequent tokens: {e}")
-            return decade_patterns  # Return original if we can't process
-        
-        # Get the most frequently occurring tokens across all decades
-        token_counter = {}
-        for token in all_frequent_tokens:
-            token_counter[token] = token_counter.get(token, 0) + 1
-        
-        # Take the top N most common tokens
-        top_tokens = sorted(token_counter.items(), key=lambda x: x[1], reverse=True)[:top_n]
-        tokens_to_remove = [token for token, _ in top_tokens]
-        
-        logger.info(f"Removing top {len(tokens_to_remove)} most frequent tokens: {tokens_to_remove}")
-        
-        # Filter these tokens from all decade patterns
-        for decade, patterns in filtered_patterns.items():
-            if not isinstance(patterns, dict):
-                continue
-                
-            # Remove from merge_rules if present
-            if 'merge_rules' in patterns and isinstance(patterns['merge_rules'], dict):
-                filtered_patterns[decade]['merge_rules'] = {
-                    rule: count for rule, count in patterns['merge_rules'].items() 
-                    if rule not in tokens_to_remove
-                }
-            
-            # Remove from tokens if present
-            if 'tokens' in patterns and isinstance(patterns['tokens'], dict):
-                filtered_patterns[decade]['tokens'] = {
-                    token: count for token, count in patterns['tokens'].items()
-                    if token not in tokens_to_remove
-                }
+            # Second pass: remove tokens
+            for decade, patterns in filtered_patterns.items():
+                if isinstance(patterns, dict) and 'merge_rules' in patterns:
+                    # Create a new dictionary without the top tokens
+                    patterns['merge_rules'] = {
+                        token: freq for token, freq in patterns['merge_rules'].items() 
+                        if token not in top_tokens
+                    }
+        else:
+            logger.warning("No tokens found to remove")
         
         return filtered_patterns
+
+    # def remove_top_frequent_tokens(self, decade_patterns, top_n=5):
+    #     """
+    #     Remove the top N most frequent tokens across all decades.
+        
+    #     Args:
+    #         decade_patterns: Dictionary mapping decades to pattern frequencies
+    #         top_n: Number of top frequent tokens to remove
+            
+    #     Returns:
+    #         Filtered decade patterns with top frequent tokens removed
+    #     """
+    #     # Debug the structure of decade_patterns
+    #     logger.info(f"DEBUG: decade_patterns type: {type(decade_patterns)}")
+    #     if isinstance(decade_patterns, dict):
+    #         for decade, patterns in decade_patterns.items():
+    #             logger.info(f"DEBUG: decade {decade} patterns type: {type(patterns)}")
+    #             if isinstance(patterns, dict):
+    #                 for key in patterns.keys():
+    #                     logger.info(f"DEBUG: decade {decade} has key: {key}")
+        
+    #     # Ensure the input is a dictionary
+    #     if not isinstance(decade_patterns, dict):
+    #         logger.warning(f"Invalid decade_patterns structure: {type(decade_patterns)}")
+    #         return decade_patterns
+        
+    #     # Create a safe copy to avoid modifying the original
+    #     filtered_patterns = {}
+    #     for decade, patterns in decade_patterns.items():
+    #         # Copy the structure for this decade
+    #         filtered_patterns[decade] = patterns.copy() if isinstance(patterns, dict) else patterns
+        
+    #     # Completely different approach: don't try to calculate global frequencies
+    #     # Just remove tokens based on patterns from individual decades
+    #     try:
+    #         # Find tokens that appear frequently in each decade
+    #         all_frequent_tokens = []
+            
+    #         for decade, patterns in decade_patterns.items():
+    #             if not isinstance(patterns, dict):
+    #                 continue
+                    
+    #             # Try different keys that might contain token frequencies
+    #             if 'merge_rules' in patterns:
+    #                 # Get token frequencies safely
+    #                 token_freqs = []
+    #                 for token, freq in patterns['merge_rules'].items():
+    #                     if isinstance(freq, (int, float)):
+    #                         token_freqs.append((token, freq))
+    #                     elif isinstance(freq, dict) and 'count' in freq:
+    #                         # Handle case where freq is a dict with a count
+    #                         count = freq['count']
+    #                         if isinstance(count, (int, float)):
+    #                             token_freqs.append((token, count))
+                    
+    #                 # Sort by frequency and take top tokens
+    #                 token_freqs.sort(key=lambda x: x[1], reverse=True)
+    #                 top_tokens = [token for token, _ in token_freqs[:top_n]]
+    #                 all_frequent_tokens.extend(top_tokens)
+                
+    #             # Try other possible keys
+    #             elif 'tokens' in patterns:
+    #                 top_tokens = sorted(patterns['tokens'].items(), 
+    #                             key=lambda x: x[1] if isinstance(x[1], (int, float)) else 0,
+    #                             reverse=True)[:top_n]
+    #                 all_frequent_tokens.extend([token for token, _ in top_tokens])
+    #     except Exception as e:
+    #         logger.error(f"Error finding frequent tokens: {e}")
+    #         return decade_patterns  # Return original if we can't process
+        
+    #     # Get the most frequently occurring tokens across all decades
+    #     token_counter = {}
+    #     for token in all_frequent_tokens:
+    #         token_counter[token] = token_counter.get(token, 0) + 1
+        
+    #     # Take the top N most common tokens
+    #     top_tokens = sorted(token_counter.items(), key=lambda x: x[1], reverse=True)[:top_n]
+    #     tokens_to_remove = [token for token, _ in top_tokens]
+        
+    #     logger.info(f"Removing top {len(tokens_to_remove)} most frequent tokens: {tokens_to_remove}")
+        
+    #     # Filter these tokens from all decade patterns
+    #     for decade, patterns in filtered_patterns.items():
+    #         if not isinstance(patterns, dict):
+    #             continue
+                
+    #         # Remove from merge_rules if present
+    #         if 'merge_rules' in patterns and isinstance(patterns['merge_rules'], dict):
+    #             filtered_patterns[decade]['merge_rules'] = {
+    #                 rule: count for rule, count in patterns['merge_rules'].items() 
+    #                 if rule not in tokens_to_remove
+    #             }
+            
+    #         # Remove from tokens if present
+    #         if 'tokens' in patterns and isinstance(patterns['tokens'], dict):
+    #             filtered_patterns[decade]['tokens'] = {
+    #                 token: count for token, count in patterns['tokens'].items()
+    #                 if token not in tokens_to_remove
+    #             }
+        
+    #     return filtered_patterns
 
     # def infer_temporal_distribution(self, 
     #                  decade_patterns: Dict[str, Dict],
@@ -1090,9 +1245,10 @@ class TemporalDistributionInference:
                      weight_early_merges: bool = True,
                      regularization_strength: float = 0.05,
                      remove_top_tokens: bool = True,
-                     top_n: int = 5) -> Dict[str, float]:  # Changed to 5 as per professor discussion
+                     top_n: int = 5):  # Set to 5 as per professor's suggestion
         """
         Infer the temporal distribution in training data using enhanced linear programming.
+        Incorporated professor's suggestions including top 5 token removal and 1960s correction.
         
         Args:
             decade_patterns: Dictionary mapping decades to their patterns
@@ -1100,8 +1256,8 @@ class TemporalDistributionInference:
             weight_early_merges: Whether to give higher weight to early merges
             regularization_strength: Strength of regularization term
             remove_top_tokens: Whether to remove top frequent tokens
-            top_n: Number of top tokens to remove
-            
+            top_n: Number of top tokens to remove (set to 5 per professor)
+                
         Returns:
             Dictionary mapping decades to their estimated proportion
         """
@@ -1629,7 +1785,105 @@ class TemporalDistributionInference:
             return {decade: value/total for decade, value in ensemble_distribution.items()}
         else:
             return {decade: 1.0/len(decades) for decade in decades}
+
+    def validate_against_hayase_metrics(self, predicted_distribution, true_distribution,
+                                   bootstrap_iterations=30, confidence_level=0.95):
+        """
+        Validate results against metrics used in Hayase et al. paper,
+        including log10(MSE) and bootstrap confidence intervals.
         
+        Args:
+            predicted_distribution: Dictionary mapping decades to proportions
+            true_distribution: Ground truth distribution
+            bootstrap_iterations: Number of bootstrap iterations
+            confidence_level: Confidence level for intervals (e.g., 0.95 for 95%)
+            
+        Returns:
+            Dictionary with validation metrics
+        """
+        # Calculate basic log10(MSE) as in Hayase et al.
+        log10_mse = self.calculate_distribution_mse(predicted_distribution, true_distribution)
+        
+        # Normalize distributions if needed
+        pred_sum = sum(predicted_distribution.values())
+        true_sum = sum(true_distribution.values())
+        
+        normalized_pred = {k: v/pred_sum for k, v in predicted_distribution.items()} if pred_sum > 0 else predicted_distribution
+        normalized_true = {k: v/true_sum for k, v in true_distribution.items()} if true_sum > 0 else true_distribution
+        
+        # Calculate Mean Absolute Error
+        all_decades = set(normalized_pred.keys()) | set(normalized_true.keys())
+        mae = sum(abs(normalized_pred.get(d, 0) - normalized_true.get(d, 0)) for d in all_decades) / len(all_decades)
+        
+        # Calculate Jensen-Shannon Distance (symmetric)
+        # (Note: requires scipy, which should be imported)
+        from scipy.spatial.distance import jensenshannon
+        
+        # Convert dictionaries to vectors in same order
+        sorted_decades = sorted(all_decades)
+        pred_vec = np.array([normalized_pred.get(d, 0) for d in sorted_decades])
+        true_vec = np.array([normalized_true.get(d, 0) for d in sorted_decades])
+        
+        # Ensure vectors sum to 1
+        if sum(pred_vec) > 0:
+            pred_vec = pred_vec / sum(pred_vec)
+        if sum(true_vec) > 0:
+            true_vec = true_vec / sum(true_vec)
+        
+        # Calculate JS distance
+        js_distance = jensenshannon(pred_vec, true_vec)
+        
+        # Bootstrap 
+        bootstrap_results = []
+        bootstrap_mse_values = []
+        
+        # Convert distributions to lists for sampling
+        pred_items = list(normalized_pred.items())
+        
+        for _ in range(bootstrap_iterations):
+            # Sample with replacement
+            bootstrap_sample = random.choices(pred_items, k=len(pred_items))
+            
+            # Create new distribution from bootstrap sample
+            bootstrap_pred = {}
+            for decade, value in bootstrap_sample:
+                bootstrap_pred[decade] = bootstrap_pred.get(decade, 0) + value
+            
+            # Normalize
+            bootstrap_sum = sum(bootstrap_pred.values())
+            if bootstrap_sum > 0:
+                bootstrap_pred = {k: v/bootstrap_sum for k, v in bootstrap_pred.items()}
+            
+            # Calculate metrics for this bootstrap sample
+            bootstrap_mse = self.calculate_distribution_mse(bootstrap_pred, normalized_true)
+            bootstrap_mse_values.append(bootstrap_mse)
+            
+            # Add to results
+            bootstrap_results.append(bootstrap_pred)
+        
+        # Calculate confidence interval for MSE
+        bootstrap_mse_values.sort()
+        lower_idx = int((1 - confidence_level) / 2 * bootstrap_iterations)
+        upper_idx = int((1 - (1 - confidence_level) / 2) * bootstrap_iterations)
+        
+        mse_ci_lower = bootstrap_mse_values[lower_idx] if lower_idx < len(bootstrap_mse_values) else bootstrap_mse_values[0]
+        mse_ci_upper = bootstrap_mse_values[upper_idx] if upper_idx < len(bootstrap_mse_values) else bootstrap_mse_values[-1]
+        
+        # Return comprehensive validation metrics
+        return {
+            "log10_mse": log10_mse,
+            "mae": mae,
+            "js_distance": js_distance,
+            "bootstrap_results": {
+                "mean_log10_mse": sum(bootstrap_mse_values) / len(bootstrap_mse_values),
+                "confidence_interval": (mse_ci_lower, mse_ci_upper),
+                "bootstrap_iterations": bootstrap_iterations,
+                "confidence_level": confidence_level
+            },
+            "hayase_benchmark": -7.30,  # The value reported in Hayase et al.
+            "comparison_to_benchmark": log10_mse + 7.30  # Difference from benchmark
+        }
+
     def apply_decade_correction(self, distribution, decade="1960s", factor=0.6):
         """
         Apply a correction factor to a specific decade (especially 1960s)
