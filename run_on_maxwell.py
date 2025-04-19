@@ -578,6 +578,37 @@ def run_analysis(args):
         logger.info(f"  Target size (GB): {args.target_size_gb}")
         test_decades = list(TIME_PERIODS.keys())  # Use all decades in non-test mode
 
+    # Get distributions - MOVED THIS EARLIER
+    distributions = define_distributions()
+    
+    # Validate distribution choice - MOVED THIS EARLIER
+    if args.distribution not in distributions:
+        logger.error(f"Unknown distribution: {args.distribution}")
+        logger.info(f"Available distributions: {list(distributions.keys())}")
+        return
+    
+    # Get selected distribution - MOVED THIS EARLIER
+    dist_info = distributions[args.distribution]
+    selected_dist = dist_info["distribution"]
+    
+    # If in test mode, modify the distribution to focus on test decades - MOVED THIS EARLIER
+    if args.test_mode and test_decades:
+        # Create a modified distribution with only test decades
+        modified_dist = {}
+        total = 0
+        for decade in test_decades:
+            if decade in selected_dist:
+                modified_dist[decade] = selected_dist[decade]
+                total += modified_dist[decade]
+        
+        # Normalize to sum to 1
+        if total > 0:
+            selected_dist = {decade: value/total for decade, value in modified_dist.items()}
+            logger.info(f"Modified distribution for test mode: {selected_dist}")
+    
+    # Initialize dataset_manager AFTER distribution is defined but BEFORE it's used
+    dataset_manager = TemporalDatasetManager()
+
     # Special handling for test mode - override data loading
     if args.test_mode:
         logger.info("Running in TEST MODE - using minimal synthetic data")
@@ -595,7 +626,6 @@ def run_analysis(args):
         logger.info(f"Created minimal test dataset with {len(controlled_dataset)} decades")
         # Skip all the expensive data loading and processing
     else:
-        # MOVE EXISTING DATA LOADING CODE HERE
         # Before creating dataset, enhance the Gutenberg loader for better mid-century coverage
         logger.info("Expanding Gutenberg loader with enhanced mid-century decade coverage...")
         dataset_manager.gutenberg_loader.expand_metadata_sources()
@@ -605,35 +635,7 @@ def run_analysis(args):
         controlled_dataset = dataset_manager.create_large_dataset(
             distribution=selected_dist,
             target_size_gb=args.target_size_gb
-        )    
-
-    # Get distributions
-    distributions = define_distributions()
-    
-    # Validate distribution choice
-    if args.distribution not in distributions:
-        logger.error(f"Unknown distribution: {args.distribution}")
-        logger.info(f"Available distributions: {list(distributions.keys())}")
-        return
-    
-    # Get selected distribution
-    dist_info = distributions[args.distribution]
-    selected_dist = dist_info["distribution"]
-
-    # If in test mode, modify the distribution to focus on test decades
-    if args.test_mode and test_decades:
-        # Create a modified distribution with only test decades
-        modified_dist = {}
-        total = 0
-        for decade in test_decades:
-            if decade in selected_dist:
-                modified_dist[decade] = selected_dist[decade]
-                total += modified_dist[decade]
-        
-        # Normalize to sum to 1
-        if total > 0:
-            selected_dist = {decade: value/total for decade, value in modified_dist.items()}
-            logger.info(f"Modified distribution for test mode: {selected_dist}")
+        )
     
     logger.info(f"Running analysis for {dist_info['name']} with {args.tokenizer} tokenizer")
     logger.info(f"Using {args.texts_per_decade} texts per decade and {args.target_size_gb}GB target size")
@@ -642,8 +644,7 @@ def run_analysis(args):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     run_id = f"{args.tokenizer}_{args.distribution}_{timestamp}"
     
-    # Initialize components
-    dataset_manager = TemporalDatasetManager()
+    # Initialize components - REMOVED DUPLICATE DATASET_MANAGER INITIALIZATION
     inference = TemporalDistributionInference(tokenizer_name=args.tokenizer)
     validator = TemporalValidator(
         inference_method=lambda texts: inference.infer_temporal_distribution(
