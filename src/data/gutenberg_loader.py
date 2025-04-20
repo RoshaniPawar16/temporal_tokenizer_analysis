@@ -595,15 +595,14 @@ class GutenbergLoader:
         historical_decades = ["1850s", "1860s", "1870s", "1880s", "1890s", 
                             "1900s", "1910s", "1920s"]
         
-        # Process the catalog to identify historical works
-        catalog = self.get_gutenberg_catalog()
-        if not catalog:
-            logger.warning("No Gutenberg catalog available to expand")
+        # Use metadata instead of get_gutenberg_catalog
+        if not self.metadata:
+            logger.warning("No Gutenberg metadata available to expand")
             return
             
         # Count historical works before expansion
         historical_count = 0
-        for book in catalog:
+        for book_id, book in self.metadata.items():
             if 'year' in book:
                 try:
                     year = int(book['year'])
@@ -612,7 +611,7 @@ class GutenbergLoader:
                 except (ValueError, TypeError):
                     pass
         
-        logger.info(f"Found {historical_count} historical works (1850-1929) in catalog before expansion")
+        logger.info(f"Found {historical_count} historical works (1850-1929) in metadata before expansion")
         
         # Mark as expanded to avoid doing this multiple times
         self._historical_catalog_expanded = True
