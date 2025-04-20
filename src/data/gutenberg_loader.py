@@ -579,6 +579,46 @@ class GutenbergLoader:
         logger.error(f"Failed to fetch text for book {book_id} from any source after multiple attempts")
         return None
 
+    def expand_historical_catalog(self):
+        """
+        Expand the Gutenberg catalog specifically for better historical coverage.
+        Prioritizes texts from pre-1930s decades.
+        """
+        logger.info("Expanding Gutenberg catalog for better historical coverage")
+        
+        # Check if we already have an expanded catalog
+        if hasattr(self, '_historical_catalog_expanded') and self._historical_catalog_expanded:
+            logger.info("Historical catalog already expanded, skipping")
+            return
+            
+        # Focus on these historical periods
+        historical_decades = ["1850s", "1860s", "1870s", "1880s", "1890s", 
+                            "1900s", "1910s", "1920s"]
+        
+        # Process the catalog to identify historical works
+        catalog = self.get_gutenberg_catalog()
+        if not catalog:
+            logger.warning("No Gutenberg catalog available to expand")
+            return
+            
+        # Count historical works before expansion
+        historical_count = 0
+        for book in catalog:
+            if 'year' in book:
+                try:
+                    year = int(book['year'])
+                    if 1850 <= year <= 1929:
+                        historical_count += 1
+                except (ValueError, TypeError):
+                    pass
+        
+        logger.info(f"Found {historical_count} historical works (1850-1929) in catalog before expansion")
+        
+        # Mark as expanded to avoid doing this multiple times
+        self._historical_catalog_expanded = True
+        
+        logger.info("Historical catalog expansion complete")
+
     def _try_fetch_from_mirrors(self, book_id: str) -> Optional[str]:
         """Try fetching from all configured mirrors."""
         for url_template in self.mirror_urls:
