@@ -2404,7 +2404,8 @@ class TemporalDatasetManager:
                     # Object with encode method
                     total_bytes += len(item.encode('utf-8'))
             except Exception as e:
-                logger.debug(f"Error calculating text size: {e}")
+                import logging
+                logging.getLogger(__name__).debug(f"Error calculating text size: {e}")
                 continue
         
         return total_bytes / (1024**3)  # Convert to GB
