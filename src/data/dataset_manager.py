@@ -2371,6 +2371,44 @@ class TemporalDatasetManager:
         
         return enhanced_dataset
 
+    def _calculate_decade_gb(self, decade, dataset):
+        """
+        Safely calculate the size in GB for a decade's texts.
+        Handles different possible data structures.
+        """
+        total_bytes = 0
+        
+        if decade not in dataset:
+            return 0.0
+            
+        for item in dataset[decade]:
+            try:
+                # Handle different item formats
+                if isinstance(item, tuple) or isinstance(item, list):
+                    text_item = item[0]  # First element should be the text
+                    
+                    # Check if text_item is a string
+                    if isinstance(text_item, str):
+                        total_bytes += len(text_item.encode('utf-8'))
+                    # Check if text_item is also a tuple/list (nested structure)
+                    elif isinstance(text_item, tuple) or isinstance(text_item, list):
+                        actual_text = text_item[0]  # Try to get the actual text
+                        if isinstance(actual_text, str):
+                            total_bytes += len(actual_text.encode('utf-8'))
+                        elif hasattr(actual_text, 'encode'):
+                            total_bytes += len(actual_text.encode('utf-8'))
+                elif isinstance(item, str):
+                    # Direct string
+                    total_bytes += len(item.encode('utf-8'))
+                elif hasattr(item, 'encode'):
+                    # Object with encode method
+                    total_bytes += len(item.encode('utf-8'))
+            except Exception as e:
+                logger.debug(f"Error calculating text size: {e}")
+                continue
+        
+        return total_bytes / (1024**3)  # Convert to GB
+
     def boost_historical_data(self, target_historical_decades=None):
         """
         Specifically boost historical data (pre-1930s) using all available sources
@@ -2411,7 +2449,8 @@ class TemporalDatasetManager:
         
         # Combine sources with preference for real data
         for decade in target_historical_decades:
-            decade_gb = sum(len(text.encode('utf-8')) for text in historical_dataset.get(decade, [])) / (1024**3)
+            # decade_gb = sum(len(text.encode('utf-8')) for text in historical_dataset.get(decade, [])) / (1024**3)
+            decade_gb = self._calculate_decade_gb(decade, historical_dataset)
             logger.info(f"Current {decade} data: {len(historical_dataset.get(decade, []))} texts, {decade_gb:.2f} GB")
             
             # Add Gutenberg texts
