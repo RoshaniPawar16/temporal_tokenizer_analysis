@@ -2467,7 +2467,8 @@ class TemporalDatasetManager:
                 logger.info(f"Added {len(new_texts)} British Library texts for {decade}")
             
             # Check if we've reached 1GB target
-            decade_gb = sum(len(text[0].encode('utf-8')) for text in historical_dataset[decade]) / (1024**3)
+            # decade_gb = sum(len(text[0].encode('utf-8')) for text in historical_dataset[decade]) / (1024**3)
+            decade_gb = self._calculate_decade_gb(decade, historical_dataset)
             logger.info(f"Updated {decade} data: {len(historical_dataset[decade])} texts, {decade_gb:.2f} GB")
             
             # If still below target volume, augment existing texts instead of generating synthetic
