@@ -1418,6 +1418,33 @@ class TemporalDistributionInference:
         
         return filtered_patterns
 
+    def calculate_distribution_mse(self, predicted: Dict[str, float], true: Dict[str, float]) -> float:
+        """
+        Calculate Mean Squared Error between predicted and true distributions.
+        Returns log10(MSE) similar to Hayase et al.
+        
+        Args:
+            predicted: Dictionary mapping decades to predicted proportions
+            true: Dictionary mapping decades to true proportions
+            
+        Returns:
+            log10(MSE) value
+        """
+        # Ensure all keys are present in both
+        all_decades = set(predicted.keys()) | set(true.keys())
+        
+        # Calculate MSE
+        squared_errors = []
+        for decade in all_decades:
+            pred_val = predicted.get(decade, 0.0)
+            true_val = true.get(decade, 0.0)
+            squared_errors.append((pred_val - true_val) ** 2)
+        
+        mse = sum(squared_errors) / len(squared_errors)
+        log10_mse = np.log10(mse) if mse > 0 else -float('inf')
+        
+        return log10_mse
+
     def find_distinctive_patterns(self, 
                             decade_patterns: Dict[str, Dict],
                             threshold: float = 3.0) -> Dict[str, List[Tuple[str, float]]]:
