@@ -765,7 +765,16 @@ def run_analysis(args):
             factor=0.6
         )
         logger.info("Applied professor's suggested 1960s correction factor of 0.6")
-    
+    if "1930s" in distribution:
+        # Apply stronger correction due to severe overrepresentation
+        distribution = inference.apply_decade_correction(
+            distribution,
+            decade="1930s", 
+            factor=0.3  # Reduce by 70%
+        )
+        logger.info("Applied 0.3 correction factor to 1930s due to extreme overrepresentation")
+
+
     # Calculate uncertainty in the estimates
     uncertainty = inference.quantify_uncertainty(decade_patterns, distribution)
     

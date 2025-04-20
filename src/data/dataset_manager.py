@@ -840,11 +840,10 @@ class TemporalDatasetManager:
         historical_decades = ["1850s", "1860s", "1870s", "1880s", "1890s", "1900s", "1910s", "1920s"]
         for decade in historical_decades:
             if decade in target_bytes_per_decade:
-                # Increase target for historical decades to ensure better representation
-                original_target = target_bytes_per_decade[decade]
-                target_bytes_per_decade[decade] = original_target * 1.5  # Boost by 50%
-                logger.info(f"Boosting target data volume for historical decade {decade} by 50%")
-        
+                # Increase from 1.5x to 3x for historical decades
+                target_bytes_per_decade[decade] = target_bytes_per_decade[decade] * 3.0  
+                logger.info(f"Boosting target data volume for historical decade {decade} by 300%")
+                
         # Create balanced dataset
         balanced_dataset = {}
         
