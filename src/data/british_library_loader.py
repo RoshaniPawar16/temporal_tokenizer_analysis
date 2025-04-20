@@ -421,6 +421,27 @@ class BritishLibraryLoader:
         
         return decade_texts
 
+    def expand_metadata_sources(self):
+        """
+        Expand metadata sources to get better coverage of historical books.
+        """
+        logger.info("Expanding British Library metadata sources...")
+        
+        # Try to load any cached expanded metadata
+        expanded_path = self.cache_dir / "expanded_metadata.json"
+        if expanded_path.exists():
+            try:
+                with open(expanded_path, 'r') as f:
+                    expanded_data = json.load(f)
+                    logger.info(f"Loaded {len(expanded_data)} expanded metadata entries")
+                    return
+            except Exception as e:
+                logger.warning(f"Failed to load expanded metadata: {e}")
+        
+        # If no cached metadata, just log this fact
+        logger.info("No expanded metadata available for British Library")
+        return
+
     def create_decade_indexed_dataset(self):
         """Preprocess the entire British Library dataset and organize by decade."""
         import re

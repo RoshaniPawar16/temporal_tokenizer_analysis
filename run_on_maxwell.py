@@ -612,7 +612,11 @@ def run_analysis(args):
         
         # Also ensure British Library loader is initialized with expanded sources
         logger.info("Expanding British Library data sources...")
-        dataset_manager.british_library_loader.expand_metadata_sources()
+        # With this safer version:
+        if hasattr(dataset_manager.british_library_loader, 'expand_metadata_sources'):
+            dataset_manager.british_library_loader.expand_metadata_sources()
+        else:
+            logger.info("British Library loader does not support expanded metadata sources")
         
         # Increase target size for better results (from professor discussions)
         increased_target_size_gb = max(args.target_size_gb, 2.0)
