@@ -33,16 +33,12 @@ class TemporalValidator:
         """
         Perform bootstrap analysis to compute confidence intervals for the distribution.
         Enhanced with proper error handling and statistical validation.
-        
-        Args:
-            decade_texts: Dictionary mapping decades to texts
-            n_bootstrap: Number of bootstrap iterations
-            sample_ratio: Proportion of texts to sample in each bootstrap
-            
-        Returns:
-            Dictionary mapping decades to confidence interval statistics
         """
         logger.info(f"Performing bootstrap analysis with {n_bootstrap} iterations...")
+        
+        # ADDED: Ensure we complete all iterations
+        successful_iterations = 0
+        max_attempts = n_bootstrap * 2  # Allow up to double attempts to get n_bootstrap successes
         
         # First get baseline distribution using all data
         try:
@@ -58,12 +54,14 @@ class TemporalValidator:
         bootstrap_distributions = []
         decade_values = {decade: [] for decade in baseline_distribution.keys()}
         
-        # Run bootstrap iterations
-        successful_iterations = 0
-        for i in range(n_bootstrap):
-            logger.info(f"Bootstrap iteration {i+1}/{n_bootstrap}")
+        # Run bootstrap iterations with retry logic
+        attempt = 0
+        while successful_iterations < n_bootstrap and attempt < max_attempts:
+            attempt += 1
+            logger.info(f"Bootstrap iteration attempt {attempt}/{max_attempts} (successful: {successful_iterations}/{n_bootstrap})")
+            
             try:
-                # Create bootstrap sample
+                # Create bootstrap sample with stratified sampling to preserve decade proportions
                 bootstrap_sample = {}
                 for decade, texts in decade_texts.items():
                     if not texts:
@@ -73,8 +71,7 @@ class TemporalValidator:
                     # Sample with replacement
                     sample_size = max(1, int(len(texts) * sample_ratio))
                     
-                    # Create document-level bootstraps instead of decade-level
-                    # This provides more variance in the bootstrap samples
+                    # MODIFIED: Stratified sampling for better representation
                     sampled_texts = []
                     for _ in range(sample_size):
                         idx = random.randrange(len(texts))
@@ -86,7 +83,7 @@ class TemporalValidator:
                 try:
                     bootstrap_dist = self.inference_method(bootstrap_sample)
                     if not bootstrap_dist:
-                        logger.warning(f"Empty distribution in bootstrap iteration {i+1}")
+                        logger.warning(f"Empty distribution in bootstrap iteration {attempt}")
                         continue
                         
                     bootstrap_distributions.append(bootstrap_dist)
@@ -99,17 +96,20 @@ class TemporalValidator:
                             if isinstance(value, (int, float)):
                                 decade_values[decade].append(float(value))
                             else:
-                                logger.warning(f"Non-numeric value in bootstrap iteration {i+1} for {decade}: {type(value)}")
+                                logger.warning(f"Non-numeric value in bootstrap iteration {attempt} for {decade}: {type(value)}")
+                    
+                    # Log progress for successful iterations only
+                    logger.info(f"Completed bootstrap iteration {successful_iterations}/{n_bootstrap}")
                 except Exception as e:
-                    logger.warning(f"Error in bootstrap iteration {i+1} inference: {e}")
+                    logger.warning(f"Error in bootstrap iteration {attempt} inference: {e}")
                     continue
                     
             except Exception as e:
-                logger.warning(f"Failed to create bootstrap sample {i+1}: {e}")
+                logger.warning(f"Failed to create bootstrap sample {attempt}: {e}")
                 continue
             
             # Force garbage collection every few iterations
-            if i % 5 == 0:
+            if attempt % 5 == 0:
                 import gc
                 gc.collect()
         
@@ -148,26 +148,7 @@ class TemporalValidator:
             }
         
         # Calculate reliability metrics
-        reliability_score = 0
-        if confidence_intervals:
-            # Calculate average coefficient of variation
-            cv_values = [stats.get("coefficient_of_variation", 1.0) for stats in confidence_intervals.values()]
-            avg_cv = sum(cv_values) / len(cv_values) if cv_values else 1.0
-            
-            # Calculate average CI width relative to mean
-            ci_widths = []
-            for decade, stats in confidence_intervals.items():
-                mean = stats.get("mean", 0)
-                if mean > 0:
-                    lower = stats.get("lower_ci", 0)
-                    upper = stats.get("upper_ci", 0)
-                    width = (upper - lower) / mean
-                    ci_widths.append(width)
-            
-            avg_width = sum(ci_widths) / len(ci_widths) if ci_widths else 1.0
-            
-            # Calculate reliability score (higher is better)
-            reliability_score = 100 - min(50, 50 * avg_cv) - min(50, 50 * avg_width)
+        reliability_score = self.calculate_reliability_metrics(confidence_intervals)["reliability_score"]
         
         # Add overall reliability score to results
         for decade in confidence_intervals:

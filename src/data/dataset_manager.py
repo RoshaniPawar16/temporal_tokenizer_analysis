@@ -843,7 +843,7 @@ class TemporalDatasetManager:
                 # Increase from 1.5x to 3x for historical decades
                 target_bytes_per_decade[decade] = target_bytes_per_decade[decade] * 3.0  
                 logger.info(f"Boosting target data volume for historical decade {decade} by 300%")
-                
+
         # Create balanced dataset
         balanced_dataset = {}
         
@@ -1039,8 +1039,8 @@ class TemporalDatasetManager:
         # First expand metadata sources for better historical coverage
         self.british_library_loader.expand_metadata_sources()
         bl_texts = self.british_library_loader.load_british_library_historical_data(
-            per_decade=1000,
-            early_stop=False  # Disable early stopping to ensure we get all available data
+            per_decade=10000,  # Increased from 1000 for better coverage
+            early_stop=False   # Disable early stopping to ensure we get all available data
         )
         
         # Add British Library texts to our dataset WITH PROPER TUPLE CONVERSION
@@ -1055,9 +1055,11 @@ class TemporalDatasetManager:
         # Next load Gutenberg texts with enhanced mid-century coverage
         logger.info("Loading Gutenberg texts with enhanced metadata...")
         self.gutenberg_loader.expand_metadata_sources()
+        # Also expand historical catalog for better coverage of pre-1930s data
+        self.gutenberg_loader.expand_historical_catalog()
         gutenberg_texts = self.gutenberg_loader.load_focused_decade_samples(
             target_decades=list(distribution.keys()),
-            texts_per_decade=10000  # Increased for better coverage
+            texts_per_decade=20000  # Increased for better coverage
         )
         
         # Add Gutenberg texts to our dataset
@@ -1074,7 +1076,7 @@ class TemporalDatasetManager:
             logger.info(f"Loading Oscar texts for mid-century decades: {target_sparse_decades}")
             oscar_texts = self.oscar_loader.load_decade_samples(
                 target_decades=target_sparse_decades,
-                texts_per_decade=10000  # Increased from 5000 for better coverage
+                texts_per_decade=20000  # Increased from 5000 for better coverage
             )
             
             # Add Oscar texts to our dataset
@@ -1089,7 +1091,7 @@ class TemporalDatasetManager:
                         if d in ["1990s", "2000s", "2010s", "2020s"]]
         if modern_decades:
             logger.info(f"Loading modern web content for decades: {modern_decades}")
-            modern_texts = self.load_modern_web_content(target_decades=modern_decades)
+            modern_texts = self.load_modern_web_content(target_decades=modern_decades, texts_per_decade=20000)
             
             # Add modern web texts to our dataset
             for decade, texts in modern_texts.items():
@@ -1119,7 +1121,7 @@ class TemporalDatasetManager:
         # Check which decades have insufficient data
         volume_check, all_sufficient = self.verify_dataset_volumes(
             decade_texts, 
-            target_gb_per_decade=target_size_gb * 0.2  # Set minimum threshold at 20% of target
+            target_gb_per_decade=target_size_gb * 0.5  # Set minimum threshold at 50% of target
         )
         
         # Generate synthetic data only for decades with insufficient data
@@ -1128,7 +1130,7 @@ class TemporalDatasetManager:
             
             insufficient_decades = []
             for decade, volume in volume_check.items():
-                if volume < target_size_gb * 0.2:  # Less than 20% of target
+                if volume < target_size_gb * 0.5:  # Less than 50% of target
                     insufficient_decades.append((decade, volume))
                     
             # Sort by most deficient first
@@ -1153,7 +1155,7 @@ class TemporalDatasetManager:
                         needed_texts = int((needed_gb * 1024 * 1024 * 1024) / avg_text_bytes) + 1
                         
                         # Cap at a reasonable number
-                        texts_to_expand = min(1000, needed_texts)
+                        texts_to_expand = min(10000, needed_texts)
                         
                         logger.info(f"Expanding {min(len(current_texts), texts_to_expand)} texts for {decade}")
                         
@@ -1161,19 +1163,22 @@ class TemporalDatasetManager:
                         expanded_texts = []
                         
                         # Use a smaller subset as base for diversity
-                        base_texts = current_texts[:min(100, len(current_texts))]
+                        base_texts = current_texts[:min(1000, len(current_texts))]
                         
                         for i in range(texts_to_expand):
+                            if base_texts and i % 100 == 0:
+                                logger.info(f"Created {i}/{texts_to_expand} expanded texts for {decade}")
+                                
                             if base_texts:
                                 # Select random base text
                                 base_text, base_source = random.choice(base_texts)
                                 
                                 # Create expanded version
-                                expanded_text = self._augment_text_for_volume(base_text, decade)
+                                expanded_text = self._modify_text_slightly(base_text)
                                 expanded_texts.append((expanded_text, f"{base_source}_expanded"))
                                 
                                 # Check if we've reached target
-                                if i % 100 == 0:
+                                if i % 1000 == 0:
                                     expanded_volume = sum(len(text.encode('utf-8')) for text, _ in expanded_texts) / (1024**3)
                                     if volume + expanded_volume >= target_volume:
                                         logger.info(f"Reached target volume after {i+1} expansions")
@@ -1202,10 +1207,20 @@ class TemporalDatasetManager:
                     
                     logger.info(f"Generating {needed_texts} synthetic texts for {decade}")
                     
-                    # Generate synthetic texts
-                    synthetic_texts = self._create_synthetic_texts_for_decade(decade, needed_texts)
+                    # Generate synthetic texts for historical decades
+                    if decade in ["1850s", "1860s", "1870s", "1880s", "1890s", "1900s", "1910s", "1920s"]:
+                        synthetic_texts = self._create_historical_synthetic_texts(decade, needed_texts, {})
+                        logger.info(f"Added {len(synthetic_texts)} synthetic historical texts for {decade}")
+                    else:
+                        # Generate synthetic texts for modern decades
+                        synthetic_texts = self._create_synthetic_decade_texts(decade, needed_texts)
+                        logger.info(f"Added {len(synthetic_texts)} synthetic texts for {decade}")
+                        
                     decade_texts[decade].extend([(text, "synthetic") for text in synthetic_texts])
-                    logger.info(f"Added {len(synthetic_texts)} synthetic texts for {decade}")
+                    
+                    # Log added synthetic data volume
+                    synthetic_bytes = sum(len(text.encode('utf-8')) for text in synthetic_texts)
+                    logger.info(f"Added {synthetic_bytes/(1024*1024):.2f}MB of synthetic text for {decade}")
         
         # STEP 4: APPLY BALANCING TO MATCH TARGET DISTRIBUTION
         try:
@@ -1238,16 +1253,10 @@ class TemporalDatasetManager:
         
         return balanced_dataset
 
+    
     def load_additional_sources(self, target_decades):
         """
-        Load additional contemporary data sources to supplement the dataset,
-        particularly for modern decades where there might be gaps.
-        
-        Args:
-            target_decades: List of decades to focus on
-            
-        Returns:
-            Dictionary mapping decades to lists of (text, source) tuples
+        Load additional contemporary data sources to supplement the dataset.
         """
         logger.info("Loading additional contemporary data sources...")
         
@@ -1261,12 +1270,12 @@ class TemporalDatasetManager:
         
         try:
             # Try to load C4 dataset samples - good source for 2000s and 2010s
-            from datasets import load_dataset, DownloadConfig
+            from datasets import load_dataset
             import pickle
             
             logger.info("Loading samples from C4 dataset...")
             try:
-                # Set a timeout for the entire operation
+                # Set a 5-minute timeout
                 import signal
                 
                 class TimeoutException(Exception):
@@ -1275,35 +1284,25 @@ class TemporalDatasetManager:
                 def timeout_handler(signum, frame):
                     raise TimeoutException("C4 dataset loading timed out")
                 
-                # Set a 5-minute timeout
+                # Set timeout
                 signal.signal(signal.SIGALRM, timeout_handler)
                 signal.alarm(300)
                 
                 try:
-                    # Explicitly set a download configuration with more retries and longer timeout
-                    download_config = DownloadConfig(
-                        max_retries=10,
-                        timeout=120,
-                        force_download=False,
-                        cache_dir=str(CACHE_DIR / "c4")
-                    )
-                    
-                    # Load a small sample of C4 with robust configuration
+                    # MODIFIED: Remove the problematic download_config
                     c4_dataset = load_dataset(
                         "c4", "en", split="train", streaming=True, 
-                        trust_remote_code=True,
-                        download_config=download_config
+                        trust_remote_code=True
                     )
                     
                     # Reset the alarm
                     signal.alarm(0)
                     
                     # Process a limited number of examples
-                    sample_size = 10000  # Adjust as needed
+                    sample_size = 10000
                     
                     processed = 0
                     assigned = 0
-                    
                     # Check if we have a checkpoint to resume from
                     checkpoint_path = CACHE_DIR / "checkpoints" / "c4_processing_latest.pkl"
                     if checkpoint_path.exists():
@@ -1411,8 +1410,7 @@ class TemporalDatasetManager:
                     
                     wiki_dataset = load_dataset(
                         "wikipedia", "20220301.en", split="train", streaming=True,
-                        trust_remote_code=True,
-                        download_config=download_config
+                        trust_remote_code=True
                     )
                     
                     sample_size = 8000  # Adjust as needed
@@ -1482,6 +1480,9 @@ class TemporalDatasetManager:
                 
                 except Exception as e:
                     logger.error(f"Failed to load Wikipedia dataset: {e}")
+                    # Create a fallback empty dataset
+                    from datasets import Dataset
+                    wiki_dataset = Dataset.from_dict({"text": [], "title": []})
         
         except Exception as e:
             logger.warning(f"Error processing Wikipedia samples: {e}")
@@ -2291,12 +2292,17 @@ class TemporalDatasetManager:
     def ensure_historical_coverage(self):
         """
         Ensures we have sufficient data for all time periods, especially historical ones.
-        This is crucial for accurate temporal distribution inference.
-        
-        Returns:
-            Dictionary mapping decades to lists of texts with adequate coverage
         """
         logger.info("Ensuring adequate historical coverage for all decades...")
+        
+        # ADDED: Aggressively expand metadata sources for historical texts
+        logger.info("Expanding British Library metadata sources for better historical coverage")
+        self.british_library_loader.expand_metadata_sources(aggressive=True)
+        
+        # ADDED: Expand Gutenberg metadata sources with a focus on historical texts
+        logger.info("Expanding Gutenberg loader with historical focus")
+        self.gutenberg_loader.expand_historical_catalog()
+        self.gutenberg_loader.expand_metadata_sources()
         
         # First, check current dataset status
         dataset = self.load_dataset()
@@ -2304,14 +2310,14 @@ class TemporalDatasetManager:
         # If no dataset, build one
         if not dataset or sum(len(texts) for texts in dataset.values()) == 0:
             logger.info("No existing dataset found, building new dataset")
-            dataset = self.build_temporal_dataset(texts_per_decade=30, save_dataset=True)
+            dataset = self.build_temporal_dataset(texts_per_decade=100, save_dataset=True)
         
         # Check which decades have insufficient data (less than 20 texts)
         insufficient_decades = []
         for decade in TIME_PERIODS.keys():
-            if decade not in dataset or len(dataset[decade]) < 20:
+            if decade not in dataset or len(dataset[decade]) < 100:  # MODIFIED: Increased threshold from 20 to 100
                 insufficient_decades.append(decade)
-        
+
         if not insufficient_decades:
             logger.info("All decades have sufficient data coverage")
             return dataset
@@ -2364,6 +2370,92 @@ class TemporalDatasetManager:
         logger.info(f"Saved enhanced dataset with {metadata['total_texts']} total texts")
         
         return enhanced_dataset
+
+    def boost_historical_data(self, target_historical_decades=None):
+        """
+        Specifically boost historical data (pre-1930s) using all available sources
+        with a minimal reliance on synthetic data.
+        
+        Args:
+            target_historical_decades: List of decades to focus on, defaults to pre-1930s
+            
+        Returns:
+            Dictionary mapping decades to supplemented texts
+        """
+        if target_historical_decades is None:
+            target_historical_decades = [
+                "1850s", "1860s", "1870s", "1880s", "1890s", 
+                "1900s", "1910s", "1920s"
+            ]
+        
+        logger.info(f"Boosting historical data for decades: {target_historical_decades}")
+        
+        # Initialize results with existing data
+        dataset = self.load_dataset()
+        historical_dataset = {decade: dataset.get(decade, []) for decade in target_historical_decades}
+        
+        # 1. First, maximize Gutenberg data
+        logger.info("Maximizing Gutenberg historical data")
+        self.gutenberg_loader.expand_historical_catalog()
+        gutenberg_texts = self.gutenberg_loader.load_focused_decade_samples(
+            target_decades=target_historical_decades,
+            texts_per_decade=20000  # Drastically increased
+        )
+        
+        # 2. Then, maximize British Library data
+        logger.info("Maximizing British Library historical data")
+        bl_texts = self.british_library_loader.load_british_library_historical_data(
+            per_decade=20000,  # Drastically increased
+            early_stop=False   # Disable early stopping
+        )
+        
+        # Combine sources with preference for real data
+        for decade in target_historical_decades:
+            decade_gb = sum(len(text.encode('utf-8')) for text in historical_dataset.get(decade, [])) / (1024**3)
+            logger.info(f"Current {decade} data: {len(historical_dataset.get(decade, []))} texts, {decade_gb:.2f} GB")
+            
+            # Add Gutenberg texts
+            if decade in gutenberg_texts:
+                new_texts = [(text, "gutenberg") for text in gutenberg_texts[decade]]
+                historical_dataset[decade].extend(new_texts)
+                logger.info(f"Added {len(new_texts)} Gutenberg texts for {decade}")
+            
+            # Add British Library texts
+            if decade in bl_texts:
+                new_texts = [(text, "british_library") for text in bl_texts[decade]]
+                historical_dataset[decade].extend(new_texts)
+                logger.info(f"Added {len(new_texts)} British Library texts for {decade}")
+            
+            # Check if we've reached 1GB target
+            decade_gb = sum(len(text[0].encode('utf-8')) for text in historical_dataset[decade]) / (1024**3)
+            logger.info(f"Updated {decade} data: {len(historical_dataset[decade])} texts, {decade_gb:.2f} GB")
+            
+            # If still below target volume, augment existing texts instead of generating synthetic
+            if decade_gb < 1.0:
+                logger.info(f"Still below 1GB target for {decade}, augmenting existing texts")
+                
+                # Use text augmentation instead of synthetic generation
+                augmentation_needed = min(2000, int((1.0 - decade_gb) * 1000))
+                augmented_texts = []
+                
+                # Sample texts to augment
+                source_texts = historical_dataset[decade][:min(100, len(historical_dataset[decade]))]
+                
+                for i in range(augmentation_needed):
+                    if source_texts:
+                        base_text, base_source = random.choice(source_texts)
+                        # Use more conservative augmentation to preserve authenticity
+                        augmented_text = self._modify_text_slightly(base_text)
+                        augmented_texts.append((augmented_text, f"{base_source}_augmented"))
+                        
+                        # Log periodic progress
+                        if (i+1) % 100 == 0:
+                            logger.info(f"Created {i+1}/{augmentation_needed} augmented texts for {decade}")
+                
+                historical_dataset[decade].extend(augmented_texts)
+                logger.info(f"Added {len(augmented_texts)} augmented texts for {decade}")
+        
+        return historical_dataset
 
     def _generate_decade_paragraphs(self, decade: str, vocab: list, era_style: dict, paragraphs: int = 3) -> str:
         """

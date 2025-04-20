@@ -402,7 +402,7 @@ def limit_memory_usage():
     logger.info(f"Current memory usage: {memory_usage_gb:.2f} GB")
     
     # If memory usage is high, take action
-    if memory_usage_gb > 30:  # 30 GB threshold - adjust based on your cluster's limits
+    if memory_usage_gb > 30:  # 30 GB threshold - adjust based on cluster limits
         logger.warning(f"High memory usage detected: {memory_usage_gb:.2f} GB")
         # Force more aggressive garbage collection
         gc.collect()
@@ -541,6 +541,10 @@ def run_analysis(args):
     
     # Set up directories
     results_dir = setup_directories()
+
+    # ADDED: Increase target data volume substantially to match paper
+    target_size_gb = max(args.target_size_gb, 2.0)  # Force minimum 2GB per decade
+    logger.info(f"Setting target data size to {target_size_gb}GB per decade to match paper")
     
     # Log run parameters
     logger.info(f"Starting analysis with parameters:")
@@ -564,6 +568,32 @@ def run_analysis(args):
     
     # Initialize dataset_manager
     dataset_manager = TemporalDatasetManager()
+
+    # ADDED: Boost historical data first
+    logger.info("Boosting historical data coverage...")
+    historical_dataset = dataset_manager.boost_historical_data()
+    
+    # ADDED: Log detailed historical data statistics
+    for decade, texts in historical_dataset.items():
+        text_count = len(texts)
+        real_count = sum(1 for _, source in texts if not "synthetic" in source and not "augmented" in source)
+        augmented_count = sum(1 for _, source in texts if "augmented" in source)
+        synthetic_count = sum(1 for _, source in texts if "synthetic" in source)
+        
+        total_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
+        total_gb = total_bytes / (1024**3)
+        
+        logger.info(f"Historical {decade}: {text_count} texts, {total_gb:.2f}GB")
+        logger.info(f"  - Real: {real_count} ({real_count/text_count:.1%})")
+        logger.info(f"  - Augmented: {augmented_count} ({augmented_count/text_count:.1%})")
+        logger.info(f"  - Synthetic: {synthetic_count} ({synthetic_count/text_count:.1%})")
+    # Create dataset with target distribution
+    logger.info(f"Creating dataset with target size of {target_size_gb}GB per decade...")
+    controlled_dataset = dataset_manager.create_large_dataset(
+        distribution=selected_dist,
+        target_size_gb=target_size_gb,
+        historical_dataset=historical_dataset  # Pass our enhanced historical data
+    )
     
     # Test British Library loader explicitly to diagnose any issues
     logger.info("Testing British Library data loader...")
