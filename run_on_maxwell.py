@@ -580,7 +580,27 @@ def run_analysis(args):
         augmented_count = sum(1 for _, source in texts if "augmented" in source)
         synthetic_count = sum(1 for _, source in texts if "synthetic" in source)
         
-        total_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
+        # total_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
+        total_bytes = 0
+        for item in texts:
+            try:
+                if isinstance(item, tuple) and len(item) >= 1:
+                    # Extract text component
+                    text_item = item[0]
+                    
+                    # If text_item is a string, encode it directly
+                    if isinstance(text_item, str):
+                        total_bytes += len(text_item.encode('utf-8'))
+                    # If text_item is also a tuple, try to get the string from it
+                    elif isinstance(text_item, tuple) and len(text_item) >= 1:
+                        if isinstance(text_item[0], str):
+                            total_bytes += len(text_item[0].encode('utf-8'))
+                elif isinstance(item, str):
+                    # Item is directly a string
+                    total_bytes += len(item.encode('utf-8'))
+            except Exception as e:
+                print(f"Error processing text item: {e}")
+                continue
         total_gb = total_bytes / (1024**3)
         
         logger.info(f"Historical {decade}: {text_count} texts, {total_gb:.2f}GB")

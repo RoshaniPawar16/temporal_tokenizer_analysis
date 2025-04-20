@@ -2427,6 +2427,16 @@ class TemporalDatasetManager:
                 "1900s", "1910s", "1920s"
             ]
         
+        sample_item = next(iter(gutenberg_texts.get('1850s', [])), None)
+        print(f"Gutenberg item type: {type(sample_item)}")
+        if isinstance(sample_item, tuple):
+            print(f"  First element type: {type(sample_item[0])}")
+
+        sample_item = next(iter(bl_texts.get('1850s', [])), None) 
+        print(f"British Library item type: {type(sample_item)}")
+        if isinstance(sample_item, tuple):
+            print(f"  First element type: {type(sample_item[0])}")
+
         logger.info(f"Boosting historical data for decades: {target_historical_decades}")
         
         # Initialize results with existing data
