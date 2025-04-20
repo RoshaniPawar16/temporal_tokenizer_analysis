@@ -314,10 +314,10 @@ class BritishLibraryLoader:
         assigned = 0
         assignments = {decade: 0 for decade in TIME_PERIODS.keys()}
         
-        # Add early stopping check variables
+        # Add early stopping check variables with proper initialization
         all_decades_filled = False
-        target_decades_to_fill = set(decade for decade in TIME_PERIODS.keys() if decade in config_to_decades.values())    
-
+        target_decades_to_fill = set(TIME_PERIODS.keys())  # Start with all decades needing filling
+        
         # Process each record
         for record in tqdm(self.dataset['train'], desc="Processing BL records", total=total_records):
             processed += 1
@@ -392,8 +392,8 @@ class BritishLibraryLoader:
                             target_decades_to_fill.remove(chosen_decade)
                             logger.info(f"Completed target for {chosen_decade}: {assignments[chosen_decade]}/{per_decade}")
                 
-                # Check for early stopping - all target decades have reached desired count
-                if early_stop and len(target_decades_to_fill) == 0:
+                # Update early stopping check to ensure we're actually processing data
+                if early_stop and len(target_decades_to_fill) == 0 and processed > 1000:
                     logger.info(f"Early stopping achieved: all target decades have reached {per_decade} texts")
                     all_decades_filled = True
                     break

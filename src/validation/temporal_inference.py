@@ -553,58 +553,62 @@ class TemporalDistributionInference:
         # If text is still within limits, return as single chunk
         if len(text) <= max_chars:
             return [text]
-            
+        
         # Split by paragraphs
-        import re
         paragraphs = re.split(r'\n\s*\n', text)
         
         chunks = []
         current_chunk = ""
         
-        # Process paragraphs into chunks
         for para in paragraphs:
-            # If paragraph is too long, split it further
+            # If paragraph is too long, split further
             if len(para) > max_chars:
+                # Add current chunk if it exists
+                if current_chunk:
+                    chunks.append(current_chunk)
+                    current_chunk = ""
+                
                 # Split long paragraph into sentences
                 sentences = re.split(r'(?<=[.!?])\s+', para)
                 
                 # Process sentences
+                current_sentence_chunk = ""
                 for sentence in sentences:
-                    if len(current_chunk) + len(sentence) + 2 > max_chars:
-                        if current_chunk:
-                            chunks.append(current_chunk)
-                        
-                        # Handle sentences longer than max_chars
-                        if len(sentence) > max_chars:
-                            # Split very long sentence into smaller parts
-                            for i in range(0, len(sentence), max_chars // 2):
-                                end = min(i + max_chars // 2, len(sentence))
-                                chunks.append(sentence[i:end])
+                    if len(current_sentence_chunk) + len(sentence) + 1 > max_chars:
+                        if current_sentence_chunk:
+                            chunks.append(current_sentence_chunk)
+                            current_sentence_chunk = sentence
                         else:
-                            current_chunk = sentence
+                            # For very long sentences, split at character level
+                            if len(sentence) > max_chars:
+                                for i in range(0, len(sentence), max_chars):
+                                    chunks.append(sentence[i:i + max_chars])
+                            else:
+                                chunks.append(sentence)
                     else:
-                        if current_chunk:
-                            current_chunk += " " + sentence
+                        if current_sentence_chunk:
+                            current_sentence_chunk += " " + sentence
                         else:
-                            current_chunk = sentence
+                            current_sentence_chunk = sentence
+                
+                # Add any remaining sentence chunk
+                if current_sentence_chunk:
+                    chunks.append(current_sentence_chunk)
+            
+            # For shorter paragraphs
+            elif len(current_chunk) + len(para) + 2 > max_chars:
+                chunks.append(current_chunk)
+                current_chunk = para
             else:
-                # For normal-sized paragraphs
-                if len(current_chunk) + len(para) + 2 > max_chars:
-                    chunks.append(current_chunk)
-                    current_chunk = para
+                if current_chunk:
+                    current_chunk += "\n\n" + para
                 else:
-                    if current_chunk:
-                        current_chunk += "\n\n" + para
-                    else:
-                        current_chunk = para
+                    current_chunk = para
         
-        # Add any remaining text
+        # Add final chunk if exists
         if current_chunk:
             chunks.append(current_chunk)
         
-        # Ensure no empty chunks
-        chunks = [chunk for chunk in chunks if chunk.strip()]
-            
         return chunks
     
     def _extract_merge_rules(self, token: str) -> Set[str]:
