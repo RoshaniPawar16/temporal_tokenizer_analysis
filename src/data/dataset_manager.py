@@ -2427,16 +2427,6 @@ class TemporalDatasetManager:
                 "1900s", "1910s", "1920s"
             ]
         
-        sample_item = next(iter(gutenberg_texts.get('1850s', [])), None)
-        print(f"Gutenberg item type: {type(sample_item)}")
-        if isinstance(sample_item, tuple):
-            print(f"  First element type: {type(sample_item[0])}")
-
-        sample_item = next(iter(bl_texts.get('1850s', [])), None) 
-        print(f"British Library item type: {type(sample_item)}")
-        if isinstance(sample_item, tuple):
-            print(f"  First element type: {type(sample_item[0])}")
-
         logger.info(f"Boosting historical data for decades: {target_historical_decades}")
         
         # Initialize results with existing data
@@ -2450,7 +2440,7 @@ class TemporalDatasetManager:
             target_decades=target_historical_decades,
             texts_per_decade=20000  # Drastically increased
         )
-        
+
         # 2. Then, maximize British Library data
         logger.info("Maximizing British Library historical data")
         bl_texts = self.british_library_loader.load_british_library_historical_data(
@@ -2458,26 +2448,75 @@ class TemporalDatasetManager:
             early_stop=False   # Disable early stopping
         )
         
+        # Now we can debug the data structures
+        sample_gutenberg = next(iter(gutenberg_texts.get('1850s', [])), None)
+        if sample_gutenberg is not None:
+            logger.info(f"Gutenberg item type: {type(sample_gutenberg)}")
+            if isinstance(sample_gutenberg, tuple):
+                logger.info(f"  First element type: {type(sample_gutenberg[0])}")
+
+        sample_bl = next(iter(bl_texts.get('1850s', [])), None)
+        if sample_bl is not None:
+            logger.info(f"British Library item type: {type(sample_bl)}")
+            if isinstance(sample_bl, tuple):
+                logger.info(f"  First element type: {type(sample_bl[0])}")
+        
         # Combine sources with preference for real data
         for decade in target_historical_decades:
-            # decade_gb = sum(len(text.encode('utf-8')) for text in historical_dataset.get(decade, [])) / (1024**3)
             decade_gb = self._calculate_decade_gb(decade, historical_dataset)
             logger.info(f"Current {decade} data: {len(historical_dataset.get(decade, []))} texts, {decade_gb:.2f} GB")
             
-            # Add Gutenberg texts
+            # Add Gutenberg texts with normalization
             if decade in gutenberg_texts:
-                new_texts = [(text, "gutenberg") for text in gutenberg_texts[decade]]
+                new_texts = []
+                for item in gutenberg_texts[decade]:
+                    # Normalize to ensure consistent (text, source) format
+                    if isinstance(item, tuple) or isinstance(item, list):
+                        if len(item) >= 1:
+                            text_component = item[0]
+                            # Handle potential nested structure
+                            if isinstance(text_component, tuple) or isinstance(text_component, list):
+                                if len(text_component) >= 1:
+                                    actual_text = text_component[0]
+                                    if isinstance(actual_text, str):
+                                        new_texts.append((actual_text, "gutenberg_nested"))
+                            else:
+                                # Direct text component
+                                if isinstance(text_component, str):
+                                    new_texts.append((text_component, "gutenberg"))
+                    elif isinstance(item, str):
+                        # Direct string
+                        new_texts.append((item, "gutenberg"))
+                
                 historical_dataset[decade].extend(new_texts)
                 logger.info(f"Added {len(new_texts)} Gutenberg texts for {decade}")
             
-            # Add British Library texts
+            # Add British Library texts with similar normalization
             if decade in bl_texts:
-                new_texts = [(text, "british_library") for text in bl_texts[decade]]
+                new_texts = []
+                for item in bl_texts[decade]:
+                    # Normalize to ensure consistent (text, source) format
+                    if isinstance(item, tuple) or isinstance(item, list):
+                        if len(item) >= 1:
+                            text_component = item[0]
+                            # Handle potential nested structure
+                            if isinstance(text_component, tuple) or isinstance(text_component, list):
+                                if len(text_component) >= 1:
+                                    actual_text = text_component[0]
+                                    if isinstance(actual_text, str):
+                                        new_texts.append((actual_text, "british_library_nested"))
+                            else:
+                                # Direct text component
+                                if isinstance(text_component, str):
+                                    new_texts.append((text_component, "british_library"))
+                    elif isinstance(item, str):
+                        # Direct string
+                        new_texts.append((item, "british_library"))
+                
                 historical_dataset[decade].extend(new_texts)
                 logger.info(f"Added {len(new_texts)} British Library texts for {decade}")
             
             # Check if we've reached 1GB target
-            # decade_gb = sum(len(text[0].encode('utf-8')) for text in historical_dataset[decade]) / (1024**3)
             decade_gb = self._calculate_decade_gb(decade, historical_dataset)
             logger.info(f"Updated {decade} data: {len(historical_dataset[decade])} texts, {decade_gb:.2f} GB")
             
@@ -2489,22 +2528,37 @@ class TemporalDatasetManager:
                 augmentation_needed = min(2000, int((1.0 - decade_gb) * 1000))
                 augmented_texts = []
                 
-                # Sample texts to augment
-                source_texts = historical_dataset[decade][:min(100, len(historical_dataset[decade]))]
+                # Sample texts to augment - ensure we have valid (text, source) tuples
+                valid_source_texts = []
+                for item in historical_dataset[decade][:min(100, len(historical_dataset[decade]))]:
+                    if isinstance(item, tuple) and len(item) >= 2 and isinstance(item[0], str):
+                        valid_source_texts.append(item)
                 
                 for i in range(augmentation_needed):
-                    if source_texts:
-                        base_text, base_source = random.choice(source_texts)
-                        # Use more conservative augmentation to preserve authenticity
-                        augmented_text = self._modify_text_slightly(base_text)
-                        augmented_texts.append((augmented_text, f"{base_source}_augmented"))
-                        
-                        # Log periodic progress
-                        if (i+1) % 100 == 0:
-                            logger.info(f"Created {i+1}/{augmentation_needed} augmented texts for {decade}")
+                    if valid_source_texts:
+                        base_text, base_source = random.choice(valid_source_texts)
+                        try:
+                            # Use more conservative augmentation to preserve authenticity
+                            augmented_text = self._modify_text_slightly(base_text)
+                            augmented_texts.append((augmented_text, f"{base_source}_augmented"))
+                            
+                            # Log periodic progress
+                            if (i+1) % 100 == 0:
+                                logger.info(f"Created {i+1}/{augmentation_needed} augmented texts for {decade}")
+                        except Exception as e:
+                            logger.warning(f"Error augmenting text: {e}")
                 
                 historical_dataset[decade].extend(augmented_texts)
                 logger.info(f"Added {len(augmented_texts)} augmented texts for {decade}")
+        
+        # Final validation of the dataset
+        total_size_gb = 0
+        for decade in target_historical_decades:
+            decade_gb = self._calculate_decade_gb(decade, historical_dataset)
+            total_size_gb += decade_gb
+            logger.info(f"Final {decade} dataset: {len(historical_dataset.get(decade, []))} texts, {decade_gb:.2f} GB")
+        
+        logger.info(f"Total size for target decades: {total_size_gb:.2f}GB")
         
         return historical_dataset
 
