@@ -612,7 +612,7 @@ def run_analysis(args):
     controlled_dataset = dataset_manager.create_large_dataset(
         distribution=selected_dist,
         target_size_gb=target_size_gb,
-        historical_dataset=historical_dataset  # Pass our enhanced historical data
+        # historical_dataset=historical_dataset  # Pass our enhanced historical data
     )
     
     # Test British Library loader explicitly to diagnose any issues
