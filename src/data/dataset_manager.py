@@ -836,6 +836,15 @@ class TemporalDatasetManager:
         target_bytes_per_decade = {decade: total_target_bytes * prop 
                                 for decade, prop in distribution.items()}
         
+        # Special handling for historical decades - give them higher priority
+        historical_decades = ["1850s", "1860s", "1870s", "1880s", "1890s", "1900s", "1910s", "1920s"]
+        for decade in historical_decades:
+            if decade in target_bytes_per_decade:
+                # Increase target for historical decades to ensure better representation
+                original_target = target_bytes_per_decade[decade]
+                target_bytes_per_decade[decade] = original_target * 1.5  # Boost by 50%
+                logger.info(f"Boosting target data volume for historical decade {decade} by 50%")
+        
         # Create balanced dataset
         balanced_dataset = {}
         
@@ -864,11 +873,30 @@ class TemporalDatasetManager:
             current_bytes = decade_bytes.get(decade, 0)
             target_bytes = target_bytes_per_decade.get(decade, 0)
             
+            # Prioritize historical decades for better representation
+            is_historical = decade in historical_decades
+            
             # If current is less than target, use all available texts
             # Prioritizing real texts over expanded and synthetic
-            if current_bytes <= target_bytes:
-                balanced_dataset[decade] = real_texts + expanded_texts + synthetic_texts
-                logger.info(f"Using all {len(real_texts)} real, {len(expanded_texts)} expanded, and {len(synthetic_texts)} synthetic texts for {decade} (under target)")
+            if current_bytes <= target_bytes or is_historical:
+                # For historical decades, use all available real texts
+                balanced_dataset[decade] = real_texts
+                
+                # If we need more data, add expanded texts
+                if current_bytes < target_bytes:
+                    balanced_dataset[decade].extend(expanded_texts)
+                
+                # Still need more? Add synthetic, but with limits
+                if current_bytes < target_bytes * 0.8 and not is_historical:
+                    # For non-historical, limit synthetic to 30% max
+                    synthetic_limit = min(len(synthetic_texts), int(len(real_texts) * 0.3))
+                    balanced_dataset[decade].extend(synthetic_texts[:synthetic_limit])
+                elif is_historical and current_bytes < target_bytes * 0.5:
+                    # For historical, limit synthetic to 15% max
+                    synthetic_limit = min(len(synthetic_texts), int(len(real_texts) * 0.15))
+                    balanced_dataset[decade].extend(synthetic_texts[:synthetic_limit])
+                    
+                logger.info(f"Using all {len(real_texts)} real texts plus {len(balanced_dataset[decade]) - len(real_texts)} additional texts for {decade}")
             else:
                 # We have more than needed, sample to match target
                 # First calculate bytes for each category
@@ -1008,18 +1036,20 @@ class TemporalDatasetManager:
         # STEP 1: LOAD ALL DATA SOURCES UNCONDITIONALLY
         
         # Load British Library historical data FIRST
-        # This is crucial for early decades coverage
         logger.info("Loading British Library historical data...")
+        # First expand metadata sources for better historical coverage
+        self.british_library_loader.expand_metadata_sources()
         bl_texts = self.british_library_loader.load_british_library_historical_data(
             per_decade=1000,
             early_stop=False  # Disable early stopping to ensure we get all available data
         )
         
-        # Add British Library texts to our dataset
+        # Add British Library texts to our dataset WITH PROPER TUPLE CONVERSION
         real_data_counts = {}
         for decade, texts in bl_texts.items():
             if decade in distribution:
-                decade_texts[decade].extend(texts)
+                # Convert text strings to (text, source) tuples
+                decade_texts[decade].extend([(text, "british_library") for text in texts])
                 real_data_counts[decade] = len(texts)
                 logger.info(f"Added {len(texts)} British Library texts for {decade}")
         

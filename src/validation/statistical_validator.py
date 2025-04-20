@@ -29,88 +29,6 @@ class TemporalValidator:
         """
         self.inference_method = inference_method
 
-    # def bootstrap_analysis(self, decade_texts, n_bootstrap=30, sample_ratio=0.8):
-    #     """
-    #     Perform bootstrap analysis to estimate confidence intervals with improved error handling.
-        
-    #     Args:
-    #         decade_texts: Dictionary mapping decades to lists of texts
-    #         n_bootstrap: Number of bootstrap iterations to run
-    #         sample_ratio: Proportion of data to sample in each iteration
-            
-    #     Returns:
-    #         Dictionary with confidence intervals by decade
-    #     """
-    #     logger.info(f"Running {n_bootstrap} bootstrap iterations...")
-        
-    #     # Initialize results
-    #     bootstrap_results = defaultdict(list)
-        
-    #     # Run bootstrap iterations with better error handling
-    #     successful_iterations = 0
-    #     for i in range(n_bootstrap):
-    #         try:
-    #             logger.info(f"Bootstrap iteration {i+1}/{n_bootstrap}")
-                
-    #             # Create bootstrap sample
-    #             bootstrap_sample = self._create_bootstrap_sample(decade_texts, sample_ratio)
-                
-    #             # Run inference on sample with timeout protection
-    #             try:
-    #                 distribution = self.inference_method(bootstrap_sample)
-    #                 successful_iterations += 1
-                    
-    #                 # Record results for each decade - WITH TYPE CHECKING
-    #                 for decade, proportion in distribution.items():
-    #                     # Make sure proportion is a numeric value
-    #                     if isinstance(proportion, (int, float)):
-    #                         bootstrap_results[decade].append(float(proportion))  # Convert to float
-    #                     else:
-    #                         logger.warning(f"Skipping non-numeric value for {decade}: {type(proportion)}")
-    #             except Exception as e:
-    #                 logger.error(f"Error in bootstrap inference: {e}")
-                    
-    #             # Force garbage collection every few iterations
-    #             if i % 5 == 0:
-    #                 import gc
-    #                 gc.collect()
-                    
-    #         except Exception as e:
-    #             logger.error(f"Error in bootstrap iteration {i+1}: {e}")
-        
-    #     # Calculate statistics with more robust error handling
-    #     confidence_intervals = {}
-    #     if successful_iterations > 0:
-    #         for decade, proportions in bootstrap_results.items():
-    #             if proportions:
-    #                 mean = np.mean(proportions)
-    #                 median = np.median(proportions)
-    #                 std_dev = np.std(proportions, ddof=1)
-                    
-    #                 # 95% confidence interval
-    #                 sorted_proportions = sorted(proportions)
-    #                 lower_idx = int(0.025 * len(sorted_proportions))
-    #                 upper_idx = int(0.975 * len(sorted_proportions))
-    #                 lower_ci = sorted_proportions[max(0, lower_idx)]
-    #                 upper_ci = sorted_proportions[min(len(sorted_proportions)-1, upper_idx)]
-                    
-    #                 confidence_intervals[decade] = {
-    #                     "mean": float(mean),  # Ensure values are float
-    #                     "median": float(median),
-    #                     "std_dev": float(std_dev),
-    #                     "lower_ci": float(lower_ci),
-    #                     "upper_ci": float(upper_ci),
-    #                     "samples": len(proportions),
-    #                     "coefficient_of_variation": float(std_dev / mean) if mean > 0 else float('inf')
-    #                 }
-        
-    #     # Return just the confidence intervals if there are some successful iterations
-    #     if confidence_intervals:
-    #         return confidence_intervals
-    #     else:
-    #         logger.error("No successful bootstrap iterations")
-    #         return {}
-
     def bootstrap_analysis(self, decade_texts, n_bootstrap=30, sample_ratio=0.8):
         """
         Perform bootstrap analysis to compute confidence intervals for the distribution.
@@ -127,14 +45,21 @@ class TemporalValidator:
         logger.info(f"Performing bootstrap analysis with {n_bootstrap} iterations...")
         
         # First get baseline distribution using all data
-        baseline_distribution = self.inference_method(decade_texts)
+        try:
+            baseline_distribution = self.inference_method(decade_texts)
+            if not baseline_distribution:
+                logger.warning("Baseline inference produced empty distribution")
+                baseline_distribution = {decade: 1.0/len(decade_texts) for decade in decade_texts.keys()}
+        except Exception as e:
+            logger.error(f"Error in baseline inference: {e}")
+            baseline_distribution = {decade: 1.0/len(decade_texts) for decade in decade_texts.keys()}
         
         # Initialize containers for bootstrap results
         bootstrap_distributions = []
         decade_values = {decade: [] for decade in baseline_distribution.keys()}
         
-        # Run bootstrap iterations - FIX THE TQDM IMPORT ISSUE
-        # Instead of using tqdm directly, use a simple loop with logging
+        # Run bootstrap iterations
+        successful_iterations = 0
         for i in range(n_bootstrap):
             logger.info(f"Bootstrap iteration {i+1}/{n_bootstrap}")
             try:
@@ -147,25 +72,49 @@ class TemporalValidator:
                     
                     # Sample with replacement
                     sample_size = max(1, int(len(texts) * sample_ratio))
-                    sampled_indices = [random.randrange(len(texts)) for _ in range(sample_size)]
-                    bootstrap_sample[decade] = [texts[idx] for idx in sampled_indices]
+                    
+                    # Create document-level bootstraps instead of decade-level
+                    # This provides more variance in the bootstrap samples
+                    sampled_texts = []
+                    for _ in range(sample_size):
+                        idx = random.randrange(len(texts))
+                        sampled_texts.append(texts[idx])
+                    
+                    bootstrap_sample[decade] = sampled_texts
                 
                 # Run inference on bootstrap sample
                 try:
                     bootstrap_dist = self.inference_method(bootstrap_sample)
+                    if not bootstrap_dist:
+                        logger.warning(f"Empty distribution in bootstrap iteration {i+1}")
+                        continue
+                        
                     bootstrap_distributions.append(bootstrap_dist)
+                    successful_iterations += 1
                     
                     # Record values for each decade
                     for decade, value in bootstrap_dist.items():
                         if decade in decade_values:
-                            decade_values[decade].append(value)
+                            # Ensure we have numeric values
+                            if isinstance(value, (int, float)):
+                                decade_values[decade].append(float(value))
+                            else:
+                                logger.warning(f"Non-numeric value in bootstrap iteration {i+1} for {decade}: {type(value)}")
                 except Exception as e:
-                    logger.warning(f"Error in bootstrap iteration {i}: {e}")
+                    logger.warning(f"Error in bootstrap iteration {i+1} inference: {e}")
                     continue
                     
             except Exception as e:
-                logger.warning(f"Failed to create bootstrap sample {i}: {e}")
+                logger.warning(f"Failed to create bootstrap sample {i+1}: {e}")
                 continue
+            
+            # Force garbage collection every few iterations
+            if i % 5 == 0:
+                import gc
+                gc.collect()
+        
+        # Log how many iterations were successful
+        logger.info(f"Completed {successful_iterations}/{n_bootstrap} bootstrap iterations successfully")
         
         # Calculate statistics
         confidence_intervals = {}
@@ -194,16 +143,35 @@ class TemporalValidator:
                 "upper_ci": sorted_values[upper_idx] if upper_idx < len(sorted_values) else sorted_values[-1],
                 "samples": len(values),
                 "min": min(values),
-                "max": max(values)
+                "max": max(values),
+                "coefficient_of_variation": np.std(values) / max(1e-5, np.mean(values))
             }
         
         # Calculate reliability metrics
-        reliability = self.calculate_reliability_metrics(confidence_intervals) if hasattr(self, 'calculate_reliability_metrics') else None
+        reliability_score = 0
+        if confidence_intervals:
+            # Calculate average coefficient of variation
+            cv_values = [stats.get("coefficient_of_variation", 1.0) for stats in confidence_intervals.values()]
+            avg_cv = sum(cv_values) / len(cv_values) if cv_values else 1.0
+            
+            # Calculate average CI width relative to mean
+            ci_widths = []
+            for decade, stats in confidence_intervals.items():
+                mean = stats.get("mean", 0)
+                if mean > 0:
+                    lower = stats.get("lower_ci", 0)
+                    upper = stats.get("upper_ci", 0)
+                    width = (upper - lower) / mean
+                    ci_widths.append(width)
+            
+            avg_width = sum(ci_widths) / len(ci_widths) if ci_widths else 1.0
+            
+            # Calculate reliability score (higher is better)
+            reliability_score = 100 - min(50, 50 * avg_cv) - min(50, 50 * avg_width)
         
-        # Add reliability scores to results if available
-        if reliability:
-            for decade in confidence_intervals:
-                confidence_intervals[decade]["reliability"] = reliability
+        # Add overall reliability score to results
+        for decade in confidence_intervals:
+            confidence_intervals[decade]["reliability_score"] = reliability_score
         
         return confidence_intervals
 

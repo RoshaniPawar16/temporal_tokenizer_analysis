@@ -565,6 +565,22 @@ def run_analysis(args):
     # Initialize dataset_manager
     dataset_manager = TemporalDatasetManager()
     
+    # Test British Library loader explicitly to diagnose any issues
+    logger.info("Testing British Library data loader...")
+    bl_loader = dataset_manager.british_library_loader
+    bl_data = bl_loader.load_british_library_historical_data(per_decade=100)
+    for decade, texts in bl_data.items():
+        logger.info(f"British Library texts for {decade}: {len(texts)}")
+    
+    # Check for historical data gaps
+    historical_decades = ["1850s", "1860s", "1870s", "1880s", "1890s", "1900s", "1910s", "1920s"]
+    missing_decades = [d for d in historical_decades if d not in bl_data or len(bl_data[d]) < 20]
+    
+    if missing_decades:
+        logger.warning(f"Missing historical data for decades: {missing_decades}")
+        logger.info("Expanding British Library metadata sources...")
+        bl_loader.expand_metadata_sources()
+    
     # Check for cached dataset
     cache_dir = Path(RESULTS_DIR) / "dataset_cache"
     cache_dir.mkdir(exist_ok=True, parents=True)
@@ -590,15 +606,23 @@ def run_analysis(args):
             controlled_dataset = None
     
     if controlled_dataset is None:
-        # Before creating dataset, enhance the Gutenberg loader for better mid-century coverage
+        # Before creating dataset, enhance loaders for better historical coverage
         logger.info("Expanding Gutenberg loader with enhanced mid-century decade coverage...")
         dataset_manager.gutenberg_loader.expand_metadata_sources()
         
+        # Also ensure British Library loader is initialized with expanded sources
+        logger.info("Expanding British Library data sources...")
+        dataset_manager.british_library_loader.expand_metadata_sources()
+        
+        # Increase target size for better results (from professor discussions)
+        increased_target_size_gb = max(args.target_size_gb, 2.0)
+        logger.info(f"Increasing target data size to {increased_target_size_gb}GB for better results")
+        
         # Create dataset with target distribution
-        logger.info(f"Creating dataset with target size of {args.target_size_gb}GB...")
+        logger.info(f"Creating dataset with target size of {increased_target_size_gb}GB...")
         controlled_dataset = dataset_manager.create_large_dataset(
             distribution=selected_dist,
-            target_size_gb=args.target_size_gb
+            target_size_gb=increased_target_size_gb
         )
         
         # Verify dataset quality
@@ -617,32 +641,65 @@ def run_analysis(args):
             logger.error("Use --force_quality=false to proceed anyway")
             return
     
+    # Log detailed dataset statistics
+    decade_volumes = {}
+    total_bytes = 0
+    for decade, texts in controlled_dataset.items():
+        if not texts:
+            decade_volumes[decade] = 0
+            continue
+            
+        # Calculate size in bytes
+        decade_bytes = 0
+        for item in texts:
+            try:
+                if isinstance(item, tuple) and len(item) >= 1:
+                    text = item[0]
+                    decade_bytes += len(text.encode('utf-8'))
+                elif isinstance(item, str):
+                    decade_bytes += len(item.encode('utf-8'))
+            except Exception as e:
+                logger.debug(f"Error calculating text size: {e}")
+        
+        decade_volumes[decade] = decade_bytes
+        total_bytes += decade_bytes
+    
+    # Log the actual distribution achieved
+    logger.info("Actual data distribution:")
+    for decade, bytes_count in decade_volumes.items():
+        if total_bytes > 0:
+            percentage = bytes_count / total_bytes * 100
+            logger.info(f"  {decade}: {bytes_count/(1024*1024*1024):.2f}GB ({percentage:.1f}%)")
+    
     # Extract just texts (without source info) for analysis
     decade_texts = {}
     for decade, texts in controlled_dataset.items():
-        if texts:
-            # Normalize format to ensure consistency
-            normalized_texts = []
-            for item in texts:
-                try:
-                    if isinstance(item, tuple) and len(item) >= 1:
-                        # Extract text component
-                        text = item[0]
-                        if isinstance(text, str):
-                            normalized_texts.append(text)
-                    elif isinstance(item, str):
-                        normalized_texts.append(item)
-                except Exception as e:
-                    logger.debug(f"Skipping invalid item: {e}")
-            
-            decade_texts[decade] = normalized_texts
-            logger.info(f"Using {len(decade_texts[decade])} normalized texts for {decade}")
+        if not texts:
+            continue
+                
+        # Normalize format to ensure consistency
+        normalized_texts = []
+        for item in texts:
+            try:
+                if isinstance(item, tuple) and len(item) >= 1:
+                    # Extract text component
+                    text = item[0]  # Extract text from tuple
+                    if isinstance(text, str):
+                        normalized_texts.append(text)
+                elif isinstance(item, str):
+                    normalized_texts.append(item)
+                # Skip other formats
+            except Exception as e:
+                logger.debug(f"Skipping invalid item: {e}")
+        
+        decade_texts[decade] = normalized_texts
+        logger.info(f"Using {len(decade_texts[decade])} normalized texts for {decade}")
     
     # Create timestamp for this run
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     run_id = f"{args.tokenizer}_{args.distribution}_{timestamp}"
     
-    # Initialize components
+    # Initialize inference component
     inference = TemporalDistributionInference(tokenizer_name=args.tokenizer)
     
     # Analyze decade patterns
@@ -664,27 +721,7 @@ def run_analysis(args):
     
     # Generate patterns if no cache
     if decade_patterns is None:
-        decade_patterns = {}
-        
-        # Process in parallel for efficiency
-        with mp.Pool(processes=min(mp.cpu_count(), 8)) as pool:
-            results = []
-            
-            for decade, texts in decade_texts.items():
-                results.append(pool.apply_async(
-                    process_decade, 
-                    args=(decade, texts, inference)
-                ))
-            
-            # Collect results
-            for result in results:
-                try:
-                    processed = result.get()
-                    if processed:
-                        decade, patterns = processed
-                        decade_patterns[decade] = patterns
-                except Exception as e:
-                    logger.warning(f"Error in parallel processing: {e}")
+        decade_patterns = run_parallel_analysis(inference, decade_texts)
         
         # Cache the patterns
         try:
@@ -738,21 +775,35 @@ def run_analysis(args):
     
     # Evaluate results against ground truth
     logger.info("Evaluating results against ground truth...")
+    start_time = time.time()
     evaluation = inference.validate_against_hayase_metrics(
         distribution,
         selected_dist,
         bootstrap_iterations=args.bootstrap_iterations if args.bootstrap else 0
     )
+    inference_time = time.time() - start_time
+    
+    # Add Hayase benchmark comparison to evaluation
+    if "distribution_metrics" in evaluation and "log10_mse" in evaluation["distribution_metrics"]:
+        hayase_benchmark = -7.30  # The benchmark value from Hayase et al.
+        current_mse = evaluation["distribution_metrics"]["log10_mse"]
+        gap = current_mse - hayase_benchmark
+        evaluation["hayase_comparison"] = {
+            "benchmark": hayase_benchmark,
+            "current": current_mse,
+            "gap": gap,
+            "percentage_to_benchmark": (current_mse / hayase_benchmark) * 100 if hayase_benchmark != 0 else 0
+        }
     
     # Save detailed results
     save_distribution_results(results, evaluation, run_id, results_dir)
     
     # Output evaluation metrics
-    log_evaluation_metrics(evaluation, 0, args)
+    log_evaluation_metrics(evaluation, inference_time, args)
     
     # Create comparison visualizations
     create_comparison_visualizations(distribution, selected_dist, 
-                                   args.distribution, args.tokenizer, results_dir)
+                                  args.distribution, args.tokenizer, results_dir)
     
     # Run bootstrap if requested
     if args.bootstrap:
@@ -767,7 +818,7 @@ def run_analysis(args):
                 )
             )
             
-            # Run bootstrap analysis
+            # Run bootstrap analysis with improved implementation
             confidence_intervals = validator.bootstrap_analysis(
                 decade_texts=decade_texts,
                 n_bootstrap=args.bootstrap_iterations,
@@ -781,19 +832,32 @@ def run_analysis(args):
                 ci_json = {}
                 for decade, stats in confidence_intervals.items():
                     ci_json[decade] = {k: float(v) if isinstance(v, (int, float, np.number)) else v 
-                                     for k, v in stats.items() if not isinstance(v, list)}
+                                    for k, v in stats.items() if not isinstance(v, list)}
                 json.dump(ci_json, f, indent=2)
             
             # Visualize with confidence intervals
             create_bootstrap_visualization(distribution, selected_dist, 
-                                         confidence_intervals, args.distribution, 
-                                         args.tokenizer, results_dir)
+                                        confidence_intervals, args.distribution, 
+                                        args.tokenizer, results_dir)
+            
+            # Calculate and log reliability metrics
+            reliability_metrics = calculate_reliability_metrics(confidence_intervals)
+            logger.info(f"Bootstrap reliability score: {reliability_metrics['reliability_score']:.1f}/100")
+            logger.info(f"Coefficient of variation: {reliability_metrics['coefficient_of_variation']:.4f}")
+            logger.info(f"Normalized CI width: {reliability_metrics['normalized_ci_width']:.4f}")
             
         except Exception as e:
             logger.error(f"Error in bootstrap validation: {e}")
             logger.error("Skipping bootstrap analysis")
     
     logger.info(f"Analysis completed for {args.distribution} with {args.tokenizer}")
+    
+    # Return the key results for potential further analysis
+    return {
+        "distribution": distribution,
+        "evaluation": evaluation,
+        "uncertainty": uncertainty
+    }
     
 def save_distribution_results(results, evaluation, run_id, results_dir):
     """Save detailed analysis results."""
