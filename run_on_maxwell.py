@@ -1401,10 +1401,28 @@ def create_distribution_comparison(results_by_dist, distributions, tokenizer_nam
     """Create visualizations comparing results across different distributions."""
     # Extract metrics for comparison
     dist_names = list(results_by_dist.keys())
-    log_mse_values = [results_by_dist[d]["evaluation"]["log10_mse"] for d in dist_names]
-    mae_values = [results_by_dist[d]["evaluation"]["mae"] for d in dist_names]
-    js_values = [results_by_dist[d]["evaluation"]["js_distance"] for d in dist_names]
-    correlation_values = [results_by_dist[d]["evaluation"]["rank_correlation"] for d in dist_names]
+    
+    # Safely access metrics with default values if missing
+    log_mse_values = []
+    mae_values = []
+    js_values = []
+    correlation_values = []
+    
+    for d in dist_names:
+        eval_data = results_by_dist[d].get("evaluation", {})
+        # Use default value of 0.0 if metric is missing
+        log_mse_values.append(eval_data.get("log10_mse", 0.0) if "distribution_metrics" not in eval_data 
+                              else eval_data.get("distribution_metrics", {}).get("log10_mse", 0.0))
+        mae_values.append(eval_data.get("mae", 0.0) if "distribution_metrics" not in eval_data 
+                         else eval_data.get("distribution_metrics", {}).get("mae", 0.0))
+        js_values.append(eval_data.get("js_distance", 0.0) if "distribution_metrics" not in eval_data 
+                         else eval_data.get("distribution_metrics", {}).get("js_distance", 0.0))
+        
+        # Rank correlation might be in a nested structure
+        if "decade_metrics" in eval_data:
+            correlation_values.append(eval_data.get("decade_metrics", {}).get("rank_correlation", 0.0))
+        else:
+            correlation_values.append(eval_data.get("rank_correlation", 0.0))
     
     # Create figure with 2x2 subplots for metrics comparison
     fig, axs = plt.subplots(2, 2, figsize=(14, 10))
