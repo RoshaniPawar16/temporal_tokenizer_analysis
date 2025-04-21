@@ -76,7 +76,7 @@ class EnhancedLoggingManager:
         # Create file handler - captures all messages
         file_handler = logging.FileHandler(log_filename)
         file_handler.setLevel(logging.INFO)
-        file_formatter = logging.Formatter('%(asctime)s - %(levellevelname)s - %(message)s')
+        file_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
         file_handler.setFormatter(file_formatter)
         
         # Create stdout handler for important messages
