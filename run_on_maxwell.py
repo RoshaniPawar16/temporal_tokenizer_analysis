@@ -218,19 +218,25 @@ def create_inference_wrapper(inference):
     return safe_inference_wrapper
 
 class ProgressFilter(logging.Filter):
-    """Filter to reduce frequency of progress messages."""
+    """Filter to reduce frequency of progress messages and batch similar errors."""
     
     def __init__(self, name=''):
         super().__init__(name)
         self.last_progress = {}
         self.min_percent_change = 5.0  # Only log when progress increases by 5%
-    
+        
+        # Error tracking
+        self.error_counts = {}
+        self.last_error_report_time = {}
+        self.error_report_interval = 10.0  # Report similar errors every 10 seconds
+        
     def filter(self, record):
         # Check if this is a progress message
         if hasattr(record, 'msg') and isinstance(record.msg, str):
-            if "Processed" in record.msg and "records" in record.msg:
+            # Handle progress messages
+            if "Processed" in record.msg and "records" in record.msg or "Downloading" in record.msg:
                 # Extract progress info
-                match = re.search(r'Processed (\d+)/(\d+)', record.msg)
+                match = re.search(r'(\d+)/(\d+)', record.msg)
                 if match:
                     current, total = int(match.group(1)), int(match.group(2))
                     current_pct = (current / total) * 100
@@ -246,8 +252,85 @@ class ProgressFilter(logging.Filter):
                         self.last_progress[logger_name] = current_pct
                         return True
                     return False
-        
-        # Keep all non-progress messages
+            
+            # Handle error messages - batch them together
+            if "Failed to fetch text for book" in record.msg:
+                current_time = time.time()
+                error_type = "fetch_fail"
+                
+                # Initialize tracking for this error type if needed
+                if error_type not in self.error_counts:
+                    self.error_counts[error_type] = 0
+                    self.last_error_report_time[error_type] = 0
+                
+                # Increment the count
+                self.error_counts[error_type] += 1
+                
+                # Check if it's time to report this type of error
+                time_since_last_report = current_time - self.last_error_report_time[error_type]
+                if time_since_last_report >= self.error_report_interval:
+                    # Update the message to include the count
+                    if self.error_counts[error_type] > 1:
+                        record.msg = f"Failed to fetch text for {self.error_counts[error_type]} books from any source after multiple attempts"
+                    
+                    # Reset the count and update the time
+                    self.error_counts[error_type] = 0
+                    self.last_error_report_time[error_type] = current_time
+                    return True
+                return False
+                
+            # Handle HTTP error messages
+            if "HTTP error" in record.msg:
+                # Let these through but less frequently
+                current_time = time.time()
+                error_type = "http_error"
+                
+                if error_type not in self.error_counts:
+                    self.error_counts[error_type] = 0
+                    self.last_error_report_time[error_type] = 0
+                
+                self.error_counts[error_type] += 1
+                
+                time_since_last_report = current_time - self.last_error_report_time[error_type]
+                if time_since_last_report >= self.error_report_interval:
+                    if self.error_counts[error_type] > 1:
+                        # Extract the URL and retry info
+                        match = re.search(r'HTTP error \d+ for (.*?), retry (\d+)/(\d+)', record.msg)
+                        if match:
+                            url = match.group(1)
+                            current_retry = match.group(2)
+                            max_retries = match.group(3)
+                            
+                            # Summarize HTTP errors
+                            record.msg = f"HTTP errors for {self.error_counts[error_type]} URLs (showing latest: {url}, retry {current_retry}/{max_retries})"
+                    
+                    self.error_counts[error_type] = 0
+                    self.last_error_report_time[error_type] = current_time
+                    return True
+                return False
+                
+            # Handle text too short messages
+            if "Extracted text too short" in record.msg:
+                current_time = time.time()
+                error_type = "short_text"
+                
+                if error_type not in self.error_counts:
+                    self.error_counts[error_type] = 0
+                    self.last_error_report_time[error_type] = 0
+                
+                self.error_counts[error_type] += 1
+                
+                time_since_last_report = current_time - self.last_error_report_time[error_type]
+                if time_since_last_report >= self.error_report_interval:
+                    if self.error_counts[error_type] > 1:
+                        record.msg = f"Found {self.error_counts[error_type]} texts that were too short"
+                    
+                    self.error_counts[error_type] = 0
+                    self.last_error_report_time[error_type] = current_time
+                    return True
+                return False
+                
+        # Keep all non-matching messages
         return True
 
 def configure_logging(args):
