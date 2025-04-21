@@ -19,6 +19,7 @@ import pickle
 from datetime import datetime
 from tqdm import tqdm
 import re
+import sys
 
 from src.data.dataset_manager import TemporalDatasetManager
 from src.validation.temporal_inference import TemporalDistributionInference
@@ -31,10 +32,232 @@ import os
 import multiprocessing as mp
 from functools import partial
 
+class EnhancedLoggingManager:
+    """
+    Advanced logging manager to reduce noise and batch similar errors.
+    Combines and enhances the functionality of existing ProgressFilter.
+    """
+    
+    def __init__(self):
+        # Track errors and progress messages
+        self.error_counts = {}
+        self.last_report_time = {}
+        self.last_progress = {}
+        self.report_interval = 30.0  # seconds between error reports
+        self.min_percent_change = 10.0  # minimum progress percentage change to log
+        self.truncation_count = 0
+        self.download_errors = 0
+        self.max_individual_errors = 10  # Show first N errors individually
+        
+    def setup_logging(self, log_dir="logs", timestamp=None):
+        """Set up logging with appropriate filtering"""
+        import logging
+        import os
+        import sys
+        from datetime import datetime
+        
+        # Create logs directory if needed
+        os.makedirs(log_dir, exist_ok=True)
+        
+        # Generate timestamp if not provided
+        if timestamp is None:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        # Create log filename
+        log_filename = os.path.join(log_dir, f"run_{timestamp}.log")
+        
+        # Configure root logger
+        root_logger = logging.getLogger()
+        
+        # Clear any existing handlers
+        for handler in root_logger.handlers[:]:
+            root_logger.removeHandler(handler)
+        
+        # Create file handler - captures all messages
+        file_handler = logging.FileHandler(log_filename)
+        file_handler.setLevel(logging.INFO)
+        file_formatter = logging.Formatter('%(asctime)s - %(levellevelname)s - %(message)s')
+        file_handler.setFormatter(file_formatter)
+        
+        # Create stdout handler for important messages
+        stdout_handler = logging.StreamHandler(sys.stdout)
+        stdout_handler.setLevel(logging.INFO)
+        stdout_formatter = logging.Formatter('%(levelname)s: %(message)s')
+        stdout_handler.setFormatter(stdout_formatter)
+        
+        # Create stderr handler for errors only
+        stderr_handler = logging.StreamHandler(sys.stderr)
+        stderr_handler.setLevel(logging.WARNING)
+        stderr_formatter = logging.Formatter('ERROR: %(message)s')
+        stderr_handler.setFormatter(stderr_formatter)
+        
+        # Add our filter to all handlers
+        file_handler.addFilter(self)
+        stdout_handler.addFilter(self)
+        stderr_handler.addFilter(self)
+        
+        # Add handlers to root logger
+        root_logger.addHandler(file_handler)
+        root_logger.addHandler(stdout_handler)
+        root_logger.addHandler(stderr_handler)
+        root_logger.setLevel(logging.INFO)
+        
+        # Silence particularly noisy modules
+        logging.getLogger('transformers').setLevel(logging.ERROR)
+        logging.getLogger('datasets').setLevel(logging.ERROR)
+        logging.getLogger('urllib3').setLevel(logging.ERROR)
+        logging.getLogger('huggingface_hub').setLevel(logging.ERROR)
+        
+        logging.info(f"Logging configured. Full logs will be saved to {log_filename}")
+        return log_filename
+    
+    def filter(self, record):
+        """
+        Filter log records to reduce noise.
+        Returns True if the record should be logged, False to drop it.
+        """
+        # Always allow critical errors
+        if record.levelno >= logging.CRITICAL:
+            return True
+
+        # Always allow distribution-related messages
+        if "distribution" in record.getMessage() or "analyzing" in record.getMessage().lower():
+            return True  # Always allow distribution analysis messages
+
+        # Handle download errors
+        if "Failed to fetch text for book" in record.getMessage():
+            self.download_errors += 1
+            current_time = time.time()
+            error_type = "fetch_fail"
+            
+            # Initialize tracking for this error type if needed
+            if error_type not in self.error_counts:
+                self.error_counts[error_type] = 0
+                self.last_report_time[error_type] = 0
+            
+            # Increment the count
+            self.error_counts[error_type] += 1
+            
+            # Show only first few errors in detail
+            if self.download_errors <= self.max_individual_errors:
+                return True
+                
+            # For subsequent errors, batch them and report periodically
+            time_since_last_report = current_time - self.last_report_time[error_type]
+            if time_since_last_report >= self.report_interval:
+                # Update the message to include the count
+                record.msg = f"Failed to fetch text for {self.error_counts[error_type]} books from any source since last report"
+                
+                # Reset the count and update the time
+                self.error_counts[error_type] = 0
+                self.last_report_time[error_type] = current_time
+                return True
+            return False
+        
+        # Handle extremely long text warnings
+        if "extremely long text" in record.getMessage() and "truncating" in record.getMessage():
+            current_time = time.time()
+            error_type = "truncation"
+            
+            if error_type not in self.error_counts:
+                self.error_counts[error_type] = 0
+                self.last_report_time[error_type] = 0
+                
+            # Increment count of truncated texts
+            self.error_counts[error_type] += 1
+            
+            # Report truncations in batches
+            time_since_last_report = current_time - self.last_report_time.get(error_type, 0)
+            if time_since_last_report >= self.report_interval:
+                record.msg = f"Truncated {self.error_counts[error_type]} extremely long texts since last report"
+                self.error_counts[error_type] = 0
+                self.last_report_time[error_type] = current_time
+                return True
+            return False
+            
+        # Handle progress messages
+        if ("Processed" in record.getMessage() and "records" in record.getMessage()) or \
+           ("Downloading" in record.getMessage()) or \
+           ("Processing" in record.getMessage() and "%" in record.getMessage()):
+                
+            # Extract progress info if available
+            import re
+            match = re.search(r'(\d+)%', record.getMessage())
+            if match:
+                current_pct = int(match.group(1))
+                logger_name = record.name
+                
+                # Only log if progress increased significantly
+                if logger_name not in self.last_progress:
+                    self.last_progress[logger_name] = current_pct
+                    return True
+                    
+                if current_pct - self.last_progress[logger_name] >= self.min_percent_change:
+                    self.last_progress[logger_name] = current_pct
+                    return True
+                return False
+                
+            # For other progress messages, use a different approach
+            match = re.search(r'(\d+)/(\d+)', record.getMessage())
+            if match:
+                current, total = int(match.group(1)), int(match.group(2))
+                current_pct = (current / total) * 100
+                logger_name = record.name
+                
+                # Check if we've seen this progress type before
+                if logger_name not in self.last_progress:
+                    self.last_progress[logger_name] = current_pct
+                    return True
+                
+                # Only log significant progress
+                if current_pct - self.last_progress[logger_name] >= self.min_percent_change:
+                    self.last_progress[logger_name] = current_pct
+                    return True
+                return False
+                
+        # Allow all other messages through
+        return True
+    
+    def print_results_summary(self, evaluation, args):
+        """
+        Print a clear summary of results to stdout.
+        This ensures important results are in the .out file.
+        """
+        import sys
+        
+        # Create a clear, bordered output that will stand out in logs
+        border = "=" * 50
+        print(f"\n{border}", file=sys.stdout)
+        print(f"           RESULTS SUMMARY", file=sys.stdout)
+        print(f"{border}", file=sys.stdout)
+        print(f"Tokenizer: {args.tokenizer}", file=sys.stdout)
+        print(f"Distribution: {args.distribution}", file=sys.stdout)
+        print(f"", file=sys.stdout)
+        print(f"Evaluation Metrics:", file=sys.stdout)
+        print(f"  log10(MSE): {evaluation['distribution_metrics']['log10_mse']:.2f}", file=sys.stdout)
+        print(f"  MAE: {evaluation['distribution_metrics']['mae']:.4f}", file=sys.stdout)
+        print(f"  Jensen-Shannon Distance: {evaluation['distribution_metrics']['js_distance']:.4f}", file=sys.stdout)
+        print(f"  Rank Correlation: {evaluation['decade_metrics']['rank_correlation']:.2f}", file=sys.stdout)
+        
+        # Print over/under represented decades
+        rep_analysis = evaluation["decade_metrics"]["representation_analysis"]
+        if rep_analysis["over_represented"]:
+            print(f"\nOver-represented decades:", file=sys.stdout)
+            for decade, value in sorted(rep_analysis["over_represented"].items(), key=lambda x: x[1], reverse=True)[:3]:
+                print(f"  {decade}: +{value:.1%}", file=sys.stdout)
+                
+        if rep_analysis["under_represented"]:
+            print(f"\nUnder-represented decades:", file=sys.stdout)
+            for decade, value in sorted(rep_analysis["under_represented"].items(), key=lambda x: x[1], reverse=True)[:3]:
+                print(f"  {decade}: -{value:.1%}", file=sys.stdout)
+                
+        print(f"{border}\n", file=sys.stdout)
+
+# Initialize logging manager globally
+logging_manager = EnhancedLoggingManager()
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-
-
 
 def limit_text_truncation_warnings(module_name='temporal_inference'):
     """
@@ -620,8 +843,8 @@ def run_analysis(args):
     Args:
         args: Command-line arguments containing analysis parameters
     """
-    # Configure logging
-    log_filename = configure_logging(args)
+    # Use the enhanced logging manager instead of the basic configure_logging
+    log_filename = logging_manager.setup_logging()
     
     # Set up directories
     results_dir = setup_directories()
@@ -900,8 +1123,8 @@ def run_analysis(args):
     # Save detailed results
     save_distribution_results(results, evaluation, run_id, results_dir)
     
-    # Output evaluation metrics
-    log_evaluation_metrics(evaluation, inference_time, args)
+    # Use the enhanced logging manager to print results summary to stdout
+    logging_manager.print_results_summary(evaluation, args)
     
     # Create comparison visualizations
     create_comparison_visualizations(distribution, selected_dist, 
@@ -1145,35 +1368,34 @@ def compare_all_distributions(args):
     distributions = define_distributions()
     results_by_dist = {}
     
-    # Run analysis for each distribution
+    # Run analysis for each distribution and store results directly
     for dist_name in distributions:
         # Copy args and update distribution
         dist_args = argparse.Namespace(**vars(args))
         dist_args.distribution = dist_name
         
-        # Run analysis and collect results
-        logger.info(f"Running analysis for {dist_name}...")
-        run_analysis(dist_args)
+        # Run analysis and store the returned results directly
+        logger.info(f"Running analysis for {dist_name} distribution...")
+        dist_results = run_analysis(dist_args)
         
-        # Load results from saved files
-        results_dir = setup_directories()
-        timestamp = datetime.now().strftime("%Y%m%d")  # Just use today's date
-        result_files = list((results_dir / "distributions").glob(f"{args.tokenizer}_{dist_name}_*_distribution.json"))
-        
-        if result_files:
-            # Use the most recent file
-            result_file = sorted(result_files)[-1]
-            with open(result_file, 'r') as f:
-                result_data = json.load(f)
-                results_by_dist[dist_name] = {
-                    "distribution": result_data["distribution"],
-                    "evaluation": result_data["evaluation"]
-                }
+        if dist_results and "distribution" in dist_results:
+            results_by_dist[dist_name] = {
+                "distribution": dist_results["distribution"],
+                "evaluation": dist_results["evaluation"] if "evaluation" in dist_results else {}
+            }
+            logger.info(f"Successfully completed analysis for {dist_name} distribution")
+        else:
+            logger.warning(f"Analysis for {dist_name} distribution did not return valid results")
     
-    # Create comparative visualizations
+    # Create comparative visualizations if we have multiple results
     if len(results_by_dist) > 1:
-        logger.info("Creating comparative visualizations...")
+        logger.info(f"Creating comparative visualizations for {len(results_by_dist)} distributions...")
         create_distribution_comparison(results_by_dist, distributions, args.tokenizer, setup_directories())
+        logger.info("Comparative visualization complete")
+    else:
+        logger.warning(f"Only {len(results_by_dist)} distributions had valid results - skipping comparison")
+    
+    return results_by_dist
 
 def create_distribution_comparison(results_by_dist, distributions, tokenizer_name, results_dir):
     """Create visualizations comparing results across different distributions."""
