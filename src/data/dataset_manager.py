@@ -1015,243 +1015,290 @@ class TemporalDatasetManager:
         
         return balanced_dataset
     
-    def create_large_dataset(self, distribution, target_size_gb=1.0):
+    def create_large_dataset(self, distribution: Dict[str, float], target_size_gb: float = 1.0) -> Dict[str, List[Tuple[str, str]]]:
         """
-        Create a balanced dataset with target temporal distribution.
-        Enhanced to combine multiple data sources and maximize real data usage.
+        Create a dataset with known temporal distribution for validation,
+        scaled up to match Hayase et al.'s data volumes.
+        Enhanced for better balance and decade-specific characteristics.
         
         Args:
-            distribution: Target distribution mapping decades to proportions
-            target_size_gb: Target size in GB per category
+            distribution: Dictionary mapping decades to proportions
+            target_size_gb: Target size in GB for the total dataset
                 
         Returns:
-            Dictionary mapping decades to lists of (text, source) tuples
+            Dictionary mapping decades to lists of texts with the specified distribution
         """
-        logger.info(f"Creating balanced dataset with target size of {target_size_gb}GB...")
+        logger.info(f"Creating controlled dataset with distribution: {distribution}")
         
-        # Initialize result dictionary
-        decade_texts = {decade: [] for decade in distribution.keys()}
+        # Set data volume targets based on Hayase paper
+        target_size_bytes = target_size_gb * 1024 * 1024 * 1024
         
-        # STEP 1: LOAD ALL DATA SOURCES UNCONDITIONALLY
+        # Calculate bytes per decade based on distribution
+        bytes_per_decade = {decade: target_size_bytes * prop for decade, prop in distribution.items()}
         
-        # Load British Library historical data FIRST
+        # Normalize distribution if needed
+        total_proportion = sum(distribution.values())
+        if abs(total_proportion - 1.0) > 0.001:  # Allow small rounding errors
+            normalized = {d: p/total_proportion for d, p in distribution.items()}
+            logger.info(f"Normalized distribution to: {normalized}")
+            distribution = normalized
+        
+        # Calculate texts per decade, with much higher counts than before
+        texts_per_decade = {decade: max(int(prop * 20000), 1000) for decade, prop in distribution.items()}
+        
+        # Load all available data with expanded coverage
+        logger.info("Loading source texts for controlled dataset...")
+        
+        # Load British Library historical data FIRST for best historical coverage
         logger.info("Loading British Library historical data...")
-        # First expand metadata sources for better historical coverage
         self.british_library_loader.expand_metadata_sources()
         bl_texts = self.british_library_loader.load_british_library_historical_data(
-            per_decade=10000,  # Increased from 1000 for better coverage
+            per_decade=50000,  # Massively increased from 10000 for better coverage
             early_stop=False   # Disable early stopping to ensure we get all available data
         )
         
-        # Add British Library texts to our dataset WITH PROPER TUPLE CONVERSION
-        real_data_counts = {}
-        for decade, texts in bl_texts.items():
-            if decade in distribution:
-                # Convert text strings to (text, source) tuples
-                decade_texts[decade].extend([(text, "british_library") for text in texts])
-                real_data_counts[decade] = len(texts)
-                logger.info(f"Added {len(texts)} British Library texts for {decade}")
-        
-        # Next load Gutenberg texts with enhanced mid-century coverage
-        logger.info("Loading Gutenberg texts with enhanced metadata...")
-        self.gutenberg_loader.expand_metadata_sources()
-        # Also expand historical catalog for better coverage of pre-1930s data
+        # Enhanced Gutenberg data loading with historical focus
+        logger.info("Loading Gutenberg texts with enhanced historical focus...")
         self.gutenberg_loader.expand_historical_catalog()
+        self.gutenberg_loader.expand_metadata_sources()
         gutenberg_texts = self.gutenberg_loader.load_focused_decade_samples(
             target_decades=list(distribution.keys()),
-            texts_per_decade=20000  # Increased for better coverage
+            texts_per_decade=50000  # Massively increased from 20000
         )
         
-        # Add Gutenberg texts to our dataset
-        for decade, texts in gutenberg_texts.items():
-            if decade in decade_texts:
-                decade_texts[decade].extend(texts)
-                real_data_counts[decade] = real_data_counts.get(decade, 0) + len(texts)
-                logger.info(f"Added {len(texts)} Gutenberg texts for {decade}")
+        # Load Oscar for mid-century decades with increased volume
+        target_decades = list(distribution.keys())
+        logger.info(f"Loading Oscar texts for all decades: {target_decades}")
+        oscar_texts = self.oscar_loader.load_decade_samples(
+            target_decades=target_decades,
+            texts_per_decade=50000  # Increased from 20000
+        )
         
-        # Then load Oscar for mid-century decades (1930s-1980s)
-        target_sparse_decades = [d for d in distribution.keys() 
-                            if d in ["1930s", "1940s", "1950s", "1960s", "1970s", "1980s"]]
-        if target_sparse_decades:
-            logger.info(f"Loading Oscar texts for mid-century decades: {target_sparse_decades}")
-            oscar_texts = self.oscar_loader.load_decade_samples(
-                target_decades=target_sparse_decades,
-                texts_per_decade=20000  # Increased from 5000 for better coverage
-            )
-            
-            # Add Oscar texts to our dataset
-            for decade, texts in oscar_texts.items():
-                if decade in decade_texts:
-                    decade_texts[decade].extend(texts)
-                    real_data_counts[decade] = real_data_counts.get(decade, 0) + len(texts)
-                    logger.info(f"Added {len(texts)} Oscar texts for {decade}")
-        
-        # Load modern web content for recent decades (1990s-2020s)
+        # Load modern web content for recent decades
         modern_decades = [d for d in distribution.keys() 
                         if d in ["1990s", "2000s", "2010s", "2020s"]]
         if modern_decades:
             logger.info(f"Loading modern web content for decades: {modern_decades}")
-            modern_texts = self.load_modern_web_content(target_decades=modern_decades, texts_per_decade=20000)
+            modern_texts = self.load_modern_web_content(
+                target_decades=modern_decades, 
+                texts_per_decade=50000  # Increased from 20000
+            )
+        else:
+            modern_texts = {}
+        
+        # Initialize a dictionary to store all source texts by decade
+        all_source_texts = {decade: [] for decade in distribution.keys()}
+        
+        # Combine all data sources, with complete source tracking
+        for decade, texts in bl_texts.items():
+            if decade in distribution:
+                all_source_texts[decade].extend([(text, "british_library") for text in texts])
+        
+        for decade, texts in gutenberg_texts.items():
+            if decade in all_source_texts:
+                all_source_texts[decade].extend(texts)
+        
+        for decade, texts in oscar_texts.items():
+            if decade in all_source_texts:
+                all_source_texts[decade].extend(texts)
+        
+        for decade, texts in modern_texts.items():
+            if decade in all_source_texts:
+                all_source_texts[decade].extend(texts)
+        
+        # Log data counts by source for each decade
+        for decade, texts in all_source_texts.items():
+            bl_count = sum(1 for _, src in texts if src == "british_library")
+            gutenberg_count = sum(1 for _, src in texts if src == "gutenberg")
+            oscar_count = sum(1 for _, src in texts if src == "oscar")
+            modern_count = sum(1 for _, src in texts if "web" in str(src).lower())
+            other_count = len(texts) - (bl_count + gutenberg_count + oscar_count + modern_count)
             
-            # Add modern web texts to our dataset
-            for decade, texts in modern_texts.items():
-                if decade in decade_texts:
-                    decade_texts[decade].extend(texts)
-                    real_data_counts[decade] = real_data_counts.get(decade, 0) + len(texts)
-                    logger.info(f"Added {len(texts)} modern web texts for {decade}")
+            logger.info(f"{decade} source breakdown: {len(texts)} total texts")
+            logger.info(f"  - British Library: {bl_count} texts")
+            logger.info(f"  - Gutenberg: {gutenberg_count} texts")
+            logger.info(f"  - Oscar: {oscar_count} texts")
+            logger.info(f"  - Modern web: {modern_count} texts")
+            logger.info(f"  - Other: {other_count} texts")
         
-        # Load additional sources for contemporary coverage
-        additional_texts = self.load_additional_sources(distribution.keys())
-        for decade, texts in additional_texts.items():
-            if decade in decade_texts:
-                decade_texts[decade].extend(texts)
-                real_data_counts[decade] = real_data_counts.get(decade, 0) + len(texts)
-                logger.info(f"Added {len(texts)} additional texts for {decade}")
+        # Build the controlled dataset with enhanced decade-specific preservation
+        controlled_dataset = {}
+        current_size_bytes = 0
         
-        # STEP 2: LOG REAL DATA SUMMARY
-        logger.info("Real data summary before synthetic generation:")
+        # Process each decade individually with exact byte tracking
+        for decade, target_bytes in bytes_per_decade.items():
+            source_texts = all_source_texts.get(decade, [])
+            
+            if not source_texts:
+                logger.warning(f"No source texts for {decade}, generating synthetic texts")
+                synthetic_texts = self._create_historical_synthetic_texts(
+                    decade=decade,
+                    count=1000,  # Generate 1000 synthetic texts
+                    existing_data={},
+                    preserve_decade_characteristics=True
+                )
+                source_texts = [(text, "synthetic") for text in synthetic_texts]
+            
+            # Sort texts by quality and length (prioritize real and longer texts)
+            sorted_texts = sorted(source_texts, key=lambda x: (
+                0 if "synthetic" not in x[1] and "augmented" not in x[1] else 1,  # Real texts first
+                len(x[0]),  # Then longer texts
+            ), reverse=True)
+            
+            # Build dataset with exact byte-level tracking
+            decade_texts = []
+            decade_bytes = 0
+            
+            for text, source in sorted_texts:
+                # Add text if it doesn't exceed target
+                text_bytes = len(text.encode('utf-8'))
+                if decade_bytes + text_bytes <= target_bytes:
+                    decade_texts.append((text, source))
+                    decade_bytes += text_bytes
+                else:
+                    # For last text, add a partial text to exactly meet target
+                    remaining_bytes = target_bytes - decade_bytes
+                    if remaining_bytes > 1000:  # Only add if significant chunk remains
+                        # Find a suitable truncation point (end of sentence)
+                        truncation_point = min(len(text), remaining_bytes)
+                        # Try to find a sentence boundary
+                        for i in range(truncation_point - 1, max(0, truncation_point - 200), -1):
+                            if i < len(text) and text[i] in '.!?' and i + 1 < len(text) and text[i+1].isspace():
+                                truncation_point = i + 1
+                                break
+                        
+                        partial_text = text[:truncation_point]
+                        decade_texts.append((partial_text, f"{source}_partial"))
+                        decade_bytes += len(partial_text.encode('utf-8'))
+                    
+                    # We've reached our target, stop adding texts
+                    break
+            
+            # If we didn't reach the target, synthesize or augment more texts
+            if decade_bytes < target_bytes * 0.95:  # If we're below 95% of target
+                logger.info(f"Only reached {decade_bytes/(target_bytes)*100:.1f}% of target for {decade}, adding synthesized/augmented content")
+                
+                # First try to augment existing texts
+                if decade_texts:
+                    remaining_bytes = target_bytes - decade_bytes
+                    augmented_bytes = 0
+                    
+                    # Base texts to augment from - up to 100 texts
+                    base_texts = decade_texts[:min(100, len(decade_texts))]
+                    augmented_count = 0
+                    
+                    while augmented_bytes < remaining_bytes and augmented_count < 1000:
+                        # Select a random base text
+                        base_text, base_source = random.choice(base_texts)
+                        
+                        # Create augmented version
+                        augmented_text = self._augment_text_for_volume(
+                            base_text, 
+                            decade, 
+                            volume_multiplier=random.randint(3, 10)  # Variable size augmentation
+                        )
+                        
+                        text_bytes = len(augmented_text.encode('utf-8'))
+                        if decade_bytes + text_bytes <= target_bytes:
+                            decade_texts.append((augmented_text, f"{base_source}_augmented"))
+                            decade_bytes += text_bytes
+                            augmented_bytes += text_bytes
+                        
+                        augmented_count += 1
+                        
+                        # Log progress periodically
+                        if augmented_count % 100 == 0:
+                            logger.info(f"Added {augmented_count} augmented texts ({augmented_bytes/(1024*1024):.2f} MB) for {decade}")
+                
+                # If still not enough, add synthetic texts
+                if decade_bytes < target_bytes * 0.95:
+                    remaining_bytes = target_bytes - decade_bytes
+                    
+                    # Generate synthetic texts
+                    estimated_text_size = 10000  # Assume average synthetic text is 10KB
+                    synthetic_count = max(10, int(remaining_bytes / estimated_text_size))
+                    
+                    logger.info(f"Adding {synthetic_count} synthetic texts for {decade}")
+                    synthetic_texts = self._create_historical_synthetic_texts(
+                        decade=decade,
+                        count=synthetic_count,
+                        existing_data={},
+                        preserve_decade_characteristics=True
+                    )
+                    
+                    # Add synthetic texts up to target
+                    for text in synthetic_texts:
+                        text_bytes = len(text.encode('utf-8'))
+                        if decade_bytes + text_bytes <= target_bytes:
+                            decade_texts.append((text, "synthetic"))
+                            decade_bytes += text_bytes
+                        else:
+                            break
+            
+            controlled_dataset[decade] = decade_texts
+            current_size_bytes += decade_bytes
+
+            # Log final volume for this decade
+            logger.info(f"{decade} final dataset: {len(decade_texts)} texts, {decade_bytes/(1024*1024*1024):.3f} GB")
+            
+            # Log composition statistics
+            real_count = sum(1 for _, src in decade_texts if "synthetic" not in src and "augmented" not in src and "partial" not in src)
+            augmented_count = sum(1 for _, src in decade_texts if "augmented" in src)
+            partial_count = sum(1 for _, src in decade_texts if "partial" in src)
+            synthetic_count = sum(1 for _, src in decade_texts if "synthetic" in src)
+            
+            if decade_texts:
+                logger.info(f"  Composition: {real_count/len(decade_texts):.1%} real, "
+                        f"{augmented_count/len(decade_texts):.1%} augmented, "
+                        f"{partial_count/len(decade_texts):.1%} partial, "
+                        f"{synthetic_count/len(decade_texts):.1%} synthetic")
+        
+        # Verify the final dataset meets the target distribution
+        total_bytes = sum(sum(len(text.encode('utf-8')) for text, _ in texts) 
+                        for decade, texts in controlled_dataset.items())
+        
+        actual_distribution = {}
+        for decade, texts in controlled_dataset.items():
+            decade_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
+            actual_distribution[decade] = decade_bytes / total_bytes if total_bytes > 0 else 0
+        
+        # Log actual vs target distribution for verification
+        logger.info("Actual vs Target Distribution:")
         for decade in sorted(distribution.keys()):
-            texts_count = real_data_counts.get(decade, 0)
-            texts_size = sum(len(text[0].encode('utf-8')) for text in decade_texts.get(decade, []))
-            texts_gb = texts_size / (1024**3)
-            logger.info(f"  {decade}: {texts_count} real texts, {texts_gb:.2f} GB")
+            target = distribution.get(decade, 0)
+            actual = actual_distribution.get(decade, 0)
+            difference = actual - target
+            logger.info(f"  {decade}: {actual:.1%} (target: {target:.1%}, diff: {difference:+.1%})")
         
-        # STEP 3: VERIFY DATA VOLUMES AND ENHANCE ONLY WHEN NEEDED
+        # Create metadata
+        metadata = {
+            "type": "controlled_dataset",
+            "creation_time": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "target_distribution": distribution,
+            "actual_distribution": actual_distribution,
+            "target_size_gb": target_size_gb,
+            "actual_size_gb": total_bytes / (1024*1024*1024),
+            "total_texts": sum(len(texts) for texts in controlled_dataset.values()),
+            "composition": {
+                "real": sum(sum(1 for _, src in texts if "synthetic" not in src and "augmented" not in src and "partial" not in src) 
+                        for texts in controlled_dataset.values()),
+                "augmented": sum(sum(1 for _, src in texts if "augmented" in src) 
+                            for texts in controlled_dataset.values()),
+                "partial": sum(sum(1 for _, src in texts if "partial" in src) 
+                            for texts in controlled_dataset.values()),
+                "synthetic": sum(sum(1 for _, src in texts if "synthetic" in src) 
+                            for texts in controlled_dataset.values()),
+            }
+        }
         
-        # Check which decades have insufficient data
-        volume_check, all_sufficient = self.verify_dataset_volumes(
-            decade_texts, 
-            target_gb_per_decade=target_size_gb * 0.5  # Set minimum threshold at 50% of target
-        )
+        # Save metadata
+        metadata_path = self.dataset_dir / "controlled_datasets"
+        metadata_path.mkdir(exist_ok=True, parents=True)
+        with open(metadata_path / f"controlled_dataset_{int(time.time())}.json", "w") as f:
+            json.dump(metadata, f, indent=2)
         
-        # Generate synthetic data only for decades with insufficient data
-        if not all_sufficient:
-            logger.info("Some decades have insufficient data volume, generating synthetic content")
-            
-            insufficient_decades = []
-            for decade, volume in volume_check.items():
-                if volume < target_size_gb * 0.5:  # Less than 50% of target
-                    insufficient_decades.append((decade, volume))
-                    
-            # Sort by most deficient first
-            insufficient_decades.sort(key=lambda x: x[1])
-            
-            for decade, volume in insufficient_decades:
-                current_texts = decade_texts.get(decade, [])
-                # Target is reduced for sparse decades - aim for 0.5GB instead of full target
-                target_volume = target_size_gb * 0.5
-                
-                logger.info(f"Need more data for {decade}: {volume:.2f}GB < {target_volume:.2f}GB")
-                
-                # If we have some real texts, try to expand them first
-                if len(current_texts) > 0:
-                    try:
-                        # Calculate how many expansions needed
-                        needed_gb = target_volume - volume
-                        
-                        # Calculate average text size
-                        total_bytes = sum(len(text[0].encode('utf-8')) for text in current_texts)
-                        avg_text_bytes = total_bytes / len(current_texts)
-                        needed_texts = int((needed_gb * 1024 * 1024 * 1024) / avg_text_bytes) + 1
-                        
-                        # Cap at a reasonable number
-                        texts_to_expand = min(10000, needed_texts)
-                        
-                        logger.info(f"Expanding {min(len(current_texts), texts_to_expand)} texts for {decade}")
-                        
-                        # Use existing texts as templates
-                        expanded_texts = []
-                        
-                        # Use a smaller subset as base for diversity
-                        base_texts = current_texts[:min(1000, len(current_texts))]
-                        
-                        for i in range(texts_to_expand):
-                            if base_texts and i % 100 == 0:
-                                logger.info(f"Created {i}/{texts_to_expand} expanded texts for {decade}")
-                                
-                            if base_texts:
-                                # Select random base text
-                                base_text, base_source = random.choice(base_texts)
-                                
-                                # Create expanded version
-                                expanded_text = self._modify_text_slightly(base_text)
-                                expanded_texts.append((expanded_text, f"{base_source}_expanded"))
-                                
-                                # Check if we've reached target
-                                if i % 1000 == 0:
-                                    expanded_volume = sum(len(text.encode('utf-8')) for text, _ in expanded_texts) / (1024**3)
-                                    if volume + expanded_volume >= target_volume:
-                                        logger.info(f"Reached target volume after {i+1} expansions")
-                                        break
-                        
-                        # Add expanded texts to the dataset
-                        decade_texts[decade].extend(expanded_texts)
-                        logger.info(f"Added {len(expanded_texts)} expanded texts for {decade}")
-                        
-                    except Exception as e:
-                        logger.error(f"Error expanding texts for {decade}: {e}")
-                
-                # If still insufficient, generate synthetic texts
-                current_volume = sum(len(text[0].encode('utf-8')) for text in decade_texts[decade]) / (1024**3)
-                
-                if current_volume < target_volume:
-                    needed_gb = target_volume - current_volume
-                    
-                    # Estimate text size
-                    avg_text_bytes = 50000  # Default estimate if no data
-                    if current_texts:
-                        total_bytes = sum(len(text[0].encode('utf-8')) for text in current_texts)
-                        avg_text_bytes = total_bytes / len(current_texts)
-                    
-                    needed_texts = int((needed_gb * 1024 * 1024 * 1024) / avg_text_bytes) + 1
-                    
-                    logger.info(f"Generating {needed_texts} synthetic texts for {decade}")
-                    
-                    # Generate synthetic texts for historical decades
-                    if decade in ["1850s", "1860s", "1870s", "1880s", "1890s", "1900s", "1910s", "1920s"]:
-                        synthetic_texts = self._create_historical_synthetic_texts(decade, needed_texts, {})
-                        logger.info(f"Added {len(synthetic_texts)} synthetic historical texts for {decade}")
-                    else:
-                        # Generate synthetic texts for modern decades
-                        synthetic_texts = self._create_synthetic_decade_texts(decade, needed_texts)
-                        logger.info(f"Added {len(synthetic_texts)} synthetic texts for {decade}")
-                        
-                    decade_texts[decade].extend([(text, "synthetic") for text in synthetic_texts])
-                    
-                    # Log added synthetic data volume
-                    synthetic_bytes = sum(len(text.encode('utf-8')) for text in synthetic_texts)
-                    logger.info(f"Added {synthetic_bytes/(1024*1024):.2f}MB of synthetic text for {decade}")
-        
-        # STEP 4: APPLY BALANCING TO MATCH TARGET DISTRIBUTION
-        try:
-            balanced_dataset = self._balance_by_distribution(decade_texts, distribution, target_size_gb)
-        except Exception as e:
-            logger.error(f"Error in _balance_by_distribution: {e}")
-            import traceback
-            traceback.print_exc()
-            # Fallback to using the original dataset
-            balanced_dataset = decade_texts
-        
-        # STEP 5: VALIDATE AND REPORT FINAL DATASET QUALITY
-        try:
-            is_valid, quality_report = self.verify_dataset_quality(balanced_dataset)
-            
-            if is_valid:
-                logger.info(f"Created valid balanced dataset with {quality_report['total_texts']} texts")
-                logger.info(f"Composition: {quality_report['real_percentage']:.1%} real, "
-                        f"{quality_report['expanded_percentage']:.1%} expanded, "
-                        f"{quality_report['synthetic_percentage']:.1%} synthetic")
-            else:
-                logger.warning(f"Created dataset does not meet quality standards")
-                logger.warning(f"Composition: {quality_report['real_percentage']:.1%} real, "
-                            f"{quality_report['expanded_percentage']:.1%} expanded, "
-                            f"{quality_report['synthetic_percentage']:.1%} synthetic")
-        except Exception as e:
-            logger.error(f"Error validating dataset quality: {e}")
-            import traceback
-            traceback.print_exc()
-        
-        return balanced_dataset
+        logger.info(f"Total dataset size: {total_bytes/(1024*1024*1024):.3f} GB")
+        return controlled_dataset    
 
     
     def load_additional_sources(self, target_decades):
@@ -2609,14 +2656,16 @@ class TemporalDatasetManager:
         
         return "\n\n".join(result)
 
-    def _augment_text_for_volume(self, text: str, decade: str, volume_multiplier: int = 5) -> str:
+    def _augment_text_for_volume(self, text: str, decade: str, volume_multiplier: int = 5, preserve_decade_style: bool = True) -> str:
         """
         Augment a base text to increase data volume, tailored to specific decade.
+        Enhanced to better preserve temporal characteristics.
         
         Args:
             text: Original text
             decade: The decade to generate text for
-            volume_multiplier: How many times to multiply the volume (increased from 2 to 5)
+            volume_multiplier: How many times to multiply the volume
+            preserve_decade_style: Whether to preserve decade-specific style
             
         Returns:
             Augmented text with period-appropriate content
@@ -2760,55 +2809,90 @@ class TemporalDatasetManager:
         era_style = era_styles.get(closest_era, era_styles.get("1900s", {}))  # Default to 1900s style
         vocab = decade_vocab.get(decade, ["modern", "development", "society"])
         
-        # Calculate target length
-        target_length = len(text) * volume_multiplier  # Increased multiplier
+        # Calculate target length with increased diversity
+        base_multiplier = volume_multiplier * (1.0 + random.random() * 0.5)  # Add 0-50% variation
+        target_length = int(len(text) * base_multiplier)
         current_length = len(augmented_text)
         
-        # Add much more period-specific content to dramatically increase volume
+        # Generate additional period-appropriate content to increase volume
         while current_length < target_length:
-            # Generate more period-appropriate paragraphs - increased quantity
-            num_paragraphs = min(20, int((target_length - current_length) // 500))  # Fixed: Ensure integer
-            
-            for _ in range(max(3, num_paragraphs)):  # Fixed: Use integer in range()
-                # Generate rich period-appropriate paragraph with multiple sentences
-                paragraph = ""
+            # Choose augmentation approach - either extend or add new content
+            if random.random() < 0.3 and preserve_decade_style:
+                # Extension approach - continue the existing text with period vocabulary
+                extension = " "
                 
-                # Add a period-appropriate opener
-                if era_style.get("openers"):
-                    paragraph += random.choice(era_style["openers"]) + " "
-                
-                # Add 4-8 sentences with period vocabulary (increased)
-                for _ in range(random.randint(4, 8)):
+                # Add 3-5 period-appropriate sentences
+                for _ in range(random.randint(3, 5)):
                     word1 = random.choice(vocab)
                     word2 = random.choice(vocab)
                     
-                    # More varied sentence templates
                     templates = [
-                        f"The development of {word1} has transformed many aspects of society. ",
-                        f"Many consider {word1} to be essential to modern progress. ",
-                        f"The relationship between {word1} and {word2} deserves careful study. ",
-                        f"The influence of {word1} cannot be overstated in this period. ",
-                        f"People increasingly rely on {word1} in their daily lives. ",
-                        f"The advancement of {word1} continues to change how we understand {word2}. ",
-                        f"Scholars debate the significance of {word1} in relation to {word2}. ",
-                        f"The introduction of {word1} has led to significant changes in society. ",
-                        f"One cannot discuss this era without mentioning {word1} and its impact. ",
-                        f"The transformation brought by {word1} affects every aspect of {word2}. "
+                        f"The {word1} contributed significantly to developments in {word2}. ",
+                        f"Many considered {word1} to be essential to modern {word2}. ",
+                        f"The relationship between {word1} and {word2} merits further examination. ",
+                        f"The advancement of {word1} continued to transform {word2}. ",
+                        f"Scholars debated the significance of {word1} in relation to {word2}. "
                     ]
                     
-                    paragraph += random.choice(templates)
+                    extension += random.choice(templates)
                 
-                # Add a period-specific phrase for authenticity
-                if era_style.get("phrases"):
-                    phrase = random.choice(era_style["phrases"])
-                    paragraph += f"It is {phrase} that these developments will continue to shape our future. "
+                augmented_text += extension
+            else:
+                # Add a completely new paragraph with period-specific style
+                num_paragraphs = min(5, int((target_length - current_length) // 500))
                 
-                # Add to text
-                augmented_text += "\n\n" + paragraph
+                for _ in range(max(1, num_paragraphs)):
+                    # Generate a paragraph with period-appropriate content
+                    paragraph = "\n\n"
+                    
+                    # Start with period-appropriate opener
+                    if era_style.get("openers"):
+                        paragraph += random.choice(era_style["openers"]) + " "
+                    
+                    # Add 4-8 sentences with period vocabulary (enhanced to be more substantive)
+                    for _ in range(random.randint(4, 8)):
+                        word1 = random.choice(vocab)
+                        word2 = random.choice(vocab)
+                        
+                        # More diverse and nuanced sentence templates
+                        templates = [
+                            f"The development of {word1} has transformed many aspects of society. ",
+                            f"Many consider {word1} to be essential to modern progress. ",
+                            f"The relationship between {word1} and {word2} deserves careful study. ",
+                            f"The influence of {word1} cannot be overstated in this period. ",
+                            f"People increasingly rely on {word1} in their daily lives. ",
+                            f"The advancement of {word1} continues to change how we understand {word2}. ",
+                            f"Scholars debate the significance of {word1} in relation to {word2}. ",
+                            f"The introduction of {word1} has led to significant changes in society. ",
+                            f"One cannot discuss this era without mentioning {word1} and its impact. ",
+                            f"The transformation brought by {word1} affects every aspect of {word2}. ",
+                            f"Serious consideration must be given to how {word1} influences our understanding of {word2}. ",
+                            f"The practical applications of {word1} continue to expand in unexpected ways. ",
+                            f"Historical accounts frequently reference {word1} as a defining element of this period. ",
+                            f"Contemporary observers noted the prominence of {word1} in daily discourse. "
+                        ]
+                        
+                        paragraph += random.choice(templates)
+                    
+                    # Add a period-specific phrase for authenticity
+                    if era_style.get("phrases"):
+                        phrase = random.choice(era_style["phrases"])
+                        paragraph += f"It is {phrase} that these developments will continue to shape our future. "
+                    
+                    # Add a conclusion sentence
+                    conclusions = [
+                        f"These considerations of {random.choice(vocab)} remain relevant to our understanding of the period.",
+                        f"Further study of {random.choice(vocab)} may yield additional insights.",
+                        f"The historical significance of these developments cannot be overstated.",
+                        f"Future generations would continue to build upon these foundations."
+                    ]
+                    paragraph += random.choice(conclusions)
+                    
+                    augmented_text += paragraph
             
-            # Update current length
+            # Update current length for loop condition
             current_length = len(augmented_text)
-            
+        
         return augmented_text
 
     def _analyze_sentence_length(self, text: str) -> str:
