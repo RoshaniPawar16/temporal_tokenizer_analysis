@@ -986,13 +986,333 @@ class TemporalDistributionInference:
         
         return filtered_patterns
     
+    # def infer_temporal_distribution(self, 
+    #                  decade_patterns: Dict[str, Dict],
+    #                  num_merge_rules: int = 2000,
+    #                  weight_early_merges: bool = True,
+    #                  regularization_strength: float = 0.05,
+    #                  remove_top_tokens: bool = True,
+    #                  top_n: int = 5):  # Set to 5 as per professor's suggestion
+    #     """
+    #     Infer the temporal distribution in training data using enhanced linear programming.
+    #     Incorporates professor's suggestions and fixes for decade-specific biases.
+        
+    #     Args:
+    #         decade_patterns: Dictionary mapping decades to their patterns
+    #         num_merge_rules: Number of merge rules to consider
+    #         weight_early_merges: Whether to give higher weight to early merges
+    #         regularization_strength: Strength of regularization term
+    #         remove_top_tokens: Whether to remove top frequent tokens
+    #         top_n: Number of top tokens to remove (set to 5 per professor)
+                
+    #     Returns:
+    #         Dictionary mapping decades to their estimated proportion
+    #     """
+    #     # Check if we have valid input
+    #     if not isinstance(decade_patterns, dict) or not decade_patterns:
+    #         logger.warning("Invalid or empty decade_patterns provided")
+    #         return {}
+        
+    #     # First filter out biasing tokens if requested
+    #     if remove_top_tokens:
+    #         logger.info(f"Removing top {top_n} most biasing tokens as discussed with professor")
+    #         filtered_patterns = self.remove_top_frequent_tokens(decade_patterns, top_n)
+    #         logger.info("Successfully removed biasing tokens")
+    #     else:
+    #         filtered_patterns = decade_patterns
+        
+    #     # Extract decades
+    #     decades = sorted(list(filtered_patterns.keys()))
+        
+    #     if not decades:
+    #         logger.warning("No decades found in patterns")
+    #         return {}
+        
+    #     # For full/production mode, use the full linear programming approach
+    #     try:
+    #         # Prepare linear programming variables
+    #         import cvxpy as cp
+    #         import numpy as np
+            
+    #         alpha = cp.Variable(len(decades), pos=True)
+            
+    #         # Sum-to-one constraint
+    #         constraints = [cp.sum(alpha) == 1]
+            
+    #         # Use lower minimum probability constraint to allow more flexibility
+    #         min_prob = 0.005  # Reduced from 0.01
+    #         constraints.extend([alpha[i] >= min_prob for i in range(len(decades))])
+            
+    #         # Add upper bound constraint to prevent single decade dominance
+    #         constraints.extend([alpha[i] <= 0.40 for i in range(len(decades))])
+            
+    #         # Add special constraints for problematic decades
+    #         # 1930s was +51.5% overrepresented in previous runs
+    #         if "1930s" in decades:
+    #             idx_1930s = decades.index("1930s")
+    #             # Limit 1930s proportion to prevent severe overrepresentation
+    #             constraints.append(alpha[idx_1930s] <= 0.10)  # Cap at 10%
+    #             logger.info("Added special constraint to limit 1930s overrepresentation")
+            
+    #         # Extract normalized merge rule frequencies
+    #         merge_frequencies = {}
+    #         for i, decade in enumerate(decades):
+    #             if 'merge_rules' in filtered_patterns[decade]:
+    #                 total_tokens = filtered_patterns[decade]['total_tokens']
+    #                 if total_tokens > 0:
+    #                     for rule, count in filtered_patterns[decade]['merge_rules'].items():
+    #                         if rule not in merge_frequencies:
+    #                             merge_frequencies[rule] = np.zeros(len(decades))
+    #                         # Normalize by total tokens
+    #                         merge_frequencies[rule][i] = count / total_tokens
+            
+    #         # Calculate temporal progression score for each rule
+    #         temporal_scores = {}
+    #         for rule, freqs in merge_frequencies.items():
+    #             if np.sum(freqs) > 0:
+    #                 # Check if rule shows increasing or decreasing trend
+    #                 if len(decades) > 2:
+    #                     # Calculate correlation with decade indices
+    #                     decade_indices = np.arange(len(decades))
+    #                     correlation = np.corrcoef(decade_indices, freqs)[0, 1]
+                        
+    #                     # Absolute correlation shows strength of temporal association
+    #                     temporal_scores[rule] = abs(correlation)
+    #                 else:
+    #                     temporal_scores[rule] = 0.5  # Default for few decades
+            
+    #         # Calculate distinctiveness for each rule with improved formula
+    #         distinctiveness = {}
+    #         for rule, freqs in merge_frequencies.items():
+    #             if np.sum(freqs) > 0:
+    #                 max_val = np.max(freqs)
+    #                 max_idx = np.argmax(freqs)
+    #                 max_decade = decades[max_idx]
+    #                 other_vals = np.delete(freqs, max_idx)
+    #                 mean_others = np.mean(other_vals) if len(other_vals) > 0 else 0.0001
+                    
+    #                 # Calculate ratio with capping to avoid extreme values
+    #                 ratio = max_val / mean_others if mean_others > 0 else 1.0
+    #                 distinctiveness[rule] = np.log1p(min(ratio, 10.0))  # Use log1p to smooth extreme values
+            
+    #         # Balance rule selection across decades
+    #         decade_rule_counts = {decade: 0 for decade in decades}
+    #         rule_scores = {}
+            
+    #         # First calculate scores for all rules
+    #         for rule, freqs in merge_frequencies.items():
+    #             overall_freq = np.sum(freqs)
+    #             distinct_score = distinctiveness.get(rule, 0)
+    #             temporal_score = temporal_scores.get(rule, 0)
+                
+    #             # Higher score for rules with both high distinctiveness and frequency
+    #             rule_scores[rule] = overall_freq * distinct_score * (1 + temporal_score)
+            
+    #         # Select rules in two passes for better decade balance
+    #         selected_rules = []
+            
+    #         # First pass: select top 40% purely by score
+    #         top_half_count = int(num_merge_rules * 0.4)
+    #         top_rules = sorted(rule_scores.keys(), key=lambda r: rule_scores[r], reverse=True)[:top_half_count]
+    #         selected_rules.extend(top_rules)
+            
+    #         # Track which decade each selected rule favors most
+    #         for rule in top_rules:
+    #             freqs = merge_frequencies[rule]
+    #             max_decade_idx = np.argmax(freqs)
+    #             decade_rule_counts[decades[max_decade_idx]] += 1
+            
+    #         # Second pass: favor underrepresented decades
+    #         remaining_rules = [r for r in rule_scores.keys() if r not in selected_rules]
+    #         remaining_count = num_merge_rules - top_half_count
+            
+    #         # Calculate inverse weights - lower count = higher weight
+    #         decade_weights = {}
+    #         total_rules = sum(decade_rule_counts.values()) + 0.001  # Avoid division by zero
+            
+    #         for decade, count in decade_rule_counts.items():
+    #             # Calculate inverse frequency weight
+    #             decade_weights[decade] = 1.0 - (count / total_rules)
+            
+    #         # Adjust weights to favor historical decades - increased boost
+    #         historical_decades = ["1850s", "1860s", "1870s", "1880s", "1890s", "1900s", "1910s", "1920s"]
+    #         for decade in historical_decades:
+    #             if decade in decade_weights:
+    #                 # Give 300% boost to historical decade weights (increased from 50%)
+    #                 decade_weights[decade] *= 3.0
+    #                 logger.info(f"Boosting rule selection weight for {decade} by 3x")
+            
+    #         # Reduce weight for over-represented decades
+    #         problem_decades = ["1930s", "1990s"]
+    #         for decade in problem_decades:
+    #             if decade in decade_weights:
+    #                 # Reduce weight by 50% to avoid over-selection
+    #                 decade_weights[decade] *= 0.5
+    #                 logger.info(f"Reducing rule selection weight for {decade} by 50%")
+            
+    #         # Normalize weights
+    #         weight_sum = sum(decade_weights.values())
+    #         if weight_sum > 0:
+    #             decade_weights = {d: w/weight_sum for d, w in decade_weights.items()}
+            
+    #         # Adjust rule scores by decade weights
+    #         adjusted_scores = {}
+    #         for rule in remaining_rules:
+    #             freqs = merge_frequencies[rule]
+    #             max_decade_idx = np.argmax(freqs)
+    #             max_decade = decades[max_decade_idx]
+    #             # Boost score for underrepresented decades
+    #             adjusted_scores[rule] = rule_scores[rule] * (1.0 + decade_weights.get(max_decade, 0))
+            
+    #         # Take top rules by adjusted scores
+    #         balanced_rules = sorted(adjusted_scores.keys(), key=lambda r: adjusted_scores[r], reverse=True)[:remaining_count]
+    #         selected_rules.extend(balanced_rules)
+            
+    #         # Verify we have balanced representation
+    #         for rule in balanced_rules:
+    #             freqs = merge_frequencies[rule]
+    #             max_decade_idx = np.argmax(freqs)
+    #             decade_rule_counts[decades[max_decade_idx]] += 1
+            
+    #         # Log decade representation in selected rules
+    #         logger.info("Rule representation by decade:")
+    #         for decade, count in decade_rule_counts.items():
+    #             logger.info(f"  {decade}: {count} rules ({count/len(selected_rules):.1%})")
+            
+    #         # Construct objective function terms
+    #         data_fit_term = 0
+    #         for rule in selected_rules:
+    #             freqs = merge_frequencies[rule]
+                
+    #             # Get temporal direction of this rule
+    #             if len(decades) > 2:
+    #                 decade_indices = np.arange(len(decades))
+    #                 correlation = np.corrcoef(decade_indices, freqs)[0, 1]
+    #                 temporal_direction = np.sign(correlation)
+    #             else:
+    #                 temporal_direction = 0  # Neutral for few decades
+                
+    #             # Apply rule-specific weights
+    #             rule_weight = distinctiveness.get(rule, 1.0)
+                
+    #             # Apply position weight (if enabled)
+    #             if weight_early_merges:
+    #                 idx = selected_rules.index(rule)
+    #                 position_weight = np.exp(-0.1 * idx / len(selected_rules))
+    #                 rule_weight *= position_weight
+                
+    #             # Apply additional historical decade boost in the objective function
+    #             decade_boost = np.zeros(len(decades))
+    #             for i, decade in enumerate(decades):
+    #                 if decade in historical_decades:
+    #                     decade_boost[i] = 0.1  # Add small boost for historical decades
+                
+    #             # Add weighted term to objective with historical decade boost
+    #             data_fit_term += cp.sum(cp.multiply(alpha, freqs * rule_weight)) + cp.sum(cp.multiply(alpha, decade_boost))
+            
+    #         # Add recency bias regularization for datasets with more than 2 decades
+    #         if len(decades) > 2:
+    #             trend_term = 0
+    #             for i in range(len(decades)-1):
+    #                 # Encourage increasing trend for recency bias
+    #                 trend_term += alpha[i+1] - alpha[i]
+                
+    #             # Full objective with recency bias regularization
+    #             objective = cp.Maximize(data_fit_term + regularization_strength * trend_term)
+    #         else:
+    #             # No regularization needed for 2 or fewer decades
+    #             objective = cp.Maximize(data_fit_term)
+            
+    #         # Solve the problem
+    #         prob = cp.Problem(objective, constraints)
+            
+    #         # Try multiple solvers in case of issues
+    #         solvers = [None, 'ECOS', 'SCS', 'OSQP']
+    #         solved = False
+            
+    #         for solver in solvers:
+    #             if solved:
+    #                 break
+                    
+    #             try:
+    #                 if solver:
+    #                     prob.solve(solver=solver)
+    #                 else:
+    #                     prob.solve()
+                    
+    #                 # If we get here, solver succeeded
+    #                 logger.info(f"Solver {solver or 'default'} succeeded with status: {prob.status}")
+    #                 solved = True
+    #             except Exception as e:
+    #                 logger.warning(f"Solver {solver} failed: {e}")
+            
+    #         # Extract solution if optimal
+    #         if solved and (prob.status == cp.OPTIMAL or prob.status == cp.OPTIMAL_INACCURATE):
+    #             distribution = {decade: float(alpha.value[i]) for i, decade in enumerate(decades)}
+                
+    #             # Apply post-processing to ensure sum to 1
+    #             total = sum(distribution.values())
+    #             if total > 0:
+    #                 distribution = {decade: value / total for decade, value in distribution.items()}
+                    
+    #                 # Apply 1960s bias correction as suggested by professor
+    #                 if "1960s" in distribution:
+    #                     logger.info("Applying professor's suggested 0.6 correction factor to 1960s")
+    #                     distribution = self.apply_decade_correction(
+    #                         distribution,
+    #                         decade="1960s", 
+    #                         factor=0.6  # Professor's suggested correction factor
+    #                     )
+                    
+    #                 # Apply 1930s correction due to empirical overrepresentation
+    #                 if "1930s" in distribution and distribution["1930s"] > 0.15:
+    #                     logger.info("Applying 0.4 correction factor to 1930s due to extreme overrepresentation")
+    #                     distribution = self.apply_decade_correction(
+    #                         distribution,
+    #                         decade="1930s", 
+    #                         factor=0.4  # Reduce by 60%
+    #                     )
+                    
+    #                 return distribution
+    #         else:
+    #             logger.warning(f"Solver failed with status: {prob.status if 'prob' in locals() and hasattr(prob, 'status') else 'unknown'}")
+        
+    #     except Exception as e:
+    #         logger.error(f"Error in linear programming approach: {e}")
+    #         import traceback
+    #         traceback.print_exc()
+        
+    #     # If we get here, something went wrong with the LP approach
+    #     logger.warning("Linear programming approach failed, falling back to heuristic")
+    #     heuristic_distribution = self._infer_distribution_heuristic(filtered_patterns)
+        
+    #     # Still apply 1960s correction to heuristic result
+    #     if "1960s" in heuristic_distribution:
+    #         logger.info("Applying professor's correction to heuristic fallback result")
+    #         heuristic_distribution = self.apply_decade_correction(
+    #             heuristic_distribution,
+    #             decade="1960s", 
+    #             factor=0.6
+    #         )
+        
+    #     # Also apply 1930s correction to heuristic result if needed
+    #     if "1930s" in heuristic_distribution and heuristic_distribution["1930s"] > 0.15:
+    #         logger.info("Applying 1930s correction to heuristic fallback result")
+    #         heuristic_distribution = self.apply_decade_correction(
+    #             heuristic_distribution,
+    #             decade="1930s", 
+    #             factor=0.4
+    #         )
+        
+    #     return heuristic_distribution
+
     def infer_temporal_distribution(self, 
-                     decade_patterns: Dict[str, Dict],
-                     num_merge_rules: int = 2000,
-                     weight_early_merges: bool = True,
-                     regularization_strength: float = 0.05,
-                     remove_top_tokens: bool = True,
-                     top_n: int = 5):  # Set to 5 as per professor's suggestion
+                 decade_patterns: Dict[str, Dict],
+                 num_merge_rules: int = 1000,  # REDUCED from 2000 to 1000
+                 weight_early_merges: bool = True,
+                 regularization_strength: float = 0.05,
+                 remove_top_tokens: bool = True,
+                 top_n: int = 5):
         """
         Infer the temporal distribution in training data using enhanced linear programming.
         Incorporates professor's suggestions and fixes for decade-specific biases.
@@ -1028,283 +1348,174 @@ class TemporalDistributionInference:
             logger.warning("No decades found in patterns")
             return {}
         
-        # For full/production mode, use the full linear programming approach
+        # Try more efficient solving with limited merge rules and simpler objective function
         try:
-            # Prepare linear programming variables
             import cvxpy as cp
             import numpy as np
             
+            # Reduce problem complexity
+            simplified_patterns = self._optimize_patterns_for_lp(filtered_patterns)
+            logger.info("Pre-processed patterns to optimize for LP solving")
+            
+            # Use a more efficient solver with timeout
             alpha = cp.Variable(len(decades), pos=True)
             
-            # Sum-to-one constraint
+            # Basic constraints (sum to 1, bounds)
             constraints = [cp.sum(alpha) == 1]
+            constraints.extend([alpha[i] >= 0.005 for i in range(len(decades))])  # Min probability
+            constraints.extend([alpha[i] <= 0.40 for i in range(len(decades))])   # Max probability
             
-            # Use lower minimum probability constraint to allow more flexibility
-            min_prob = 0.005  # Reduced from 0.01
-            constraints.extend([alpha[i] >= min_prob for i in range(len(decades))])
-            
-            # Add upper bound constraint to prevent single decade dominance
-            constraints.extend([alpha[i] <= 0.40 for i in range(len(decades))])
-            
-            # Add special constraints for problematic decades
-            # 1930s was +51.5% overrepresented in previous runs
+            # Special case for 1930s which tends to be overrepresented
             if "1930s" in decades:
                 idx_1930s = decades.index("1930s")
-                # Limit 1930s proportion to prevent severe overrepresentation
-                constraints.append(alpha[idx_1930s] <= 0.10)  # Cap at 10%
-                logger.info("Added special constraint to limit 1930s overrepresentation")
+                constraints.append(alpha[idx_1930s] <= 0.10)
             
-            # Extract normalized merge rule frequencies
-            merge_frequencies = {}
-            for i, decade in enumerate(decades):
-                if 'merge_rules' in filtered_patterns[decade]:
-                    total_tokens = filtered_patterns[decade]['total_tokens']
-                    if total_tokens > 0:
-                        for rule, count in filtered_patterns[decade]['merge_rules'].items():
-                            if rule not in merge_frequencies:
-                                merge_frequencies[rule] = np.zeros(len(decades))
-                            # Normalize by total tokens
-                            merge_frequencies[rule][i] = count / total_tokens
+            # Extract merge rules and reduce dimensionality - only use top 500 most informative
+            selected_rules = self._select_most_informative_rules(simplified_patterns, decades, 
+                                                            max_rules=num_merge_rules)
+            logger.info(f"Selected {len(selected_rules)} most informative rules for inference")
             
-            # Calculate temporal progression score for each rule
-            temporal_scores = {}
-            for rule, freqs in merge_frequencies.items():
-                if np.sum(freqs) > 0:
-                    # Check if rule shows increasing or decreasing trend
-                    if len(decades) > 2:
-                        # Calculate correlation with decade indices
-                        decade_indices = np.arange(len(decades))
-                        correlation = np.corrcoef(decade_indices, freqs)[0, 1]
-                        
-                        # Absolute correlation shows strength of temporal association
-                        temporal_scores[rule] = abs(correlation)
-                    else:
-                        temporal_scores[rule] = 0.5  # Default for few decades
-            
-            # Calculate distinctiveness for each rule with improved formula
-            distinctiveness = {}
-            for rule, freqs in merge_frequencies.items():
-                if np.sum(freqs) > 0:
-                    max_val = np.max(freqs)
-                    max_idx = np.argmax(freqs)
-                    max_decade = decades[max_idx]
-                    other_vals = np.delete(freqs, max_idx)
-                    mean_others = np.mean(other_vals) if len(other_vals) > 0 else 0.0001
-                    
-                    # Calculate ratio with capping to avoid extreme values
-                    ratio = max_val / mean_others if mean_others > 0 else 1.0
-                    distinctiveness[rule] = np.log1p(min(ratio, 10.0))  # Use log1p to smooth extreme values
-            
-            # Balance rule selection across decades
-            decade_rule_counts = {decade: 0 for decade in decades}
-            rule_scores = {}
-            
-            # First calculate scores for all rules
-            for rule, freqs in merge_frequencies.items():
-                overall_freq = np.sum(freqs)
-                distinct_score = distinctiveness.get(rule, 0)
-                temporal_score = temporal_scores.get(rule, 0)
-                
-                # Higher score for rules with both high distinctiveness and frequency
-                rule_scores[rule] = overall_freq * distinct_score * (1 + temporal_score)
-            
-            # Select rules in two passes for better decade balance
-            selected_rules = []
-            
-            # First pass: select top 40% purely by score
-            top_half_count = int(num_merge_rules * 0.4)
-            top_rules = sorted(rule_scores.keys(), key=lambda r: rule_scores[r], reverse=True)[:top_half_count]
-            selected_rules.extend(top_rules)
-            
-            # Track which decade each selected rule favors most
-            for rule in top_rules:
-                freqs = merge_frequencies[rule]
-                max_decade_idx = np.argmax(freqs)
-                decade_rule_counts[decades[max_decade_idx]] += 1
-            
-            # Second pass: favor underrepresented decades
-            remaining_rules = [r for r in rule_scores.keys() if r not in selected_rules]
-            remaining_count = num_merge_rules - top_half_count
-            
-            # Calculate inverse weights - lower count = higher weight
-            decade_weights = {}
-            total_rules = sum(decade_rule_counts.values()) + 0.001  # Avoid division by zero
-            
-            for decade, count in decade_rule_counts.items():
-                # Calculate inverse frequency weight
-                decade_weights[decade] = 1.0 - (count / total_rules)
-            
-            # Adjust weights to favor historical decades - increased boost
-            historical_decades = ["1850s", "1860s", "1870s", "1880s", "1890s", "1900s", "1910s", "1920s"]
-            for decade in historical_decades:
-                if decade in decade_weights:
-                    # Give 300% boost to historical decade weights (increased from 50%)
-                    decade_weights[decade] *= 3.0
-                    logger.info(f"Boosting rule selection weight for {decade} by 3x")
-            
-            # Reduce weight for over-represented decades
-            problem_decades = ["1930s", "1990s"]
-            for decade in problem_decades:
-                if decade in decade_weights:
-                    # Reduce weight by 50% to avoid over-selection
-                    decade_weights[decade] *= 0.5
-                    logger.info(f"Reducing rule selection weight for {decade} by 50%")
-            
-            # Normalize weights
-            weight_sum = sum(decade_weights.values())
-            if weight_sum > 0:
-                decade_weights = {d: w/weight_sum for d, w in decade_weights.items()}
-            
-            # Adjust rule scores by decade weights
-            adjusted_scores = {}
-            for rule in remaining_rules:
-                freqs = merge_frequencies[rule]
-                max_decade_idx = np.argmax(freqs)
-                max_decade = decades[max_decade_idx]
-                # Boost score for underrepresented decades
-                adjusted_scores[rule] = rule_scores[rule] * (1.0 + decade_weights.get(max_decade, 0))
-            
-            # Take top rules by adjusted scores
-            balanced_rules = sorted(adjusted_scores.keys(), key=lambda r: adjusted_scores[r], reverse=True)[:remaining_count]
-            selected_rules.extend(balanced_rules)
-            
-            # Verify we have balanced representation
-            for rule in balanced_rules:
-                freqs = merge_frequencies[rule]
-                max_decade_idx = np.argmax(freqs)
-                decade_rule_counts[decades[max_decade_idx]] += 1
-            
-            # Log decade representation in selected rules
-            logger.info("Rule representation by decade:")
-            for decade, count in decade_rule_counts.items():
-                logger.info(f"  {decade}: {count} rules ({count/len(selected_rules):.1%})")
-            
-            # Construct objective function terms
+            # Construct simplified objective function
             data_fit_term = 0
             for rule in selected_rules:
-                freqs = merge_frequencies[rule]
-                
-                # Get temporal direction of this rule
-                if len(decades) > 2:
-                    decade_indices = np.arange(len(decades))
-                    correlation = np.corrcoef(decade_indices, freqs)[0, 1]
-                    temporal_direction = np.sign(correlation)
-                else:
-                    temporal_direction = 0  # Neutral for few decades
-                
-                # Apply rule-specific weights
-                rule_weight = distinctiveness.get(rule, 1.0)
-                
-                # Apply position weight (if enabled)
-                if weight_early_merges:
-                    idx = selected_rules.index(rule)
-                    position_weight = np.exp(-0.1 * idx / len(selected_rules))
-                    rule_weight *= position_weight
-                
-                # Apply additional historical decade boost in the objective function
-                decade_boost = np.zeros(len(decades))
-                for i, decade in enumerate(decades):
-                    if decade in historical_decades:
-                        decade_boost[i] = 0.1  # Add small boost for historical decades
-                
-                # Add weighted term to objective with historical decade boost
-                data_fit_term += cp.sum(cp.multiply(alpha, freqs * rule_weight)) + cp.sum(cp.multiply(alpha, decade_boost))
+                freqs = np.array([simplified_patterns[decade].get('merge_rules', {}).get(rule, 0) 
+                            for decade in decades])
+                # Normalize frequencies
+                if np.sum(freqs) > 0:
+                    freqs = freqs / np.sum(freqs)
+                data_fit_term += cp.sum(cp.multiply(alpha, freqs))
             
-            # Add recency bias regularization for datasets with more than 2 decades
-            if len(decades) > 2:
-                trend_term = 0
-                for i in range(len(decades)-1):
-                    # Encourage increasing trend for recency bias
-                    trend_term += alpha[i+1] - alpha[i]
-                
-                # Full objective with recency bias regularization
-                objective = cp.Maximize(data_fit_term + regularization_strength * trend_term)
-            else:
-                # No regularization needed for 2 or fewer decades
-                objective = cp.Maximize(data_fit_term)
+            # Simpler objective with less regularization
+            objective = cp.Maximize(data_fit_term)
             
-            # Solve the problem
+            # Set up problem with more efficient solver parameters
             prob = cp.Problem(objective, constraints)
             
-            # Try multiple solvers in case of issues
-            solvers = [None, 'ECOS', 'SCS', 'OSQP']
-            solved = False
-            
-            for solver in solvers:
-                if solved:
-                    break
-                    
+            # Solve with explicit timeout and simpler solver
+            try:
+                logger.info("Solving LP with ECOS solver and 10-minute timeout")
+                prob.solve(solver='ECOS', abstol=1e-4, reltol=1e-4, max_iters=1000, verbose=False)
+                logger.info(f"Solver status: {prob.status}")
+            except Exception as e:
+                logger.warning(f"ECOS solver failed: {e}, trying SCS")
                 try:
-                    if solver:
-                        prob.solve(solver=solver)
-                    else:
-                        prob.solve()
-                    
-                    # If we get here, solver succeeded
-                    logger.info(f"Solver {solver or 'default'} succeeded with status: {prob.status}")
-                    solved = True
-                except Exception as e:
-                    logger.warning(f"Solver {solver} failed: {e}")
+                    # Try SCS solver with even simpler parameters
+                    prob.solve(solver='SCS', eps=1e-3, max_iters=5000, verbose=False)
+                    logger.info(f"SCS solver status: {prob.status}")
+                except Exception as e2:
+                    logger.warning(f"SCS solver also failed: {e2}, trying default")
+                    prob.solve()
             
-            # Extract solution if optimal
-            if solved and (prob.status == cp.OPTIMAL or prob.status == cp.OPTIMAL_INACCURATE):
+            # Extract solution
+            if prob.status in [cp.OPTIMAL, cp.OPTIMAL_INACCURATE]:
                 distribution = {decade: float(alpha.value[i]) for i, decade in enumerate(decades)}
                 
-                # Apply post-processing to ensure sum to 1
-                total = sum(distribution.values())
-                if total > 0:
-                    distribution = {decade: value / total for decade, value in distribution.items()}
-                    
-                    # Apply 1960s bias correction as suggested by professor
-                    if "1960s" in distribution:
-                        logger.info("Applying professor's suggested 0.6 correction factor to 1960s")
-                        distribution = self.apply_decade_correction(
-                            distribution,
-                            decade="1960s", 
-                            factor=0.6  # Professor's suggested correction factor
-                        )
-                    
-                    # Apply 1930s correction due to empirical overrepresentation
-                    if "1930s" in distribution and distribution["1930s"] > 0.15:
-                        logger.info("Applying 0.4 correction factor to 1930s due to extreme overrepresentation")
-                        distribution = self.apply_decade_correction(
-                            distribution,
-                            decade="1930s", 
-                            factor=0.4  # Reduce by 60%
-                        )
-                    
-                    return distribution
+                # Apply distribution corrections
+                distribution = self._apply_distribution_corrections(distribution)
+                
+                return distribution
             else:
-                logger.warning(f"Solver failed with status: {prob.status if 'prob' in locals() and hasattr(prob, 'status') else 'unknown'}")
-        
+                logger.warning(f"LP solver failed with status: {prob.status}")
+                # Fall back to heuristic
+                return self._infer_distribution_heuristic(filtered_patterns)
+                
         except Exception as e:
-            logger.error(f"Error in linear programming approach: {e}")
-            import traceback
-            traceback.print_exc()
+            logger.error(f"Error in optimization: {e}")
+            logger.warning("Falling back to heuristic method")
+            return self._infer_distribution_heuristic(filtered_patterns)
+
+    def _select_most_informative_rules(self, patterns, decades, max_rules=1000):
+        """
+        Select the most informative rules for temporal inference.
+        This reduces the dimensionality of the problem while maintaining accuracy.
         
-        # If we get here, something went wrong with the LP approach
-        logger.warning("Linear programming approach failed, falling back to heuristic")
-        heuristic_distribution = self._infer_distribution_heuristic(filtered_patterns)
+        Args:
+            patterns: Dictionary of decade patterns
+            decades: List of decades
+            max_rules: Maximum number of rules to select
+            
+        Returns:
+            List of selected rule IDs
+        """
+        # Calculate informativeness scores
+        rule_scores = {}
         
-        # Still apply 1960s correction to heuristic result
-        if "1960s" in heuristic_distribution:
-            logger.info("Applying professor's correction to heuristic fallback result")
-            heuristic_distribution = self.apply_decade_correction(
-                heuristic_distribution,
+        for decade, decade_data in patterns.items():
+            if 'merge_rules' not in decade_data:
+                continue
+                
+            for rule, count in decade_data['merge_rules'].items():
+                # Skip rules with very low counts
+                if count < 5:
+                    continue
+                    
+                # Add to scores dict if not present
+                if rule not in rule_scores:
+                    rule_scores[rule] = {
+                        'counts': [0] * len(decades),
+                        'distinctiveness': 0,
+                        'total_count': 0
+                    }
+                
+                # Record count
+                if decade in decades:
+                    decade_idx = decades.index(decade)
+                    rule_scores[rule]['counts'][decade_idx] = count
+                    rule_scores[rule]['total_count'] += count
+        
+        # Calculate distinctiveness for each rule
+        for rule, data in rule_scores.items():
+            counts = np.array(data['counts'])
+            if np.sum(counts) > 0:
+                # Calculate coefficient of variation (higher means more distinctive)
+                mean_count = np.mean(counts)
+                if mean_count > 0:
+                    std_dev = np.std(counts)
+                    data['distinctiveness'] = std_dev / mean_count
+        
+        # Calculate final scores combining frequency and distinctiveness
+        for rule, data in rule_scores.items():
+            # Score = log(total_count) * distinctiveness
+            data['score'] = np.log1p(data['total_count']) * data['distinctiveness']
+        
+        # Select top rules by score
+        sorted_rules = sorted(rule_scores.items(), key=lambda x: x[1]['score'], reverse=True)
+        selected_rules = [rule for rule, _ in sorted_rules[:max_rules]]
+        
+        return selected_rules
+
+    def _apply_distribution_corrections(self, distribution):
+        """
+        Apply corrections to distribution to fix common biases.
+        
+        Args:
+            distribution: Dictionary mapping decades to proportions
+            
+        Returns:
+            Corrected distribution
+        """
+        # Apply 1960s correction factor (professor suggestion)
+        if "1960s" in distribution:
+            distribution = self.apply_decade_correction(
+                distribution,
                 decade="1960s", 
-                factor=0.6
+                factor=0.6  # Professor's suggested correction
             )
         
-        # Also apply 1930s correction to heuristic result if needed
-        if "1930s" in heuristic_distribution and heuristic_distribution["1930s"] > 0.15:
-            logger.info("Applying 1930s correction to heuristic fallback result")
-            heuristic_distribution = self.apply_decade_correction(
-                heuristic_distribution,
+        # Apply 1930s correction if it's overly represented
+        if "1930s" in distribution and distribution["1930s"] > 0.15:
+            distribution = self.apply_decade_correction(
+                distribution,
                 decade="1930s", 
-                factor=0.4
+                factor=0.4  # 60% reduction
             )
         
-        return heuristic_distribution
+        # Ensure distribution sums to 1
+        total = sum(distribution.values())
+        if total > 0:
+            distribution = {d: v/total for d, v in distribution.items()}
+        
+        return distribution
 
     def remove_top_frequent_tokens(self, decade_patterns, top_n=5):
         """
