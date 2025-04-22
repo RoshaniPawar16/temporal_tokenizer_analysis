@@ -451,6 +451,9 @@ class TemporalDistributionInference:
         Analyze merge rules and token patterns for each decade with improved memory efficiency.
         """
         decade_patterns = {}
+
+        # CRITICAL: Reduce sample size for memory efficiency
+        actual_sample_size = min(sample_size, 2000)  # Cap at 2000 samples
         
         # Process each decade with better memory management
         for decade, texts in decade_texts.items():

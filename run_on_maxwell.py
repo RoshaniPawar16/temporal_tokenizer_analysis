@@ -1015,6 +1015,8 @@ def limit_memory_usage():
         memory_info = process.memory_info()
         memory_usage_gb = memory_info.rss / (1024 ** 3)
         logger.info(f"Memory usage after cleanup: {memory_usage_gb:.2f} GB")
+    
+    return memory_usage_gb
 
 def run_parallel_analysis(inference, decade_texts):
     """Process decades in parallel or sequentially depending on test mode."""
@@ -1693,30 +1695,59 @@ def compare_all_distributions(args):
     distributions = define_distributions()
     results_by_dist = {}
     
-    # Run analysis for each distribution and store results directly
+    # Process one distribution at a time with explicit memory cleanup
     for dist_name in distributions:
         # Copy args and update distribution
         dist_args = argparse.Namespace(**vars(args))
         dist_args.distribution = dist_name
         
+        # IMPORTANT: Turn off bootstrap for memory efficiency
+        dist_args.bootstrap = False
+        dist_args.bootstrap_iterations = 0
+        
+        # IMPORTANT: Reduce target size for memory efficiency
+        dist_args.target_size_gb = min(0.25, dist_args.target_size_gb)
+        
         # Run analysis and store the returned results directly
         logger.info(f"Running analysis for {dist_name} distribution...")
-        dist_results = run_analysis(dist_args)
-        
-        if dist_results and "distribution" in dist_results:
-            results_by_dist[dist_name] = {
-                "distribution": dist_results["distribution"],
-                "evaluation": dist_results["evaluation"] if "evaluation" in dist_results else {}
-            }
-            logger.info(f"Successfully completed analysis for {dist_name} distribution")
-        else:
-            logger.warning(f"Analysis for {dist_name} distribution did not return valid results")
+        try:
+            dist_results = run_analysis(dist_args)
+            
+            # Only store the essential results to reduce memory
+            if dist_results and "distribution" in dist_results:
+                results_by_dist[dist_name] = {
+                    "distribution": dist_results["distribution"],
+                    "evaluation": dist_results.get("evaluation", {})
+                }
+                
+                # Force garbage collection after each distribution
+                import gc
+                gc.collect()
+                
+                logger.info(f"Successfully completed analysis for {dist_name} distribution")
+                
+                # IMPORTANT: Save intermediate results after each distribution
+                try:
+                    results_dir = setup_directories()
+                    with open(results_dir / f"intermediate_{dist_name}_results.json", 'w') as f:
+                        json.dump(results_by_dist[dist_name], f, indent=2)
+                except Exception as e:
+                    logger.error(f"Failed to save intermediate results: {e}")
+        except Exception as e:
+            logger.error(f"Analysis for {dist_name} distribution failed: {e}")
+            continue
+            
+        # Force cleanup
+        gc.collect()
     
-    # Create comparative visualizations if we have multiple results
+    # Create comparative visualizations only if we have multiple results
     if len(results_by_dist) > 1:
         logger.info(f"Creating comparative visualizations for {len(results_by_dist)} distributions...")
-        create_distribution_comparison(results_by_dist, distributions, args.tokenizer, setup_directories())
-        logger.info("Comparative visualization complete")
+        try:
+            create_distribution_comparison(results_by_dist, distributions, args.tokenizer, setup_directories())
+            logger.info("Comparative visualization complete")
+        except Exception as e:
+            logger.error(f"Failed to create comparison visualizations: {e}")
     else:
         logger.warning(f"Only {len(results_by_dist)} distributions had valid results - skipping comparison")
     
