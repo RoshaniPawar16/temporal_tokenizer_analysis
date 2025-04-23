@@ -2335,7 +2335,7 @@ class TemporalDatasetManager:
             synthetic_texts.append(synthetic_text)
         
         return synthetic_texts
-    
+
     def ensure_historical_coverage(self):
         """
         Ensures we have sufficient data for all time periods, especially historical ones.
