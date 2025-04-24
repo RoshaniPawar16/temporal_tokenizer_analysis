@@ -346,7 +346,6 @@ class TemporalDistributionInference:
     def quantify_uncertainty(self, decade_patterns, distribution, sample_sizes=None):
         """
         Quantify uncertainty in distribution estimates, especially for small sample sizes.
-        Implements the statistical validation suggested by the professor.
         
         Args:
             decade_patterns: Patterns detected for each decade
@@ -384,7 +383,7 @@ class TemporalDistributionInference:
             if sample_size > 0:
                 margin_of_error = 1.96 * np.sqrt((p * (1-p)) / sample_size)
                 
-                # For very small sample sizes (as per professor's concern), increase uncertainty
+                # For very small sample sizes, increase uncertainty
                 if sample_size < 100:
                     # Add additional penalty for extremely small samples
                     small_sample_penalty = 1.0 + (100 - sample_size) / 100
@@ -416,10 +415,9 @@ class TemporalDistributionInference:
             }
         
         # Calculate the 1960s correction factor based on uncertainty
-        # This implements the professor's suggestion about the 1960s
         if "1960s" in uncertainty:
             sixties_data = uncertainty["1960s"]
-            # Apply stronger correction (0.6) for 1960s as suggested by professor
+            # Apply stronger correction (0.6) for 1960s 
             correction_factor = 0.6
             
             # Adjust the correction factor based on sample size reliability
@@ -437,11 +435,11 @@ class TemporalDistributionInference:
             
             uncertainty["1960s"] = sixties_data
         
-        # Also add the professor's suggestion about removing top tokens
+        # Removing top tokens
         uncertainty["methodology_notes"] = {
-            "top_tokens_removed": 5,  # As suggested by professor
+            "top_tokens_removed": 5,  
             "sixties_correction_applied": "1960s" in uncertainty,
-            "sixties_correction_factor": 0.6  # Professor's suggested value
+            "sixties_correction_factor": 0.6  
         }
         
         return uncertainty
@@ -894,11 +892,11 @@ class TemporalDistributionInference:
     def remove_top_frequent_tokens(self, decade_patterns, top_n=20):
         """
         Remove the most biasing tokens that affect temporal distribution.
-        As suggested by the professor, focusing on top 5 most frequent tokens.
+        Focusing on top 5 most frequent tokens.
         
         Args:
             decade_patterns: Dictionary mapping decades to pattern frequencies
-            top_n: Number of top tokens to remove (professor suggested 5)
+            top_n: Number of top tokens to remove 
             
         Returns:
             Filtered decade patterns with biasing tokens removed
@@ -950,7 +948,7 @@ class TemporalDistributionInference:
                  top_n: int = 20):
         """
         Infer the temporal distribution in training data using enhanced linear programming.
-        Incorporates professor's suggestions and fixes for decade-specific biases.
+        Fixes for decade-specific biases.
         
         Args:
             decade_patterns: Dictionary mapping decades to their patterns
@@ -970,7 +968,7 @@ class TemporalDistributionInference:
         
         # First filter out biasing tokens if requested
         if remove_top_tokens:
-            logger.info(f"Removing top {top_n} most biasing tokens as discussed with professor")
+            logger.info(f"Removing top {top_n} most biasing tokens")
             filtered_patterns = self.remove_top_frequent_tokens(decade_patterns, top_n)
             logger.info("Successfully removed biasing tokens")
         else:
@@ -1014,7 +1012,7 @@ class TemporalDistributionInference:
                 "1930s": 0.3,   # Strong reduction for overrepresented decade
                 "1940s": 0.8,
                 "1950s": 0.9,
-                "1960s": 0.6,   # Professor's suggested correction
+                "1960s": 0.6,   
                 "1970s": 0.8,
                 "1980s": 0.9,
                 "1990s": 0.5,   # Reduce modern overrepresentation
@@ -1187,12 +1185,12 @@ class TemporalDistributionInference:
         Returns:
             Corrected distribution
         """
-        # Apply 1960s correction factor (professor suggestion)
+        # Apply 1960s correction factor 
         if "1960s" in distribution:
             distribution = self.apply_decade_correction(
                 distribution,
                 decade="1960s", 
-                factor=0.6  # Professor's suggested correction
+                factor=0.6  # Suggested correction
             )
         
         # Apply 1930s correction if it's overly represented
@@ -1749,7 +1747,7 @@ class TemporalDistributionInference:
                 
                 # Apply 1960s correction - consistently overrepresented
                 if "1960s" in distribution:
-                    logger.info("Applying 0.6 correction factor to 1960s (professor's suggestion)")
+                    logger.info("Applying 0.6 correction factor to 1960s ")
                     distribution = self.apply_decade_correction(
                         distribution,
                         decade="1960s", 
@@ -1947,7 +1945,7 @@ class TemporalDistributionInference:
                                                     remove_top_tokens=True, top_n=10), 0.3),
                 (lambda dp: self.infer_temporal_distribution(dp, num_merge_rules=1000, 
                                                     remove_top_tokens=True, top_n=15), 0.2),
-                # LP with 1960s correction - stronger correction as suggested by professor
+                # LP with 1960s correction - stronger correction 
                 (lambda dp: self.apply_decade_correction(
                     self.infer_temporal_distribution(dp, num_merge_rules=1500, remove_top_tokens=True, top_n=10), 
                     decade='1960s', factor=0.6), 0.3),

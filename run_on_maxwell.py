@@ -1428,7 +1428,7 @@ def run_analysis(args):
         "1930s": 0.3,   # Strong reduction for overrepresented decade
         "1940s": 0.8,
         "1950s": 0.9,
-        "1960s": 0.6,   # Professor's suggested correction
+        "1960s": 0.6,   
         "1970s": 0.8,
         "1980s": 0.9,
         "1990s": 0.5,   # Reduce modern overrepresentation
