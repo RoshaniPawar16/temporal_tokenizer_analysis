@@ -715,7 +715,7 @@ def preprocess_dataset(decade_texts, args):
     # Normalize to ensure total is 100%
     total_target = sum(target_distribution.values())
     if total_target > 0:
-        target_distribution = {d: p/total_target for d, p in target_distribution.items()}
+        target_distribution = {d: v/total_target for d, v in target_distribution.items()}
     
     # Calculate target bytes for each decade
     total_target_bytes = min(total_bytes, 2 * 1024 * 1024 * 1024)  # Cap at 2GB for performance
