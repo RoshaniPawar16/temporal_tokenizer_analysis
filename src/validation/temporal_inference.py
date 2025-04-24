@@ -744,9 +744,16 @@ class TemporalDistributionInference:
             values = [dist.get(decade, 0) for dist in bootstrap_results]
             values.sort()
             
-            # 95% confidence interval
-            lower = values[int(0.025 * num_bootstraps)]
-            upper = values[int(0.975 * num_bootstraps)]
+            # 95% confidence interval - ensure indices are integers
+            lower_idx = int(0.025 * num_bootstraps)  # Fix: Cast to int
+            upper_idx = int(0.975 * num_bootstraps)  # Fix: Cast to int
+            
+            # Ensure indices are within bounds
+            lower_idx = max(0, min(lower_idx, len(values) - 1))
+            upper_idx = max(0, min(upper_idx, len(values) - 1))
+            
+            lower = values[lower_idx]
+            upper = values[upper_idx]
             
             confidence_intervals[decade] = (lower, upper)
         
