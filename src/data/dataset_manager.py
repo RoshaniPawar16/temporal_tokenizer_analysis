@@ -1039,15 +1039,23 @@ class TemporalDatasetManager:
         # Normalize distribution if needed
         total_proportion = sum(distribution.values())
         if abs(total_proportion - 1.0) > 0.001:  # Allow small rounding errors
-            normalized = {d: v/total_proportion for d, v in distribution.items()}
+            normalized = {d: p/total_proportion for d, p in distribution.items()}
             logger.info(f"Normalized distribution to: {normalized}")
             distribution = normalized
         
-        # Calculate texts per decade, with much higher counts than before
-        texts_per_decade = {decade: max(int(prop * 20000), 1000) for decade, prop in distribution.items()}
+        # Define total_texts based on target size (fix)
+        # Assuming average text size of 10KB to calculate total texts
+        avg_text_size_bytes = 10 * 1024  # 10KB per text 
+        total_texts = int(target_size_bytes / avg_text_size_bytes)
+        
+        texts_per_decade = {decade: max(int(prop * total_texts), 50) for decade, prop in distribution.items()}
         
         # Load all available data with expanded coverage
         logger.info("Loading source texts for controlled dataset...")
+        
+        # Track which decades already have sufficient data
+        decades_needing_data = list(distribution.keys())
+        sufficient_data = {}
         
         # Load British Library historical data FIRST for best historical coverage
         logger.info("Loading British Library historical data...")
@@ -1090,28 +1098,62 @@ class TemporalDatasetManager:
         all_source_texts = {decade: [] for decade in distribution.keys()}
         
         # Combine all data sources, with complete source tracking
+        # British Library - already correctly formatted
         for decade, texts in bl_texts.items():
             if decade in distribution:
                 all_source_texts[decade].extend([(text, "british_library") for text in texts])
         
+        # Gutenberg - ensure proper source labeling
         for decade, texts in gutenberg_texts.items():
             if decade in all_source_texts:
-                all_source_texts[decade].extend(texts)
+                # Fix: Ensure proper format for Gutenberg texts
+                formatted_texts = []
+                for item in texts:
+                    if isinstance(item, tuple) and len(item) >= 1:
+                        # Item is already a tuple, ensure proper source
+                        text = item[0]
+                        formatted_texts.append((text, "gutenberg"))
+                    elif isinstance(item, str):
+                        # Item is a string, convert to proper format
+                        formatted_texts.append((item, "gutenberg"))
+                all_source_texts[decade].extend(formatted_texts)
         
+        # Oscar - ensure proper source labeling
         for decade, texts in oscar_texts.items():
             if decade in all_source_texts:
-                all_source_texts[decade].extend(texts)
+                # Fix: Ensure proper format for Oscar texts
+                formatted_texts = []
+                for item in texts:
+                    if isinstance(item, tuple) and len(item) >= 1:
+                        # Item is already a tuple, ensure proper source
+                        text = item[0]
+                        formatted_texts.append((text, "oscar"))
+                    elif isinstance(item, str):
+                        # Item is a string, convert to proper format
+                        formatted_texts.append((item, "oscar"))
+                all_source_texts[decade].extend(formatted_texts)
         
+        # Modern web - ensure proper source labeling
         for decade, texts in modern_texts.items():
             if decade in all_source_texts:
-                all_source_texts[decade].extend(texts)
+                # Fix: Ensure proper format for modern web texts
+                formatted_texts = []
+                for item in texts:
+                    if isinstance(item, tuple) and len(item) >= 1:
+                        # Item is already a tuple, ensure proper source
+                        text = item[0]
+                        formatted_texts.append((text, "modern_web"))
+                    elif isinstance(item, str):
+                        # Item is a string, convert to proper format
+                        formatted_texts.append((item, "modern_web"))
+                all_source_texts[decade].extend(formatted_texts)
         
         # Log data counts by source for each decade
         for decade, texts in all_source_texts.items():
             bl_count = sum(1 for _, src in texts if src == "british_library")
             gutenberg_count = sum(1 for _, src in texts if src == "gutenberg")
             oscar_count = sum(1 for _, src in texts if src == "oscar")
-            modern_count = sum(1 for _, src in texts if "web" in str(src).lower())
+            modern_count = sum(1 for _, src in texts if "web" in str(src).lower() or src == "modern_web")
             other_count = len(texts) - (bl_count + gutenberg_count + oscar_count + modern_count)
             
             logger.info(f"{decade} source breakdown: {len(texts)} total texts")
@@ -1124,6 +1166,22 @@ class TemporalDatasetManager:
         # Build the controlled dataset with enhanced decade-specific preservation
         controlled_dataset = {}
         current_size_bytes = 0
+        
+        # Check if any decade already has sufficient data
+        for decade in list(bytes_per_decade.keys()):
+            # Calculate current bytes for this decade
+            source_texts = all_source_texts.get(decade, [])
+            if source_texts:
+                total_decade_bytes = sum(len(text.encode('utf-8')) for text, _ in source_texts)
+                target_bytes = bytes_per_decade[decade]
+                
+                # If we already have enough data, mark decade as sufficient
+                if total_decade_bytes >= target_bytes:
+                    logger.info(f"Decade {decade} already has sufficient data: {total_decade_bytes/(1024*1024*1024):.2f}GB")
+                    sufficient_data[decade] = True
+                else:
+                    sufficient_data[decade] = False
+                    logger.info(f"Need more data for {decade}: {total_decade_bytes/(1024*1024*1024):.2f}GB < {target_bytes/(1024*1024*1024):.2f}GB")
         
         # Process each decade individually with exact byte tracking
         for decade, target_bytes in bytes_per_decade.items():
@@ -1315,7 +1373,7 @@ class TemporalDatasetManager:
             json.dump(metadata, f, indent=2)
         
         logger.info(f"Total dataset size: {total_bytes/(1024*1024*1024):.3f} GB")
-        return controlled_dataset    
+        return controlled_dataset
 
     
     def load_additional_sources(self, target_decades):

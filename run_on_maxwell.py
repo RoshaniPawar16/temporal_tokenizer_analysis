@@ -1242,10 +1242,14 @@ def run_analysis(args):
     
     # Get selected distribution
     dist_info = distributions[args.distribution]
-    
-    # Apply general distribution validation to all distribution types
-    # This replaces the special handling for just bimodal distribution
-    dist_info = validate_distribution(dist_info, args.distribution)
+
+    # Apply special handling for bimodal distribution if needed
+    if args.distribution == "bimodal":
+        dist_info = handle_bimodal_distribution(dist_info)
+    else:
+        # Apply general distribution validation to all distribution types
+        dist_info = validate_distribution(dist_info, args.distribution)
+
     selected_dist = dist_info["distribution"]
     
     # Initialize dataset_manager

@@ -2035,6 +2035,7 @@ class TemporalDistributionInference:
         Returns:
             Dictionary with validation metrics
         """
+        bootstrap_iterations = int(bootstrap_iterations)
         # Calculate basic log10(MSE) as in Hayase et al.
         log10_mse = self.calculate_distribution_mse(predicted_distribution, true_distribution)
         
