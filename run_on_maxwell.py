@@ -1167,6 +1167,45 @@ def handle_bimodal_distribution(distribution_info):
     
     return distribution_info
 
+def validate_distribution(distribution_info, distribution_name="unknown"):
+    """
+    Validate and normalize a distribution dictionary to ensure proper numeric values.
+    
+    Args:
+        distribution_info: The distribution dictionary
+        distribution_name: Name of the distribution for logging
+        
+    Returns:
+        Fixed distribution dictionary with proper value types
+    """
+    logger.info(f"Validating {distribution_name} distribution")
+    
+    # Ensure "distribution" key exists
+    if "distribution" not in distribution_info:
+        logger.warning(f"No 'distribution' key in {distribution_name} info")
+        return distribution_info
+    
+    # Make a defensive copy to avoid modifying the original
+    fixed_distribution = {}
+    for decade, value in distribution_info["distribution"].items():
+        try:
+            # Ensure it's a proper float
+            fixed_distribution[decade] = float(value)
+        except (TypeError, ValueError):
+            logger.warning(f"Invalid value for {decade}: {value}, using 0.05 as default")
+            fixed_distribution[decade] = 0.05
+    
+    # Normalize to ensure sum to 1
+    total = sum(fixed_distribution.values())
+    if abs(total - 1.0) > 0.01:  # Allow for small rounding errors
+        logger.warning(f"{distribution_name} distribution sum is {total}, normalizing...")
+        fixed_distribution = {k: v/total for k, v in fixed_distribution.items()}
+    
+    # Update the original dictionary
+    distribution_info["distribution"] = fixed_distribution
+    
+    return distribution_info
+
 def run_analysis(args):
     """
     Run the complete analysis with specified parameters and improved error handling
@@ -1203,12 +1242,11 @@ def run_analysis(args):
     
     # Get selected distribution
     dist_info = distributions[args.distribution]
-    selected_dist = dist_info["distribution"]
     
-    # Special handling for bimodal distribution
-    if args.distribution == "bimodal":
-        dist_info = handle_bimodal_distribution(dist_info)
-        selected_dist = dist_info["distribution"]
+    # Apply general distribution validation to all distribution types
+    # This replaces the special handling for just bimodal distribution
+    dist_info = validate_distribution(dist_info, args.distribution)
+    selected_dist = dist_info["distribution"]
     
     # Initialize dataset_manager
     dataset_manager = TemporalDatasetManager()

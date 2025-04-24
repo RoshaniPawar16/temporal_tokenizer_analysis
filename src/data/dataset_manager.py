@@ -1270,24 +1270,41 @@ class TemporalDatasetManager:
             difference = actual - target
             logger.info(f"  {decade}: {actual:.1%} (target: {target:.1%}, diff: {difference:+.1%})")
         
-        # Create metadata
+        # First, calculate total_texts
+        total_texts = sum(len(texts) for texts in controlled_dataset.values())
+
+        # Then calculate byte size per decade
+        actual_bytes_per_decade = {}
+        for decade, texts in controlled_dataset.items():
+            # Calculate total bytes for this decade
+            decade_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
+            actual_bytes_per_decade[decade] = decade_bytes
+
         metadata = {
             "type": "controlled_dataset",
             "creation_time": time.strftime("%Y-%m-%d %H:%M:%S"),
             "target_distribution": distribution,
             "actual_distribution": actual_distribution,
             "target_size_texts": total_texts,
-            "actual_size_gb": total_bytes / (1024*1024*1024),
-            "total_texts": sum(len(texts) for texts in controlled_dataset.values()),
-            "composition": {
-                "real": sum(sum(1 for _, src in texts if "synthetic" not in src and "augmented" not in src and "partial" not in src) 
-                        for texts in controlled_dataset.values()),
-                "augmented": sum(sum(1 for _, src in texts if "augmented" in src) 
-                            for texts in controlled_dataset.values()),
-                "partial": sum(sum(1 for _, src in texts if "partial" in src) 
-                            for texts in controlled_dataset.values()),
-                "synthetic": sum(sum(1 for _, src in texts if "synthetic" in src) 
-                            for texts in controlled_dataset.values()),
+            "actual_size_gb": current_size_bytes / (1024*1024*1024),
+            
+            "total_texts": total_texts,
+            "decades": {
+                decade: {
+                    "texts": len(texts),
+                    "bytes": actual_bytes_per_decade.get(decade, 0),
+                    "mb": actual_bytes_per_decade.get(decade, 0) / (1024*1024),
+                    "target_proportion": distribution.get(decade, 0),
+                    "actual_proportion": actual_distribution.get(decade, 0),
+                    "proportion_error": actual_distribution.get(decade, 0) - distribution.get(decade, 0),
+                    "sources": {
+                        "british_library": sum(1 for _, src in texts if src == "british_library"),
+                        "gutenberg": sum(1 for _, src in texts if src == "gutenberg"),
+                        "augmented": sum(1 for _, src in texts if "augmented" in src),
+                        "modified": sum(1 for _, src in texts if "modified" in src),
+                        "synthetic": sum(1 for _, src in texts if src == "synthetic")
+                    }
+                } for decade, texts in controlled_dataset.items()
             }
         }
         
