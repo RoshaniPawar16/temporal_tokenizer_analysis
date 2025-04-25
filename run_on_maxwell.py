@@ -1525,10 +1525,11 @@ def run_analysis(args):
     # Evaluate results against ground truth
     logger.info("Evaluating results against ground truth...")
     start_time = time.time()
+    bootstrap_iterations = int(args.bootstrap_iterations)
     evaluation = inference.validate_against_hayase_metrics(
         distribution,
         selected_dist,
-        bootstrap_iterations=0  # MODIFIED: Skip bootstrap in metric validation for speed
+        bootstrap_iterations=bootstrap_iterations 
     )
     inference_time = time.time() - start_time
     
