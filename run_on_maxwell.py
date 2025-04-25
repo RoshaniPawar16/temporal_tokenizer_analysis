@@ -1214,6 +1214,21 @@ def run_analysis(args):
     Args:
         args: Command-line arguments containing analysis parameters
     """
+    # Add debugging output to trace the error for bimodal distribution
+    if args.distribution == "bimodal":
+        logger.info("DEBUGGING bimodal distribution processing")
+        logger.info(f"Args types before conversion: {[(k, type(v)) for k, v in vars(args).items() if not k.startswith('_')]}")
+        
+        # Force all numeric parameters to correct types
+        if hasattr(args, 'bootstrap_iterations'):
+            args.bootstrap_iterations = int(args.bootstrap_iterations)
+        if hasattr(args, 'texts_per_decade'):
+            args.texts_per_decade = int(args.texts_per_decade)
+        if hasattr(args, 'target_size_gb'):
+            args.target_size_gb = float(args.target_size_gb)
+        
+        logger.info(f"Args types after conversion: {[(k, type(v)) for k, v in vars(args).items() if not k.startswith('_')]}")
+    
     # Use the enhanced logging manager instead of the basic configure_logging
     log_filename = logging_manager.setup_logging()
     
@@ -1250,7 +1265,9 @@ def run_analysis(args):
         # Apply general distribution validation to all distribution types
         dist_info = validate_distribution(dist_info, args.distribution)
 
-    selected_dist = dist_info["distribution"]
+    # selected_dist = dist_info["distribution"]
+    # Ensure all values in the distribution are proper floats
+    selected_dist = {k: float(v) for k, v in dist_info["distribution"].items()}
     
     # Initialize dataset_manager
     dataset_manager = TemporalDatasetManager()
