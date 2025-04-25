@@ -1214,19 +1214,17 @@ def run_analysis(args):
     Args:
         args: Command-line arguments containing analysis parameters
     """
-    # Add debugging output to trace the error for bimodal distribution
+    # Force all numeric parameters to correct types (for ALL distributions)
+    if hasattr(args, 'bootstrap_iterations'):
+        args.bootstrap_iterations = int(args.bootstrap_iterations)
+    if hasattr(args, 'texts_per_decade'):
+        args.texts_per_decade = int(args.texts_per_decade)
+    if hasattr(args, 'target_size_gb'):
+        args.target_size_gb = float(args.target_size_gb)
+
+    # Only add debugging output for bimodal distribution
     if args.distribution == "bimodal":
         logger.info("DEBUGGING bimodal distribution processing")
-        logger.info(f"Args types before conversion: {[(k, type(v)) for k, v in vars(args).items() if not k.startswith('_')]}")
-        
-        # Force all numeric parameters to correct types
-        if hasattr(args, 'bootstrap_iterations'):
-            args.bootstrap_iterations = int(args.bootstrap_iterations)
-        if hasattr(args, 'texts_per_decade'):
-            args.texts_per_decade = int(args.texts_per_decade)
-        if hasattr(args, 'target_size_gb'):
-            args.target_size_gb = float(args.target_size_gb)
-        
         logger.info(f"Args types after conversion: {[(k, type(v)) for k, v in vars(args).items() if not k.startswith('_')]}")
     
     # Use the enhanced logging manager instead of the basic configure_logging
