@@ -2069,8 +2069,24 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     
-    # Run all distributions or just the specified one
-    if args.distribution == "all":
-        compare_all_distributions(args)
-    else:
-        run_analysis(args)
+    # # Run all distributions or just the specified one
+    # if args.distribution == "all":
+    #     compare_all_distributions(args)
+    # else:
+    #     run_analysis(args)
+
+    try:
+        # Run all distributions or just the specified one
+        if args.distribution == "all":
+            compare_all_distributions(args)
+        else:
+            run_analysis(args)
+    except Exception as e:
+        print("--- CAUGHT EXCEPTION ---")
+        print(f"Error Type: {type(e).__name__}")
+        print(f"Error Message: {e}")
+        print("--- FULL STACK TRACE ---")
+        traceback.print_exc() # This forces printing the traceback
+        print("------------------------")
+        # Optionally re-raise or exit
+        sys.exit(1) # Exit with error code
