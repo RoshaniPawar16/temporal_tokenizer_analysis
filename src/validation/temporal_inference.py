@@ -2036,6 +2036,7 @@ class TemporalDistributionInference:
         Returns:
             Dictionary with validation metrics
         """
+        print(f"DEBUG entering validate_against_hayase_metrics with bootstrap_iterations={bootstrap_iterations}, type={type(bootstrap_iterations)}")
         print(f"bootstrap_iterations type: {type(bootstrap_iterations)}, value: {bootstrap_iterations}")
         bootstrap_iterations = int(bootstrap_iterations)
         # Calculate basic log10(MSE) as in Hayase et al.

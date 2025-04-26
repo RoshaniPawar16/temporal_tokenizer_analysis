@@ -32,6 +32,30 @@ import os
 import multiprocessing as mp
 from functools import partial
 
+def detailed_exception_handler(exctype, value, traceback):
+    print(f"\n\n{'=' * 50}")
+    print("DETAILED ERROR INFORMATION")
+    print(f"Error type: {exctype.__name__}")
+    print(f"Error message: {value}")
+    print("Stack trace:")
+    import traceback as tb
+    tb.print_tb(traceback)
+    print(f"{'=' * 50}\n\n")
+    
+    # Print data types of common variables
+    print("Checking types of important variables...")
+    for name in dir():
+        if 'bootstrap' in name.lower():
+            obj = locals().get(name)
+            if obj is not None:
+                print(f"{name}: {type(obj)}")
+    
+    # Call original exception handler
+    sys.__excepthook__(exctype, value, traceback)
+
+import sys
+sys.excepthook = detailed_exception_handler
+
 class EnhancedLoggingManager:
     """
     Advanced logging manager to reduce noise and batch similar errors.
@@ -782,7 +806,7 @@ def preprocess_dataset(decade_texts, args):
                     break
                     
                 # Create multiple augmented versions to reach target faster
-                for _ in range(3):  # Create 3 augmented versions of each text
+                for _ in range(int(3)):  # Create 3 augmented versions of each text
                     try:
                         if isinstance(base_text, tuple):
                             text_content = base_text[0]
@@ -1214,6 +1238,9 @@ def run_analysis(args):
     Args:
         args: Command-line arguments containing analysis parameters
     """
+    print(f"DEBUG: bootstrap_iterations type at start of run_analysis: {type(args.bootstrap_iterations)}")
+    print(f"DEBUG: bootstrap_iterations value: {args.bootstrap_iterations}")
+
     # Force all numeric parameters to correct types (for ALL distributions)
     if hasattr(args, 'bootstrap_iterations'):
         args.bootstrap_iterations = int(args.bootstrap_iterations)
