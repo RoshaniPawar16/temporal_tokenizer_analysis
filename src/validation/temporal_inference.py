@@ -707,6 +707,7 @@ class TemporalDistributionInference:
         Returns:
             Dictionary with bootstrapped distributions and confidence intervals
         """
+        num_bootstraps = int(num_bootstraps)
         decades = sorted(decade_patterns.keys())
         bootstrap_results = []
         
