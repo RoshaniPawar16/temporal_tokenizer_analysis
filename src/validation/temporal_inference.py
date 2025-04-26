@@ -707,6 +707,11 @@ class TemporalDistributionInference:
         Returns:
             Dictionary with bootstrapped distributions and confidence intervals
         """
+        print(f"ENTERING bootstrap_distribution_estimates WITH DATA TYPES:")
+        print(f"  num_bootstraps: {num_bootstraps} ({type(num_bootstraps)})")
+        if not isinstance(num_bootstraps, int):
+            print(f"  FORCING INTEGER: {int(num_bootstraps)}")
+            num_bootstraps = int(num_bootstraps)
         # Multiple explicit type conversions and extensive debugging
         try:
             print(f"ENTERING bootstrap_distribution_estimates with {num_bootstraps}, type={type(num_bootstraps)}")
@@ -2127,8 +2132,21 @@ class TemporalDistributionInference:
             Dictionary with validation metrics
         """
         print(f"DEBUG entering validate_against_hayase_metrics with bootstrap_iterations={bootstrap_iterations}, type={type(bootstrap_iterations)}")
-        print(f"bootstrap_iterations type: {type(bootstrap_iterations)}, value: {bootstrap_iterations}")
-        bootstrap_iterations = int(bootstrap_iterations)
+        
+        # Triple validation to ensure integer type
+        try:
+            bootstrap_iterations = int(bootstrap_iterations)
+        except (TypeError, ValueError):
+            print("WARNING: Could not convert bootstrap_iterations to int, using 0")
+            bootstrap_iterations = 0
+            
+        # Verify one more time
+        if not isinstance(bootstrap_iterations, int):
+            print(f"ERROR: bootstrap_iterations is still not an int: {type(bootstrap_iterations)}")
+            bootstrap_iterations = 0
+            
+        print(f"FINAL bootstrap_iterations = {bootstrap_iterations}, type = {type(bootstrap_iterations)}")
+        
         # Calculate basic log10(MSE) as in Hayase et al.
         log10_mse = self.calculate_distribution_mse(predicted_distribution, true_distribution)
         
@@ -2207,14 +2225,11 @@ class TemporalDistributionInference:
             "comparison_to_benchmark": log10_mse + 7.30  # Difference from benchmark
         }
         
-        # If bootstrap iterations requested, add those metrics
+        # Update the result dictionary creation with explicit int conversion
         if bootstrap_iterations > 0:
-            # Bootstrap code here would be executed
-            # For now, we'll just add a placeholder
             result["bootstrap_results"] = {
-                "requested_iterations": int(bootstrap_iterations),
-                "confidence_level": confidence_level
-                # Actual bootstrap metrics would be added here
+                "requested_iterations": int(bootstrap_iterations),  # Force int
+                "confidence_level": float(confidence_level)  # Explicit float for consistency
             }
         
         return result

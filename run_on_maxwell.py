@@ -1291,7 +1291,7 @@ def run_analysis(args):
     if args.distribution == "bimodal":
         logger.info("DEBUGGING bimodal distribution processing")
         logger.info(f"Args types after conversion: {[(k, type(v)) for k, v in vars(args).items() if not k.startswith('_')]}")
-        
+
     # Use the enhanced logging manager instead of the basic configure_logging
     log_filename = logging_manager.setup_logging()
     
@@ -1585,14 +1585,21 @@ def run_analysis(args):
         "uncertainty": uncertainty
     }
     
-    # Evaluate results against ground truth
     logger.info("Evaluating results against ground truth...")
     start_time = time.time()
-    bootstrap_iterations = int(args.bootstrap_iterations)
+    # Ensure bootstrap_iterations is always an integer with triple-safety
+    bootstrap_iterations_int = int(args.bootstrap_iterations)  # First conversion
+    print(f"DEBUG: bootstrap_iterations_int = {bootstrap_iterations_int}, type = {type(bootstrap_iterations_int)}")
+    # Force to zero if invalid to prevent any possible float conversion
+    if not isinstance(bootstrap_iterations_int, int) or bootstrap_iterations_int < 0:
+        bootstrap_iterations_int = 0
+        print("WARNING: Invalid bootstrap_iterations, using 0")
+        
+    # Use the integer variable directly - don't use args.bootstrap_iterations anymore
     evaluation = inference.validate_against_hayase_metrics(
         distribution,
         selected_dist,
-        bootstrap_iterations=bootstrap_iterations 
+        bootstrap_iterations=bootstrap_iterations_int  # Pass the integer version
     )
     inference_time = time.time() - start_time
     
@@ -1864,13 +1871,14 @@ def compare_all_distributions(args):
     
     # Process one distribution at a time with explicit memory cleanup
     for dist_name in distributions:
-        # Copy args and update distribution
         dist_args = argparse.Namespace(**vars(args))
         dist_args.distribution = dist_name
         
         # IMPORTANT: Turn off bootstrap for memory efficiency
         dist_args.bootstrap = False
-        dist_args.bootstrap_iterations = int(0)
+        dist_args.bootstrap_iterations = int(0)  # Force integer 0
+        # Verify the type is correct
+        print(f"DEBUG: dist_args.bootstrap_iterations = {dist_args.bootstrap_iterations}, type = {type(dist_args.bootstrap_iterations)}")
 
         # Ensure bootstrap_iterations is an integer (not a float)
         if hasattr(dist_args, 'bootstrap_iterations'):
