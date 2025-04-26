@@ -1258,19 +1258,40 @@ def run_analysis(args):
     print(f"DEBUG: bootstrap_iterations type at start of run_analysis: {type(args.bootstrap_iterations)}")
     print(f"DEBUG: bootstrap_iterations value: {args.bootstrap_iterations}")
 
+    # --- Start: Argument Type Enforcement ---
     # Force all numeric parameters to correct types (for ALL distributions)
-    if hasattr(args, 'bootstrap_iterations'):
-        args.bootstrap_iterations = int(args.bootstrap_iterations)
-    if hasattr(args, 'texts_per_decade'):
-        args.texts_per_decade = int(args.texts_per_decade)
-    if hasattr(args, 'target_size_gb'):
-        args.target_size_gb = float(args.target_size_gb)
+    # This is the primary fix location if the initial parsing was float
+    try:
+        if hasattr(args, 'bootstrap_iterations'):
+            # Ensure it's not None before casting
+            if args.bootstrap_iterations is not None:
+                 args.bootstrap_iterations = int(args.bootstrap_iterations)
+            else:
+                 logger.warning("bootstrap_iterations argument is None, defaulting to 0")
+                 args.bootstrap_iterations = 0 # Default to 0 if None
+        if hasattr(args, 'texts_per_decade'):
+             if args.texts_per_decade is not None:
+                args.texts_per_decade = int(args.texts_per_decade)
+             else:
+                 logger.warning("texts_per_decade argument is None, defaulting to 5000")
+                 args.texts_per_decade = 5000 # Example default
+        if hasattr(args, 'target_size_gb'):
+             if args.target_size_gb is not None:
+                args.target_size_gb = float(args.target_size_gb)
+             else:
+                 logger.warning("target_size_gb argument is None, defaulting to 1.0")
+                 args.target_size_gb = 1.0 # Example default
+    except (ValueError, TypeError) as e:
+        logger.error(f"Error converting command-line arguments: {e}")
+        logger.error("Please check the numeric arguments passed to the script.")
+        return # Stop execution if arguments are invalid
+    # --- End: Argument Type Enforcement ---
 
     # Only add debugging output for bimodal distribution
     if args.distribution == "bimodal":
         logger.info("DEBUGGING bimodal distribution processing")
         logger.info(f"Args types after conversion: {[(k, type(v)) for k, v in vars(args).items() if not k.startswith('_')]}")
-    
+        
     # Use the enhanced logging manager instead of the basic configure_logging
     log_filename = logging_manager.setup_logging()
     
