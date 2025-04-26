@@ -712,7 +712,7 @@ class TemporalDistributionInference:
         bootstrap_results = []
         
         # Run multiple bootstrap iterations
-        for i in range(num_bootstraps):
+        for i in range(int(num_bootstraps)):
             # Create bootstrapped sample of the patterns
             bootstrapped_patterns = {}
             for decade, patterns in decade_patterns.items():
@@ -2122,14 +2122,12 @@ class TemporalDistributionInference:
             # Bootstrap code here would be executed
             # For now, we'll just add a placeholder
             result["bootstrap_results"] = {
-                "requested_iterations": bootstrap_iterations,
+                "requested_iterations": int(bootstrap_iterations),
                 "confidence_level": confidence_level
                 # Actual bootstrap metrics would be added here
             }
         
         return result
-
-    
 
     def _infer_distribution_bayesian(self, decade_patterns):
         """
