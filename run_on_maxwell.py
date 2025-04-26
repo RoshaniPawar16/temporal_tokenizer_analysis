@@ -1805,7 +1805,7 @@ def compare_all_distributions(args):
         
         # IMPORTANT: Turn off bootstrap for memory efficiency
         dist_args.bootstrap = False
-        dist_args.bootstrap_iterations = 0
+        dist_args.bootstrap_iterations = int(0)
 
         # Ensure bootstrap_iterations is an integer (not a float)
         if hasattr(dist_args, 'bootstrap_iterations'):
