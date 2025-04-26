@@ -32,6 +32,23 @@ import os
 import multiprocessing as mp
 from functools import partial
 
+import traceback
+
+def detailed_exception_handler(exctype, value, tb):
+    print(f"\n\n{'=' * 50}")
+    print("DETAILED ERROR INFORMATION")
+    print(f"Error type: {exctype.__name__}")
+    print(f"Error message: {value}")
+    print("Stack trace:")
+    traceback.print_tb(tb)
+    print(f"{'=' * 50}\n\n")
+    
+    # Call original handler
+    sys.__excepthook__(exctype, value, tb)
+
+import sys
+sys.excepthook = detailed_exception_handler
+
 def detailed_exception_handler(exctype, value, traceback):
     print(f"\n\n{'=' * 50}")
     print("DETAILED ERROR INFORMATION")
