@@ -1884,6 +1884,14 @@ def compare_all_distributions(args):
                 except Exception as e:
                     logger.error(f"Failed to save intermediate results: {e}")
         except Exception as e:
+            import traceback
+            print(f"\n\n{'=' * 50}")
+            print(f"DETAILED ERROR FOR {dist_name} DISTRIBUTION")
+            print(f"Error type: {type(e).__name__}")
+            print(f"Error message: {e}")
+            print("Stack trace:")
+            traceback.print_exc()  # This prints the full stack trace
+            print(f"{'=' * 50}\n\n")
             logger.error(f"Analysis for {dist_name} distribution failed: {e}")
             continue
             

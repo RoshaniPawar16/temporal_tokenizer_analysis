@@ -64,26 +64,26 @@ python -c "import numpy; print(f'NumPy version: {numpy.__version__}')"
 echo "Testing basic imports..."
 python -c "import transformers; import datasets; print('Basic imports successful')"
 
-# Run analysis with increased data volume and filtering
-echo "Running analysis for all distributions..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution all --texts_per_decade 5000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30 --verbose
+# # Run analysis with increased data volume and filtering
+# echo "Running analysis for all distributions..."
+# python run_on_maxwell.py --tokenizer gpt2 --distribution all --texts_per_decade 5000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30 --verbose
 
-# # Run analysis with reduced memory requirements
-# echo "Running uniform distribution analysis..."
-# python run_on_maxwell.py --tokenizer gpt2 --distribution uniform --texts_per_decade 2000 --target_size_gb 0.25 --bootstrap --bootstrap_iterations 10 --verbose
+# Run analysis with reduced memory requirements
+echo "Running uniform distribution analysis..."
+python run_on_maxwell.py --tokenizer gpt2 --distribution uniform --texts_per_decade 2000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30 --verbose
 
-# echo "Running recency bias analysis..."
-# python run_on_maxwell.py --tokenizer gpt2 --distribution recency_bias --texts_per_decade 2000 --target_size_gb 0.25
+echo "Running recency bias analysis..."
+python run_on_maxwell.py --tokenizer gpt2 --distribution recency_bias --texts_per_decade 2000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
 
-# echo "Running historical bias analysis..."
-# python run_on_maxwell.py --tokenizer gpt2 --distribution historical_bias --texts_per_decade 2000 --target_size_gb 0.25
+echo "Running historical bias analysis..."
+python run_on_maxwell.py --tokenizer gpt2 --distribution historical_bias --texts_per_decade 2000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
 
-# echo "Running bimodal distribution analysis..."
-# python run_on_maxwell.py --tokenizer gpt2 --distribution bimodal --texts_per_decade 2000 --target_size_gb 0.25
+echo "Running bimodal distribution analysis..."
+python run_on_maxwell.py --tokenizer gpt2 --distribution bimodal --texts_per_decade 2000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
 
-# # Optional: Only run comparison if individual runs succeeded
-# echo "Running all distributions comparison..."
-# python run_on_maxwell.py --tokenizer gpt2 --distribution all --texts_per_decade 2000 --target_size_gb 0.25
+# Optional: Only run comparison if individual runs succeeded
+echo "Running all distributions comparison..."
+python run_on_maxwell.py --tokenizer gpt2 --distribution all --texts_per_decade 2000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
 
 
 echo "Job completed at: $(date)"
