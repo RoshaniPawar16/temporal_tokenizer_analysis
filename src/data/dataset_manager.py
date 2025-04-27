@@ -713,7 +713,7 @@ class TemporalDatasetManager:
         vocab = decade_vocab.get(decade, ["historical", "period", "era", "decade", "time"])
         
         texts = []
-        for i in range(count):
+        for i in range(int(count)):
             # Generate a synthetic text with period vocabulary
             paragraphs = []
             
@@ -2701,7 +2701,7 @@ class TemporalDatasetManager:
         
         result = []
         
-        for _ in range(paragraphs):
+        for _ in range(int(paragraphs)):
             # Select opener and prepare paragraph
             opener = random.choice(era_style.get("openers", ["In this period"]))
             topic = random.choice(vocab)
@@ -2915,8 +2915,8 @@ class TemporalDatasetManager:
             else:
                 # Add a completely new paragraph with period-specific style
                 num_paragraphs = min(5, int((target_length - current_length) // 500))
-                
-                for _ in range(max(1, num_paragraphs)):
+        
+                for _ in range(max(1, int(num_paragraphs))):  # FIX: Ensure integer in range
                     # Generate a paragraph with period-appropriate content
                     paragraph = "\n\n"
                     

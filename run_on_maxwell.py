@@ -791,7 +791,9 @@ def preprocess_dataset(decade_texts, args):
             top_texts = sorted_texts[:top_count]
             
             if sample_size - top_count > 0 and len(sorted_texts) > top_count:
-                rest_sample = random.sample(sorted_texts[top_count:], min(sample_size - top_count, len(sorted_texts) - top_count))
+                # FIX: Ensure sample_size - top_count is an integer
+                rest_count = min(int(sample_size - top_count), len(sorted_texts) - top_count)
+                rest_sample = random.sample(sorted_texts[top_count:], rest_count)
                 sampled_texts = top_texts + rest_sample
             else:
                 sampled_texts = top_texts
@@ -823,7 +825,8 @@ def preprocess_dataset(decade_texts, args):
                     break
                     
                 # Create multiple augmented versions to reach target faster
-                for _ in range(int(3)):  # Create 3 augmented versions of each text
+                # FIX: Remove redundant int() conversion, 3 is already an integer
+                for _ in range(3):  # Create 3 augmented versions of each text
                     try:
                         if isinstance(base_text, tuple):
                             text_content = base_text[0]
@@ -831,10 +834,12 @@ def preprocess_dataset(decade_texts, args):
                             text_content = base_text
                             
                         # Augment with appropriate volume multiplier
+                        # FIX: Ensure randint args are integers
+                        volume_multiplier = random.randint(2, 5)
                         augmented = data_manager._augment_text_for_volume(
                             text_content, 
                             decade, 
-                            volume_multiplier=random.randint(2, 5)
+                            volume_multiplier=volume_multiplier
                         )
                         
                         augmented_texts.append(augmented)
