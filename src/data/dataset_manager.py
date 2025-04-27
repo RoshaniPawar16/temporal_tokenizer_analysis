@@ -1031,23 +1031,24 @@ class TemporalDatasetManager:
         logger.info(f"Creating controlled dataset with distribution: {distribution}")
         
         # Set data volume targets based on Hayase paper
-        target_size_bytes = target_size_gb * 1024 * 1024 * 1024
+        target_size_bytes = float(target_size_gb) * 1024 * 1024 * 1024  # Force float for calculation
         
         # Calculate bytes per decade based on distribution
-        bytes_per_decade = {decade: target_size_bytes * prop for decade, prop in distribution.items()}
+        bytes_per_decade = {decade: target_size_bytes * float(prop) for decade, prop in distribution.items()}
         
         # Normalize distribution if needed
-        total_proportion = sum(distribution.values())
+        total_proportion = sum(float(v) for v in distribution.values())
         if abs(total_proportion - 1.0) > 0.001:  # Allow small rounding errors
-            normalized = {d: p/total_proportion for d, p in distribution.items()}
+            normalized = {d: float(p)/total_proportion for d, p in distribution.items()}
             logger.info(f"Normalized distribution to: {normalized}")
             distribution = normalized
         
         # Define total_texts based on target size (fix)
         # Assuming average text size of 10KB to calculate total texts
         avg_text_size_bytes = 10 * 1024  # 10KB per text 
-        total_texts = int(target_size_bytes / avg_text_size_bytes)
+        total_texts = int(target_size_bytes / avg_text_size_bytes)  # Explicit int conversion
         
+        # FIX: Explicit int conversion for counts
         texts_per_decade = {decade: max(int(prop * total_texts), 50) for decade, prop in distribution.items()}
         
         # Load all available data with expanded coverage
@@ -1189,9 +1190,10 @@ class TemporalDatasetManager:
             
             if not source_texts:
                 logger.warning(f"No source texts for {decade}, generating synthetic texts")
+                # FIX: Ensure count is an integer 
                 synthetic_texts = self._create_historical_synthetic_texts(
                     decade=decade,
-                    count=1000,  # Generate 1000 synthetic texts
+                    count=1000,  # Already an integer
                     existing_data={},
                     preserve_decade_characteristics=True
                 )
@@ -1215,12 +1217,13 @@ class TemporalDatasetManager:
                     decade_bytes += text_bytes
                 else:
                     # For last text, add a partial text to exactly meet target
-                    remaining_bytes = target_bytes - decade_bytes
+                    remaining_bytes = int(target_bytes - decade_bytes)  # FIX: Ensure integer
                     if remaining_bytes > 1000:  # Only add if significant chunk remains
                         # Find a suitable truncation point (end of sentence)
-                        truncation_point = min(len(text), remaining_bytes)
+                        truncation_point = int(min(len(text), remaining_bytes))  # FIX: Ensure integer
                         # Try to find a sentence boundary
-                        for i in range(truncation_point - 1, max(0, truncation_point - 200), -1):
+                        # FIX: Ensure all values in range() are integers
+                        for i in range(int(truncation_point) - 1, max(0, int(truncation_point - 200)), -1):
                             if i < len(text) and text[i] in '.!?' and i + 1 < len(text) and text[i+1].isspace():
                                 truncation_point = i + 1
                                 break
@@ -1242,6 +1245,7 @@ class TemporalDatasetManager:
                     augmented_bytes = 0
                     
                     # Base texts to augment from - up to 100 texts
+                    # FIX: Ensure min() argument is an integer
                     base_texts = decade_texts[:min(100, len(decade_texts))]
                     augmented_count = 0
                     
@@ -1250,10 +1254,12 @@ class TemporalDatasetManager:
                         base_text, base_source = random.choice(base_texts)
                         
                         # Create augmented version
+                        # FIX: Ensure volume_multiplier is an integer
+                        volume_multiplier = random.randint(3, 10)
                         augmented_text = self._augment_text_for_volume(
                             base_text, 
                             decade, 
-                            volume_multiplier=random.randint(3, 10)  # Variable size augmentation
+                            volume_multiplier=volume_multiplier
                         )
                         
                         text_bytes = len(augmented_text.encode('utf-8'))
@@ -1274,6 +1280,7 @@ class TemporalDatasetManager:
                     
                     # Generate synthetic texts
                     estimated_text_size = 10000  # Assume average synthetic text is 10KB
+                    # FIX: Ensure count is an integer
                     synthetic_count = max(10, int(remaining_bytes / estimated_text_size))
                     
                     logger.info(f"Adding {synthetic_count} synthetic texts for {decade}")
@@ -1306,10 +1313,16 @@ class TemporalDatasetManager:
             synthetic_count = sum(1 for _, src in decade_texts if "synthetic" in src)
             
             if decade_texts:
-                logger.info(f"  Composition: {real_count/len(decade_texts):.1%} real, "
-                        f"{augmented_count/len(decade_texts):.1%} augmented, "
-                        f"{partial_count/len(decade_texts):.1%} partial, "
-                        f"{synthetic_count/len(decade_texts):.1%} synthetic")
+                # FIX: Ensure all divisions produce floats for formatting
+                real_percentage = real_count/float(len(decade_texts)) if len(decade_texts) > 0 else 0.0
+                augmented_percentage = augmented_count/float(len(decade_texts)) if len(decade_texts) > 0 else 0.0
+                partial_percentage = partial_count/float(len(decade_texts)) if len(decade_texts) > 0 else 0.0
+                synthetic_percentage = synthetic_count/float(len(decade_texts)) if len(decade_texts) > 0 else 0.0
+                
+                logger.info(f"  Composition: {real_percentage:.1%} real, "
+                        f"{augmented_percentage:.1%} augmented, "
+                        f"{partial_percentage:.1%} partial, "
+                        f"{synthetic_percentage:.1%} synthetic")
         
         # Verify the final dataset meets the target distribution
         total_bytes = sum(sum(len(text.encode('utf-8')) for text, _ in texts) 
@@ -1318,7 +1331,8 @@ class TemporalDatasetManager:
         actual_distribution = {}
         for decade, texts in controlled_dataset.items():
             decade_bytes = sum(len(text.encode('utf-8')) for text, _ in texts)
-            actual_distribution[decade] = decade_bytes / total_bytes if total_bytes > 0 else 0
+            # FIX: Ensure division produces a float
+            actual_distribution[decade] = float(decade_bytes) / float(total_bytes) if total_bytes > 0 else 0.0
         
         # Log actual vs target distribution for verification
         logger.info("Actual vs Target Distribution:")
@@ -1344,17 +1358,17 @@ class TemporalDatasetManager:
             "target_distribution": distribution,
             "actual_distribution": actual_distribution,
             "target_size_texts": total_texts,
-            "actual_size_gb": current_size_bytes / (1024*1024*1024),
+            "actual_size_gb": float(current_size_bytes) / (1024*1024*1024),  # FIX: Ensure float division
             
             "total_texts": total_texts,
             "decades": {
                 decade: {
                     "texts": len(texts),
                     "bytes": actual_bytes_per_decade.get(decade, 0),
-                    "mb": actual_bytes_per_decade.get(decade, 0) / (1024*1024),
-                    "target_proportion": distribution.get(decade, 0),
-                    "actual_proportion": actual_distribution.get(decade, 0),
-                    "proportion_error": actual_distribution.get(decade, 0) - distribution.get(decade, 0),
+                    "mb": float(actual_bytes_per_decade.get(decade, 0)) / (1024*1024),  # FIX: Ensure float division
+                    "target_proportion": float(distribution.get(decade, 0)),  # FIX: Ensure value is float
+                    "actual_proportion": float(actual_distribution.get(decade, 0)),  # FIX: Ensure value is float
+                    "proportion_error": float(actual_distribution.get(decade, 0) - distribution.get(decade, 0)),  # FIX: Ensure value is float
                     "sources": {
                         "british_library": sum(1 for _, src in texts if src == "british_library"),
                         "gutenberg": sum(1 for _, src in texts if src == "gutenberg"),
@@ -1374,7 +1388,6 @@ class TemporalDatasetManager:
         
         logger.info(f"Total dataset size: {total_bytes/(1024*1024*1024):.3f} GB")
         return controlled_dataset
-
     
     def load_additional_sources(self, target_decades):
         """

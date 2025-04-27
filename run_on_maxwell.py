@@ -1379,11 +1379,11 @@ def run_analysis(args):
         logger.info(f"  - Augmented: {augmented_count} ({augmented_count/text_count:.1%})")
         logger.info(f"  - Synthetic: {synthetic_count} ({synthetic_count/text_count:.1%})")
         
-    # Create dataset with target distribution
+    # Create dataset with target distribution 
     logger.info(f"Creating dataset with target size of {target_size_gb}GB per decade...")
     controlled_dataset = dataset_manager.create_large_dataset(
         distribution=selected_dist,
-        target_size_gb=target_size_gb
+        target_size_gb=float(target_size_gb)  # Ensure this is a float
     )
     
     # Skip British Library test to save time
