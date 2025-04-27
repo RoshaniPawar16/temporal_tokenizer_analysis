@@ -868,6 +868,45 @@ class TemporalDistributionInference:
         
         return corrected
 
+    def validate_decade_corrections(self, distribution, decade_corrections):
+        """
+        Validate the impact of each decade correction factor.
+        
+        Args:
+            distribution: Original distribution before corrections
+            decade_corrections: Dictionary mapping decades to correction factors
+            
+        Returns:
+            Dictionary with validation metrics
+        """
+        validation_results = {}
+        
+        # Make a copy of the original distribution
+        original_dist = distribution.copy()
+        
+        # For each decade, measure the impact of applying only that correction
+        for decade, factor in decade_corrections.items():
+            if decade not in distribution:
+                continue
+                
+            # Apply only this correction
+            test_dist = original_dist.copy()
+            test_dist = self.apply_decade_correction(test_dist, decade=decade, factor=factor)
+            
+            # Measure impact by calculating total distribution change
+            total_change = sum(abs(test_dist[d] - original_dist[d]) for d in original_dist.keys())
+            
+            # Record the impact metrics
+            validation_results[decade] = {
+                "original_value": original_dist.get(decade, 0),
+                "corrected_value": test_dist.get(decade, 0),
+                "percentage_change": (test_dist.get(decade, 0) / max(0.0001, original_dist.get(decade, 0)) - 1) * 100,
+                "total_distribution_change": total_change,
+                "effective": total_change > 0.01  # Consider effective if change > 1%
+            }
+        
+        return validation_results
+
     def analyze_decade_specific_issues(self, decade_patterns: Dict[str, Dict], problematic_decade="1960s") -> Dict:
         """
         Analyze patterns specific to a problematic decade to identify anomalies.
@@ -951,56 +990,6 @@ class TemporalDistributionInference:
             "analysis_summary": f"The top 20 distinctive rules contribute {total_distinctive_contribution:.2f}% to {problematic_decade}'s total token count"
         }
 
-    def remove_top_frequent_tokens(self, decade_patterns, top_n=20):
-        """
-        Remove the most biasing tokens that affect temporal distribution.
-        Focusing on top 5 most frequent tokens.
-        
-        Args:
-            decade_patterns: Dictionary mapping decades to pattern frequencies
-            top_n: Number of top tokens to remove 
-            
-        Returns:
-            Filtered decade patterns with biasing tokens removed
-        """
-        # Create a copy to avoid modifying the original
-        filtered_patterns = {}
-        for decade, patterns in decade_patterns.items():
-            if isinstance(patterns, dict):
-                filtered_patterns[decade] = {
-                    key: value.copy() if isinstance(value, dict) else value 
-                    for key, value in patterns.items()
-                }
-            else:
-                filtered_patterns[decade] = patterns
-        
-        # Create a global token frequency counter across all decades
-        global_token_freq = {}
-        
-        # Count tokens across all decades to find the most frequent ones
-        for decade, patterns in decade_patterns.items():
-            if isinstance(patterns, dict) and 'merge_rules' in patterns:
-                for token, freq in patterns['merge_rules'].items():
-                    if token not in global_token_freq:
-                        global_token_freq[token] = 0
-                    global_token_freq[token] += freq
-        
-        # Find the most frequent tokens overall
-        most_frequent_tokens = sorted(global_token_freq.items(), key=lambda x: x[1], reverse=True)[:top_n]
-        tokens_to_remove = [token for token, _ in most_frequent_tokens]
-        
-        logger.info(f"Removing top {len(tokens_to_remove)} most frequent tokens: {tokens_to_remove}")
-        
-        # Remove these tokens from all decade patterns
-        for decade, patterns in filtered_patterns.items():
-            if isinstance(patterns, dict) and 'merge_rules' in patterns:
-                patterns['merge_rules'] = {
-                    token: freq for token, freq in patterns['merge_rules'].items()
-                    if token not in tokens_to_remove
-                }
-        
-        return filtered_patterns
-
     def infer_temporal_distribution(self, 
                  decade_patterns: Dict[str, Dict],
                  num_merge_rules: int = 1000,
@@ -1061,7 +1050,7 @@ class TemporalDistributionInference:
                 regularization_strength=regularization_strength
             )
             
-            # Apply comprehensive decade-specific corrections
+            # Define comprehensive decade-specific corrections
             decade_corrections = {
                 "1850s": 2.5,   # Boost historical representation 
                 "1860s": 2.3,
@@ -1083,9 +1072,20 @@ class TemporalDistributionInference:
                 "2020s": 0.7
             }
             
+            # Validate the effectiveness of each correction
+            validation_results = self.validate_decade_corrections(distribution, decade_corrections)
+            
+            # Filter to only use effective corrections
+            effective_corrections = {
+                decade: factor for decade, factor in decade_corrections.items() 
+                if decade in validation_results and validation_results[decade].get("effective", False)
+            }
+            
+            logger.info(f"Found {len(effective_corrections)} effective corrections out of {len(decade_corrections)} total corrections")
+            
             # Apply corrections in order of largest adjustment first
             sorted_corrections = sorted(
-                [(d, f) for d, f in decade_corrections.items() if d in distribution],
+                [(d, f) for d, f in effective_corrections.items() if d in distribution],
                 key=lambda x: abs(1.0 - x[1]),
                 reverse=True
             )
@@ -1097,6 +1097,34 @@ class TemporalDistributionInference:
                     factor=factor
                 )
                 logger.info(f"Applied correction factor of {factor} to {decade}")
+            
+            # Identify potentially problematic decades after corrections
+            problematic_threshold = 0.15  # 15% difference threshold
+            potentially_problematic = []
+            
+            # Look for outliers in the distribution
+            avg_value = sum(distribution.values()) / len(distribution)
+            std_dev = (sum((v - avg_value) ** 2 for v in distribution.values()) / len(distribution)) ** 0.5
+            
+            for decade, value in distribution.items():
+                if abs(value - avg_value) > 2 * std_dev:
+                    potentially_problematic.append((decade, "statistical_outlier", abs(value - avg_value)))
+            
+            # Analyze the most problematic decades
+            if potentially_problematic:
+                potentially_problematic.sort(key=lambda x: x[2], reverse=True)
+                logger.info(f"Analyzing {len(potentially_problematic)} potentially problematic decades")
+                
+                for decade, reason, difference in potentially_problematic[:2]:  # Analyze top 2 most problematic
+                    if decade != "1960s":  # Skip 1960s which is already analyzed elsewhere
+                        logger.info(f"Performing specific analysis of {decade} decade patterns (reason: {reason}, difference: {difference:.3f})")
+                        decade_analysis = self.analyze_decade_specific_issues(decade_patterns, decade)
+                        
+                        # Apply targeted correction if needed and not already applied
+                        if decade_analysis.get("suggested_correction_factor", 1.0) != 1.0 and decade not in effective_corrections:
+                            correction_factor = decade_analysis["suggested_correction_factor"]
+                            logger.info(f"Applying {decade}-specific correction factor of {correction_factor} based on analysis")
+                            distribution = self.apply_decade_correction(distribution, decade=decade, factor=correction_factor)
             
             # Verify and ensure distribution sums to 1
             total = sum(distribution.values())
@@ -1347,6 +1375,57 @@ class TemporalDistributionInference:
                 # Default low distinctiveness for tokens in only one decade
                 token_distinctiveness[token] = 0
         
+        # Identify HTML-like and special character tokens
+        import re
+        html_pattern = re.compile(r'^[<>/.()[\]{}]|[<>/.()[\]{}]$')
+        
+        # For each decade, identify its most distinctive tokens
+        distinctive_decade_tokens = {}
+        for decade, patterns in decade_patterns.items():
+            if isinstance(patterns, dict) and 'merge_rules' in patterns:
+                decade_tokens = []
+                decade_total = patterns.get('total_tokens', 1)
+                
+                for token, count in patterns['merge_rules'].items():
+                    # Calculate normalized frequency for this decade
+                    norm_freq = count / decade_total if decade_total > 0 else 0
+                    
+                    # Compare to other decades
+                    other_decades = [d for d in decade_patterns.keys() if d != decade]
+                    other_freqs = []
+                    
+                    for other_decade in other_decades:
+                        if isinstance(decade_patterns[other_decade], dict) and 'merge_rules' in decade_patterns[other_decade]:
+                            other_rules = decade_patterns[other_decade]['merge_rules']
+                            other_total = decade_patterns[other_decade].get('total_tokens', 1)
+                            
+                            if token in other_rules and other_total > 0:
+                                other_freq = other_rules[token] / other_total
+                            else:
+                                other_freq = 0
+                                
+                            other_freqs.append(other_freq)
+                    
+                    # Calculate distinctiveness for this decade
+                    if other_freqs:
+                        avg_other = sum(other_freqs) / len(other_freqs)
+                        distinctiveness = norm_freq / (avg_other + 0.0001)  # Avoid division by zero
+                        
+                        # If token is highly distinctive for this decade (>2x more common)
+                        if distinctiveness > 2.0 and count > 5:
+                            decade_tokens.append((token, distinctiveness))
+                
+                # Sort and keep top distinctive tokens for this decade
+                decade_tokens.sort(key=lambda x: x[1], reverse=True)
+                distinctive_decade_tokens[decade] = [token for token, _ in decade_tokens[:5]]  # Top 5 per decade
+        
+        # Flatten the list of distinctive tokens
+        protected_tokens = set()
+        for decade_tokens in distinctive_decade_tokens.values():
+            protected_tokens.update(decade_tokens)
+        
+        logger.info(f"Protected {len(protected_tokens)} decade-distinctive tokens from removal")
+        
         # Identify tokens that are both common and have low temporal distinctiveness
         # These are likely to be common English tokens that don't help distinguish decades
         biasing_tokens = []
@@ -1355,24 +1434,52 @@ class TemporalDistributionInference:
             if freq > 10:  # Minimum frequency threshold
                 distinctiveness = token_distinctiveness.get(token, 0)
                 
+                # Higher bias score for HTML-like tokens
+                modifier = 5.0 if html_pattern.search(token) else 1.0
                 # Enhanced scoring formula for identifying biasing tokens
                 # Tokens with high frequency and low distinctiveness are most biasing
-                bias_score = freq / (distinctiveness + 0.001)  # Avoid division by zero
+                bias_score = (freq / (distinctiveness + 0.001)) * modifier  # Avoid division by zero
                 
                 biasing_tokens.append((token, bias_score, freq, distinctiveness))
         
         # Sort by bias score (descending)
         biasing_tokens.sort(key=lambda x: x[1], reverse=True)
         
+        # Create modified biasing tokens list, excluding protected tokens
+        revised_biasing_tokens = []
+        html_tokens = []
+        
+        for token, score, freq, distinctiveness in biasing_tokens:
+            if html_pattern.search(token):
+                # HTML-like tokens get priority for removal
+                html_tokens.append((token, score, freq, distinctiveness))
+            elif token not in protected_tokens:
+                # Other tokens, excluding protected ones
+                revised_biasing_tokens.append((token, score, freq, distinctiveness))
+        
+        # Sort both lists by score
+        html_tokens.sort(key=lambda x: x[1], reverse=True)
+        revised_biasing_tokens.sort(key=lambda x: x[1], reverse=True)
+        
+        # Combine the lists, prioritizing HTML tokens
+        html_count = min(len(html_tokens), top_n // 2)  # Use up to half the slots for HTML tokens
+        tokens_to_remove = [token for token, _, _, _ in html_tokens[:html_count]]
+        
+        # Fill remaining slots with other high-bias tokens
+        remaining_slots = top_n - len(tokens_to_remove)
+        tokens_to_remove.extend([token for token, _, _, _ in revised_biasing_tokens[:remaining_slots]])
+        
         # Log top tokens for verification
         logger.info(f"Top biasing tokens identified:")
         token_list = []
         for token, score, freq, distinctiveness in biasing_tokens[:min(10, top_n)]:
-            token_list.append(f"{token} (score: {score:.1f})")
+            if token in tokens_to_remove:
+                token_list.append(f"{token} (score: {score:.1f})")
         logger.info(", ".join(token_list))
         
-        # Select top biasing tokens
-        tokens_to_remove = [token for token, _, _, _ in biasing_tokens[:top_n]]
+        # Log which tokens were protected
+        logger.info(f"Token filtering: Removed {len(tokens_to_remove)} tokens, protected {len(protected_tokens)} decade-specific tokens")
+        logger.info(f"HTML-like tokens removed: {[t for t in tokens_to_remove if html_pattern.search(t)]}")
         
         # Remove selected tokens from all decade patterns
         for decade, patterns in filtered_patterns.items():
@@ -1667,7 +1774,7 @@ class TemporalDistributionInference:
         return filtered_patterns
 
     def _solve_efficient_lp(self, decade_patterns, decades, num_merge_rules,
-                            weight_early_merges, regularization_strength):
+                        weight_early_merges, regularization_strength):
         """
         Solve the LP problem using a more efficient approach focusing on high-signal constraints.
         Enhanced with robust decade-specific constraints and better error handling.
@@ -1807,32 +1914,35 @@ class TemporalDistributionInference:
             if total > 0:
                 distribution = {decade: value / total for decade, value in distribution.items()}
                 
-                # Apply 1960s correction - consistently overrepresented
-                if "1960s" in distribution:
-                    logger.info("Applying 0.6 correction factor to 1960s ")
-                    distribution = self.apply_decade_correction(
-                        distribution,
-                        decade="1960s", 
-                        factor=0.6
-                    )
+                # Define decade corrections
+                decade_corrections = {
+                    "1960s": 0.6,  # Consistently overrepresented
+                    "1930s": 0.4 if distribution.get("1930s", 0) > 0.15 else 1.0,  # Only if overrepresented
+                    "1910s": 1.5 if distribution.get("1910s", 0) < 0.03 else 1.0,  # Only if underrepresented
+                    "1980s": 0.8 if distribution.get("1980s", 0) > 0.15 else 1.0,  # Based on recent results
+                    "2010s": 1.2 if distribution.get("2010s", 0) < 0.05 else 0.8  # Adaptive correction
+                }
                 
-                # Apply 1930s correction if it's overly represented
-                if "1930s" in distribution and distribution["1930s"] > 0.15:
-                    logger.info("Applying 0.4 correction factor to 1930s due to overrepresentation")
-                    distribution = self.apply_decade_correction(
-                        distribution,
-                        decade="1930s", 
-                        factor=0.4
-                    )
+                # Validate decade corrections
+                validation_results = self.validate_decade_corrections(distribution, decade_corrections)
                 
-                # Apply special adjustment to 1910s which is often underrepresented
-                if "1910s" in distribution and distribution["1910s"] < 0.03:
-                    logger.info("Boosting 1910s which appears underrepresented")
-                    distribution = self.apply_decade_correction(
-                        distribution,
-                        decade="1910s", 
-                        factor=1.5  # Boost by 50%
-                    )
+                # Log validation results
+                logger.info("Decade correction validation:")
+                effective_corrections = {}
+                for decade, results in sorted(validation_results.items(), key=lambda x: abs(x[1]["percentage_change"]), reverse=True):
+                    if results["effective"]:
+                        logger.info(f"  {decade}: {results['percentage_change']:.1f}% change, affecting {results['total_distribution_change']:.4f} of distribution")
+                        effective_corrections[decade] = decade_corrections[decade]
+                    else:
+                        logger.info(f"  {decade}: Minimal effect (change: {results['percentage_change']:.1f}%), skipping")
+                
+                # Only apply corrections with meaningful impact
+                logger.info(f"Applying {len(effective_corrections)} effective corrections")
+                
+                # Apply each effective correction
+                for decade, factor in effective_corrections.items():
+                    logger.info(f"Applying {factor} correction factor to {decade}")
+                    distribution = self.apply_decade_correction(distribution, decade=decade, factor=factor)
                 
                 return distribution
         else:

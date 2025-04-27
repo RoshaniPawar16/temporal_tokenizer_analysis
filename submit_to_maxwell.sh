@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH --job-name=temporal_analysis
-#SBATCH --time=20:00:00
+#SBATCH --time=24:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=128G
+#SBATCH --mem=192G
 #SBATCH --output=temporal_analysis_%j.out
 #SBATCH --error=temporal_analysis_%j.err
 

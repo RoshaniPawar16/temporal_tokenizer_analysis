@@ -763,6 +763,58 @@ def preprocess_dataset(decade_texts, args):
     target_bytes_by_decade = {decade: total_target_bytes * percentage 
                             for decade, percentage in target_distribution.items()}
     
+    # Ensure minimum sample sizes for all decades
+    min_texts_per_decade = 20  # Set a minimum threshold
+    decades_needing_samples = []
+    
+    for decade, texts in decade_texts.items():
+        if len(texts) < min_texts_per_decade:
+            decades_needing_samples.append((decade, len(texts)))
+    
+    if decades_needing_samples:
+        logger.warning(f"Found {len(decades_needing_samples)} decades with insufficient samples:")
+        for decade, count in decades_needing_samples:
+            logger.warning(f"  {decade}: only {count} texts (minimum: {min_texts_per_decade})")
+        
+        logger.info("Increasing samples for underrepresented decades...")
+        
+        # For each decade with too few samples, attempt to add more from existing dataset
+        for decade, count in decades_needing_samples:
+            texts_needed = min_texts_per_decade - count
+            logger.info(f"Need {texts_needed} more texts for {decade}")
+            
+            # Try to use existing texts by copying and slightly modifying them
+            existing_texts = decade_texts.get(decade, [])
+            if existing_texts:
+                additional_texts = []
+                base_texts = existing_texts.copy()
+                
+                # Create variations of existing texts
+                for i in range(min(texts_needed, len(base_texts) * 3)):
+                    base_idx = i % len(base_texts)
+                    base_text = base_texts[base_idx]
+                    
+                    # Handle both string and tuple formats
+                    if isinstance(base_text, tuple):
+                        text_content = base_text[0]
+                        source = base_text[1]
+                    else:
+                        text_content = base_text
+                        source = "unknown"
+                    
+                    # Create a slightly modified version
+                    # Simple modification: add/remove some spaces and newlines
+                    modified_text = text_content
+                    modified_text = modified_text.replace("  ", " ").replace("\n\n", "\n")
+                    if len(modified_text) > 500:
+                        split_point = len(modified_text) // 2
+                        modified_text = modified_text[:split_point] + "\n" + modified_text[split_point:]
+                    
+                    additional_texts.append((modified_text, f"{source}_variant"))
+                
+                decade_texts[decade].extend(additional_texts[:texts_needed])
+                logger.info(f"Added {min(texts_needed, len(additional_texts))} text variants to {decade}")
+    
     # Balance the dataset by sampling, augmenting, or creating synthetic data
     balanced_texts = {}
     for decade, target_bytes in target_bytes_by_decade.items():
@@ -781,7 +833,7 @@ def preprocess_dataset(decade_texts, args):
         if current_bytes > target_bytes * 1.1:  # 10% margin
             # Calculate sampling rate
             sample_ratio = target_bytes / current_bytes
-            sample_size = max(10, int(len(texts) * sample_ratio))
+            sample_size = max(min_texts_per_decade, int(len(texts) * sample_ratio))
             
             # Prioritize longer texts
             sorted_texts = sorted(texts, key=lambda x: len(x) if isinstance(x, str) else len(x[0]), reverse=True)
@@ -857,6 +909,11 @@ def preprocess_dataset(decade_texts, args):
         else:
             logger.info(f"Keeping {len(texts)} texts for {decade} (already within target range)")
             balanced_texts[decade] = texts
+    
+    # Final check for minimum texts per decade
+    for decade, texts in balanced_texts.items():
+        if len(texts) < min_texts_per_decade:
+            logger.warning(f"Decade {decade} still has insufficient texts ({len(texts)} < {min_texts_per_decade})")
     
     # Log final sizes
     logger.info("Final data distribution after preprocessing:")
@@ -1379,13 +1436,23 @@ def run_analysis(args):
         logger.info(f"  - Augmented: {augmented_count} ({augmented_count/text_count:.1%})")
         logger.info(f"  - Synthetic: {synthetic_count} ({synthetic_count/text_count:.1%})")
         
-    # Create dataset with target distribution 
-    logger.info(f"Creating dataset with target size of {target_size_gb}GB per decade...")
+    # # Create dataset with target distribution 
+    # logger.info(f"Creating dataset with target size of {target_size_gb}GB per decade...")
+    # controlled_dataset = dataset_manager.create_large_dataset(
+    #     distribution=selected_dist,
+    #     target_size_gb=float(target_size_gb)  # Ensure this is a float
+    # )
+    
+    original_target_gb = float(target_size_gb)
+    effective_target_gb = 8.0  # Aim for 8GB total dataset
+
+    logger.info(f"Increasing target size from {original_target_gb}GB to {effective_target_gb}GB to match Hayase paper volumes")
+
     controlled_dataset = dataset_manager.create_large_dataset(
         distribution=selected_dist,
-        target_size_gb=float(target_size_gb)  # Ensure this is a float
+        target_size_gb=float(effective_target_gb) # Ensure this is a float
     )
-    
+
     # Skip British Library test to save time
     
     # Check for cached dataset
