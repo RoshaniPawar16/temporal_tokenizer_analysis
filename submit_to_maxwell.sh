@@ -64,9 +64,9 @@ python -c "import numpy; print(f'NumPy version: {numpy.__version__}')"
 echo "Testing basic imports..."
 python -c "import transformers; import datasets; print('Basic imports successful')"
 
-# Run analysis with increased data volume and filtering
-echo "Running analysis for all distributions..."
-python run_on_maxwell.py --tokenizer gpt2 --distribution all --texts_per_decade 5000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30 --verbose
+# # Run analysis with increased data volume and filtering
+# echo "Running analysis for all distributions..."
+# python run_on_maxwell.py --tokenizer gpt2 --distribution all --texts_per_decade 5000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30 --verbose
 
 # # Run analysis with reduced memory requirements
 # echo "Running uniform distribution analysis..."
@@ -85,5 +85,25 @@ python run_on_maxwell.py --tokenizer gpt2 --distribution all --texts_per_decade 
 # echo "Running all distributions comparison..."
 # python run_on_maxwell.py --tokenizer gpt2 --distribution all --texts_per_decade 2000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
 
+# Run multi-model analysis for all distributions
+echo "Running multi-model analysis..."
+
+# Define all distributions
+DISTRIBUTIONS=(uniform recency_bias historical_bias bimodal)
+
+# Run multi-model analysis for each distribution
+for dist in "${DISTRIBUTIONS[@]}"; do
+    echo "Running analysis for $dist distribution with multiple models..."
+    python run_multimodel_analysis.py \
+        --models gpt2,bert-base-uncased,roberta-base \
+        --distribution $dist \
+        --target_size_gb 1.0 \
+        --bootstrap_iterations 30 \
+        --texts_per_decade 5000
+    
+    # Clean up resources between runs
+    python -c "import gc; gc.collect()"
+    sleep 10
+done
 
 echo "Job completed at: $(date)"

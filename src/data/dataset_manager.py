@@ -2205,7 +2205,7 @@ class TemporalDatasetManager:
         
         return chunks
 
-    def _create_historical_synthetic_texts(self, decade: str, count: int, existing_data: Dict[str, List]) -> List[str]:
+    def _create_historical_synthetic_texts(self, decade: str, count: int, existing_data: Dict[str, List], preserve_decade_characteristics: bool = True) -> List[str]:
         """
         Create historically plausible synthetic texts for decades with insufficient data.
         This generates text with appropriate vocabulary, style, and topics for each period.

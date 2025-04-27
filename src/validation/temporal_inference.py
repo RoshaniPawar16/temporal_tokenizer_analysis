@@ -381,6 +381,7 @@ class TemporalDistributionInference:
             p = distribution.get(decade, 0)
             
             if sample_size > 0:
+                # Standard error calculation
                 margin_of_error = 1.96 * np.sqrt((p * (1-p)) / sample_size)
                 
                 # For very small sample sizes, increase uncertainty
@@ -388,6 +389,12 @@ class TemporalDistributionInference:
                     # Add additional penalty for extremely small samples
                     small_sample_penalty = 1.0 + (100 - sample_size) / 100
                     margin_of_error *= small_sample_penalty
+                    
+                # For historical decades, consider evidence quality
+                if decade in ["1850s", "1860s", "1870s", "1880s", "1890s"]:
+                    # Historical data is often less reliable due to limited sources
+                    historical_penalty = 1.3  # 30% penalty for historical decades
+                    margin_of_error *= historical_penalty
             else:
                 # If no samples, set a high uncertainty
                 margin_of_error = 0.5  # Represent high uncertainty with 50% margin
@@ -414,32 +421,35 @@ class TemporalDistributionInference:
                 "reliability": reliability
             }
         
-        # Calculate the 1960s correction factor based on uncertainty
-        if "1960s" in uncertainty:
-            sixties_data = uncertainty["1960s"]
-            # Apply stronger correction (0.6) for 1960s 
-            correction_factor = 0.6
+        # Calculate the correction factor based on uncertainty
+        for decade in uncertainty:
+            decade_data = uncertainty[decade]
             
-            # Adjust the correction factor based on sample size reliability
-            if sixties_data["reliability"] == "high":
-                # High reliability means we can be more confident in the correction
-                sixties_data["corrected_value"] = sixties_data["value"] * correction_factor
-            elif sixties_data["reliability"] == "medium":
-                # Medium reliability means we apply a slightly less aggressive correction
-                adjusted_factor = (correction_factor + 1.0) / 2  # Average between correction and no correction
-                sixties_data["corrected_value"] = sixties_data["value"] * adjusted_factor
+            # Apply stronger correction when uncertainty is high
+            if decade_data["reliability"] == "low":
+                # For low reliability, use a conservative estimate (closer to uniform)
+                uniform_value = 1.0 / len(decades)
+                # Weight between estimated value and uniform based on reliability
+                weight_to_uniform = 0.7  # 70% weight to uniform for low reliability
+                corrected_value = (decade_data["value"] * (1 - weight_to_uniform) + 
+                                uniform_value * weight_to_uniform)
+                decade_data["corrected_value"] = corrected_value
+            elif decade_data["reliability"] == "medium":
+                # For medium reliability, modest adjustment toward uniform
+                uniform_value = 1.0 / len(decades)
+                weight_to_uniform = 0.3  # 30% weight to uniform for medium reliability
+                corrected_value = (decade_data["value"] * (1 - weight_to_uniform) + 
+                                uniform_value * weight_to_uniform)
+                decade_data["corrected_value"] = corrected_value
             else:
-                # Low reliability means high uncertainty, so we're more cautious with correction
-                # Use a milder correction
-                sixties_data["corrected_value"] = sixties_data["value"] * 0.8  # 20% reduction instead of 40%
-            
-            uncertainty["1960s"] = sixties_data
+                # For high reliability, use the estimated value
+                decade_data["corrected_value"] = decade_data["value"]
         
-        # Removing top tokens
+        # Add methodology notes
         uncertainty["methodology_notes"] = {
-            "top_tokens_removed": 5,  
-            "sixties_correction_applied": "1960s" in uncertainty,
-            "sixties_correction_factor": 0.6  
+            "top_tokens_removed": 20,  
+            "historical_penalty_applied": True,
+            "reliability_based_correction": True
         }
         
         return uncertainty
@@ -695,6 +705,73 @@ class TemporalDistributionInference:
                             for decade, rules in distinctiveness_by_decade.items()}
         
         return distinctiveness_by_decade, avg_distinctiveness
+
+    def _compute_adaptive_weights(self, decade_patterns):
+        """
+        Compute adaptive weights for tokens based on their temporal context.
+        
+        Args:
+            decade_patterns: Patterns detected for each decade
+            
+        Returns:
+            Dictionary mapping tokens to their adjusted weights
+        """
+        # Define decade groups
+        historical_decades = ["1850s", "1860s", "1870s", "1880s", "1890s"]
+        mid_decades = ["1900s", "1910s", "1920s", "1930s", "1940s", "1950s"]
+        modern_decades = ["1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"]
+        
+        # Identify all merge rules
+        all_rules = set()
+        for decade, patterns in decade_patterns.items():
+            if 'merge_rules' in patterns:
+                all_rules.update(patterns['merge_rules'].keys())
+        
+        # Calculate temporal spread for each rule
+        rule_decade_presence = {rule: [] for rule in all_rules}
+        for decade, patterns in decade_patterns.items():
+            if 'merge_rules' in patterns:
+                for rule in all_rules:
+                    if rule in patterns['merge_rules']:
+                        rule_decade_presence[rule].append(decade)
+        
+        # Compute adaptive weights
+        rule_weights = {}
+        for rule, decades in rule_decade_presence.items():
+            if not decades:
+                rule_weights[rule] = 1.0  # Default weight
+                continue
+                
+            # Count presence in each decade group
+            historical_count = sum(1 for d in decades if d in historical_decades)
+            mid_count = sum(1 for d in decades if d in mid_decades)
+            modern_count = sum(1 for d in decades if d in modern_decades)
+            
+            # Calculate balance factor - higher means more evenly distributed
+            total_count = historical_count + mid_count + modern_count
+            if total_count == 0:
+                rule_weights[rule] = 1.0
+                continue
+                
+            historical_ratio = historical_count / total_count
+            mid_ratio = mid_count / total_count
+            modern_ratio = modern_count / total_count
+            
+            # Higher weight for balanced rules (appear across many decades)
+            # Lower weight for rules that are heavily biased to one era
+            balance_score = min(historical_ratio, mid_ratio, modern_ratio) * 3
+            
+            # Adjust weights to balance eras
+            # Penalize historical-only tokens to counter historical bias
+            if historical_count > 0 and mid_count == 0 and modern_count == 0:
+                rule_weights[rule] = 0.5  # Reduce weight of historical-only tokens
+            elif modern_count > 0 and historical_count == 0 and mid_count == 0:
+                rule_weights[rule] = 1.2  # Boost modern-only tokens
+            else:
+                # Balance score gives higher weight to tokens appearing across eras
+                rule_weights[rule] = 1.0 + balance_score
+        
+        return rule_weights
 
     def bootstrap_distribution_estimates(self, decade_patterns, num_bootstraps=100):
         """
@@ -1052,24 +1129,24 @@ class TemporalDistributionInference:
             
             # Define comprehensive decade-specific corrections
             decade_corrections = {
-                "1850s": 2.5,   # Boost historical representation 
-                "1860s": 2.3,
-                "1870s": 2.1,
-                "1880s": 2.0,
-                "1890s": 1.8,
-                "1900s": 1.5,
-                "1910s": 1.3,
-                "1920s": 1.2,
-                "1930s": 0.3,   # Strong reduction for overrepresented decade
-                "1940s": 0.8,
-                "1950s": 0.9,
-                "1960s": 0.6,   
-                "1970s": 0.8,
-                "1980s": 0.9,
-                "1990s": 0.5,   # Reduce modern overrepresentation
-                "2000s": 0.6,
-                "2010s": 0.4,
-                "2020s": 0.7
+                "1850s": 0.4,   # Reduce historical overrepresentation - previously 2.5 
+                "1860s": 0.5,   # Reduce historical overrepresentation - previously 2.3
+                "1870s": 0.5,   # Reduce historical overrepresentation - previously 2.1
+                "1880s": 0.6,   # Reduce historical overrepresentation - previously 2.0
+                "1890s": 0.6,   # Reduce historical overrepresentation - previously 1.8
+                "1900s": 0.8,   # Moderate reduction - previously 1.5
+                "1910s": 0.9,   # Slight reduction - previously 1.3
+                "1920s": 1.0,   # No correction - previously 1.2
+                "1930s": 0.3,   # Strong reduction for overrepresented decade (keep same)
+                "1940s": 0.8,   # Keep same
+                "1950s": 0.9,   # Keep same
+                "1960s": 0.6,   # Keep same
+                "1970s": 0.8,   # Keep same
+                "1980s": 0.9,   # Keep same
+                "1990s": 0.5,   # Keep same
+                "2000s": 0.6,   # Keep same
+                "2010s": 0.4,   # Keep same
+                "2020s": 0.7    # Keep same
             }
             
             # Validate the effectiveness of each correction
@@ -1212,11 +1289,16 @@ class TemporalDistributionInference:
                         except:
                             data['temporal_trend'] = 0
         
-        # Balance rule selection between historical and modern markers
-        # Ensure at least 30% of rules are historical and 30% are modern
-        historical_quota = max(int(max_rules * 0.3), 10)
-        modern_quota = max(int(max_rules * 0.3), 10)
+        # More balanced quota distribution with reduced historical bias
+        historical_quota = max(int(max_rules * 0.2), 10)  # Reduced from 0.3
+        modern_quota = max(int(max_rules * 0.4), 10)      # Increased from 0.3
         general_quota = max_rules - historical_quota - modern_quota
+
+        # Add a penalty for rules that appear exclusively in historical decades
+        for rule in historical_markers:
+            if rule in rule_scores:
+                # Apply a dampening factor to reduce historical bias
+                rule_scores[rule]['distinctiveness'] *= 0.7  # Reduce distinctiveness by 30%
         
         # Score historical markers
         historical_scores = []
@@ -1448,23 +1530,41 @@ class TemporalDistributionInference:
         # Create modified biasing tokens list, excluding protected tokens
         revised_biasing_tokens = []
         html_tokens = []
-        
+        historical_bias_tokens = []
+
+        # Regular expression for historical-specific patterns
+        historical_pattern = re.compile(r'eth$|est$|thy|thee|thou|hath|doth|shalt|unto|ye$|ſ|olde|shoppe')
+
         for token, score, freq, distinctiveness in biasing_tokens:
             if html_pattern.search(token):
                 # HTML-like tokens get priority for removal
                 html_tokens.append((token, score, freq, distinctiveness))
+            elif historical_pattern.search(token) and token not in protected_tokens:
+                # Historical language tokens get secondary priority
+                historical_bias_tokens.append((token, score * 1.5, freq, distinctiveness))  # Boost score by 50%
             elif token not in protected_tokens:
                 # Other tokens, excluding protected ones
                 revised_biasing_tokens.append((token, score, freq, distinctiveness))
+
+        # Sort the historical tokens by score
+        historical_bias_tokens.sort(key=lambda x: x[1], reverse=True)
+
+        # Log identified historical tokens
+        if historical_bias_tokens:
+            logger.info(f"Identified {len(historical_bias_tokens)} potential historical bias tokens")
+            logger.info(f"Top historical bias tokens: {[t[0] for t in historical_bias_tokens[:5]]}")
         
-        # Sort both lists by score
+        # Sort all lists by score
         html_tokens.sort(key=lambda x: x[1], reverse=True)
+        historical_bias_tokens.sort(key=lambda x: x[1], reverse=True)
         revised_biasing_tokens.sort(key=lambda x: x[1], reverse=True)
-        
-        # Combine the lists, prioritizing HTML tokens
-        html_count = min(len(html_tokens), top_n // 2)  # Use up to half the slots for HTML tokens
+
+        # Combine the lists with prioritization
+        html_count = min(len(html_tokens), top_n // 3)  # Use up to 1/3 for HTML tokens
+        historical_count = min(len(historical_bias_tokens), top_n // 3)  # Use up to 1/3 for historical tokens
         tokens_to_remove = [token for token, _, _, _ in html_tokens[:html_count]]
-        
+        tokens_to_remove.extend([token for token, _, _, _ in historical_bias_tokens[:historical_count]])
+
         # Fill remaining slots with other high-bias tokens
         remaining_slots = top_n - len(tokens_to_remove)
         tokens_to_remove.extend([token for token, _, _, _ in revised_biasing_tokens[:remaining_slots]])
@@ -1843,12 +1943,19 @@ class TemporalDistributionInference:
         selected_rules = top_rules
         
         # Construct objective function
+        # Compute adaptive weights for all rules
+        adaptive_weights = self._compute_adaptive_weights(decade_patterns)
+
         data_fit_term = 0
         for rule in selected_rules:
             freqs = merge_frequencies[rule]
             
-            # Apply rule-specific weights
+            # Apply rule-specific weights with adaptive weighting
             rule_weight = distinctive_scores.get(rule, 1.0)
+            
+            # Apply adaptive weight to balance historical bias
+            adaptive_weight = adaptive_weights.get(rule, 1.0)
+            rule_weight *= adaptive_weight
             
             if weight_early_merges:
                 idx = selected_rules.index(rule)
@@ -1965,19 +2072,28 @@ class TemporalDistributionInference:
         # Get results from different methods
         lp_distribution = self.infer_temporal_distribution(decade_patterns)
         heuristic_distribution = self._infer_distribution_heuristic(decade_patterns)
+        bayesian_distribution = self._infer_distribution_bayesian(decade_patterns)
         
-        # Simple weighted averaging ensemble (LP method has higher weight)
-        lp_weight = 0.7
-        heuristic_weight = 0.3
+        # Weight the different methods according to their reliability
+        # Linear programming gets the highest weight as it's the most principled approach
+        lp_weight = 0.6
+        heuristic_weight = 0.25
+        bayesian_weight = 0.15
         
         ensemble_distribution = {}
-        all_decades = sorted(set(lp_distribution.keys()) | set(heuristic_distribution.keys()))
+        all_decades = sorted(set(lp_distribution.keys()) | 
+                        set(heuristic_distribution.keys()) | 
+                        set(bayesian_distribution.keys()))
         
         for decade in all_decades:
             lp_value = lp_distribution.get(decade, 0.0)
             heuristic_value = heuristic_distribution.get(decade, 0.0)
+            bayesian_value = bayesian_distribution.get(decade, 0.0)
+            
             # Weighted average
-            ensemble_distribution[decade] = (lp_value * lp_weight + heuristic_value * heuristic_weight)
+            ensemble_distribution[decade] = (lp_value * lp_weight + 
+                                        heuristic_value * heuristic_weight + 
+                                        bayesian_value * bayesian_weight)
         
         # Ensure the distribution sums to 1
         total = sum(ensemble_distribution.values())
@@ -2417,7 +2533,7 @@ class TemporalDistributionInference:
             non_zero_decades = sum(1 for f in freqs if f > 0)
             if non_zero_decades < 2:
                 continue
-            
+                
             # Calculate correlation with decade progression
             if non_zero_decades > 2:
                 correlation = np.corrcoef(indices, freqs)[0, 1]

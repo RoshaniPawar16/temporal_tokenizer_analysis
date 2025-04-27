@@ -387,6 +387,83 @@ def batch_log_progress(total, current, logger, desc="Processing", min_interval=1
         
     return False
 
+def analyze_distribution_errors(ground_truth, predicted, decade_patterns):
+    """
+    Analyze errors in distribution estimation to inform improvements.
+    
+    Args:
+        ground_truth: Ground truth distribution
+        predicted: Predicted distribution
+        decade_patterns: The decade patterns used for prediction
+    
+    Returns:
+        Error analysis results
+    """
+    # Calculate errors by decade
+    errors = {}
+    for decade in set(ground_truth.keys()) | set(predicted.keys()):
+        truth = ground_truth.get(decade, 0)
+        pred = predicted.get(decade, 0)
+        error = pred - truth
+        errors[decade] = error
+    
+    # Identify most problematic decades
+    problematic_decades = sorted(errors.items(), key=lambda x: abs(x[1]), reverse=True)
+    
+    # For the top 3 most problematic decades, identify distinctive tokens
+    detailed_analysis = {}
+    for decade, error in problematic_decades[:3]:
+        if decade not in decade_patterns:
+            continue
+            
+        if 'merge_rules' not in decade_patterns[decade]:
+            continue
+            
+        # Find distinctive tokens for this decade
+        distinctive_tokens = []
+        for rule, count in decade_patterns[decade]['merge_rules'].items():
+            # Calculate how distinctive this rule is to this decade
+            other_decades = [d for d in decade_patterns.keys() if d != decade]
+            other_counts = []
+            
+            for other_decade in other_decades:
+                if 'merge_rules' in decade_patterns[other_decade]:
+                    other_count = decade_patterns[other_decade]['merge_rules'].get(rule, 0)
+                    other_total = decade_patterns[other_decade].get('total_tokens', 1)
+                    normalized_count = other_count / other_total if other_total > 0 else 0
+                    other_counts.append(normalized_count)
+            
+            if other_counts:
+                avg_other = sum(other_counts) / len(other_counts)
+                this_total = decade_patterns[decade].get('total_tokens', 1)
+                this_normalized = count / this_total if this_total > 0 else 0
+                
+                if avg_other > 0:
+                    distinctiveness = this_normalized / avg_other
+                else:
+                    distinctiveness = float('inf')
+                
+                distinctive_tokens.append((rule, distinctiveness, count))
+        
+        # Sort by distinctiveness
+        distinctive_tokens.sort(key=lambda x: x[1], reverse=True)
+        
+        # Keep top 10 distinctive tokens
+        detailed_analysis[decade] = {
+            "error": error,
+            "distinctive_tokens": [(rule, float(score)) for rule, score, _ in distinctive_tokens[:10]]
+        }
+    
+    # Prepare a comprehensive report
+    analysis_results = {
+        "decade_errors": {decade: error for decade, error in errors.items()},
+        "most_problematic": problematic_decades[:5],
+        "detailed_analysis": detailed_analysis,
+        "summary": f"Largest errors in decades: {', '.join(decade for decade, _ in problematic_decades[:3])}"
+    }
+    
+    return analysis_results
+
 def create_inference_wrapper(inference):
     """
     Creates a robust wrapper for inference that handles various edge cases.
@@ -439,8 +516,8 @@ def create_inference_wrapper(inference):
                     
                 # Try to infer distribution
                 try:
-                    distribution = inference.infer_temporal_distribution(decade_patterns)
-                    
+                    # distribution = inference.infer_temporal_distribution(decade_patterns)
+                    distribution = inference.ensemble_inference(decade_patterns)
                     # Verify the distribution is valid
                     if not isinstance(distribution, dict):
                         logger.warning(f"Invalid distribution type: {type(distribution)}")
@@ -873,6 +950,7 @@ def preprocess_dataset(decade_texts, args):
             for base_text in texts_to_augment:
                 # Check if we've reached target
                 current_size = sum(len(t.encode('utf-8')) for t in augmented_texts)
+                # current_size = sum(len(t[0].encode('utf-8')) if isinstance(t, tuple) else len(t.encode('utf-8')) for t in augmented_texts)
                 if current_size >= target_bytes:
                     break
                     
@@ -1659,14 +1737,15 @@ def run_analysis(args):
     
     logger.info("Evaluating results against ground truth...")
     start_time = time.time()
-    # Triple safety for bootstrap_iterations
-    bootstrap_iterations_int = 0  # Default safe value
+    # Fix bootstrap iterations to ensure we get proper statistical validation
+    bootstrap_iterations_int = 30  # Set to recommended value regardless of input
     try:
-        # First attempt - use explicit int constructor
-        bootstrap_iterations_int = int(args.bootstrap_iterations)
+        # Only use args value if it's higher than our minimum
+        if args.bootstrap_iterations is not None and int(args.bootstrap_iterations) > bootstrap_iterations_int:
+            bootstrap_iterations_int = int(args.bootstrap_iterations)
+        print(f"Using bootstrap_iterations_int = {bootstrap_iterations_int}")
     except (TypeError, ValueError):
-        print(f"WARNING: Cannot convert bootstrap_iterations ({args.bootstrap_iterations}) to int")
-        bootstrap_iterations_int = 0  # Force safe default
+        print(f"WARNING: Cannot convert args.bootstrap_iterations, using default {bootstrap_iterations_int}")
         
     # Second check - verify it's actually an int
     if not isinstance(bootstrap_iterations_int, int):
