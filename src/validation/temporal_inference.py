@@ -707,150 +707,116 @@ class TemporalDistributionInference:
         Returns:
             Dictionary with bootstrapped distributions and confidence intervals
         """
-        print(f"ENTERING bootstrap_distribution_estimates WITH DATA TYPES:")
-        print(f"  num_bootstraps: {num_bootstraps} ({type(num_bootstraps)})")
-        if not isinstance(num_bootstraps, int):
-            print(f"  FORCING INTEGER: {int(num_bootstraps)}")
-            num_bootstraps = int(num_bootstraps)
-        # Multiple explicit type conversions and extensive debugging
+        # Force to integer IMMEDIATELY at function start - catch any possible float input
         try:
-            print(f"ENTERING bootstrap_distribution_estimates with {num_bootstraps}, type={type(num_bootstraps)}")
+            num_bootstraps = int(num_bootstraps)
+        except (TypeError, ValueError):
+            print(f"ERROR: Cannot convert {num_bootstraps} ({type(num_bootstraps)}) to int")
+            num_bootstraps = 30  # Use a safe default
             
-            # Primary conversion - all subsequent operations should use this variable
-            num_bootstraps_int = int(num_bootstraps)
-            print(f"AFTER conversion: {num_bootstraps_int}, type={type(num_bootstraps_int)}")
+        print(f"Bootstrap analysis starting with {num_bootstraps} iterations, type={type(num_bootstraps)}")
+        
+        # Safety check
+        if not isinstance(num_bootstraps, int) or num_bootstraps <= 0:
+            num_bootstraps = 30  # Use a safe default
+            print(f"Using default value of {num_bootstraps} iterations")
             
-            # Safe number of iterations - use a default if conversion fails
-            if num_bootstraps_int <= 0:
-                print(f"WARNING: Invalid num_bootstraps ({num_bootstraps_int}), using default of 30")
-                num_bootstraps_int = 30
-                
-            # Set an upper limit to avoid excessive computation
-            num_bootstraps_int = min(num_bootstraps_int, 100)
+        # Initialize results containers
+        bootstrap_results = []
+        decades = sorted(list(decade_patterns.keys())) if isinstance(decade_patterns, dict) else []
+        
+        # Wrap the entire process in try/except to ensure we always return a valid result
+        try:
+            # Explicitly convert to int again before range() function
+            iteration_count = int(num_bootstraps)
             
-            # Defensive copy and sorting
-            decades = sorted(list(decade_patterns.keys()))
-            bootstrap_results = []
-            
-            # Run multiple bootstrap iterations with additional safeguards
-            bootstrap_count = int(num_bootstraps_int)  # Extra conversion before loop
-            print(f"BEFORE LOOP: bootstrap_count={bootstrap_count}, type={type(bootstrap_count)}")
-            
-            # Extremely defensive operation - using literal int value in range
-            for i in range(bootstrap_count):
+            # Main bootstrap loop
+            for i in range(iteration_count):  # This is where the TypeError would occur
                 if i % 10 == 0:
-                    print(f"Bootstrap iteration {i}/{bootstrap_count}")
+                    print(f"Processing bootstrap iteration {i}/{iteration_count}")
                     
+                # Create bootstrapped patterns
                 try:
-                    # Create bootstrapped sample of the patterns
                     bootstrapped_patterns = {}
+                    
+                    # Process each decade
                     for decade, patterns in decade_patterns.items():
-                        if isinstance(patterns, dict) and 'merge_rules' in patterns:
-                            # Sample with replacement
-                            bootstrapped_rules = {}
-                            rules = list(patterns['merge_rules'].items())
+                        if not isinstance(patterns, dict) or 'merge_rules' not in patterns:
+                            continue
                             
-                            # Skip empty rule sets
-                            if not rules:
-                                continue
-                                
-                            # Random sampling with error handling
-                            try:
-                                sampled_rules = random.choices(rules, k=len(rules))
-                                
-                                # Process sampled rules
-                                for rule, count in sampled_rules:
-                                    if rule in bootstrapped_rules:
-                                        bootstrapped_rules[rule] += count
-                                    else:
-                                        bootstrapped_rules[rule] = count
-                                
-                                # Create new patterns dict with bootstrapped rules
-                                bootstrapped_patterns[decade] = {
-                                    'merge_rules': bootstrapped_rules,
-                                    'total_tokens': patterns.get('total_tokens', 1)
-                                }
-                            except Exception as e:
-                                print(f"Error in bootstrap sampling for {decade}: {e}")
-                                continue
+                        rules = list(patterns['merge_rules'].items())
+                        if not rules:
+                            continue
+                            
+                        # Sample with replacement
+                        bootstrapped_rules = {}
+                        sampled_rules = random.choices(rules, k=len(rules))
+                        
+                        # Aggregate sampled rules
+                        for rule, count in sampled_rules:
+                            bootstrapped_rules[rule] = bootstrapped_rules.get(rule, 0) + count
+                        
+                        # Create new pattern dictionary
+                        bootstrapped_patterns[decade] = {
+                            'merge_rules': bootstrapped_rules,
+                            'total_tokens': patterns.get('total_tokens', 1)
+                        }
                     
-                    # Skip if we don't have enough bootstrapped patterns
+                    # Skip iteration if insufficient data
                     if len(bootstrapped_patterns) < 2:
-                        print(f"Insufficient bootstrapped patterns ({len(bootstrapped_patterns)}), skipping iteration")
                         continue
-                    
-                    # Infer distribution with bootstrapped sample
+                        
+                    # Run inference on bootstrap sample
                     distribution = self.infer_temporal_distribution(bootstrapped_patterns)
                     
-                    # Validate distribution before adding
+                    # Add valid results to bootstrap samples
                     if isinstance(distribution, dict) and distribution:
-                        bootstrap_results.append(distribution)
-                    else:
-                        print(f"Invalid distribution result in iteration {i}, skipping")
+                        # Ensure all values are proper floats
+                        clean_dist = {k: float(v) for k, v in distribution.items() if isinstance(v, (int, float))}
+                        bootstrap_results.append(clean_dist)
                         
                 except Exception as e:
                     print(f"Error in bootstrap iteration {i}: {e}")
                     continue
-                    
-            # Check if we have enough results
-            if len(bootstrap_results) < 2:
-                print(f"Insufficient bootstrap results ({len(bootstrap_results)}), returning empty confidence intervals")
-                return {
-                    'bootstrap_samples': bootstrap_results,
-                    'confidence_intervals': {}
-                }
-                
-            # Calculate confidence intervals with careful index handling
+            
+            # Calculate confidence intervals
             confidence_intervals = {}
             
             for decade in decades:
-                try:
-                    # Extract values for this decade from all bootstrap samples
-                    values = [dist.get(decade, 0.0) for dist in bootstrap_results if isinstance(dist, dict)]
-                    
-                    # Skip if no values
-                    if not values:
-                        print(f"No bootstrap values for {decade}, skipping")
-                        continue
-                        
-                    # Sort values for percentile calculation
-                    values.sort()
-                    
-                    # Calculate indices with explicit int conversion at each step
-                    sample_count = len(values)
-                    print(f"For {decade}: {sample_count} bootstrap values, num_bootstraps_int={num_bootstraps_int}")
-                    
-                    # Use the actual number of valid samples rather than the requested number
-                    lower_idx = int(0.025 * sample_count)
-                    upper_idx = int(0.975 * sample_count)
-                    
-                    # Double-check indices are within bounds
-                    lower_idx = max(0, min(lower_idx, sample_count - 1))
-                    upper_idx = max(0, min(upper_idx, sample_count - 1))
-                    
-                    print(f"Indices for {decade}: lower={lower_idx}, upper={upper_idx}, array_length={sample_count}")
-                    
-                    # Extract confidence interval bounds
-                    lower = float(values[lower_idx])
-                    upper = float(values[upper_idx])
-                    
-                    confidence_intervals[decade] = (lower, upper)
-                    
-                except Exception as e:
-                    print(f"Error calculating confidence interval for {decade}: {e}")
+                # Get values for this decade across all bootstrap samples
+                values = [dist.get(decade, 0.0) for dist in bootstrap_results if decade in dist]
+                if not values:
                     continue
+                    
+                # Sort values for percentile calculation
+                values.sort()
+                
+                # Safely calculate confidence interval indices
+                n = len(values)
+                if n < 2:  # Need at least 2 values for a meaningful interval
+                    continue
+                    
+                # Use exact integer indices
+                lower_idx = max(0, min(int(0.025 * n), n-1))
+                upper_idx = max(0, min(int(0.975 * n), n-1))
+                
+                # Create confidence interval
+                lower = values[lower_idx]
+                upper = values[upper_idx]
+                confidence_intervals[decade] = (lower, upper)
             
-            # Create and return final result
-            result = {
+            # Return complete results
+            return {
                 'bootstrap_samples': bootstrap_results,
                 'confidence_intervals': confidence_intervals
             }
             
-            return result
-            
         except Exception as e:
-            print(f"CRITICAL ERROR in bootstrap_distribution_estimates: {e}")
-            # Return empty result as fallback
+            # Catch-all to ensure function always returns something valid
+            print(f"Critical error in bootstrap analysis: {e}")
+            import traceback
+            traceback.print_exc()
+            
             return {
                 'bootstrap_samples': [],
                 'confidence_intervals': {}

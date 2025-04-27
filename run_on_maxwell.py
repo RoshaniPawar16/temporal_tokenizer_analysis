@@ -1587,19 +1587,28 @@ def run_analysis(args):
     
     logger.info("Evaluating results against ground truth...")
     start_time = time.time()
-    # Ensure bootstrap_iterations is always an integer with triple-safety
-    bootstrap_iterations_int = int(args.bootstrap_iterations)  # First conversion
-    print(f"DEBUG: bootstrap_iterations_int = {bootstrap_iterations_int}, type = {type(bootstrap_iterations_int)}")
-    # Force to zero if invalid to prevent any possible float conversion
-    if not isinstance(bootstrap_iterations_int, int) or bootstrap_iterations_int < 0:
-        bootstrap_iterations_int = 0
-        print("WARNING: Invalid bootstrap_iterations, using 0")
+    # Triple safety for bootstrap_iterations
+    bootstrap_iterations_int = 0  # Default safe value
+    try:
+        # First attempt - use explicit int constructor
+        bootstrap_iterations_int = int(args.bootstrap_iterations)
+    except (TypeError, ValueError):
+        print(f"WARNING: Cannot convert bootstrap_iterations ({args.bootstrap_iterations}) to int")
+        bootstrap_iterations_int = 0  # Force safe default
         
-    # Use the integer variable directly - don't use args.bootstrap_iterations anymore
+    # Second check - verify it's actually an int
+    if not isinstance(bootstrap_iterations_int, int):
+        print(f"WARNING: bootstrap_iterations_int is not an int: {type(bootstrap_iterations_int)}")
+        bootstrap_iterations_int = 0
+        
+    # Log what we're using
+    print(f"FINAL: Using bootstrap_iterations_int = {bootstrap_iterations_int}")
+
+    # Now use the integer variable in function call
     evaluation = inference.validate_against_hayase_metrics(
         distribution,
         selected_dist,
-        bootstrap_iterations=bootstrap_iterations_int  # Pass the integer version
+        bootstrap_iterations=bootstrap_iterations_int  # Pass the validated integer
     )
     inference_time = time.time() - start_time
     
