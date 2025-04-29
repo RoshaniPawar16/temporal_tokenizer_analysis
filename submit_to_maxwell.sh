@@ -6,7 +6,7 @@
 #SBATCH --mem=192G
 #SBATCH --account=sncs
 #SBATCH --gres=gpu:1                
-#SBATCH --partition=a100_mig       
+#SBATCH --partition=spot-gpu      
 #SBATCH --output=temporal_analysis_%j.out
 #SBATCH --error=temporal_analysis_%j.err
 #SBATCH --mail-type=ALL
