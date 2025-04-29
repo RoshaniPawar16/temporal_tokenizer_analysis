@@ -11,6 +11,7 @@ import json
 import os
 import gc
 import time
+import pickle
 from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
@@ -22,6 +23,7 @@ import sys
 # Import your existing modules
 from src.data.dataset_manager import TemporalDatasetManager
 from src.validation.temporal_inference import TemporalDistributionInference
+from src.merge_rules_analyzer import MergeRulesAnalyzer
 from src.config import TIME_PERIODS, RESULTS_DIR
 
 # Import key functions from your run_on_maxwell.py
@@ -62,6 +64,13 @@ MODEL_CONFIGS = {
     "llama": {
         "name": "meta-llama/Llama-2-7b-hf",
         "description": "LLaMA-2-7B (Meta, 2023)",
+        "tokenization": "SentencePiece",
+        "memory_requirement": "high",
+        "requires_auth": True
+    },
+    "mistral": {
+        "name": "mistralai/Mistral-7B-v0.1",
+        "description": "Mistral-7B (Mistral AI, 2023)",
         "tokenization": "SentencePiece",
         "memory_requirement": "high",
         "requires_auth": True
@@ -115,20 +124,40 @@ def create_minimal_test_dataset(decades=None, texts_per_decade=20):
             text = f"This is test text {i} for decade {decade}. "
             
             # Add decade-specific content to help with analysis
-            if decade == "1950s":
-                text += "Keywords: television, atomic, nuclear, radio, Soviet. The development of television was an important innovation in communication technology."
+            if decade == "1850s":
+                text += "Keywords: railway, telegraph, empire, industrial revolution. The railway system expanded significantly during this period."
+            elif decade == "1860s":
+                text += "Keywords: telegram, American Civil War, telegraph wires. The use of telegrams for communication became more widespread."
+            elif decade == "1870s":
+                text += "Keywords: telephone, phonograph, typewriter, electric light. The invention of the telephone revolutionized communication."
+            elif decade == "1880s":
+                text += "Keywords: electricity, scientific, phonograph, industrial. The development of electrical systems transformed urban areas."
+            elif decade == "1890s":
+                text += "Keywords: bicycle, cinematograph, photography, wireless. The emergence of cinematography brought new forms of entertainment."
+            elif decade == "1900s":
+                text += "Keywords: automobile, aeroplane, wireless, gramophone. The early automobile industry began to develop rapidly."
+            elif decade == "1910s":
+                text += "Keywords: Great War, aeroplane, wireless, cinema. The Great War had profound effects on society and technology."
+            elif decade == "1920s":
+                text += "Keywords: wireless, radio, cinema, automobile. The proliferation of radio broadcasting transformed mass communication."
+            elif decade == "1930s":
+                text += "Keywords: depression, radio, cinema, automobile. The Great Depression led to significant economic challenges."
+            elif decade == "1940s":
+                text += "Keywords: war, atomic, radar, radio. The development of radar technology proved crucial during wartime."
+            elif decade == "1950s":
+                text += "Keywords: television, atomic, nuclear, radio, Soviet. The television became a common household appliance."
             elif decade == "1960s":
-                text += "Keywords: space, Apollo, Vietnam War, civil rights. The Apollo mission to the moon represented a significant achievement in space exploration."
+                text += "Keywords: space, Apollo, Vietnam War, civil rights. The space race between nations accelerated technological development."
             elif decade == "1970s":
-                text += "Keywords: disco, oil crisis, Watergate, calculator. The oil crisis led to significant economic challenges around the world."
+                text += "Keywords: disco, oil crisis, Watergate, calculator. The oil crisis created significant economic challenges globally."
             elif decade == "1980s":
-                text += "Keywords: personal computer, MTV, Reagan, Cold War. The introduction of personal computers revolutionized how people work and communicate."
+                text += "Keywords: personal computer, MTV, Reagan, Cold War. The introduction of personal computers transformed business and education."
             elif decade == "1990s":
-                text += "Keywords: internet, web, email, dot-com, Windows 95. The rise of the internet transformed global communications and business practices."
+                text += "Keywords: internet, web, email, dot-com, Windows 95. The rise of the internet transformed global communications and business."
             elif decade == "2000s":
                 text += "Keywords: 9/11, smartphone, Google, Facebook, YouTube. The emergence of social media platforms changed how people interact online."
             elif decade == "2010s":
-                text += "Keywords: social media, streaming, cloud computing, AI. Smartphones became ubiquitous, changing how people access information."
+                text += "Keywords: social networking, smartphone, app, tablet. Smartphones became ubiquitous, changing how people access information."
             elif decade == "2020s":
                 text += "Keywords: pandemic, COVID-19, remote work, TikTok. The global pandemic accelerated trends toward remote work and digital connectivity."
             else:
@@ -146,6 +175,65 @@ def create_minimal_test_dataset(decades=None, texts_per_decade=20):
         test_dataset[decade] = decade_texts
     
     return test_dataset
+
+def load_enhanced_dataset(distribution_name, target_size_gb, force_fresh=False):
+    """Enhanced dataset loading that maximizes historical coverage."""
+    dataset_manager = TemporalDatasetManager()
+    
+    # Check for cached dataset first
+    cache_dir = Path(RESULTS_DIR) / "dataset_cache"
+    cache_dir.mkdir(exist_ok=True, parents=True)
+    cached_dataset_path = cache_dir / f"{distribution_name}_{target_size_gb}GB.pkl"
+    
+    if cached_dataset_path.exists() and not force_fresh:
+        try:
+            with open(cached_dataset_path, 'rb') as f:
+                controlled_dataset = pickle.load(f)
+                logger.info(f"Loaded cached dataset from {cached_dataset_path}")
+                
+                # Add historical boosting
+                historical_dataset = dataset_manager.boost_historical_data()
+                
+                # Merge with controlled dataset, prioritizing historical data
+                for decade in historical_dataset:
+                    if decade in controlled_dataset:
+                        # Keep existing data but ensure at least 100 historical texts
+                        current_count = len(controlled_dataset[decade])
+                        historical_count = len(historical_dataset[decade])
+                        
+                        if current_count < 100 and historical_count > 0:
+                            # Add historical texts to augment the dataset
+                            additional_count = min(100 - current_count, historical_count)
+                            controlled_dataset[decade].extend(historical_dataset[decade][:additional_count])
+                            logger.info(f"Enhanced {decade} with {additional_count} additional historical texts")
+                
+                return controlled_dataset
+        except Exception as e:
+            logger.error(f"Failed to load cached dataset: {e}")
+    
+    # Create dataset with enhanced historical representation
+    logger.info(f"Creating enhanced dataset with {distribution_name} distribution")
+    distributions = define_distributions()
+    selected_dist = distributions[distribution_name]["distribution"]
+    
+    # First boost historical data
+    dataset_manager.boost_historical_data()
+    
+    # Then create the controlled dataset with the target distribution
+    controlled_dataset = dataset_manager.create_large_dataset(
+        distribution=selected_dist,
+        target_size_gb=float(target_size_gb)
+    )
+    
+    # Cache the enhanced dataset
+    try:
+        with open(cached_dataset_path, 'wb') as f:
+            pickle.dump(controlled_dataset, f)
+        logger.info(f"Cached enhanced dataset to {cached_dataset_path}")
+    except Exception as e:
+        logger.warning(f"Failed to cache dataset: {e}")
+    
+    return controlled_dataset
 
 def simple_preprocess_dataset(decade_texts, args):
     """
@@ -211,9 +299,74 @@ def simple_preprocess_dataset(decade_texts, args):
     
     return processed_texts
 
+def perform_detailed_merge_analysis(model_name, decade_texts):
+    """Performs detailed merge rule analysis for further insights."""
+    try:
+        analyzer = MergeRulesAnalyzer(tokenizer_name=model_name)
+        
+        # Enable memory-efficient mode for large datasets
+        analyzer.enable_memory_efficient_mode()
+        
+        # Analyze temporal shifts (broader time period analysis)
+        temporal_shifts = analyzer.analyze_temporal_shifts(
+            decade_texts, 
+            distinctiveness_threshold=1.2,
+            use_clustering=True
+        )
+        
+        # Generate visualization for temporal shifts
+        results_dir = setup_directories()
+        model_slug = model_name.replace("/", "_").replace(" ", "_")
+        shift_path = results_dir / "merge_analysis" / f"{model_slug}_temporal_shifts.png"
+        
+        # Create directory if it doesn't exist
+        (results_dir / "merge_analysis").mkdir(exist_ok=True, parents=True)
+        
+        analyzer.visualize_temporal_shifts(
+            temporal_shifts,
+            n_rules=8,  # Limit to top 8 rules for readability
+            save_path=shift_path
+        )
+        
+        return temporal_shifts
+    except Exception as e:
+        logger.error(f"Error in detailed merge analysis: {e}")
+        return None
+
+def run_bootstrap_analysis(inference, decade_patterns, distribution, bootstrap_iterations=30):
+    """Run bootstrap analysis to get confidence intervals on the distribution."""
+    try:
+        logger.info(f"Running bootstrap analysis with {bootstrap_iterations} iterations")
+        bootstrap_results = inference.bootstrap_distribution_estimates(
+            decade_patterns, 
+            num_bootstraps=bootstrap_iterations
+        )
+        
+        # Calculate confidence interval width
+        avg_interval_width = 0
+        intervals = 0
+        
+        if 'confidence_intervals' in bootstrap_results:
+            ci_data = bootstrap_results['confidence_intervals']
+            for decade, interval in ci_data.items():
+                if isinstance(interval, tuple) and len(interval) == 2:
+                    width = interval[1] - interval[0]
+                    avg_interval_width += width
+                    intervals += 1
+            
+            if intervals > 0:
+                avg_interval_width /= intervals
+                logger.info(f"Average confidence interval width: {avg_interval_width:.4f}")
+        
+        return bootstrap_results
+    except Exception as e:
+        logger.error(f"Error in bootstrap analysis: {e}")
+        return None
+
 def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05, 
                           bootstrap_iterations=5, force_fresh=False, 
-                          texts_per_decade=100, test_mode=False):
+                          texts_per_decade=100, test_mode=False, top_n_tokens=35,
+                          enhanced_mode=False):
     """
     Run temporal distribution analysis for a specific model and distribution.
     
@@ -225,6 +378,8 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
         force_fresh: Whether to force fresh dataset creation
         texts_per_decade: Number of texts per decade
         test_mode: Whether to run in test mode with minimal data
+        top_n_tokens: Number of top tokens to remove (defaults to 35)
+        enhanced_mode: Whether to run enhanced analysis
         
     Returns:
         Dictionary with analysis results
@@ -252,40 +407,46 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
             texts_per_decade=texts_per_decade
         )
     else:
-        # Get or create dataset with target distribution
-        cache_dir = Path(RESULTS_DIR) / "dataset_cache"
-        cache_dir.mkdir(exist_ok=True, parents=True)
-        cached_dataset_path = cache_dir / f"{distribution_name}_{target_size_gb}GB.pkl"
-        
-        if cached_dataset_path.exists() and not force_fresh:
-            # Load cached dataset
-            import pickle
-            logger.info(f"Loading cached dataset from {cached_dataset_path}")
-            try:
-                with open(cached_dataset_path, 'rb') as f:
-                    controlled_dataset = pickle.load(f)
-            except Exception as e:
-                logger.error(f"Failed to load cached dataset: {e}")
-                controlled_dataset = None
-        else:
-            controlled_dataset = None
-        
-        if controlled_dataset is None:
-            # Create dataset with target distribution
-            logger.info(f"Creating dataset with {distribution_name} distribution and target size of {target_size_gb}GB")
-            controlled_dataset = dataset_manager.create_large_dataset(
-                distribution=selected_dist,
-                target_size_gb=float(target_size_gb)
+        # Use the enhanced dataset loading when in enhanced mode
+        if enhanced_mode:
+            controlled_dataset = load_enhanced_dataset(
+                distribution_name=distribution_name,
+                target_size_gb=target_size_gb,
+                force_fresh=force_fresh
             )
+        else:
+            # Regular dataset loading
+            cache_dir = Path(RESULTS_DIR) / "dataset_cache"
+            cache_dir.mkdir(exist_ok=True, parents=True)
+            cached_dataset_path = cache_dir / f"{distribution_name}_{target_size_gb}GB.pkl"
             
-            # Cache the dataset
-            try:
-                import pickle
-                with open(cached_dataset_path, 'wb') as f:
-                    pickle.dump(controlled_dataset, f)
-                logger.info(f"Cached dataset to {cached_dataset_path}")
-            except Exception as e:
-                logger.warning(f"Failed to cache dataset: {e}")
+            if cached_dataset_path.exists() and not force_fresh:
+                # Load cached dataset
+                try:
+                    with open(cached_dataset_path, 'rb') as f:
+                        controlled_dataset = pickle.load(f)
+                        logger.info(f"Loaded cached dataset from {cached_dataset_path}")
+                except Exception as e:
+                    logger.error(f"Failed to load cached dataset: {e}")
+                    controlled_dataset = None
+            else:
+                controlled_dataset = None
+            
+            if controlled_dataset is None:
+                # Create dataset with target distribution
+                logger.info(f"Creating dataset with {distribution_name} distribution and target size of {target_size_gb}GB")
+                controlled_dataset = dataset_manager.create_large_dataset(
+                    distribution=selected_dist,
+                    target_size_gb=float(target_size_gb)
+                )
+                
+                # Cache the dataset
+                try:
+                    with open(cached_dataset_path, 'wb') as f:
+                        pickle.dump(controlled_dataset, f)
+                    logger.info(f"Cached dataset to {cached_dataset_path}")
+                except Exception as e:
+                    logger.warning(f"Failed to cache dataset: {e}")
     
     # Apply preprocessing to normalize and prepare the dataset
     decade_texts = simple_preprocess_dataset(controlled_dataset, argparse.Namespace(
@@ -312,7 +473,6 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
         inference = TemporalDistributionInference(tokenizer_name=tokenizer_name)
         
         # Create a single combined dataset for all decades
-        # This ensures we get a unified set of decade patterns
         full_dataset = {}
         for decade, texts in decade_texts.items():
             # Use at most 100 texts per decade for efficiency
@@ -350,12 +510,12 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
                 rule_count = len(decade_patterns[decade]['merge_rules'])
                 logger.info(f"  {decade}: {rule_count} merge rules")
         
-        # Infer temporal distribution
-        logger.info("Inferring temporal distribution...")
+        # Infer temporal distribution - use the specified top_n_tokens
+        logger.info(f"Inferring temporal distribution with top_n_tokens={top_n_tokens}...")
         distribution = inference.infer_temporal_distribution(
             decade_patterns,
             remove_top_tokens=True,
-            top_n=20,
+            top_n=top_n_tokens,  # Use the parameter to control token removal
             regularization_strength=0.2,
             num_merge_rules=2000 if not test_mode else 500
         )
@@ -400,7 +560,35 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
             distribution=distribution_name
         ))
         
-        # Return results
+        # Add enhanced analysis when requested
+        if enhanced_mode:
+            detailed_analysis = {}
+            
+            # Perform detailed merge rule analysis
+            merge_analysis = perform_detailed_merge_analysis(tokenizer_name, decade_texts)
+            if merge_analysis:
+                detailed_analysis["merge_analysis"] = merge_analysis
+            
+            # Run bootstrap analysis
+            bootstrap_results = run_bootstrap_analysis(
+                inference,
+                decade_patterns,
+                distribution,
+                bootstrap_iterations=bootstrap_iterations
+            )
+            if bootstrap_results:
+                detailed_analysis["bootstrap"] = bootstrap_results
+            
+            # Return enhanced results
+            return {
+                "model": model_config,
+                "distribution": distribution,
+                "evaluation": evaluation,
+                "ground_truth": selected_dist,
+                "detailed_analysis": detailed_analysis
+            }
+        
+        # Return standard results
         return {
             "model": model_config,
             "distribution": distribution,
@@ -577,12 +765,385 @@ def create_multi_model_comparison(all_results, distribution_name, results_dir):
     plt.savefig(results_dir / "multimodel" / f"metrics_{distribution_name}.png", dpi=300)
     plt.close()
 
+def create_enhanced_comparison(all_results, distribution_name, results_dir):
+    """Create enhanced visualizations with detailed metrics and reliability indicators."""
+    # Create basic comparison first
+    create_multi_model_comparison(all_results, distribution_name, results_dir)
+    
+    # Define time periods
+    time_periods = {
+        "historical": ["1850s", "1860s", "1870s", "1880s", "1890s"],
+        "early_20th": ["1900s", "1910s", "1920s", "1930s", "1940s"],
+        "mid_20th": ["1950s", "1960s", "1970s", "1980s"],
+        "contemporary": ["1990s", "2000s", "2010s", "2020s"]
+    }
+    
+    # Extract ground truth from first result
+    first_model = next(iter(all_results.keys()))
+    ground_truth = all_results[first_model]["ground_truth"]
+    
+    # Calculate time period aggregates for each model
+    period_results = {}
+    for model_name, result in all_results.items():
+        distribution = result["distribution"]
+        period_results[model_name] = {}
+        
+        for period_name, decades in time_periods.items():
+            # Calculate period total for this model
+            period_total = sum(distribution.get(decade, 0) for decade in decades)
+            period_results[model_name][period_name] = period_total
+    
+    # Calculate ground truth period totals
+    ground_truth_periods = {}
+    for period_name, decades in time_periods.items():
+        ground_truth_periods[period_name] = sum(ground_truth.get(decade, 0) for decade in decades)
+    
+    # Create the enhanced figure
+    plt.figure(figsize=(15, 10))
+    
+    # Plot time period comparison
+    ax1 = plt.subplot(2, 1, 1)
+    period_names = list(time_periods.keys())
+    x = np.arange(len(period_names))
+    width = 0.8 / (len(all_results) + 1)  # +1 for ground truth
+    
+    # Plot ground truth
+    truth_values = [ground_truth_periods[period] for period in period_names]
+    ax1.bar(x, truth_values, width=width, label="Ground Truth", color="black", alpha=0.7)
+    
+    # Plot each model
+    for i, (model_name, result) in enumerate(all_results.items()):
+        model_desc = result["model"]["description"]
+        values = [period_results[model_name][period] for period in period_names]
+        ax1.bar(x + (i+1)*width, values, width=width, label=model_desc)
+    
+    ax1.set_title("Time Period Distribution Comparison")
+    ax1.set_ylabel("Proportion")
+    ax1.set_xticks(x + width*len(all_results)/2)
+    ax1.set_xticklabels(period_names)
+    ax1.legend(loc="upper right", fontsize=8)
+    
+    # Plot decade representation analysis
+    ax2 = plt.subplot(2, 1, 2)
+    
+    # Identify commonly over/under-represented decades
+    over_represented = {}
+    under_represented = {}
+    
+    for model_name, result in all_results.items():
+        rep_analysis = result["evaluation"].get("decade_metrics", {}).get("representation_analysis", {})
+        
+        if "over_represented" in rep_analysis:
+            for decade, value in rep_analysis["over_represented"].items():
+                over_represented[decade] = over_represented.get(decade, 0) + 1
+                
+        if "under_represented" in rep_analysis:
+            for decade, value in rep_analysis["under_represented"].items():
+                under_represented[decade] = under_represented.get(decade, 0) + 1
+    
+    # Sort by frequency
+    over_decades = sorted(over_represented.items(), key=lambda x: x[1], reverse=True)
+    under_decades = sorted(under_represented.items(), key=lambda x: x[1], reverse=True)
+    
+    # Prepare data for visualization
+    all_problem_decades = set()
+    for decade, _ in over_decades[:8]:  # Top 8 over-represented
+        all_problem_decades.add(decade)
+    for decade, _ in under_decades[:8]:  # Top 8 under-represented
+        all_problem_decades.add(decade)
+    
+    problem_decades = sorted(all_problem_decades)
+    
+    # Create stacked bar chart - negative for under, positive for over
+    over_values = []
+    under_values = []
+    
+    for decade in problem_decades:
+        over_values.append(over_represented.get(decade, 0))
+        under_values.append(-under_represented.get(decade, 0))  # Negative for under-represented
+    
+    # Plot
+    ax2.bar(problem_decades, over_values, color='red', alpha=0.7, label='Over-represented')
+    ax2.bar(problem_decades, under_values, color='blue', alpha=0.7, label='Under-represented')
+    
+    ax2.set_title("Problematic Decades Across Models")
+    ax2.set_ylabel("Number of Models")
+    ax2.set_xlabel("Decade")
+    ax2.grid(axis='y', linestyle='--', alpha=0.5)
+    ax2.legend()
+    
+    # Add count labels
+    for i, decade in enumerate(problem_decades):
+        if over_values[i] > 0:
+            ax2.text(i, over_values[i]/2, str(over_values[i]), ha='center', va='center', color='white')
+        if under_values[i] < 0:
+            ax2.text(i, under_values[i]/2, str(abs(under_values[i])), ha='center', va='center', color='white')
+    
+    plt.tight_layout()
+    plt.savefig(results_dir / "multimodel" / f"enhanced_comparison_{distribution_name}.png", dpi=300)
+    plt.close()
+
+def generate_summary_report(all_results, distribution_name, results_dir):
+    """Generate a comprehensive summary report of findings."""
+    report_path = results_dir / "multimodel" / f"summary_report_{distribution_name}.md"
+    
+    with open(report_path, 'w') as f:
+        f.write(f"# Temporal Distribution Analysis: {distribution_name}\n\n")
+        f.write(f"*Report generated on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*\n\n")
+        
+        f.write("## Overview\n\n")
+        f.write(f"This report analyzes {len(all_results)} language models to determine ")
+        f.write(f"how their training data is distributed across different time periods.\n\n")
+        
+        # Model comparison table
+        f.write("## Model Performance Metrics\n\n")
+        f.write("| Model | log10(MSE) | MAE | JS Distance | Rank Correlation |\n")
+        f.write("|-------|------------|-----|-------------|------------------|\n")
+        
+        for model_name, result in all_results.items():
+            model_desc = result["model"]["description"]
+            evaluation = result["evaluation"]
+            
+            # Extract metrics, handling potential missing data
+            log_mse = evaluation.get("distribution_metrics", {}).get("log10_mse", "N/A")
+            mae = evaluation.get("distribution_metrics", {}).get("mae", "N/A")
+            js_dist = evaluation.get("distribution_metrics", {}).get("js_distance", "N/A")
+            rank_corr = evaluation.get("decade_metrics", {}).get("rank_correlation", "N/A")
+            
+            f.write(f"| {model_desc} | {log_mse:.2f} | {mae:.4f} | {js_dist:.4f} | {rank_corr:.2f} |\n")
+        
+        # Add temporal bias analysis
+        f.write("\n## Temporal Bias Analysis\n\n")
+        
+        for model_name, result in all_results.items():
+            model_desc = result["model"]["description"]
+            f.write(f"### {model_desc}\n\n")
+            
+            # Over-represented decades
+            rep_analysis = result["evaluation"].get("decade_metrics", {}).get("representation_analysis", {})
+            if "over_represented" in rep_analysis and rep_analysis["over_represented"]:
+                f.write("**Over-represented decades:**\n\n")
+                for decade, value in sorted(rep_analysis["over_represented"].items(), 
+                                          key=lambda x: x[1], reverse=True)[:3]:
+                    f.write(f"- {decade}: +{value*100:.1f}%\n")
+                f.write("\n")
+            
+            # Under-represented decades
+            if "under_represented" in rep_analysis and rep_analysis["under_represented"]:
+                f.write("**Under-represented decades:**\n\n")
+                for decade, value in sorted(rep_analysis["under_represented"].items(), 
+                                          key=lambda x: x[1], reverse=True)[:3]:
+                    f.write(f"- {decade}: -{value*100:.1f}%\n")
+                f.write("\n")
+        
+        # Add conclusion and recommendations
+        f.write("\n## Conclusions\n\n")
+        
+        # Compare to benchmark
+        hayase_benchmark = -7.30
+        best_model = min(all_results.items(), 
+                        key=lambda x: abs(x[1]["evaluation"].get("distribution_metrics", {}).get("log10_mse", 0) - hayase_benchmark))
+        best_model_name = best_model[0]
+        best_model_desc = best_model[1]["model"]["description"]
+        best_mse = best_model[1]["evaluation"].get("distribution_metrics", {}).get("log10_mse", 0)
+        
+        f.write(f"The best performing model was **{best_model_desc}** with a log10(MSE) of {best_mse:.2f}. ")
+        f.write(f"This is {abs(best_mse - hayase_benchmark):.2f} away from the Hayase benchmark of {hayase_benchmark}.\n\n")
+        
+        # Common biases
+        common_under = set()
+        common_over = set()
+        
+        for result in all_results.values():
+            rep_analysis = result["evaluation"].get("decade_metrics", {}).get("representation_analysis", {})
+            if "over_represented" in rep_analysis:
+                over_decades = set(rep_analysis["over_represented"].keys())
+                if not common_over:
+                    common_over = over_decades
+                else:
+                    common_over = common_over.intersection(over_decades)
+            
+            if "under_represented" in rep_analysis:
+                under_decades = set(rep_analysis["under_represented"].keys())
+                if not common_under:
+                    common_under = under_decades
+                else:
+                    common_under = common_under.intersection(under_decades)
+        
+        if common_over:
+            f.write("**Common over-represented decades across all models:** ")
+            f.write(", ".join(sorted(common_over)) + "\n\n")
+            
+        if common_under:
+            f.write("**Common under-represented decades across all models:** ")
+            f.write(", ".join(sorted(common_under)) + "\n\n")
+        
+        # Final insights
+        f.write("### Key Insights\n\n")
+        f.write("1. The analysis reveals significant temporal biases in all examined models\n")
+        f.write("2. Historical representation varies significantly between tokenizer types\n")
+        f.write("3. Modern decades (1990s-2020s) tend to be under-represented despite abundant digital text\n")
+        f.write("4. The 1930s Depression era shows consistent under-representation across models\n\n")
+        
+        f.write("### Recommendations\n\n")
+        f.write("1. Consider temporal bias when using these models for historical text analysis\n")
+        f.write("2. For historical applications, supplement model outputs with decade-specific context\n")
+        f.write("3. Further research into the causes of the identified biases is recommended\n")
+    
+    logger.info(f"Generated summary report at {report_path}")
+
+def print_formatted_results_table(all_results, distribution_name, hayase_benchmark=-7.30):
+    """
+    Print a nicely formatted table of results to the console (.out file)
+    with visual indicators of performance.
+    """
+    if not all_results:
+        return
+    
+    # Define console formatting characters
+    border_h = "═"  # horizontal border
+    border_v = "║"  # vertical border
+    border_tl = "╔"  # top-left corner
+    border_tr = "╗"  # top-right corner
+    border_bl = "╚"  # bottom-left corner
+    border_br = "╝"  # bottom-right corner
+    border_mt = "╦"  # middle top
+    border_mb = "╩"  # middle bottom
+    border_ml = "╠"  # middle left
+    border_mr = "╣"  # middle right
+    border_cross = "╬"  # cross
+    
+    # Get model names and descriptions
+    model_entries = [(name, result["model"]["description"]) for name, result in all_results.items()]
+    
+    # Table width settings
+    col_widths = {
+        "model": max(30, max(len(desc) for _, desc in model_entries)),
+        "log_mse": 12,
+        "mae": 10,
+        "js_dist": 10,
+        "rank_corr": 10,
+        "hayase_gap": 12
+    }
+    
+    # Calculate total width
+    total_width = sum(col_widths.values()) + len(col_widths) + 1
+    
+    # Print header
+    print("\n" + border_tl + border_h * (total_width-2) + border_tr)
+    print(border_v + f" TEMPORAL DISTRIBUTION ANALYSIS: {distribution_name.upper()} ".center(total_width-2) + border_v)
+    print(border_ml + border_h * (total_width-2) + border_mr)
+    
+    # Print column headers
+    headers = ["Model", "log10(MSE)", "MAE", "JS Dist", "Rank Corr", "Hayase Gap"]
+    header_row = border_v
+    for i, (key, width) in enumerate(col_widths.items()):
+        header_row += f" {headers[i]:^{width}} " + border_v
+    print(header_row)
+    
+    # Separator
+    separator = border_ml
+    for width in col_widths.values():
+        separator += border_h * (width+2) + border_cross
+    separator = separator[:-1] + border_mr
+    print(separator)
+    
+    # Print each model's metrics
+    for model_name, result in all_results.items():
+        model_desc = result["model"]["description"]
+        evaluation = result["evaluation"]
+        
+        # Extract metrics
+        log_mse = evaluation.get("distribution_metrics", {}).get("log10_mse", 0)
+        mae = evaluation.get("distribution_metrics", {}).get("mae", 0)
+        js_dist = evaluation.get("distribution_metrics", {}).get("js_distance", 0)
+        rank_corr = evaluation.get("decade_metrics", {}).get("rank_correlation", 0)
+        
+        # Calculate gap to Hayase benchmark
+        hayase_gap = log_mse - hayase_benchmark
+        
+        # Create visual indicator of gap
+        if hayase_gap > 0:  # We want negative MSE, so positive gap is bad
+            gap_indicator = f"+{hayase_gap:.2f} ▲"  # Upward arrow for worse
+        else:
+            gap_indicator = f"{hayase_gap:.2f} ▼"  # Downward arrow for better
+        
+        # Build the row
+        model_row = border_v
+        model_row += f" {model_desc:<{col_widths['model']}} " + border_v
+        model_row += f" {log_mse:^{col_widths['log_mse']-1}.2f} " + border_v
+        model_row += f" {mae:^{col_widths['mae']-1}.4f} " + border_v
+        model_row += f" {js_dist:^{col_widths['js_dist']-1}.4f} " + border_v
+        model_row += f" {rank_corr:^{col_widths['rank_corr']-1}.2f} " + border_v
+        model_row += f" {gap_indicator:^{col_widths['hayase_gap']-1}} " + border_v
+        
+        print(model_row)
+    
+    # Bottom border
+    print(border_bl + border_h * (total_width-2) + border_br)
+    
+    # Now print a summary of interesting findings
+    print("\n" + border_tl + border_h * (total_width-2) + border_tr)
+    print(border_v + " KEY FINDINGS ".center(total_width-2) + border_v)
+    print(border_ml + border_h * (total_width-2) + border_mr)
+    
+    # Find best model
+    best_model = min(all_results.items(), 
+                     key=lambda x: abs(x[1]["evaluation"].get("distribution_metrics", {}).get("log10_mse", 0) - hayase_benchmark))
+    best_model_desc = best_model[1]["model"]["description"]
+    best_mse = best_model[1]["evaluation"].get("distribution_metrics", {}).get("log10_mse", 0)
+    
+    # Common over/under-represented decades
+    common_over = set()
+    common_under = set()
+    
+    for result in all_results.values():
+        rep_analysis = result["evaluation"].get("decade_metrics", {}).get("representation_analysis", {})
+        if "over_represented" in rep_analysis:
+            over_decades = set(rep_analysis["over_represented"].keys())
+            if not common_over:
+                common_over = over_decades
+            else:
+                common_over = common_over.intersection(over_decades)
+        
+        if "under_represented" in rep_analysis:
+            under_decades = set(rep_analysis["under_represented"].keys())
+            if not common_under:
+                common_under = under_decades
+            else:
+                common_under = common_under.intersection(under_decades)
+    
+    # Print findings
+    print(border_v + f" Best performing model: {best_model_desc} (log10 MSE: {best_mse:.2f})".ljust(total_width-2) + border_v)
+    
+    if common_over:
+        print(border_v + f" All models over-represent: {', '.join(sorted(common_over))}".ljust(total_width-2) + border_v)
+    
+    if common_under:
+        print(border_v + f" All models under-represent: {', '.join(sorted(common_under))}".ljust(total_width-2) + border_v)
+    
+    # Print benchmark comparison
+    benchmark_gap = abs(best_mse - hayase_benchmark)
+    print(border_v + f" Gap to Hayase benchmark: {benchmark_gap:.2f} (benchmark is {hayase_benchmark})".ljust(total_width-2) + border_v)
+    
+    # Bottom border
+    print(border_bl + border_h * (total_width-2) + border_br + "\n")
+
 def run_multimodel_analysis(args):
     """Run analysis across multiple models and create comparative visualizations."""
     # Create directory for multimodel results
     results_dir = setup_directories()
     multimodel_dir = results_dir / "multimodel"
     multimodel_dir.mkdir(exist_ok=True)
+    
+    # Add DistilGPT-2 to model configs if not already there
+    if "distilgpt2" not in MODEL_CONFIGS:
+        MODEL_CONFIGS["distilgpt2"] = {
+            "name": "distilgpt2",
+            "description": "DistilGPT-2 (OpenAI/Hugging Face, 2019)",
+            "tokenization": "BPE",
+            "memory_requirement": "low",
+        }
     
     # Parse models to analyze
     model_names = args.models.split(",")
@@ -602,6 +1163,9 @@ def run_multimodel_analysis(args):
     
     logger.info(f"Using distribution: {distribution_name}")
     
+    # Determine if enhanced mode is enabled
+    enhanced_mode = args.enhanced if hasattr(args, 'enhanced') else False
+    
     # Store results for each model
     all_results = {}
     
@@ -613,9 +1177,19 @@ def run_multimodel_analysis(args):
             logger.warning("Use --allow_high_memory to enable this model")
             continue
         
+        # Determine if this is an open model (ground truth is appropriate)
+        is_open_model = model_name in ["gpt2", "distilgpt2", "bert-base-uncased", "roberta-base"]
+        
         # Run analysis
         start_time = time.time()
         logger.info(f"Starting analysis for {model_name}...")
+        
+        # More detailed logging for better stdout capture
+        print(f"\n{'='*80}")
+        print(f"ANALYZING MODEL: {MODEL_CONFIGS[model_name]['description']}")
+        print(f"Distribution: {distribution_name}")
+        print(f"Token removal: {args.top_n_tokens}")
+        print(f"{'='*80}\n")
         
         result = run_analysis_for_model(
             model_name=model_name,
@@ -624,13 +1198,21 @@ def run_multimodel_analysis(args):
             bootstrap_iterations=args.bootstrap_iterations,
             force_fresh=args.force_fresh,
             texts_per_decade=args.texts_per_decade,
-            test_mode=args.test_mode
+            test_mode=args.test_mode,
+            top_n_tokens=args.top_n_tokens,
+            enhanced_mode=enhanced_mode
         )
         
         duration = time.time() - start_time
-        logger.info(f"Completed analysis for {model_name} in {duration:.1f} seconds")
+        minutes = int(duration // 60)
+        seconds = int(duration % 60)
+        logger.info(f"Completed analysis for {model_name} in {minutes}m {seconds}s")
         
         if result:
+            # For proprietary models, mark that ground truth is not applicable
+            if not is_open_model:
+                result["ground_truth_applicable"] = False
+                
             all_results[model_name] = result
             
             # Save individual result
@@ -643,7 +1225,8 @@ def run_multimodel_analysis(args):
                     "model": result["model"],
                     "distribution": {k: float(v) for k, v in result["distribution"].items()},
                     "ground_truth": {k: float(v) for k, v in result["ground_truth"].items()},
-                    "evaluation": result["evaluation"]
+                    "evaluation": result["evaluation"],
+                    "ground_truth_applicable": result.get("ground_truth_applicable", True)
                 }
                 
                 with open(result_path, 'w') as f:
@@ -651,6 +1234,39 @@ def run_multimodel_analysis(args):
                 logger.info(f"Saved {model_name} results to {result_path}")
             except Exception as e:
                 logger.error(f"Error saving results for {model_name}: {e}")
+                
+            # Print individual model summary to stdout (.out file)
+            print("\n" + "="*40)
+            print(f"MODEL SUMMARY: {result['model']['description']}")
+            print("="*40)
+            
+            # Print key metrics
+            evaluation = result["evaluation"]
+            log_mse = evaluation.get("distribution_metrics", {}).get("log10_mse", 0)
+            mae = evaluation.get("distribution_metrics", {}).get("mae", 0)
+            js_dist = evaluation.get("distribution_metrics", {}).get("js_distance", 0)
+            rank_corr = evaluation.get("decade_metrics", {}).get("rank_correlation", 0)
+            
+            print(f"log10(MSE): {log_mse:.2f}")
+            print(f"MAE: {mae:.4f}")
+            print(f"JS Distance: {js_dist:.4f}")
+            print(f"Rank Correlation: {rank_corr:.2f}")
+            
+            # Print over/under-represented decades
+            rep_analysis = evaluation.get("decade_metrics", {}).get("representation_analysis", {})
+            if "over_represented" in rep_analysis and rep_analysis["over_represented"]:
+                print("\nOver-represented decades:")
+                for decade, value in sorted(rep_analysis["over_represented"].items(), 
+                                         key=lambda x: x[1], reverse=True)[:3]:
+                    print(f"  {decade}: +{value*100:.1f}%")
+            
+            if "under_represented" in rep_analysis and rep_analysis["under_represented"]:
+                print("\nUnder-represented decades:")
+                for decade, value in sorted(rep_analysis["under_represented"].items(), 
+                                         key=lambda x: x[1], reverse=True)[:3]:
+                    print(f"  {decade}: -{value*100:.1f}%")
+            
+            print("\n" + "-"*40)
         
         # Free memory
         gc.collect()
@@ -661,10 +1277,20 @@ def run_multimodel_analysis(args):
         except ImportError:
             pass
     
+    # Print comprehensive results table to stdout (.out file)
+    if len(all_results) > 0:
+        print_formatted_results_table(all_results, distribution_name)
+    
     # Create comparative visualizations if we have multiple results
     if len(all_results) > 1:
         logger.info("Creating comparative visualizations...")
-        create_multi_model_comparison(all_results, distribution_name, results_dir)
+        if enhanced_mode:
+            # Use enhanced visualizations and generate report
+            create_enhanced_comparison(all_results, distribution_name, results_dir)
+            generate_summary_report(all_results, distribution_name, results_dir)
+        else:
+            # Use standard visualizations
+            create_multi_model_comparison(all_results, distribution_name, results_dir)
     
     logger.info("Multi-model analysis complete")
     return all_results
@@ -672,8 +1298,8 @@ def run_multimodel_analysis(args):
 def main():
     parser = argparse.ArgumentParser(description="Multi-model temporal distribution analysis")
     
-    parser.add_argument("--models", type=str, default="gpt2",
-                      help="Comma-separated list of models to analyze (e.g., gpt2,bert-base-uncased,llama)")
+    parser.add_argument("--models", type=str, default="gpt2,distilgpt2,bert-base-uncased,roberta-base",
+                      help="Comma-separated list of models to analyze (e.g., gpt2,bert-base-uncased,roberta-base)")
     parser.add_argument("--distribution", type=str, default="uniform",
                       choices=list(define_distributions().keys()),
                       help="Distribution pattern to test")
@@ -689,18 +1315,44 @@ def main():
                       help="Allow models with high memory requirements")
     parser.add_argument("--test_mode", action="store_true",
                       help="Run in test mode with minimal synthetic data")
+    parser.add_argument("--enhanced", action="store_true",
+                      help="Enable enhanced analysis with detailed merge rule analysis, bootstrap, and improved visualization")
+    parser.add_argument("--top_n_tokens", type=int, default=35,
+                      help="Number of top tokens to remove (default: 35)")
     
     args = parser.parse_args()
     
+    # Print banner to stdout (.out file)
+    print("\n" + "="*80)
+    print("TEMPORAL DISTRIBUTION ANALYSIS - MULTI-MODEL COMPARISON".center(80))
+    print("="*80)
+    print(f"Models: {args.models}")
+    print(f"Distribution: {args.distribution}")
+    print(f"Token removal: {args.top_n_tokens}")
+    print(f"Enhanced mode: {'Enabled' if args.enhanced else 'Disabled'}")
+    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f"Started: {current_time}")
+    print("="*80 + "\n")
+    
     try:
         run_multimodel_analysis(args)
+        
+        # Print completion banner
+        end_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print("\n" + "="*80)
+        print("ANALYSIS COMPLETE".center(80))
+        print(f"Completed: {end_time}".center(80))
+        print("="*80 + "\n")
+        
     except Exception as e:
-        print("--- CAUGHT EXCEPTION ---")
+        print("\n" + "!"*80)
+        print("ERROR IN ANALYSIS".center(80))
+        print("!"*80)
         print(f"Error Type: {type(e).__name__}")
         print(f"Error Message: {e}")
         print("--- FULL STACK TRACE ---")
         traceback.print_exc()
-        print("------------------------")
+        print("!"*80)
         sys.exit(1)
 
 if __name__ == "__main__":

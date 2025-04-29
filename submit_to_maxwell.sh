@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=temporal_analysis
-#SBATCH --time=24:00:00
+#SBATCH --time=36:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=192G
@@ -85,25 +85,81 @@ python -c "import transformers; import datasets; print('Basic imports successful
 # echo "Running all distributions comparison..."
 # python run_on_maxwell.py --tokenizer gpt2 --distribution all --texts_per_decade 2000 --target_size_gb 1.0 --bootstrap --bootstrap_iterations 30
 
+# # Run multi-model analysis for all distributions
+# echo "Running multi-model analysis..."
+
+# # Define all distributions
+# DISTRIBUTIONS=(uniform recency_bias historical_bias bimodal)
+
+# # Run multi-model analysis for each distribution
+# for dist in "${DISTRIBUTIONS[@]}"; do
+#     echo "Running analysis for $dist distribution with multiple models..."
+#     python run_multimodel_analysis.py \
+#         --models gpt2,bert-base-uncased,roberta-base \
+#         --distribution $dist \
+#         --target_size_gb 1.0 \
+#         --bootstrap_iterations 30 \
+#         --texts_per_decade 5000
+    
+#     # Clean up resources between runs
+#     python -c "import gc; gc.collect()"
+#     sleep 10
+# done
+
 # Run multi-model analysis for all distributions
-echo "Running multi-model analysis..."
+echo "Running multi-model temporal distribution analysis..."
 
 # Define all distributions
 DISTRIBUTIONS=(uniform recency_bias historical_bias bimodal)
 
-# Run multi-model analysis for each distribution
+# Use our recommended models with distilgpt2 included
+MODELS="gpt2,bert-base-uncased,roberta-base,llama,mistral"
+
+# Run multi-model analysis for each distribution with enhanced output
 for dist in "${DISTRIBUTIONS[@]}"; do
-    echo "Running analysis for $dist distribution with multiple models..."
+    echo ""
+    echo "=================================================================="
+    echo "STARTING ANALYSIS FOR $dist DISTRIBUTION"
+    echo "Models: $MODELS"
+    echo "Time: $(date)"
+    echo "=================================================================="
+    echo ""
+    
     python run_multimodel_analysis.py \
-        --models gpt2,bert-base-uncased,roberta-base \
+        --models $MODELS \
         --distribution $dist \
         --target_size_gb 1.0 \
-        --bootstrap_iterations 30 \
-        --texts_per_decade 5000
+        --bootstrap_iterations 10 \
+        --top_n_tokens 35 \
+        --texts_per_decade 5000 \
+        --enhanced
     
-    # Clean up resources between runs
-    python -c "import gc; gc.collect()"
-    sleep 10
+    # More thorough cleanup between runs
+    echo "Cleaning up resources..."
+    python -c "
+import gc
+import sys
+gc.collect()
+print(f'Memory cleaned up, objects collected: {gc.collect()}')
+try:
+    import torch
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        print('CUDA cache cleared')
+except ImportError:
+    pass
+"
+    # Give the system time to release resources
+    echo "Waiting for resource release..."
+    sleep 30
+    
+    echo ""
+    echo "=================================================================="
+    echo "COMPLETED ANALYSIS FOR $dist DISTRIBUTION"
+    echo "Time: $(date)"
+    echo "=================================================================="
+    echo ""
 done
+
 
 echo "Job completed at: $(date)"
