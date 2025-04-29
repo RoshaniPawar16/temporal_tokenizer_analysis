@@ -4,8 +4,12 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=192G
+#SBATCH --gres=gpu:1                
+#SBATCH --partition=a100_full       
 #SBATCH --output=temporal_analysis_%j.out
 #SBATCH --error=temporal_analysis_%j.err
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=t06rp23@abdn.ac.uk  
 
 # Display information about the job
 echo "Running on node: $(hostname)"
@@ -114,7 +118,8 @@ echo "Running multi-model temporal distribution analysis..."
 DISTRIBUTIONS=(uniform recency_bias historical_bias bimodal)
 
 # Use our recommended models with distilgpt2 included
-MODELS="gpt2,bert-base-uncased,roberta-base,llama,mistral"
+# MODELS="gpt2,bert-base-uncased,roberta-base,llama,mistral"
+MODELS="gpt2,bert-base-uncased,roberta-base,xlm-roberta-base,t5-small,electra-small-discriminator,llama,gpt2-medium,distilgpt2,distilbert-base-uncased,albert-base-v2,mistral"
 
 # Run multi-model analysis for each distribution with enhanced output
 for dist in "${DISTRIBUTIONS[@]}"; do
@@ -130,7 +135,7 @@ for dist in "${DISTRIBUTIONS[@]}"; do
         --models $MODELS \
         --distribution $dist \
         --target_size_gb 1.0 \
-        --bootstrap_iterations 10 \
+        --bootstrap_iterations 20 \
         --top_n_tokens 40 \
         --texts_per_decade 5000 \
         --enhanced

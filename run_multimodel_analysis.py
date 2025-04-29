@@ -61,6 +61,24 @@ MODEL_CONFIGS = {
         "tokenization": "BPE",
         "memory_requirement": "low",
     },
+        "xlm-roberta-base": {
+        "name": "xlm-roberta-base",
+        "description": "XLM-RoBERTa Base (Facebook, 2019)",
+        "tokenization": "SentencePiece",
+        "memory_requirement": "low",
+    },
+    "t5-small": {
+        "name": "t5-small",
+        "description": "T5 Small (Google, 2020)",
+        "tokenization": "SentencePiece",
+        "memory_requirement": "low",
+    },
+    "electra-small-discriminator": {
+        "name": "google/electra-small-discriminator",
+        "description": "ELECTRA Small Discriminator (Google, 2020)",
+        "tokenization": "WordPiece",
+        "memory_requirement": "low",
+    },
     "llama": {
         "name": "meta-llama/Llama-2-7b-hf",
         "description": "LLaMA-2-7B (Meta, 2023)",
@@ -68,6 +86,31 @@ MODEL_CONFIGS = {
         "memory_requirement": "high",
         "requires_auth": True
     },
+        "gpt2-medium": {
+        "name": "gpt2-medium",
+        "description": "GPT-2 Medium (OpenAI, 2019)",
+        "tokenization": "BPE",
+        "memory_requirement": "low",
+    },
+    "distilgpt2": {
+        "name": "distilgpt2",
+        "description": "DistilGPT-2 (HuggingFace, 2019)",
+        "tokenization": "BPE",
+        "memory_requirement": "low",
+    },
+    "distilbert-base-uncased": {
+        "name": "distilbert-base-uncased",
+        "description": "DistilBERT Base Uncased (HuggingFace, 2019)",
+        "tokenization": "WordPiece",
+        "memory_requirement": "low",
+    },
+    "albert-base-v2": {
+        "name": "albert-base-v2",
+        "description": "ALBERT Base v2 (Google, 2019)",
+        "tokenization": "WordPiece",
+        "memory_requirement": "low",
+    },
+
     "mistral": {
         "name": "mistralai/Mistral-7B-v0.1",
         "description": "Mistral-7B (Mistral AI, 2023)",
@@ -237,10 +280,10 @@ def load_enhanced_dataset(distribution_name, target_size_gb, force_fresh=False):
 
 def simple_preprocess_dataset(decade_texts, args):
     """
-    Simplified preprocessing for testing - works with mixed data formats.
+    Enhanced preprocessing for temporal analysis that properly handles historical data.
     
-    This function handles both string and tuple formats safely and performs
-    basic preprocessing for temporal distribution analysis.
+    This function maintains consistency with the run_on_maxwell.py preprocessing approach
+    while handling mixed data formats and ensuring sufficient data for all decades.
     
     Args:
         decade_texts: Dictionary mapping decades to texts
@@ -249,11 +292,15 @@ def simple_preprocess_dataset(decade_texts, args):
     Returns:
         Dictionary mapping decades to preprocessed texts
     """
-    logger.info("Using simplified preprocessing to handle mixed data formats")
+    logger.info("Using enhanced preprocessing to ensure sufficient historical data")
     
     # Initialize results
     processed_texts = {}
+    historical_decades = ["1850s", "1860s", "1870s", "1880s", "1890s", "1900s", "1910s", "1920s", "1930s", "1940s"]
+    modern_decades = ["1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"]
     
+    # First pass: normalize all available data
+    total_historical_texts = 0
     for decade, texts in decade_texts.items():
         if not texts:
             processed_texts[decade] = []
@@ -264,38 +311,99 @@ def simple_preprocess_dataset(decade_texts, args):
         for item in texts:
             text = normalize_text_item(item)
             if text:
-                normalized_texts.append(text)
+                # Apply basic filtering for quality
+                if len(text) >= 500:  # Only keep texts of reasonable length
+                    normalized_texts.append(text)
         
-        # Apply basic augmentation for decades with few texts
-        if len(normalized_texts) < 20:
-            logger.info(f"Augmenting texts for {decade} (only {len(normalized_texts)} texts available)")
-            
-            # Duplicate and slightly modify existing texts
-            augmented_texts = normalized_texts.copy()
-            original_count = len(normalized_texts)
-            
-            # Add variants until we have at least 20 texts
-            while len(augmented_texts) < 20 and original_count > 0:
-                for text in normalized_texts[:original_count]:
-                    if len(augmented_texts) >= 20:
-                        break
-                        
-                    # Create a simple variant by adding a prefix
-                    variant = f"Additional analysis: {text}"
-                    augmented_texts.append(variant)
-            
-            processed_texts[decade] = augmented_texts
-        else:
-            processed_texts[decade] = normalized_texts
+        processed_texts[decade] = normalized_texts
+        
+        # Keep track of historical data volume
+        if decade in historical_decades:
+            total_historical_texts += len(normalized_texts)
     
-    # Ensure we have content for all decades - generate minimal content if needed
+    # Check if we have sufficient historical data
+    if total_historical_texts < 100:
+        logger.warning(f"Insufficient historical data detected: only {total_historical_texts} texts")
+        logger.info("Loading additional historical data...")
+        
+        # Create the dataset manager
+        dataset_manager = TemporalDatasetManager()
+        
+        # Use boost_historical_data to get more historical content
+        historical_dataset = dataset_manager.boost_historical_data(target_historical_decades=historical_decades)
+        
+        # Merge the historical data with our existing dataset
+        for decade, texts in historical_dataset.items():
+            # Normalize to consistent format
+            normalized_historical = []
+            for item in texts:
+                text = normalize_text_item(item)
+                if text and len(text) >= 500:
+                    normalized_historical.append(text)
+            
+            if normalized_historical:
+                if decade in processed_texts:
+                    # Only add if we don't already have enough data
+                    if len(processed_texts[decade]) < 20:
+                        logger.info(f"Adding {len(normalized_historical)} historical texts to {decade}")
+                        processed_texts[decade].extend(normalized_historical[:100])  # Cap at 100 texts per decade
+                else:
+                    processed_texts[decade] = normalized_historical[:100]
+    
+    # Second pass: ensure minimum text count for all decades
+    min_texts_per_decade = 20
+    
     for decade in TIME_PERIODS.keys():
-        if decade not in processed_texts or not processed_texts[decade]:
-            logger.warning(f"No texts available for {decade}, generating minimal content")
-            processed_texts[decade] = [
-                f"Placeholder text for {decade}. This decade represents an important period in history with various developments.",
-                f"Secondary placeholder for {decade}. Multiple patterns help establish decade-specific characteristics."
-            ]
+        decade_texts = processed_texts.get(decade, [])
+        
+        if len(decade_texts) < min_texts_per_decade:
+            logger.info(f"Ensuring minimum {min_texts_per_decade} texts for {decade}")
+            
+            # Try augmentation first if we have some texts
+            if decade_texts:
+                augmented_texts = decade_texts.copy()
+                original_count = len(decade_texts)
+                
+                # Add modified variants
+                while len(augmented_texts) < min_texts_per_decade and original_count > 0:
+                    for i, text in enumerate(decade_texts[:original_count]):
+                        if len(augmented_texts) >= min_texts_per_decade:
+                            break
+                        
+                        # Create more sophisticated variants with period-appropriate adjustments
+                        if decade in historical_decades:
+                            variant = f"In the {decade}, observers noted the following: {text}"
+                        else:
+                            variant = f"Analysis from the {decade} revealed: {text}"
+                            
+                        augmented_texts.append(variant)
+                
+                processed_texts[decade] = augmented_texts
+                logger.info(f"Augmented {decade} to {len(augmented_texts)} texts")
+            else:
+                # If no texts at all, generate minimal content
+                logger.warning(f"No texts available for {decade}, generating minimal content")
+                dataset_manager = TemporalDatasetManager()
+                
+                # Use the existing synthetic text generator with decade-specific characteristics
+                synthetic_texts = dataset_manager._create_historical_synthetic_texts(
+                    decade=decade,
+                    count=min_texts_per_decade,
+                    existing_data={},
+                    preserve_decade_characteristics=True
+                )
+                
+                processed_texts[decade] = synthetic_texts
+                logger.info(f"Generated {len(synthetic_texts)} synthetic texts for {decade}")
+    
+    # Final log of dataset composition
+    historical_count = sum(len(processed_texts.get(decade, [])) for decade in historical_decades)
+    modern_count = sum(len(processed_texts.get(decade, [])) for decade in modern_decades)
+    total_count = historical_count + modern_count
+    
+    logger.info(f"Final dataset: {total_count} total texts")
+    logger.info(f"  Historical texts (pre-1950): {historical_count} ({historical_count/total_count:.1%})")
+    logger.info(f"  Modern texts (1950-present): {modern_count} ({modern_count/total_count:.1%})")
     
     return processed_texts
 
@@ -522,11 +630,27 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
         
         # Apply decade corrections
         decade_corrections = {
-            "1850s": 2.5, "1860s": 2.3, "1870s": 2.1, "1880s": 2.0,
-            "1890s": 1.8, "1900s": 1.5, "1910s": 1.3, "1920s": 1.2,
-            "1930s": 0.3, "1940s": 0.8, "1950s": 0.9, "1960s": 0.6,
-            "1970s": 0.8, "1980s": 0.9, "1990s": 0.5, "2000s": 0.6,
-            "2010s": 0.4, "2020s": 0.7
+                "1850s": 0.8,   # Was 2.5, now reducing to avoid over-representation
+                "1860s": 0.8,   # Was 2.3
+                "1870s": 0.8,   # Was 2.1
+                "1880s": 0.7,   # Was 2.0
+                "1890s": 0.7,   # Was 1.8
+                "1900s": 0.7,   # Was 1.5
+                "1910s": 0.7,   # Was 1.3, logs show this is still over-represented
+                "1920s": 0.8,   # Was 1.2
+                # Keep adjustments for 1930s-1990s about the same
+                "1930s": 0.3,   # Keep strong reduction as this still shows over-representation 
+                "1940s": 0.8,
+                "1950s": 0.9,
+                "1960s": 0.6,   # Keep this lower as logs consistently show over-representation
+                "1970s": 0.8,
+                "1980s": 0.9,
+                # Adjust more recent decades
+                "1990s": 0.7,   # Slight adjustment from 0.5
+                "2000s": 0.8,   # Slight adjustment from 0.6
+                "2010s": 0.6,   # Slight adjustment from 0.4
+                "2020s": 1.1    # Boost slightly as this was under-represented in logs
+
         }
         
         for decade, factor in decade_corrections.items():
