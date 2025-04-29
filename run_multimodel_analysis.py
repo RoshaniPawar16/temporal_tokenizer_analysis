@@ -790,12 +790,17 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
                 if not isinstance(controlled_dataset, dict) or not all(isinstance(v, list) for v in controlled_dataset.values()):
                     logger.warning("Cached dataset has incorrect format, recreating...")
                     controlled_dataset = None
+                # Add validation for content type within lists if necessary
+                # elif not all(isinstance(item, (str, tuple)) for v in controlled_dataset.values() for item in v):
+                #    logger.warning("Cached dataset contains unexpected item types, recreating...")
+                #    controlled_dataset = None
+
             except Exception as e:
                 logger.error(f"Failed to load cached dataset: {e}")
                 controlled_dataset = None
 
         if controlled_dataset is None:
-            logger.info(f"Cache not found or invalid/forced fresh. Creating dataset...")
+            logger.info(f"Cache not found or invalid/forced fresh. Creating dataset using create_large_dataset...")
             # Use create_large_dataset directly - this function handles balancing
             # according to the 'selected_dist' and target size.
             # It includes internal logic for loading sources (BL, Gutenberg, Oscar, Web)
@@ -826,11 +831,16 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
     logger.info("Normalizing dataset format...")
     decade_texts = {}
     if controlled_dataset is None:
-        logger.error("Dataset creation failed, cannot proceed.")
+        logger.error("Dataset creation or loading failed, cannot proceed.")
         return None
 
     total_texts_loaded = 0
     for decade, texts_list in controlled_dataset.items():
+        # Ensure that decade exists in TIME_PERIODS if that's a requirement downstream
+        # if decade not in TIME_PERIODS:
+        #     logger.warning(f"Skipping unknown decade '{decade}' from loaded dataset.")
+        #     continue
+
         if not texts_list:
             decade_texts[decade] = []
             continue
@@ -845,6 +855,7 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
              decade_texts[decade] = normalized_list
              total_texts_loaded += len(normalized_list)
         else:
+             # Keep the decade key even if list is empty after normalization
              decade_texts[decade] = []
              logger.warning(f"No valid texts retained for {decade} after normalization.")
 
@@ -860,7 +871,6 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
     # Handle authentication for models that require it
     tokenizer_name = model_config.get("name", model_name)
     if model_config.get("requires_auth", False):
-        # ... (authentication logic remains the same) ...
         hf_token = os.environ.get("HF_TOKEN")
         if not hf_token:
             logger.error(f"Model {model_name} requires authentication. Set HF_TOKEN environment variable.")
@@ -873,6 +883,10 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
     try:
         logger.info(f"Initializing inference with tokenizer: {tokenizer_name}")
         inference = TemporalDistributionInference(tokenizer_name=tokenizer_name)
+        if inference.tokenizer is None or not inference.merge_rules:
+             logger.error(f"Failed to initialize tokenizer or extract merge rules for {tokenizer_name}. Skipping model.")
+             return None
+
 
         # --- Analyze Patterns ---
         # Analyze patterns using the prepared decade_texts
@@ -881,7 +895,7 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
         analysis_input = {}
         analysis_sample_size = 500 if not test_mode else 50 # Smaller sample for analysis
         for decade, texts in decade_texts.items():
-            if texts:
+            if texts: # Only sample if texts exist
                 analysis_input[decade] = random.sample(texts, min(len(texts), analysis_sample_size))
 
         if not analysis_input:
@@ -895,11 +909,19 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
             return None # Cannot proceed
 
         logger.info(f"Found patterns for {len(decade_patterns)} decades.")
-        # ... (rest of pattern logging) ...
+        valid_pattern_decades = 0
         for decade in sorted(decade_patterns.keys()):
-            if 'merge_rules' in decade_patterns[decade]:
+            if isinstance(decade_patterns[decade], dict) and 'merge_rules' in decade_patterns[decade]:
                 rule_count = len(decade_patterns[decade]['merge_rules'])
                 logger.info(f"  {decade}: {rule_count} merge rules found")
+                valid_pattern_decades += 1
+            else:
+                logger.warning(f"  {decade}: Invalid or missing patterns.")
+
+        if valid_pattern_decades == 0:
+            logger.error("No valid patterns found for any decade.")
+            return None
+
 
         # --- Infer Distribution ---
         logger.info(f"Inferring temporal distribution with top_n_tokens={top_n_tokens}...")
@@ -910,8 +932,8 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
             regularization_strength=0.2,
             num_merge_rules=2000 if not test_mode else 500
         )
-        if not distribution:
-            logger.error("Temporal distribution inference failed.")
+        if not distribution or not isinstance(distribution, dict):
+            logger.error("Temporal distribution inference failed or returned invalid type.")
             return None
 
         # --- Apply Revised Corrections ---
@@ -927,22 +949,41 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
         corrected_distribution = distribution.copy() # Work on a copy
         for decade, factor in revised_decade_corrections.items():
             if decade in corrected_distribution:
-                corrected_distribution = inference.apply_decade_correction(
-                    corrected_distribution, decade=decade, factor=factor
-                )
-                # Log the *change* for clarity
-                # original = distribution.get(decade, 0)
-                # corrected = corrected_distribution.get(decade, 0)
-                # logger.info(f"Applied correction factor of {factor} to {decade} (Value: {original:.3f} -> {corrected:.3f})")
+                # Ensure the factor is applied correctly even if decade value is 0
+                if corrected_distribution[decade] > 0 or factor > 0 :
+                     corrected_distribution = inference.apply_decade_correction(
+                         corrected_distribution, decade=decade, factor=factor
+                     )
+                     logger.debug(f"Applied correction factor of {factor} to {decade}") # Use debug level
+
+        # Re-normalize after all corrections
+        final_total = sum(corrected_distribution.values())
+        if final_total > 0:
+             distribution = {d: v / final_total for d, v in corrected_distribution.items()}
+        else:
+             logger.warning("Distribution sum is zero after corrections, using uniform.")
+             num_decades = len(decade_patterns)
+             distribution = {d: 1.0/num_decades for d in decade_patterns.keys()} if num_decades > 0 else {}
+
+
         logger.info("Finished applying corrections.")
-        distribution = corrected_distribution # Assign corrected version back
+        # distribution = corrected_distribution # Assign corrected version back - handled by re-normalization
 
         # --- Evaluate ---
         logger.info("Evaluating results against ground truth...")
+        # Ensure bootstrap_iterations is correctly passed as an integer
+        bs_iter_int = 0
+        try:
+            bs_iter_int = int(bootstrap_iterations)
+            if bs_iter_int < 0: bs_iter_int = 0 # Handle negative case
+        except (TypeError, ValueError):
+            logger.warning(f"Invalid bootstrap_iterations value '{bootstrap_iterations}', using 0.")
+            bs_iter_int = 0
+
         evaluation = inference.validate_against_hayase_metrics(
             distribution,
             selected_dist,
-            bootstrap_iterations=int(bootstrap_iterations) # Ensure int
+            bootstrap_iterations=bs_iter_int # Pass validated integer
         )
 
         # --- Visualize and Log ---
@@ -954,6 +995,7 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
             distribution_name,
             results_dir
         )
+        # Pass start time correctly if available, otherwise pass current time
         log_evaluation_metrics(evaluation, time.time(), argparse.Namespace(
             tokenizer=tokenizer_name,
             distribution=distribution_name
@@ -965,22 +1007,32 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
             logger.info("Running enhanced analysis steps...")
             # Perform detailed merge rule analysis on a sample
             merge_analysis_input = {}
+            analysis_sample_size_merge = 200 # Specific sample size for merge analysis
             for decade, texts in decade_texts.items():
                  if texts:
-                      merge_analysis_input[decade] = random.sample(texts, min(len(texts), 200)) # Use 200 texts
-            merge_analysis = perform_detailed_merge_analysis(tokenizer_name, merge_analysis_input)
-            if merge_analysis:
-                detailed_analysis_results["merge_analysis"] = merge_analysis
+                      merge_analysis_input[decade] = random.sample(texts, min(len(texts), analysis_sample_size_merge))
 
-            # Run bootstrap analysis
-            bootstrap_results = run_bootstrap_analysis(
-                inference,
-                decade_patterns, # Use patterns derived earlier
-                distribution, # Pass the final corrected distribution
-                bootstrap_iterations=int(bootstrap_iterations) # Ensure int
-            )
-            if bootstrap_results:
-                detailed_analysis_results["bootstrap"] = bootstrap_results
+            if merge_analysis_input:
+                 merge_analysis = perform_detailed_merge_analysis(tokenizer_name, merge_analysis_input)
+                 if merge_analysis:
+                     detailed_analysis_results["merge_analysis"] = merge_analysis
+            else:
+                 logger.warning("Skipping merge analysis due to lack of input data.")
+
+
+            # Run bootstrap analysis only if iterations > 0
+            if bs_iter_int > 0:
+                bootstrap_results = run_bootstrap_analysis(
+                    inference,
+                    decade_patterns, # Use patterns derived earlier
+                    distribution, # Pass the final corrected distribution
+                    bootstrap_iterations=bs_iter_int # Use validated integer
+                )
+                if bootstrap_results:
+                    detailed_analysis_results["bootstrap"] = bootstrap_results
+            else:
+                 logger.info("Skipping bootstrap analysis as iterations set to 0.")
+
 
         # --- Return Results ---
         final_result = {
@@ -995,7 +1047,7 @@ def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
         return final_result
 
     except Exception as e:
-        logger.error(f"Error analyzing {model_name} on {distribution_name}: {e}")
+        logger.error(f"CRITICAL ERROR analyzing {model_name} on {distribution_name}: {e}")
         traceback.print_exc()
         return None
 
