@@ -1792,7 +1792,7 @@ def run_analysis(args):
                                   args.distribution, args.tokenizer, results_dir)
     
     # MODIFIED: Skip bootstrap validation completely unless explicitly needed
-    if args.bootstrap and False:  # Set to False to skip bootstrap
+    if args.bootstrap:  # Set to False to skip bootstrap
         logger.info("Skipping bootstrap validation for performance reasons")
     
     logger.info(f"Analysis completed for {args.distribution} with {args.tokenizer}")
