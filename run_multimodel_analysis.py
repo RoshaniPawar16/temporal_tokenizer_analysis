@@ -471,255 +471,528 @@ def run_bootstrap_analysis(inference, decade_patterns, distribution, bootstrap_i
         logger.error(f"Error in bootstrap analysis: {e}")
         return None
 
-def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05, 
-                          bootstrap_iterations=5, force_fresh=False, 
+# def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05, 
+#                           bootstrap_iterations=5, force_fresh=False, 
+#                           texts_per_decade=100, test_mode=False, top_n_tokens=35,
+#                           enhanced_mode=False):
+#     """
+#     Run temporal distribution analysis for a specific model and distribution.
+    
+#     Args:
+#         model_name: Name of the model to analyze
+#         distribution_name: Name of the distribution to test
+#         target_size_gb: Target dataset size in GB
+#         bootstrap_iterations: Number of bootstrap iterations
+#         force_fresh: Whether to force fresh dataset creation
+#         texts_per_decade: Number of texts per decade
+#         test_mode: Whether to run in test mode with minimal data
+#         top_n_tokens: Number of top tokens to remove (defaults to 35)
+#         enhanced_mode: Whether to run enhanced analysis
+        
+#     Returns:
+#         Dictionary with analysis results
+#     """
+#     model_config = MODEL_CONFIGS.get(model_name, {"name": model_name, "description": model_name})
+#     logger.info(f"Running analysis for {model_config['description']} on {distribution_name} distribution")
+    
+#     # Get distribution details
+#     distributions = define_distributions()
+#     if distribution_name not in distributions:
+#         logger.error(f"Unknown distribution: {distribution_name}")
+#         return None
+    
+#     dist_info = distributions[distribution_name]
+#     selected_dist = {k: float(v) for k, v in dist_info["distribution"].items()}
+    
+#     # Initialize dataset_manager
+#     dataset_manager = TemporalDatasetManager()
+    
+#     # For test mode, use a minimal synthetic dataset
+#     if test_mode:
+#         logger.info("Using test mode with minimal synthetic dataset")
+#         controlled_dataset = create_minimal_test_dataset(
+#             decades=list(selected_dist.keys()),
+#             texts_per_decade=texts_per_decade
+#         )
+#     else:
+#         # Use the enhanced dataset loading when in enhanced mode
+#         if enhanced_mode:
+#             controlled_dataset = load_enhanced_dataset(
+#                 distribution_name=distribution_name,
+#                 target_size_gb=target_size_gb,
+#                 force_fresh=force_fresh
+#             )
+#         else:
+#             # Regular dataset loading
+#             cache_dir = Path(RESULTS_DIR) / "dataset_cache"
+#             cache_dir.mkdir(exist_ok=True, parents=True)
+#             cached_dataset_path = cache_dir / f"{distribution_name}_{target_size_gb}GB.pkl"
+            
+#             if cached_dataset_path.exists() and not force_fresh:
+#                 # Load cached dataset
+#                 try:
+#                     with open(cached_dataset_path, 'rb') as f:
+#                         controlled_dataset = pickle.load(f)
+#                         logger.info(f"Loaded cached dataset from {cached_dataset_path}")
+#                 except Exception as e:
+#                     logger.error(f"Failed to load cached dataset: {e}")
+#                     controlled_dataset = None
+#             else:
+#                 controlled_dataset = None
+            
+#             if controlled_dataset is None:
+#                 # Create dataset with target distribution
+#                 logger.info(f"Creating dataset with {distribution_name} distribution and target size of {target_size_gb}GB")
+#                 controlled_dataset = dataset_manager.create_large_dataset(
+#                     distribution=selected_dist,
+#                     target_size_gb=float(target_size_gb)
+#                 )
+                
+#                 # Cache the dataset
+#                 try:
+#                     with open(cached_dataset_path, 'wb') as f:
+#                         pickle.dump(controlled_dataset, f)
+#                     logger.info(f"Cached dataset to {cached_dataset_path}")
+#                 except Exception as e:
+#                     logger.warning(f"Failed to cache dataset: {e}")
+    
+#     # Apply preprocessing to normalize and prepare the dataset
+#     decade_texts = simple_preprocess_dataset(controlled_dataset, argparse.Namespace(
+#         tokenizer=model_name,
+#         distribution=distribution_name,
+#         target_size_gb=target_size_gb
+#     ))
+    
+#     # Handle authentication for models that require it
+#     tokenizer_name = model_config.get("name", model_name)
+#     if model_config.get("requires_auth", False):
+#         hf_token = os.environ.get("HF_TOKEN")
+#         if not hf_token:
+#             logger.error(f"Model {model_name} requires authentication. Set HF_TOKEN environment variable.")
+#             return None
+        
+#         # Set token for authentication if needed
+#         os.environ["HUGGINGFACE_TOKEN"] = hf_token
+#         os.environ["HF_TOKEN"] = hf_token
+    
+#     # Initialize inference with model's tokenizer
+#     try:
+#         logger.info(f"Initializing inference with tokenizer: {tokenizer_name}")
+#         inference = TemporalDistributionInference(tokenizer_name=tokenizer_name)
+        
+#         # Create a single combined dataset for all decades
+#         full_dataset = {}
+#         for decade, texts in decade_texts.items():
+#             # Use at most 100 texts per decade for efficiency
+#             sample_size = min(len(texts), 100 if not test_mode else 20)
+#             if sample_size > 0:
+#                 full_dataset[decade] = texts[:sample_size]
+        
+#         # Analyze patterns for the entire dataset at once
+#         logger.info("Analyzing decade patterns...")
+#         decade_patterns = inference.analyze_decade_patterns(full_dataset)
+        
+#         # Log pattern statistics
+#         pattern_count = len(decade_patterns)
+#         logger.info(f"Found patterns for {pattern_count} decades")
+        
+#         # Check if we have valid patterns
+#         if not decade_patterns:
+#             # Create fallback patterns if needed
+#             logger.warning("No decade patterns found, creating minimal patterns")
+#             decade_patterns = {}
+#             for decade, texts in decade_texts.items():
+#                 if texts:
+#                     # Create a minimal pattern for each decade
+#                     decade_patterns[decade] = {
+#                         'merge_rules': {'fallback': 10},  # Dummy merge rule
+#                         'tokens': {'fallback': 10},       # Dummy token
+#                         'total_tokens': 10,
+#                         'total_chars': 100
+#                     }
+#             logger.info(f"Created fallback patterns for {len(decade_patterns)} decades")
+        
+#         # Log pattern details for debugging
+#         for decade in sorted(decade_patterns.keys()):
+#             if 'merge_rules' in decade_patterns[decade]:
+#                 rule_count = len(decade_patterns[decade]['merge_rules'])
+#                 logger.info(f"  {decade}: {rule_count} merge rules")
+        
+#         # Infer temporal distribution - use the specified top_n_tokens
+#         logger.info(f"Inferring temporal distribution with top_n_tokens={top_n_tokens}...")
+#         distribution = inference.infer_temporal_distribution(
+#             decade_patterns,
+#             remove_top_tokens=True,
+#             top_n=top_n_tokens,  # Use the parameter to control token removal
+#             regularization_strength=0.2,
+#             num_merge_rules=2000 if not test_mode else 500
+#         )
+        
+#         # Apply decade corrections
+#         decade_corrections = {
+#                 "1850s": 0.8,   # Was 2.5, now reducing to avoid over-representation
+#                 "1860s": 0.8,   # Was 2.3
+#                 "1870s": 0.8,   # Was 2.1
+#                 "1880s": 0.7,   # Was 2.0
+#                 "1890s": 0.7,   # Was 1.8
+#                 "1900s": 0.7,   # Was 1.5
+#                 "1910s": 0.7,   # Was 1.3, logs show this is still over-represented
+#                 "1920s": 0.8,   # Was 1.2
+#                 # Keep adjustments for 1930s-1990s about the same
+#                 "1930s": 0.3,   # Keep strong reduction as this still shows over-representation 
+#                 "1940s": 0.8,
+#                 "1950s": 0.9,
+#                 "1960s": 0.6,   # Keep this lower as logs consistently show over-representation
+#                 "1970s": 0.8,
+#                 "1980s": 0.9,
+#                 # Adjust more recent decades
+#                 "1990s": 0.7,   # Slight adjustment from 0.5
+#                 "2000s": 0.8,   # Slight adjustment from 0.6
+#                 "2010s": 0.6,   # Slight adjustment from 0.4
+#                 "2020s": 1.1    # Boost slightly as this was under-represented in logs
+
+#         }
+        
+#         for decade, factor in decade_corrections.items():
+#             if decade in distribution:
+#                 distribution = inference.apply_decade_correction(
+#                     distribution, decade=decade, factor=factor
+#                 )
+#                 logger.info(f"Applied correction factor of {factor} to {decade}")
+        
+#         # Evaluate against ground truth
+#         logger.info("Evaluating results against ground truth...")
+#         evaluation = inference.validate_against_hayase_metrics(
+#             distribution,
+#             selected_dist,
+#             bootstrap_iterations=bootstrap_iterations
+#         )
+        
+#         # Create visualization
+#         results_dir = setup_directories()
+#         create_model_visualization(
+#             distribution, 
+#             selected_dist, 
+#             model_config["description"],
+#             distribution_name,
+#             results_dir
+#         )
+        
+#         # Log evaluation metrics
+#         log_evaluation_metrics(evaluation, time.time(), argparse.Namespace(
+#             tokenizer=tokenizer_name,
+#             distribution=distribution_name
+#         ))
+        
+#         # Add enhanced analysis when requested
+#         if enhanced_mode:
+#             detailed_analysis = {}
+            
+#             # Perform detailed merge rule analysis
+#             merge_analysis = perform_detailed_merge_analysis(tokenizer_name, decade_texts)
+#             if merge_analysis:
+#                 detailed_analysis["merge_analysis"] = merge_analysis
+            
+#             # Run bootstrap analysis
+#             bootstrap_results = run_bootstrap_analysis(
+#                 inference,
+#                 decade_patterns,
+#                 distribution,
+#                 bootstrap_iterations=bootstrap_iterations
+#             )
+#             if bootstrap_results:
+#                 detailed_analysis["bootstrap"] = bootstrap_results
+            
+#             # Return enhanced results
+#             return {
+#                 "model": model_config,
+#                 "distribution": distribution,
+#                 "evaluation": evaluation,
+#                 "ground_truth": selected_dist,
+#                 "detailed_analysis": detailed_analysis
+#             }
+        
+#         # Return standard results
+#         return {
+#             "model": model_config,
+#             "distribution": distribution,
+#             "evaluation": evaluation,
+#             "ground_truth": selected_dist
+#         }
+        
+#     except Exception as e:
+#         logger.error(f"Error analyzing {model_name} on {distribution_name}: {e}")
+#         traceback.print_exc()
+#         return None
+
+def run_analysis_for_model(model_name, distribution_name, target_size_gb=0.05,
+                          bootstrap_iterations=5, force_fresh=False,
                           texts_per_decade=100, test_mode=False, top_n_tokens=35,
                           enhanced_mode=False):
     """
-    Run temporal distribution analysis for a specific model and distribution.
-    
+    Run temporal distribution analysis for a specific model and distribution,
+    with corrected dataset loading to match target distribution.
+
     Args:
         model_name: Name of the model to analyze
         distribution_name: Name of the distribution to test
         target_size_gb: Target dataset size in GB
         bootstrap_iterations: Number of bootstrap iterations
         force_fresh: Whether to force fresh dataset creation
-        texts_per_decade: Number of texts per decade
+        texts_per_decade: (No longer directly used for dataset size, create_large_dataset controls this)
         test_mode: Whether to run in test mode with minimal data
         top_n_tokens: Number of top tokens to remove (defaults to 35)
-        enhanced_mode: Whether to run enhanced analysis
-        
+        enhanced_mode: Whether to run enhanced analysis (bootstrap, merge analysis)
+
     Returns:
         Dictionary with analysis results
     """
     model_config = MODEL_CONFIGS.get(model_name, {"name": model_name, "description": model_name})
     logger.info(f"Running analysis for {model_config['description']} on {distribution_name} distribution")
-    
+
     # Get distribution details
     distributions = define_distributions()
     if distribution_name not in distributions:
         logger.error(f"Unknown distribution: {distribution_name}")
         return None
-    
+
     dist_info = distributions[distribution_name]
+    # Ensure selected_dist values are floats
     selected_dist = {k: float(v) for k, v in dist_info["distribution"].items()}
-    
+
     # Initialize dataset_manager
     dataset_manager = TemporalDatasetManager()
-    
-    # For test mode, use a minimal synthetic dataset
+
+    # --- MODIFIED DATASET LOADING ---
+    controlled_dataset = None
+    cache_dir = Path(RESULTS_DIR) / "dataset_cache"
+    cache_dir.mkdir(exist_ok=True, parents=True)
+    # Cache key includes distribution name and size
+    cached_dataset_path = cache_dir / f"{distribution_name}_{target_size_gb}GB_large.pkl" # Added _large suffix
+
     if test_mode:
         logger.info("Using test mode with minimal synthetic dataset")
+        # Use the specific test dataset creator
         controlled_dataset = create_minimal_test_dataset(
             decades=list(selected_dist.keys()),
-            texts_per_decade=texts_per_decade
+            texts_per_decade=20 # Use a fixed small number for tests
         )
+        logger.info(f"Generated test dataset with {sum(len(v) for v in controlled_dataset.values())} texts.")
     else:
-        # Use the enhanced dataset loading when in enhanced mode
-        if enhanced_mode:
-            controlled_dataset = load_enhanced_dataset(
-                distribution_name=distribution_name,
-                target_size_gb=target_size_gb,
-                force_fresh=force_fresh
-            )
-        else:
-            # Regular dataset loading
-            cache_dir = Path(RESULTS_DIR) / "dataset_cache"
-            cache_dir.mkdir(exist_ok=True, parents=True)
-            cached_dataset_path = cache_dir / f"{distribution_name}_{target_size_gb}GB.pkl"
-            
-            if cached_dataset_path.exists() and not force_fresh:
-                # Load cached dataset
-                try:
-                    with open(cached_dataset_path, 'rb') as f:
-                        controlled_dataset = pickle.load(f)
-                        logger.info(f"Loaded cached dataset from {cached_dataset_path}")
-                except Exception as e:
-                    logger.error(f"Failed to load cached dataset: {e}")
+        # Normal Mode: Load from cache or create using create_large_dataset
+        if cached_dataset_path.exists() and not force_fresh:
+            try:
+                with open(cached_dataset_path, 'rb') as f:
+                    controlled_dataset = pickle.load(f)
+                logger.info(f"Loaded cached dataset from {cached_dataset_path}")
+                # Basic validation of cached data structure
+                if not isinstance(controlled_dataset, dict) or not all(isinstance(v, list) for v in controlled_dataset.values()):
+                    logger.warning("Cached dataset has incorrect format, recreating...")
                     controlled_dataset = None
-            else:
+            except Exception as e:
+                logger.error(f"Failed to load cached dataset: {e}")
                 controlled_dataset = None
-            
-            if controlled_dataset is None:
-                # Create dataset with target distribution
-                logger.info(f"Creating dataset with {distribution_name} distribution and target size of {target_size_gb}GB")
+
+        if controlled_dataset is None:
+            logger.info(f"Cache not found or invalid/forced fresh. Creating dataset...")
+            # Use create_large_dataset directly - this function handles balancing
+            # according to the 'selected_dist' and target size.
+            # It includes internal logic for loading sources (BL, Gutenberg, Oscar, Web)
+            # and augmenting/synthesizing *only as needed* to meet decade targets.
+            # We DO NOT call boost_historical_data separately here.
+            try:
                 controlled_dataset = dataset_manager.create_large_dataset(
                     distribution=selected_dist,
-                    target_size_gb=float(target_size_gb)
+                    target_size_gb=float(target_size_gb) # Ensure float
                 )
-                
-                # Cache the dataset
+
+                # Cache the newly created dataset
                 try:
                     with open(cached_dataset_path, 'wb') as f:
                         pickle.dump(controlled_dataset, f)
                     logger.info(f"Cached dataset to {cached_dataset_path}")
                 except Exception as e:
                     logger.warning(f"Failed to cache dataset: {e}")
-    
-    # Apply preprocessing to normalize and prepare the dataset
-    decade_texts = simple_preprocess_dataset(controlled_dataset, argparse.Namespace(
-        tokenizer=model_name,
-        distribution=distribution_name,
-        target_size_gb=target_size_gb
-    ))
-    
+
+            except Exception as e_create:
+                 logger.error(f"FATAL: Error during create_large_dataset: {e_create}")
+                 traceback.print_exc()
+                 return None # Cannot proceed without data
+
+    # --- END OF MODIFIED DATASET LOADING ---
+
+    # --- Data Normalization (Replaces simple_preprocess_dataset) ---
+    logger.info("Normalizing dataset format...")
+    decade_texts = {}
+    if controlled_dataset is None:
+        logger.error("Dataset creation failed, cannot proceed.")
+        return None
+
+    total_texts_loaded = 0
+    for decade, texts_list in controlled_dataset.items():
+        if not texts_list:
+            decade_texts[decade] = []
+            continue
+
+        normalized_list = []
+        for item in texts_list:
+            text = normalize_text_item(item) # Use the helper function
+            if text and len(text) >= 100: # Basic quality filter (min length)
+                normalized_list.append(text)
+
+        if normalized_list:
+             decade_texts[decade] = normalized_list
+             total_texts_loaded += len(normalized_list)
+        else:
+             decade_texts[decade] = []
+             logger.warning(f"No valid texts retained for {decade} after normalization.")
+
+    logger.info(f"Dataset ready with {total_texts_loaded} total texts across {len(decade_texts)} decades.")
+    if total_texts_loaded == 0:
+        logger.error("No texts available after normalization. Cannot proceed.")
+        return None
+    # --- End Data Normalization ---
+
+
+    # --- Rest of the analysis pipeline (unchanged from your previous version) ---
+
     # Handle authentication for models that require it
     tokenizer_name = model_config.get("name", model_name)
     if model_config.get("requires_auth", False):
+        # ... (authentication logic remains the same) ...
         hf_token = os.environ.get("HF_TOKEN")
         if not hf_token:
             logger.error(f"Model {model_name} requires authentication. Set HF_TOKEN environment variable.")
             return None
-        
-        # Set token for authentication if needed
         os.environ["HUGGINGFACE_TOKEN"] = hf_token
         os.environ["HF_TOKEN"] = hf_token
-    
+
+
     # Initialize inference with model's tokenizer
     try:
         logger.info(f"Initializing inference with tokenizer: {tokenizer_name}")
         inference = TemporalDistributionInference(tokenizer_name=tokenizer_name)
-        
-        # Create a single combined dataset for all decades
-        full_dataset = {}
-        for decade, texts in decade_texts.items():
-            # Use at most 100 texts per decade for efficiency
-            sample_size = min(len(texts), 100 if not test_mode else 20)
-            if sample_size > 0:
-                full_dataset[decade] = texts[:sample_size]
-        
-        # Analyze patterns for the entire dataset at once
+
+        # --- Analyze Patterns ---
+        # Analyze patterns using the prepared decade_texts
         logger.info("Analyzing decade patterns...")
-        decade_patterns = inference.analyze_decade_patterns(full_dataset)
-        
-        # Log pattern statistics
-        pattern_count = len(decade_patterns)
-        logger.info(f"Found patterns for {pattern_count} decades")
-        
-        # Check if we have valid patterns
+        # Use a reasonable sample size for efficiency, especially if dataset is large
+        analysis_input = {}
+        analysis_sample_size = 500 if not test_mode else 50 # Smaller sample for analysis
+        for decade, texts in decade_texts.items():
+            if texts:
+                analysis_input[decade] = random.sample(texts, min(len(texts), analysis_sample_size))
+
+        if not analysis_input:
+             logger.error("No data available for pattern analysis.")
+             return None
+
+        decade_patterns = inference.analyze_decade_patterns(analysis_input) # Pass sampled data
+
         if not decade_patterns:
-            # Create fallback patterns if needed
-            logger.warning("No decade patterns found, creating minimal patterns")
-            decade_patterns = {}
-            for decade, texts in decade_texts.items():
-                if texts:
-                    # Create a minimal pattern for each decade
-                    decade_patterns[decade] = {
-                        'merge_rules': {'fallback': 10},  # Dummy merge rule
-                        'tokens': {'fallback': 10},       # Dummy token
-                        'total_tokens': 10,
-                        'total_chars': 100
-                    }
-            logger.info(f"Created fallback patterns for {len(decade_patterns)} decades")
-        
-        # Log pattern details for debugging
+            logger.error("Failed to generate decade patterns.")
+            return None # Cannot proceed
+
+        logger.info(f"Found patterns for {len(decade_patterns)} decades.")
+        # ... (rest of pattern logging) ...
         for decade in sorted(decade_patterns.keys()):
             if 'merge_rules' in decade_patterns[decade]:
                 rule_count = len(decade_patterns[decade]['merge_rules'])
-                logger.info(f"  {decade}: {rule_count} merge rules")
-        
-        # Infer temporal distribution - use the specified top_n_tokens
+                logger.info(f"  {decade}: {rule_count} merge rules found")
+
+        # --- Infer Distribution ---
         logger.info(f"Inferring temporal distribution with top_n_tokens={top_n_tokens}...")
         distribution = inference.infer_temporal_distribution(
             decade_patterns,
             remove_top_tokens=True,
-            top_n=top_n_tokens,  # Use the parameter to control token removal
+            top_n=top_n_tokens,
             regularization_strength=0.2,
             num_merge_rules=2000 if not test_mode else 500
         )
-        
-        # Apply decade corrections
-        decade_corrections = {
-                "1850s": 0.8,   # Was 2.5, now reducing to avoid over-representation
-                "1860s": 0.8,   # Was 2.3
-                "1870s": 0.8,   # Was 2.1
-                "1880s": 0.7,   # Was 2.0
-                "1890s": 0.7,   # Was 1.8
-                "1900s": 0.7,   # Was 1.5
-                "1910s": 0.7,   # Was 1.3, logs show this is still over-represented
-                "1920s": 0.8,   # Was 1.2
-                # Keep adjustments for 1930s-1990s about the same
-                "1930s": 0.3,   # Keep strong reduction as this still shows over-representation 
-                "1940s": 0.8,
-                "1950s": 0.9,
-                "1960s": 0.6,   # Keep this lower as logs consistently show over-representation
-                "1970s": 0.8,
-                "1980s": 0.9,
-                # Adjust more recent decades
-                "1990s": 0.7,   # Slight adjustment from 0.5
-                "2000s": 0.8,   # Slight adjustment from 0.6
-                "2010s": 0.6,   # Slight adjustment from 0.4
-                "2020s": 1.1    # Boost slightly as this was under-represented in logs
+        if not distribution:
+            logger.error("Temporal distribution inference failed.")
+            return None
 
+        # --- Apply Revised Corrections ---
+        logger.info("Applying revised decade corrections...")
+        # Use the revised corrections dictionary you provided
+        revised_decade_corrections = {
+            "1850s": 0.8, "1860s": 0.8, "1870s": 0.8, "1880s": 0.7,
+            "1890s": 0.7, "1900s": 0.7, "1910s": 0.7, "1920s": 0.8,
+            "1930s": 0.3, "1940s": 0.8, "1950s": 0.9, "1960s": 0.6,
+            "1970s": 0.8, "1980s": 0.9, "1990s": 0.7, "2000s": 0.8,
+            "2010s": 0.6, "2020s": 1.1
         }
-        
-        for decade, factor in decade_corrections.items():
-            if decade in distribution:
-                distribution = inference.apply_decade_correction(
-                    distribution, decade=decade, factor=factor
+        corrected_distribution = distribution.copy() # Work on a copy
+        for decade, factor in revised_decade_corrections.items():
+            if decade in corrected_distribution:
+                corrected_distribution = inference.apply_decade_correction(
+                    corrected_distribution, decade=decade, factor=factor
                 )
-                logger.info(f"Applied correction factor of {factor} to {decade}")
-        
-        # Evaluate against ground truth
+                # Log the *change* for clarity
+                # original = distribution.get(decade, 0)
+                # corrected = corrected_distribution.get(decade, 0)
+                # logger.info(f"Applied correction factor of {factor} to {decade} (Value: {original:.3f} -> {corrected:.3f})")
+        logger.info("Finished applying corrections.")
+        distribution = corrected_distribution # Assign corrected version back
+
+        # --- Evaluate ---
         logger.info("Evaluating results against ground truth...")
         evaluation = inference.validate_against_hayase_metrics(
             distribution,
             selected_dist,
-            bootstrap_iterations=bootstrap_iterations
+            bootstrap_iterations=int(bootstrap_iterations) # Ensure int
         )
-        
-        # Create visualization
+
+        # --- Visualize and Log ---
         results_dir = setup_directories()
         create_model_visualization(
-            distribution, 
-            selected_dist, 
+            distribution,
+            selected_dist,
             model_config["description"],
             distribution_name,
             results_dir
         )
-        
-        # Log evaluation metrics
         log_evaluation_metrics(evaluation, time.time(), argparse.Namespace(
             tokenizer=tokenizer_name,
             distribution=distribution_name
         ))
-        
-        # Add enhanced analysis when requested
+
+        # --- Enhanced Analysis (Optional) ---
+        detailed_analysis_results = {}
         if enhanced_mode:
-            detailed_analysis = {}
-            
-            # Perform detailed merge rule analysis
-            merge_analysis = perform_detailed_merge_analysis(tokenizer_name, decade_texts)
+            logger.info("Running enhanced analysis steps...")
+            # Perform detailed merge rule analysis on a sample
+            merge_analysis_input = {}
+            for decade, texts in decade_texts.items():
+                 if texts:
+                      merge_analysis_input[decade] = random.sample(texts, min(len(texts), 200)) # Use 200 texts
+            merge_analysis = perform_detailed_merge_analysis(tokenizer_name, merge_analysis_input)
             if merge_analysis:
-                detailed_analysis["merge_analysis"] = merge_analysis
-            
+                detailed_analysis_results["merge_analysis"] = merge_analysis
+
             # Run bootstrap analysis
             bootstrap_results = run_bootstrap_analysis(
                 inference,
-                decade_patterns,
-                distribution,
-                bootstrap_iterations=bootstrap_iterations
+                decade_patterns, # Use patterns derived earlier
+                distribution, # Pass the final corrected distribution
+                bootstrap_iterations=int(bootstrap_iterations) # Ensure int
             )
             if bootstrap_results:
-                detailed_analysis["bootstrap"] = bootstrap_results
-            
-            # Return enhanced results
-            return {
-                "model": model_config,
-                "distribution": distribution,
-                "evaluation": evaluation,
-                "ground_truth": selected_dist,
-                "detailed_analysis": detailed_analysis
-            }
-        
-        # Return standard results
-        return {
+                detailed_analysis_results["bootstrap"] = bootstrap_results
+
+        # --- Return Results ---
+        final_result = {
             "model": model_config,
             "distribution": distribution,
             "evaluation": evaluation,
-            "ground_truth": selected_dist
+            "ground_truth": selected_dist,
         }
-        
+        if enhanced_mode and detailed_analysis_results:
+             final_result["detailed_analysis"] = detailed_analysis_results
+
+        return final_result
+
     except Exception as e:
         logger.error(f"Error analyzing {model_name} on {distribution_name}: {e}")
         traceback.print_exc()
