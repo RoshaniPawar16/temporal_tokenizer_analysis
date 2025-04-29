@@ -130,7 +130,7 @@ for dist in "${DISTRIBUTIONS[@]}"; do
         --distribution $dist \
         --target_size_gb 1.0 \
         --bootstrap_iterations 10 \
-        --top_n_tokens 35 \
+        --top_n_tokens 40 \
         --texts_per_decade 5000 \
         --enhanced
     

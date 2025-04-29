@@ -1728,7 +1728,7 @@ class TemporalDistributionInference:
                 distribution = inference.infer_temporal_distribution(
                     decade_patterns,
                     remove_top_tokens=True,
-                    top_n=35,
+                    top_n=40,
                     regularization_strength=0.2,
                     num_merge_rules=2000
                 )
