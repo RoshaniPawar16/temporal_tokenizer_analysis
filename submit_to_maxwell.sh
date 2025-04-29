@@ -43,7 +43,8 @@ pip install --no-cache-dir \
     huggingface_hub \
     bs4 \
     requests \
-    psutil
+    psutil \
+    tiktoken
 
 # Configure environment variables for Hugging Face
 export HF_HOME="./hf_cache"
