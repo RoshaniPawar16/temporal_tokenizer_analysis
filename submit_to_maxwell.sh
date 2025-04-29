@@ -4,6 +4,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=192G
+#SBATCH --account=sncs
 #SBATCH --gres=gpu:1                
 #SBATCH --partition=a100_full       
 #SBATCH --output=temporal_analysis_%j.out
