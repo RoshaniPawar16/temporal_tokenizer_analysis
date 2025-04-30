@@ -119,8 +119,8 @@ echo "Running multi-model temporal distribution analysis..."
 DISTRIBUTIONS=(uniform recency_bias historical_bias bimodal)
 
 # Use our recommended models with distilgpt2 included
-# MODELS="gpt2,bert-base-uncased,roberta-base,llama,mistral"
-MODELS="gpt2,bert-base-uncased,roberta-base,xlm-roberta-base,t5-small,electra-small-discriminator,llama,gpt2-medium,distilgpt2,distilbert-base-uncased,albert-base-v2,mistral"
+MODELS="gpt2,bert-base-uncased,roberta-base"
+# MODELS="gpt2,bert-base-uncased,roberta-base,xlm-roberta-base,t5-small,electra-small-discriminator,llama,gpt2-medium,distilgpt2,distilbert-base-uncased,albert-base-v2,mistral"
 
 # Run multi-model analysis for each distribution with enhanced output
 for dist in "${DISTRIBUTIONS[@]}"; do
@@ -137,7 +137,7 @@ for dist in "${DISTRIBUTIONS[@]}"; do
         --distribution $dist \
         --target_size_gb 1.0 \
         --bootstrap_iterations 20 \
-        --top_n_tokens 40 \
+        --top_n_tokens 60 \
         --texts_per_decade 5000 \
         --enhanced
     
